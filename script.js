@@ -523,7 +523,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Check saved theme preference
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
+    if (savedTheme === 'dark') {
+      document.body.classList.remove('theme-light');
+    } else if (savedTheme === 'light') {
       document.body.classList.add('theme-light');
     }
   }
