@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow Vercel preview deployments
+User-agent: *
+Disallow: /_vercel/
+
+Sitemap: https://ill-inc.net/sitemap.xml
