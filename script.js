@@ -328,6 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (isFormValid) {
         const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
         submitBtn.disabled = true;
         submitBtn.textContent = '送信中...';
         
@@ -337,10 +338,14 @@ document.addEventListener('DOMContentLoaded', () => {
           method: 'POST',
           body: formData,
           headers: {
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
           }
         })
-        .then(() => {
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Server returned status ' + response.status);
+          }
           // Hide form, show success container
           contactForm.style.display = 'none';
           formSuccess.style.display = 'block';
@@ -350,10 +355,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
           console.error('Submission error:', error);
-          // Fallback: visually show success container in case of CORS or network error
-          contactForm.style.display = 'none';
-          formSuccess.style.display = 'block';
-          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          alert('送信中にエラーが発生しました。お手数ですが、時間をおいて再度お試しいただくか、別のアプローチでご連絡ください。');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
         });
       } else {
         // Focus first invalid element
