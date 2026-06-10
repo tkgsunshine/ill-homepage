@@ -1561,6 +1561,7 @@ p {
 }
 
 .form-control {
+  width: 100%;
   background: var(--bg-subtle);
   border: 1px solid var(--glass-border);
   border-radius: 0.8rem;
@@ -1986,7 +1987,7 @@ textarea.form-control {
   }
   
   .contact-form-panel {
-    padding: 3.2rem;
+    padding: 2.4rem;
   }
   
   .footer-top {
