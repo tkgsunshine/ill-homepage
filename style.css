@@ -110,6 +110,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--color-cyan) var(--bg-dark);
+  overflow-x: hidden;
 }
 
 body {
@@ -1960,6 +1961,10 @@ textarea.form-control {
   .hero-visual {
     order: 1;
     margin-top: 4.8rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
   }
   
   .profile-table {
