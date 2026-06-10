@@ -1214,7 +1214,7 @@ p {
 }
 
 .service-card:hover .service-icon {
-  stroke: var(--text-dark);
+  stroke: #ffffff;
 }
 
 .service-icon {
