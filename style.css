@@ -278,7 +278,7 @@ p {
 }
 
 .btn-primary {
-  color: var(--text-dark);
+  color: #ffffff;
   background: var(--gradient-primary);
 }
 
