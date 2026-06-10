@@ -5,4 +5,4 @@ Allow: /
 User-agent: *
 Disallow: /_vercel/
 
-Sitemap: https://ill-inc.net/sitemap.xml
+Sitemap: https://www.ill-inc.net/sitemap.xml
