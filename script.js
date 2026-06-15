@@ -472,47 +472,49 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Setup CTA button hover listeners with continuous loop
-    ctaButtons.forEach(btn => {
-      btn.addEventListener('mouseenter', () => {
-        activeHoveredButton = btn;
-        if (animationFrameId) cancelAnimationFrame(animationFrameId);
-        loopOptionAParticles();
+    // Setup CTA button hover listeners with continuous loop (only on hover-capable devices)
+    if (window.matchMedia('(hover: hover)').matches) {
+      ctaButtons.forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          activeHoveredButton = btn;
+          if (animationFrameId) cancelAnimationFrame(animationFrameId);
+          loopOptionAParticles();
+        });
+        btn.addEventListener('mouseleave', () => {
+          activeHoveredButton = null;
+          if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+          }
+          clearOptionAParticles();
+        });
       });
-      btn.addEventListener('mouseleave', () => {
-        activeHoveredButton = null;
-        if (animationFrameId) {
-          cancelAnimationFrame(animationFrameId);
-          animationFrameId = null;
-        }
-        clearOptionAParticles();
-      });
-    });
 
-    // 3D Parallax Tilt for Option A (Essence & Cube) - disabled during button hover
-    const essenceWrapper = document.querySelector('.essence-wrapper');
-    if (essenceWrapper) {
-      heroVisual.addEventListener('mousemove', (e) => {
-        if (!activeHoveredButton) {
-          const rect = heroVisual.getBoundingClientRect();
-          const mouseX = e.clientX - rect.left;
-          const mouseY = e.clientY - rect.top;
-          
-          // Normalize mouse positions to range [-1, 1]
-          const xPercent = (mouseX / rect.width - 0.5) * 2;
-          const yPercent = (mouseY / rect.height - 0.5) * 2;
-          
-          // Tilt angles (max 18 degrees for noticeable depth feel)
-          const tiltX = -yPercent * 18;
-          const tiltY = xPercent * 18;
-          
-          essenceWrapper.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-        }
-      });
-      
-      heroVisual.addEventListener('mouseleave', () => {
-        essenceWrapper.style.transform = 'rotateX(0deg) rotateY(0deg)';
-      });
+      // 3D Parallax Tilt for Option A (Essence & Cube) - disabled during button hover
+      const essenceWrapper = document.querySelector('.essence-wrapper');
+      if (essenceWrapper) {
+        heroVisual.addEventListener('mousemove', (e) => {
+          if (!activeHoveredButton) {
+            const rect = heroVisual.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+            
+            // Normalize mouse positions to range [-1, 1]
+            const xPercent = (mouseX / rect.width - 0.5) * 2;
+            const yPercent = (mouseY / rect.height - 0.5) * 2;
+            
+            // Tilt angles (max 18 degrees for noticeable depth feel)
+            const tiltX = -yPercent * 18;
+            const tiltY = xPercent * 18;
+            
+            essenceWrapper.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+          }
+        });
+        
+        heroVisual.addEventListener('mouseleave', () => {
+          essenceWrapper.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+      }
     }
   }
 

@@ -777,9 +777,11 @@ p {
   transition: filter 0.5s ease, opacity 0.5s ease;
 }
 
-.hero-visual:hover .blob {
-  filter: blur(8px);
-  opacity: 0.95;
+@media (hover: hover) {
+  .hero-visual:hover .blob {
+    filter: blur(8px);
+    opacity: 0.95;
+  }
 }
 
 .blob-1 {
@@ -853,9 +855,11 @@ p {
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-visual:hover .form-structure {
-  animation-play-state: paused;
-  transform: rotate(15deg) scale(1.05);
+@media (hover: hover) {
+  .hero-visual:hover .form-structure {
+    animation-play-state: paused;
+    transform: rotate(15deg) scale(1.05);
+  }
 }
 
 /* Drawing animation for the wireframe cube */
@@ -924,62 +928,65 @@ p {
 .node-7 { transform: translate(220px, -160px); }
 
 /* On hover of visual, snap back to perfect crystallization layout (Form state) */
-.hero-visual:hover .v-node {
-  transform: translate(0, 0);
+@media (hover: hover) {
+  .hero-visual:hover .v-node {
+    transform: translate(0, 0);
+  }
+
+  .hero-visual:hover .cube-outline {
+    animation: none !important;
+    stroke-opacity: 0.95;
+    stroke-width: 2.2;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  }
+
+  .hero-visual:hover .cube-node {
+    animation: none !important;
+    transform: scale(1.35) !important;
+    filter: drop-shadow(0 0 8px currentColor) !important;
+  }
+
+  .hero-visual:hover .cube-axis {
+    animation: none !important;
+    stroke-opacity: 0.85;
+  }
 }
 
-.hero-visual:hover .cube-outline {
-  animation: none !important;
-  stroke-opacity: 0.95;
-  stroke-width: 2.2;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
-}
+@media (hover: hover) {
+  .hero-layout:has(.hero-ctas .btn:hover) .essence-wrapper {
+    animation: none !important;
+    transform: rotateX(0deg) rotateY(0deg) translateY(0) !important;
+    transition: none !important;
+  }
 
-.hero-visual:hover .cube-node {
-  animation: none !important;
-  transform: scale(1.35) !important;
-  filter: drop-shadow(0 0 8px currentColor) !important;
-}
+  .hero-layout:has(.hero-ctas .btn:hover) .layer-form {
+    transform: none !important;
+    transition: none !important;
+  }
 
-.hero-visual:hover .cube-axis {
-  animation: none !important;
-  stroke-opacity: 0.85;
-}
+  .hero-layout:has(.hero-ctas .btn:hover) .form-structure {
+    animation: none !important;
+    transform: rotate(0deg) !important;
+    transition: none !important;
+  }
 
-/* On CTA button hover: fade out background wireframes, axes, blobs and rings, and pause float */
-.hero-layout:has(.hero-ctas .btn:hover) .essence-wrapper {
-  animation: none !important;
-  transform: rotateX(0deg) rotateY(0deg) translateY(0) !important;
-  transition: none !important;
-}
+  .hero-layout:has(.hero-ctas .btn:hover) .form-structure > line,
+  .hero-layout:has(.hero-ctas .btn:hover) .form-structure > polygon,
+  .hero-layout:has(.hero-ctas .btn:hover) .layer-form .rotator-reverse,
+  .hero-layout:has(.hero-ctas .btn:hover) .layer-form .rotator,
+  .hero-layout:has(.hero-ctas .btn:hover) .layer-form circle[r="90"],
+  .hero-layout:has(.hero-ctas .btn:hover) .orbiting-group,
+  .hero-layout:has(.hero-ctas .btn:hover) .orbiting-group-2,
+  .hero-layout:has(.hero-ctas .btn:hover) .bg-glow,
+  .hero-layout:has(.hero-ctas .btn:hover) .essence-blobs {
+    opacity: 0 !important;
+  }
 
-.hero-layout:has(.hero-ctas .btn:hover) .layer-form {
-  transform: none !important;
-  transition: none !important;
-}
-
-.hero-layout:has(.hero-ctas .btn:hover) .form-structure {
-  animation: none !important;
-  transform: rotate(0deg) !important;
-  transition: none !important;
-}
-
-.hero-layout:has(.hero-ctas .btn:hover) .form-structure > line,
-.hero-layout:has(.hero-ctas .btn:hover) .form-structure > polygon,
-.hero-layout:has(.hero-ctas .btn:hover) .layer-form .rotator-reverse,
-.hero-layout:has(.hero-ctas .btn:hover) .layer-form .rotator,
-.hero-layout:has(.hero-ctas .btn:hover) .layer-form circle[r="90"],
-.hero-layout:has(.hero-ctas .btn:hover) .orbiting-group,
-.hero-layout:has(.hero-ctas .btn:hover) .orbiting-group-2,
-.hero-layout:has(.hero-ctas .btn:hover) .bg-glow,
-.hero-layout:has(.hero-ctas .btn:hover) .essence-blobs {
-  opacity: 0 !important;
-}
-
-.hero-layout:has(.hero-ctas .btn:hover) .cube-node {
-  animation: none !important;
-  transform: scale(1.35) !important;
-  filter: drop-shadow(0 0 10px currentColor) !important;
+  .hero-layout:has(.hero-ctas .btn:hover) .cube-node {
+    animation: none !important;
+    transform: scale(1.35) !important;
+    filter: drop-shadow(0 0 10px currentColor) !important;
+  }
 }
 
 /* Ensure smooth opacity fades for elements */
