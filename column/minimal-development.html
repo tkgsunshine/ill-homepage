@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ミニマル開発が新規事業の成功を左右する理由 | Ill inc. コラム</title>
+  <meta name="description" content="新規事業やスタートアップにおけるシステム開発で、なぜ「ミニマル設計（最小限開発）」が選ばれるのか？要件定義の肥大化を防ぎ、コスト削減、ローンチスピードの最大化、変化への柔軟性を手に入れるための実践的システム設計手法を詳しく解説します。">
+  <meta name="keywords" content="ミニマル開発,システム開発,要件定義,コスト削減,ローンチスピード,新規事業,生成AI,オフショア開発,Ill Inc.">
+  <meta name="author" content="山下 高志">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/minimal-development.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ミニマル開発が新規事業の成功を左右する理由 | Ill inc. コラム">
+  <meta property="og:description" content="新規事業におけるシステム開発で、なぜミニマル設計（最小限開発）が重要視されるのか？コスト削減と圧倒的スピードを実現するアプローチを詳しく解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/minimal-development.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ミニマル開発が新規事業の成功を左右する理由 | Ill inc. コラム">
+  <meta name="twitter:description" content="新規事業におけるシステム開発で、なぜミニマル設計（最小限開発）が重要視されるのか？コスト削減と圧倒的スピードを実現するアプローチを詳しく解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=56">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "ミニマル開発（最小限のシステム設計）がスタートアップや新規事業の成功を左右する理由",
+    "description": "新規事業やスタートアップにおけるシステム開発で、なぜ「ミニマル設計（最小限開発）」が選ばれるのか？コスト削減、スピード、柔軟性など、生成AIを活用した最先端のシステム設計手法を詳しく解説します。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17",
+    "author": {
+      "@type": "Person",
+      "name": "山下 高志",
+      "jobTitle": "Representative of Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/minimal-development.html"
+    }
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
+            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
+            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+            <defs>
+              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff1b94"></stop>
+                <stop offset="100%" stop-color="#9d00ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9d00ff"></stop>
+                <stop offset="100%" stop-color="#00f0ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff"></stop>
+                <stop offset="100%" stop-color="#0072ff"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">ミニマル開発が新規事業の成功を左右する理由</span>
+      </div>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-category">システム開発</span>
+        <h1 class="article-title">ミニマル開発（最小限のシステム設計）がスタートアップや新規事業の成功を左右する理由 — コスト削減と高速開発の両立</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.17</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+          <!-- Abstract clean vector representing simplicity vs complexity -->
+          <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
+          <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
+          <!-- Geometric connecting lines -->
+          <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Diagonal rays -->
+          <line x1="260" y1="374" x2="740" y2="54" stroke="var(--glass-border)" stroke-width="1" stroke-dasharray="4 4"></line>
+          <line x1="260" y1="54" x2="740" y2="374" stroke="var(--glass-border)" stroke-width="1" stroke-dasharray="4 4"></line>
+          <!-- Particle Dots -->
+          <circle cx="500" cy="54" r="12" fill="url(#art-node-1)" style="filter: drop-shadow(0 0 12px #ff1b94);"></circle>
+          <circle cx="500" cy="214" r="16" fill="url(#art-node-2)" style="filter: drop-shadow(0 0 16px #9d00ff);"></circle>
+          <circle cx="660" cy="214" r="10" fill="url(#art-node-3)" style="filter: drop-shadow(0 0 10px #00f0ff);"></circle>
+          <circle cx="340" cy="214" r="10" fill="url(#art-node-4)" style="filter: drop-shadow(0 0 10px #0072ff);"></circle>
+          <defs>
+            <linearGradient id="art-node-1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ff1b94"></stop>
+              <stop offset="100%" stop-color="#9d00ff"></stop>
+            </linearGradient>
+            <linearGradient id="art-node-2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#9d00ff"></stop>
+              <stop offset="100%" stop-color="#00f0ff"></stop>
+            </linearGradient>
+            <linearGradient id="art-node-3" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00f0ff"></stop>
+              <stop offset="100%" stop-color="#0072ff"></stop>
+            </linearGradient>
+            <linearGradient id="art-node-4" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0072ff"></stop>
+              <stop offset="100%" stop-color="#ff1b94"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Article 2-Column Grid -->
+      <div class="article-layout">
+        
+        <!-- Left Column: Main Body Content -->
+        <main class="article-body">
+          
+          <!-- Table of Contents -->
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">「ミニマル開発」とは？ — 単なる「手抜き」ではない本質的設計</a></li>
+              <li><a href="#section-2">なぜ従来のシステム開発は失敗（肥大化）するのか？ — 「あれもこれも」の罠</a></li>
+              <li><a href="#section-3">新規事業におけるミニマル開発の3大メリット</a></li>
+              <li><a href="#section-4">Ill Inc.が実践する「必要十分な設計」とグローバル体制</a></li>
+              <li><a href="#section-5">まとめ：小さく始めて、素早く育てる</a></li>
+            </ul>
+          </div>
+
+          <p>
+            現代のビジネス環境において、新規事業の立ち上げやスタートアップのローンチにおいて最も価値があるのは、顧客からのリアルな<strong>「フィードバック」</strong>です。しかし、多くのシステム開発プロジェクトにおいて、初期段階から過剰な機能要件を詰め込みすぎた結果、ローンチが大幅に遅れ、開発資金が底を突くケースが後を絶ちません。
+          </p>
+          <p>
+            このような失敗を避けるために選ばれているのが、無駄を徹底的に排除し、本質的な価値だけを素早くプロダクトとして形にする<strong>「ミニマル開発（最小限のシステム設計）」</strong>というアプローチです。
+          </p>
+
+          <h2 id="section-1">「ミニマル開発」とは？ — 単なる「手抜き」ではない本質的設計</h2>
+          <p>
+            ミニマル開発とは、開発の手間を惜しんで適当なシステムを作ることではありません。むしろその逆であり、<strong>「何を作らないか」を徹底的に熟考し、コアバリューのみを最高水準の品質で実装する設計手法</strong>です。
+          </p>
+          <p>
+            スタートアップや新規事業の文脈でよく語られる <strong>MVP（Minimum Viable Product: 最小限の実用製品）</strong> を具現化するための、システム設計観点における答えが「ミニマル開発」です。不要なインターフェースの複雑化や、将来使うか分からないスケーラビリティ要件の事前実装を排除し、現在のフェーズにおける<strong>「必要十分」</strong>を追求します。
+          </p>
+
+          <blockquote>
+            「優れたシステムとは、複雑なものではなく、事業に自然に溶け込むものです。」 — 私たちはこの言葉を理念に掲げ、シンプルであることこそが最大の技術力であると考えています。
+          </blockquote>
+
+          <h2 id="section-2">Why 従来のシステム開発は失敗（肥大化）するのか？ — 「あれもこれも」の罠</h2>
+          <p>
+            従来のウォーターフォール開発や、大規模なアジャイル開発において陥りやすいのが「要件の肥大化（スコープクリープ）」です。
+          </p>
+          <ul>
+            <li><strong>顧客層が曖昧な状態で機能だけを増やす</strong>：想定するターゲット顧客のインサイトが得られていない段階で、「あったら便利」程度の機能を多く盛り込んでしまう。</li>
+            <li><strong>設計の複雑化による開発スピードの低下</strong>：機能同士の依存関係が絡み合い、テスト工程が雪だるま式に増加。バグ修正に追われローンチが数ヶ月単位で遅延する。</li>
+            <li><strong>高額な初期費用と運用コストの発生</strong>：必要以上にハイスペックなインフラ構成や、複雑なデータベース構造を持つことで、稼働していないシステムのサーバー保守代や改修コストが経営を圧迫する。</li>
+          </ul>
+          <p>
+            結果として、最初に想定していた市場のニーズが変わってしまったり、ローンチしたものの機能の半分以上が使われないという事態を招きます。
+          </p>
+
+          <h2 id="section-3">新規事業におけるミニマル開発の3大メリット</h2>
+          <p>
+            ミニマル設計思想に基づくシステム構築は、経営的および技術的に強力なアドバンテージをもたらします。
+          </p>
+
+          <h3>1. 初期投資（コスト）の最小化と投資対効果の最大化</h3>
+          <p>
+            開発対象の機能をコアな1点〜2点に絞るため、当然ながら初期の開発費は大幅に下がります。これにより、貴重な資金（ランウェイ）をシステムの「予想」に投じるのではなく、ユーザー獲得のマーケティングや、実際のユーザーの反応に応じた「二次開発」のためにプールすることが可能になります。
+          </p>
+
+          <h3>2. 生成AI（GenAI）活用による圧倒的なローンチスピード</h3>
+          <p>
+            設計を極力シンプルに抑えることで、<strong>生成AIを用いたプロトタイプ生成やコード生成の効率が極限まで高まります。</strong>AIは仕様の明確かつシンプルなタスクにおいて最高のパフォーマンスを発揮します。ミニマルな要件定義とAIの組み合わせは、従来の数ヶ月かかっていたプロセスを「数週間〜数日」のサイクルに圧縮します。
+          </p>
+
+          <h3>3. 変化に適応しやすい高い柔軟性と保守性</h3>
+          <p>
+            コードの絶対量が少なく、複雑な依存関係がないため、ローンチ後の軌道修正（ピボット）や機能追加が容易になります。「ユーザーがこの機能を全く使っていない」と判明した際も、ミニマルなシステムであれば、複雑なレガシーコードを崩す恐怖なしにスムーズにその箇所を排除し、別の形へ作り替えることができます。
+          </p>
+
+          <h2 id="section-4">Ill Inc.が実践する「必要十分な設計」とグローバル体制</h2>
+          <p>
+            私たち <strong>Ill株式会社 (Ill inc.)</strong> は、お客様の事業のコアを見極め、スピードと品質の最適なバランスを実現するミニマル設計のエキスパートです。
+          </p>
+          <p>
+            私たちの体制は、日本国内の経験豊富なシステムプランナー（要件のそぎ落とし・ミニマル設計・AIハンドリング）と、ベトナムのトップエンジニアたちによる<strong>「国内・海外混成プロジェクトチーム（日越ハイブリッドチーム）」</strong>で稼働しています。
+          </p>
+          <p>
+            日本側が「何を作らないか」「本当にユーザーに届けるべき価値は何か」を徹底して言語化・設計し、ベトナム拠点の開発力で高い品質のシステムを素早く実装する。これにより、クオリティに妥協することなく、圧倒的なコスト効率とスピードでのサービス提供を実現しています。
+          </p>
+
+          <h2 id="section-5">まとめ：小さく始めて、素早く育てる</h2>
+          <p>
+            システム開発の本質的なゴールは、コードを書くことでも、巨大なシステムを作ることでもありません。<strong>「事業価値を生み出すこと」</strong>です。
+          </p>
+          <p>
+            これから新規事業を立ち上げる、あるいは既存事業のデジタル化・AI化を進められる皆様へ。まずは必要十分なミニマル設計で小さく立ち上げ、実ユーザーの声を聞きながら、俊敏にシステムを拡張していく。このアプローチこそが、資金を無駄にせず、最も確実にプロダクトを成功へと導く最短ルートです。
+          </p>
+
+          <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">まずはプロトタイプでアイデアを「形」にしませんか？</h3>
+            <p class="inline-cta-desc">Ill Inc.では、ご相談内容をもとに「必要最小限かつ十分」な構成案を策定し、生成AIを活用したプロトタイプシステムを非常に短い期間で作成するサポートを行っています。無料でご相談を承ります。</p>
+            <a href="../index.html#contact" class="btn btn-primary">無料相談・プロトタイプ依頼はこちら</a>
+          </div>
+
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+          
+          <!-- Author Profile Widget -->
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">山</div>
+            <h3 class="author-name">山下 高志</h3>
+            <p class="author-role">Ill inc. 代表取締役</p>
+            <p class="author-bio">
+              大手SierおよびテックスタートアップでのPMを経て、Ill株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+            </p>
+          </div>
+
+          <!-- Related Columns Widget -->
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="minimal-development.html">
+                  <span class="related-item-date">2026.06.17</span>
+                  <span class="related-item-title">ミニマル開発（最小限のシステム設計）がスタートアップや新規事業の成功を左右する理由</span>
+                </a>
+              </li>
+              <li class="related-item" style="opacity: 0.5;">
+                <div>
+                  <span class="related-item-date">近日公開</span>
+                  <span class="related-item-title">生成AIが変えるシステム要件定義とプロトタイピングの未来</span>
+                </div>
+              </li>
+              <li class="related-item" style="opacity: 0.5;">
+                <div>
+                  <span class="related-item-date">近日公開</span>
+                  <span class="related-item-title">日越ハイブリッドチームで成功するオフショア開発の新常識</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sidebar conversion CTA Widget -->
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
+                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
+                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
+                <defs>
+                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff1b94"></stop>
+                    <stop offset="100%" stop-color="#9d00ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9d00ff"></stop>
+                    <stop offset="100%" stop-color="#00f0ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f0ff"></stop>
+                    <stop offset="100%" stop-color="#0072ff"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Theme Switcher Button -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Client JavaScript -->
+  <script src="../script.js?v=56"></script>
+</body>
+</html>
