@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規サービス開発を外注する際の失敗しない開発会社の選び方 | Ill inc. コラム</title>
+  <meta name="description" content="新規サービスやWeb・スマホアプリの受託開発を外注する際、どのように開発会社を選定すべきか？「要件定義の肥大化」「予算超過」「リリース後のバグ」といった開発失敗を防ぐための5つの比較ポイントを徹底解説。">
+  <meta name="keywords" content="新規サービス開発,アプリ開発 外注,システム開発 依頼,開発会社 選定,コスト削減,MVP開発,受託開発,Ill Inc.">
+  <meta name="author" content="山下 高志">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/new-service-development.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="新規サービス開発を外注する際の失敗しない開発会社の選び方 | Ill inc. コラム">
+  <meta property="og:description" content="システムやアプリ開発を外注する際の失敗しない開発会社選定ガイド。提案・技術力・コストを比較する5つのポイントを分かりやすく解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/new-service-development.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="新規サービス開発を外注する際の失敗しない開発会社の選び方 | Ill inc. コラム">
+  <meta name="twitter:description" content="システムやアプリ開発を外注する際の失敗しない開発会社選定ガイド。提案・技術力・コストを比較する5つのポイントを分かりやすく解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=57">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "新規サービス開発を外注する際の失敗しない開発会社の選び方 — 提案・技術力・コストの比較ポイント",
+    "description": "新規サービスやWeb・スマホアプリの受託開発を外注する際、どのように開発会社を選定すべきか？「要件定義の肥大化」「予算超過」「リリース後のバグ」といった開発失敗を防ぐための5つの比較ポイントを徹底解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17",
+    "author": {
+      "@type": "Person",
+      "name": "山下 高志",
+      "jobTitle": "Representative of Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/new-service-development.html"
+    }
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
+            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
+            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+            <defs>
+              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff1b94"></stop>
+                <stop offset="100%" stop-color="#9d00ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9d00ff"></stop>
+                <stop offset="100%" stop-color="#00f0ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff"></stop>
+                <stop offset="100%" stop-color="#0072ff"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">新規サービス開発での開発会社の選び方</span>
+      </div>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-category">システム・アプリ開発</span>
+        <h1 class="article-title">新規サービス開発を外注する際の失敗しない開発会社の選び方 — 提案・技術力・コストの比較ポイント</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.17</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+          <!-- Abstract clean vector representing metrics comparing and selection -->
+          <rect x="250" y="80" width="500" height="268" rx="20" stroke="var(--glass-border)" stroke-width="1.5"></rect>
+          <line x1="250" y1="130" x2="750" y2="130" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Grid columns -->
+          <line x1="416" y1="80" x2="416" y2="348" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <line x1="583" y1="80" x2="583" y2="348" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Floating glowing check dots -->
+          <circle cx="333" cy="200" r="10" fill="url(#dev-node-pink)" style="filter: drop-shadow(0 0 10px #ff1b94);"></circle>
+          <circle cx="500" cy="240" r="12" fill="url(#dev-node-purple)" style="filter: drop-shadow(0 0 12px #9d00ff);"></circle>
+          <circle cx="666" cy="180" r="14" fill="url(#dev-node-cyan)" style="filter: drop-shadow(0 0 14px #00f0ff);"></circle>
+          <defs>
+            <linearGradient id="dev-node-pink" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ff1b94"></stop>
+              <stop offset="100%" stop-color="#9d00ff"></stop>
+            </linearGradient>
+            <linearGradient id="dev-node-purple" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#9d00ff"></stop>
+              <stop offset="100%" stop-color="#00f0ff"></stop>
+            </linearGradient>
+            <linearGradient id="dev-node-cyan" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00f0ff"></stop>
+              <stop offset="100%" stop-color="#0072ff"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Article 2-Column Grid -->
+      <div class="article-layout">
+        
+        <!-- Left Column: Main Body Content -->
+        <main class="article-body">
+          
+          <!-- Table of Contents -->
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">「新規サービス開発」における外注先選定の重要性</a></li>
+              <li><a href="#section-2">システム・アプリ開発を外注する際によくある3大失敗例</a></li>
+              <li><a href="#section-3">開発会社を選定する際の5つの比較ポイント</a></li>
+              <li><a href="#section-4">Ill Inc.が「新規サービス開発」の最適パートナーである理由</a></li>
+              <li><a href="#section-5">まとめ：成功の第一歩は、伴走者選びから</a></li>
+            </ul>
+          </div>
+
+          <p>
+            Webアプリやモバイルアプリ、SaaSなど、自社の命運をかけた<strong>「新規サービス開発」</strong>。素晴らしいアイデアを思いつき、いざ具体的な形にしようと考えた際、直面するのが「開発会社（外注先）の選定」という大きな壁です。
+          </p>
+          <p>
+            多くのシステム開発会社が存在する中で、適当に発注先を選んでしまうと、莫大なコストと時間を無駄にする結果になりかねません。本コラムでは、新規サービス立ち上げにおいて、失敗を回避し、最適なパートナーを見極めるための比較・比較ポイントを実務レベルで解説します。
+          </p>
+
+          <h2 id="section-1">「新規サービス開発」における外注先選定の重要性</h2>
+          <p>
+            前提として、新規事業やスタートアップにおけるシステム・アプリ開発は、既存業務の効率化やシステムの「保守リプレイス」とは本質的に異なります。
+          </p>
+          <p>
+            新規サービス開発に求められるのは、<strong>「市場ニーズの変化に合わせて素早くプロダクトを適合させるスピード」</strong>と<strong>「コストを抑えながら仮説検証を繰り返す俊敏さ」</strong>です。したがって、カチコチに固まった要件定義をもとに数ヶ月〜数年かけて作る従来の開発会社ではなく、事業の意図を汲み取って柔軟に伴走してくれる開発パートナーを選ぶ必要があります。
+          </p>
+
+          <h2 id="section-2">システム・アプリ開発を外注する際によくある3大失敗例</h2>
+          <p>
+            新規サービス開発を外注する際、よく陥りがちな失敗パターンを3点挙げます。
+          </p>
+
+          <blockquote>
+            <strong>1. 「要件定義の肥大化」による予算オーバーと開発の長期化</strong><br>
+            「あった方が良さそう」な機能を最初からすべて盛り込み、要件定義書が何十ページにも膨れ上がった結果、見積もり額が膨大になり、開発のローンチ時期が数ヶ月遅延するケースです。
+          </blockquote>
+
+          <blockquote>
+            <strong>2. 「安さ」だけで選んだ結果の品質不足とリリース後の動作不良</strong><br>
+            見積金額の低さだけを重視してオフショア開発や格安ベンダーに依頼したものの、コミュニケーションの齟齬から意図したものと違うシステムができあがり、動かないバグだらけの状態で納品されるケースです。
+          </blockquote>
+
+          <blockquote>
+            <strong>3. ソースコードのブラックボックス化と内製化への移行困難</strong><br>
+            特定の開発会社に依存した難解なコードで構築されてしまい、サービスの成長後に自社の社内エンジニアへシステムを引き継ごうとしても、誰もソースコードを理解できず、結果として最初から作り直さざるを得なくなるケースです。
+          </blockquote>
+
+          <h2 id="section-3">開発会社を選定する際の5つの比較ポイント</h2>
+          <p>
+            これらの失敗を未然に防ぐため、外注先（受託会社）を比較・選定する際は以下の5つの評価基準を用いてください。
+          </p>
+
+          <h3>1. 新規事業・スタートアップの支援実績</h3>
+          <p>
+            社内向け業務基幹システムばかりを作っている会社ではなく、実際にB2C向けのスマホアプリやB2B向けのSaaSなど、<strong>顧客向けのサービス開発実績が豊富か</strong>どうかを確認します。ゼロベースからプロダクトを立ち上げるノウハウを持っているかが重要です。
+          </p>
+
+          <h3>2. ミニマル設計・MVP開発への対応力</h3>
+          <p>
+            「最初から全機能を網羅しましょう」と提案してくる会社は、新規事業の特質を理解していません。ユーザーの検証に必要な「最小限の実用製品（MVP）」の構築を提案し、<strong>機能のそぎ落とし（ミニマル設計）を一緒に考えてくれる会社</strong>は、良心的なパートナーと言えます。
+          </p>
+
+          <h3>3. 開発スピードと生成AI活用の有無</h3>
+          <p>
+            現代のシステム開発は、生成AIの活用によって大幅にスピードアップしています。仕様策定やコード生成、動作テストのフェーズにおいて、<strong>最先端の生成AIツールやローコードツールを効果的に活用して開発を高速化しているか</strong>は、スピードとコスト削減に直結します。
+          </p>
+
+          <h3>4. コミュニケーションと体制の透明性</h3>
+          <p>
+            仕様変更や課題に対して迅速にコミュニケーションが取れる体制かを確認します。オフショア開発を活用している会社の場合でも、日本人のプロジェクトマネージャーやビジネスアナリストが間に入り、言語の壁や技術的なニュアンスがブラックボックス化しないクリーンな体制をとっているかが生命線となります。
+          </p>
+
+          <h3>5. 契約形態（請負契約 vs 準委任契約）の柔軟性</h3>
+          <p>
+            新規事業開発では、途中で仕様が変わることが日常茶飯事です。最初に仕様を完全に固めてしまう「請負契約」だけでなく、月ごとの稼働量に合わせて柔軟に機能を調整・開発できる「準委任契約（ラボ型開発）」なども視野に入れ、<strong>事業フェーズに合わせて契約形態を柔軟に選べるか</strong>が比較の指標になります。
+          </p>
+
+          <h2 id="section-4">Ill Inc.が「新規サービス開発」の最適パートナーである理由</h2>
+          <p>
+            私たち <strong>Ill株式会社 (Ill inc.)</strong> は、お客様のシステム・アプリなどの「新規サービス開発」を支援する最適な体制を整えています。
+          </p>
+          <ul>
+            <li><strong>必要十分なミニマル設計</strong>：過剰な初期要件を削ぎ落とし、本当にビジネスに必要なコアバリューのみを抽出して最短で開発します。</li>
+            <li><strong>生成AIによる超高速プロトタイピング</strong>：AIを活用した要件整理と自動化フローにより、検証可能なプロトタイプを数週間で作成・提供します。</li>
+            <li><strong>日越ハイブリッド混成チーム</strong>：仕様を深く噛み砕く日本のプランナーと、ベトナムの優秀なエンジニア陣が一体となって動き、圧倒的なコストパフォーマンスと確かな品質（クローズドなソースコード品質）を両立します。</li>
+          </ul>
+
+          <h2 id="section-5">まとめ：成功の第一歩は、伴走者選びから</h2>
+          <p>
+            新規サービス開発の成功率は、アイデアの素晴らしさだけでなく、それを最初期に「どのような形で、どれだけのスピードで市場へ投入したか」に大きく左右されます。
+          </p>
+          <p>
+            発注先の開発会社を「単なる下請け」として捉えるのではなく、技術的な観点からビジネスの価値を最大化してくれる「伴走者」として選ぶこと。提案力、ミニマル化の引き出し、そしてコストパフォーマンスを多角的に比較して、最適なパートナーを見極めてください。
+          </p>
+
+          <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">新規サービス・アプリ開発のご相談はこちら</h3>
+            <p class="inline-cta-desc">Ill Inc.では、お客様が構想されている新規サービスの企画書やアイデアベースから、必要最小限のシステム設計と素早いプロトタイプ作成をご提案します。まずは無料でのご相談・お見積もりからお気軽にご連絡ください。</p>
+            <a href="../index.html#contact" class="btn btn-primary">無料相談・プロトタイプ作成依頼</a>
+          </div>
+
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+          
+          <!-- Author Profile Widget -->
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">山</div>
+            <h3 class="author-name">山下 高志</h3>
+            <p class="author-role">Ill inc. 代表取締役</p>
+            <p class="author-bio">
+              大手SierおよびテックスタートアップでのPMを経て、Ill株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+            </p>
+          </div>
+
+          <!-- Related Columns Widget -->
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="minimal-development.html">
+                  <span class="related-item-date">2026.06.17</span>
+                  <span class="related-item-title">ミニマル開発（最小限のシステム設計）がスタートアップや新規事業の成功を左右する理由</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="new-service-development.html">
+                  <span class="related-item-date">2026.06.17</span>
+                  <span class="related-item-title">新規サービス開発を外注する際の失敗しない開発会社の選び方 — 提案・技術力・コストの比較ポイント</span>
+                </a>
+              </li>
+              <li class="related-item" style="opacity: 0.5;">
+                <div>
+                  <span class="related-item-date">近日公開</span>
+                  <span class="related-item-title">日越ハイブリッドチームで成功するオフショア開発の新常識</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sidebar conversion CTA Widget -->
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
+                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
+                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
+                <defs>
+                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff1b94"></stop>
+                    <stop offset="100%" stop-color="#9d00ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9d00ff"></stop>
+                    <stop offset="100%" stop-color="#00f0ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f0ff"></stop>
+                    <stop offset="100%" stop-color="#0072ff"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Theme Switcher Button -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Client JavaScript -->
+  <script src="../script.js?v=57"></script>
+</body>
+</html>
