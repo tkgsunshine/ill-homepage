@@ -36,7 +36,7 @@
   <link rel="shortcut icon" href="../favicon.ico">
   
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="../style.css?v=57">
+  <link rel="stylesheet" href="../style.css?v=58">
 
   <!-- JSON-LD Structured Data (WebPage Schema) -->
   <script type="application/ld+json">
@@ -210,23 +210,56 @@
           </div>
         </article>
 
-        <!-- Article 3 (Teaser) -->
-        <article class="column-card glass-card reveal" style="opacity: 0.7;">
-          <div class="column-card-image" style="filter: grayscale(80%);">
-            <span class="column-card-badge" style="background: var(--bg-subtle); border: 1px solid var(--glass-border); color: var(--text-muted);">グローバル体制</span>
+        <!-- Article 3 (Active) -->
+        <article class="column-card glass-card reveal">
+          <div class="column-card-image">
+            <span class="column-card-badge">グローバル体制</span>
             <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
               <rect x="150" y="62.5" width="100" height="100" rx="10" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="6 6"></rect>
-              <circle cx="200" cy="112.5" r="30" stroke="var(--glass-border)" stroke-width="1"></circle>
+              <circle cx="200" cy="112.5" r="30" stroke="var(--color-purple)" stroke-width="1.5"></circle>
+              <!-- Connection link -->
+              <path d="M150 112.5 H250" stroke="var(--color-cyan)" stroke-width="2" stroke-linecap="round"></path>
+              <circle cx="200" cy="112.5" r="6" fill="var(--color-cyan)"></circle>
             </svg>
           </div>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <span>近日公開</span>
-              <span>Ill inc.</span>
+              <time datetime="2026-06-17">2026.06.17</time>
+              <span>山下 高志</span>
             </div>
-            <h2 class="column-card-title" style="color: var(--text-muted); cursor: not-allowed;">日越ハイブリッドチームで成功するオフショア開発の新常識</h2>
-            <p class="column-card-excerpt">「安さ」だけを求めた従来のオフショア開発が失敗する構造的な理由と、日本国内のビジネスアナリストとベトナムの優秀なエンジニアが混成で動くハイブリッドチームが持つ真の強みを紐解きます。</p>
-            <span class="column-card-link" style="color: var(--text-muted); cursor: not-allowed;">Coming Soon</span>
+            <a href="offshore-hybrid-development.html" style="text-decoration: none;">
+              <h2 class="column-card-title">日越ハイブリッドチームで成功するオフショア開発の新常識 — コストと品質を両立する新手法</h2>
+            </a>
+            <p class="column-card-excerpt">「安さ」だけを求めた従来のオフショア開発が失敗する構造的な理由と、日本国内のプランナーとベトナムのエンジニアが一体で動くハイブリッドチームが持つ真の強みを紐解きます。</p>
+            <a href="offshore-hybrid-development.html" class="column-card-link">記事を読む</a>
+          </div>
+        </article>
+
+        <!-- Article 4 (Active) -->
+        <article class="column-card glass-card reveal">
+          <div class="column-card-image">
+            <span class="column-card-badge">新規サービス開発</span>
+            <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+              <!-- Ascending path -->
+              <path d="M100 162.5 L175 125 L250 125 L325 87.5" stroke="var(--color-purple)" stroke-width="2" stroke-dasharray="4 4"></path>
+              <circle cx="100" cy="162.5" r="6" fill="var(--glass-border)"></circle>
+              <circle cx="175" cy="125" r="6" fill="var(--glass-border)"></circle>
+              <circle cx="250" cy="125" r="6" fill="var(--color-pink)" style="filter: drop-shadow(0 0 6px #ff1b94);"></circle>
+              <circle cx="325" cy="87.5" r="8" fill="var(--color-cyan)" style="filter: drop-shadow(0 0 8px #00f0ff);"></circle>
+              <!-- Check icon -->
+              <path d="M320 87.5 L323 90.5 L330 83.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <time datetime="2026-06-17">2026.06.17</time>
+              <span>山下 高志</span>
+            </div>
+            <a href="new-service-success.html" style="text-decoration: none;">
+              <h2 class="column-card-title">新規サービス開発で成功する5つのコツ — ITシステム・アプリ開発で失敗しないための実践ガイド</h2>
+            </a>
+            <p class="column-card-excerpt">新規サービスやスマホアプリ開発を成功させるための実用的な5つのコツを徹底解説。「要件の最小化」「フィードバックの高速化」「AI活用」など、システム開発で失敗しないための実践ガイド。</p>
+            <a href="new-service-success.html" class="column-card-link">記事を読む</a>
           </div>
         </article>
 
@@ -333,6 +366,6 @@
   </button>
 
   <!-- Client JavaScript -->
-  <script src="../script.js?v=57"></script>
+  <script src="../script.js?v=58"></script>
 </body>
 </html>
