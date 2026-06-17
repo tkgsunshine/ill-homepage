@@ -1,0 +1,26 @@
+<svg width="2400" height="960" viewBox="0 0 2400 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="slogan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff0080" />
+      <stop offset="50%" stop-color="#8c14ff" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+    <style>
+      .text-base {
+        font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "PingFang SC", "Noto Sans JP", sans-serif;
+        font-weight: 900;
+        font-size: 232px;
+        letter-spacing: -0.03em;
+      }
+      .text-dark {
+        fill: #121b33;
+      }
+      .text-gradient {
+        fill: url(#slogan-grad);
+      }
+    </style>
+  </defs>
+  <!-- Transparent background -->
+  <text x="80" y="360" class="text-base text-dark">本質に寄り添い、</text>
+  <text x="80" y="700" class="text-base text-gradient">カタチにする。</text>
+</svg>
