@@ -696,79 +696,97 @@
         <!-- Column Article 1 (Latest) -->
         <article class="column-card glass-card reveal">
           <div class="column-card-image">
-            <span class="column-card-badge">SaaS立ち上げ</span>
+            <span class="column-card-badge">生成AI開発</span>
             <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
           <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
           <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
           <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
-          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
-          <!-- Geometric representing SaaS modules connected to database -->
-          <rect x="420" y="174" width="160" height="80" rx="8" stroke="var(--color-cyan)" stroke-width="1.5" fill="var(--bg-subtle)" style="filter: drop-shadow(0 0 10px #00f0ff);"></rect>
-          <circle cx="500" cy="214" r="10" fill="var(--color-pink)" style="filter: drop-shadow(0 0 8px #ff1b94);"></circle>
+          <!-- Neural nodes representing automated agent workflow -->
+          <circle cx="380" cy="150" r="12" fill="url(#art-node-cyan-ai-agent-business-automation)" style="filter: drop-shadow(0 0 12px #00f0ff);"></circle>
+          <circle cx="500" cy="278" r="12" fill="url(#art-node-pink-ai-agent-business-automation)" style="filter: drop-shadow(0 0 12px #ff1b94);"></circle>
+          <circle cx="620" cy="150" r="12" fill="url(#art-node-purple-ai-agent-business-automation)" style="filter: drop-shadow(0 0 12px #9d00ff);"></circle>
+          <path d="M 392 150 Q 500 200 488 278" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="4 4"></path>
+          <path d="M 500 266 Q 500 200 608 150" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="4 4"></path>
+          <defs>
+            <linearGradient id="art-node-cyan-ai-agent-business-automation" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00f0ff"></stop>
+              <stop offset="100%" stop-color="#0072ff"></stop>
+            </linearGradient>
+            <linearGradient id="art-node-pink-ai-agent-business-automation" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ff1b94"></stop>
+              <stop offset="100%" stop-color="#9d00ff"></stop>
+            </linearGradient>
+            <linearGradient id="art-node-purple-ai-agent-business-automation" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#9d00ff"></stop>
+              <stop offset="100%" stop-color="#00f0ff"></stop>
+            </linearGradient>
+          </defs>
         </svg>
           </div>
           <div class="column-card-content">
             <div class="column-card-meta">
               <time datetime="2026-06-18">2026.06.18</time>
             </div>
-            <a href="column/saas-product-launch.html" style="text-decoration: none;">
-              <h2 class="column-card-title">SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで</h2>
+            <a href="column/ai-agent-business-automation.html" style="text-decoration: none;">
+              <h2 class="column-card-title">AIエージェントを活用した業務自動化の最前線 — 導入ステップと開発事例</h2>
             </a>
-            <p class="column-card-excerpt">新規のSaaSプロダクトやSaaSビジネスを立ち上げる際、開発外注の設計は成功を左右します。要件の肥大化による予算ショートやローンチ遅延を回避し、MVP開発（最小限製品）から検証を始め、成長フェーズに応じてシステムをスケールさせるための実践ステップを徹底解説します。</p>
-            <a href="column/saas-product-launch.html" class="column-card-link">記事を読む</a>
+            <p class="column-card-excerpt">AIエージェントを用いた業務自動化（ワークフロー自動化）の最前線を徹底解説。従来のRPAや単純なチャットボットとの違い、LLMを活用した自律的プランニング、企業での具体的な導入ステップや開発事例について紹介します。</p>
+            <a href="column/ai-agent-business-automation.html" class="column-card-link">記事を読む</a>
           </div>
         </article>
 
         <!-- Column Article 2 (Latest) -->
         <article class="column-card glass-card reveal">
           <div class="column-card-image">
-            <span class="column-card-badge">システム導入</span>
+            <span class="column-card-badge">生成AI開発</span>
             <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
           <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
           <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
           <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
-          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
-          <!-- Vector representing document flow to code -->
-          <rect x="440" y="154" width="120" height="120" rx="8" stroke="var(--color-cyan)" stroke-width="1" fill="var(--bg-subtle)" style="filter: drop-shadow(0 0 10px #00f0ff);"></rect>
-          <path d="M470 184 H530 M470 204 H530 M470 224 H510" stroke="var(--color-cyan)" stroke-width="1.5" stroke-linecap="round"></path>
+          <!-- Vector architecture of database referencing to LLM -->
+          <rect x="340" y="164" width="100" height="100" rx="8" stroke="var(--color-cyan)" stroke-width="1.5" fill="var(--bg-subtle)" style="filter: drop-shadow(0 0 8px #00f0ff);"></rect>
+          <rect x="560" y="164" width="100" height="100" rx="8" stroke="var(--color-pink)" stroke-width="1.5" fill="var(--bg-subtle)" style="filter: drop-shadow(0 0 8px #ff1b94);"></rect>
+          <!-- Connecting arrow -->
+          <path d="M 450 214 H 550" stroke="var(--color-purple)" stroke-width="2" stroke-linecap="round"></path>
+          <polygon points="550,214 542,209 542,219" fill="var(--color-purple)"></polygon>
         </svg>
           </div>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-06-18">2026.06.18</time>
+              <time datetime="2026-06-08">2026.06.08</time>
             </div>
-            <a href="column/rfp-development-request.html" style="text-decoration: none;">
-              <h2 class="column-card-title">開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト</h2>
+            <a href="column/llm-fine-tuning-vs-rag.html" style="text-decoration: none;">
+              <h2 class="column-card-title">社内データのAI活用におけるRAG（検索拡張生成）とファインチューニングの比較と選定基準</h2>
             </a>
-            <p class="column-card-excerpt">システム開発やアプリ開発を外注依頼する際、見積もりのズレや失敗を防ぐために極めて重要なのが「RFP（提案依頼書）」です。非エンジニアでも簡単に書けるRFPの必須項目や具体的な書き方、そして提案段階で優良な開発会社を見極める選定チェックリストを徹底解説します。</p>
-            <a href="column/rfp-development-request.html" class="column-card-link">記事を読む</a>
+            <p class="column-card-excerpt">社内ドキュメントや独自ナレッジをLLMに学習・参照させる手法である「RAG（検索拡張生成）」と「ファインチューニング（追加学習）」を徹底比較。コスト、精度、セキュリティ、および具体的な選定基準についてわかりやすく解説します。</p>
+            <a href="column/llm-fine-tuning-vs-rag.html" class="column-card-link">記事を読む</a>
           </div>
         </article>
 
         <!-- Column Article 3 (Latest) -->
         <article class="column-card glass-card reveal">
           <div class="column-card-image">
-            <span class="column-card-badge">仕様設計</span>
+            <span class="column-card-badge">グローバル体制</span>
             <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
           <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
           <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
           <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
-          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
-          <!-- Vector representing user stories mapping to features -->
-          <circle cx="400" cy="180" r="10" fill="var(--color-pink)" style="filter: drop-shadow(0 0 8px #ff1b94);"></circle>
-          <circle cx="500" cy="240" r="10" fill="var(--color-cyan)" style="filter: drop-shadow(0 0 8px #00f0ff);"></circle>
-          <line x1="410" y1="185" x2="490" y2="235" stroke="var(--color-cyan)" stroke-width="2"></line>
+          <!-- Communication lines representing pipeline / git merge and checks -->
+          <rect x="360" y="164" width="80" height="100" rx="8" stroke="var(--color-cyan)" stroke-width="1" fill="var(--bg-subtle)"></rect>
+          <rect x="560" y="164" width="80" height="100" rx="8" stroke="var(--color-pink)" stroke-width="1" fill="var(--bg-subtle)"></rect>
+          <circle cx="480" cy="214" r="15" stroke="var(--color-purple)" stroke-width="2" fill="var(--bg-dark)"></circle>
+          <path d="M475 214 L483 222 L493 210" stroke="var(--color-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
           </div>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-06-18">2026.06.18</time>
+              <time datetime="2026-06-03">2026.06.03</time>
             </div>
-            <a href="column/requirements-definition-tips.html" style="text-decoration: none;">
-              <h2 class="column-card-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</h2>
+            <a href="column/global-offshore-quality-control.html" style="text-decoration: none;">
+              <h2 class="column-card-title">オフショア開発でバグ・手戻りを防ぐ品質管理（QA）プロセスとコミュニケーションの極意</h2>
             </a>
-            <p class="column-card-excerpt">システム開発プロジェクトが失敗する最大の原因は「要件定義（仕様策定）」の失敗にあります。非エンジニアの担当者でも実践できる要件定義の進め方のコツ、開発会社とのコミュニケーションロスを防ぐ方法、そして仕様の肥大化を防ぐミニマル設計手法をわかりやすく解説します。</p>
-            <a href="column/requirements-definition-tips.html" class="column-card-link">記事を読む</a>
+            <p class="column-card-excerpt">グローバル・オフショア開発における「品質への不安」「仕様の誤解」「手戻り」を防ぐための実践的な品質管理（QA）プロセス、テスト戦略、および仕様書コミュニケーションの極意を詳しく解説します。</p>
+            <a href="column/global-offshore-quality-control.html" class="column-card-link">記事を読む</a>
           </div>
         </article>
       </div>
