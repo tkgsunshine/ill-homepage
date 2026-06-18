@@ -535,4 +535,46 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('theme-light');
     }
   }
+
+  // --- COLUMN CATEGORY FILTERING ---
+  const categoryTabs = document.querySelectorAll('.category-tab');
+  const columnCards = document.querySelectorAll('.column-card[data-category]');
+
+  if (categoryTabs.length > 0 && columnCards.length > 0) {
+    categoryTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        if (tab.classList.contains('active')) return;
+        
+        // Remove active class from all tabs
+        categoryTabs.forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+
+        const filter = tab.getAttribute('data-filter');
+
+        // First, fade out all cards
+        columnCards.forEach(card => {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(15px)';
+        });
+
+        // After fade out transition (300ms), update display and fade in matched cards
+        setTimeout(() => {
+          columnCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            if (filter === 'all' || cardCategory === filter) {
+              card.style.display = 'flex';
+              // Trigger a reflow
+              card.offsetHeight;
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        }, 300);
+      });
+    });
+  }
 });
+
