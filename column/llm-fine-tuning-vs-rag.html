@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社内データのAI活用におけるRAGとファインチューニングの比較と選定基準 | Ill inc. コラム</title>
+  <meta name="description" content="社内ドキュメントや独自ナレッジをLLMに学習・参照させる手法である「RAG（検索拡張生成）」と「ファインチューニング（追加学習）」を徹底比較。コスト、精度、セキュリティ、および具体的な選定基準についてわかりやすく解説します。">
+  <meta name="keywords" content="RAG 導入,ファインチューニング 比較,社内データ AI,LLMカスタマイズ,Ill Inc.">
+  <meta name="author" content="Ill inc.">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/llm-fine-tuning-vs-rag.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="社内データのAI活用におけるRAGとファインチューニングの比較と選定基準 | Ill inc. コラム">
+  <meta property="og:description" content="社内データ連携の手法「RAG」と「ファインチューニング」の違い、コスト感、メリット・デメリット、そして自社に適した選定マップを解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/llm-fine-tuning-vs-rag.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="社内データのAI活用におけるRAGとファインチューニングの比較と選定基準 | Ill inc. コラム">
+  <meta name="twitter:description" content="社内データ連携の手法「RAG」と「ファインチューニング」の違い、コスト感、メリット・デメリット、そして自社に適した選定マップを解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=56">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "社内データのAI活用におけるRAG（検索拡張生成）とファインチューニングの比較と選定基準",
+    "description": "社内データ連携の手法「RAG」と「ファインチューニング」の違い、コスト感、メリット・デメリット、および自社に適した選定マップを解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill株式会社"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/llm-fine-tuning-vs-rag.html"
+    }
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
+            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
+            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+            <defs>
+              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff1b94"></stop>
+                <stop offset="100%" stop-color="#9d00ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9d00ff"></stop>
+                <stop offset="100%" stop-color="#00f0ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff"></stop>
+                <stop offset="100%" stop-color="#0072ff"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">RAG vs ファインチューニング</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">生成AI開発</span>
+        <h1 class="article-title">社内データのAI活用におけるRAG（検索拡張生成）とファインチューニングの比較と選定基準</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.18</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+          <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
+          <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
+          <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Vector architecture of database referencing to LLM -->
+          <rect x="340" y="164" width="100" height="100" rx="8" stroke="var(--color-cyan)" stroke-width="1.5" fill="var(--bg-subtle)" style="filter: drop-shadow(0 0 8px #00f0ff);"></rect>
+          <rect x="560" y="164" width="100" height="100" rx="8" stroke="var(--color-pink)" stroke-width="1.5" fill="var(--bg-subtle)" style="filter: drop-shadow(0 0 8px #ff1b94);"></rect>
+          <!-- Connecting arrow -->
+          <path d="M 450 214 H 550" stroke="var(--color-purple)" stroke-width="2" stroke-linecap="round"></path>
+          <polygon points="550,214 542,209 542,219" fill="var(--color-purple)"></polygon>
+        </svg>
+      </div>
+
+      <div class="article-layout">
+        
+        <main class="article-body">
+          
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">独自データのAI連携：RAGとファインチューニングの基本概要</a></li>
+              <li><a href="#section-2">RAGとファインチューニングの徹底比較</a></li>
+              <li><a href="#section-3">どちらを選ぶべき？実務における5つの選定基準</a></li>
+              <li><a href="#section-4">RAGとファインチューニングを組み合わせる「ハイブリッド構成」</a></li>
+              <li><a href="#section-faq">RAG導入と学習に関するよくある質問（FAQ）</a></li>
+              <li><a href="#section-5">まとめ：社内データの価値を最大化する技術選定</a></li>
+            </ul>
+          </div>
+
+          <p>
+            「社内ドキュメントをAIに入力して回答させたい」「製品マニュアルの膨大なナレッジから自動回答するボットを作りたい」——企業が生成AI（LLM）の実務導入を進める際、避けて通れないのが**『独自データの連携手法』**の決定です。
+          </p>
+          <p>
+            最も代表的なアプローチが、外部データソースからリアルタイム検索して回答を作成する**RAG（Retrieval-Augmented Generation / 検索拡張生成）**と、既存のLLMにデータセットを追加学習させる**ファインチューニング（Fine-Tuning）**の2つです。本コラムでは、これら2大アプローチの仕組みの違いからコスト、選定基準についてわかりやすく解説します。
+          </p>
+
+          <h2 id="section-1">独自データのAI連携：RAGとファインチューニングの基本概要</h2>
+          <p>
+            AIに専門知識を与えるための手法は、よく**「オープンブック（辞書持ち込みテスト）」**と**「クローズドブック（事前学習テスト）」**に例えられます。
+          </p>
+          <ul>
+            <li><strong>RAG（オープンブック形式）</strong>：LLM自体は追加学習せず、質問が入力された瞬間に、ベクトルデータベース等から関連する社内ドキュメントを「検索（Retrieval）」し、その検索結果をコンテキストとしてLLMに渡して回答を「生成（Generation）」します。</li>
+            <li><strong>ファインチューニング（クローズドブック形式）</strong>：既存のLLMモデルの重みパラメータ（ニューラルネットワーク）そのものを、社内の対話データやQ&Aデータセットを用いて「再学習（追加学習）」させ、モデル自身に知識や出力パターンを記憶させます。</li>
+          </ul>
+
+          <h2 id="section-2">RAGとファインチューニングの徹底比較</h2>
+          <p>
+            これら2つのアプローチには、開発コスト、更新頻度、ハルシネーション（誤回答）の抑制などでトレードオフが存在します。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>項目</th>
+                  <th>RAG（検索拡張生成）</th>
+                  <th>ファインチューニング（追加学習）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>基本の仕組み</strong></td>
+                  <td>モデル外部のデータベースを参照</td>
+                  <td>モデル内部のパラメータを更新</td>
+                  <td>人間によるプロンプト連携</td>
+                </tr>
+                <tr>
+                  <td><strong>情報の更新コスト</strong></td>
+                  <td>極めて低い（ファイルをDBに追加するだけ）</td>
+                  <td>高い（再学習のコンピューティングコストが発生）</td>
+                  <td>ゼロ（即時反映）</td>
+                </tr>
+                <tr>
+                  <td><strong>回答のハルシネーション</strong></td>
+                  <td>抑えやすい（ソースドキュメントの明示が可能）</td>
+                  <td>抑えにくい（知識をモデルの重みから推論するため）</td>
+                  <td>高い（根拠提示が困難）</td>
+                </tr>
+                <tr>
+                  <td><strong>文体・表現・トーンの学習</strong></td>
+                  <td>難しい（検索したテキスト依存）</td>
+                  <td>非常に得意（特定のトーンや書き方を完全に習得）</td>
+                  <td>プロンプトでの指示のみ</td>
+                </tr>
+                <tr>
+                  <td><strong>初期開発コスト</strong></td>
+                  <td>低い〜中（インフラ設計のみ）</td>
+                  <td>高い（高品質な教師データの準備と学習費用）</td>
+                  <td>非常に低い</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="section-3">どちらを選ぶべき？実務における5つの選定基準</h2>
+          <p>
+            実務への適用にあたっては、以下の5つの基準に照らし合わせて技術スタックを決定します。
+          </p>
+          
+          <h3>1. 情報の「鮮度」と更新頻度</h3>
+          <p>
+            製品仕様、社内規定、ニュース記事など、毎日または毎週頻繁に更新される情報を扱う場合、ファインチューニングは適していません。更新のたびに追加学習を行うのはコスト的に破綻するためです。このような「動的ドキュメント」には、ファイルを配置するだけで即時に検索対象となる**RAGが唯一の現実的な選択肢**となります。
+          </p>
+
+          <h3>2. 正確性とソースコード（根拠）の明示</h3>
+          <p>
+            医療、金融、法律、カスタマーサポートなど、「絶対に嘘の回答をしてはならない」かつ「どの文書を根拠に回答したか」を提示する必要がある場合は、**RAGが適しています**。RAGは「引用元：マニュアル第3章」などのリンクを動的に埋め込みやすい構造になっています。
+          </p>
+
+          <h3>3. 特殊な専門業界用語やドメイン知識の理解</h3>
+          <p>
+            業界特有の略語や専門知識、あるいは特定のプログラミング言語の構文スタイルなど、基本的なLLMが全く持っていない深遠な知識をベースラインとして理解させたい場合は、**ファインチューニングが真価を発揮します**。
+          </p>
+
+          <h3>4. トーン・マナーと出力フォーマットの統一</h3>
+          <p>
+            「特定の有名人のような話し方をするチャットボットを作りたい」「特定の複雑なJSONフォーマットで常に回答させたい」といった、LLMの「キャラクター性」や「出力規律」を強化したい場合、プロンプト指示（RAGのコンテキスト）だけでは文字数制限や揺らぎが発生します。この場合は、**ファインチューニングにより出力構造そのものを書き換える**方が安定します。
+          </p>
+
+          <h2 id="section-4">RAGとファインチューニングを組み合わせる「ハイブリッド構成」</h2>
+          <p>
+            現在の高度なエンタープライズAIシステムでは、RAGとファインチューニングは排他的なものではなく、**組み合わせて使用されるケース（ハイブリッド構成）**が増えています。
+          </p>
+          <blockquote>
+            <strong>ハイブリッド構成の例：</strong><br>
+            ファインチューニングした軽量なLLM（自社の業界トーンやJSONフォーマット出力に最適化したモデル）をベースとし、そのインプットとしてRAG（社内データ検索システム）から最新のコンテキスト文書を動的に注入する。
+          </blockquote>
+          <p>
+            これにより、応答速度が速く、自社特有のフォーマットを守りながら、かつ最新の社内データを正確に根拠付きで参照できる完璧なエンタープライズAIが誕生します。
+          </p>
+
+          <h2 id="section-faq">RAG導入と学習に関するよくある質問（FAQ）</h2>
+          
+          <h3>Q1. RAGを導入するだけで、社内ドキュメントの検索は100%完璧になりますか？</h3>
+          <p>
+            いいえ。RAGの精度は、LLMの性能よりも「PDFやドキュメントの構造化（チャンキングやメタデータ設計）」および「ベクトル検索（セマンティック検索）のハイブリッドチューニング」といった、検索ロジックそのもの（RAGエンジニアリング）に8割型依存します。Ill株式会社では、独自の高精度チャンキングモジュールにより、検索精度の最大化を実現しています。
+          </p>
+
+          <h3>Q2. ローカルLLMを用いたセキュアなファインチューニングは可能ですか？</h3>
+          <p>
+            はい。Llama 3やMistralなどのオープンモデルを用い、企業内のオンプレミスサーバーやプライベートクラウド環境（AWS, Azure）のGPU上でファインチューニングを行うことで、完全なクローズド環境での学習と実行が可能です。
+          </p>
+
+          <h2 id="section-5">まとめ：社内データの価値を最大化する技術選定</h2>
+          <p>
+            独自データ活用を検討する第一歩としては、まずは開発工数が短く、即座にドキュメントを追加できる**RAGによるPoC（概念実証）からスタートする**のが最も賢明です。
+          </p>
+          <p>
+            Ill Inc.では、お客様のデータ環境や課題に応じて、最適なRAGおよびファインチューニングのアーキテクチャ設計・受託開発を行っています。
+          </p>
+
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">社内データ活用ボットのプロトタイプを無料構成設計します</h3>
+            <p class="inline-cta-desc">「PDFマニュアルを読み込ませた高精度なAIを作りたい」「RAGとファインチューニングのどちらが良いか見積もりが欲しい」などのご相談に対し、ミニマル設計に基づいた開発ロードマップを無料で提案します。</p>
+            <a href="../index.html#contact" class="btn btn-primary">データ活用構成の無料相談</a>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Technology Research Division</p>
+            <p class="author-bio">
+              最先端のAIトレンド（GenAI / Agentic AI）のビジネス応用、LLMセキュリティ、RAGアーキテクチャ設計などの知見を発信。新規事業における迅速な技術検証とPoC設計を担当。
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+                        <ul class="related-list">
+              <li class="related-item">
+                <a href="saas-product-launch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="rfp-development-request.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="requirements-definition-tips.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="offshore-labo-contract-tips.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">オフショア開発「ラボ型（準委任）契約」で自社専用の開発チームを構築しスケールさせるノウハウ</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="nocode-vs-scratch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">ノーコード・ローコード開発の限界とスクラッチ開発の境界線 — 新規事業の技術選定基準</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
+                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
+                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
+                <defs>
+                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff1b94"></stop>
+                    <stop offset="100%" stop-color="#9d00ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9d00ff"></stop>
+                    <stop offset="100%" stop-color="#00f0ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f0ff"></stop>
+                    <stop offset="100%" stop-color="#0072ff"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <script src="../script.js?v=56"></script>
+</body>
+</html>
