@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>システム開発「請負契約」と「準委任」の違い | Ill inc. コラム</title>
+  <meta name="description" content="システム開発やアプリ開発を外注する際、どの契約形態を選ぶかでプロジェクトのリスクと柔軟性が大きく変わります。「請負契約」と「準委任（ラボ契約）」の法的な違い、それぞれのメリット・デメリット、そして新規事業やMVP開発に最適な契約の選択基準を詳しく解説します。">
+  <meta name="keywords" content="請負契約 準委任契約 違い,ラボ型開発,システム開発 契約,SES,受託開発,Ill Inc.">
+  <meta name="author" content="山下 高志">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/contract-types-comparison.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="システム開発「請負契約」と「準委任」の違い | Ill inc. コラム">
+  <meta property="og:description" content="請負契約と準委任契約（ラボ契約）の定義の違い、メリット・デメリット、新規プロダクト開発に適した契約形態の選び方を実践解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/contract-types-comparison.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="システム開発「請負契約」と「準委任」の違い | Ill inc. コラム">
+  <meta name="twitter:description" content="請負契約と準委任契約（ラボ契約）の定義の違い、メリット・デメリット、新規プロダクト開発に適した契約形態의 選び方を実践解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=56">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "システム開発の契約「請負契約」と「準委任（ラボ契約）」の違い — 新規開発に適した契約形態とは",
+    "description": "システム開発外注における請負契約と準委任契約、ラボ契約の法的な位置付け、手戻りリスク、仕様変更コスト、新規サービス開発における契約選定のコツを解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "author": {
+      "@type": "Person",
+      "name": "山下 高志",
+      "jobTitle": "Representative of Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/contract-types-comparison.html"
+    }
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
+            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
+            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+            <defs>
+              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff1b94"></stop>
+                <stop offset="100%" stop-color="#9d00ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9d00ff"></stop>
+                <stop offset="100%" stop-color="#00f0ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff"></stop>
+                <stop offset="100%" stop-color="#0072ff"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">システム開発の契約形態比較</span>
+      </div>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-category">システム契約</span>
+        <h1 class="article-title">システム開発の契約「請負契約」と「準委任（ラボ契約）」の違い — 新規開発に適した契約形態とは</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.18</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+          <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
+          <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
+          <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Neon vectors representing two different paths/contracts -->
+          <path d="M300 214 Q400 130 500 214 T700 214" stroke="var(--color-cyan)" stroke-width="1.5" style="filter: drop-shadow(0 0 8px #00f0ff);"></path>
+          <path d="M300 214 Q400 298 500 214 T700 214" stroke="var(--color-pink)" stroke-width="1.5" style="filter: drop-shadow(0 0 8px #ff1b94);"></path>
+        </svg>
+      </div>
+
+      <!-- Article 2-Column Grid -->
+      <div class="article-layout">
+        
+        <!-- Left Column: Main Body Content -->
+        <main class="article-body">
+          
+          <!-- Table of Contents -->
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">システム開発契約の根幹：「完成義務」と「善管注意義務」の違い</a></li>
+              <li><a href="#section-2">【比較表】請負契約 vs 準委任契約（ラボ契約）</a></li>
+              <li><a href="#section-3">なぜ請負契約は新規事業・MVP開発で『高確率で失敗』するのか</a></li>
+              <li><a href="#section-4">新規プロダクト開発には『準委任（ラボ契約）』を推奨する理由</a></li>
+              <li><a href="#section-faq">開発契約に関するよくある質問（FAQ）</a></li>
+              <li><a href="#section-5">まとめ：契約は「リスクのなすりつけ」ではなく「事業の並走ルール」である</a></li>
+            </ul>
+          </div>
+
+          <p>
+            システム開発やアプリ構築を外部のパートナー企業に外注する際、多くの担当者が「要件定義」や「開発会社選び」に集中する一方で、**「どのような契約形態を結ぶか」**という点を見落としがちです。
+          </p>
+          <p>
+            ITシステム開発における契約には、大きく分けて「請負（うけおい）契約」と「準委任（じゅんいにん）契約（およびその一種であるラボ契約）」の2種類があります。この契約選択を誤ると、「途中で仕様変更が全くできない」「想定外の追加請求で予算がオーバーした」といった、致命的な問題に繋がります。各契約の違いと、新規事業に最適な選び方を実務目線で徹底解説します。
+          </p>
+
+          <h2 id="section-1">システム開発契約の根幹：「完成義務」と「善管注意義務」の違い</h2>
+          <p>
+            請負契約と準委任契約の法的な最大の違いは、開発側が負う**「責任の性質」**にあります。
+          </p>
+          <blockquote>
+            <strong>請負契約：仕事の『完成』に対して対価を支払う契約</strong><br>
+            開発会社は、事前に定義した仕様通りのシステムを完成させて納品する義務（完成責任）を負います。万が一、納品後にバグが発見された場合は、一定期間無償で修正する責任（契約不適合責任）があります。
+          </blockquote>
+          <blockquote>
+            <strong>準委任契約：『善管注意義務に基づく稼働』に対して対価を支払う契約</strong><br>
+            開発会社は、特定のシステムを完成させる義務ではなく、専門知識を持って適切に開発業務を実施すること（稼働・時間）に対して責任を負います。システム完成の保証はありませんが、善良な管理者の注意（善管注意義務）をもって業務を遂行する義務を負います。
+          </blockquote>
+
+          <h2 id="section-2">【比較表】請負契約 vs 準委任契約（ラボ契約）</h2>
+          <p>
+            それぞれの特徴、コスト、柔軟性を比較します。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>比較項目</th>
+                  <th>請負契約</th>
+                  <th>準委任契約（ラボ型・伴走開発）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>対価の対象</strong></td>
+                  <td>納品物（完成したシステム）</td>
+                  <td>稼働（提供した工数・期間）</td>
+                  </tr>
+                <tr>
+                  <td><strong>仕様変更の柔軟性</strong></td>
+                  <td>極めて低い。変更のたびに再見積もりが必要</td>
+                  <td>極めて高い。優先順位を変えて柔軟に対応可能</td>
+                </tr>
+                <tr>
+                  <td><strong>開発会社の価格設計</strong></td>
+                  <td>高め（手戻りやバグの保証リスクを上乗せ）</td>
+                  <td>適正（実稼働ベースのためリスクバッファ不要）</td>
+                </tr>
+                <tr>
+                  <td><strong>バグ（不具合）の対応</strong></td>
+                  <td>開発側の責任で無償修正（期間制限あり）</td>
+                  <td>準委任の稼働枠の中で修正・改善を実行</td>
+                </tr>
+                <tr>
+                  <td><strong>新規事業への適性</strong></td>
+                  <td>低（リリース前の仕様変更に対応不可）</td>
+                  <td>極めて高（MVP開発やピボットに最適）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="section-3">なぜ請負契約は新規事業・MVP開発で『高確率で失敗』するのか</h2>
+          <p>
+            一見すると、発注側にとって「システム完成を保証してくれる請負契約の方が安全」に見えます。しかし、不確実性の高い新規事業やスタートアップ開発においては、請負契約は以下の構造的リスクを抱えることになります。
+          </p>
+          <ul>
+            <li><strong>最初の要件定義（仕様）がずれていた場合のリスク</strong>：リリース後に「やはりこの機能は使われず、別の機能が必要だ」と判明しても、請負契約は「最初の仕様通りに完成させること」が契約目的であるため、開発途中のピボットや仕様変更は不可能です。変更する場合、数ヶ月の遅延と高額な追加見積もりが発生します。</li>
+            <li><strong>リスク料の上乗せによる予算高騰</strong>：開発側は「完成保証」という重い法的リスクを負うため、見積もりに多額のリスクバッファ（20%〜40%）を乗せます。そのため、実質的な開発工数に対して初期費用が非常に割高になります。</li>
+          </ul>
+
+          <h2 id="section-4">新規プロダクト開発には『準委任（ラボ契約）』を推奨する理由</h2>
+          <p>
+            市場ニーズを探りながら素早く軌道修正（ピボット）を繰り返す新規事業には、実稼働ベースで柔軟に仕様を変更できる<strong>「準委任（ラボ契約）」</strong>が最も高い投資対効果をもたらします。
+          </p>
+          <p>
+            私たち <strong>Ill株式会社 (Ill inc.)</strong> では、要件が明確な初期MVPはミニマル設計による上限価格（固定価格での段階準委任）を提示し、リリース後の改善フェーズでは専属のエンジニア枠を一定期間確保する「日越ハイブリッド・ラボ開発（準委任）」をご提供しています。
+          </p>
+          <p>
+            これにより、日本側のプランナーとお客様が「次に最も優先度の高い機能は何か」を毎週のミーティングで評価・変更し、ベトナム拠点の開発リソースを無駄なく注ぎ込むという、<strong>最も無駄がない（ミニマルな）開発プロセス</strong>を実現します。
+          </p>
+
+          <h2 id="section-faq">開発契約に関するよくある質問（FAQ）</h2>
+          
+          <h3>Q1. 準委任契約だと、開発会社がサボって開発が長引く（費用が膨らむ）心配はありませんか？</h3>
+          <p>
+            そのリスクを防ぐため、私たちは「稼働の透明化」を徹底しています。毎回のスプリント（1〜2週間サイクル）で「実際に動くプロトタイプ」を提示し、タスク管理ツール（Jira、Trello等）やGitHubのコミットログをお客様とリアルタイムで共有します。「何時間働いたか」ではなく「今週は何が動くようになったか」が可視化されるため、サボりや費用の不透明化は起こりません。
+          </p>
+
+          <h3>Q2. 納品後のバグ（バグ修正）は、準委任契約だと追加費用になりますか？</h3>
+          <p>
+            準委任契約においては、契約期間内の月額稼働枠の中で、新規機能の開発と並行してバグ修正も行われます。そのため、請負契約のように「これはバグか仕様変更か」という不毛な議論に時間を取られることなく、必要な改善を即座に適用し続けることができます。
+          </p>
+
+          <h3>Q3. 請負契約が適しているのはどのようなシステムですか？</h3>
+          <p>
+            「社内用の交通費精算システムを既存のExcel手順通りに作り替える」など、ゴールが100%確定しており、開発中に仕様変更が起こる確率が限りなくゼロに近いシステムの場合は、請負契約の方が「完成金額」が最初から担保されるため適しています。
+          </p>
+
+          <h2 id="section-5">まとめ：契約は「リスクのなすりつけ」ではなく「事業の並走ルール」である</h2>
+          <p>
+            新規事業開発におけるパートナー関係は、対立的な「発注者と請負人」ではなく、共通のプロダクトを育てる「ワンチーム」であるべきです。準委任・ラボ型の契約形態は、仕様変更という変化に対して両者が俊敏に対応するための、最も合理的な並走ルールです。
+          </p>
+          <p>
+            Ill Inc.では、お客様のプロジェクトの特性（要件の確定度、リリーススケジュール）に合わせて、無駄のない最適な契約形態とマイルストーンをご提案いたします。
+          </p>
+
+          <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">貴社ビジネスに最適な「契約形態と開発モデル」をご相談ください</h3>
+            <p class="inline-cta-desc">「請負と準委任、どちらで依頼すべきか悩んでいる」「現在の開発会社との契約を見直して、アジャイル体制に変えたい」という方へ。無料で開発体制の診断と最適な契約モデル案を作成します。</p>
+            <a href="../index.html#contact" class="btn btn-primary">契約・体制の無料相談はこちら</a>
+          </div>
+
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+          
+          <!-- Author Profile Widget -->
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">山</div>
+            <h3 class="author-name">山下 高志</h3>
+            <p class="author-role">Ill inc. 代表取締役</p>
+            <p class="author-bio">
+              大手SierおよびテックスタートアップでのPMを経て、Ill株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+            </p>
+          </div>
+
+          <!-- Related Columns Widget -->
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+                        <ul class="related-list">
+              <li class="related-item">
+                <a href="saas-product-launch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="rfp-development-request.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="requirements-definition-tips.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="nocode-vs-scratch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">ノーコード・ローコード開発の限界とスクラッチ開発の境界線 — 新規事業の技術選定基準</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="inhouse-vs-outsourcing.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の「内製化」と「外注」のベストバランス — スムーズに進めるロードマップ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sidebar conversion CTA Widget -->
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
+                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
+                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
+                <defs>
+                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff1b94"></stop>
+                    <stop offset="100%" stop-color="#9d00ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9d00ff"></stop>
+                    <stop offset="100%" stop-color="#00f0ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f0ff"></stop>
+                    <stop offset="100%" stop-color="#0072ff"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Theme Switcher Button -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Client JavaScript -->
+  <script src="../script.js?v=56"></script>
+</body>
+</html>

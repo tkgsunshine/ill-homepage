@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>システム開発RFPの書き方と選定チェックリスト | Ill inc. コラム</title>
+  <meta name="description" content="システム開発やアプリ開発を外注依頼する際、見積もりのズレや失敗を防ぐために極めて重要なのが「RFP（提案依頼書）」です。非エンジニアでも簡単に書けるRFPの必須項目や具体的な書き方、そして提案段階で優良な開発会社を見極める選定チェックリストを徹底解説します。">
+  <meta name="keywords" content="システム開発 依頼,RFP 書き方,開発会社 選定,提案依頼書,見積もり,Ill Inc.">
+  <meta name="author" content="山下 高志">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/rfp-development-request.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="システム開発RFPの書き方と選定チェックリスト | Ill inc. コラム">
+  <meta property="og:description" content="システム開発やアプリ開発を依頼する際のRFP（提案依頼書）の重要性、具体的な記述フォーマット、選定時に失敗しないチェックリストを解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/rfp-development-request.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="システム開発RFPの書き方と選定チェックリスト | Ill inc. コラム">
+  <meta name="twitter:description" content="システム開発やアプリ開発を依頼する際のRFP（提案依頼書）の重要性、具体的な記述フォーマット、選定時に失敗しないチェックリストを解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=56">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト",
+    "description": "システム開発を依頼する際のRFP（提案依頼書）の目的、必須記述項目、非エンジニア向けフォーマット、および開発パートナーの選定時に用いる評価シートを解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "author": {
+      "@type": "Person",
+      "name": "山下 高志",
+      "jobTitle": "Representative of Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/rfp-development-request.html"
+    }
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
+            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
+            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+            <defs>
+              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff1b94"></stop>
+                <stop offset="100%" stop-color="#9d00ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9d00ff"></stop>
+                <stop offset="100%" stop-color="#00f0ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff"></stop>
+                <stop offset="100%" stop-color="#0072ff"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">RFPの書き方と選定チェックリスト</span>
+      </div>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-category">システム導入</span>
+        <h1 class="article-title">開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.18</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+          <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
+          <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
+          <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Vector representing document flow to code -->
+          <rect x="440" y="154" width="120" height="120" rx="8" stroke="var(--color-cyan)" stroke-width="1" fill="var(--bg-subtle)" style="filter: drop-shadow(0 0 10px #00f0ff);"></rect>
+          <path d="M470 184 H530 M470 204 H530 M470 224 H510" stroke="var(--color-cyan)" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+      </div>
+
+      <!-- Article 2-Column Grid -->
+      <div class="article-layout">
+        
+        <!-- Left Column: Main Body Content -->
+        <main class="article-body">
+          
+          <!-- Table of Contents -->
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">RFP（提案依頼書）とは？ — なぜこれがないと開発は「大破」するのか</a></li>
+              <li><a href="#section-2">A4用紙1〜2枚で書ける！RFPの必須記述項目テンプレート</a></li>
+              <li><a href="#section-3">ミニマル開発を前提とした『要件の絞り込み方』</a></li>
+              <li><a href="#section-4">失敗しないシステム開発会社選定チェックリスト</a></li>
+              <li><a href="#section-faq">RFPと選定に関するよくある質問（FAQ）</a></li>
+              <li><a href="#section-5">まとめ：RFPは「仕様書」ではなく「課題の共有書」である</a></li>
+            </ul>
+          </div>
+
+          <p>
+            「開発会社に見積もりを依頼したら、各社で金額が数百万から数千万円までバラバラだった」「要件が正しく伝わっておらず、的外れな提案ばかり受けてしまった」——システム外注の初期段階でこのようなトラブルが起こるのは、発注時の「オリエンテーション資料（＝RFP）」に原因があります。
+          </p>
+          <p>
+            システム開発プロジェクトをスムーズに開始し、予算内で高品質なプロダクトを納品してもらうために必須となる<strong>「RFP（Request for Proposal: 提案依頼書）」</strong>の書き方と、開発会社を見極めるための具体的なチェックリストを解説します。
+          </p>
+
+          <h2 id="section-1">RFP（提案依頼書）とは？ — なぜこれがないと開発は「大破」するのか</h2>
+          <p>
+            RFPとは、発注側企業が「どのようなシステムを作りたいか、解決したいビジネス課題は何か、予算とスケジュールはどの程度か」を開発会社へ提示し、それに対する「最適な提案と正確な見積もり」を依頼するための公式文書です。
+          </p>
+          <p>
+            RFPがない状態、あるいは口頭だけで「こういうマッチングアプリを作りたい」と伝えて見積もりを求めると、開発会社は以下のような対応を取らざるを得なくなります。
+          </p>
+          <ul>
+            <li><strong>リスクを上乗せした「バッファ見積もり」</strong>：仕様が曖昧なため、想定外の作業が発生することを見越して工数・金額を大幅に上乗せして提示する。</li>
+            <li><strong>提案の不一致</strong>：A社はWebブラウザ版のみ、B社はiOS/Androidアプリの完全スクラッチ、C社はSaaS導入を提案するなど、比較検討自体が不可能な見積もりが揃う。</li>
+          </ul>
+          <p>
+            結果として、選定に多大な時間がかかり、最終的に「最も安かった」という理由だけで選んだ会社が仕様を理解しておらず、プロジェクトが途中で頓挫するという事態を招きます。
+          </p>
+
+          <h2 id="section-2">A4用紙1〜2枚で書ける！RFPの必須記述項目テンプレート</h2>
+          <p>
+            RFPは分厚い仕様書である必要はありません。特に新規事業においては、A4用紙1〜2枚程度のシンプルな内容で、以下の基本項目が明確に書かれていれば十分です。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>必須項目</th>
+                  <th>記述すべき内容の例</th>
+                  <th>RFPに書くべき理由</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. プロジェクトの背景・目的</strong></td>
+                  <td>「社内業務のアナログな進捗管理をデジタル化し、月間100時間の工数を削減する」など</td>
+                  <td>開発会社が「ビジネスのゴール」を理解し、適切な技術や設計を逆提案できるようにするため。</td>
+                </tr>
+                <tr>
+                  <td><strong>2. ターゲットユーザーと提供価値</strong></td>
+                  <td>「スマホ操作に不慣れな50代の現場作業員が、現場から日報を3ステップで送信する」など</td>
+                  <td>UIのシンプルさや、パフォーマンス（表示スピード）の設計基準を確定するため。</td>
+                </tr>
+                <tr>
+                  <td><strong>3. 主要な機能要件（Must）</strong></td>
+                  <td>「ログイン機能」「データ入力フォーム」「管理者ダッシュボード（PDF出力）」など</td>
+                  <td>開発対象の工数（人月）を算出する決定要因となるため。</td>
+                </tr>
+                <tr>
+                  <td><strong>4. 予算感・スケジュール</strong></td>
+                  <td>「初期MVP開発の予算上限は300万円、3ヶ月後にベータテスト開始」など</td>
+                  <td>予算内で実現できる範囲（ミニマル設計）を開発会社に設計させるため。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="section-3">ミニマル開発を前提とした『要件の絞り込み方』</h2>
+          <p>
+            RFPを書く段階から、<strong>「本当にこの要件は最初のリリースで必須か？」</strong>を問いかける習慣が、開発費用の高騰を防ぐ最大のポイントです。
+          </p>
+          <p>
+            例えば、「会員登録機能」をRFPに入れる際、メール認証、LINE連携、Googleログイン、パスワード紛失時の再発行機能まで最初から細かく指定すると、それだけで数十万円のコストアップになります。初期の検証フェーズであれば、「管理者が事前に手動でアカウントを発行してユーザーへ渡す」という運用回避を行うことで、会員登録回りの複雑な仕様をすべてカットし、最も本質的な機能の開発に予算を配分することができます。
+          </p>
+
+          <h2 id="section-4">失敗しないシステム開発会社選定チェックリスト</h2>
+          <p>
+            RFPをもとに集まった提案書と見積もりから、信頼できる開発会社を選定する際の5大指標をチェックリスト化しました。
+          </p>
+          <div class="toc-box" style="margin-top: 3.2rem; background: var(--bg-subtle);">
+            <div class="toc-title" style="border-bottom: 1px solid var(--glass-border); font-size: 1.6rem; padding-bottom: 0.8rem;">【選定】開発パートナー評価基準</div>
+            <ul style="margin: 1.6rem 0 0 2rem; list-style-type: check;">
+              <li style="margin-bottom: 0.8rem;"><strong>□ 提案に「引き算（不要な要件の削減）」が含まれているか</strong>：提示したRFPの機能をすべて鵜呑みにするのではなく、予算に合わせて「ここは削りましょう」と提案してくれるか。</li>
+              <li style="margin-bottom: 0.8rem;"><strong>□ 技術の選定理由が論理的か</strong>：なぜその言語（Node.js、Python等）やフレームワーク、クラウドインフラ（AWS、Vercel等）を用いるのか、保守性とコストの観点から説明されているか。</li>
+              <li style="margin-bottom: 0.8rem;"><strong>□ 開発チームの体制（誰がプロジェクトを担当するか）が明確か</strong>：営業担当だけでなく、実際に要件定義を行う日本のシステムアーキテクトや、実装を管理するPMの顔が見えているか。</li>
+              <li style="margin-bottom: 0.8rem;"><strong>□ リリース後のサポートや仕様変更にアジャイルに対応可能か</strong>：納品して終わりの「請負契約」だけでなく、リリース後の追加開発をスムーズに進められる契約形態が用意されているか。</li>
+              <li style="margin-bottom: 0.8rem;"><strong>□ 同様の新規事業やMVP開発の実績があるか</strong>：大規模なパッケージ導入だけでなく、スタートアップ的なスピード重視の開発実績が豊富か。</li>
+            </ul>
+          </div>
+
+          <h2 id="section-faq">RFPと選定に関するよくある質問（FAQ）</h2>
+          
+          <h3>Q1. 技術的な知識がなく、機能要件（Must機能）をどのように書けばいいか分かりません。</h3>
+          <p>
+            ご安心ください。RFPで最も重要なのは「技術仕様」ではなく、「どのようなビジネス課題を解決したいか」という目的と「ユーザーの行動の流れ」です。「このような画面から、ユーザーが情報を送信して、管理者が承認する」といった自然言語のフローだけで十分です。それを具体的な機能や疎結合なデータベース構造へ翻訳する作業（ミニマル設計）こそが、私たちの仕事です。
+          </p>
+
+          <h3>Q2. 予算を隠して見積もりを依頼した方が、開発会社が安く見積もってきますか？</h3>
+          <p>
+            逆効果になるケースがほとんどです。予算が不明な場合、開発会社は要件を「最も安全で高額なプラン」で設計せざるを得ません。予算上限をあらかじめ開示しておくことで、開発会社はその予算枠の中で「どのように要件を絞り込み、最大のバリューを出すか」という設計の知恵を競うことになります。
+          </p>
+
+          <h3>Q3. 相見積もりは何社程度に依頼するのがベストですか？</h3>
+          <p>
+            あまり多くの会社に声をかけると、各社の提案内容を正しく比較検討するリソースが発注側で足りなくなります。RFPを送付し、実際にオリエンテーションを行うのは<strong>「3社程度」</strong>に絞るのが、時間と質のバランスの観点から最も効率的です。
+          </p>
+
+          <h2 id="section-5">まとめ：RFPは「仕様書」ではなく「課題の共有書」である</h2>
+          <p>
+            優れたシステム開発とは、発注側と開発側が「同じゴール（課題解決）」を目指すワンチームの体制から生まれます。RFPはその強固な土台となるコミュニケーションツールです。
+          </p>
+          <p>
+            Ill Inc.では、RFPが未整備の段階から、お客様の頭の中にあるアイデアを一緒に整理し、ミニマル開発に適した「スマートなRFP・要件構成」を共同で策定するフェーズからお手伝いいたします。
+          </p>
+
+          <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">アイデア段階から一緒に「RFP（要件定義の骨子）」を作りませんか？</h3>
+            <p class="inline-cta-desc">「開発したいシステムはあるが、何から書けばいいか分からない」「他社への提案依頼用のRFPを作りたい」という方へ。お客様のビジネスモデルをヒアリングし、ミニマル設計に適したRFP構成案を無料で作成します。</p>
+            <a href="../index.html#contact" class="btn btn-primary">RFP・要件定義の無料相談はこちら</a>
+          </div>
+
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+          
+          <!-- Author Profile Widget -->
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">山</div>
+            <h3 class="author-name">山下 高志</h3>
+            <p class="author-role">Ill inc. 代表取締役</p>
+            <p class="author-bio">
+              大手SierおよびテックスタートアップでのPMを経て、Ill株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+            </p>
+          </div>
+
+          <!-- Related Columns Widget -->
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+                        <ul class="related-list">
+              <li class="related-item">
+                <a href="saas-product-launch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="rfp-development-request.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="requirements-definition-tips.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="nocode-vs-scratch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">ノーコード・ローコード開発の限界とスクラッチ開発の境界線 — 新規事業の技術選定基準</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="inhouse-vs-outsourcing.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の「内製化」と「外注」のベストバランス — スムーズに進めるロードマップ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sidebar conversion CTA Widget -->
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
+                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
+                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
+                <defs>
+                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff1b94"></stop>
+                    <stop offset="100%" stop-color="#9d00ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9d00ff"></stop>
+                    <stop offset="100%" stop-color="#00f0ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f0ff"></stop>
+                    <stop offset="100%" stop-color="#0072ff"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Theme Switcher Button -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Client JavaScript -->
+  <script src="../script.js?v=56"></script>
+</body>
+</html>

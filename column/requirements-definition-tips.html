@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>システム開発・要件定義のコツと失敗しない仕様策定 | Ill inc. コラム</title>
+  <meta name="description" content="システム開発プロジェクトが失敗する最大の原因は「要件定義（仕様策定）」の失敗にあります。非エンジニアの担当者でも実践できる要件定義の進め方のコツ、開発会社とのコミュニケーションロスを防ぐ方法、そして仕様の肥大化を防ぐミニマル設計手法をわかりやすく解説します。">
+  <meta name="keywords" content="要件定義 コツ,システム開発 失敗原因,仕様策定,コミュニケーション,外注,Ill Inc.">
+  <meta name="author" content="山下 高志">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/requirements-definition-tips.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="システム開発・要件定義のコツと失敗しない仕様策定 | Ill inc. コラム">
+  <meta property="og:description" content="システム開発の成否を決める要件定義の重要性、非エンジニア向け仕様策定フォーマット、バグや工数肥大化を招く失敗パターンの回避方法を解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/requirements-definition-tips.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="システム開発・要件定義のコツと失敗しない仕様策定 | Ill inc. コラム">
+  <meta name="twitter:description" content="システム開発の成否を決める要件定義の重要性、非エンジニア向け仕様策定フォーマット、バグや工数肥大化を招く失敗パターンの回避方法を解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=56">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド",
+    "description": "システム開発の要件定義が失敗する構造的な原因、開発プロジェクトを成功に導くビジネス要件とシステム要件の切り分け方、仕様を極限までシンプルにするコツを解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "author": {
+      "@type": "Person",
+      "name": "山下 高志",
+      "jobTitle": "Representative of Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/requirements-definition-tips.html"
+    }
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
+            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
+            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+            <defs>
+              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff1b94"></stop>
+                <stop offset="100%" stop-color="#9d00ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9d00ff"></stop>
+                <stop offset="100%" stop-color="#00f0ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff"></stop>
+                <stop offset="100%" stop-color="#0072ff"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">要件定義のコツ</span>
+      </div>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-category">仕様設計</span>
+        <h1 class="article-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.18</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+          <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
+          <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
+          <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Vector representing user stories mapping to features -->
+          <circle cx="400" cy="180" r="10" fill="var(--color-pink)" style="filter: drop-shadow(0 0 8px #ff1b94);"></circle>
+          <circle cx="500" cy="240" r="10" fill="var(--color-cyan)" style="filter: drop-shadow(0 0 8px #00f0ff);"></circle>
+          <line x1="410" y1="185" x2="490" y2="235" stroke="var(--color-cyan)" stroke-width="2"></line>
+        </svg>
+      </div>
+
+      <!-- Article 2-Column Grid -->
+      <div class="article-layout">
+        
+        <!-- Left Column: Main Body Content -->
+        <main class="article-body">
+          
+          <!-- Table of Contents -->
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">システム開発の『最頻出の失敗原因』：要件定義のズレと肥大化</a></li>
+              <li><a href="#section-2">【役割分担】ビジネス要件とシステム要件の違い</a></li>
+              <li><a href="#section-3">非エンジニアでもできる！要件定義を成功させる3つのコツ</a></li>
+              <li><a href="#section-4">要件を極限までシンプルにする『ミニマル設計』の適用プロセス</a></li>
+              <li><a href="#section-faq">要件定義に関するよくある質問（FAQ）</a></li>
+              <li><a href="#section-5">まとめ：完璧なドキュメントより、動くプロトタイプで対話する</a></li>
+            </ul>
+          </div>
+
+          <p>
+            「出来上がったシステムが、現場の業務フローと合わずに使われない」「開発会社と仕様の解釈を巡ってトラブルになった」——システム開発やアプリ開発の失敗事例を分析すると、その原因の7割以上が初期段階の**「要件定義（仕様策定）」**の不備にあります。
+          </p>
+          <p>
+            特に非エンジニアの事業担当者がプロジェクト責任者となる場合、専門用語の壁や仕様記述の難しさから、開発会社に要件定義を「丸投げ」してしまい、後から大きな手戻りや予算超過が発生しがちです。非エンジニアでも実践できる、要件定義の進め方のコツと、仕様をシンプルにまとめて開発を成功させるロードマップを解説します。
+          </p>
+
+          <h2 id="section-1">システム開発の『最頻出の失敗原因』：要件定義のズレと肥大化</h2>
+          <p>
+            要件定義とは、システムを構築する目的と、それを実現するためにシステムが「何をするべきか」を言語化して定義するプロセスです。これが失敗するパターンは主に以下の2つです。
+          </p>
+          <ul>
+            <li><strong>「何ができるか」の要望リスト化（肥大化）</strong>：現場や関係者の「あれもやりたい、これもやりたい」をそのまま追加した結果、開発工数が膨れ上がり、誰も全体像を把握できないモンスターシステムが設計されます。</li>
+            <li><strong>「暗黙の了解」による認識ズレ</strong>：発注側が「これくらい当然作ってくれるだろう」と思い、開発側が「そんな仕様は聞いていない（見積もりに入っていない）」と主張するパターンです。</li>
+          </ul>
+
+          <h2 id="section-2">【役割分担】ビジネス要件とシステム要件の違い</h2>
+          <p>
+            要件定義をスムーズに進めるためには、発注側と開発側がそれぞれの役割に応じた要件定義のレイヤーを分担して定義する必要があります。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>要件の分類</th>
+                  <th>定義の主担当</th>
+                  <th>具体的な記述内容の例</th>
+                  <th>失敗した際の影響</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>ビジネス要件</strong></td>
+                  <td>発注側（事業担当者）</td>
+                  <td>「誰が、どのような業務課題を解決するためにシステムを使うか」</td>
+                  <td>システムは動くが、全く事業の売上に貢献しないものになる。</td>
+                </tr>
+                <tr>
+                  <td><strong>システム要件</strong></td>
+                  <td>開発側（エンジニア）</td>
+                  <td>「どのようなデータベース構造で、どのAPIを用いて処理を実行するか」</td>
+                  <td>表示速度が極端に遅かったり、バグが多発して使えなくなる。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="section-3">非エンジニアでもできる！要件定義を成功させる3つのコツ</h2>
+          <p>
+            プログラミングの知識がない状態でも、以下の3つのポイントを意識するだけで、要件定義の精度は劇的に向上します。
+          </p>
+          <ol>
+            <li><strong>「機能」ではなく「業務の流れ（ユーザー体験）」を語る</strong>：「ログイン画面が欲しい」ではなく、「現場の作業員がスマホからログインし、日報のテキストを入力し、完了ボタンを押すと管理者にメールが届く」というように、時系列のストーリーで要求を伝えます。</li>
+            <li><strong>「Must (必須)」と「Want (できれば)」を明確に区分する</strong>：開発会社に見積もりを依頼する前に、全ての機能要望を「これが無ければサービスが成立しないもの」と「あれば嬉しいが、手動の運用で代替できるもの」に二分します。</li>
+            <li><strong>データ項目（何を入力・保存するか）を整理する</strong>：システム内で扱うべきデータ項目（名前、メールアドレス、電話番号、金額など）の入力欄を箇条書きでリスト化します。これはデータベース設計の直接的なインプットになります。</li>
+          </ol>
+
+          <h2 id="section-4">要件を極限までシンプルにする『ミニマル設計』の適用プロセス</h2>
+          <p>
+            私たち <strong>Ill株式会社 (Ill inc.)</strong> では、お客様が提示されたビジネス要件に対して、徹底的な**「引き算（ミニマル設計）」**を施します。
+          </p>
+          <p>
+            「将来的なシステム拡張のために」と初期段階から盛り込まれがちな不要な複雑性を排除し、要件定義にかける期間と実装費用を通常の1/2から1/3に抑えます。
+          </p>
+          <blockquote>
+            仕様書を何十ページも書く代わりに、主要な画面と遷移の流れ（UIモックアップ）を生成AIなどを活用して超高速で作成し、実際にお客様にブラウザ上で確認していただきながら要件を定義します。文字のドキュメントではなく「動く物」を見ながら進めることで、手戻りの可能性をゼロにします。
+          </blockquote>
+
+          <h2 id="section-faq">要件定義に関するよくある質問（FAQ）</h2>
+          
+          <h3>Q1. 要件定義は開発会社に「丸投げ」しても大丈夫ですか？</h3>
+          <p>
+            絶対に避けるべきです。「システム要件（技術的な実装方法）」はエンジニアが主導しますが、「ビジネス要件（解決したい課題、システムを使う業務フロー）」は事業主体である貴社にしか定義できません。丸投げされた開発会社は、一般的な仕様を想像で構築するため、貴社の実業務に全くフィットしないシステムが納品されるリスクが極めて高くなります。
+          </p>
+
+          <h3>Q2. 設計書に「後から仕様変更ができるような文言」を入れておけば安全ですか？</h3>
+          <p>
+            「請負契約」である場合、設計書にいくら曖昧な文言を書いても、見積もりの範囲を超える変更には追加費用が発生します。要件定義を進める段階で、最初から「変更が頻繁に起こる前提の契約（準委任や日越ハイブリッドのラボ型体制）」を選択しておくことが、契約上のトラブルを回避する最善策です。
+          </p>
+
+          <h3>Q3. 非機能要件（セキュリティやバックアップ等）はどのように定義すればよいですか？</h3>
+          <p>
+            非機能要件は専門知識が必要なため、開発会社がリードして定義書を作成すべき項目です。ただし、発注側としては「想定する同時アクセス数」「障害発生時に何時間以内の復旧を求めるか」「個人情報を含むデータの有無」の3点を伝えておくだけで、適切なインフラとバックアップ設計が提示されます。
+          </p>
+
+          <h2 id="section-5">まとめ：完璧なドキュメントより、動くプロトタイプで対話する</h2>
+          <p>
+            要件定義の目的は、巨大な設計ドキュメントを作成することではありません。発注側と開発側が**「同じ完成イメージを共有し、無駄のない最小限のコードで課題を解決すること」**です。
+          </p>
+          <p>
+            Ill Inc.では、お客様が言葉にしきれないビジネスモデルやアイデアを紐解き、必要十分なミニマル要件定義へと落とし込むサポートをいたします。
+          </p>
+
+          <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">要件定義の「そぎ落とし・モックアップ作成」を無料で行います</h3>
+            <p class="inline-cta-desc">「作りたいシステムのアイデアはあるが、要件定義書に落とし込めない」「無駄な機能を削って開発コストを下げたい」という方へ。無料でビジネス要件の整理とプロトタイプ画面イメージを作成します。</p>
+            <a href="../index.html#contact" class="btn btn-primary">要件定義・そぎ落としの無料相談はこちら</a>
+          </div>
+
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+          
+          <!-- Author Profile Widget -->
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">山</div>
+            <h3 class="author-name">山下 高志</h3>
+            <p class="author-role">Ill inc. 代表取締役</p>
+            <p class="author-bio">
+              大手SierおよびテックスタートアップでのPMを経て、Ill株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+            </p>
+          </div>
+
+          <!-- Related Columns Widget -->
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+                        <ul class="related-list">
+              <li class="related-item">
+                <a href="saas-product-launch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="rfp-development-request.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="requirements-definition-tips.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="nocode-vs-scratch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">ノーコード・ローコード開発の限界とスクラッチ開発の境界線 — 新規事業の技術選定基準</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="inhouse-vs-outsourcing.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の「内製化」と「外注」のベストバランス — スムーズに進めるロードマップ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sidebar conversion CTA Widget -->
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
+                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
+                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
+                <defs>
+                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff1b94"></stop>
+                    <stop offset="100%" stop-color="#9d00ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9d00ff"></stop>
+                    <stop offset="100%" stop-color="#00f0ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f0ff"></stop>
+                    <stop offset="100%" stop-color="#0072ff"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Theme Switcher Button -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Client JavaScript -->
+  <script src="../script.js?v=56"></script>
+</body>
+</html>

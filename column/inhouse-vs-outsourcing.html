@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>システム開発「内製化」と「外注」のバランス比較 | Ill inc. コラム</title>
+  <meta name="description" content="システム開発やITシステム運用において「内製化（インハウス開発）」を目指す企業が増えていますが、エンジニア採用の難しさから失敗するケースが後を絶ちません。本コラムでは、内製化と外注のコスト・メリット比較、失敗しないロードマップ、そして両者を組み合わせる「ハイブリッド開発」について詳しく解説します。">
+  <meta name="keywords" content="システム開発 内製化,外注 比較,ハイブリッド開発,IT人材不足,DX,SaaS,Ill Inc.">
+  <meta name="author" content="山下 高志">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/inhouse-vs-outsourcing.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="システム開発「内製化」と「外注」のバランス比較 | Ill inc. コラム">
+  <meta property="og:description" content="システム開発の内製化と外注の適正比較、採用コストとリスク、社内チームと外部パートナーによるハイブリッド開発の推進ロードマップを解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/inhouse-vs-outsourcing.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="システム開発「内製化」と「外注」のバランス比較 | Ill inc. コラム">
+  <meta name="twitter:description" content="システム開発の内製化と外注の適正比較、採用コストとリスク、社内チームと外部パートナーによるハイブリッド開発の推進ロードマップを解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=56">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "システム開発の「内製化」と「外注」のベストバランス — スムーズに進めるロードマップ",
+    "description": "企業がDXを推進するにあたって、システム開発の内製化と外注をどのようにバランスさせるべきか？それぞれのコスト・時間・ノウハウ蓄積のトレードオフと、ハイブリッド型アプローチを解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "author": {
+      "@type": "Person",
+      "name": "山下 高志",
+      "jobTitle": "Representative of Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/inhouse-vs-outsourcing.html"
+    }
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
+            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
+            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+            <defs>
+              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff1b94"></stop>
+                <stop offset="100%" stop-color="#9d00ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9d00ff"></stop>
+                <stop offset="100%" stop-color="#00f0ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff"></stop>
+                <stop offset="100%" stop-color="#0072ff"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">内製化と外注のバランス</span>
+      </div>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-category">IT経営</span>
+        <h1 class="article-title">システム開発の「内製化」と「外注」のベストバランス — スムーズに進めるロードマップ</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.18</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+          <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
+          <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
+          <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Vector representing balance scale -->
+          <line x1="380" y1="260" x2="620" y2="260" stroke="var(--color-cyan)" stroke-width="3" style="filter: drop-shadow(0 0 6px #00f0ff);"></line>
+          <circle cx="500" cy="260" r="8" fill="var(--color-pink)"></circle>
+          <circle cx="380" cy="240" r="10" fill="var(--bg-subtle)" stroke="var(--glass-border)"></circle>
+          <circle cx="620" cy="240" r="10" fill="var(--gradient-soft)" stroke="var(--color-cyan)"></circle>
+        </svg>
+      </div>
+
+      <!-- Article 2-Column Grid -->
+      <div class="article-layout">
+        
+        <!-- Left Column: Main Body Content -->
+        <main class="article-body">
+          
+          <!-- Table of Contents -->
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">DX推進のキーワード「内製化」：なぜ多くの内製化計画が挫折するのか</a></li>
+              <li><a href="#section-2">【トレードオフ】システム開発の「内製」と「外注」の比較</a></li>
+              <li><a href="#section-3">成功率を最大化する『ハイブリッド開発体制』という選択肢</a></li>
+              <li><a href="#section-4">ミニマル内製化ロードマップ：段階的インハウス移行のステップ</a></li>
+              <li><a href="#section-faq">内製化と外注に関するよくある質問（FAQ）</a></li>
+              <li><a href="#section-5">まとめ：IT組織は「採用」するのではなく「パートナーと育てる」</a></li>
+            </ul>
+          </div>
+
+          <p>
+            「DX（デジタルトランスフォーメーション）を推進するため、自社で開発組織を内製化したい」「外注会社に頼り切りのベンダーロックインから脱却したい」——近年、あらゆる産業においてシステム開発の「内製化（インハウス開発）」を目指す企業が急増しています。
+          </p>
+          <p>
+            しかし、実態としては「優秀なエンジニアを採用できずに何ヶ月も求人費だけが消えている」「採用したエンジニアと社内メンバーのコミュニケーションが噛み合わず離職してしまった」というように、挫折する事例が後を絶ちません。システム開発の内製と外注の適正を比較し、最も現実的かつコストを抑えて内製化を進めるための「ハイブリッドロードマップ」を解説します。
+          </p>
+
+          <h2 id="section-1">DX推進のキーワード「内製化」：なぜ多くの内製化計画が挫折するのか</h2>
+          <p>
+            内製化が挫折する最大の原因は、**「採用コストの甘さ」**と**「組織構築の難しさ」**です。
+          </p>
+          <p>
+            現在、日本国内のエンジニア市場は空前の売り手市場です。優秀なリードエンジニアを1名採用するだけでも、求人エージェント費用や年収を含めて初年度に1,000万円前後の資金が必要になります。さらに、開発プロジェクトにはフロントエンド、バックエンド、インフラ、PMといった多様なスキルが必要なため、1人を採用しただけではシステムをゼロから構築することはできません。
+          </p>
+          <p>
+            また、非IT企業において、エンジニアの「評価制度」や「キャリアパス」を社内で用意することができず、せっかく採用した優秀な人材が1〜2年で離職してしまうという組織的なリスクも非常に高いのが現実です。
+          </p>
+
+          <h2 id="section-2">【トレードオフ】システム開発の「内製」と「外注」の比較</h2>
+          <p>
+            それぞれの手法の特徴とトレードオフを比較します。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>比較項目</th>
+                  <th>完全内製（インハウス）</th>
+                  <th>完全外注（丸投げ）</th>
+                  <th>ハイブリッド開発（Ill Inc.）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>開発スピード</strong></td>
+                  <td>チームが成熟すれば最速</td>
+                  <td>仕様調整のプロセス次第で中〜低</td>
+                  <td>極めて高速（ミニマル設計で即着手）</td>
+                </tr>
+                <tr>
+                  <td><strong>初期・固定コスト</strong></td>
+                  <td>非常に高い（採用費・常時固定人件費）</td>
+                  <td>変動費化できるが、見積もりは割高</td>
+                  <td>最適（必要な稼働分のみの変動費）</td>
+                </tr>
+                <tr>
+                  <td><strong>ノウハウの蓄積</strong></td>
+                  <td>社内に完全に蓄積される</td>
+                  <td>社内に残らない（ブラックボックス化）</td>
+                  <td>仕様やデータ構造をドキュメント共有</td>
+                </tr>
+                <tr>
+                  <td><strong>リスク管理</strong></td>
+                  <td>離職によるプロジェクト停止リスクあり</td>
+                  <td>開発ベンダーの経営状況や値上げに依存</td>
+                  <td>体制維持と技術ノウハウ共有で低リスク</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="section-3">成功率を最大化する『ハイブリッド開発体制』という選択肢</h2>
+          <p>
+            内製と外注のいいとこ取りをするアプローチが、<strong>「ハイブリッド開発体制」</strong>です。
+          </p>
+          <p>
+            これは、「事業のコアとなる要件定義、ビジネスモデル設計、データ資産の管理」といったビジネスレイヤーは社内（プロダクトオーナー）が握り、「コーディング、サーバーインフラの構築、セキュリティ実装」といった技術レイヤーを外部の優秀なパートナー企業に委託する体制です。
+          </p>
+          <p>
+            これにより、莫大な採用コストやエンジニア組織マネジメントのリスクを回避しつつ、事業のノウハウ（何のためにこのデータ構造があるのか等のビジネス理解）はしっかりと社内に蓄積し、必要に応じて迅速にシステムをアップデートしていくことが可能になります。
+          </p>
+
+          <h2 id="section-4">ミニマル内製化ロードマップ：段階的インハウス移行のステップ</h2>
+          <p>
+            将来的に完全な内製化を目指す場合であっても、最初から採用を始めるのではなく、段階的に移行するロードマップを推奨します。
+          </p>
+          <div class="toc-box" style="margin-top: 3.2rem; background: var(--bg-subtle);">
+            <div class="toc-title" style="border-bottom: 1px solid var(--glass-border); font-size: 1.6rem; padding-bottom: 0.8rem;">【ロードマップ】段階的内製化の3ステップ</div>
+            <ul style="margin: 1.6rem 0 0 2rem; list-style-type: disc;">
+              <li style="margin-bottom: 0.8rem;"><strong>ステップ1. パートナーとMVP開発（0→1期）</strong>：まずは外部パートナーのミニマル設計を活用し、1〜3ヶ月でプロダクトを立ち上げます。社内には仕様決定のリーダー（PM）のみを置きます。</li>
+              <li style="margin-bottom: 0.8rem;"><strong>ステップ2. 社内エンジニアの第1号採用（1→10期）</strong>：ビジネスが検証でき、システム構造が安定した段階で、外部のコード構造を引き継ぎ、追加要件をハンドリングするリードエンジニアを1名採用します。</li>
+              <li style="margin-bottom: 0.8rem;"><strong>ステップ3. 徐々に自社チームへ移管（スケール期）</strong>：リードエンジニアがコア部分の内製を行い、大量の実装が必要な場合は引き続き外部の「ハイブリッド・ラボ体制」を切り出して活用し、効率的なインハウス組織を作ります。</li>
+            </ul>
+          </div>
+
+          <h2 id="section-faq">内製化と外注に関するよくある質問（FAQ）</h2>
+          
+          <h3>Q1. 外部の開発会社に作ってもらったシステムは、将来社内のエンジニアにスムーズに引き継げますか？</h3>
+          <p>
+            システム設計が「疎結合（モジュール型）」で構築され、APIドキュメントやコードコメント、構成図が最新の状態でドキュメント化されていれば、極めてスムーズに引き継ぎ可能です。私たちは将来的な内製化移管を想定し、GitHubでコード資産をお客様に完全譲渡可能な形式でバージョン管理を行っています。
+          </p>
+
+          <h3>Q2. ノーコードツール（Bubble等）を使って自社で内製化するのはどうですか？</h3>
+          <p>
+            一時的な社内業務ツールや顧客アンケート用アプリなどの簡単なシステムであれば、ノーコードを用いた自社内製化は非常によい手段です。ただし、前述の通り「パフォーマンスの限界」「プラットフォームロックイン」のリスクがあるため、自社の主力商品となるSaaSプロダクト等においては、将来のシステムコード再構築（リビルド）をあらかじめ予定しておく必要があります。
+          </p>
+
+          <h3>Q3. 内製化を進めるための最初の「社内メンバー（PM）」にIT知識がありません。</h3>
+          <p>
+            PMに必要なのは「プログラミングスキル」ではなく、「ビジネスで解決したい課題を定義し、関係者と調整する能力」です。技術的な設計書への翻訳やインフラ構成の策定は、私たちが伴走しながらシステムプランナーとしてアドバイスを提供するため、IT知識のない担当者でも安心して内製化プロジェクトの船頭を務めていただけます。
+          </p>
+
+          <h2 id="section-5">まとめ：IT組織は「採用」するのではなく「パートナーと育てる」</h2>
+          <p>
+            IT開発の内製化とは、必ずしも「全員を正社員として雇用すること」ではありません。事業の意思決定力を社内に持ち、それを支える機動力の高い技術パートナーを確保することこそが、本質的な「内製力」です。
+          </p>
+          <p>
+            Ill Inc.では、お客様が将来的に内製エンジニアチームを構築するロードマップを視野に入れつつ、現在のフェーズにおいて最もコスト効率とスピードが高い「日越ハイブリッド混成チーム」による伴走開発をご提供します。
+          </p>
+
+          <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">貴社ビジネスに最適な「内製化ロードマップ」を無料策定します</h3>
+            <p class="inline-cta-desc">「開発の内製化を進めたいが、どこからエンジニアを採用すべきか分からない」「ベンダーロックインを脱却し、社内にノウハウを蓄積したい」という方へ。無料でハイブリッド開発体制の設計と移行計画案を作成します。</p>
+            <a href="../index.html#contact" class="btn btn-primary">内製化・体制の無料相談はこちら</a>
+          </div>
+
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+          
+          <!-- Author Profile Widget -->
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">山</div>
+            <h3 class="author-name">山下 高志</h3>
+            <p class="author-role">Ill inc. 代表取締役</p>
+            <p class="author-bio">
+              大手SierおよびテックスタートアップでのPMを経て、Ill株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+            </p>
+          </div>
+
+          <!-- Related Columns Widget -->
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+                        <ul class="related-list">
+              <li class="related-item">
+                <a href="saas-product-launch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="rfp-development-request.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="requirements-definition-tips.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="nocode-vs-scratch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">ノーコード・ローコード開発の限界とスクラッチ開発の境界線 — 新規事業の技術選定基準</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="inhouse-vs-outsourcing.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の「内製化」と「外注」のベストバランス — スムーズに進めるロードマップ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sidebar conversion CTA Widget -->
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
+                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
+                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
+                <defs>
+                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff1b94"></stop>
+                    <stop offset="100%" stop-color="#9d00ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9d00ff"></stop>
+                    <stop offset="100%" stop-color="#00f0ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f0ff"></stop>
+                    <stop offset="100%" stop-color="#0072ff"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Theme Switcher Button -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Client JavaScript -->
+  <script src="../script.js?v=56"></script>
+</body>
+</html>

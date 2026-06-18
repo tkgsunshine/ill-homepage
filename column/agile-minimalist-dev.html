@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規事業でアジャイル開発・ミニマル設計を選ぶべき理由 | Ill inc. コラム</title>
+  <meta name="description" content="スタートアップや新規事業の立ち上げ期において、システム開発手法の選択は成否を分けます。本コラムでは、要件定義の肥大化を防ぎ、市場の変化へ俊敏に対応する「アジャイル開発」および「ミニマル設計思想」の具体的なメリットと、従来のウォーターフォール開発との違いを詳しく解説します。">
+  <meta name="keywords" content="アジャイル開発 メリット,ミニマル設計,要件定義 肥大化,システム開発,ウォーターフォール 比較,Ill Inc.">
+  <meta name="author" content="山下 高志">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/agile-minimalist-dev.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="新規事業でアジャイル開発・ミニマル設計を選ぶべき理由 | Ill inc. コラム">
+  <meta property="og:description" content="アジャイル開発とミニマル設計が新規事業に最適な理由、仕様変更への柔軟性、ウォーターフォール型との違いとメリットを徹底解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/agile-minimalist-dev.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="新規事業でアジャイル開発・ミニマル設計を選ぶべき理由 | Ill inc. コラム">
+  <meta name="twitter:description" content="アジャイル開発とミニマル設計が新規事業に最適な理由、仕様変更への柔軟性、ウォーターフォール型との違いとメリットを徹底解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=56">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "新規事業でアジャイル開発（ミニマル設計）を選ぶべき理由 — ウォーターフォールとの違い",
+    "description": "スタートアップや新規事業のシステム開発で、なぜアジャイル開発とミニマル設計が必要不可欠なのか？要件定義の肥大化を防ぎ、俊敏性と柔軟性を手に入れるための選択基準を解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "author": {
+      "@type": "Person",
+      "name": "山下 高志",
+      "jobTitle": "Representative of Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/agile-minimalist-dev.html"
+    }
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
+            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
+            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+            <defs>
+              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff1b94"></stop>
+                <stop offset="100%" stop-color="#9d00ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9d00ff"></stop>
+                <stop offset="100%" stop-color="#00f0ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff"></stop>
+                <stop offset="100%" stop-color="#0072ff"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">アジャイル開発とミニマル設計</span>
+      </div>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-category">開発手法</span>
+        <h1 class="article-title">新規事業でアジャイル開発（ミニマル設計）を選ぶべき理由 — ウォーターフォールとの違い</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.18</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+          <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
+          <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
+          <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Intersecting loops representing agile cycle -->
+          <path d="M420 214 C420 160 580 160 580 214 C580 268 420 268 420 214 Z" stroke="var(--color-cyan)" stroke-width="2" style="filter: drop-shadow(0 0 8px #00f0ff);"></path>
+          <circle cx="500" cy="214" r="6" fill="var(--color-pink)"></circle>
+        </svg>
+      </div>
+
+      <!-- Article 2-Column Grid -->
+      <div class="article-layout">
+        
+        <!-- Left Column: Main Body Content -->
+        <main class="article-body">
+          
+          <!-- Table of Contents -->
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">新規事業におけるシステム開発の宿命：『仕様は必ず変わる』</a></li>
+              <li><a href="#section-2">ウォーターフォール開発 vs アジャイル開発：徹底比較</a></li>
+              <li><a href="#section-3">アジャイル×ミニマル設計が生み出す3つの経営メリット</a></li>
+              <li><a href="#section-4">要件定義の肥大化を防ぐ『スコープコントロール』の極意</a></li>
+              <li><a href="#section-faq">開発手法に関するよくある質問（FAQ）</a></li>
+              <li><a href="#section-5">まとめ：スピードこそが、新規事業の最大の防御壁である</a></li>
+            </ul>
+          </div>
+
+          <p>
+            「数ヶ月かけて完璧な仕様書を作ったのに、開発中に市場環境が変わってしまった」「開発会社と仕様変更のたびに再見積もりが発生し、プロジェクトが進まない」——新規事業のシステム構築において、最も多く聞かれる悩みのひとつが、計画と現実のギャップです。
+          </p>
+          <p>
+            初期段階から仕様をガチガチに固めて進める従来の「ウォーターフォール開発」は、ゴールが明確な既存業務のシステム構築には適していますが、不確実性の高い新規事業においては致命的なリスクを伴います。なぜアジャイル開発とミニマル設計の組み合わせが、新規事業の生存率を劇的に高めるのか、手法の違いとメリットを詳しく解説します。
+          </p>
+
+          <h2 id="section-1">新規事業におけるシステム開発の宿命：『仕様は必ず変わる』</h2>
+          <p>
+            スタートアップや新規プロダクト開発における唯一の確実な事実は、<strong>「リリース前に予測した要件は、実際のユーザーに触れた瞬間に崩れ去る（＝仕様は必ず変わる）」</strong>ということです。
+          </p>
+          <p>
+            ウォーターフォール開発では、最初にすべての機能を定義し、設計、実装、テストを一方通行で進めます。このため、開発の中盤や後半で「ボタンの配置」のようなUIの修正から「サービスフローの変更」のようなコア機能の修正を行おうとすると、設計の根本的な見直しや契約の再締結が必要になり、開発進行が凍結してしまいます。
+          </p>
+          <p>
+            仕様変更を前提とし、短いサイクルで動くプロトタイプを作りながらプロダクトを肉付けしていく<strong>「アジャイル型アプローチ」</strong>こそが、現代のデジタルプロダクト開発において標準となっている理由がここにあります。
+          </p>
+
+          <h2 id="section-2">ウォーターフォール開発 vs アジャイル開発：徹底比較</h2>
+          <p>
+            それぞれの開発手法の特徴と、新規事業立ち上げフェーズにおける適性を比較します。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>比較項目</th>
+                  <th>ウォーターフォール開発</th>
+                  <th>アジャイル開発（ミニマル設計）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>開発の前提条件</strong></td>
+                  <td>要件が最初から全て明確であること</td>
+                  <td>要件はユーザー検証を通じて変化すること</td>
+                </tr>
+                <tr>
+                  <td><strong>リリースの単位</strong></td>
+                  <td>全機能が完了した段階で一発リリース</td>
+                  <td>1〜2週間の「スプリント」ごとに動く形で確認</td>
+                </tr>
+                <tr>
+                  <td><strong>仕様変更への耐性</strong></td>
+                  <td>極めて低い。手戻りコストが莫大になる</td>
+                  <td>極めて高い。計画の軌道修正が標準プロセス</td>
+                </tr>
+                <tr>
+                  <td><strong>初期リリースの速さ</strong></td>
+                  <td>遅い（通常半年〜1年以上）</td>
+                  <td>圧倒的に速い（数週間〜3ヶ月以内）</td>
+                </tr>
+                <tr>
+                  <td><strong>新規事業への適性</strong></td>
+                  <td>不可（市場ニーズのズレに対応できない）</td>
+                  <td>最適（顧客の声を即座にプロダクトへ反映）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="section-3">アジャイル×ミニマル設計が生み出す3つの経営メリット</h2>
+          <p>
+            アジャイル手法に「何を作らないか」を絞り込む「ミニマル設計思想」を組み合わせることで、新規事業チームは以下のメリットを獲得できます。
+          </p>
+          <ol>
+            <li><strong>タイム・トゥ・マーケットの最大短縮</strong>：本当に必要な機能（MVP）だけを数週間でリリースするため、市場への参入スピードが最大化します。</li>
+            <li><strong>ムダな開発コストの完全カット</strong>：使われない可能性のある機能のコーディングに開発予算を割かないため、限られた資金を事業の本質に集中投資できます。</li>
+            <li><strong>リアルタイムな進捗把握</strong>：ドキュメント上の「進捗率80%」ではなく、実際にブラウザ上で動作するシステムを見て進捗を判断できるため、開発会社との認識ズレやブラックボックス化を防げます。</li>
+          </ol>
+
+          <h2 id="section-4">要件定義の肥大化を防ぐ『スコープコントロール』の極意</h2>
+          <p>
+            アジャイル開発を成功させるためには、仕様変更を受け入れつつも、プロジェクトが際限なく膨らむのを防ぐ<strong>「スコープコントロール」</strong>が必要です。
+          </p>
+          <p>
+            私たち <strong>Ill株式会社 (Ill inc.)</strong> では、要件を「Must (必須)」「Should (推奨)」「Could (可能なら)」「Won't (今回は作らない)」の4つに厳格に分類するMoSCoW分析を用い、初期スプリントでは「Must」以外のコード記述を一切認めない設計を行います。
+          </p>
+          <blockquote>
+            この徹底したコントロールにより、システム全体の結合テストやインフラデプロイがシンプルになり、結果として開発の全プロセスにおけるバグ発生率を劇的に下げることができます。
+          </blockquote>
+
+          <h2 id="section-faq">開発手法に関するよくある質問（FAQ）</h2>
+          
+          <h3>Q1. アジャイル開発は「総額でいくらかかるか分からない」と聞きますが、予算管理はできますか？</h3>
+          <p>
+            多くの開発会社のアジャイル提案ではその傾向がありますが、Ill Inc.では「初期MVPの構築」という明確なマイルストーンに対して、ミニマル設計による上限予算（固定価格または段階コミット）を設定して進めます。そのため、スタートアップの資金調達フェーズや社内の予算申請枠をオーバーすることなく、安全にプロジェクトを開始いただけます。
+          </p>
+
+          <h3>Q2. 途中で仕様変更を重ねると、システム全体の設計（スパゲッティコード）が崩れませんか？</h3>
+          <p>
+            仕様変更を前提とした「疎結合（モジュール型）な基本設計」を行っておくことで、ある箇所のロジックを変更しても他への副作用が出ない構造を保ちます。私たちはデータベースやインターフェースの抽象レイヤーをあらかじめ設計しているため、アジャイルに仕様変更を重ねてもスパゲッティコード化を防ぐことができます。
+          </p>
+
+          <h3>Q3. ウォーターフォール開発の方が適しているシステムはありますか？</h3>
+          <p>
+            はい。社会インフラ系システム、銀行等の基幹決済基盤、あるいは完全に既存業務の置き換えであり、要件が100%確定していて変更の余地がないシステム構築の場合は、ウォーターフォール開発の方がスケジュール管理が容易な場合があります。しかし、新規Webサービス、新規スマホアプリ、SaaSの立ち上げにおいては、100%アジャイル・ミニマル開発の構成を推奨します。
+          </p>
+
+          <h2 id="section-5">まとめ：スピードこそが、新規事業の最大の防御壁である</h2>
+          <p>
+            新規事業における最大の競合リスクは、他社の技術力ではなく、<strong>「自社のローンチが遅れ、顧客からのフィードバックを得る前に資金が尽きること」</strong>です。
+          </p>
+          <p>
+            必要十分な設計で小さくアジャイルに立ち上げる。これこそが、激しい市場の変化に対応し、最も確実にビジネスをスケールさせる唯一の方法です。
+          </p>
+
+          <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">貴社事業の「ミニマルアジャイル設計」をサポートします</h3>
+            <p class="inline-cta-desc">「アジャイルで進めたいが、どのようなスケジュールで開発すればいいか分からない」「他社で断られた仕様変更の多いプロジェクトをどうにかしたい」という方へ。無料で開発手法の選定とスプリント計画案を作成します。</p>
+            <a href="../index.html#contact" class="btn btn-primary">開発手法・要件定義の無料相談はこちら</a>
+          </div>
+
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+          
+          <!-- Author Profile Widget -->
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">山</div>
+            <h3 class="author-name">山下 高志</h3>
+            <p class="author-role">Ill inc. 代表取締役</p>
+            <p class="author-bio">
+              大手SierおよびテックスタートアップでのPMを経て、Ill株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+            </p>
+          </div>
+
+          <!-- Related Columns Widget -->
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+                        <ul class="related-list">
+              <li class="related-item">
+                <a href="saas-product-launch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="rfp-development-request.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="requirements-definition-tips.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="nocode-vs-scratch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">ノーコード・ローコード開発の限界とスクラッチ開発の境界線 — 新規事業の技術選定基準</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="inhouse-vs-outsourcing.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の「内製化」と「外注」のベストバランス — スムーズに進めるロードマップ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sidebar conversion CTA Widget -->
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
+                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
+                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
+                <defs>
+                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff1b94"></stop>
+                    <stop offset="100%" stop-color="#9d00ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9d00ff"></stop>
+                    <stop offset="100%" stop-color="#00f0ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f0ff"></stop>
+                    <stop offset="100%" stop-color="#0072ff"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Theme Switcher Button -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Client JavaScript -->
+  <script src="../script.js?v=56"></script>
+</body>
+</html>

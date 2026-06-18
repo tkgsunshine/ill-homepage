@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaSビジネス立ち上げのシステム開発外注ステップ | Ill inc. コラム</title>
+  <meta name="description" content="新規のSaaSプロダクトやSaaSビジネスを立ち上げる際、開発外注の設計は成功を左右します。要件の肥大化による予算ショートやローンチ遅延を回避し、MVP開発（最小限製品）から検証を始め、成長フェーズに応じてシステムをスケールさせるための実践ステップを徹底解説します。">
+  <meta name="keywords" content="SaaS 立ち上げ,MVP開発,システム開発 外注,SaaS開発,起業,Ill Inc.">
+  <meta name="author" content="山下 高志">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/saas-product-launch.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SaaSビジネス立ち上げのシステム開発外注ステップ | Ill inc. コラム">
+  <meta property="og:description" content="SaaSプロダクトを立ち上げる際、MVP設計を用いた開発外注の進め方、検証方法、将来のスケールアップ戦略までを実践解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/saas-product-launch.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SaaSビジネス立ち上げのシステム開発外注ステップ | Ill inc. コラム">
+  <meta name="twitter:description" content="SaaSプロダクトを立ち上げる際、MVP設計を用いた開発外注の進め方、検証方法、将来のスケールアップ戦略までを実践解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=56">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで",
+    "description": "新規SaaSプロダクト立ち上げにおける開発外注の進め方、要件定義の絞り込み、MVP設計、市場検証、スケーラビリティのロードマップを解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "author": {
+      "@type": "Person",
+      "name": "山下 高志",
+      "jobTitle": "Representative of Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/saas-product-launch.html"
+    }
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
+            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
+            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+            <defs>
+              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff1b94"></stop>
+                <stop offset="100%" stop-color="#9d00ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9d00ff"></stop>
+                <stop offset="100%" stop-color="#00f0ff"></stop>
+              </linearGradient>
+              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00f0ff"></stop>
+                <stop offset="100%" stop-color="#0072ff"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">SaaSプロダクト開発外注のステップ</span>
+      </div>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-category">SaaS立ち上げ</span>
+        <h1 class="article-title">SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.18</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg width="100%" height="100%" viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--bg-dark);">
+          <circle cx="500" cy="214" r="160" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="8 8"></circle>
+          <circle cx="500" cy="214" r="80" stroke="var(--glass-border)" stroke-width="1.5"></circle>
+          <line x1="180" y1="214" x2="820" y2="214" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <line x1="500" y1="30" x2="500" y2="398" stroke="var(--glass-border)" stroke-width="1.5"></line>
+          <!-- Geometric representing SaaS modules connected to database -->
+          <rect x="420" y="174" width="160" height="80" rx="8" stroke="var(--color-cyan)" stroke-width="1.5" fill="var(--bg-subtle)" style="filter: drop-shadow(0 0 10px #00f0ff);"></rect>
+          <circle cx="500" cy="214" r="10" fill="var(--color-pink)" style="filter: drop-shadow(0 0 8px #ff1b94);"></circle>
+        </svg>
+      </div>
+
+      <!-- Article 2-Column Grid -->
+      <div class="article-layout">
+        
+        <!-- Left Column: Main Body Content -->
+        <main class="article-body">
+          
+          <!-- Table of Contents -->
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">SaaS開発外注の最初の罠：いきなり『大規模な要件定義』を行うリスク</a></li>
+              <li><a href="#section-2">SaaS立ち上げを成功に導く4つのロードマップ</a></li>
+              <li><a href="#section-3">初期フェーズ（MVP開発）で外注企業を見極める選定基準</a></li>
+              <li><a href="#section-4">SaaSのスケーラビリティと疎結合（マイクロサービス）設計</a></li>
+              <li><a href="#section-faq">SaaS立ち上げ外注に関するよくある質問（FAQ）</a></li>
+              <li><a href="#section-5">まとめ：小さく構築し、顧客ニーズの検証に全力を注ぐ</a></li>
+            </ul>
+          </div>
+
+          <p>
+            独自のノウハウやサービスをデジタル化し、定額課金型のWebプラットフォームとして提供する「SaaS（Software as a Service）」ビジネス。スタートアップだけでなく、自社の強みを活かして新規事業へ進出する企業にとっても、SaaSの立ち上げは魅力的な経営戦略です。
+          </p>
+          <p>
+            しかし、多くの新規SaaSプロジェクトにおいて、「要件定義の肥大化による莫大な開発費用の発生」「ローンチの大幅遅延による機会損失」という失敗パターンが散見されます。自社にエンジニア組織を持たない状態から、外部にシステム開発を外注してSaaSビジネスを成功させるための実践的な設計と進め方を段階的に解説します。
+          </p>
+
+          <h2 id="section-1">SaaS開発外注の最初の罠：いきなり『大規模な要件定義』を行うリスク</h2>
+          <p>
+            SaaSプロダクトの立ち上げ期において、多くの発注者が「競合他社に負けない多機能なシステム」を定義しようとします。
+          </p>
+          <ul>
+            <li>詳細なマルチテナント（複数組織）のアクセス制御管理</li>
+            <li>クレジットカード、コンビニ決済、請求書払いなど網羅的な決済方法</li>
+            <li>数万種類の条件分岐に対応した通知メール送信機能</li>
+            <li>洗練された外部分析ツールやSlack/Teams連携API</li>
+          </ul>
+          <p>
+            これらをすべて網羅した要件定義書をもとに受託開発会社に見積もりを依頼すると、初期リリースに数千万円の費用と1年以上の開発期間が提示されることになります。
+          </p>
+          <p>
+            しかし、実際にリリースした際、最も重要である<strong>「ユーザーが本当にこのサービスに毎月お金を支払ってくれるか」</strong>という検証が、その期間中は全くできません。競合他社もその間に新しい機能をリリースして追従してくるため、最初の完璧な設計思想自体が陳腐化する大きな投資リスクを抱えることになります。
+          </p>
+
+          <h2 id="section-2">SaaS立ち上げを成功に導く4つのロードマップ</h2>
+          <p>
+            成功するSaaSビジネスの多くは、最初から完璧なコードを書くのではなく、段階的（インクリメンタル）な開発ロードマップを実行しています。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>フェーズ</th>
+                  <th>開発スコープ（何を作るか）</th>
+                  <th>目的・検証のゴール</th>
+                  <th>Ill Inc.のアプローチ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. プロトタイプ (数日〜2週間)</strong></td>
+                  <td>主要画面のUIデザイン、ボタン遷移のモックアップ</td>
+                  <td>見込み顧客へ見せ、事前登録の意向を確認</td>
+                  <td>生成AIを最大活用した超高速モックアップ作成</td>
+                </tr>
+                <tr>
+                  <td><strong>2. MVP開発 (1〜3ヶ月)</strong></td>
+                  <td>顧客の「最優先の課題」を解決する1つの機能のみ</td>
+                  <td>クローズドな環境で実際に試用、有料契約を得る</td>
+                  <td>ミニマル設計で余計な機能を徹底カット、コスト削減</td>
+                </tr>
+                <tr>
+                  <td><strong>3. 二次開発 (3ヶ月〜6ヶ月)</strong></td>
+                  <td>MVPのフィードバックに基づく機能改修、決済・権限管理</td>
+                  <td>ユーザー定着率（チャーンレート）の最小化</td>
+                  <td>日越ハイブリッドチームで柔軟に要件追加に対応</td>
+                </tr>
+                <tr>
+                  <td><strong>4. スケール期 (6ヶ月以降〜)</strong></td>
+                  <td>API連携、複数テナントへのスケーリング、分析基盤</td>
+                  <td>新規獲得の最大化と他社製品との差別化</td>
+                  <td>クラウドマネージドによる疎結合スケーラブル設計</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="section-3">初期フェーズ（MVP開発）で外注企業を見極める選定基準</h2>
+          <p>
+            SaaSの立ち上げパートナーとしてふさわしいシステム開発会社を選ぶためには、単に「SaaSを作れる技術力があるか」だけでなく、<strong>「発注側の無駄なアイデアをそぎ落とすプランニング能力（ミニマル設計思想）を持っているか」</strong>を確かめる必要があります。
+          </p>
+          <p>
+            発注側が提示した大量の要件定義に対して「全部作れます、見積もりは1,000万です」と答える会社は、SaaS開発の初期パートナーとしては不向きです。「最初の検証にはこの機能とあの機能は不要です。まずこの部分だけで150万円で作り、残りの予算はリリース後のフィードバック修正に残しておきましょう」と提案できる、ミニマル開発に精通したパートナーを選定する必要があります。
+          </p>
+
+          <h2 id="section-4">SaaSのスケーラビリティと疎結合（マイクロサービス）設計</h2>
+          <p>
+            「必要最小限（ミニマル）」にSaaSを立ち上げる際、後から大規模な機能追加やアクセス急増に対応できるようにしておくためのシステムアーキテクチャが<strong>「疎結合設計（ルーズカップリング）」</strong>です。
+          </p>
+          <p>
+            Ill Inc.では、初期はモノリシック（一体型）に近いシンプルなコード構造でスピード重視で作りつつも、各モジュール（ログイン管理、課金、通知など）を疎結合に切り離せるAPI駆動の構成を採用しています。
+          </p>
+          <blockquote>
+            事業が急成長して数万ユーザーにスケールした際には、ボトルネックとなっている特定の処理だけを別のクラウドサーバーやマイクロサービス（Firebase Auth、Stripe等の外部API）へ容易に分離移行でき、初期のコード資産を無駄にすることなく拡張し続けることができます。
+          </blockquote>
+
+          <h2 id="section-faq">SaaS立ち上げ外注に関するよくある質問（FAQ）</h2>
+          
+          <h3>Q1. MVP開発の段階でも、ユーザー認証やStripeなどの決済機能は最初から自前で構築すべきですか？</h3>
+          <p>
+            いいえ。初期の検証フェーズでは、可能な限り既存のSaaSツール（Auth0やFirebase Authによるログイン、Stripe Payment Linksによる手動決済、Googleフォームを用いた問合せ管理）を活用して機能代替すべきです。自前で決済やログインのフルスクラッチコードを書くのは開発費とセキュリティの観点から後回しにし、プロダクトが提供する「本質的な価値」のコード記述にリソースを集中させるべきです。
+          </p>
+
+          <h3>Q2. リリース後にアイデアが全く異なる方向（ピボット）へ行く可能性がある場合、外注は不利ですか？</h3>
+          <p>
+            従来の「一括請負契約」による大規模ウォーターフォール開発では、途中での大幅な仕様変更はほぼ不可能です。しかし、要件をミニマルに切り分けてアジャイルに近い契約（準委任やラボ型ハイブリッド開発）で進めることで、リリース後の反応を見ながら数週間スパンでピボットや設計の軌道修正を繰り返すことが可能になります。
+          </p>
+
+          <h3>Q3. 最初は予算がないため、ノーコードでSaaSを作るのはどうですか？</h3>
+          <p>
+            最初のアイデア検証（プロトタイプ）や数人〜数十人でのクローズドテストであれば、ノーコードツール（Bubble等）で立ち上げるのは非常によい手段です。しかし、将来的な独自セキュリティ要件や決済連動、API統合、表示パフォーマンス、そしてデータエクスポートの観点で制限がかかることが多いため、ある程度スケールする段階（ビジネスモデルが検証できた直後）でスクラッチの疎結合コード（ミニマル構成）へ早期に移行するロードマップを推奨します。
+          </p>
+
+          <h2 id="section-5">まとめ：小さく構築し、顧客ニーズの検証に全力を注ぐ</h2>
+          <p>
+            SaaSの成功とは、立派な要件定義書を作ることでなく、<strong>「誰かの深い悩みを解決し、定額のサブスクリプション価値を感じてもらうこと」</strong>です。
+          </p>
+          <p>
+            Ill Inc.では、日本国内のプランナーによる的確な要件のそぎ落とし設計と、グローバル体制での俊敏な開発実行力により、起業家や新規事業立ち上げメンバーが最も低リスク・超高速にSaaS市場への挑戦ができるよう、ミニマル設計による最適なアプローチをご提供します。
+          </p>
+
+          <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">SaaSアイデアの「ミニマル化・MVP設計」をご相談ください</h3>
+            <p class="inline-cta-desc">「開発したいSaaSモデルはあるが、初期の要件定義をどう削ればいいか分からない」「最小コストで最速のプロトタイプを作りたい」という方へ。無料でMVP機能の選別設計とプロトタイプ構成案をご提案します。</p>
+            <a href="../index.html#contact" class="btn btn-primary">MVP機能の無料相談はこちら</a>
+          </div>
+
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+          
+          <!-- Author Profile Widget -->
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">山</div>
+            <h3 class="author-name">山下 高志</h3>
+            <p class="author-role">Ill inc. 代表取締役</p>
+            <p class="author-bio">
+              大手SierおよびテックスタートアップでのPMを経て、Ill株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+            </p>
+          </div>
+
+          <!-- Related Columns Widget -->
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+                        <ul class="related-list">
+              <li class="related-item">
+                <a href="saas-product-launch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="rfp-development-request.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="requirements-definition-tips.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="nocode-vs-scratch.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">ノーコード・ローコード開発の限界とスクラッチ開発の境界線 — 新規事業の技術選定基準</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="inhouse-vs-outsourcing.html">
+                  <span class="related-item-date">2026.06.18</span>
+                  <span class="related-item-title">システム開発の「内製化」と「外注」のベストバランス — スムーズに進めるロードマップ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sidebar conversion CTA Widget -->
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
+                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
+                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
+                <defs>
+                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff1b94"></stop>
+                    <stop offset="100%" stop-color="#9d00ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9d00ff"></stop>
+                    <stop offset="100%" stop-color="#00f0ff"></stop>
+                  </linearGradient>
+                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f0ff"></stop>
+                    <stop offset="100%" stop-color="#0072ff"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Theme Switcher Button -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Client JavaScript -->
+  <script src="../script.js?v=56"></script>
+</body>
+</html>
