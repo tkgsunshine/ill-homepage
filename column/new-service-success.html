@@ -75,27 +75,21 @@
 
   <!-- HEADER -->
   <header class="header" id="header">
-    <div class="container header-container">
-      <a href="../index.html" class="logo">
-        <div class="logo-icon-wrapper">
-          <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-1)"></rect>
-            <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-2)"></rect>
-            <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#logo-grad-3)"></rect>
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <!-- Stylized III / Ill Logo with Gradients -->
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="logo-grad-1" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#ff1b94"></stop>
-                <stop offset="100%" stop-color="#9d00ff"></stop>
-              </linearGradient>
-              <linearGradient id="logo-grad-2" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#9d00ff"></stop>
-                <stop offset="100%" stop-color="#00f0ff"></stop>
-              </linearGradient>
-              <linearGradient id="logo-grad-3" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#00f0ff"></stop>
-                <stop offset="100%" stop-color="#0072ff"></stop>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
               </linearGradient>
             </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
           </svg>
         </div>
         <div class="logo-text">
@@ -370,29 +364,16 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-container">
+    <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
           <a href="../index.html" class="logo footer-logo">
-            <div class="logo-icon-wrapper">
-              <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-1)"></rect>
-                <rect x="17" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-2)"></rect>
-                <rect x="28" y="8" width="6" height="24" rx="3" fill="url(#footer-logo-grad-3)"></rect>
-                <defs>
-                  <linearGradient id="footer-logo-grad-1" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#ff1b94"></stop>
-                    <stop offset="100%" stop-color="#9d00ff"></stop>
-                  </linearGradient>
-                  <linearGradient id="footer-logo-grad-2" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#9d00ff"></stop>
-                    <stop offset="100%" stop-color="#00f0ff"></stop>
-                  </linearGradient>
-                  <linearGradient id="footer-logo-grad-3" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#00f0ff"></stop>
-                    <stop offset="100%" stop-color="#0072ff"></stop>
-                  </linearGradient>
-                </defs>
+            <div class="logo-icon">
+              <!-- SVG Logo -->
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
               </svg>
             </div>
             <div class="logo-text">ILL<span>INC.</span></div>
