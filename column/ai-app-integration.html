@@ -46,8 +46,8 @@
     "headline": "生成AIを活用した新規アプリ開発のステップと活用事例 — AIX推進のロードマップ",
     "description": "ChatGPT APIやLLMを用いたAIアプリ開発、企業の生成AI導入におけるシステム要件、開発フロー、ビジネスモデル構築のポイントを解説。",
     "image": "https://www.ill-inc.net/ogp.png?v=1",
-    "datePublished": "2026-04-24",
-    "dateModified": "2026-04-24",
+    "datePublished": "2026-04-05",
+    "dateModified": "2026-04-05",
     "author": {
       "@type": "Person",
       "name": "山下 高志",
@@ -66,6 +66,128 @@
       "@id": "https://www.ill-inc.net/column/ai-app-integration.html"
     }
   }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI・AIアプリ開発のステップ"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. OpenAI APIなど外部のAIサービスに機密データを送信することになり、セキュリティは大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由での送信データについて、主要なAIプロバイダー（OpenAI、Anthropic、Google Cloud等）はデフォルトで「AIモデルの再学習には使用しない」というポリシーを適用しています。さらに厳格なセキュリティが必要な場合は、Azure OpenAI Serviceなどを利用して自社占有のクラウドアカウント内のみで通信を完結させる「閉域網連携」を設計することで、エンタープライズ基準のセキュリティを担保可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. AIの回答が嘘をつくこと（ハルシネーション）を防ぐことは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100%防ぐことは現在のLLMの特性上困難ですが、RAG（検索拡張生成）技術を導入し、回答のソースとなる「根拠文書（自社のデータ）」を明示的に指定して「この文書以外の知識を用いて回答するな」とプロンプトで厳格に縛ることで、ハルシネーションの発生確率をほぼ実用上問題のないレベルまで抑え込むことができます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 将来的にローカルLLMや独自モデルへの切り替えは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。システム設計時に、AIを呼び出すモジュールを疎結合な共通インターフェース（ラッパー）として設計しておくことで、将来的にOpenAIからLlamaといったオープンソースの自社サーバーモデルへシステムコードを大幅に変更することなく容易にスイッチさせることが可能です。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI・AIアプリ開発のステップ"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. OpenAI APIなど外部のAIサービスに機密データを送信することになり、セキュリティは大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由での送信データについて、主要なAIプロバイダー（OpenAI、Anthropic、Google Cloud等）はデフォルトで「AIモデルの再学習には使用しない」というポリシーを適用しています。さらに厳格なセキュリティが必要な場合は、Azure OpenAI Serviceなどを利用して自社占有のクラウドアカウント内のみで通信を完結させる「閉域網連携」を設計することで、エンタープライズ基準のセキュリティを担保可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. AIの回答が嘘をつくこと（ハルシネーション）を防ぐことは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100%防ぐことは現在のLLMの特性上困難ですが、RAG（検索拡張生成）技術を導入し、回答のソースとなる「根拠文書（自社のデータ）」を明示的に指定して「この文書以外の知識を用いて回答するな」とプロンプトで厳格に縛ることで、ハルシネーションの発生確率をほぼ実用上問題のないレベルまで抑え込むことができます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 将来的にローカルLLMや独自モデルへの切り替えは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。システム設計時に、AIを呼び出すモジュールを疎結合な共通インターフェース（ラッパー）として設計しておくことで、将来的にOpenAIからLlamaといったオープンソースの自社サーバーモデルへシステムコードを大幅に変更することなく容易にスイッチさせることが可能です。"
+      }
+    }
+  ]
+}
   </script>
 
   <!-- Breadcrumb Structured Data -->

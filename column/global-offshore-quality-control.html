@@ -46,8 +46,8 @@
     "headline": "オフショア開発でバグ・手戻りを防ぐ品質管理（QA）プロセスとコミュニケーションの極意",
     "description": "グローバル開発での品質トラブルや手戻りを防ぐためのテスト自動化、詳細設計書のコミュニケーション、ブリッジSE活用法を徹底解説。",
     "image": "https://www.ill-inc.net/ogp.png?v=1",
-    "datePublished": "2026-06-03",
-    "dateModified": "2026-06-03",
+    "datePublished": "2026-05-16",
+    "dateModified": "2026-05-16",
     "author": {
       "@type": "Organization",
       "name": "Ill株式会社"
@@ -65,6 +65,112 @@
       "@id": "https://www.ill-inc.net/column/global-offshore-quality-control.html"
     }
   }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "グローバル開発品質管理"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 現地でテストしているはずなのに、日本側の検収でバグが大量に出るのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "それは「テストケースの作成方法」が異なっているからです。現地のテスターは仕様書通りに動くか（正常系）の確認は得意ですが、「ユーザーが変な入力をした場合」や「ネットワークが切れた場合」などの準正常系・異常系のテストケースを作成していないケースが多いです。テストケースの作成段階で日本側がチェック・承認を行うプロセスが必須です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. テストの自動化はオフショア開発に有効ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "極めて有効です。特に変更が頻繁に発生するプロジェクト（アジャイル開発）では、一度修正したコードが他の機能に影響を与える「デグレード（先祖返り）」が多発します。主要画面のE2Eテスト（PlaywrightやCypressなど）を自動化し、CI/CDラインに組み込んでおくことで、バグの自動検知率が飛躍的に高まります。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "グローバル開発品質管理"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 現地でテストしているはずなのに、日本側の検収でバグが大量に出るのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "それは「テストケースの作成方法」が異なっているからです。現地のテスターは仕様書通りに動くか（正常系）の確認は得意ですが、「ユーザーが変な入力をした場合」や「ネットワークが切れた場合」などの準正常系・異常系のテストケースを作成していないケースが多いです。テストケースの作成段階で日本側がチェック・承認を行うプロセスが必須です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. テストの自動化はオフショア開発に有効ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "極めて有効です。特に変更が頻繁に発生するプロジェクト（アジャイル開発）では、一度修正したコードが他の機能に影響を与える「デグレード（先祖返り）」が多発します。主要画面のE2Eテスト（PlaywrightやCypressなど）を自動化し、CI/CDラインに組み込んでおくことで、バグの自動検知率が飛躍的に高まります。"
+      }
+    }
+  ]
+}
   </script>
 
   <!-- Breadcrumb Structured Data -->
