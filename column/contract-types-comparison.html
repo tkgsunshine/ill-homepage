@@ -67,6 +67,67 @@
     }
   }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム開発の契約形態比較"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 準委任契約だと、開発会社がサボって開発が長引く（費用が膨らむ）心配はありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "そのリスクを防ぐため、私たちは「稼働の透明化」を徹底しています。毎回のスプリント（1〜2週間サイクル）で「実際に動くプロトタイプ」を提示し、タスク管理ツール（Jira、Trello等）やGitHubのコミットログをお客様とリアルタイムで共有します。「何時間働いたか」ではなく「今週は何が動くようになったか」が可視化されるため、サボりや費用の不透明化は起こりません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 納品後のバグ（バグ修正）は、準委任契約だと追加費用になりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "準委任契約においては、契約期間内の月額稼働枠の中で、新規機能の開発と並行してバグ修正も行われます。そのため、請負契約のように「これはバグか仕様変更か」という不毛な議論に時間を取られることなく、必要な改善を即座に適用し続けることができます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 請負契約が適しているのはどのようなシステムですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「社内用の交通費精算システムを既存のExcel手順通りに作り替える」など、ゴールが100%確定しており、開発中に仕様変更が起こる確率が限りなくゼロに近いシステムの場合は、請負契約の方が「完成金額」が最初から担保されるため適しています。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -146,7 +207,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;">
+        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「システム開発「請負契約」と「準委任」の違い」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
           <image href="../illust_contract_comparison.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">

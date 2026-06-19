@@ -67,6 +67,67 @@
     }
   }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ノーコードの限界とスクラッチ開発"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. Bubbleなどで作ったアプリのデータベース（ユーザーデータ等）は、スクラッチ移行時に引き継げますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。ノーコードツールであっても、CSV形式やAPI経由でデータベース内の全情報をエクスポートすることが可能です。スクラッチで設計したデータベースへデータをインポートするマイグレーション（移行）処理を適切に施すことで、これまでのユーザー情報を失うことなくリニューアル可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. ローコード（Low-Code）開発はノーコードの限界をクリアできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ローコード（一部にカスタムJSやCSSを挟めるツール）は、ノーコードよりもデザインやロジックの自由度が高まります。しかし、「プラットフォームロックイン（ツール運営会社のインフラ依存）」や「表示速度のオーバーヘッド」という根本的な問題は残るため、将来的な大規模スケールを予定しているSaaS等のプロダクトにおいては、移行の手間を考慮すると最初からミニマルなスクラッチコードで書く方が結果的に安上がりになるケースが多いです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. スクラッチ開発は「見積もりが高く、納期が長い」というイメージがあります。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "それは「すべての機能を網羅する大規模なスクラッチ開発」の場合です。Ill Inc.が実践する「ミニマル開発思想」では、機能をコアな数点に絞り込むため、スクラッチ開発であっても期間は1〜2ヶ月、費用も100万〜200万円台からと、ノーコード開発に匹敵するスピード感でのフルスクラッチ構築を提供しています。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -146,7 +207,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;">
+        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「ノーコード開発の限界とスクラッチ開発の技術選定基準」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
           <image href="../illust_nocode_vs_scratch.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">

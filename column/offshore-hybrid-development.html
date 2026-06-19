@@ -67,6 +67,33 @@
     }
   }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "オフショア開発の新常識"
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -146,7 +173,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;">
+        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「日本とベトナムのハイブリッドチームで成功するオフショア開発の新常識」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
           <image href="../illust_offshore_hybrid.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">

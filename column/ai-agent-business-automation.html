@@ -66,6 +66,59 @@
     }
   }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AIエージェント業務自動化"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. AIエージェントの開発には多大な初期投資が必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。最初から高度なマルチエージェントシステムを作るのではなく、まずは既存のLLM（OpenAIやClaudeなど）にツール（Web SearchやカスタムPythonスクリプト）を1〜2個連携させる「シングルエージェント」のプロトタイプであれば、1〜2週間程度のミニマル開発で低コストに構築が可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 社内機密データが外部のLLMモデルの学習に使用されることはありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由でのLLM利用（Azure OpenAI ServiceやAWS Bedrockなど）や、適切なエンタープライズ契約・ローカルLLM（Llama3など）の導入により、データが外部モデルの学習に送信されることを防ぐ堅牢なインフラ設計が可能です。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -140,7 +193,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;">
+        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「AIエージェントを活用した業務自動化の最前線」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
           <image href="../illust_ai_agent.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">

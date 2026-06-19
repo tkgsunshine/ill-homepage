@@ -67,6 +67,67 @@
     }
   }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム・アプリ開発の費用相場"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 他社で「最低でも500万円かかる」と言われたアプリが、ミニマル開発なら安くなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、安くなる可能性が極めて高いです。他社の500万円の見積もりには、おそらく「複雑なユーザー管理画面」「何段階もの認証ステップ」「将来用の通知設定」など、今すぐ必要でない要件が多く含まれています。これらをそぎ落とし、サービスの本質である「コア機能」のみに集中することで、150万〜200万円程度まで初期費用を圧縮できるケースが多数存在します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 海外（オフショア）に外注すれば無条件で安くなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "単に海外の開発会社に丸投げするだけでは、安くならないばかりか、言語や仕様理解の壁により「動かないシステム」が納品され、二重にコストがかかるケースがあります。仕様の設計や要件の選別（ミニマル設計）を日本側で行い、実装のみを海外の優秀なエンジニアに委託する「ハイブリッド型」こそが、最も安全にコストを抑える方法です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 保守運用コストは毎月どれくらい見込んでおくべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一般的には開発費の「年間10%〜15%程度」が目安とされます。しかし、疎結合でミニマルな設計を施しておけば、サーバーの過剰スペック化を防ぎ、毎月の保守運用費（インフラ実費＋メンテナンス費）も大幅に抑えることができます。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -146,7 +207,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;">
+        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「システム開発・アプリ開発の費用相場と見積もりの内訳を徹底解説」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
           <image href="../illust_cost_market.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">

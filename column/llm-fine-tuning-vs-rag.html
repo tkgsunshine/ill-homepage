@@ -66,6 +66,59 @@
     }
   }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RAG vs ファインチューニング"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. RAGを導入するだけで、社内ドキュメントの検索は100%完璧になりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。RAGの精度は、LLMの性能よりも「PDFやドキュメントの構造化（チャンキングやメタデータ設計）」および「ベクトル検索（セマンティック検索）のハイブリッドチューニング」といった、検索ロジックそのもの（RAGエンジニアリング）に8割型依存します。Ill株式会社では、独自の高精度チャンキングモジュールにより、検索精度の最大化を実現しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. ローカルLLMを用いたセキュアなファインチューニングは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。Llama 3やMistralなどのオープンモデルを用い、企業内のオンプレミスサーバーやプライベートクラウド環境（AWS, Azure）のGPU上でファインチューニングを行うことで、完全なクローズド環境での学習と実行が可能です。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -140,7 +193,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;">
+        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「社内データのAI活用におけるRAGとファインチューニングの比較と選定基準」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
           <image href="../illust_rag_vs_ft.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
