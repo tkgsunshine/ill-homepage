@@ -36,7 +36,7 @@
   <link rel="shortcut icon" href="../favicon.ico">
   
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="../style.css?v=58">
+  <link rel="stylesheet" href="../style.css?v=59">
 
   <!-- JSON-LD Structured Data (WebPage Schema) -->
   <script type="application/ld+json">
@@ -137,446 +137,192 @@
         </div>
       </div>
 
-      <!-- Cases Detail Cards -->
-      <div class="cases-container" style="display: flex; flex-direction: column; gap: 6rem;">
-        
-        <!-- Case 1: Matching App -->
-        <div class="case-card-item glass-card reveal" data-category="matching-app" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_case_matching.png" alt="マッチングアプリ開発のビジュアルUI" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">新規事業開発</span>
-            </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                AIを活用した次世代マッチングプラットフォーム
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">React Native</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Node.js</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">FastAPI</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">OpenAI API</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    新規事業としてマッチングサービスを立ち上げるにあたり、「限られた予算とスケジュールで競合と差別化する機能を作りたい」「自己紹介文の作成が面倒でユーザーが離脱してしまう」「サクラや不適切発言の検知コストが心配」という課題がありました。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>AI自己紹介文自動作成アシスタント</strong>: いくつかの選択肢を選ぶだけで、LLMが自然で魅力的なプロフィールを数秒でドラフト。</li>
-                    <li><strong>スマート相性診断アルゴリズム</strong>: ユーザーの行動履歴やプロフィールの意味ベクトルを基に、より精度の高い親和性マッチング。</li>
-                    <li><strong>リアルタイム不正検知フィルター</strong>: メッセージ送信時のプロンプト防御とモデレーションAPIの統合により、不正アカウントやハラスメント発言を自動でブロック。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    仕様策定とUIモックのフェーズをミニマルに行い、<strong>着手からわずか3週間で動くプロトタイプ（MVP）を構築</strong>。検証結果をスピーディーに反映させながら、日本とベトナムのハイブリッド体制で本開発を行うことで、通常のスクラッチ受託開発に比べて<strong>費用を約半分に抑えながら安定したリリース</strong>を実現しました。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Cases Grid list -->
+      <div class="column-grid" style="margin-bottom: 8rem;">
 
-        <!-- Case 2: Business System & DX -->
-        <div class="case-card-item glass-card reveal" data-category="cloud-security" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_case_business.png" alt="業務系DXシステムのデータ連携構造イメージ" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
-            </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                企業間データ連携＆セキュア社内情報RAGシステム
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Python</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">LangChain</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">VectorDB</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Oracle Cloud</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    企業内の多種多様なフォーマットの機密ドキュメント（PDF、仕様書、過去の社内Slackログなど）を検索・活用したいが、通常のクラウドAIサービスを使うと情報漏洩リスクがあるほか、データベース間のAPI連携インフラが複雑化しており、開発期間とセキュリティ設計の妥協が許されない状況でした。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>オプトアウトRAGアーキテクチャ</strong>: 入力データが外部AIベンダーの学習モデルに利用されないAPI設計、及びデータのローカルベクトル化。</li>
-                    <li><strong>暗号化自動連携バッチ</strong>: 各種ファイルストレージから定期的にドキュメントを読み込んで自動で差分インデックスを作成する安全なデータ連携機構。</li>
-                    <li><strong>アクセスコントロール連携</strong>: 社員の権限（一般・管理者など）に応じて、アクセス可能なRAGのナレッジベースを自動制御するセキュリティ実装。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    クラウドインフラ設計段階から**エンタープライズ品質の超セキュア環境を保証**し、既存データと連動した使いやすいRAGを短期デプロイ。社員の社内情報検索および報告書作成にかかる時間を**月間120時間以上削減**しました。
-                  </p>
-                </div>
-              </div>
-            </div>
+        <!-- Case: matching-platform -->
+        <article class="column-card glass-card reveal" data-category="matching-app">
+          <div class="column-card-image">
+            <span class="column-card-badge">新規事業開発</span>
+            <img src="../illust_case_matching.png" alt="AIを活用した次世代マッチングプラットフォーム">
           </div>
-        </div>
-
-        <!-- Case 3: Job Site / Recruitment Portal -->
-        <div class="case-card-item glass-card reveal" data-category="system-app" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_case_recruitment.png" alt="求職者と仕事のAIマッチングダッシュボード画面イメージ" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">新規サービス</span>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">React Native / Node.js / FastAPI / OpenAI API</span>
             </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                AI求職票自動生成＆マッチング求人ポータルサイト
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Next.js</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Claude 3.5</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">FastAPI</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">TailwindCSS</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    従来の求人・求職マッチングプラットフォームでは、求人企業の募集要項の作成ハードルが高く、更新頻度が落ちることや、求職者のレジュメと求人票との手動マッチング作業に多大な人件費が発生し、スケールしづらい課題を抱えていました。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>AI求人票作成ジェネレーター</strong>: 求める職種と数個の箇条書き条件を入力するだけで、SEOと応募意欲を高める魅力的な求人票を自動生成。</li>
-                    <li><strong>レジュメ自動解析＆マッチング</strong>: アップロードされた職務経歴書（PDF等）から保有スキルやキャリアを構造化データとして自動抽出し、マッチ率順に自動順位づけ。</li>
-                    <li><strong>Next.js高速レンダリング</strong>: SSR（Server-Side Rendering）を活用し、SEOに極めて強い求人詳細ページの高速描画と瞬時の求人検索を実現。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    ミニマルなデータベース設計により、無駄なデータ取得や過剰なAPIコールを削減しつつ高速動作を実現。管理側のマッチング仲介・求人票チェック工数を**約85%削減**し、自社メディア型の集客を最大化させるSEO設計を盛り込むことで、リリース数ヶ月で**オーガニック登録者数増加に大きく貢献**しました。
-                  </p>
-                </div>
-              </div>
-            </div>
+            <a href="matching-platform.html" style="text-decoration: none;">
+              <h2 class="column-card-title">AIを活用した次世代マッチングプラットフォーム</h2>
+            </a>
+            <p class="column-card-excerpt">独自のマッチングアルゴリズムや生成AIによる自己紹介文自動生成・不適切発言検知機能を搭載した、高セキュリティなマッチングサービス開発。</p>
+            <a href="matching-platform.html" class="column-card-link">実績を見る</a>
           </div>
-        </div>
+        </article>
 
-        <!-- Case 4: Employee interview video analysis -->
-        <div class="case-card-item glass-card reveal" data-category="gen-ai" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_ai_agent.png" alt="自律型AIエージェントのビジュアルイラスト" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">生成AI開発</span>
-            </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                AI動画解析による社員インタビュー＆フィードバックシステム
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">GPT-4o</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Whisper API</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">FastAPI</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Vue.js</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    組織強化のための定期面談において、面接官やメンターごとにヒアリングの深度や評価基準にばらつきがあり、面談結果の振り返りや個別具体的なフィードバックレポートの作成に多大な工数がかかっていました。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>マルチモーダル対話解析</strong>: 面談の録画動画から発話書き起こし（Whisper）を行い、GPT-4oを用いて表情・感情推移および対話の文脈を統合解析。</li>
-                    <li><strong>スキル＆コンピテンシー自動マッピング</strong>: 定量化しにくい発話内容から、社員の自律性や問題解決能力などの指標をAIが自動スコアリング。</li>
-                    <li><strong>フィードバックレポート自動出力</strong>: 解析データに基づき、本人の強み、キャリア成長のためのアクションプラン提案シートをPDF形式で即時生成。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    定性的な対話情報を整理し、業務評価に直接耐えうるレポートテンプレートの検証（プロンプト・エンジニアリング）を徹底。面談者による評価バイアスを排除して客観的なデータ構築を可能とし、**面談後のレポート作成・データ化工数を70%削減**しました。
-                  </p>
-                </div>
-              </div>
-            </div>
+        <!-- Case: enterprise-rag -->
+        <article class="column-card glass-card reveal" data-category="cloud-security">
+          <div class="column-card-image">
+            <span class="column-card-badge">システム開発</span>
+            <img src="../illust_case_business.png" alt="企業間データ連携＆セキュア社内情報RAGシステム">
           </div>
-        </div>
-
-        <!-- Case 5: Staffing CRM -->
-        <div class="case-card-item glass-card reveal" data-category="system-app" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_saas_launch.png" alt="SaaSプロダクト開発・運用のイメージイラスト" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">Python / LangChain / VectorDB / Oracle Cloud</span>
             </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Laravel</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Next.js</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">PostgreSQL</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Docker</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    求人案件データ、派遣スタッフのシフトやスキル情報、企業への請求処理が複数のシステムやExcelに分散しており、管理業務が極めて非効率でした。また、派遣法改正に伴う契約条件制限チェックも属人化しており、漏洩・法令違反リスクを抱えていました。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>顧客企業・案件・スタッフ統合データベース</strong>: スタッフ登録情報からスキル、シフトカレンダー、マッチング案件状況までクラウドで網羅。</li>
-                    <li><strong>スマートマッチング検索</strong>: 必要とされるスキル、地域、勤務日時から稼働可能な派遣スタッフを瞬時にフィルタリング。</li>
-                    <li><strong>派遣法適合チェックロジック</strong>: 契約期間制限や同一労働同一賃金規則に則り、自動で警告表示や契約ステータス更新をブロック。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    実業務のデータ整理から要件を精査し、B2B業務に必要な情報網羅性と操作性を高いレベルで実装。マッチング選定や派遣契約管理の時間が**80%短縮**され、手動運用によるミス・漏れがゼロ化されました。
-                  </p>
-                </div>
-              </div>
-            </div>
+            <a href="enterprise-rag.html" style="text-decoration: none;">
+              <h2 class="column-card-title">企業間データ連携＆セキュア社内情報RAGシステム</h2>
+            </a>
+            <p class="column-card-excerpt">社内のドキュメントやSlackログなどの機密情報を安全に検索・活用。権限管理やオプトアウトAPI設計を考慮したセキュアなRAGインフラ構築。</p>
+            <a href="enterprise-rag.html" class="column-card-link">実績を見る</a>
           </div>
-        </div>
+        </article>
 
-        <!-- Case 6: Disabled Community Matching App -->
-        <div class="case-card-item glass-card reveal" data-category="matching-app" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_nocode_vs_scratch.png" alt="ノーコードとスクラッチ開発の比較イメージ" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">新規事業開発</span>
-            </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                障がい者限定コミュニケーション・マッチングプラットフォーム
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Flutter</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Node.js</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Firebase</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Webアクセシビリティ</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    障がいを持つ当事者同士が安全に悩みを共有し対話できる場が不足していました。また、既存のマッチングアプリでは音声読み上げ非対応など、アクセシビリティの問題で使用できないという課題がありました。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>WCAG 2.1準拠アクセシビリティ対応</strong>: 音声スクリーンリーダーでの論理的な読み上げフローの設計、文字色コントラスト比の最適化、ジェスチャー補助。</li>
-                    <li><strong>安心の手帳認証システム</strong>: 証明書画像のアップロードとFirebaseを活用した、プライバシーを保護しつつサクラを排除する登録審査管理機能。</li>
-                    <li><strong>AI投稿フィルター＆報告システム</strong>: 中傷や攻撃的なコミュニケーションを瞬時に検知するフィルタリングアルゴリズム。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    FlutterによるシングルコードベースでiOS/Android両プラットフォームのアクセシビリティ機能を徹底的にチューニング。当事者ユーザーに寄り添った優しく安全なUIデザインを実現し、**リリース後の登録当事者数・アプリ維持率において高い満足度を獲得**しています。
-                  </p>
-                </div>
-              </div>
-            </div>
+        <!-- Case: recruitment-portal -->
+        <article class="column-card glass-card reveal" data-category="system-app">
+          <div class="column-card-image">
+            <span class="column-card-badge">新規サービス</span>
+            <img src="../illust_case_recruitment.png" alt="AI求職票自動生成＆マッチング求人ポータルサイト">
           </div>
-        </div>
-
-        <!-- Case 7: M&A Contract Creation -->
-        <div class="case-card-item glass-card reveal" data-category="gen-ai" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_contract_comparison.png" alt="契約形態比較のグラフィックイラスト" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">生成AI開発</span>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">Next.js / Claude 3.5 / FastAPI / TailwindCSS</span>
             </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Claude 3.5 Sonnet</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Python</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">FastAPI</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">React</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    M&A仲介業務において、NDA（秘密保持契約書）やLOI（意向表明書）などの契約書類作成が個々の担当者任せになっており、案件固有条件の書き換え漏れや法的な条項の不整合が発生しやすく、リスク管理に時間がかかっていました。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>AI契約書ドラフトエンジン</strong>: 譲渡・譲受企業の条件、対価、合意項目をWebフォームに入力するだけで、高品質な契約文書を瞬時に自動生成。</li>
-                    <li><strong>法的整合性チェック機能</strong>: 金額の表記不一致、有効期間の矛盾、法的に不利な条件（一方的義務など）がないかをAIが自動スキャン。</li>
-                    <li><strong>テンプレート・ナレッジベース</strong>: 過去の成功事例パターンに照らし合わせ、適切な代替条文案をプロンプトが自動推奨。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    論理構造の解析力と厳密な日本語処理能力において最も優れたClaude 3.5 Sonnetを組み込み、専門的なリーガル文書の自動チェック精度を極限まで最適化。手動ミスによるリーガルリスクを防ぎ、**契約書の作成・確認のリードタイムを3分の1に短縮**しました。
-                  </p>
-                </div>
-              </div>
-            </div>
+            <a href="recruitment-portal.html" style="text-decoration: none;">
+              <h2 class="column-card-title">AI求職票自動生成＆マッチング求人ポータルサイト</h2>
+            </a>
+            <p class="column-card-excerpt">レジュメ自動解析によるスキル抽出と、募集条件から最適な求人票をAI作成する高機能な求人・求職マッチングポータルサイト開発。</p>
+            <a href="recruitment-portal.html" class="column-card-link">実績を見る</a>
           </div>
-        </div>
+        </article>
 
-        <!-- Case 8: Filemaker Performance Optimization -->
-        <div class="case-card-item glass-card reveal" data-category="system-app" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_requirements_definition.png" alt="仕様定義とデータ分析イメージのイラスト" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
-            </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                大規模Filemakerデータベースのボトルネック検出＆クエリ最適化
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">FileMaker Pro / Server</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">FileMaker Script</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">SQL Server Link</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">AWS</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    十数年にわたり増改築を繰り返した社内基幹Filemakerシステムにおいて、同時接続者数の増加とともに「検索クエリが数十秒戻ってこない」「請求書のポータル描画が途中で固まる」といった深刻な遅延が発生。日々の業務運営に重大な影響を与えていました。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>ボトルネック詳細ログ解析</strong>: クエリと計算フィールド、参照が過多になっている不要なルックアップ（非保存のリレーションシップ等）の検出。</li>
-                    <li><strong>スクリプトとリレーションシップの整理</strong>: ループ処理や重複評価を回避するクエリの書き換え、およびサーバーサイドスクリプト実行（PSoS）への移行。</li>
-                    <li><strong>クラウドインスタンス最適化</strong>: オンプレミスサーバーから、ストレージIOPSとメモリ帯域を考慮したAWSクラウド上のFilemaker Server構成へ最適化移行。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    システム全体のフルスクラッチ作り替えを避けることで、開発コストと業務断絶リスクを最小化。不要な依存関係を排除する本質的なロジック最適化のみをピンポイントで施すことで、**主要なデータ検索および帳票印刷速度を平均7.8倍に高速化**しました。
-                  </p>
-                </div>
-              </div>
-            </div>
+        <!-- Case: interview-feedback -->
+        <article class="column-card glass-card reveal" data-category="gen-ai">
+          <div class="column-card-image">
+            <span class="column-card-badge">生成AI開発</span>
+            <img src="../illust_ai_agent.png" alt="AI動画解析による社員インタビュー＆フィードバックシステム">
           </div>
-        </div>
-
-        <!-- Case 9: Legacy GCP Migration -->
-        <div class="case-card-item glass-card reveal" data-category="cloud-security" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_offshore_hybrid.png" alt="オフショア・クラウド連携イメージイラスト" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">GPT-4o / Whisper API / FastAPI / Vue.js</span>
             </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Google Cloud Run</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Docker</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Terraform</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Cloud SQL</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    古いデータセンターの物理オンプレミスサーバーで稼働し続けていたWebシステム。サーバー機器の寿命が間近に迫り、冗長化もないため常に停止リスクを抱えていました。また、ブラックボックス化したレガシーなPHPとRubyコードが絡み合っており、移行設計が極めて困難でした。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>アプリケーションコンテナ化</strong>: レガシーアプリを完全にDockerイメージとしてパッケージング。設定値とコードを明確に切り分け。</li>
-                    <li><strong>サーバーレス移行 (Cloud Run)</strong>: サーバーの保守を完全に排除するため、Cloud Runを活用したコンテナサーバーレス構成を採用。</li>
-                    <li><strong>無停止DBレプリケーション移行</strong>: オンプレミス側のDBとGCP側のCloud SQL間で差分レプリケーションを構築し、ダウンタイムほぼゼロで一括切り替え。</li>
-                    <li><strong>TerraformによるIaC化</strong>: GCPのインフラ構成をすべてTerraformコードで管理し、環境再構築やCI/CDを自動化。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    インフラの構成管理から切り替え時のネットワークルーティングまで一貫設計。物理ハードウェアの維持管理・障害トラブル対応から完全に解放され、オートスケーリングにより安定稼働を実現。毎月の**インフラ運用維持コストを65%削減**しました。
-                  </p>
-                </div>
-              </div>
-            </div>
+            <a href="interview-feedback.html" style="text-decoration: none;">
+              <h2 class="column-card-title">AI動画解析による社員インタビュー＆フィードバックシステム</h2>
+            </a>
+            <p class="column-card-excerpt">面談動画からWhisperとGPT-4oを用いて表情・感情・文脈を解析し、スキルスコアリングとフィードバックレポートを自動生成するシステム。</p>
+            <a href="interview-feedback.html" class="column-card-link">実績を見る</a>
           </div>
-        </div>
+        </article>
 
-        <!-- Case 10: Security Measures -->
-        <div class="case-card-item glass-card reveal" data-category="cloud-security" style="display: grid; grid-template-columns: 1fr; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px);">
-          <div style="display: grid; grid-template-columns: 1fr; @media (min-width: 992px) { grid-template-columns: 450px 1fr; }">
-            <div style="position: relative; overflow: hidden; background: #0b1126; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-              <img src="../illust_genai_security.png" alt="セキュリティ鍵・ロックのイメージイラスト" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
-              <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
-            </div>
-            <div class="case-card-body" style="padding: 4rem;">
-              <h2 style="font-size: 2.8rem; font-weight: 800; line-height: 1.4; margin-bottom: 1.5rem; color: #FFFFFF;">
-                エンタープライズ向けクラウドインフラのセキュリティ要塞化・堅牢化パッケージ
-              </h2>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Cloudflare WAF</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Zero Trust Access</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">Google Cloud Armor</span>
-                <span style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: #00F0FF; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700;">OIDC CI/CD</span>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">課題・背景</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    急成長するSaaSサービスの立ち上げに伴い、悪意あるDDoS攻撃やBotアクセスの急増、脆弱性スキャナーによる攻撃リスクが高まっていました。また、CI/CDで利用するサービスアカウントの永続鍵の漏洩懸念、退職者のIAMアカウントの残存、開発環境・管理システムへのアクセス制御など、包括的なセキュリティ強化と体制棚卸しが急務となっていました。
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">提供したアプローチ・機能（17項目セキュリティ堅牢化）</h4>
-                  <ul style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; padding-left: 2rem; margin: 0;">
-                    <li><strong>エッジ・ネットワーク防御</strong>: ① CloudflareのDNS移行・WAF・Bot検知・DDoSプロテクション導入、⑦ APIゲートウェイにロードバランサーとGoogle Cloud Armorの統合、⑧ Cloud RunのIngressを限定（VPC内部アクセスのみに制限）。</li>
-                    <li><strong>閉域化・アクセス制御</strong>: ② Zero Trust Accessによる管理システムへの閉域保護、⑤ 定期的なIAM棚卸し（不要なサービスアカウント権限・キー・退職者権限の完全削除）、⑥ 管理者および全関係者への二要素認証（2FA）の強制適用、⑭ GCEにおけるOS LoginとShielded VMによるホスト防護。</li>
-                    <li><strong>安全なCI/CD・コンテナデプロイ</strong>: ⑨ OIDC（OpenID Connect）連携によるCI/CD構築（サービスアカウントの永続秘密鍵の完全廃止）、⑫ Binary Authorizationの有効化による署名なしコンテナデプロイ遮断、⑬ Container Registryでのデプロイ前脆弱性スキャン自動化、⑰ Dependabot自動更新による依存脆弱性修正。</li>
-                    <li><strong>ログ分析・モニタリング</strong>: ③ Cloud Audit Logs（監査ログ）の全有効化、⑪ NAT Logs（ネットワーク送信ログ）の全有効化、⑮ VPC Flow Logs（トラフィックログ）の有効化、④ Security Command Center（脆弱性自動スキャン）の導入。</li>
-                    <li><strong>アラート・アプリケーション防護</strong>: ⑩ NestJSフレームワークにおけるhelmetプラグインとCORSポリシーの厳格化、⑯ 全システムのログを検知し不審挙動をSlackへ自動アラート通知設定。</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 style="border-left: 3px solid #94A3B8; padding-left: 10px; color: #FFFFFF; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem;">Illの強みと効果</h4>
-                  <p style="color: #FFFFFF; font-size: 1.5rem; line-height: 1.7; margin: 0;">
-                    インフラの構築（Terraform）段階からセキュリティのベストプラクティスをコード（IaC）として完全定義。サービスアカウントの永続鍵の流出リスクを根本からゼロにし、悪意あるアクセスやアタックを自動検知して防御する**エンタープライズ品質の要塞化インフラへと一日で変貌させました**。コンプライアンス監査も完全にクリアできる盤石な防衛体制を構築。
-                  </p>
-                </div>
-              </div>
-            </div>
+        <!-- Case: staffing-crm -->
+        <article class="column-card glass-card reveal" data-category="system-app">
+          <div class="column-card-image">
+            <span class="column-card-badge">システム開発</span>
+            <img src="../illust_saas_launch.png" alt="人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム">
           </div>
-        </div>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">Laravel / Next.js / PostgreSQL / Docker</span>
+            </div>
+            <a href="staffing-crm.html" style="text-decoration: none;">
+              <h2 class="column-card-title">人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム</h2>
+            </a>
+            <p class="column-card-excerpt">案件、派遣スタッフ、シフト、請求データの一元管理と、法改正に準拠した契約チェックを自動で行うCRMシステム開発。</p>
+            <a href="staffing-crm.html" class="column-card-link">実績を見る</a>
+          </div>
+        </article>
 
+        <!-- Case: disabled-community -->
+        <article class="column-card glass-card reveal" data-category="matching-app">
+          <div class="column-card-image">
+            <span class="column-card-badge">新規事業開発</span>
+            <img src="../illust_nocode_vs_scratch.png" alt="障がい者限定コミュニケーション・マッチングプラットフォーム">
+          </div>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">Flutter / Node.js / Firebase / Webアクセシビリティ</span>
+            </div>
+            <a href="disabled-community.html" style="text-decoration: none;">
+              <h2 class="column-card-title">障がい者限定コミュニケーション・マッチングプラットフォーム</h2>
+            </a>
+            <p class="column-card-excerpt">音声読み上げやコントラスト比などWCAG 2.1アクセシビリティに準拠し、証明書による本人認証を備えた当事者向けマッチングアプリ。</p>
+            <a href="disabled-community.html" class="column-card-link">実績を見る</a>
+          </div>
+        </article>
+
+        <!-- Case: ma-contracts -->
+        <article class="column-card glass-card reveal" data-category="gen-ai">
+          <div class="column-card-image">
+            <span class="column-card-badge">生成AI開発</span>
+            <img src="../illust_contract_comparison.png" alt="M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム">
+          </div>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">Claude 3.5 Sonnet / Python / FastAPI / React</span>
+            </div>
+            <a href="ma-contracts.html" style="text-decoration: none;">
+              <h2 class="column-card-title">M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム</h2>
+            </a>
+            <p class="column-card-excerpt">M&A取引における各種契約書類をAIが自動作成。金額矛盾や法的リスク条項の自動スキャン、代替文案の推奨機能を搭載。</p>
+            <a href="ma-contracts.html" class="column-card-link">実績を見る</a>
+          </div>
+        </article>
+
+        <!-- Case: filemaker-optimization -->
+        <article class="column-card glass-card reveal" data-category="system-app">
+          <div class="column-card-image">
+            <span class="column-card-badge">システム開発</span>
+            <img src="../illust_requirements_definition.png" alt="大規模Filemakerデータベースのボトルネック検出＆クエリ最適化">
+          </div>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">FileMaker Pro / Server / FileMaker Script / SQL Server Link / AWS</span>
+            </div>
+            <a href="filemaker-optimization.html" style="text-decoration: none;">
+              <h2 class="column-card-title">大規模Filemakerデータベースのボトルネック検出＆クエリ最適化</h2>
+            </a>
+            <p class="column-card-excerpt">オンプレミスFilemakerのパフォーマンス遅延をロジック見直しとAWS移行により解決し、検索クエリと帳票印刷を高速化。</p>
+            <a href="filemaker-optimization.html" class="column-card-link">実績を見る</a>
+          </div>
+        </article>
+
+        <!-- Case: gcp-migration -->
+        <article class="column-card glass-card reveal" data-category="cloud-security">
+          <div class="column-card-image">
+            <span class="column-card-badge">システム開発</span>
+            <img src="../illust_offshore_hybrid.png" alt="レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行">
+          </div>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">Google Cloud Run / Docker / Terraform / Cloud SQL</span>
+            </div>
+            <a href="gcp-migration.html" style="text-decoration: none;">
+              <h2 class="column-card-title">レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行</h2>
+            </a>
+            <p class="column-card-excerpt">古い物理サーバーで稼働するレガシーWebシステムをコンテナ化。Cloud Runを活用したサーバーレス構成で保守不要とコスト削減を実現。</p>
+            <a href="gcp-migration.html" class="column-card-link">実績を見る</a>
+          </div>
+        </article>
+
+        <!-- Case: cloud-security -->
+        <article class="column-card glass-card reveal" data-category="cloud-security">
+          <div class="column-card-image">
+            <span class="column-card-badge">システム開発</span>
+            <img src="../illust_genai_security.png" alt="エンタープライズ向けクラウドインフラのセキュリティ要塞化・堅牢化パッケージ">
+          </div>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <span style="color: #00F0FF; font-weight: 700; font-size: 1.2rem;">Cloudflare WAF / Zero Trust Access / Google Cloud Armor / OIDC CI/CD</span>
+            </div>
+            <a href="cloud-security.html" style="text-decoration: none;">
+              <h2 class="column-card-title">エンタープライズ向けクラウドインフラのセキュリティ要塞化・堅牢化パッケージ</h2>
+            </a>
+            <p class="column-card-excerpt">Cloudflare導入、Zero Trust Access、Cloud Armor、OIDC CI/CDなど17項目のクラウドセキュリティを徹底強化した堅牢インフラパッケージ。</p>
+            <a href="cloud-security.html" class="column-card-link">実績を見る</a>
+          </div>
+        </article>
       </div>
 
       <!-- CTA Cards Area -->
-      <div class="glass-panel reveal" style="margin-top: 8rem; padding: 6rem; border-radius: 16px; text-align: center; border: 1px solid rgba(0, 240, 255, 0.2); background: radial-gradient(circle at top right, rgba(0, 240, 255, 0.05), transparent 60%), rgba(10, 16, 40, 0.8);">
+      <div class="glass-panel reveal" style="padding: 6rem; border-radius: 16px; text-align: center; border: 1px solid rgba(0, 240, 255, 0.2); background: radial-gradient(circle at top right, rgba(0, 240, 255, 0.05), transparent 60%), rgba(10, 16, 40, 0.8);">
         <h3 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 2rem; color: #FFFFFF;">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
@@ -650,13 +396,13 @@
   </footer>
 
   <!-- Client JavaScript -->
-  <script src="../script.js?v=58"></script>
+  <script src="../script.js?v=59"></script>
 
   <!-- Interactive Category Tabs JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const tabs = document.querySelectorAll('.category-tab');
-      const cards = document.querySelectorAll('.case-card-item');
+      const cards = document.querySelectorAll('.column-card');
 
       tabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -680,7 +426,7 @@
             cards.forEach(card => {
               const category = card.getAttribute('data-category');
               if (filter === 'all' || category === filter) {
-                card.style.display = 'grid';
+                card.style.display = 'flex';
                 // Trigger a reflow
                 card.offsetHeight;
                 card.style.opacity = '1';
