@@ -151,7 +151,7 @@
             <!-- Challenges -->
             <div>
               <h3 style="border-left: 3px solid #94A3B8; padding-left: 12px; color: #FFFFFF; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;">課題・背景</h3>
-              <p style="color: #94A3B8; font-size: 1.6rem; line-height: 1.8; margin: 0;">
+              <p style="color: #FFFFFF; font-size: 1.6rem; line-height: 1.8; margin: 0;">
                 急成長するSaaSサービスの立ち上げに伴い、悪意あるDDoS攻撃やBotアクセスの急増、脆弱性スキャナーによる攻撃リスクが高まっていました。また、CI/CDで利用するサービスアカウントの永続鍵の漏洩懸念、退職者のIAMアカウントの残存、開発環境・管理システムへのアクセス制御など、包括的なセキュリティ強化と体制棚卸しが急務となっていました。
               </p>
             </div>
@@ -159,7 +159,7 @@
             <!-- Approach -->
             <div>
               <h3 style="border-left: 3px solid #94A3B8; padding-left: 12px; color: #FFFFFF; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;">提供したアプローチ・機能</h3>
-              <ul style="color: #94A3B8; font-size: 1.6rem; line-height: 1.8; padding-left: 2.4rem; margin: 0;">
+              <ul style="color: #FFFFFF; font-size: 1.6rem; line-height: 1.8; padding-left: 2.4rem; margin: 0;">
             <li><strong>エッジ・ネットワーク防御</strong>: ① CloudflareのDNS移行・WAF・Bot検知・DDoSプロテクション導入、⑦ APIゲートウェイにロードバランサーとGoogle Cloud Armorの統合、⑧ Cloud RunのIngressを限定（VPC内部アクセスのみに制限）。</li>
             <li><strong>閉域化・アクセス制御</strong>: ② Zero Trust Accessによる管理システムへの閉域保護、⑤ 定期的なIAM棚卸し（不要なサービスアカウント権限・キー・退職者権限の完全削除）、⑥ 管理者および全関係者への二要素認証（2FA）の強制適用、⑭ GCEにおけるOS LoginとShielded VMによるホスト防護。</li>
             <li><strong>安全なCI/CD・コンテナデプロイ</strong>: ⑨ OIDC（OpenID Connect）連携によるCI/CD構築（サービスアカウントの永続秘密鍵の完全廃止）、⑫ Binary Authorizationの有効化による署名なしコンテナデプロイ遮断、⑬ Container Registryでのデプロイ前脆弱性スキャン自動化、⑰ Dependabot自動更新による依存脆弱性修正。</li>
@@ -171,7 +171,7 @@
             <!-- Strength & Effect -->
             <div>
               <h3 style="border-left: 3px solid #94A3B8; padding-left: 12px; color: #FFFFFF; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;">Illの強みと効果</h3>
-              <p style="color: #E2E8F0; font-size: 1.6rem; line-height: 1.8; margin: 0;">
+              <p style="color: #FFFFFF; font-size: 1.6rem; line-height: 1.8; margin: 0;">
                 インフラの構築（Terraform）段階からセキュリティのベストプラクティスをコード（IaC）として完全定義。サービスアカウントの永続鍵の流出リスクを根本からゼロにし、悪意あるアクセスやアタックを自動検知して防御する<strong>エンタープライズ品質の要塞化インフラへと一日で変貌させました</strong>。コンプライアンス監査も完全にクリアできる盤石な防衛体制を構築。
               </p>
             </div>
