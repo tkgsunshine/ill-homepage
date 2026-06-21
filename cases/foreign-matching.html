@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在日外国人限定マッチング＆コミュニティアプリ | 開発実績・導入事例 | Ill inc.</title>
+  <meta name="description" content="在日外国人と多言語を話すユーザー間の交流を促進。在留カードによる本人認証とAI翻訳付きチャットを備えたReactNative製クロスプラットフォームアプリ。">
+  <meta name="keywords" content="React Native,TypeScript,Firebase,Expo,開発実績,導入事例,Ill inc.">
+  <meta name="author" content="Ill inc.">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/cases/foreign-matching.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="在日外国人限定マッチング＆コミュニティアプリ | Ill inc.">
+  <meta property="og:description" content="在日外国人と多言語を話すユーザー間の交流を促進。在留カードによる本人認証とAI翻訳付きチャットを備えたReactNative製クロスプラットフォームアプリ。">
+  <meta property="og:url" content="https://www.ill-inc.net/cases/foreign-matching.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_expat_matching.png?v=1">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="在日外国人限定マッチング＆コミュニティアプリ | Ill inc.">
+  <meta name="twitter:description" content="在日外国人と多言語を話すユーザー間の交流を促進。在留カードによる本人認証とAI翻訳付きチャットを備えたReactNative製クロスプラットフォームアプリ。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_expat_matching.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=59">
+
+  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "在日外国人限定マッチング＆コミュニティアプリ",
+    "description": "在日外国人と多言語を話すユーザー間の交流を促進。在留カードによる本人認証とAI翻訳付きチャットを備えたReactNative製クロスプラットフォームアプリ。",
+    "image": "https://www.ill-inc.net/illust_case_expat_matching.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "datePublished": "2026-06-20",
+    "dateModified": "2026-06-20"
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <!-- Stylized III / Ill Logo with Gradients -->
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Cases</a></li>
+          <li><a href="../column/" class="nav-link">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS & ARTICLE SECTION -->
+  <section class="section" style="padding-top: 12rem;">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs" style="margin-bottom: 4rem;">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">在日外国人限定マッチング＆コミュニティアプリ</span>
+      </div>
+
+      <!-- Case study main wrapper -->
+      <article class="glass-card" style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 22, 49, 0.6); backdrop-filter: blur(20px); margin-bottom: 6rem; backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0);">
+        
+        <!-- Large Illustration Banner -->
+        <div style="position: relative; overflow: hidden; background: #0b1126; height: 400px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+          <img src="../illust_case_expat_matching.png" alt="在日外国人限定マッチング＆コミュニティアプリ" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">新規事業開発</span>
+        </div>
+
+        <div style="padding: 6rem;">
+          <!-- Title & Badges -->
+          <h1 style="font-size: 3.2rem; font-weight: 800; line-height: 1.4; margin-bottom: 2rem; color: #FFFFFF;">
+            在日外国人限定マッチング＆コミュニティアプリ
+          </h1>
+          
+          <div style="display: flex; flex-wrap: wrap; margin-bottom: 4rem;">
+        <span class="tech-badge" style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: var(--color-cyan); padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; margin-right: 1rem; margin-bottom: 1rem; display: inline-block;">React Native</span>
+        <span class="tech-badge" style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: var(--color-cyan); padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; margin-right: 1rem; margin-bottom: 1rem; display: inline-block;">TypeScript</span>
+        <span class="tech-badge" style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: var(--color-cyan); padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; margin-right: 1rem; margin-bottom: 1rem; display: inline-block;">Firebase</span>
+        <span class="tech-badge" style="background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: var(--color-cyan); padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; margin-right: 1rem; margin-bottom: 1rem; display: inline-block;">Expo</span>
+          </div>
+
+          <!-- Structured details -->
+          <div style="display: grid; grid-template-columns: 1fr; gap: 4rem;">
+            
+            <!-- Challenges -->
+            <div>
+              <h3 style="border-left: 3px solid #94A3B8; padding-left: 12px; color: #FFFFFF; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;">課題・背景</h3>
+              <p style="color: #FFFFFF; font-size: 1.6rem; line-height: 1.8; margin: 0;">
+                日本に居住する外国人が言語や文化の壁、在留資格などの不安から安心して交流できるプラットフォームが不足していました。また、悪意あるユーザーやサクラを厳格に排除しつつ、多言語でスムーズに意思疎通できる安全な環境設計が必要でした。
+              </p>
+            </div>
+
+            <!-- Approach -->
+            <div>
+              <h3 style="border-left: 3px solid #94A3B8; padding-left: 12px; color: #FFFFFF; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;">提供したアプローチ・機能</h3>
+              <ul style="color: #FFFFFF; font-size: 1.6rem; line-height: 1.8; padding-left: 2.4rem; margin: 0;">
+            <li><strong>在留カード自動文字認識（OCR）認証</strong>: Firebase Cloud FunctionsとOCR APIを連携させ、在留カードを用いた即時の身元確認審査フロー。</li>
+            <li><strong>リアルタイムAI多言語翻訳チャット</strong>: 異なる母国語を持つユーザー同士のメッセージを、チャット画面上でシームレスにリアルタイム翻訳。</li>
+            <li><strong>ReactNativeワンソース開発</strong>: iOSとAndroid双方でネイティブに近い高速なUIアニメーションとプッシュ通知機能を短期間で実装。</li>
+              </ul>
+            </div>
+
+            <!-- Strength & Effect -->
+            <div>
+              <h3 style="border-left: 3px solid #94A3B8; padding-left: 12px; color: #FFFFFF; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;">Illの強みと効果</h3>
+              <p style="color: #FFFFFF; font-size: 1.6rem; line-height: 1.8; margin: 0;">
+                React Nativeによるシングルコード開発により、<strong>開発期間を通常の別個開発の約40%短縮</strong>してリリース。リリース後3ヶ月でアクティブユーザー数が<strong>5万人を突破</strong>し、多言語対応の自然な操作性が高い評価を得ています。
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Back button -->
+          <div style="text-align: center; margin-top: 6rem; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 4rem;">
+            <a href="index.html" class="btn btn-secondary" style="padding: 1.5rem 4rem; font-size: 1.5rem; font-weight: 700;">実績一覧に戻る</a>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- CTA Cards Area -->
+      <div class="glass-panel" style="padding: 6rem; border-radius: 16px; text-align: center; border: 1px solid rgba(0, 240, 255, 0.2); background: radial-gradient(circle at top right, rgba(0, 240, 255, 0.05), transparent 60%), rgba(10, 16, 40, 0.8);">
+        <h3 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 2rem; color: #FFFFFF;">
+          新規プロジェクトのご相談・プロトタイプ作成
+        </h3>
+        <p style="color: #94A3B8; font-size: 1.6rem; max-width: 700px; margin: 0 auto 3.5rem auto; line-height: 1.8;">
+          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+        </p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+          <a href="../index.html#contact" class="btn btn-primary" style="padding: 1.5rem 4rem; font-size: 1.6rem; font-weight: 700;">無料で相談する</a>
+          <a href="../index.html#services" class="btn btn-secondary" style="padding: 1.5rem 4rem; font-size: 1.6rem; font-weight: 700;">サービス内容を見る</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <!-- SVG Logo -->
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">実績・事例</a></li>
+              <li><a href="../column/" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client JavaScript -->
+  <script src="../script.js?v=59"></script>
+</body>
+</html>
