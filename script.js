@@ -1,51 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
   // --- TYPING EFFECT FOR HERO TITLE ---
   const line1 = document.querySelector('.typing-line-1');
   const line2 = document.querySelector('.typing-line-2');
   const cursor = document.querySelector('.typing-cursor');
 
   if (line1 && line2 && cursor) {
-    const text1 = line1.textContent.trim();
-    const text2 = line2.textContent.trim();
+    if (isMobile) {
+      cursor.classList.add('finished');
+    } else {
+      const text1 = line1.textContent.trim();
+      const text2 = line2.textContent.trim();
 
-    // Clear contents to start typing animation
-    line1.textContent = '';
-    line2.textContent = '';
+      // Clear contents to start typing animation
+      line1.textContent = '';
+      line2.textContent = '';
 
-    let index1 = 0;
-    let index2 = 0;
-    const speed = 80; // ms per character
+      let index1 = 0;
+      let index2 = 0;
+      const speed = 80; // ms per character
 
-    // Position cursor after line 1 initially
-    line1.after(cursor);
+      // Position cursor after line 1 initially
+      line1.after(cursor);
 
-    function typeLine1() {
-      if (index1 < text1.length) {
-        line1.textContent += text1.charAt(index1);
-        index1++;
-        setTimeout(typeLine1, speed);
-      } else {
-        // Move cursor to line 2 and type line 2
-        setTimeout(() => {
-          line2.after(cursor);
-          typeLine2();
-        }, 300);
+      function typeLine1() {
+        if (index1 < text1.length) {
+          line1.textContent += text1.charAt(index1);
+          index1++;
+          setTimeout(typeLine1, speed);
+        } else {
+          // Move cursor to line 2 and type line 2
+          setTimeout(() => {
+            line2.after(cursor);
+            typeLine2();
+          }, 300);
+        }
       }
-    }
 
-    function typeLine2() {
-      if (index2 < text2.length) {
-        line2.textContent += text2.charAt(index2);
-        index2++;
-        setTimeout(typeLine2, speed);
-      } else {
-        cursor.classList.add('finished');
+      function typeLine2() {
+        if (index2 < text2.length) {
+          line2.textContent += text2.charAt(index2);
+          index2++;
+          setTimeout(typeLine2, speed);
+        } else {
+          cursor.classList.add('finished');
+        }
       }
-    }
 
-    // Start typing animation with a short delay
-    setTimeout(typeLine1, 500);
+      // Start typing animation with a short delay
+      setTimeout(typeLine1, 500);
+    }
   }
 
   // --- TYPING EFFECT FOR CORPORATE PHILOSOPHY TITLE ---
@@ -55,99 +61,84 @@ document.addEventListener('DOMContentLoaded', () => {
   const philCursor = document.querySelector('.typing-cursor-p');
 
   if (philTitle && philLine1 && philLine2 && philCursor) {
-    const pText1 = philLine1.textContent.trim();
-    const pText2 = philLine2.textContent.trim();
+    if (isMobile) {
+      philCursor.classList.add('finished');
+    } else {
+      const pText1 = philLine1.textContent.trim();
+      const pText2 = philLine2.textContent.trim();
 
-    // Select philosophy card paragraphs
-    const cardP1 = document.querySelector('.typing-card-p1');
-    const cardP2 = document.querySelector('.typing-card-p2');
-    let cardPText1 = '';
-    let cardPText2 = '';
+      // Select philosophy card paragraphs
+      const cardP1 = document.querySelector('.typing-card-p1');
+      const cardP2 = document.querySelector('.typing-card-p2');
+      let cardPText1 = '';
+      let cardPText2 = '';
 
-    if (cardP1 && cardP2) {
-      cardPText1 = cardP1.textContent.trim();
-      cardPText2 = cardP2.textContent.trim();
-      // Clear card content to trigger animation later
-      cardP1.textContent = '';
-      cardP2.textContent = '';
-    }
-
-    // Clear contents to start typing animation later on viewport entry
-    philLine1.textContent = '';
-    philLine2.textContent = '';
-
-    let pIndex1 = 0;
-    let pIndex2 = 0;
-    const pSpeed = 80; // ms per character
-    let hasStarted = false;
-
-    let cardIndex1 = 0;
-    let cardIndex2 = 0;
-    const cardSpeed = 15; // fast typing speed for long paragraphs
-
-    // Position cursor after line 1 initially
-    philLine1.after(philCursor);
-
-    function typePhilLine1() {
-      if (pIndex1 < pText1.length) {
-        philLine1.textContent += pText1.charAt(pIndex1);
-        pIndex1++;
-        setTimeout(typePhilLine1, pSpeed);
-      } else {
-        // Move cursor to line 2 and type line 2
-        setTimeout(() => {
-          philLine2.after(philCursor);
-          typePhilLine2();
-        }, 300);
+      if (cardP1 && cardP2) {
+        cardPText1 = cardP1.textContent.trim();
+        cardPText2 = cardP2.textContent.trim();
+        // Clear card content to trigger animation later
+        cardP1.textContent = '';
+        cardP2.textContent = '';
       }
-    }
 
-    function typePhilLine2() {
-      if (pIndex2 < pText2.length) {
-        philLine2.textContent += pText2.charAt(pIndex2);
-        pIndex2++;
-        setTimeout(typePhilLine2, pSpeed);
-      } else {
-        philCursor.classList.add('finished');
-      }
-    }
+      // Clear contents to start typing animation later on viewport entry
+      philLine1.textContent = '';
+      philLine2.textContent = '';
 
-    function typeCardP1() {
-      if (cardP1 && cardIndex1 < cardPText1.length) {
-        cardP1.textContent += cardPText1.charAt(cardIndex1);
-        cardIndex1++;
-        setTimeout(typeCardP1, cardSpeed);
-      } else if (cardP2) {
-        setTimeout(typeCardP2, 200);
-      }
-    }
+      let pIndex1 = 0;
+      let pIndex2 = 0;
+      const pSpeed = 80; // ms per character
+      let hasStarted = false;
 
-    function typeCardP2() {
-      if (cardP2 && cardIndex2 < cardPText2.length) {
-        cardP2.textContent += cardPText2.charAt(cardIndex2);
-        cardIndex2++;
-        setTimeout(typeCardP2, cardSpeed);
-      }
-    }
+      let cardIndex1 = 0;
+      let cardIndex2 = 0;
+      const cardSpeed = 15; // fast typing speed for long paragraphs
 
-    // Use IntersectionObserver to trigger typing when scrolled into view
-    const philObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !hasStarted) {
-          hasStarted = true;
+      // Position cursor after line 1 initially
+      philLine1.after(philCursor);
+
+      function typePhilLine1() {
+        if (pIndex1 < pText1.length) {
+          philLine1.textContent += pText1.charAt(pIndex1);
+          pIndex1++;
+          setTimeout(typePhilLine1, pSpeed);
+        } else {
+          // Move cursor to line 2 and type line 2
           setTimeout(() => {
-            typePhilLine1();
-            typeCardP1();
-          }, 300); // 300ms delay after entry for natural feel
-          observer.unobserve(entry.target);
+            philLine2.after(philCursor);
+            typePhilLine2();
+          }, 300);
         }
-      });
-    }, {
-      root: null,
-      threshold: 0.2 // Trigger when 20% of the element is visible
-    });
+      }
 
-    philObserver.observe(philTitle);
+      function typePhilLine2() {
+        if (pIndex2 < pText2.length) {
+          philLine2.textContent += pText2.charAt(pIndex2);
+          pIndex2++;
+          setTimeout(typePhilLine2, pSpeed);
+        } else {
+          philCursor.classList.add('finished');
+        }
+      }
+
+      // Use IntersectionObserver to trigger typing when scrolled into view
+      const philObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasStarted) {
+            hasStarted = true;
+            setTimeout(() => {
+              typePhilLine1();
+            }, 300); // 300ms delay after entry for natural feel
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.2 // Trigger when 20% of the element is visible
+      });
+
+      philObserver.observe(philTitle);
+    }
   }
 
   // --- TYPING EFFECT FOR STANCE TITLE ---
@@ -157,60 +148,64 @@ document.addEventListener('DOMContentLoaded', () => {
   const stanceCursor = document.querySelector('.typing-cursor-s');
 
   if (stanceTitle && stanceLine1 && stanceLine2 && stanceCursor) {
-    const sText1 = stanceLine1.textContent.trim();
-    const sText2 = stanceLine2.textContent.trim();
+    if (isMobile) {
+      stanceCursor.classList.add('finished');
+    } else {
+      const sText1 = stanceLine1.textContent.trim();
+      const sText2 = stanceLine2.textContent.trim();
 
-    // Clear contents to start typing animation later on viewport entry
-    stanceLine1.textContent = '';
-    stanceLine2.textContent = '';
+      // Clear contents to start typing animation later on viewport entry
+      stanceLine1.textContent = '';
+      stanceLine2.textContent = '';
 
-    let sIndex1 = 0;
-    let sIndex2 = 0;
-    const sSpeed = 80; // ms per character (1.5x speed)
-    let sHasStarted = false;
+      let sIndex1 = 0;
+      let sIndex2 = 0;
+      const sSpeed = 80; // ms per character (1.5x speed)
+      let sHasStarted = false;
 
-    // Position cursor after line 1 initially
-    stanceLine1.after(stanceCursor);
+      // Position cursor after line 1 initially
+      stanceLine1.after(stanceCursor);
 
-    function typeStanceLine1() {
-      if (sIndex1 < sText1.length) {
-        stanceLine1.textContent += sText1.charAt(sIndex1);
-        sIndex1++;
-        setTimeout(typeStanceLine1, sSpeed);
-      } else {
-        // Move cursor to line 2 and type line 2
-        setTimeout(() => {
-          stanceLine2.after(stanceCursor);
-          typeStanceLine2();
-        }, 300);
-      }
-    }
-
-    function typeStanceLine2() {
-      if (sIndex2 < sText2.length) {
-        stanceLine2.textContent += sText2.charAt(sIndex2);
-        sIndex2++;
-        setTimeout(typeStanceLine2, sSpeed);
-      } else {
-        stanceCursor.classList.add('finished');
-      }
-    }
-
-    // Use IntersectionObserver to trigger typing when scrolled into view
-    const stanceObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !sHasStarted) {
-          sHasStarted = true;
-          setTimeout(typeStanceLine1, 300); // 300ms delay after entry for natural feel
-          observer.unobserve(entry.target);
+      function typeStanceLine1() {
+        if (sIndex1 < sText1.length) {
+          stanceLine1.textContent += sText1.charAt(sIndex1);
+          sIndex1++;
+          setTimeout(typeStanceLine1, sSpeed);
+        } else {
+          // Move cursor to line 2 and type line 2
+          setTimeout(() => {
+            stanceLine2.after(stanceCursor);
+            typeStanceLine2();
+          }, 300);
         }
-      });
-    }, {
-      root: null,
-      threshold: 0.2 // Trigger when 20% of the element is visible
-    });
+      }
 
-    stanceObserver.observe(stanceTitle);
+      function typeStanceLine2() {
+        if (sIndex2 < sText2.length) {
+          stanceLine2.textContent += sText2.charAt(sIndex2);
+          sIndex2++;
+          setTimeout(typeStanceLine2, sSpeed);
+        } else {
+          stanceCursor.classList.add('finished');
+        }
+      }
+
+      // Use IntersectionObserver to trigger typing when scrolled into view
+      const stanceObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !sHasStarted) {
+            sHasStarted = true;
+            setTimeout(typeStanceLine1, 300); // 300ms delay after entry for natural feel
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.2 // Trigger when 20% of the element is visible
+      });
+
+      stanceObserver.observe(stanceTitle);
+    }
   }
 
   // --- MOBILE NAV TOGGLE ---
