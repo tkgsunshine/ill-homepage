@@ -1972,8 +1972,7 @@ textarea.form-control {
   }
   
   .hero-visual {
-    order: 1;
-    margin-top: 4.8rem;
+    display: none !important;
   }
   
   .services-grid {
@@ -3021,26 +3020,6 @@ body.theme-light .cases-cta {
                 #fff !important;
   }
 
-  /* Disable all animations and transitions in the hero visual on mobile to make it fully static and 0% CPU */
-  .hero-visual {
-    opacity: 1 !important;
-    animation: none !important;
-    transition: none !important;
-  }
-  
-  .hero-visual *,
-  .essence-wrapper,
-  .essence-wrapper *,
-  .rotator,
-  .rotator-reverse,
-  .orbiting-group,
-  .orbiting-group-2,
-  .form-structure,
-  .blob,
-  .bg-glow {
-    animation: none !important;
-    transition: none !important;
-  }
 }
 
 
