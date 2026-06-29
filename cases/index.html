@@ -36,6 +36,22 @@
   <link rel="shortcut icon" href="../favicon.ico">
   
   <!-- CSS Stylesheet -->
+  <!-- Preconnect & Asynchronous Loading for Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+
+    <noscript>
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+
+    </noscript>
+
   <link rel="stylesheet" href="../style.css?v=59">
 
   <!-- JSON-LD Structured Data (WebPage Schema) -->
@@ -127,8 +143,8 @@
       </div>
 
       <!-- Category Tabs (Filtering) -->
-      <div class="category-tabs-container" style="margin-top: 3rem; margin-bottom: 4rem;">
-        <div class="category-tabs" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+      <div class="category-tabs-container">
+        <div class="category-tabs">
           <button class="category-tab active" data-filter="all">すべて</button>
           <button class="category-tab" data-filter="gen-ai">生成AI・AIX</button>
           <button class="category-tab" data-filter="system-app">システム開発・DX</button>
@@ -145,7 +161,7 @@
           <a href="matching-platform.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">新規事業開発</span>
-              <img src="../illust_case_matching.png" alt="AIを活用した次世代マッチングプラットフォーム">
+              <img src="../illust_case_matching.webp" alt="AIを活用した次世代マッチングプラットフォーム" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -165,7 +181,7 @@
           <a href="enterprise-rag.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム開発</span>
-              <img src="../illust_case_business.png" alt="企業間データ連携＆セキュア社内情報RAGシステム">
+              <img src="../illust_case_business.webp" alt="企業間データ連携＆セキュア社内情報RAGシステム" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -185,7 +201,7 @@
           <a href="recruitment-portal.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">新規サービス</span>
-              <img src="../illust_case_recruitment.png" alt="AI求職票自動生成＆マッチング求人ポータルサイト">
+              <img src="../illust_case_recruitment.webp" alt="AI求職票自動生成＆マッチング求人ポータルサイト" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -205,7 +221,7 @@
           <a href="interview-feedback.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">生成AI開発</span>
-              <img src="../illust_case_video_feedback.png" alt="AI動画解析による社員インタビュー＆フィードバックシステム">
+              <img src="../illust_case_video_feedback.webp" alt="AI動画解析による社員インタビュー＆フィードバックシステム" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -225,7 +241,7 @@
           <a href="staffing-crm.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム開発</span>
-              <img src="../illust_case_staffing_crm.png" alt="人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム">
+              <img src="../illust_case_staffing_crm.webp" alt="人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -245,7 +261,7 @@
           <a href="disabled-community.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">新規事業開発</span>
-              <img src="../illust_case_disabled_community.png" alt="障がい者限定コミュニケーション・マッチングプラットフォーム">
+              <img src="../illust_case_disabled_community.webp" alt="障がい者限定コミュニケーション・マッチングプラットフォーム" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -265,7 +281,7 @@
           <a href="ma-contracts.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">生成AI開発</span>
-              <img src="../illust_case_ma_contracts.png" alt="M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム">
+              <img src="../illust_case_ma_contracts.webp" alt="M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -285,7 +301,7 @@
           <a href="filemaker-optimization.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム開発</span>
-              <img src="../illust_case_filemaker.png" alt="大規模Filemakerデータベースのボトルネック検出＆クエリ最適化">
+              <img src="../illust_case_filemaker.webp" alt="大規模Filemakerデータベースのボトルネック検出＆クエリ最適化" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -305,7 +321,7 @@
           <a href="gcp-migration.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム開発</span>
-              <img src="../illust_case_gcp_migration.png" alt="レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行">
+              <img src="../illust_case_gcp_migration.webp" alt="レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -325,7 +341,7 @@
           <a href="cloud-security.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム開発</span>
-              <img src="../illust_case_cloud_security.png" alt="エンタープライズ向けクラウドインフラのセキュリティ要塞化・堅牢化パッケージ">
+              <img src="../illust_case_cloud_security.webp" alt="エンタープライズ向けクラウドインフラのセキュリティ要塞化・堅牢化パッケージ" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -345,7 +361,7 @@
           <a href="restaurant-recruitment.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム開発</span>
-              <img src="../illust_case_food_recruitment.png" alt="飲食業界向け求人ポータル＆求職者管理（ATS）システム">
+              <img src="../illust_case_food_recruitment.webp" alt="飲食業界向け求人ポータル＆求職者管理（ATS）システム" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -365,7 +381,7 @@
           <a href="foreign-matching.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">新規事業開発</span>
-              <img src="../illust_case_expat_matching.png" alt="在日外国人限定マッチング＆コミュニティアプリ">
+              <img src="../illust_case_expat_matching.webp" alt="在日外国人限定マッチング＆コミュニティアプリ" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -385,7 +401,7 @@
           <a href="car-rental.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム開発</span>
-              <img src="../illust_case_rental_car.png" alt="外資系レンタカー日本代理店向け多言語予約サイト">
+              <img src="../illust_case_rental_car.webp" alt="外資系レンタカー日本代理店向け多言語予約サイト" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -405,7 +421,7 @@
           <a href="sns-app.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">新規事業開発</span>
-              <img src="../illust_case_sns_app.png" alt="Twitterクローンの次世代マイクロブログSNSアプリ">
+              <img src="../illust_case_sns_app.webp" alt="Twitterクローンの次世代マイクロブログSNSアプリ" loading="lazy" decoding="async" width="800" height="450">
             </div>
           </a>
           <div class="column-card-content">
@@ -421,19 +437,20 @@
         </article>
       </div>
 
-      <!-- CTA Cards Area -->
-      <div class="glass-panel reveal" style="padding: 6rem; border-radius: 16px; text-align: center; border: 1px solid rgba(0, 240, 255, 0.2); background: radial-gradient(circle at top right, rgba(0, 240, 255, 0.05), transparent 60%), rgba(10, 16, 40, 0.8);">
-        <h3 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 2rem; color: #FFFFFF;">
+            <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta reveal">
+        <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
-        <p style="color: #94A3B8; font-size: 1.6rem; max-width: 700px; margin: 0 auto 3.5rem auto; line-height: 1.8;">
+        <p class="cases-cta-desc">
           マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
           <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
         </p>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-          <a href="../index.html#contact" class="btn btn-primary" style="padding: 1.5rem 4rem; font-size: 1.6rem; font-weight: 700;">無料で相談する</a>
-          <a href="../index.html#services" class="btn btn-secondary" style="padding: 1.5rem 4rem; font-size: 1.6rem; font-weight: 700; color: #FFFFFF; border-color: rgba(255, 255, 255, 0.3);">サービス内容を見る</a>
+        <div class="cases-cta-buttons">
+          <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
+          <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
+      </div>
       </div>
 
     </div>
@@ -540,5 +557,25 @@
       });
     });
   </script>
+  <!-- Floating Theme Switcher -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <!-- Moon Icon for switching to dark theme -->
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <!-- Sun Icon for switching to light theme -->
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
 </body>
 </html>

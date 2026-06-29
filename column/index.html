@@ -36,6 +36,22 @@
   <link rel="shortcut icon" href="../favicon.ico">
   
   <!-- CSS Stylesheet -->
+  <!-- Preconnect & Asynchronous Loading for Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+
+    <noscript>
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+
+    </noscript>
+
   <link rel="stylesheet" href="../style.css?v=58">
 
   <!-- JSON-LD Structured Data (WebPage Schema) -->
@@ -141,12 +157,167 @@
       <!-- Articles Grid -->
       <div class="column-grid">
         <article class="column-card glass-card reveal" data-category="gen-ai">
+          <a href="ai-agent-implementation.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+            <div class="column-card-image">
+              <span class="column-card-badge">生成AI・先端技術</span>
+              <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「業務に自律型AIエージェントを組み込む手法」のビジュアルバナー" role="img" aria-label="コラム「業務に自律型AIエージェントを組み込む手法」のビジュアルバナー">
+          <rect width="1000" height="428" fill="#0b1126"/>
+          <image href="../illust_ai_agent_implementation.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <g transform="translate(60, 80)">
+            <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">AI AGENT SYSTEM IMPLEMENTATION</text>
+            <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">業務プロセスに自律型AIエージェントを組み込む</text>
+            <g transform="translate(0, 130)">
+              <rect x="0" y="0" width="880" height="74" rx="8" fill="#FF9F0A" />
+              <text x="20" y="47" fill="#FFFFFF" font-size="30" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">実務で使える「エージェントワークフロー」の設計と導入手順</text>
+            </g>
+            <text x="0" y="260" fill="#94A3B8" font-size="22" font-weight="500" font-family="'Noto Sans JP', 'Inter', sans-serif">定型タスクの実行から、意思決定補助までを自動化する自律システムの構築</text>
+          </g>
+        </svg>
+            </div>
+          </a>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <time datetime="2026-06-25">2026.06.25</time>
+            </div>
+            <a href="ai-agent-implementation.html" style="text-decoration: none;">
+              <h2 class="column-card-title">業務に自律型AIエージェントを組み込む手法</h2>
+            </a>
+            <p class="column-card-excerpt">生成AIを業務プロセスに組み込み、自律的に判断・実行させる「AIエージェント（Agentic AI）」のワークフロー設計、APIコスト制御、セキュリティ対策を解説。</p>
+            <a href="ai-agent-implementation.html" class="column-card-link">記事を読む</a>
+          </div>
+        </article>
+
+        <article class="column-card glass-card reveal" data-category="global-dev">
+          <a href="offshore-agile-development.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+            <div class="column-card-image">
+              <span class="column-card-badge">グローバル開発</span>
+              <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「オフショア開発におけるアジャイル運用の実践法」のビジュアルバナー" role="img" aria-label="コラム「オフショア開発におけるアジャイル運用の実践法」のビジュアルバナー">
+          <rect width="1000" height="428" fill="#0b1126"/>
+          <image href="../illust_offshore_agile.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <g transform="translate(60, 80)">
+            <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">OFFSHORE AGILE SCRUM PARTNERSHIP</text>
+            <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">オフショア開発におけるアジャイル運用のコツと</text>
+            <g transform="translate(0, 130)">
+              <rect x="0" y="0" width="700" height="74" rx="8" fill="#10B981" />
+              <text x="20" y="47" fill="#FFFFFF" font-size="30" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">国境を越えたスクラム開発を成功させる体制設計</text>
+            </g>
+            <text x="0" y="260" fill="#94A3B8" font-size="22" font-weight="500" font-family="'Noto Sans JP', 'Inter', sans-serif">時差や言語の壁を乗り越え、ひとつのグローバルチームとして機能する仕組み</text>
+          </g>
+        </svg>
+            </div>
+          </a>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <time datetime="2026-06-20">2026.06.20</time>
+            </div>
+            <a href="offshore-agile-development.html" style="text-decoration: none;">
+              <h2 class="column-card-title">オフショア開発におけるアジャイル運用の実践法</h2>
+            </a>
+            <p class="column-card-excerpt">オフショア開発でアジャイル（スクラム）体制を導入する際の障壁、ブリッジSEの役割、時差と言語の壁を越えたコミュニケーション設計のノウハウを徹底解説。</p>
+            <a href="offshore-agile-development.html" class="column-card-link">記事を読む</a>
+          </div>
+        </article>
+
+        <article class="column-card glass-card reveal" data-category="new-service">
+          <a href="mvp-validation-strategy.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+            <div class="column-card-image">
+              <span class="column-card-badge">新規サービス開発</span>
+              <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「新規事業立ち上げにおけるMVP検証手法」のビジュアルバナー" role="img" aria-label="コラム「新規事業立ち上げにおけるMVP検証手法」のビジュアルバナー">
+          <rect width="1000" height="428" fill="#0b1126"/>
+          <image href="../illust_mvp_validation.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <g transform="translate(60, 80)">
+            <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">MVP VALIDATION & HYPOTHESIS TESTING</text>
+            <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">新規事業立ち上げにおけるMVP検証手法と</text>
+            <g transform="translate(0, 130)">
+              <rect x="0" y="0" width="686" height="74" rx="8" fill="#FF1B94" />
+              <text x="20" y="48" fill="#FFFFFF" font-size="34" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">顧客課題を最小限のコストで検証する極意</text>
+            </g>
+            <text x="0" y="260" fill="#94A3B8" font-size="22" font-weight="500" font-family="'Noto Sans JP', 'Inter', sans-serif">仮説検証のサイクルを高速で回し、プロダクトマーケットフィットを狙う</text>
+          </g>
+        </svg>
+            </div>
+          </a>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <time datetime="2026-06-15">2026.06.15</time>
+            </div>
+            <a href="mvp-validation-strategy.html" style="text-decoration: none;">
+              <h2 class="column-card-title">新規事業立ち上げにおけるMVP検証手法</h2>
+            </a>
+            <p class="column-card-excerpt">新規WebプロダクトやSaaS開発におけるMVP（最小限実用製品）の正しい作成手法、プレランディングページやオズの魔法使いによる仮説検証手順を解説します。</p>
+            <a href="mvp-validation-strategy.html" class="column-card-link">記事を読む</a>
+          </div>
+        </article>
+
+        <article class="column-card glass-card reveal" data-category="spec-design">
+          <a href="agile-requirements-definition.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+            <div class="column-card-image">
+              <span class="column-card-badge">仕様設計</span>
+              <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「アジャイル要件定義の失敗を避ける手法」のビジュアルバナー" role="img" aria-label="コラム「アジャイル要件定義の失敗を避ける手法」のビジュアルバナー">
+          <rect width="1000" height="428" fill="#0b1126"/>
+          <image href="../illust_agile_requirements.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <g transform="translate(60, 80)">
+            <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">AGILE REQUIREMENTS & USER STORIES</text>
+            <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">アジャイル要件定義の失敗を避ける手法と</text>
+            <g transform="translate(0, 130)">
+              <rect x="0" y="0" width="670" height="74" rx="8" fill="#9D00FF" />
+              <text x="20" y="47" fill="#FFFFFF" font-size="30" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">ユーザーストーリーによるスコープ管理の極意</text>
+            </g>
+            <text x="0" y="260" fill="#94A3B8" font-size="22" font-weight="500" font-family="'Noto Sans JP', 'Inter', sans-serif">不確実性の高い開発で要件を段階的に具体化するプロセス</text>
+          </g>
+        </svg>
+            </div>
+          </a>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <time datetime="2026-06-10">2026.06.10</time>
+            </div>
+            <a href="agile-requirements-definition.html" style="text-decoration: none;">
+              <h2 class="column-card-title">アジャイル要件定義の失敗を避ける手法</h2>
+            </a>
+            <p class="column-card-excerpt">初期段階で仕様を確定させないアジャイル開発において、要件定義をどのように進めるべきか、ユーザーストーリーの作成基準（INVEST原則）とスコープ管理の手法を解説。</p>
+            <a href="agile-requirements-definition.html" class="column-card-link">記事を読む</a>
+          </div>
+        </article>
+
+        <article class="column-card glass-card reveal" data-category="system-app">
+          <a href="micro-frontends-architecture.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+            <div class="column-card-image">
+              <span class="column-card-badge">システム・アプリ開発</span>
+              <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「マイクロフロントエンド設計入門」のビジュアルバナー" role="img" aria-label="コラム「マイクロフロントエンド設計入門」のビジュアルバナー">
+          <rect width="1000" height="428" fill="#0b1126"/>
+          <image href="../illust_micro_frontends.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <g transform="translate(60, 80)">
+            <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">MICRO-FRONTENDS ARCHITECTURE</text>
+            <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">マイクロフロントエンドの設計原則と</text>
+            <g transform="translate(0, 130)">
+              <rect x="0" y="0" width="680" height="74" rx="8" fill="#00F0FF" />
+              <text x="20" y="51" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">大規模アプリにおける導入判断基準</text>
+            </g>
+            <text x="0" y="260" fill="#94A3B8" font-size="22" font-weight="500" font-family="'Noto Sans JP', 'Inter', sans-serif">機能単位でのコード分割と自律的なマルチチーム開発の実現</text>
+          </g>
+        </svg>
+            </div>
+          </a>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <time datetime="2026-06-05">2026.06.05</time>
+            </div>
+            <a href="micro-frontends-architecture.html" style="text-decoration: none;">
+              <h2 class="column-card-title">マイクロフロントエンド設計入門</h2>
+            </a>
+            <p class="column-card-excerpt">大規模Webアプリ開発における「マイクロフロントエンド」の設計原則、ビルド時・実行時統合の手法比較、およびチームの分割と導入判断の基準を詳細に解説します。</p>
+            <a href="micro-frontends-architecture.html" class="column-card-link">記事を読む</a>
+          </div>
+        </article>
+
+        <article class="column-card glass-card reveal" data-category="gen-ai">
           <a href="enterprise-genai-security.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">生成AI・先端技術</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「企業向け生成AI導入におけるセキュリティ対策とデータガバナンス構築の極意」のビジュアルバナー" role="img" aria-label="コラム「企業向け生成AI導入におけるセキュリティ対策とデータガバナンス構築の極意」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_genai_security.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_genai_security.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">ENTERPRISE AI SECURITY & GOVERNANCE</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">企業向け生成AI導入におけるセキュリティと</text>
@@ -161,7 +332,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-06-19">2026.06.19</time>
+              <time datetime="2026-05-31">2026.05.31</time>
             </div>
             <a href="enterprise-genai-security.html" style="text-decoration: none;">
               <h2 class="column-card-title">企業向け生成AI導入におけるセキュリティ対策とデータガバナンス構築の極意</h2>
@@ -177,7 +348,7 @@
               <span class="column-card-badge">生成AI・先端技術</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「生成AI導入の投資対効果（ROI）を最大化するコスト設計とPoC（概念実証）の正しい進め方」のビジュアルバナー" role="img" aria-label="コラム「生成AI導入の投資対効果（ROI）を最大化するコスト設計とPoC（概念実証）の正しい進め方」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_roi_cost.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_roi_cost.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">AI ROI ESTIMATION & COST DESIGN</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">生成AI導入の投資対効果（ROI）と</text>
@@ -192,7 +363,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-06-14">2026.06.14</time>
+              <time datetime="2026-05-26">2026.05.26</time>
             </div>
             <a href="genai-roi-cost-design.html" style="text-decoration: none;">
               <h2 class="column-card-title">生成AI導入の投資対効果（ROI）を最大化するコスト設計とPoC（概念実証）の正しい進め方</h2>
@@ -208,7 +379,7 @@
               <span class="column-card-badge">生成AI・先端技術</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「【2026年予測】生成AIの市場動向とビジネス適用の最新トレンド」のビジュアルバナー" role="img" aria-label="コラム「【2026年予測】生成AIの市場動向とビジネス適用の最新トレンド」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_market_trends.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_market_trends.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">AI MARKET TRENDS & AGENTS IN 2026</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">【2026年】生成AIの市場動向と</text>
@@ -223,7 +394,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-06-09">2026.06.09</time>
+              <time datetime="2026-05-21">2026.05.21</time>
             </div>
             <a href="genai-market-trends-2026.html" style="text-decoration: none;">
               <h2 class="column-card-title">【2026年予測】生成AIの市場動向とビジネス適用の最新トレンド</h2>
@@ -239,7 +410,7 @@
               <span class="column-card-badge">生成AI・先端技術</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「生成AI受託開発会社選びで失敗しないための選定基準と「技術力の強み」の見極め方」のビジュアルバナー" role="img" aria-label="コラム「生成AI受託開発会社選びで失敗しないための選定基準と「技術力の強み」の見極め方」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_vendor_selection.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_vendor_selection.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">AI DEVELOPER SELECTION & VALIDATION</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">生成AI開発の外注で失敗しない</text>
@@ -254,7 +425,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-06-04">2026.06.04</time>
+              <time datetime="2026-05-16">2026.05.16</time>
             </div>
             <a href="genai-vendor-selection-tips.html" style="text-decoration: none;">
               <h2 class="column-card-title">生成AI受託開発会社選びで失敗しないための選定基準と「技術力の強み」の見極め方</h2>
@@ -270,7 +441,7 @@
               <span class="column-card-badge">生成AI・先端技術</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「【2026年最新】主要LLMベンダー徹底比較」のビジュアルバナー" role="img" aria-label="コラム「【2026年最新】主要LLMベンダー徹底比較」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_llm_comparison.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_llm_comparison.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">LLM PROVIDERS & MODEL COMPARISON</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">主要LLMモデルの特徴・コストと</text>
@@ -285,7 +456,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-05-30">2026.05.30</time>
+              <time datetime="2026-05-11">2026.05.11</time>
             </div>
             <a href="llm-providers-comparison.html" style="text-decoration: none;">
               <h2 class="column-card-title">【2026年最新】主要LLMベンダー徹底比較</h2>
@@ -301,7 +472,7 @@
               <span class="column-card-badge">生成AI・先端技術</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「AIエージェントを活用した業務自動化の最前線」のビジュアルバナー" role="img" aria-label="コラム「AIエージェントを活用した業務自動化の最前線」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_ai_agent.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_ai_agent.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">GENERATIVE AI &amp; AUTOMATION</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">AIエージェントを活用した</text>
@@ -316,7 +487,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-05-25">2026.05.25</time>
+              <time datetime="2026-05-06">2026.05.06</time>
             </div>
             <a href="ai-agent-business-automation.html" style="text-decoration: none;">
               <h2 class="column-card-title">AIエージェントを活用した業務自動化の最前線</h2>
@@ -332,7 +503,7 @@
               <span class="column-card-badge">生成AI・先端技術</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「社内データのAI活用におけるRAGとファインチューニングの比較と選定基準」のビジュアルバナー" role="img" aria-label="コラム「社内データのAI活用におけるRAGとファインチューニングの比較と選定基準」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_rag_vs_ft.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_rag_vs_ft.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">LLM &amp; DATA INTEGRATION</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">社内データのAI活用における</text>
@@ -347,7 +518,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-05-20">2026.05.20</time>
+              <time datetime="2026-05-01">2026.05.01</time>
             </div>
             <a href="llm-fine-tuning-vs-rag.html" style="text-decoration: none;">
               <h2 class="column-card-title">社内データのAI活用におけるRAGとファインチューニングの比較と選定基準</h2>
@@ -363,7 +534,7 @@
               <span class="column-card-badge">グローバル開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「オフショア開発でバグ・手戻りを防ぐ品質管理プロセスとコミュニケーションの極意」のビジュアルバナー" role="img" aria-label="コラム「オフショア開発でバグ・手戻りを防ぐ品質管理プロセスとコミュニケーションの極意」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_global_qa.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_global_qa.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">GLOBAL QA &amp; OFFSHORE DEVELOPMENT</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">オフショア開発で手戻りを防ぐ</text>
@@ -378,7 +549,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-05-15">2026.05.15</time>
+              <time datetime="2026-04-26">2026.04.26</time>
             </div>
             <a href="global-offshore-quality-control.html" style="text-decoration: none;">
               <h2 class="column-card-title">オフショア開発でバグ・手戻りを防ぐ品質管理プロセスとコミュニケーションの極意</h2>
@@ -394,7 +565,7 @@
               <span class="column-card-badge">グローバル開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「オフショア開発「ラボ型契約」で自社専用開発チームを構築しスケールさせるノウハウ」のビジュアルバナー" role="img" aria-label="コラム「オフショア開発「ラボ型契約」で自社専用開発チームを構築しスケールさせるノウハウ」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_inhouse_vs_outsourcing.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_inhouse_vs_outsourcing.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">OFFSHORE LAB CONTRACT TEAM</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">オフショア開発「ラボ型契約」で</text>
@@ -409,7 +580,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-05-10">2026.05.10</time>
+              <time datetime="2026-04-21">2026.04.21</time>
             </div>
             <a href="offshore-labo-contract-tips.html" style="text-decoration: none;">
               <h2 class="column-card-title">オフショア開発「ラボ型契約」で自社専用開発チームを構築しスケールさせるノウハウ</h2>
@@ -425,7 +596,7 @@
               <span class="column-card-badge">システム・アプリ開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「ミニマル開発が新規事業の成功を左右する理由」のビジュアルバナー" role="img" aria-label="コラム「ミニマル開発が新規事業の成功を左右する理由」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_agile_minimalist.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_agile_minimalist.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">MINIMAL DESIGN THINKING</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">必要最低限のシステム開発</text>
@@ -440,7 +611,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-05-05">2026.05.05</time>
+              <time datetime="2026-04-16">2026.04.16</time>
             </div>
             <a href="minimal-development.html" style="text-decoration: none;">
               <h2 class="column-card-title">ミニマル開発が新規事業の成功を左右する理由</h2>
@@ -456,7 +627,7 @@
               <span class="column-card-badge">新規サービス開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「新規サービス開発を外注する際の失敗しない開発会社の選び方」のビジュアルバナー" role="img" aria-label="コラム「新規サービス開発を外注する際の失敗しない開発会社の選び方」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_requirements_definition.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_requirements_definition.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">NEW SERVICE DEVELOPMENT</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">新規事業・新サービス開発の</text>
@@ -471,7 +642,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-04-30">2026.04.30</time>
+              <time datetime="2026-04-11">2026.04.11</time>
             </div>
             <a href="new-service-development.html" style="text-decoration: none;">
               <h2 class="column-card-title">新規サービス開発を外注する際の失敗しない開発会社の選び方</h2>
@@ -487,7 +658,7 @@
               <span class="column-card-badge">新規サービス開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「新規サービス開発で成功する5つのコツ」のビジュアルバナー" role="img" aria-label="コラム「新規サービス開発で成功する5つのコツ」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_saas_launch.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_saas_launch.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">NEW SERVICE LAUNCH &amp; PM</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">新規サービス開発の立ち上げを</text>
@@ -502,7 +673,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-04-25">2026.04.25</time>
+              <time datetime="2026-04-06">2026.04.06</time>
             </div>
             <a href="new-service-success.html" style="text-decoration: none;">
               <h2 class="column-card-title">新規サービス開発で成功する5つのコツ</h2>
@@ -518,7 +689,7 @@
               <span class="column-card-badge">グローバル開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「日本とベトナムのハイブリッドチームで成功するオフショア開発の新常識」のビジュアルバナー" role="img" aria-label="コラム「日本とベトナムのハイブリッドチームで成功するオフショア開発の新常識」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_offshore_hybrid.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_offshore_hybrid.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">OFFSHORE HYBRID DEVELOPMENT</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">オフショア開発と国内開発の</text>
@@ -533,7 +704,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-04-20">2026.04.20</time>
+              <time datetime="2026-04-01">2026.04.01</time>
             </div>
             <a href="offshore-hybrid-development.html" style="text-decoration: none;">
               <h2 class="column-card-title">日本とベトナムのハイブリッドチームで成功するオフショア開発の新常識</h2>
@@ -549,7 +720,7 @@
               <span class="column-card-badge">システム・アプリ開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「システム開発・アプリ開発の費用相場と見積もりの内訳を徹底解説」のビジュアルバナー" role="img" aria-label="コラム「システム開発・アプリ開発の費用相場と見積もりの内訳を徹底解説」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_cost_market.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_cost_market.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">BUDGET &amp; DEVELOPMENT COSTS</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">システム開発・アプリ開発の</text>
@@ -564,7 +735,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-04-15">2026.04.15</time>
+              <time datetime="2026-03-27">2026.03.27</time>
             </div>
             <a href="development-cost-market.html" style="text-decoration: none;">
               <h2 class="column-card-title">システム開発・アプリ開発の費用相場と見積もりの内訳を徹底解説</h2>
@@ -580,7 +751,7 @@
               <span class="column-card-badge">新規サービス開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「SaaSビジネス立ち上げのシステム開発外注ステップ」のビジュアルバナー" role="img" aria-label="コラム「SaaSビジネス立ち上げのシステム開発外注ステップ」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_saas_launch.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_saas_launch.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">SaaS PRODUCT LAUNCH &amp; MVP</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">SaaSビジネスの立ち上げで</text>
@@ -595,7 +766,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-04-10">2026.04.10</time>
+              <time datetime="2026-03-22">2026.03.22</time>
             </div>
             <a href="saas-product-launch.html" style="text-decoration: none;">
               <h2 class="column-card-title">SaaSビジネス立ち上げのシステム開発外注ステップ</h2>
@@ -611,7 +782,7 @@
               <span class="column-card-badge">生成AI・先端技術</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「生成AIを活用した新規アプリ開発ステップと活用事例」のビジュアルバナー" role="img" aria-label="コラム「生成AIを活用した新規アプリ開発ステップと活用事例」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_ai_integration.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_ai_integration.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">AI FEATURE APP INTEGRATION</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">自社アプリ・サービスへ</text>
@@ -626,7 +797,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-04-05">2026.04.05</time>
+              <time datetime="2026-03-17">2026.03.17</time>
             </div>
             <a href="ai-app-integration.html" style="text-decoration: none;">
               <h2 class="column-card-title">生成AIを活用した新規アプリ開発ステップと活用事例</h2>
@@ -642,7 +813,7 @@
               <span class="column-card-badge">システム・アプリ開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「新規事業でアジャイル開発・ミニマル設計を選ぶべき理由」のビジュアルバナー" role="img" aria-label="コラム「新規事業でアジャイル開発・ミニマル設計を選ぶべき理由」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_agile_minimalist.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_agile_minimalist.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">AGILE CYCLE &amp; MINIMAL CORE</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">アジャイル開発とミニマル開発の</text>
@@ -657,7 +828,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-03-31">2026.03.31</time>
+              <time datetime="2026-03-12">2026.03.12</time>
             </div>
             <a href="agile-minimalist-dev.html" style="text-decoration: none;">
               <h2 class="column-card-title">新規事業でアジャイル開発・ミニマル設計を選ぶべき理由</h2>
@@ -673,7 +844,7 @@
               <span class="column-card-badge">仕様設計</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「システム開発RFPの書き方と選定チェックリスト」のビジュアルバナー" role="img" aria-label="コラム「システム開発RFPの書き方と選定チェックリスト」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_rfp_request.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_rfp_request.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">RFP DEVELOPMENT REQUEST</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">開発会社へ依頼する前の準備：</text>
@@ -688,7 +859,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-03-26">2026.03.26</time>
+              <time datetime="2026-03-07">2026.03.07</time>
             </div>
             <a href="rfp-development-request.html" style="text-decoration: none;">
               <h2 class="column-card-title">システム開発RFPの書き方と選定チェックリスト</h2>
@@ -704,7 +875,7 @@
               <span class="column-card-badge">システム・アプリ開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「システム開発「請負契約」と「準委任」の違い」のビジュアルバナー" role="img" aria-label="コラム「システム開発「請負契約」と「準委任」の違い」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_contract_comparison.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_contract_comparison.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">CONTRACT TYPE &amp; PROJECT RISK</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">請負契約・準委任契約の違いと</text>
@@ -719,7 +890,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-03-21">2026.03.21</time>
+              <time datetime="2026-03-02">2026.03.02</time>
             </div>
             <a href="contract-types-comparison.html" style="text-decoration: none;">
               <h2 class="column-card-title">システム開発「請負契約」と「準委任」の違い</h2>
@@ -735,7 +906,7 @@
               <span class="column-card-badge">システム・アプリ開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「ノーコード開発の限界とスクラッチ開発の技術選定基準」のビジュアルバナー" role="img" aria-label="コラム「ノーコード開発の限界とスクラッチ開発の技術選定基準」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_nocode_vs_scratch.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_nocode_vs_scratch.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">NOCODE vs SCRATCH CODING</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">ノーコード・ローコード開発と</text>
@@ -750,7 +921,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-03-16">2026.03.16</time>
+              <time datetime="2026-02-25">2026.02.25</time>
             </div>
             <a href="nocode-vs-scratch.html" style="text-decoration: none;">
               <h2 class="column-card-title">ノーコード開発の限界とスクラッチ開発の技術選定基準</h2>
@@ -766,7 +937,7 @@
               <span class="column-card-badge">システム・アプリ開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「システム・アプリ開発期間の目安とスケジュール短縮手法」のビジュアルバナー" role="img" aria-label="コラム「システム・アプリ開発期間の目安とスケジュール短縮手法」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_schedule_shortening.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_schedule_shortening.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">SCHEDULE &amp; TIME MANAGEMENT</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">システム開発の期間・納期を</text>
@@ -781,7 +952,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-03-11">2026.03.11</time>
+              <time datetime="2026-02-20">2026.02.20</time>
             </div>
             <a href="development-schedule-shortening.html" style="text-decoration: none;">
               <h2 class="column-card-title">システム・アプリ開発期間の目安とスケジュール短縮手法</h2>
@@ -797,7 +968,7 @@
               <span class="column-card-badge">仕様設計</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「システム開発・要件定義のコツと失敗しない仕様策定」のビジュアルバナー" role="img" aria-label="コラム「システム開発・要件定義のコツと失敗しない仕様策定」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_requirements_definition.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_requirements_definition.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">SPECIFICATION &amp; CHECKLIST</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">システム開発の要件定義で</text>
@@ -812,7 +983,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-03-06">2026.03.06</time>
+              <time datetime="2026-02-15">2026.02.15</time>
             </div>
             <a href="requirements-definition-tips.html" style="text-decoration: none;">
               <h2 class="column-card-title">システム開発・要件定義のコツと失敗しない仕様策定</h2>
@@ -828,7 +999,7 @@
               <span class="column-card-badge">システム・アプリ開発</span>
               <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「システム開発「内製化」と「外注」のバランス比較」のビジュアルバナー" role="img" aria-label="コラム「システム開発「内製化」と「外注」のバランス比較」のビジュアルバナー">
           <rect width="1000" height="428" fill="#0b1126"/>
-          <image href="../illust_inhouse_vs_outsourcing.png" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <image href="../illust_inhouse_vs_outsourcing.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
           <g transform="translate(60, 80)">
             <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">IT MANAGEMENT &amp; COLLABORATION</text>
             <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">システム開発の「内製化」と</text>
@@ -843,7 +1014,7 @@
           </a>
           <div class="column-card-content">
             <div class="column-card-meta">
-              <time datetime="2026-03-01">2026.03.01</time>
+              <time datetime="2026-02-10">2026.02.10</time>
             </div>
             <a href="inhouse-vs-outsourcing.html" style="text-decoration: none;">
               <h2 class="column-card-title">システム開発「内製化」と「外注」のバランス比較</h2>

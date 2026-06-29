@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マイクロフロントエンド設計入門 — モノリスからの脱却とシステム開発の分割基準 | Ill inc.</title>
+  <meta name="description" content="大規模Webアプリ開発における「マイクロフロントエンド」の設計原則、ビルド時・実行時統合の手法比較、およびチームの分割と導入判断の基準を詳細に解説します。">
+  <meta name="keywords" content="マイクロフロントエンド,モノリス脱却,Module Federation,フロントエンド分割,マルチチーム開発">
+  <meta name="author" content="Ill inc.">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/micro-frontends-architecture.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="マイクロフロントエンド設計入門 — モノリスからの脱却とシステム開発の分割基準 | Ill inc.">
+  <meta property="og:description" content="大規模Webシステムでフロントエンドを機能単位に分割・統合する設計原則と、導入可否を決定する判断基準を解説します。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/micro-frontends-architecture.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="マイクロフロントエンド設計入門 — モノリスからの脱却とシステム開発の分割基準 | Ill inc.">
+  <meta name="twitter:description" content="大規模Webシステムでフロントエンドを機能単位に分割・統合する設計原則と、導入可否を決定する判断基準を解説します。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Asynchronous Loading for Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+
+    <noscript>
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+
+    </noscript>
+
+  <link rel="stylesheet" href="../style.css?v=56">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "マイクロフロントエンド設計入門 — モノリスからの脱却とシステム開発の分割基準 | Ill inc.",
+  "description": "大規模Webシステムでフロントエンドを機能単位に分割・統合する設計原則と、導入可否を決定する判断基準を解説します。",
+  "image": "https://www.ill-inc.net/ogp.png?v=1",
+  "datePublished": "2026-06-05",
+  "dateModified": "2026-06-05",
+  "author": {
+    "@type": "Person",
+    "name": "山下 高志",
+    "jobTitle": "Representative of Ill inc."
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ill株式会社",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ill-inc.net/logo-icon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ill-inc.net/column/micro-frontends-architecture.html"
+  }
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AIエージェント業務自動化"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. AIエージェントの開発には多大な初期投資が必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。最初から高度なマルチエージェントシステムを作るのではなく、まずは既存のLLM（OpenAIやClaudeなど）にツール（Web SearchやカスタムPythonスクリプト）を1〜2個連携させる「シングルエージェント」のプロトタイプであれば、1〜2週間程度のミニマル開発で低コストに構築が可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 社内機密データが外部のLLMモデルの学習に使用されることはありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由でのLLM利用（Azure OpenAI ServiceやAWS Bedrockなど）や、適切なエンタープライズ契約・ローカルLLM（Llama3など）の導入により、データが外部モデルの学習に送信されることを防ぐ堅牢なインフラ設計が可能です。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AIエージェント業務自動化"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. AIエージェントの開発には多大な初期投資が必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。最初から高度なマルチエージェントシステムを作るのではなく、まずは既存のLLM（OpenAIやClaudeなど）にツール（Web SearchやカスタムPythonスクリプト）を1〜2個連携させる「シングルエージェント」のプロトタイプであれば、1〜2週間程度のミニマル開発で低コストに構築が可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 社内機密データが外部のLLMモデルの学習に使用されることはありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由でのLLM利用（Azure OpenAI ServiceやAWS Bedrockなど）や、適切なエンタープライズ契約・ローカルLLM（Llama3など）の導入により、データが外部モデルの学習に送信されることを防ぐ堅牢なインフラ設計が可能です。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AIエージェント業務自動化"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. AIエージェントの開発には多大な初期投資が必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。最初から高度なマルチエージェントシステムを作るのではなく、まずは既存のLLM（OpenAIやClaudeなど）にツール（Web SearchやカスタムPythonスクリプト）を1〜2個連携させる「シングルエージェント」のプロトタイプであれば、1〜2週間程度のミニマル開発で低コストに構築が可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 社内機密データが外部のLLMモデルの学習に使用されることはありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由でのLLM利用（Azure OpenAI ServiceやAWS Bedrockなど）や、適切なエンタープライズ契約・ローカルLLM（Llama3など）の導入により、データが外部モデルの学習に送信されることを防ぐ堅牢なインフラ設計が可能です。"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <!-- Stylized III / Ill Logo with Gradients -->
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">&gt;</span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">&gt;</span>
+        <span class="breadcrumb-item">マイクロフロントエンド設計入門</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">システム・アプリ開発</span>
+        <h1 class="article-title">マイクロフロントエンド設計入門</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.06.05</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「マイクロフロントエンド設計入門」のビジュアルバナー">
+          <rect width="1000" height="428" fill="#0b1126"/>
+          <image href="../illust_micro_frontends.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <g transform="translate(60, 80)">
+            <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">MICRO-FRONTENDS ARCHITECTURE</text>
+            <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">マイクロフロントエンドの設計原則と</text>
+            <g transform="translate(0, 130)">
+              <rect x="0" y="0" width="680" height="74" rx="8" fill="#00F0FF" />
+              <text x="20" y="51" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">大規模アプリにおける導入判断基準</text>
+            </g>
+            <text x="0" y="260" fill="#94A3B8" font-size="22" font-weight="500" font-family="'Noto Sans JP', 'Inter', sans-serif">機能単位でのコード分割と自律的なマルチチーム開発の実現</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="article-layout">
+        
+        <main class="article-body">
+          
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">AIエージェントとは？従来のRPAやチャットボットとの決定的な違い</a></li>
+              <li><a href="#section-2">AIエージェントの4つのコア・アーキテクチャ</a></li>
+              <li><a href="#section-3">具体的な企業業務における自動化の開発事例</a></li>
+              <li><a href="#section-4">企業がAIエージェントを安全かつ効果的に導入するためのロードマップ</a></li>
+              <li><a href="#section-faq">AIエージェント開発に関するよくある質問（FAQ）</a></li>
+              <li><a href="#section-5">まとめ：自律型AIとつくる、次世代のビジネスモデル</a></li>
+            </ul>
+          </div>
+
+          <p>
+            ChatGPTに代表される生成AI（LLM）の台頭から数年、AIの活用は「質問に対してテキストで回答を生成する」というフェーズから、**「目標を与えられたAIが、自律的に判断し、ツールを使いこなしながらタスクを実行する」**という**AIエージェント（Agentic AI）**のフェーズへとシフトしています。
+          </p>
+          <p>
+            業務プロセスの大幅な効率化や人材不足の解消に向けて、AIエージェントを自社ワークフローにどう組み込むべきか。本コラムでは、AIエージェントの基本概念から具体的な開発事例、導入をスムーズに進めるためのステップまで徹底解説します。
+          </p>
+
+          <h2 id="section-1">AIエージェントとは？従来のRPAやチャットボットとの決定的な違い</h2>
+          <p>
+            AIエージェントとは、大規模言語モデル（LLM）を「脳」とし、環境を認識して、自律的にプランニング（計画策定）を行い、適切なツール（APIやプログラム）を実行して目標を達成するシステムです。
+          </p>
+          <p>
+            従来の自動化技術である**RPA（Robotic Process Automation）**や**単純なチャットボット**との違いは、以下の表の通りです。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>項目</th>
+                  <th>従来のRPA</th>
+                  <th>チャットボット</th>
+                  <th>AIエージェント (Agentic AI)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>動作のルール</strong></td>
+                  <td>人間が定義した固定の条件分岐のみ</td>
+                  <td>想定Q&Aまたは簡易シナリオ</td>
+                  <td>LLMが動的に計画を立てて判断</td>
+                </tr>
+                <tr>
+                  <td><strong>例外への対応</strong></td>
+                  <td>エラー停止し、人間の処理が必要</td>
+                  <td>「分かりません」と回答</td>
+                  <td>エラーメッセージを解釈して自己修正</td>
+                </tr>
+                <tr>
+                  <td><strong>ツール連携</strong></td>
+                  <td>画面操作の再現（UI自動化）</td>
+                  <td>単一APIへの問い合わせ</td>
+                  <td>状況に応じて必要なツールを動的選択</td>
+                </tr>
+                <tr>
+                  <td><strong>最適な業務</strong></td>
+                  <td>データの転記など、定型定常作業</td>
+                  <td>簡単な問い合わせ対応</td>
+                  <td>調査・分析・文書作成など非定型業務</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="section-2">AIエージェントの4つのコア・アーキテクチャ</h2>
+          <p>
+            AIエージェントは、以下の4つの要素が連携することで自律的な動作を実現します。
+          </p>
+          <ul>
+            <li><strong>プロファイル（役割定義）</strong>：エージェントに「リサーチアナリスト」「経理担当」といったペルソナを与え、思考の方向性を方向づけます。</li>
+            <li><strong>プランニング（計画力）</strong>：タスクを小さなサブタスクに分解し、実行手順を論理的に組み立てます。エラーが起きた際には代替プランを再構成します。</li>
+            <li><strong>メモリー（記憶能力）</strong>：対話のコンテキストを保持する「短期記憶」と、ベクトルデータベースやナレッジベースから必要な過去情報を参照する「長期記憶」を使い分けます。</li>
+            <li><strong>ツール（アクション実行）</strong>：Web検索ツール、プログラム実行環境（Code Interpreter）、社内システムAPIなどのツールを自律的に呼び出します。</li>
+          </ul>
+
+          <h2 id="section-3">具体的な企業業務における自動化の開発事例</h2>
+          <p>
+            自律型AIエージェントは、すでに多くのビジネスシーンで実用化され始めています。
+          </p>
+          
+          <h3>1. 競合調査・マーケティングレポートの自動作成</h3>
+          <p>
+            指定したキーワードや製品カテゴリに基づいて、AIエージェントが自律的にWeb上を検索し、競合他社の最新リリース、価格情報、評価レビューなどを収集・整理します。その後、エージェント内でSWOT分析を行い、PDF形式の高品質な市場調査レポートを自動生成します。
+          </p>
+
+          <h3>2. カスタマーサポートの高度なトリアージと自動解決</h3>
+          <p>
+            ユーザーからの問い合わせ文脈を解釈し、単純なFAQ回答だけでなく、エージェントがデータベースから注文情報を照会し、キャンセル要件を満たしているか判断した上で、返金処理APIを実行し完了メールを送るまでの一連の対応を完結させます。
+          </p>
+
+          <h3>3. ソフトウェアエンジニアリングとテストの自動化</h3>
+          <p>
+            実装したい機能要件を自然言語で与えるだけで、コードを自律的に生成し、ローカル環境で自動テストを走らせ、エラーが出た場合にはそのログを自己分析してバグを修復します。修復後にGitHubのプルリクエストを作成するまでの一連の作業をAIエージェントが行います。
+          </p>
+
+          <h2 id="section-4">企業がAIエージェントを安全かつ効果的に導入するためのロードマップ</h2>
+          <p>
+            AIエージェントは強力ですが、誤った判断（ハルシネーション）や不要なAPIの無限実行ループなどのリスクも伴います。これらを防ぎ、本質的な業務改善を行うために、**Ill株式会社 (Ill inc.)** では以下の「ミニマルなスモールスタートステップ」を推奨しています。
+          </p>
+          <ol>
+            <li><strong>スコープの最小化</strong>：最初から全プロセスを自動化しようとせず、最も定型的かつ影響の少ない業務（例：日報の一次集計や社内データ検索）からエージェントを設計します。</li>
+            <li><strong>人間による承認フェーズ（Human-in-the-Loop）の追加</strong>：エージェントがAPIを実行して最終処理（メール送信やデータベース書き込みなど）を行う直前に、必ず人間がSlackのボタン等で承認（Approve）するチェックポイントを設けます。</li>
+            <li><strong>エージェント連携フレームワークの適用</strong>：LangChain、LangGraph、CrewAIなどを選定し、エージェントごとの役割（検証役、実装役、監査役）を分離させ、相互にレビューを行わせる設計を適用します。</li>
+          </ol>
+
+          <h2 id="section-faq">AIエージェント開発に関するよくある質問（FAQ）</h2>
+          
+          <h3>Q1. AIエージェントの開発には多大な初期投資が必要ですか？</h3>
+          <p>
+            いいえ。最初から高度なマルチエージェントシステムを作るのではなく、まずは既存のLLM（OpenAIやClaudeなど）にツール（Web SearchやカスタムPythonスクリプト）を1〜2個連携させる「シングルエージェント」のプロトタイプであれば、1〜2週間程度のミニマル開発で低コストに構築が可能です。
+          </p>
+
+          <h3>Q2. 社内機密データが外部のLLMモデルの学習に使用されることはありませんか？</h3>
+          <p>
+            API経由でのLLM利用（Azure OpenAI ServiceやAWS Bedrockなど）や、適切なエンタープライズ契約・ローカルLLM（Llama3など）の導入により、データが外部モデルの学習に送信されることを防ぐ堅牢なインフラ設計が可能です。
+          </p>
+
+          <h2 id="section-5">まとめ：自律型AIとつくる、次世代のビジネスモデル</h2>
+          <p>
+            AIエージェントの導入は、単なる「作業の効率化」に留まらず、人間が本質的な判断やクリエイティブな戦略策定に集中できる環境をつくります。
+          </p>
+          <p>
+            Ill Inc.では、お客様の現在のワークフローから「どこにAIエージェントを組み込むと最も効果的か」をヒアリングし、ミニマルかつ高セキュアなAIエージェントの受託開発をご提案しています。
+          </p>
+
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">AIエージェントによる業務改善の無料PoC相談を受け付けています</h3>
+            <p class="inline-cta-desc">「手作業で行っている分析作業をAIに任せたい」「既存システムとLLMを連携させたい」など、お客様のアイデアを形にするミニマル設計のご相談から承ります。お気軽にお問い合わせください。</p>
+            <a href="../index.html#contact" class="btn btn-primary">無料PoC相談はこちら</a>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Technology Research Division</p>
+            <p class="author-bio">
+              最先端のAIトレンド（GenAI / Agentic AI）のビジネス応用、LLMセキュリティ、RAGアーキテクチャ設計などの知見を発信。新規事業における迅速な技術検証とPoC設計を担当。
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+                        <ul class="related-list">
+              <li class="related-item">
+                <a href="ai-agent-implementation.html">
+                  <span class="related-item-date">2026.06.25</span>
+                  <span class="related-item-title">業務に自律型AIエージェントを組み込む手法</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="offshore-agile-development.html">
+                  <span class="related-item-date">2026.06.20</span>
+                  <span class="related-item-title">オフショア開発におけるアジャイル運用の実践法</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="mvp-validation-strategy.html">
+                  <span class="related-item-date">2026.06.15</span>
+                  <span class="related-item-title">新規事業立ち上げにおけるMVP検証手法</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="agile-requirements-definition.html">
+                  <span class="related-item-date">2026.06.10</span>
+                  <span class="related-item-title">アジャイル要件定義の失敗を避ける手法</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="micro-frontends-architecture.html">
+                  <span class="related-item-date">2026.06.05</span>
+                  <span class="related-item-title">マイクロフロントエンド設計入門</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <!-- SVG Logo -->
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <script src="../script.js?v=56"></script>
+</body>
+</html>
