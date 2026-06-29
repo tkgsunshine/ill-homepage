@@ -1885,6 +1885,10 @@ textarea.form-control {
     padding: 4rem 0;
   }
   
+  .section-header {
+    margin-bottom: 4rem;
+  }
+  
   .section-title {
     font-size: 3.2rem;
   }
@@ -1942,6 +1946,7 @@ textarea.form-control {
   .hero {
     padding-top: 14rem;
     padding-bottom: 4rem;
+    min-height: auto;
     text-align: center;
   }
   
