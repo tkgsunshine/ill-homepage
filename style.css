@@ -3001,6 +3001,33 @@ body.theme-light .cases-cta {
     font-size: 1.4rem;
     line-height: 1.7;
   }
+
+  /* Disable CPU/GPU-heavy animations and filter blurs on mobile */
+  body::before,
+  body::after,
+  .secondary-orbs {
+    display: none !important;
+  }
+  
+  body {
+    background: radial-gradient(circle at 80% 20%, hsla(271, 100%, 54%, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 20% 60%, hsla(186, 100%, 50%, 0.1) 0%, transparent 70%),
+                var(--bg-dark) !important;
+  }
+  
+  body.theme-light {
+    background: radial-gradient(circle at 80% 20%, hsla(271, 100%, 80%, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 20% 60%, hsla(186, 100%, 80%, 0.06) 0%, transparent 70%),
+                #fff !important;
+  }
+
+  .rotator,
+  .rotator-reverse,
+  .orbiting-group,
+  .orbiting-group-2,
+  .form-structure {
+    animation: none !important;
+  }
 }
 
 
