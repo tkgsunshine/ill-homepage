@@ -121,6 +121,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
+      function typeCardP1() {
+        if (cardP1 && cardIndex1 < cardPText1.length) {
+          cardP1.textContent += cardPText1.charAt(cardIndex1);
+          cardIndex1++;
+          setTimeout(typeCardP1, cardSpeed);
+        } else if (cardP2) {
+          setTimeout(typeCardP2, 200);
+        }
+      }
+
+      function typeCardP2() {
+        if (cardP2 && cardIndex2 < cardPText2.length) {
+          cardP2.textContent += cardPText2.charAt(cardIndex2);
+          cardIndex2++;
+          setTimeout(typeCardP2, cardSpeed);
+        }
+      }
+
       // Use IntersectionObserver to trigger typing when scrolled into view
       const philObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -128,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hasStarted = true;
             setTimeout(() => {
               typePhilLine1();
+              typeCardP1();
             }, 300); // 300ms delay after entry for natural feel
             observer.unobserve(entry.target);
           }
