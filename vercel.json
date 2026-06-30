@@ -1,0 +1,12 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/works", "destination": "/cases/", "permanent": true },
+    { "source": "/works/:path*", "destination": "/cases/", "permanent": true },
+    { "source": "/news_category/:path*", "destination": "/column/", "permanent": true },
+    { "source": "/category/:path*", "destination": "/column/", "permanent": true },
+    { "source": "/news/:path*", "destination": "/column/", "permanent": true },
+    { "source": "/service/:path*", "destination": "/", "permanent": true },
+    { "source": "/author/:path*", "destination": "/", "permanent": true }
+  ]
+}
