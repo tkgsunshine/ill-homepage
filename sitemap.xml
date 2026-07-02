@@ -241,6 +241,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.ill-inc.net/cases/real-estate-elearning.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ill-inc.net/cases/telemedicine.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ill-inc.net/cases/pharmacy-inventory.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.ill-inc.net/column/micro-frontends-architecture.html</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
