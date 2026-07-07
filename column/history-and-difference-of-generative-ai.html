@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成AIが誕生した流れと従来のAIとの決定的な違いを解説 | Ill inc. コラム</title>
+  <meta name="description" content="ディープラーニングからTransformerの登場、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来の「ルールベース型」や「識別・分類型」AIとの決定的な違いをわかりやすく解説します。">
+  <meta name="keywords" content="生成AI 歴史,従来のAI 違い,Transformer,大規模言語モデル,LLM 歴史,Ill Inc.">
+  <meta name="author" content="Ill inc.">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="生成AIが誕生した流れと従来のAIとの決定的な違いを解説 | Ill inc. コラム">
+  <meta property="og:description" content="ディープラーニングからTransformer、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来のAIとの違いを解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="生成AIが誕生した流れと従来のAIとの決定的な違いを解説 | Ill inc. コラム">
+  <meta name="twitter:description" content="ディープラーニングからTransformer、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来のAIとの違いを解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css?v=61">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "生成AIが誕生した流れと従来のAIとの決定的な違いを解説",
+    "description": "ディープラーニングからTransformer、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来のAIとの違いを解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-07-07",
+    "dateModified": "2026-07-07",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill株式会社"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html"
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ill-inc.net/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "コラム",
+        "item": "https://www.ill-inc.net/column/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "生成AI誕生の歴史と従来のAIとの違い"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">生成AI誕生の歴史と従来のAIとの違い</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">生成AI・先端技術</span>
+        <h1 class="article-title">生成AIが誕生した歴史的流れと従来のAIとの決定的な違いをわかりやすく解説</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.07.07</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「生成AI誕生の歴史と従来のAIとの決定的な違い」のビジュアルバナー">
+          <rect width="1000" height="428" fill="#0b1126"/>
+          <image href="../illust_ai_agent.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <g transform="translate(60, 80)">
+            <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">GENERATIVE AI HISTORY</text>
+            <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">生成AIが誕生した流れと</text>
+            <g transform="translate(0, 130)">
+              <rect x="0" y="0" width="550" height="74" rx="8" fill="#9D00FF" />
+              <text x="20" y="52" fill="#FFFFFF" font-size="44" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">従来のAIとの違いを解説</text>
+            </g>
+            <text x="0" y="260" fill="#94A3B8" font-size="22" font-weight="500" font-family="'Noto Sans JP', 'Inter', sans-serif">ディープラーニングからTransformer、LLMへの進化</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">生成AI誕生前夜：ルールベースからディープラーニングへの歩み</a></li>
+              <li><a href="#section-2">エポックメイキングとなった「Transformer」とLLMの衝撃</a></li>
+              <li><a href="#section-3">ここが違う！「従来のAI」と「生成AI」の3つの決定的な差異</a></li>
+              <li><a href="#section-4">なぜビジネスでこれほど注目されるのか？生成AIの実務価値</a></li>
+              <li><a href="#section-5">まとめ：AI技術は「分析・予測」から「共創」のフェーズへ</a></li>
+            </ul>
+          </div>
+
+          <p>
+            ChatGPTの登場以来、ビジネスの現場から教育、クリエイティブ分野に至るまで、あらゆる業界を席巻している「生成AI（ジェネレーティブAI）」。毎日のように新たな技術情報やAIサービスがリリースされていますが、そもそも生成AIはどのようにして誕生したのでしょうか。
+          </p>
+          <p>
+            本コラムでは、これまでのAI技術がどのようなステップを経て「生成AI」に至ったのか、その歴史的変遷を振り返りつつ、予測や識別を得意としてきた「従来のAI」との決定的な違いについて解説します。
+          </p>
+
+          <h2 id="section-1">生成AI誕生前夜：ルールベースからディープラーニングへの歩み</h2>
+          <p>
+            AI（人工知能）の研究は1950年代から始まっており、現在の生成AIブームは「第3次〜第4次AIブーム」の延長線上、あるいは新たなステージとして位置づけられています。生成AIの誕生に至るまで、大きく3つのフェーズに分けることができます。
+          </p>
+          
+          <h3>1. ルールベース（第1次・第2次ブーム）</h3>
+          <p>
+            初期のAIは、人間があらかじめ「もし〜なら、こうする」というルールを網羅的に記述するものでした。チェスで勝つための手順をすべて記述したエンジンや、専門知識をルール化した「エキスパートシステム」などがこれに該当します。しかし、「ルールが複雑すぎると人間が書ききれない」「未知の事象に対応できない」という限界（フレーム問題）に直面し、ブームは収束しました。
+          </p>
+
+          <h3>2. 機械学習（マシーンラーニング）の普及</h3>
+          <p>
+            2000年代に入ると、インターネットの普及により「データ」の量が爆発的に増加しました。これにより、人間がルールを書くのではなく、AI自身がデータから特徴的な法則性を学習する「機械学習」が主流になりました。例えば、過去の売上データから来月の売上を「予測」する、ユーザーの属性から好む商品を「推薦する」といったアルゴリズムが実用化されました。
+          </p>
+
+          <h3>3. ディープラーニング（深層学習）によるブレイクスルー</h3>
+          <p>
+            2012年、画像認識コンペティション「ILSVRC」において、カナダのトロント大学が開発したディープラーニング（深層学習）モデル「AlexNet」が圧倒的なスコアで優勝し、世界に衝撃を与えました。
+            人間の脳のニューロンを模した多層ニューラルネットワークにより、これまで「人間が指定していた画像の特徴（エッジ、質感など）」を、**AI自身が自動的に見出せる（特徴量抽出の自動化）**ようになったのです。これにより、画像認識や音声認識の精度は一気に人間に匹敵するレベルへ向上しました。
+          </p>
+
+          <h2 id="section-2">エポックメイキングとなった「Transformer」とLLMの衝撃</h2>
+          <p>
+            ディープラーニングの登場によって劇的に進歩したAIですが、文章の翻訳や文章の要約といった「自然言語処理」においては、まだいくつかの壁がありました。それを打ち破り、今日の生成AI（特に大規模言語モデル：LLM）を誕生させる決定打となったのが、2017年にGoogleの研究チームが発表した論文**「Attention Is All You Need」**で提唱されたニューラルネットワークアーキテクチャ**「Transformer（トランスフォーマー）」**です。
+          </p>
+
+          <p>
+            従来の自然言語処理で使われていたモデル（RNNやLSTMなど）は、文章の先頭から1ワードずつ順番に処理していたため、並列計算ができず、長い文章を扱うと前の方の内容を忘れてしまうという課題がありました。
+            しかし、Transformerに搭載された「Self-Attention（自己注意）」という仕組みは、**文章全体の単語と単語の関連性を一瞬で同時に（並列に）計算する**ことを可能にしました。
+          </p>
+
+          <p>
+            このTransformerの登場により：
+          </p>
+          <ul class="case-detail-list">
+            <li><strong>大規模なデータによる事前学習</strong>: インターネット上の膨大なテキストデータを、GPUを用いて超高速に並列処理し、事前学習（Pre-training）させることが可能になりました。</li>
+            <li><strong>文脈理解の飛躍的向上</strong>: 単に単語の意味を繋げるだけでなく、代名詞が何を指しているか、文脈によってその単語がどんな役割を果たしているかを正確に捉えられるようになりました。</li>
+          </ul>
+
+          <p>
+            OpenAIは、このTransformerアーキテクチャを採用したモデルシリーズ「GPT（Generative Pre-trained Transformer）」の開発に注力し、パラメータ数と学習データを巨大化させた「GPT-3」や「ChatGPT (GPT-3.5/GPT-4)」をリリース。この巨大なインフラにより、AIがまるで人間のように辻褄の合う文章、コード、アイデアを生成する「生成AI」の時代が本格的に到来したのです。
+          </p>
+
+          <h2 id="section-3">ここが違う！「従来のAI」と「生成AI」の3つの決定的な差異</h2>
+          <p>
+            では、従来のAI（識別モデルなど）と生成AI（生成モデルなど）は、具体的に何が違うのでしょうか。実務において知っておくべき決定的な違いを3つに整理します。
+          </p>
+
+          <div class="table-container">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>比較項目</th>
+                  <th>従来のAI（識別・分類・予測型）</th>
+                  <th>生成AI（コンテンツ創出型）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>アウトプット</strong></td>
+                  <td>数値、クラス分類、正誤判定（例:「95%の確率で猫」「明日の売上は120万円」）</td>
+                  <td>新規テキスト、プログラムコード、高解像度画像、音声、音楽などの創作物</td>
+                  
+                </tr>
+                <tr>
+                  <td><strong>目的・ユースケース</strong></td>
+                  <td>「正解」を求める処理（不良品検知、需要予測、スパムメール判別、不正アクセス防御）</td>
+                  <td>「創造性」や「柔軟性」を求める処理（要約、アイデア出し、カスタマーチャット、システムコード自動記述）</td>
+                </tr>
+                <tr>
+                  <td><strong>データ依存と操作</strong></td>
+                  <td>特定業務に応じた高度なアノテーション（正解ラベル付け）済みの専門データが必須</td>
+                  <td>Web全体の汎用データを事前学習。利用時は人間が日常会話（プロンプト）で細かく指示可能</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>違い1：アウトプットが「判定」か「創出」か</h3>
+          <p>
+            従来のAIは、入力されたデータに対して「これは何か？（分類）」「次にどうなるか？（予測）」という答えを出します。一方、生成AIは、入力された指示（プロンプト）を理解し、**「存在しない新しいデータ（文章、コード、画像）をゼロから生み出す」**ことができます。
+          </p>
+
+          <h3>違い2：インターフェースの劇的変化（プログラミングから日常言語へ）</h3>
+          <p>
+            従来のAIを活用するには、エンジニアがPythonなどで高度なデータ整理やプログラムを書く必要がありました。しかし、生成AIは人間が普段使っている「日本語や英語などの自然言語」で指示を出すだけで動作します。「少しフォーマルなトーンに書き直して」「バグを修正して」といった抽象的なニュアンスもそのまま理解して実行します。
+          </p>
+
+          <h3>違い3：タスクの汎用性（特化型から汎用型へ）</h3>
+          <p>
+            従来のAIは「売上予測専用」「顔認証専用」というように、一つのタスクに特化して学習・開発されていました。しかし生成AIは、一つの大きなモデル（基盤モデル）が、文章要約からプログラミング、翻訳、アイデア出しに至るまで、多種多様なタスクをこれ一つでこなす「汎用型AI」としての側面を持っています。
+          </p>
+
+          <h2 id="section-4">なぜビジネスでこれほど注目されるのか？生成AIの実務価値</h2>
+          <p>
+            生成AIが従来のAI以上にビジネスの場で急速に普及している理由は、その**「導入ハードルの低さ」**と**「自動化できる業務の幅広さ」**にあります。
+          </p>
+          <ul class="case-detail-list">
+            <li><strong>プログラミング業務の効率化</strong>: 生成AIは、仕様書からコードを自動作成したり、既存コードの不具合（デバッグ）を特定したりできるため、開発スピードを数倍に高めることができます。</li>
+            <li><strong>カスタマーサポートの高度な自動化</strong>: 従来のチャットボットは事前に設定されたシナリオ通りの回答しかできませんでしたが、生成AI（特にRAGなどを連携させたシステム）は、複雑なお問い合わせに対しても製品資料を参照して自然な言葉で柔軟に対応できます。</li>
+            <li><strong>知的生産・リサーチの高速化</strong>: 膨大なPDF報告書を瞬時に要約し、要点を箇条書きでまとめさせたり、ブレインストーミングの相手としてアイデアを無数に出させたりすることが可能です。</li>
+          </ul>
+
+          <h2 id="section-5">まとめ：AI技術は「分析・予測」から「共創」のフェーズへ</h2>
+          <p>
+            AIは長い歴史の中で、「人間が決めたルールを実行する機械」から「データから法則を学び判断する頭脳（従来のAI）」へ、そして「自ら考えてアウトプットを創り出すパートナー（生成AI）」へと進化を遂げました。
+          </p>
+          <p>
+            従来のAIが「データ処理の効率化」のための道具だったのに対し、生成AIは「人間の創造性や生産性を最大化するための共創パートナー」です。この違いを理解し、業務プロセスに適切に統合していくことが、これからのデジタル変革（DX）における競争力の源泉となります。
+          </p>
+          <p>
+            Ill株式会社では、企業様の機密データをセキュアに保護しながら生成AIを業務システムに統合するRAGシステム開発や、ITXコンサルティングを提供しています。「生成AIを使って自社業務をどう自動化できるか知りたい」「プロトタイプを作成して試したい」といったご相談がございましたら、ぜひお気軽にお問い合わせください。
+          </p>
+        </main>
+      </div>
+
+      <div class="glass-panel cases-cta">
+        <h3 class="cases-cta-title">生成AIの導入・DXシステム開発のご相談</h3>
+        <p class="cases-cta-desc">
+          社内ドキュメントを活用したセキュアなRAGチャット開発や、AIエージェントによる業務自動化など、貴社のアイデアを最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+        </p>
+        <div class="cases-cta-buttons">
+          <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
+          <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=61"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
