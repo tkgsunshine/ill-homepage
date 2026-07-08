@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webシステムのセキュリティ対策入門と基本チェックリスト | Ill inc. コラム</title>
+  <meta name="description" content="Webシステム開発で必須となるセキュリティ対策と代表的な脆弱性（SQLインジェクション、XSS、CSRF）を解説。情報漏洩を防ぎ、安全なシステムを運用するための基本チェックリストを紹介。">
+  <meta name="keywords" content="Webシステム セキュリティ,セキュリティ対策,脆弱性診断,情報漏洩 対策,セキュア設計,Ill Inc.">
+  <meta name="author" content="山下 高志">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/web-system-security.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Webシステムのセキュリティ対策入門と基本チェックリスト | Ill inc. コラム">
+  <meta property="og:description" content="Webシステム開発で必須となるセキュリティ対策と代表的な脆弱性（SQLインジェクション、XSS、CSRF）を解説。情報漏洩を防ぎ、安全なシステムを運用するための基本チェックリストを紹介。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/web-system-security.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Webシステムのセキュリティ対策入門と基本チェックリスト | Ill inc. コラム">
+  <meta name="twitter:description" content="Webシステム開発で必須となるセキュリティ対策と代表的な脆弱性（SQLインジェクション、XSS、CSRF）を解説。情報漏洩を防ぎ、安全なシステムを運用するための基本チェックリストを紹介。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css?v=61">
+
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Webシステムのセキュリティ対策入門：企業が最初に行うべき脆弱性対策と基本チェックリスト",
+    "description": "Webシステム開発で必須となるセキュリティ対策と代表的な脆弱性（SQLインジェクション、XSS、CSRF）を解説。情報漏洩を防ぎ、安全なシステムを運用するための基本チェックリストを紹介。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-07-21",
+    "dateModified": "2026-07-21",
+    "author": {
+      "@type": "Person",
+      "name": "山下 高志",
+      "jobTitle": "Representative of Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/web-system-security.html"
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Webシステムのセキュリティ対策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 個人情報を扱わない静的なホームページでもセキュリティ対策は必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、必要です。個人情報の漏洩リスクは低くても、Webサイトの改ざん（マルウェア配信サイトへのリダイレクト）、問い合わせフォームを踏み台にした大量のスパムメール送信、DDoS攻撃の踏み台にされるといったリスクが存在します。SSL化（HTTPS）や基本的なサーバー保護は必須です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 脆弱性診断（セキュリティスキャン）はどのタイミングで行うべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "開発の最終段階（システムテスト工程）かつ本番リリース前に行うのが一般的です。また、リリース後も定期的なOS/ミドルウェアのアップデート時や、機能のマイナーアップデート時に再度スキャンを実施することで、新しく発見された脆弱性（ゼロデイ脆弱性）に対応できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. セキュリティ対策を強化するとシステムの動作が遅くなりませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "暗号化や多層防御（WAFなど）の導入により、ミリ秒単位でのオーバーヘッドは発生しますが、近年のサーバー性能や最適化された暗号化処理であれば、人間の体感速度に影響を与えることはほぼありません。パフォーマンスと安全性のバランスを考慮した設計を行います。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Webシステムのセキュリティ対策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 個人情報を扱わない静的なホームページでもセキュリティ対策は必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、必要です。個人情報の漏洩リスクは低くても、Webサイトの改ざん（マルウェア配信サイトへのリダイレクト）、問い合わせフォームを踏み台にした大量のスパムメール送信、DDoS攻撃の踏み台にされるといったリスクが存在します。SSL化（HTTPS）や基本的なサーバー保護は必須です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 脆弱性診断（セキュリティスキャン）はどのタイミングで行うべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "開発の最終段階（システムテスト工程）かつ本番リリース前に行うのが一般的です。また、リリース後も定期的なOS/ミドルウェアのアップデート時や、機能のマイナーアップデート時に再度スキャンを実施することで、新しく発見された脆弱性（ゼロデイ脆弱性）に対応できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. セキュリティ対策を強化するとシステムの動作が遅くなりませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "暗号化や多層防御（WAFなど）の導入により、ミリ秒単位でのオーバーヘッドは発生しますが、近年のサーバー性能や最適化された暗号化処理であれば、人間の体感速度に影響を与えることはほぼありません。パフォーマンスと安全性のバランスを考慮した設計を行います。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Webシステムのセキュリティ対策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 個人情報を扱わない静的なホームページでもセキュリティ対策は必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、必要です。個人情報の漏洩リスクは低くても、Webサイトの改ざん（マルウェア配信サイトへのリダイレクト）、問い合わせフォームを踏み台にした大量のスパムメール送信、DDoS攻撃の踏み台にされるといったリスクが存在します。SSL化（HTTPS）や基本的なサーバー保護は必須です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 脆弱性診断（セキュリティスキャン）はどのタイミングで行うべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "開発の最終段階（システムテスト工程）かつ本番リリース前に行うのが一般的です。また、リリース後も定期的なOS/ミドルウェアのアップデート時や、機能のマイナーアップデート時に再度スキャンを実施することで、新しく発見された脆弱性（ゼロデイ脆弱性）に対応できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. セキュリティ対策を強化するとシステムの動作が遅くなりませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "暗号化や多層防御（WAFなど）の導入により、ミリ秒単位でのオーバーヘッドは発生しますが、近年のサーバー性能や最適化された暗号化処理であれば、人間の体感速度に影響を与えることはほぼありません。パフォーマンスと安全性のバランスを考慮した設計を行います。"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <!-- Stylized III / Ill Logo with Gradients -->
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">Webシステムのセキュリティ対策</span>
+      </div>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-category">仕様設計</span>
+        <h1 class="article-title">Webシステムのセキュリティ対策入門：企業が最初に行うべき脆弱性対策と基本チェックリスト</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.07.21</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #0b1126;" role="img" aria-label="「Webシステムのセキュリティ対策入門と基本チェックリスト」のビジュアルバナー">
+          <rect width="1000" height="428" fill="#0b1126"/>
+          <image href="../illust_genai_security.webp" x="520" y="0" width="480" height="428" preserveAspectRatio="xMidYMid meet" />
+          <g transform="translate(60, 80)">
+            <text x="0" y="30" fill="#00F0FF" font-size="18" font-weight="800" letter-spacing="0.15em" font-family="'Inter', sans-serif">WEB SYSTEM SECURITY</text>
+            <text x="0" y="100" fill="#FFFFFF" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">Webシステムにおける安全な</text>
+            <g transform="translate(0, 130)">
+              <rect x="0" y="0" width="600" height="74" rx="8" fill="#EC4899" />
+              <text x="20" y="52" fill="#0B1126" font-size="40" font-weight="900" font-family="'Noto Sans JP', 'Inter', sans-serif">セキュリティ設計と対策</text>
+            </g>
+            <text x="0" y="260" fill="#94A3B8" font-size="22" font-weight="500" font-family="'Noto Sans JP', 'Inter', sans-serif">Webシステム開発で必須となるセキュリティ対策と代表的な脆弱性（SQLインジェク...</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Article 2-Column Grid -->
+      <div class="article-layout">
+        
+        <!-- Left Column: Main Body Content -->
+        <main class="article-body">
+          <!-- Table of Contents -->
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#section-1">なぜWebシステムにセキュリティ対策が必須なのか？</a></li>
+              <li><a href="#section-2">知っておくべき代表的なセキュリティ脆弱性と攻撃手法</a></li>
+              <li><a href="#section-3">Webシステムセキュリティ基本チェックリスト</a></li>
+              <li><a href="#section-4">Ill Inc.のセキュアな設計とデータ保護基準</a></li>
+              <li><a href="#section-faq">セキュリティ対策に関するよくある質問（FAQ）</a></li>
+              <li><a href="#section-5">まとめ：セキュリティは「後付け」ではなく「設計時」から組み込む</a></li>
+            </ul>
+          </div>
+
+
+          <p>
+            インターネット上で一般公開される<strong>「Webシステム」や「Webアプリケーション」</strong>。24時間365日どこからでもアクセスできる利便性の裏には、悪意ある第三者（ハッカー）からのサイバー攻撃リスクが常に潜んでいます。
+          </p>
+          <p>
+            「うちは小さな新規事業だから狙われないだろう」という甘い考えは通用しません。セキュリティ脆弱性を放置したままWebシステムを公開すると、顧客情報の流出、サイトの改ざん、システムの不正利用に繋がり、多額の賠償金やブランドイメージの致命的な失墜を招きます。本コラムでは、企業が最低限押さえるべきWebセキュリティの基本を分かりやすく解説します。
+          </p>
+
+          <h2 id="section-1">なぜWebシステムにセキュリティ対策が必須なのか？</h2>
+          <p>
+            Webシステムにはデータベースが組み込まれており、顧客の個人情報、決済履歴、パスワードなどが格納されています。これらはダークウェブ等での取引対象となるため、サイバー犯罪者の標的になります。
+          </p>
+          <p>
+            近年では、脆弱性のあるWebサイトを自動で探索するボットプログラムが巡回しているため、企業の規模に関係なく、インターネット上に公開されているすべてのシステムが無差別に攻撃の対象になります。不十分なセキュリティ対策は、法的責任（個人情報保護法違反）や業務停止による巨額の経済的損失を伴う重大な経営リスクです。
+          </p>
+
+          <h2 id="section-2">知っておくべき代表的なセキュリティ脆弱性と攻撃手法</h2>
+          <p>
+            Webアプリケーション層における代表的なサイバー攻撃手法と脆弱性は以下の3点です。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>脆弱性・攻撃名</th>
+                  <th>攻撃の概要</th>
+                  <th>引き起こされる主な被害</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>SQLインジェクション</strong></td>
+                  <td>入力フォーム等に不正なSQL文を注入し、データベースを違法に操作する</td>
+                  <td>個人情報の大量漏洩、データの改ざん、管理者権限の乗っ取り</td>
+                </tr>
+                <tr>
+                  <td><strong>クロスサイトスクリプティング (XSS)</strong></td>
+                  <td>脆弱性のあるサイトに悪意あるJavaScriptコードを埋め込み、閲覧者のブラウザで実行させる</td>
+                  <td>Cookie（セッションID）の盗難、なりすまし操作、偽画面への誘導</td>
+                </tr>
+                <tr>
+                  <td><strong>クロスサイトリクエストフォージェリ (CSRF)</strong></td>
+                  <td>ログイン中のユーザーのブラウザを利用し、意図しない書き込みや決済などの重要処理を強制する</td>
+                  <td>掲示板への不正投稿、意図しないパスワード変更や商品の不正購入</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>1. SQLインジェクション</h3>
+          <p>
+            データベースに対して送信する命令文（SQL）を、ユーザーの入力値によって改ざんされてしまう脆弱性です。対策として、SQL文を発行する際に入力値を安全に処理する「プレースホルダ（プレパードステートメント）」の使用が必須です。
+          </p>
+
+          <h3>2. クロスサイトスクリプティング (XSS)</h3>
+          <p>
+            HTMLを出力する部分で、ユーザーが入力したスクリプト（HTMLタグやJavaScript）をそのまま出力してしまうことで発生します。対策として、出力するすべてのテキストに対して `&lt;` や `&gt;` を安全な文字に変換する「サニタイジング（エスケープ処理）」を行います。
+          </p>
+
+          <h2 id="section-3">Webシステムセキュリティ基本チェックリスト</h2>
+          <p>
+            開発時および運用時に必ず確認すべき、最も基本的なチェックリストです。
+          </p>
+          <ul>
+            <li><strong>通信の完全暗号化（常時HTTPS化）</strong>：SSL/TLS証明書を導入し、データ送受信の盗聴を防ぎます。</li>
+            <li><strong>セッション管理の厳格化</strong>：ログイン状態を管理するセッションIDに推測困難な値を割り当て、`HttpOnly` や `Secure` 属性を付与します。</li>
+            <li><strong>パスワードのハッシュ化保存</strong>：データベースにパスワードをそのまま（プレーンテキストで）保存せず、強力なアルゴリズム（BCryptなど）で暗号化（ハッシュ化）して保存します。</li>
+            <li><strong>WAF (Web Application Firewall) の導入</strong>：Webアプリケーションの手前でサイバー攻撃を検知・遮断する防御壁（WAF）を配置します。</li>
+          </ul>
+
+          <h2 id="section-4">Ill Inc.のセキュリティ設計とプライバシー保護基準</h2>
+          <p>
+            私たち <strong>Ill株式会社 (Ill inc.)</strong> では、セキュリティを「システム開発完了後の検証オプション」ではなく、<strong>「設計の最初のフェーズから考慮する（セキュアバイデザイン）」</strong>アプローチを取っています。
+          </p>
+          <p>
+            主要なクラウドプラットフォーム（AWS、Google Cloud）のセキュリティベストプラクティスに基づき、ネットワーク分離（VPC設計）、データベースへの直接アクセスの遮断、厳格な権限管理（IAMポリシー）を実施します。
+          </p>
+          <p>
+            また、システムインフラやミドルウェアのセキュリティ自動アップデートパッチを標準適用し、リリース前には必ず自動セキュリティスキャンツールによる診断を行い、脆弱性をゼロにしたクリーンなコードで納品することをお約束しています。
+          </p>
+        
+
+          <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">Webシステムのセキュリティ診断・対策の無料相談はこちら</h3>
+            <p class="inline-cta-desc">自社システムの脆弱性が不安、安全なWebアプリを構築したいという企業様へ。Ill Inc.では、設計段階からのセキュア設計および脆弱性診断をサポートしています。お気軽にご相談ください。</p>
+            <a href="../index.html#contact" class="btn btn-primary">無料相談・プロトタイプ作成依頼</a>
+          </div>
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+          
+          <!-- Author Profile Widget -->
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">山</div>
+            <h3 class="author-name">山下 高志</h3>
+            <p class="author-role">Ill inc. 代表取締役</p>
+            <p class="author-bio">
+              大手SierおよびテックスタートアップでのPMを経て、Ill株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+            </p>
+          </div>
+
+          <!-- Related Columns Widget -->
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+                                                <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/system-development-testing.html">
+                  <span class="related-item-date">2026.07.22</span>
+                  <span class="related-item-title">システム開発におけるテスト工程の重要性と不具合を防ぐプロセス</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/legacy-system-modernization.html">
+                  <span class="related-item-date">2026.07.20</span>
+                  <span class="related-item-title">レガシーシステム刷新（マイグレーション）の進め方と移行ステップ</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/basic-vs-detailed-design.html">
+                  <span class="related-item-date">2026.07.19</span>
+                  <span class="related-item-title">システム開発の基本設計と詳細設計の違いと作成書</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/api-integration-development.html">
+                  <span class="related-item-date">2026.07.18</span>
+                  <span class="related-item-title">API連携開発の基本と仕組み・導入メリット・事例解説</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/what-generative-ai-can-and-cannot-do.html">
+                  <span class="related-item-date">2026.07.17</span>
+                  <span class="related-item-title">【図解】生成AIができること・できないこと：得意分野と苦手な作業をスッキリ理解</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <!-- Sidebar conversion CTA Widget -->
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <!-- SVG Logo -->
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+          <div class="footer-meta-links">
+            <span class="company-sub-info">Ill株式会社 (イル株式会社)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Theme Switcher Button -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Client JavaScript -->
+  <script defer src="../script.js?v=61"></script>
+</body>
+</html>
