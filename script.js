@@ -312,11 +312,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSuccess = document.getElementById('form-success');
 
   if (contactForm && formSuccess) {
+    // --- Checkbox Wrapper Interaction & Validation ---
+    const checkboxWrapper = contactForm.querySelector('.checkbox-wrapper');
+    const checkboxInput = document.getElementById('non-sales-confirm');
+    
+    if (checkboxWrapper && checkboxInput) {
+      checkboxWrapper.addEventListener('click', (e) => {
+        if (e.target !== checkboxInput && !e.target.closest('label')) {
+          checkboxInput.checked = !checkboxInput.checked;
+          checkboxInput.dispatchEvent(new Event('change'));
+        }
+      });
+      
+      checkboxInput.addEventListener('change', () => {
+        const wrapper = checkboxInput.closest('.checkbox-wrapper');
+        if (checkboxInput.checked) {
+          if (wrapper) wrapper.classList.remove('invalid-border');
+        } else {
+          if (wrapper) wrapper.classList.add('invalid-border');
+        }
+      });
+    }
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
       let isFormValid = true;
-      const formControls = contactForm.querySelectorAll('.form-control[required], .form-control[pattern]');
+      const formControls = contactForm.querySelectorAll('.form-control[required], .form-control[pattern], .form-checkbox[required]');
       
       // Perform validation check
       formControls.forEach(control => {
@@ -325,6 +347,12 @@ document.addEventListener('DOMContentLoaded', () => {
           isFormValid = false;
           // Force display state by triggering interaction classes or focus
           control.classList.add('interacted');
+          if (control.classList.contains('form-checkbox')) {
+            const wrapper = control.closest('.checkbox-wrapper');
+            if (wrapper) {
+              wrapper.classList.add('invalid-border');
+            }
+          }
         }
       });
 

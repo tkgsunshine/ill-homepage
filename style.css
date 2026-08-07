@@ -1620,6 +1620,63 @@ textarea.form-control {
   display: block;
 }
 
+/* Checkbox Custom Styles */
+.checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.4rem 1.6rem;
+  background: var(--bg-card-glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.checkbox-wrapper:hover {
+  border-color: var(--color-cyan);
+  background: var(--bg-subtle-focus);
+}
+
+.form-checkbox {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 0.4rem;
+  border: 1.5px solid var(--glass-border);
+  cursor: pointer;
+  accent-color: var(--color-cyan);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.checkbox-label {
+  font-size: 1.4rem;
+  color: var(--text-main);
+  line-height: 1.6;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label span {
+  color: var(--color-pink);
+  margin-left: 0.4rem;
+  font-weight: 700;
+}
+
+/* Validation styles for custom checkbox */
+.form-checkbox:invalid {
+  border-color: var(--color-pink);
+}
+
+.checkbox-wrapper.invalid-border {
+  border-color: var(--color-pink);
+  box-shadow: 0 0 0 4px hsla(328, 100%, 59%, 0.15);
+}
+
+.checkbox-wrapper.invalid-border + .form-feedback {
+  display: block;
+}
+
 .form-success-message {
   display: none;
   text-align: center;
