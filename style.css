@@ -3084,4 +3084,54 @@ body.theme-light .cases-cta {
 
 }
 
+/* Inline CTA Box in Column pages (Theme-aware Overrides) */
+.inline-cta-box {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Light Mode overrides */
+body.theme-light .inline-cta-box {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+}
+
+body.theme-light .inline-cta-box .inline-cta-title {
+  color: var(--text-dark) !important;
+}
+
+body.theme-light .inline-cta-box .inline-cta-list {
+  color: var(--text-main) !important;
+}
+
+body.theme-light .inline-cta-box .inline-cta-text {
+  color: var(--text-muted) !important;
+}
+
+body.theme-light .inline-cta-box .btn-secondary {
+  color: var(--text-main) !important;
+  border-color: var(--glass-border) !important;
+  background: transparent !important;
+}
+
+body.theme-light .inline-cta-box .btn-secondary:hover {
+  border-color: var(--color-cyan) !important;
+  background: var(--bg-subtle) !important;
+  color: var(--text-main) !important;
+}
+
+/* Dark Mode overrides */
+body:not(.theme-light) .inline-cta-box .btn-secondary {
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+body:not(.theme-light) .inline-cta-box .btn-secondary:hover {
+  border-color: var(--color-cyan) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+}
+
 
