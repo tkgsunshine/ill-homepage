@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。 | Ill（イル）株式会社</title>
+  <meta name="description" content="システム開発の契約形態の違いが招くトラブル（検収後のバグ対応や開発遅延時の責任問題）を防ぎ、自社に不利益のない適切な契約を結ぶための必須知識。">
+  <meta name="keywords" content="請負契約 準委任契約 違い,システム開発 トラブル防止,契約書 瑕疵担保責任,発注側 リスク管理">
+  <meta name="author" content="Ill inc.">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="生成AIが誕生した流れと従来のAIとの決定的な違いを解説 | Ill inc. コラム">
+  <meta property="og:description" content="ディープラーニングからTransformer、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来のAIとの違いを解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="生成AIが誕生した流れと従来のAIとの決定的な違いを解説 | Ill inc. コラム">
+  <meta name="twitter:description" content="ディープラーニングからTransformer、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来のAIとの違いを解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css?v=61">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。",
+    "description": "システム開発の契約形態の違いが招くトラブル（検収後のバグ対応や開発遅延時の責任問題）を防ぎ、自社に不利益のない適切な契約を結ぶための必須知識。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-08-28",
+    "dateModified": "2026-08-28",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html"
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ill-inc.net/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "コラム",
+        "item": "https://www.ill-inc.net/column/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "生成AI誕生の歴史と従来のAIとの違い"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "請負契約と準委任契約の賢い使い分け"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "請負契約と準委任契約の賢い使い分け"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "請負契約と準委任契約の賢い使い分け"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 要件が途中で変わりそうな場合は、どちらの契約が適していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 請負契約の場合、納品後何ヶ月までバグを無償で直してもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 民法上の原則として、納品・検収後から「1年間」は契約不適合（瑕疵）に対する修正や損害賠償を請求可能です。契約書を交わす際、この期間を極端に短く（例: 2週間など）制限されていないかを必ず確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 契約書の内容（開発会社の免責事項など）が自社に不利でないかチェックしてもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。ご契約の前に、契約条件や瑕疵対応の記載について、発注者様に不当な不利益が生じないよう、弊社の技術コンサルタントが客観的にアドバイスをさせていただきます。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "請負契約と準委任契約の賢い使い分け"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 要件が途中で変わりそうな場合は、どちらの契約が適していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 請負契約の場合、納品後何ヶ月までバグを無償で直してもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 民法上の原則として、納品・検収後から「1年間」は契約不適合（瑕疵）に対する修正や損害賠償を請求可能です。契約書を交わす際、この期間を極端に短く（例: 2週間など）制限されていないかを必ず確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 契約書の内容（開発会社の免責事項など）が自社に不利でないかチェックしてもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。ご契約の前に、契約条件や瑕疵対応の記載について、発注者様に不当な不利益が生じないよう、弊社の技術コンサルタントが客観的にアドバイスをさせていただきます。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "請負契約と準委任契約の賢い使い分け"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 要件が途中で変わりそうな場合は、どちらの契約が適していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 請負契約の場合、納品後何ヶ月までバグを無償で直してもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 民法上の原則として、納品・検収後から「1年間」は契約不適合（瑕疵）に対する修正や損害賠償を請求可能です。契約書を交わす際、この期間を極端に短く（例: 2週間など）制限されていないかを必ず確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 契約書の内容（開発会社の免責事項など）が自社に不利でないかチェックしてもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。ご契約の前に、契約条件や瑕疵対応の記載について、発注者様に不当な不利益が生じないよう、弊社の技術コンサルタントが客観的にアドバイスをさせていただきます。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "請負契約と準委任契約の賢い使い分け"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 要件が途中で変わりそうな場合は、どちらの契約が適していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 請負契約の場合、納品後何ヶ月までバグを無償で直してもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 民法上の原則として、納品・検収後から「1年間」は契約不適合（瑕疵）に対する修正や損害賠償を請求可能です。契約書を交わす際、この期間を極端に短く（例: 2週間など）制限されていないかを必ず確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 契約書の内容（開発会社の免責事項など）が自社に不利でないかチェックしてもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。ご契約の前に、契約条件や瑕疵対応の記載について、発注者様に不当な不利益が生じないよう、弊社の技術コンサルタントが客観的にアドバイスをさせていただきます。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "請負契約と準委任契約の賢い使い分け"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 要件が途中で変わりそうな場合は、どちらの契約が適していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 請負契約の場合、納品後何ヶ月までバグを無償で直してもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 民法上の原則として、納品・検収後から「1年間」は契約不適合（瑕疵）に対する修正や損害賠償を請求可能です。契約書を交わす際、この期間を極端に短く（例: 2週間など）制限されていないかを必ず確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 契約書の内容（開発会社の免責事項など）が自社に不利でないかチェックしてもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。ご契約の前に、契約条件や瑕疵対応の記載について、発注者様に不当な不利益が生じないよう、弊社の技術コンサルタントが客観的にアドバイスをさせていただきます。"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">請負契約と準委任契約の賢い使い分け</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">システム開発・アーキテクチャ</span>
+        <h1 class="article-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.08.28</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。」のビジュアルバナー">
+          <defs>
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F1F5F9" />
+              <stop offset="0.5" stop-color="#E2E8F0" />
+              <stop offset="1" stop-color="#CBD5E1" />
+            </linearGradient>
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0EA5E9" />
+              <stop offset="1" stop-color="#10B981" />
+            </linearGradient>
+          </defs>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
+          
+          <!-- Decorative Grid/Dots -->
+          <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="200" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="300" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="400" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="500" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="600" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="700" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="800" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="180" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="180" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="280" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="280" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="200" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="300" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="400" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="500" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="600" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="700" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="800" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+
+          <!-- Large Background English text -->
+          <text x="500" y="270" text-anchor="middle" fill="#0EA5E9" font-size="90" font-family="'Outfit', sans-serif" font-weight="900" opacity="0.05" letter-spacing="0.1em">IT CONTRACT RISK VOL17</text>
+          
+          <!-- Corner Lines -->
+          <line x1="50" y1="50" x2="150" y2="50" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+          <line x1="50" y1="50" x2="50" y2="150" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+          
+          <line x1="950" y1="378" x2="850" y2="378" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+          <line x1="950" y1="378" x2="950" y2="278" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+
+
+
+          <!-- Single Centered Main message -->
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">請負契約と準委任契約の賢い使い分けがわかる</text>
+          
+          <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <h2>システム開発発注時にトラブルを招く「契約形態の無知」</h2>
+          <p>
+            「開発会社がスケジュール通りにシステムを完成させてくれない」「バグ（不具合）が多数見つかったのに、追加の修正費用を請求された」システム開発の外注において、このようなトラブルに巻き込まれた中小企業は後を絶ちません。
+          </p>
+          <p>
+            これらのトラブルの大半は、発注時に結んだ契約書に記載された**「請負契約」**と**「準委任契約」**という2つの契約形態の違いを正しく理解していなかったことにあります。ITの専門知識がない発注者だからこそ、自社の権利を守るためにこれらの契約の特性を熟知しておく必要があります。
+          </p>
+
+          <h2>「請負契約」と「準委任契約」のメリット・デメリット決定的な違い</h2>
+          <p>
+            それぞれの契約タイプには、果たすべき責任と対応のスコープに明確な違いがあります。
+          </p>
+          <ol>
+            <li><strong>請負（うけおい）契約</strong>:
+              「システムの完成」に対してお金を支払う契約です。開発会社には指定された仕様通りに完成させる義務（瑕疵担保責任/契約不適合責任）があるため、納品後にバグが見つかった場合は原則として無償で修正を求めることができます。仕様がガチッと決まっている開発に適しています。
+            </li>
+            <li><strong>準委任（じゅんいにん）契約 / ラボ型契約</strong>:
+              「エンジニアの作業時間や労働力」に対してお金を支払う契約です。システムの完成義務はないため、途中でバグが出ても無償修正の義務はありません。しかし、仕様変更や追加開発をその都度の追加契約なしに、時間枠の中で柔軟に指示・ピボットできるという最大のメリットがあります。
+            </li>
+          </ol>
+
+          <h2>スタートアップや新規事業で「トラブルと追加費用」を防ぐ契約の選び方</h2>
+          <p>
+            Ill（イル）株式会社では、お客様のプロジェクトの性質に合わせて最適な契約形態を提案し、双方が納得のいくクリアな条件でスタートします。
+          </p>
+
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>開発の性質</th>
+                  <th>推奨される契約形態</th>
+                  <th>トラブルを防ぐための注意点</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>仕様が固定された社内システム</strong><br>（既存エクセルの移行など）</td>
+                  <td><strong>請負契約</strong></td>
+                  <td>要件定義フェーズで実装範囲を細かくドキュメント化し、後からのブレを防ぎます。</td>
+                </tr>
+                <tr>
+                  <td><strong>仕様変更が多い新規Webアプリ</strong><br>（MVP開発・ピボット想定）</td>
+                  <td><strong>準委任契約（ラボ型・定額）</strong></td>
+                  <td>エンジニアの週あたりの稼働時間（例: 週10時間）を定め、その時間枠内で優先順位に沿ってフレキシブルに開発します。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="section-faq">よくある質問（FAQ）</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>Q. 要件が途中で変わりそうな場合は、どちらの契約が適していますか？</h3>
+              <p>A. 仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 請負契約の場合、納品後何ヶ月までバグを無償で直してもらえますか？</h3>
+              <p>A. 民法上の原則として、納品・検収後から「1年間」は契約不適合（瑕疵）に対する修正や損害賠償を請求可能です。契約書を交わす際、この期間を極端に短く（例: 2週間など）制限されていないかを必ず確認してください。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 契約書の内容（開発会社の免責事項など）が自社に不利でないかチェックしてもらえますか？</h3>
+              <p>A. はい。ご契約の前に、契約条件や瑕疵対応の記載について、発注者様に不当な不利益が生じないよう、弊社の技術コンサルタントが客観的にアドバイスをさせていただきます。</p>
+            </div>
+          </div>
+
+ <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">新規のシステム・アプリ開発を「どこよりも安く」形にしませんか？</h3>
+            <p class="inline-cta-desc">Ill（イル）株式会社では、Webシステムやスマホアプリの新規開発プロジェクトを、無駄な設計や過剰要件を削ることで、どこの開発会社よりも抑えた圧倒的な低コストで開発いたします。他社見積もりが高すぎた方や、まずは安くプロトタイプを作りたい方は、ぜひお気軽にご相談ください。</p>
+            <a href="../index.html#contact" class="btn btn-primary">業界最安値水準で無料見積もりを依頼する</a>
+          </div>
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Technology Research Division</p>
+            <p class="author-bio">
+              最先端のAIトレンド（GenAI / Agentic AI）のビジネス応用、LLMセキュリティ、RAGアーキテクチャ設計などの知見を発信。新規事業における迅速な技術検証とPoC設計を担当。
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/021-custom-workflow-management-tool-cost.html">
+                  <span class="related-item-date">2026.08.31</span>
+                  <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/020-c2c-sharing-matching-platform-development.html">
+                  <span class="related-item-date">2026.08.30</span>
+                  <span class="related-item-title">シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/019-smb-ec-site-development-shopify-cost.html">
+                  <span class="related-item-date">2026.08.29</span>
+                  <span class="related-item-title">ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/017-non-it-contract-types-risk-management.html">
+                  <span class="related-item-date">2026.08.28</span>
+                  <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/018-simple-rfp-writing-for-non-it-buyers.html">
+                  <span class="related-item-date">2026.08.28</span>
+                  <span class="related-item-title">開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=61"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>

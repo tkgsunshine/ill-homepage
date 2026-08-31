@@ -1,0 +1,2940 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。 | Ill（イル）株式会社</title>
+  <meta name="description" content="IT担当者が不在の中小企業やスタートアップ向けに、開発会社とのコミュニケーションのコツや、不要な機能の押し売りを防ぎコストを抑えるポイントを解説。">
+  <meta name="keywords" content="エンジニア不在 システム開発,開発外注 中小企業,IT知識ゼロ システム開発,発注側 コミュニケーション">
+  <meta name="author" content="Ill inc.">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="生成AIが誕生した流れと従来のAIとの決定的な違いを解説 | Ill inc. コラム">
+  <meta property="og:description" content="ディープラーニングからTransformer、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来のAIとの違いを解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="生成AIが誕生した流れと従来のAIとの決定的な違いを解説 | Ill inc. コラム">
+  <meta name="twitter:description" content="ディープラーニングからTransformer、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来のAIとの違いを解説。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css?v=61">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。",
+    "description": "IT担当者が不在の中小企業やスタートアップ向けに、開発会社とのコミュニケーションのコツや、不要な機能の押し売りを防ぎコストを抑えるポイントを解説。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html"
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ill-inc.net/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "コラム",
+        "item": "https://www.ill-inc.net/column/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "生成AI誕生の歴史と従来のAIとの違い"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム外注で失敗しない防衛策"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="index.html" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">システム外注で失敗しない防衛策</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">システム開発・アーキテクチャ</span>
+        <h1 class="article-title">自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.08.25</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。」のビジュアルバナー">
+          <defs>
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F1F5F9" />
+              <stop offset="0.5" stop-color="#E2E8F0" />
+              <stop offset="1" stop-color="#CBD5E1" />
+            </linearGradient>
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0EA5E9" />
+              <stop offset="1" stop-color="#10B981" />
+            </linearGradient>
+          </defs>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
+          
+          <!-- Decorative Grid/Dots -->
+          <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="200" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="300" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="400" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="500" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="600" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="700" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="800" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="180" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="180" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="280" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="280" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="200" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="300" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="400" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="500" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="600" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="700" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="800" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+
+          <!-- Large Background English text -->
+          <text x="500" y="270" text-anchor="middle" fill="#0EA5E9" font-size="90" font-family="'Outfit', sans-serif" font-weight="900" opacity="0.05" letter-spacing="0.1em">SMB SYSTEM DEVELOPMENT VOL11</text>
+          
+          <!-- Corner Lines -->
+          <line x1="50" y1="50" x2="150" y2="50" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+          <line x1="50" y1="50" x2="50" y2="150" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+          
+          <line x1="950" y1="378" x2="850" y2="378" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+          <line x1="950" y1="378" x2="950" y2="278" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+
+
+
+          <!-- Single Centered Main message -->
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">システム外注で失敗しない防衛策がわかる</text>
+          
+          <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <h2>ITの専門知識がない企業をターゲットにする「開発外注」の不条理</h2>
+          <p>
+            「自社にエンジニアが一人もいない」「社内のITに詳しいメンバーはPCの設定ができる程度」——このような中小企業やスタートアップがシステム開発を外部に依頼する際、最も陥りやすいのが**「開発会社側の言いなりになってしまい、無駄な機能や高額な予備費を乗せられてしまう」**というトラブルです。
+          </p>
+          <p>
+            IT知識がない発注者に対し、開発会社が専門用語（プロトコル、インフラ設計、ミドルウェアなど）を並べて説明すると、発注側は「専門家がそう言うなら必要なのだろう」と納得せざるを得なくなります。その結果、本来不要な過剰スペックのシステムができあがり、初期投資だけで数百万円から数千万円の赤字を抱えてしまうことになります。
+          </p>
+
+          <h2>不要な機能の「押し売り」を防ぐための要件検証チェックリスト</h2>
+          <p>
+            開発会社からの過剰提案を見抜き、必要最低限の予算で最大の成果を出すためのシンプルな防衛策は以下の通りです。
+          </p>
+          <ul>
+            <li><strong>「その機能は手作業で代用できないか」を問う</strong>:
+              例えば、「問い合わせに対して自動で返信する機能」を数万円〜数十万円かけて開発するより、初期は「メール通知を受け取って事務局が手動で返信する」方が圧倒的に安く、実業務上も問題ありません。
+            </li>
+            <li><strong>外部の既存ツール（SaaS）を埋め込めるか聞く</strong>:
+              クレジットカード決済やログインシステム、チャットツールなどをすべてゼロからスクラッチで開発すると、何百万円もの工数がかかります。StripeやFirebase、SendGridなどの世界的サービスをAPIで繋ぐだけで、工数を10分の1に圧縮できます。
+            </li>
+            <li><strong>デザインの「オリジナル性」にこだわらない</strong>:
+              管理画面やユーザー画面の細かなレイアウト調整は、エンジニアとデザイナーの手間（＝人件費）を最も消費します。標準的なテンプレートの使用を許容するだけで、開発コストは大幅に下がります。
+            </li>
+          </ul>
+
+          <h2>専門知識ゼロの発注者と良好な信頼関係を築く「Ill株式会社の伴走スタイル」</h2>
+          <p>
+            Ill（イル）株式会社では、システム開発の専門知識がないお客様に対しても、難しい専門用語は一切使いません。「どのような業務の流れで、誰が、何に困っているのか」という普段の言葉をベースにヒアリングを行い、要件定義書をAIが分かりやすく図解化・言語化します。
+          </p>
+          <p>
+            無駄なバッファ費用や押し売り要件を削ぎ落とし、本当に必要十分な最小限の仕様（MVP）からスタートすることで、どこの会社よりも低いコストでのシステム・アプリ立ち上げを実現します。
+          </p>
+
+          <h2 id="section-faq">よくある質問（FAQ）</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>Q. ITの知識が本当にゼロですが、要件定義から入ってもらえますか？</h3>
+              <p>A. はい、大歓迎です。業務フローをヒアリングしながら、どのような機能が必要かを弊社のエンジニアが整理し、わかりやすい画面設計案（モックアップ）を作成してご提案します。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 開発途中で仕様の変更や追加が発生した場合はどうなりますか？</h3>
+              <p>A. 弊社はアジャイル開発を採用しているため、週次での進捗確認を行いながら、柔軟に仕様の調整が可能です。追加費用が発生する場合は必ず事前にお見積もりを提示し、合意の上で進めます。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 納品後の管理や運用は自社にIT担当者がいなくても行えますか？</h3>
+              <p>A. はい。サーバーの自動監視やセキュリティ更新が標準で組み込まれたサーバーレス構成で構築するため、お客様側でサーバー操作などの専門業務を行う必要は一切ありません。</p>
+            </div>
+          </div>
+
+ <!-- Conversion CTA Box -->
+          <div class="inline-cta glass-card">
+            <h3 class="inline-cta-title">新規のシステム・アプリ開発を「どこよりも安く」形にしませんか？</h3>
+            <p class="inline-cta-desc">Ill（イル）株式会社では、Webシステムやスマホアプリの新規開発プロジェクトを、無駄な設計や過剰要件を削ることで、どこの開発会社よりも抑えた圧倒的な低コストで開発いたします。他社見積もりが高すぎた方や、まずは安くプロトタイプを作りたい方は、ぜひお気軽にご相談ください。</p>
+            <a href="../index.html#contact" class="btn btn-primary">業界最安値水準で無料見積もりを依頼する</a>
+          </div>
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Technology Research Division</p>
+            <p class="author-bio">
+              最先端のAIトレンド（GenAI / Agentic AI）のビジネス応用、LLMセキュリティ、RAGアーキテクチャ設計などの知見を発信。新規事業における迅速な技術検証とPoC設計を担当。
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/021-custom-workflow-management-tool-cost.html">
+                  <span class="related-item-date">2026.08.31</span>
+                  <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/020-c2c-sharing-matching-platform-development.html">
+                  <span class="related-item-date">2026.08.30</span>
+                  <span class="related-item-title">シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/019-smb-ec-site-development-shopify-cost.html">
+                  <span class="related-item-date">2026.08.29</span>
+                  <span class="related-item-title">ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/017-non-it-contract-types-risk-management.html">
+                  <span class="related-item-date">2026.08.28</span>
+                  <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/018-simple-rfp-writing-for-non-it-buyers.html">
+                  <span class="related-item-date">2026.08.28</span>
+                  <span class="related-item-title">開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
+            <p class="sidebar-cta-desc">
+              DX推進やAIX、新規プロダクト開発について、ミニマル設計による最適なアプローチをご提案します。
+            </p>
+            <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="index.html" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=61"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>

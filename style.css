@@ -2260,6 +2260,10 @@ body.theme-light .theme-switch-btn .moon-icon {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
+.column-card-image:has(svg) {
+  aspect-ratio: 1000 / 428;
+}
+
 .column-card-image img {
   width: 100%;
   height: 100%;
