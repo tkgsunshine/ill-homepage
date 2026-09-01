@@ -3038,6 +3038,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "不動産業特有のフローに適合した独自CRM..."
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 既存の物件データ（エクセル等）からデータを移行することはできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、可能です。現在お使いのスプレッドシートやCSVデータをお預かりし、新システムへ一括インポートするスクリプトを弊社側で作成してスムーズな移行をサポートします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 自社で使っている独自の帳票やExcel見積書のフォーマットを再現できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。CRMに物件や顧客情報を入力するだけで、1クリックでPDF形式の紹介図面や見積書、契約書のドラフトを出力する機能を実装可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. スマホから外回りの営業マンが物件写真や顧客メモを登録できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。スマートフォンでの操作性に最適化したモバイルフレンドリーな画面設計を標準で提供するため、内見先からでも簡単にシステムをアップデートできます。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -3267,6 +3328,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/025-web-scraping-automation-marketing-leads.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/023-line-api-chatbot-customer-support-cost.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。</span>
@@ -3288,12 +3355,6 @@
                 <a href="/column/021-custom-workflow-management-tool-cost.html">
                   <span class="related-item-date">2026.08.31</span>
                   <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/020-c2c-sharing-matching-platform-development.html">
-                  <span class="related-item-date">2026.08.30</span>
-                  <span class="related-item-title">シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。</span>
                 </a>
               </li>
           </ul>
