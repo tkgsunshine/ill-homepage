@@ -2576,6 +2576,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "エンジニア採用と開発外注の費用比較"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 開発を外注すると、社内に技術的なノウハウが一切残らないのではないですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. いいえ。弊社では、ソースコードの共有用リポジトリ（GitHub等）のアカウントはお客様名義で作成し、プログラムの解説ドキュメントも整備して納品するため、将来の内製化移行への資産はすべて手元に残ります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 外注先が倒産したり、契約が切れた後にシステムの面倒は誰が見ますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社では、リリース後の動作確認やサーバー監視、軽微なバグ対応を行う定額の保守プランをご用意しているほか、ドキュメントが整理されているため、他社やフリーランスへの保守移管も容易な疎結合設計にしています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 短期のちょっとした改修作業でも外注は依頼できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、可能です。数日〜数週間で終わる軽微な機能追加や、既存システムのバグ修正のみのスポット契約も喜んでお受けしております。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -2799,6 +2860,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/023-line-api-chatbot-customer-support-cost.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
@@ -2820,12 +2887,6 @@
                 <a href="/column/019-smb-ec-site-development-shopify-cost.html">
                   <span class="related-item-date">2026.08.29</span>
                   <span class="related-item-title">ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/017-non-it-contract-types-risk-management.html">
-                  <span class="related-item-date">2026.08.28</span>
-                  <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
                 </a>
               </li>
           </ul>

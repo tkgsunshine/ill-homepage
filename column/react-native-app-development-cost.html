@@ -2916,6 +2916,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "React NativeによるマルチOS..."
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. React Nativeはネイティブアプリと比べて動作が重くなりませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. いいえ。React NativeはHTML5ベースのハイブリッドアプリとは異なり、スマートフォンのネイティブなUIコンポーネントを直接操作するため、一般的なUI操作においてはネイティブアプリと遜色ない極めてスムーズな動作を実現します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. iOSとAndroidでデザインや挙動を変えることはできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、可能です。基本ロジックは共通化しつつ、OS独自のガイドラインに合わせた細かなデザインやジェスチャー動作の出し分けはコード内で柔軟に設計可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. App StoreやGoogle Playの審査も問題なく通りますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、全く問題ありません。数万人〜数百万人規模の商用アプリがReact Nativeで開発・公開されており、各ストアのストア審査基準をクリアした状態で問題なく配信できます。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -3139,6 +3200,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/023-line-api-chatbot-customer-support-cost.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
@@ -3160,12 +3227,6 @@
                 <a href="/column/019-smb-ec-site-development-shopify-cost.html">
                   <span class="related-item-date">2026.08.29</span>
                   <span class="related-item-title">ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/017-non-it-contract-types-risk-management.html">
-                  <span class="related-item-date">2026.08.28</span>
-                  <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
                 </a>
               </li>
           </ul>

@@ -2270,6 +2270,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ノーコードとスクラッチ開発の損益分岐点"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. ノーコードで作ったシステムを、後からスクラッチコードへ移行できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 多くのノーコードツールはソースコードを出力できないため、移行時は一から作り直す必要があります。そのため将来スケールする事業は最初からスクラッチ開発を推奨します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. スクラッチ開発で安く作った場合、サーバーの月額費用はいくらですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社はクラウドのサーバーレス構成を採用するため、月々のアクセス数に応じて従量課金され、初期のアクセスが少ない段階では月額数百円〜数千円以内で抑えることができます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. ノーコードでの試作（プロトタイプ）と、本番開発を組み合わせて依頼できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。要件定義の段階で、Figmaや簡易ノーコードツール等を使って画面イメージを数日で作成して使い勝手を検証し、仕様を確定させてからスクラッチで本番コードを書くアジャイルフローを提供しています。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -2470,6 +2531,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/023-line-api-chatbot-customer-support-cost.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
@@ -2491,12 +2558,6 @@
                 <a href="/column/019-smb-ec-site-development-shopify-cost.html">
                   <span class="related-item-date">2026.08.29</span>
                   <span class="related-item-title">ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/017-non-it-contract-types-risk-management.html">
-                  <span class="related-item-date">2026.08.28</span>
-                  <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
                 </a>
               </li>
           </ul>

@@ -1,0 +1,1682 @@
+[
+  {
+    "filename": "system-development-estimation-details.html",
+    "title": "システム開発見積もりの内訳項目と損をしないための交渉術 | 株式会社イル",
+    "headline": "システム開発の見積書にある「項目」の正しい見方と、発注側が損をしないためのチェックポイント",
+    "description": "システム開発の見積もりでよく見かける項目（要件定義、ディレクション費等）の意味を徹底解説。見積書を比較・精査する際のポイントや、不要なコストを抑える交渉術もご紹介します。",
+    "keywords": "システム開発 見積もり 項目,人月単価,要件定義費,ディレクション費,開発会社 選び方",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_cost_market.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "SYSTEM DEVELOPMENT ESTIMATION DETAILS",
+    "title_line1": "見積書の見方と内訳項目を理解する",
+    "title_line2": "システム開発見積もりの仕組み",
+    "banner_desc": "要件定義やディレクション費の妥当性と、コスト調整のポイント",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "システム開発の見積書で「一式」と書かれている場合はどうすればいいですか？",
+        "a": "「一式」とだけ記載されている見積書は、具体的な作業量や人月単価が不明確なため、詳細な内訳（設計費、コーディング費、テスト費、ディレクション費など）とそれぞれの工数（人月）を明記した再見積もりを依頼することをお勧めします。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "システム開発の見積もりにおける主要な「内訳項目」",
+        "text": "<p>システム開発を外部のベンダーや開発会社に依頼する際、送られてくる見積書には多くの専門用語が並びます。代表的な内訳項目とその意味は以下の通りです。</p><ul><li><strong>要件定義費 / 基本設計費</strong>: どのような機能を実装するかを決定し、設計図を起こすための費用。</li><li><strong>開発（コーディング）費</strong>: 実際にプログラムを書くエンジニアの実稼働費用。</li><li><strong>テスト・検証費</strong>: バグがないか、仕様通りに動くかをテストするための工程費用。</li></ul>"
+      }
+    ]
+  },
+  {
+    "filename": "custom-crm-development-cost.html",
+    "title": "Salesforceから独自CRM移行の費用相場とライセンス費削減 | 株式会社イル",
+    "headline": "【独自CRM構築】Salesforce等の高額パッケージから自社専用顧客管理システムへ移行するメリットと費用相場",
+    "description": "Salesforce等の月額ライセンス費用が高すぎる課題を解決するため、現場の業務フローに100%合わせた独自の顧客管理システム（CRM）をスクラッチ・ミニマル開発するメリットと費用感を徹底解説。",
+    "keywords": "CRM 開発 費用,Salesforce 移行 独自開発,顧客管理システム 自社開発,SaaS開発 外注,ライセンス費削減",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_staffing_crm.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "CUSTOM CRM DEVELOPMENT COST",
+    "title_line1": "高額なライセンス費用から脱却する",
+    "title_line2": "独自CRM開発のメリットと費用相場",
+    "banner_desc": "現場のフローに完全適合し、ユーザー数無制限で運用する顧客管理",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "パッケージ（Salesforce等）と独自開発はどちらが長期的にお得ですか？",
+        "a": "利用メンバーが50人〜100人を超えると、パッケージの月額アカウントライセンス料が年間数百万円〜数千万円に達します。独自開発であれば初期構築費用はかかりますが、月額のアカウント課金がないため、2〜3年の長期スパンで見ると圧倒的に低コストになります。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "高額なパッケージCRMから独自CRMへ乗り換えるべき判断基準",
+        "text": "<p>多くの企業が「導入したものの、使わない機能が多く毎月のライセンス費用だけが重荷になっている」という悩みを抱えています。独自CRM開発が向いている企業の判断ポイントは以下の通りです。</p><ul><li><strong>ユーザーアカウント数が多い</strong>: アカウント課金による固定費を削減したい。</li><li><strong>自社独自の複雑なオペレーションがある</strong>: パッケージ側のカスタマイズ費用が高額になる場合。</li><li><strong>社内システムやLINE等とシームレスに連携したい</strong>: 外部API連携を自由に設計したい。</li></ul>"
+      }
+    ]
+  },
+  {
+    "filename": "mvp-development-startup-speed.html",
+    "title": "スタートアップ新規事業でのMVP開発手順と失敗しない外注のコツ | 株式会社イル",
+    "headline": "【スピード重視】新規事業立ち上げにおける最小限のシステム開発（MVP）手法と費用を抑える3つの鉄則",
+    "description": "新規サービスの市場検証を最短で実現する「MVP開発（Minimum Viable Product）」の手順、費用相場、開発会社へ依頼する際に無駄な機能を削って初期コストを最小限に抑えるノウハウを伝授。",
+    "keywords": "MVP開発 費用,新規事業 システム開発 外注,プロトタイプ作成,アジャイル開発 スピード,ミニマル開発",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_agile_minimalist.webp",
+    "banner_color": "#10B981",
+    "english_title": "MVP DEVELOPMENT STARTUP SPEED",
+    "title_line1": "最小限のコストで最速の市場検証を",
+    "title_line2": "MVP開発手順と失敗しない外注のコツ",
+    "banner_desc": "無駄な機能を極限まで削り、新規事業の立ち上げリスクを抑える方法",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "MVP開発の初期費用を抑えるために、最も有効なアプローチは何ですか？",
+        "a": "「なくては困るコア機能（Must-Have）」と「あれば便利な機能（Nice-to-Have）」を徹底的に整理し、初期リリースではNice-to-Haveな機能をすべて開発対象から外すことです。これにより、開発工数と費用を当初想定の1/3〜1/2以下に抑えることができます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "新規事業立ち上げにおけるMVP開発のステップ",
+        "text": "<p>新規事業を立ち上げる際、いきなりフルスペックのシステムを数千万円かけて構築するのはハイリスクです。まずは以下のプロセスで仮説検証を行います。</p><ol><li><strong>コアバリューの特定</strong>: 顧客の課題を解決する「唯一の機能」を明確化。</li><li><strong>モックアップ/UI設計</strong>: 操作画面を作り、デザイン段階でフィードバックを獲得。</li><li><strong>ミニマル開発（PoC）</strong>: コア機能だけを実装し、数ヶ月でリリース。</li></ol>"
+      }
+    ]
+  },
+  {
+    "filename": "react-native-app-development-cost.html",
+    "title": "React NativeによるマルチOS同時構築はアプリの開発・保守コストを大幅に圧縮できる。 | Ill（イル）株式会社",
+    "headline": "React NativeによるマルチOS同時構築はアプリの開発・保守コストを大幅に圧縮できる。",
+    "description": "iOSとAndroidのアプリをワンコードで同時開発できるReact Native。その開発費用相場、ネイティブアプリ開発と比較した際のコスト削減効果と開発会社選定の注意点を解説。",
+    "keywords": "React Native アプリ開発 費用,クロスプラットフォーム,iOS Android 同時開発,Flutter 比較,アプリ開発会社",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_sns_app.webp",
+    "banner_color": "#6366F1",
+    "english_title": "REACT NATIVE APP DEVELOPMENT COST",
+    "title_line1": "クロスプラットフォーム開発の費用対効果",
+    "title_line2": "React Nativeアプリ開発費用",
+    "banner_desc": "iOS/Androidのワンコード開発によるコスト削減と注意点",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "React Nativeはネイティブアプリと比べてどれくらいコスト削減になりますか？",
+        "a": "iOSとAndroidで別々にコードを書く場合と比較して、設計・デザイン・ロジックの多くを共通化できるため、開発コストを概ね30%〜40%削減可能です。また、保守運用フェーズにおける機能追加費用も大幅に削減されます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "React Native開発の主なメリットと適したプロジェクト",
+        "text": "<p>React Nativeは、Facebook（Meta）が開発したクロスプラットフォームフレームワークです。Web技術（JavaScript/React）をベースにしつつ、ネイティブのUIコンポーネントを呼び出すため高いパフォーマンスを発揮します。</p><ul><li><strong>ワンコードで両OS対応</strong>: 開発・保守の工数を一本化。</li><li><strong>適したプロジェクト</strong>: SNSアプリ、ECアプリ、予約システム、マッチングアプリなどUI/UX重視のコンテンツアプリ。</li></ul>"
+      }
+    ]
+  },
+  {
+    "filename": "rag-chatbot-internal-document-cost.html",
+    "title": "社内データ専用のセキュアなRAGチャットボットは安全かつ低コストで構築できる。 | Ill（イル）株式会社",
+    "headline": "社内データ専用のセキュアなRAGチャットボットは安全かつ低コストで構築できる。",
+    "description": "社内規約や製品マニュアル、機密データを保護しながら生成AI（LLM）と連携させるRAGチャットボットシステムの開発費用相場と、エンタープライズセキュリティ要件を解説。",
+    "keywords": "RAG 開発 費用,社内 生成AI 導入 セキュリティ,AIチャットボット 構築費,LLM API 料金,データ漏洩対策",
+    "category_id": "gen-ai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_ai_integration.webp",
+    "banner_color": "#EF4444",
+    "english_title": "RAG CHATBOT DEVELOPMENT COST",
+    "title_line1": "安全な機密データ連携と自動応答を実現する",
+    "title_line2": "RAGチャットシステム開発費用と対策",
+    "banner_desc": "社内マニュアルや顧客対応を安全にAI化するためのセキュリティ設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "RAG（検索拡張生成）の導入で、社外にデータが漏洩する心配はありますか？",
+        "a": "OpenAIやGoogleのAPIで提供されているエンタープライズ向けの「モデル学習にデータを使用しないオプトアウト設定」や、AWS環境内で完結するローカルLLM/セキュアなAPI環境を構築することで、外部への機密データ漏洩リスクを完全にシャットアウトした運用が可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "RAG（検索拡張生成）チャットボットの開発費用内訳",
+        "text": "<p>社内データを読み込ませるAIシステムの開発費用は、連携するドキュメントの種類や更新頻度によって変動しますが、主な内訳は以下の通りです。</p><ul><li><strong>データ処理・アノテーション（20万〜50万円）</strong>: AIが読み取りやすいようデータを前処理・ベクトル化する工数。</li><li><strong>RAGロジック開発（50万〜150万円）</strong>: ユーザーの質問に対して正確なデータを検索し、LLMに渡して回答を生成するロジックの構築。</li><li><strong>フロントUI・チャット画面（30万〜80万円）</strong>: Slack、Teams、あるいはWebの専用画面との連携。</li></ul>"
+      }
+    ]
+  },
+  {
+    "filename": "system-development-requirements-definition-support.html",
+    "title": "外注先との要件定義をブレずに進めればシステム開発の後戻りは完全に防止できる。 | Ill（イル）株式会社",
+    "headline": "外注先との要件定義をブレずに進めればシステム開発の後戻りは完全に防止できる。",
+    "description": "「作りたいアイデアはあるが、具体的な仕様書や要件定義書が作れない」とお悩みの方向けに、開発会社の上流エンジニアに伴走してもらいながら要件定義を成功させるステップを徹底解説。",
+    "keywords": "要件定義 外注 進め方,システム開発 RFP 代行,仕様書 作成のコツ,システム開発 伴走支援,発注のポイント",
+    "category_id": "spec-design",
+    "category_name": "仕様策定・要件定義",
+    "banner_img": "../illust_requirements_definition.webp",
+    "banner_color": "#F59E0B",
+    "english_title": "REQUIREMENTS DEFINITION SUPPORT",
+    "title_line1": "アイデアを正確なシステム仕様に落とし込む",
+    "title_line2": "要件定義を失敗せず進めるコツ",
+    "banner_desc": "要件定義書やRFP作成にエンジニアが伴走し、開発のズレを防ぐ手法",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "仕様書が一切ない状態からでも、システム開発の見積もりや発注は可能ですか？",
+        "a": "はい、可能です。多くの開発実績を持つ会社では、最初の「要件定義フェーズ」のみを独立した準委任契約などとして受注し、エンジニアがヒアリングしながら一緒に仕様書（RFP・要件定義書）を作り上げ、そこから本開発の見積もりを算出する手法（伴走型開発）を提案しています。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "要件定義でのトラブル（言った言わない）を防ぐ3つの進め方",
+        "text": "<p>システム開発で最も多いトラブルが「納品されたシステムが想定していたものと違う」という要件定義のズレです。これを防ぐためには以下の取り組みが不可欠です。</p><ul><li><strong>画面遷移図・ワイヤーフレームの早期提示</strong>: 文字のドキュメントだけでなく、動く画面イメージを最初に見せてもらう。</li><li><strong>スコープ（開発範囲）の明確な文書化</strong>: 初期フェーズでどこまで作り、どこを追加機能とするかを決めておく。</li></ul>"
+      }
+    ]
+  },
+  {
+    "filename": "how-to-reduce-system-development-cost.html",
+    "title": "発注側のちょっとした工夫と交渉術だけでシステム開発の初期費用は賢く削減できる。 | Ill（イル）株式会社",
+    "headline": "発注側のちょっとした工夫と交渉術だけでシステム開発の初期費用は賢く削減できる。",
+    "description": "他社のシステム開発見積もりが予算を超えてしまい困っている中小企業・担当者向けに、要件を調整し品質を落とさずに不要な開発コストを削減するプロ直伝の交渉術を解説。",
+    "keywords": "システム開発 見積もり 高すぎる,システム開発 コスト削減,予算オーバー 対策,見積もり 交渉術,アジリティ開発",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_cost_market.webp",
+    "banner_color": "#EF4444",
+    "english_title": "HOW TO REDUCE DEVELOPMENT COST",
+    "title_line1": "品質を保ちながら予算内に収める",
+    "title_line2": "システム開発費用のコスト削減交渉術",
+    "banner_desc": "開発範囲（スコープ）の見直しと、段階リリースで見積価格を調整するテクニック",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "見積もりの金額を下げるよう要求すると、開発会社に嫌がられますか？",
+        "a": "単に「一律で安くしてほしい」と要求するとエンジニアの質が下がるなどのリスクがありますが、「予算が〇〇万円なので、初期フェーズではどの機能を削ればこの金額に収まりますか？」という、スコープを調整するアプローチの相談であれば、親身に代替案を提示してくれます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "開発コストを効果的に削減する3つのチェック項目",
+        "text": "<p>見積額を適正化するための最も効果的なチェックポイントは以下の通りです。</p><ul><li><strong>パッケージやオープンソース（OSS）で代替できる機能はないか</strong>: 管理画面などをフルスクラッチで開発すると工数が跳ね上がります。</li><li><strong>ユーザー側の入力・処理の一部を人間がカバーできないか</strong>: 高度な自動化ロジックよりも、初期段階はマニュアル操作で十分な部分を特定します。</li></ul>"
+      }
+    ]
+  },
+  {
+    "filename": "008-real-estate-crm-custom-development.html",
+    "title": "不動産業特有のフローに適合した独自CRM開発は成約率と業務効率を極限まで高める。 | Ill（イル）株式会社",
+    "headline": "不動産業特有のフローに適合した独自CRM開発は成約率と業務効率を極限まで高める。",
+    "description": "物件情報と顧客問合せをシームレスに紐付け、追客を自動化する不動産業界向け独自CRM開発のメリット、費用相場、機能設計を解説。",
+    "keywords": "不動産 CRM 開発,顧客管理システム 自社開発,追客 自動化 システム,不動産テック 開発費",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_staffing_crm.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "REAL ESTATE CRM CUSTOM DEVELOPMENT VOL8",
+    "title_line1": "物件情報と追客を一元管理する",
+    "title_line2": "不動産向け独自CRM開発費用",
+    "banner_desc": "自動追客機能と成約率を高める専用顧客管理システムの設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "不動産専用CRMの開発期間はどのくらいですか？",
+        "a": "基本機能（物件連携、顧客管理、メール自動送信など）のミニマルな構成であれば、3ヶ月〜4ヶ月程度で構築し運用を開始することが可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": "<p>物件情報と顧客問合せをシームレスに紐付け、追客を自動化する不動産業界向け独自CRM開発のメリット、費用相場、機能設計を解説。</p>"
+      }
+    ]
+  },
+  {
+    "filename": "009-logistics-matching-system-cost.html",
+    "title": "運行効率を最大化する物流・配送マッチングシステムは低コストで開発できる。 | Ill（イル）株式会社",
+    "headline": "運行効率を最大化する物流・配送マッチングシステムは低コストで開発できる。",
+    "description": "2024年問題に直面する物流業界向けに、リアルタイムGPS連携や配車アルゴリズムを組み込んだマッチングシステムの開発費用と重要機能を解説。",
+    "keywords": "物流マッチングシステム 開発,配車システム 費用,GPS連携 アプリ,運送効率化 システム開発",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_staffing_crm.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "LOGISTICS MATCHING SYSTEM COST VOL9",
+    "title_line1": "荷主とドライバーをリアルタイムでつなぐ",
+    "title_line2": "物流マッチングシステム開発費",
+    "banner_desc": "配車アルゴリズムとGPS連携による配送ルート最適化の設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "物流システムでGPSのリアルタイム追跡を導入する際のコストは？",
+        "a": "スマートフォンアプリとの連携が一般的で、既存のGoogle Maps API等を活用することで、初期開発費用を抑えつつ高精度な位置追跡機能を構築できます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": "<p>2024年問題に直面する物流業界向けに、リアルタイムGPS連携や配車アルゴリズムを組み込んだマッチングシステムの開発費用と重要機能を解説。</p>"
+      }
+    ]
+  },
+  {
+    "filename": "010-matching-platform-mvp-cost.html",
+    "title": "マッチングプラットフォームのMVP開発は最小限の機能に絞れば低コストで検証できる。 | Ill（イル）株式会社",
+    "headline": "マッチングプラットフォームのMVP開発は最小限の機能に絞れば低コストで検証できる。",
+    "description": "企業間取引（B2B）や個人間取引（C2C）のシェアリング・マッチングサイトを最速で立ち上げるためのMVP機能選定と開発費用相場を解説。",
+    "keywords": "マッチングサイト 開発 費用,プラットフォーム構築 MVP,シェアリングエコノミー 開発費,会員登録 決済機能",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_case_staffing_crm.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "MATCHING PLATFORM MVP COST VOL10",
+    "title_line1": "最小限のコストでサイトを検証する",
+    "title_line2": "マッチングプラットフォームMVP費用",
+    "banner_desc": "決済機能・チャット機能のミニマル設計とスピード公開の手法",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "マッチングサイトの決済機能はどの決済手段を導入すべきですか？",
+        "a": "初期段階では、導入が最も簡単で開発工数も少ないStripeのAPI連携が推奨されます。クレジットカード決済やサブスク課金などを最小限の工数で実装可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": "<p>企業間取引（B2B）や個人間取引（C2C）のシェアリング・マッチングサイトを最速で立ち上げるためのMVP機能選定と開発費用相場を解説。</p>"
+      }
+    ]
+  },
+  {
+    "filename": "011-non-it-smb-system-development-no-engineer.html",
+    "title": "自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。 | Ill（イル）株式会社",
+    "headline": "自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。",
+    "description": "IT担当者が不在の中小企業やスタートアップ向けに、開発会社とのコミュニケーションのコツや、不要な機能の押し売りを防ぎコストを抑えるポイントを解説。",
+    "keywords": "エンジニア不在 システム開発,開発外注 中小企業,IT知識ゼロ システム開発,発注側 コミュニケーション",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_nocode_vs_scratch.webp",
+    "banner_color": "#10B981",
+    "english_title": "SMB SYSTEM DEVELOPMENT VOL11",
+    "title_line1": "IT担当者がいない企業のための",
+    "title_line2": "システム外注で失敗しない防衛策",
+    "banner_desc": "専門知識ゼロから要件定義と見積もり検証を成功させるコツ",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "ITの専門用語がわからず、開発会社と話すのが不安です。",
+        "a": "開発会社を選ぶ際、難しい専門用語を使わず、お客様のビジネスの言葉（業務の流れや困りごと）で丁寧に説明してくれる会社を選ぶのが最大の防衛策です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "012-hiring-vs-outsourcing-cost-comparison.html",
+    "title": "自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。 | Ill（イル）株式会社",
+    "headline": "自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。",
+    "description": "エンジニアの採用費や月額人件費の高騰を踏まえ、中小企業やスタートアップが自社採用するリスクと、必要な時にだけ外部のリソースを活用するコスト比較を徹底分析。",
+    "keywords": "エンジニア 採用コスト,システム内製化 費用,開発外注 メリット,中小企業 IT人件費",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_inhouse_vs_outsourcing.webp",
+    "banner_color": "#EF4444",
+    "english_title": "HIRING VS OUTSOURCING VOL12",
+    "title_line1": "高額なエンジニア採用の固定費を回避する",
+    "title_line2": "エンジニア採用と開発外注の費用比較",
+    "banner_desc": "月給と採用手数料をゼロにし必要な工数だけスポットで活用",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "自社エンジニアを1人雇う場合の本当の年間コストはどのくらいですか？",
+        "a": "年収600万円のエンジニアの場合、社会保険料やPC環境、紹介会社への手数料（年収の30%〜35%）などを含めると、初年度は実質900万円以上のコストが発生します。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "013-excel-to-web-system-dx-cost.html",
+    "title": "Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。 | Ill（イル）株式会社",
+    "headline": "Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。",
+    "description": "二重入力やデータの先祖返りなど、エクセル管理の限界に直面している中小企業向けに、業務をデータベース化して効率化するWebシステムの構築費用とメリットを解説。",
+    "keywords": "エクセル 業務限界,スプレッドシート 脱却,Webシステム開発 費用,中小企業 DX推進",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_api_integration.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "EXCEL TO WEB SYSTEM VOL13",
+    "title_line1": "二重入力とデータ管理の非効率をなくす",
+    "title_line2": "エクセルから独自Webシステムへの移行費用",
+    "banner_desc": "業務フローに合わせたデータベース構築と簡単な操作画面設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "エクセルから移行すると、使い方が難しくなって現場が混乱しませんか？",
+        "a": "いいえ。現在のエクセルの入力画面レイアウトをそのままWebブラウザ上に再現するような、シンプルなインターフェースを設計するため、現場の教育コストをほぼゼロで移行可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "014-non-it-smb-genai-business-efficiency.html",
+    "title": "自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。 | Ill（イル）株式会社",
+    "headline": "自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。",
+    "description": "専門のプログラマーやインフラエンジニアがいなくても、ChatGPT等のAPIとSlackやメールを繋ぎ、業務メールの下書きや顧客データの要約を自動化する低コスト開発手法。",
+    "keywords": "生成AI 業務効率化,ChatGPT API連携,中小企業 AI導入 費用,社内自動化 開発",
+    "category_id": "gen-ai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_ai_integration.webp",
+    "banner_color": "#8B5CF6",
+    "english_title": "NON IT SMB GENERATIVE VOL14",
+    "title_line1": "IT担当者がいなくても導入できる",
+    "title_line2": "安価な生成AI API連携と自動化費用",
+    "banner_desc": "定型メール作成・顧客データ集計作業をAIで自動化する設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "自社にITの専任者がいなくても運用・保守は可能ですか？",
+        "a": "はい。初期構築後は特別なサーバー管理が不要なクラウド（サーバーレス）構成で納品するため、毎月の保守コストや管理の手間はほぼ発生しません。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "015-smb-system-development-cost-standard.html",
+    "title": "システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。 | Ill（イル）株式会社",
+    "headline": "システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。",
+    "description": "ITに詳しくない発注者が、提示されたシステム見積書に「無駄な予備費」や「過剰な管理費」が上乗せされていないかを見破り、安く発注するための見積もり分析方法。",
+    "keywords": "システム開発 適正価格,見積書 上乗せ,開発費用 削減,発注者 コスト交渉",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_cost_market.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "SYSTEM ESTIMATE AUDIT FOR VOL15",
+    "title_line1": "見積書の中身を正しく査定する",
+    "title_line2": "過剰な見積もり上乗せを防ぐ防衛策",
+    "banner_desc": "人月単価の妥当性とバッファ費用をカットする交渉術",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "他社でもらった見積もりが高すぎる場合、相談に乗ってもらえますか？",
+        "a": "はい。他社様の見積書をお見せいただければ、どの部分が過剰要件で、どの機能を削れば価格を半額以下に抑えられるかをプロの目線で無料診断いたします。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "016-nocode-limitations-real-development-cost.html",
+    "title": "ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。 | Ill（イル）株式会社",
+    "headline": "ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。",
+    "description": "初期費用が安いとされるノーコードツールの限界（ユーザー数増加による課金高騰や機能拡張性の無さ）を解説し、最初から安価なスクラッチ開発を選んだ方が良いケースを提示。",
+    "keywords": "ノーコード開発 限界,ノーコード 費用 高騰,スクラッチ開発 メリット,システム拡張性 比較",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_nocode_vs_scratch.webp",
+    "banner_color": "#10B981",
+    "english_title": "NOCODE LIMITS VS SCRATCH VOL16",
+    "title_line1": "月額課金の高騰と拡張性の限界を知る",
+    "title_line2": "ノーコードとスクラッチ開発の損益分岐点",
+    "banner_desc": "長期的なランニングコストと機能改修コストの比較",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "ノーコードで作ったシステムを、後からスクラッチコードへ移行できますか？",
+        "a": "多くのノーコードツールはソースコードを出力できないため、移行時は一から作り直す必要があります。そのため将来スケールする事業は最初からスクラッチ開発を推奨します。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "017-non-it-contract-types-risk-management.html",
+    "title": "ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。 | Ill（イル）株式会社",
+    "headline": "ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。",
+    "description": "システム開発の契約形態の違いが招くトラブル（検収後のバグ対応や開発遅延時の責任問題）を防ぎ、自社に不利益のない適切な契約を結ぶための必須知識。",
+    "keywords": "請負契約 準委任契約 違い,システム開発 トラブル防止,契約書 瑕疵担保責任,発注側 リスク管理",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_contract_comparison.webp",
+    "banner_color": "#F59E0B",
+    "english_title": "IT CONTRACT RISK VOL17",
+    "title_line1": "契約トラブルや追加請求を未然に防ぐ",
+    "title_line2": "請負契約と準委任契約の賢い使い分け",
+    "banner_desc": "瑕疵担保（契約不適合）責任の範囲と瑕疵サポートの注意点",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "要件が途中で変わりそうな場合は、どちらの契約が適していますか？",
+        "a": "仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "018-simple-rfp-writing-for-non-it-buyers.html",
+    "title": "開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。 | Ill（イル）株式会社",
+    "headline": "開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。",
+    "description": "難しい仕様書を書かなくても、現在の業務の悩みや解決したい目的を整理してA4用紙3枚程度にまとめるだけで、開発会社から高品質かつ安価な提案を引き出すコツ。",
+    "keywords": "RFP 書き方 中小企業,要件定義 テンプレート,IT知識なし システム発注,提案依頼書 サンプル",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_rfp_request.webp",
+    "banner_color": "#06B6D4",
+    "english_title": "SIMPLE RFP CREATION VOL18",
+    "title_line1": "難しいシステム仕様書は作らなくていい",
+    "title_line2": "IT知識ゼロから書けるRFP作成手順",
+    "banner_desc": "業務フローとシステム化したい目的を伝える設計書",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "RFPは最初から細かなシステム要件まで記載すべきですか？",
+        "a": "いいえ。細かな要件より「現在の課題」と「解決したい成果」をクリアに書くことが重要です。具体的な機能構成は、開発会社側から提案してもらう方が工数を節約できます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "019-smb-ec-site-development-shopify-cost.html",
+    "title": "ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。 | Ill（イル）株式会社",
+    "headline": "ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。",
+    "description": "中小企業のEC事業立ち上げにおいて、フルスクラッチ開発によるコスト高騰を防ぎ、Shopifyを活用して迅速かつ安全に決済・配送管理システムを統合する費用効果を解説。",
+    "keywords": "ECサイト構築 費用,Shopify導入 メリット,通販サイト 開発費,Shopifyカスタマイズ",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_saas_launch.webp",
+    "banner_color": "#10B981",
+    "english_title": "SHOPIFY EC SITE BUILD VOL19",
+    "title_line1": "決済・在庫管理を世界標準で構築する",
+    "title_line2": "Shopifyを活用した格安ECサイト構築",
+    "banner_desc": "高セキュリティと優れた管理システムを初期費用を抑えて導入",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "Shopifyで独自の決済手段や外部予約システムと連携できますか？",
+        "a": "はい。Shopify App Storeの豊富な拡張機能や独自APIを活用することで、安価にサブスクリプション課金や外部ツールとのデータ同期を実装可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "020-c2c-sharing-matching-platform-development.html",
+    "title": "シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。 | Ill（イル）株式会社",
+    "headline": "シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。",
+    "description": "スペース貸しやスキルシェアなどのC2Cマッチングサイト開発において、決済・チャット・評価などの基本機能をAPIで繋ぎ、超低予算でプラットフォームを稼働させる手法。",
+    "keywords": "シェアリングエコノミー 開発,C2Cマッチングサイト 費用,プラットフォーム 構築,エスクロー決済 導入",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_case_matching.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "C2C SHARING PLATFORM VOL20",
+    "title_line1": "スキルシェアやスペース貸しサイトを最速で作る",
+    "title_line2": "パッケージとAPIを駆使したマッチングプラットフォーム",
+    "banner_desc": "チャット・検索・仮払い決済機能を低コストで統合する設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "不正ユーザーの取り締まりや本人確認（KYC）は自動化できます起？",
+        "a": "はい。Stripe Identityなどの外部本人確認APIをインテグレーションすることで、自社でのシステム構築なしに低コストで安全な身元確認フローを導入可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "021-custom-workflow-management-tool-cost.html",
+    "title": "自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。 | Ill（イル）株式会社",
+    "headline": "自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。",
+    "description": "日報、受発注、顧客追客など自社独自のフローがある中小企業向けに、他社製パッケージの無駄な月額費用を払い続けるのをやめ、自社専用の簡易ツールを安く構築するメリットを解説。",
+    "keywords": "業務管理システム 独自開発,スクラッチ開発 費用,社内ツール 構築,中小企業 DX推進",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_staffing_crm.webp",
+    "banner_color": "#06B6D4",
+    "english_title": "CUSTOM WORKFLOW MANAGEMENT VOL21",
+    "title_line1": "既存のパッケージソフトでは対応できない業務に",
+    "title_line2": "過剰機能を省いた自社専用業務管理システム",
+    "banner_desc": "自社独自の入力フローとデータベース構造をそのままシステム化",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "将来、会社の成長に伴って機能を追加することは可能ですか？",
+        "a": "はい、可能です。疎結合なAPIベースでシステムを構築するため、後から業務プロセスが増えた場合も部分的な機能改修・追加が安価に行えます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "022-pwa-web-app-vs-native-cost-comparison.html",
+    "title": "アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。 | Ill（イル）株式会社",
+    "headline": "アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。",
+    "description": "App StoreやGoogle Playでの審査や手数料を回避し、スマートフォンのホーム画面追加やプッシュ通知、オフライン動作を実現するWebアプリ（PWA）の圧倒的なコストメリットを解説。",
+    "keywords": "PWA開発 費用,スマホアプリ開発 削減,Webアプリ ホーム画面,ストア申請なし アプリ",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_rental_car.webp",
+    "banner_color": "#EF4444",
+    "english_title": "PWA WEB APP COST VOL22",
+    "title_line1": "ストア申請手数料や審査待ちをゼロにする",
+    "title_line2": "PWA（Webアプリ）によるスマホ対応費用削減",
+    "banner_desc": "ホーム画面アイコン追加・プッシュ通知機能をWeb技術のみで構築",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "PWAでもプッシュ通知をユーザーに送ることはできますか？",
+        "a": "はい、可能です。最新のiOS/Androidの主要ブラウザはWeb Push規格に対応しており、アプリストアを経由せずにWebシステムから通知を送ることができます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "023-line-api-chatbot-customer-support-cost.html",
+    "title": "LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。 | Ill（イル）株式会社",
+    "headline": "LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。",
+    "description": "店舗、不動産、予約サービスなどの顧客対応を、普及率の高いLINE公式アカウントと生成AIを接続して完全自動化するシステムの構築費用、仕組み、注意点を解説。",
+    "keywords": "LINEチャットボット 開発,ChatGPT LINE連携,自動返信システム 費用,LINE API 開発費",
+    "category_id": "gen-ai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_ai_agent.webp",
+    "banner_color": "#8B5CF6",
+    "english_title": "LINE API CHATBOT VOL23",
+    "title_line1": "ユーザーが使い慣れたLINE上で24時間問合せ自動化",
+    "title_line2": "LINE公式とChatGPTのAPI連携構築費用",
+    "banner_desc": "自然な返答と顧客データとの自動紐付けで追客を無人化",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "特定の予約フォームや顧客管理データベースとLINEボットを連動できますか？",
+        "a": "はい、可能です。LINEのWebhookを利用し、AIの回答と同時に自社の空き状況確認・自動予約登録を行うAPIを繋ぎ込むことができます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "024-filemaker-access-legacy-modernization.html",
+    "title": "老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。 | Ill（イル）株式会社",
+    "headline": "老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。",
+    "description": "社内の少数の特定担当者しかメンテナンスできずブラックボックス化したFileMakerやMS Accessを、誰でもブラウザから使える現代のWebデータベースシステムへ低コスト移行する方法。",
+    "keywords": "FileMaker 移行,Access 廃止,Webデータベース構築 費用,レガシーシステム刷新",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_filemaker.webp",
+    "banner_color": "#F59E0B",
+    "english_title": "FILEMAKER ACCESS WEB VOL24",
+    "title_line1": "属人化した社内データベースから脱却する",
+    "title_line2": "FileMaker・AccessのWebシステム移行費用",
+    "banner_desc": "データ構造をそのまま活かし複数人アクセスと高速化を実現",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "移行中に現在の社内業務（データの更新など）を止める必要はありますか？",
+        "a": "いいえ。新旧システムの並行稼働期間を設け、データを一括コンバートする手法をとるため、業務を1日も止めることなく移行が可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "025-web-scraping-automation-marketing-leads.html",
+    "title": "Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。 | Ill（イル）株式会社",
+    "headline": "Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。",
+    "description": "手作業での情報収集やコピペ業務をゼロにするため、特定のポータルサイトや業界マップから最新の企業情報や価格推移を自動で抽出するスクレイピングツールの開発費用と注意点。",
+    "keywords": "Webスクレイピング 開発,データ自動収集 費用,営業リスト自動化,スクレイピングツール 構築",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_market_trends.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "WEB SCRAPING AUTOMATION VOL25",
+    "title_line1": "毎日のコピペ作業と情報検索を完全自動化する",
+    "title_line2": "Webデータ自動収集・スクレイピング開発費用",
+    "banner_desc": "特定サイトの価格や企業リストを24時間自動でスキャンし集計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "スクレイピング行為は法律上や規約上の問題はありませんか？",
+        "a": "はい、法律（著作権法第30条の4）を遵守し、対象サイトの利用規約やアクセス負荷（クローリング間隔の設計）に配慮した安全なクローラーを設計するため安心です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "026-non-it-smb-system-development-no-engineer.html",
+    "title": "自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。 | Ill（イル）株式会社",
+    "headline": "自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。",
+    "description": "IT担当者が不在の中小企業やスタートアップ向けに、開発会社とのコミュニケーションのコツや、不要な機能の押し売りを防ぎコストを抑えるポイントを解説。",
+    "keywords": "エンジニア不在 システム開発,開発外注 中小企業,IT知識ゼロ システム開発,発注側 コミュニケーション",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_nocode_vs_scratch.webp",
+    "banner_color": "#10B981",
+    "english_title": "SMB SYSTEM DEVELOPMENT VOL26",
+    "title_line1": "IT担当者がいない企業のための",
+    "title_line2": "システム外注で失敗しない防衛策",
+    "banner_desc": "専門知識ゼロから要件定義と見積もり検証を成功させるコツ",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "ITの専門用語がわからず、開発会社と話すのが不安です。",
+        "a": "開発会社を選ぶ際、難しい専門用語を使わず、お客様のビジネスの言葉（業務の流れや困りごと）で丁寧に説明してくれる会社を選ぶのが最大の防衛策です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "027-hiring-vs-outsourcing-cost-comparison.html",
+    "title": "自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。 | Ill（イル）株式会社",
+    "headline": "自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。",
+    "description": "エンジニアの採用費や月額人件費の高騰を踏まえ、中小企業やスタートアップが自社採用するリスクと、必要な時にだけ外部のリソースを活用するコスト比較を徹底分析。",
+    "keywords": "エンジニア 採用コスト,システム内製化 費用,開発外注 メリット,中小企業 IT人件費",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_inhouse_vs_outsourcing.webp",
+    "banner_color": "#EF4444",
+    "english_title": "HIRING VS OUTSOURCING VOL27",
+    "title_line1": "高額なエンジニア採用の固定費を回避する",
+    "title_line2": "エンジニア採用と開発外注の費用比較",
+    "banner_desc": "月給と採用手数料をゼロにし必要な工数だけスポットで活用",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "自社エンジニアを1人雇う場合の本当の年間コストはどのくらいですか？",
+        "a": "年収600万円のエンジニアの場合、社会保険料やPC環境、紹介会社への手数料（年収の30%〜35%）などを含めると、初年度は実質900万円以上のコストが発生します。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "028-excel-to-web-system-dx-cost.html",
+    "title": "Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。 | Ill（イル）株式会社",
+    "headline": "Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。",
+    "description": "二重入力やデータの先祖返りなど、エクセル管理の限界に直面している中小企業向けに、業務をデータベース化して効率化するWebシステムの構築費用とメリットを解説。",
+    "keywords": "エクセル 業務限界,スプレッドシート 脱却,Webシステム開発 費用,中小企業 DX推進",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_api_integration.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "EXCEL TO WEB SYSTEM VOL28",
+    "title_line1": "二重入力とデータ管理の非効率をなくす",
+    "title_line2": "エクセルから独自Webシステムへの移行費用",
+    "banner_desc": "業務フローに合わせたデータベース構築と簡単な操作画面設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "エクセルから移行すると、使い方が難しくなって現場が混乱しませんか？",
+        "a": "いいえ。現在のエクセルの入力画面レイアウトをそのままWebブラウザ上に再現するような、シンプルなインターフェースを設計するため、現場の教育コストをほぼゼロで移行可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "029-non-it-smb-genai-business-efficiency.html",
+    "title": "自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。 | Ill（イル）株式会社",
+    "headline": "自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。",
+    "description": "専門のプログラマーやインフラエンジニアがいなくても、ChatGPT等のAPIとSlackやメールを繋ぎ、業務メールの下書きや顧客データの要約を自動化する低コスト開発手法。",
+    "keywords": "生成AI 業務効率化,ChatGPT API連携,中小企業 AI導入 費用,社内自動化 開発",
+    "category_id": "gen-ai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_ai_integration.webp",
+    "banner_color": "#8B5CF6",
+    "english_title": "NON IT SMB GENERATIVE VOL29",
+    "title_line1": "IT担当者がいなくても導入できる",
+    "title_line2": "安価な生成AI API連携と自動化費用",
+    "banner_desc": "定型メール作成・顧客データ集計作業をAIで自動化する設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "自社にITの専任者がいなくても運用・保守は可能ですか？",
+        "a": "はい。初期構築後は特別なサーバー管理が不要なクラウド（サーバーレス）構成で納品するため、毎月の保守コストや管理の手間はほぼ発生しません。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "030-smb-system-development-cost-standard.html",
+    "title": "システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。 | Ill（イル）株式会社",
+    "headline": "システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。",
+    "description": "ITに詳しくない発注者が、提示されたシステム見積書に「無駄な予備費」や「過剰な管理費」が上乗せされていないかを見破り、安く発注するための見積もり分析方法。",
+    "keywords": "システム開発 適正価格,見積書 上乗せ,開発費用 削減,発注者 コスト交渉",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_cost_market.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "SYSTEM ESTIMATE AUDIT FOR VOL30",
+    "title_line1": "見積書の中身を正しく査定する",
+    "title_line2": "過剰な見積もり上乗せを防ぐ防衛策",
+    "banner_desc": "人月単価の妥当性とバッファ費用をカットする交渉術",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "他社でもらった見積もりが高すぎる場合、相談に乗ってもらえますか？",
+        "a": "はい。他社様の見積書をお見せいただければ、どの部分が過剰要件で、どの機能を削れば価格を半額以下に抑えられるかをプロの目線で無料診断いたします。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "031-nocode-limitations-real-development-cost.html",
+    "title": "ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。 | Ill（イル）株式会社",
+    "headline": "ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。",
+    "description": "初期費用が安いとされるノーコードツールの限界（ユーザー数増加による課金高騰や機能拡張性の無さ）を解説し、最初から安価なスクラッチ開発を選んだ方が良いケースを提示。",
+    "keywords": "ノーコード開発 限界,ノーコード 費用 高騰,スクラッチ開発 メリット,システム拡張性 比較",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_nocode_vs_scratch.webp",
+    "banner_color": "#10B981",
+    "english_title": "NOCODE LIMITS VS SCRATCH VOL31",
+    "title_line1": "月額課金の高騰と拡張性の限界を知る",
+    "title_line2": "ノーコードとスクラッチ開発の損益分岐点",
+    "banner_desc": "長期的なランニングコストと機能改修コストの比較",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "ノーコードで作ったシステムを、後からスクラッチコードへ移行できますか？",
+        "a": "多くのノーコードツールはソースコードを出力できないため、移行時は一から作り直す必要があります。そのため将来スケールする事業は最初からスクラッチ開発を推奨します。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "032-non-it-contract-types-risk-management.html",
+    "title": "ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。 | Ill（イル）株式会社",
+    "headline": "ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。",
+    "description": "システム開発の契約形態の違いが招くトラブル（検収後のバグ対応や開発遅延時の責任問題）を防ぎ、自社に不利益のない適切な契約を結ぶための必須知識。",
+    "keywords": "請負契約 準委任契約 違い,システム開発 トラブル防止,契約書 瑕疵担保責任,発注側 リスク管理",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_contract_comparison.webp",
+    "banner_color": "#F59E0B",
+    "english_title": "IT CONTRACT RISK VOL32",
+    "title_line1": "契約トラブルや追加請求を未然に防ぐ",
+    "title_line2": "請負契約と準委任契約の賢い使い分け",
+    "banner_desc": "瑕疵担保（契約不適合）責任の範囲と瑕疵サポートの注意点",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "要件が途中で変わりそうな場合は、どちらの契約が適していますか？",
+        "a": "仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "033-simple-rfp-writing-for-non-it-buyers.html",
+    "title": "開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。 | Ill（イル）株式会社",
+    "headline": "開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。",
+    "description": "難しい仕様書を書かなくても、現在の業務の悩みや解決したい目的を整理してA4用紙3枚程度にまとめるだけで、開発会社から高品質かつ安価な提案を引き出すコツ。",
+    "keywords": "RFP 書き方 中小企業,要件定義 テンプレート,IT知識なし システム発注,提案依頼書 サンプル",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_rfp_request.webp",
+    "banner_color": "#06B6D4",
+    "english_title": "SIMPLE RFP CREATION VOL33",
+    "title_line1": "難しいシステム仕様書は作らなくていい",
+    "title_line2": "IT知識ゼロから書けるRFP作成手順",
+    "banner_desc": "業務フローとシステム化したい目的を伝える設計書",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "RFPは最初から細かなシステム要件まで記載すべきですか？",
+        "a": "いいえ。細かな要件より「現在の課題」と「解決したい成果」をクリアに書くことが重要です。具体的な機能構成は、開発会社側から提案してもらう方が工数を節約できます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "034-smb-ec-site-development-shopify-cost.html",
+    "title": "ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。 | Ill（イル）株式会社",
+    "headline": "ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。",
+    "description": "中小企業のEC事業立ち上げにおいて、フルスクラッチ開発によるコスト高騰を防ぎ、Shopifyを活用して迅速かつ安全に決済・配送管理システムを統合する費用効果を解説。",
+    "keywords": "ECサイト構築 費用,Shopify導入 メリット,通販サイト 開発費,Shopifyカスタマイズ",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_saas_launch.webp",
+    "banner_color": "#10B981",
+    "english_title": "SHOPIFY EC SITE BUILD VOL34",
+    "title_line1": "決済・在庫管理を世界標準で構築する",
+    "title_line2": "Shopifyを活用した格安ECサイト構築",
+    "banner_desc": "高セキュリティと優れた管理システムを初期費用を抑えて導入",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "Shopifyで独自の決済手段や外部予約システムと連携できますか？",
+        "a": "はい。Shopify App Storeの豊富な拡張機能や独自APIを活用することで、安価にサブスクリプション課金や外部ツールとのデータ同期を実装可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "035-c2c-sharing-matching-platform-development.html",
+    "title": "シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。 | Ill（イル）株式会社",
+    "headline": "シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。",
+    "description": "スペース貸しやスキルシェアなどのC2Cマッチングサイト開発において、決済・チャット・評価などの基本機能をAPIで繋ぎ、超低予算でプラットフォームを稼働させる手法。",
+    "keywords": "シェアリングエコノミー 開発,C2Cマッチングサイト 費用,プラットフォーム 構築,エスクロー決済 導入",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_case_matching.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "C2C SHARING PLATFORM VOL35",
+    "title_line1": "スキルシェアやスペース貸しサイトを最速で作る",
+    "title_line2": "パッケージとAPIを駆使したマッチングプラットフォーム",
+    "banner_desc": "チャット・検索・仮払い決済機能を低コストで統合する設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "不正ユーザーの取り締まりや本人確認（KYC）は自動化できます起？",
+        "a": "はい。Stripe Identityなどの外部本人確認APIをインテグレーションすることで、自社でのシステム構築なしに低コストで安全な身元確認フローを導入可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "036-custom-workflow-management-tool-cost.html",
+    "title": "自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。 | Ill（イル）株式会社",
+    "headline": "自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。",
+    "description": "日報、受発注、顧客追客など自社独自のフローがある中小企業向けに、他社製パッケージの無駄な月額費用を払い続けるのをやめ、自社専用の簡易ツールを安く構築するメリットを解説。",
+    "keywords": "業務管理システム 独自開発,スクラッチ開発 費用,社内ツール 構築,中小企業 DX推進",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_staffing_crm.webp",
+    "banner_color": "#06B6D4",
+    "english_title": "CUSTOM WORKFLOW MANAGEMENT VOL36",
+    "title_line1": "既存のパッケージソフトでは対応できない業務に",
+    "title_line2": "過剰機能を省いた自社専用業務管理システム",
+    "banner_desc": "自社独自の入力フローとデータベース構造をそのままシステム化",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "将来、会社の成長に伴って機能を追加することは可能ですか？",
+        "a": "はい、可能です。疎結合なAPIベースでシステムを構築するため、後から業務プロセスが増えた場合も部分的な機能改修・追加が安価に行えます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "037-pwa-web-app-vs-native-cost-comparison.html",
+    "title": "アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。 | Ill（イル）株式会社",
+    "headline": "アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。",
+    "description": "App StoreやGoogle Playでの審査や手数料を回避し、スマートフォンのホーム画面追加やプッシュ通知、オフライン動作を実現するWebアプリ（PWA）の圧倒的なコストメリットを解説。",
+    "keywords": "PWA開発 費用,スマホアプリ開発 削減,Webアプリ ホーム画面,ストア申請なし アプリ",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_rental_car.webp",
+    "banner_color": "#EF4444",
+    "english_title": "PWA WEB APP COST VOL37",
+    "title_line1": "ストア申請手数料や審査待ちをゼロにする",
+    "title_line2": "PWA（Webアプリ）によるスマホ対応費用削減",
+    "banner_desc": "ホーム画面アイコン追加・プッシュ通知機能をWeb技術のみで構築",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "PWAでもプッシュ通知をユーザーに送ることはできますか？",
+        "a": "はい、可能です。最新のiOS/Androidの主要ブラウザはWeb Push規格に対応しており、アプリストアを経由せずにWebシステムから通知を送ることができます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "038-line-api-chatbot-customer-support-cost.html",
+    "title": "LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。 | Ill（イル）株式会社",
+    "headline": "LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。",
+    "description": "店舗、不動産、予約サービスなどの顧客対応を、普及率の高いLINE公式アカウントと生成AIを接続して完全自動化するシステムの構築費用、仕組み、注意点を解説。",
+    "keywords": "LINEチャットボット 開発,ChatGPT LINE連携,自動返信システム 費用,LINE API 開発費",
+    "category_id": "gen-ai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_ai_agent.webp",
+    "banner_color": "#8B5CF6",
+    "english_title": "LINE API CHATBOT VOL38",
+    "title_line1": "ユーザーが使い慣れたLINE上で24時間問合せ自動化",
+    "title_line2": "LINE公式とChatGPTのAPI連携構築費用",
+    "banner_desc": "自然な返答と顧客データとの自動紐付けで追客を無人化",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "特定の予約フォームや顧客管理データベースとLINEボットを連動できますか？",
+        "a": "はい、可能です。LINEのWebhookを利用し、AIの回答と同時に自社の空き状況確認・自動予約登録を行うAPIを繋ぎ込むことができます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "039-filemaker-access-legacy-modernization.html",
+    "title": "老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。 | Ill（イル）株式会社",
+    "headline": "老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。",
+    "description": "社内の少数の特定担当者しかメンテナンスできずブラックボックス化したFileMakerやMS Accessを、誰でもブラウザから使える現代のWebデータベースシステムへ低コスト移行する方法。",
+    "keywords": "FileMaker 移行,Access 廃止,Webデータベース構築 費用,レガシーシステム刷新",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_filemaker.webp",
+    "banner_color": "#F59E0B",
+    "english_title": "FILEMAKER ACCESS WEB VOL39",
+    "title_line1": "属人化した社内データベースから脱却する",
+    "title_line2": "FileMaker・AccessのWebシステム移行費用",
+    "banner_desc": "データ構造をそのまま活かし複数人アクセスと高速化を実現",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "移行中に現在の社内業務（データの更新など）を止める必要はありますか？",
+        "a": "いいえ。新旧システムの並行稼働期間を設け、データを一括コンバートする手法をとるため、業務を1日も止めることなく移行が可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "040-web-scraping-automation-marketing-leads.html",
+    "title": "Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。 | Ill（イル）株式会社",
+    "headline": "Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。",
+    "description": "手作業での情報収集やコピペ業務をゼロにするため、特定のポータルサイトや業界マップから最新の企業情報や価格推移を自動で抽出するスクレイピングツールの開発費用と注意点。",
+    "keywords": "Webスクレイピング 開発,データ自動収集 費用,営業リスト自動化,スクレイピングツール 構築",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_market_trends.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "WEB SCRAPING AUTOMATION VOL40",
+    "title_line1": "毎日のコピペ作業と情報検索を完全自動化する",
+    "title_line2": "Webデータ自動収集・スクレイピング開発費用",
+    "banner_desc": "特定サイトの価格や企業リストを24時間自動でスキャンし集計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "スクレイピング行為は法律上や規約上の問題はありませんか？",
+        "a": "はい、法律（著作権法第30条の4）を遵守し、対象サイトの利用規約やアクセス負荷（クローリング間隔の設計）に配慮した安全なクローラーを設計するため安心です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "041-non-it-smb-system-development-no-engineer.html",
+    "title": "自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。 | Ill（イル）株式会社",
+    "headline": "自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。",
+    "description": "IT担当者が不在の中小企業やスタートアップ向けに、開発会社とのコミュニケーションのコツや、不要な機能の押し売りを防ぎコストを抑えるポイントを解説。",
+    "keywords": "エンジニア不在 システム開発,開発外注 中小企業,IT知識ゼロ システム開発,発注側 コミュニケーション",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_nocode_vs_scratch.webp",
+    "banner_color": "#10B981",
+    "english_title": "SMB SYSTEM DEVELOPMENT VOL41",
+    "title_line1": "IT担当者がいない企業のための",
+    "title_line2": "システム外注で失敗しない防衛策",
+    "banner_desc": "専門知識ゼロから要件定義と見積もり検証を成功させるコツ",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "ITの専門用語がわからず、開発会社と話すのが不安です。",
+        "a": "開発会社を選ぶ際、難しい専門用語を使わず、お客様のビジネスの言葉（業務の流れや困りごと）で丁寧に説明してくれる会社を選ぶのが最大の防衛策です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "042-hiring-vs-outsourcing-cost-comparison.html",
+    "title": "自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。 | Ill（イル）株式会社",
+    "headline": "自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。",
+    "description": "エンジニアの採用費や月額人件費の高騰を踏まえ、中小企業やスタートアップが自社採用するリスクと、必要な時にだけ外部のリソースを活用するコスト比較を徹底分析。",
+    "keywords": "エンジニア 採用コスト,システム内製化 費用,開発外注 メリット,中小企業 IT人件費",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_inhouse_vs_outsourcing.webp",
+    "banner_color": "#EF4444",
+    "english_title": "HIRING VS OUTSOURCING VOL42",
+    "title_line1": "高額なエンジニア採用の固定費を回避する",
+    "title_line2": "エンジニア採用と開発外注の費用比較",
+    "banner_desc": "月給と採用手数料をゼロにし必要な工数だけスポットで活用",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "自社エンジニアを1人雇う場合の本当の年間コストはどのくらいですか？",
+        "a": "年収600万円のエンジニアの場合、社会保険料やPC環境、紹介会社への手数料（年収の30%〜35%）などを含めると、初年度は実質900万円以上のコストが発生します。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "043-excel-to-web-system-dx-cost.html",
+    "title": "Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。 | Ill（イル）株式会社",
+    "headline": "Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。",
+    "description": "二重入力やデータの先祖返りなど、エクセル管理の限界に直面している中小企業向けに、業務をデータベース化して効率化するWebシステムの構築費用とメリットを解説。",
+    "keywords": "エクセル 業務限界,スプレッドシート 脱却,Webシステム開発 費用,中小企業 DX推進",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_api_integration.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "EXCEL TO WEB SYSTEM VOL43",
+    "title_line1": "二重入力とデータ管理の非効率をなくす",
+    "title_line2": "エクセルから独自Webシステムへの移行費用",
+    "banner_desc": "業務フローに合わせたデータベース構築と簡単な操作画面設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "エクセルから移行すると、使い方が難しくなって現場が混乱しませんか？",
+        "a": "いいえ。現在のエクセルの入力画面レイアウトをそのままWebブラウザ上に再現するような、シンプルなインターフェースを設計するため、現場の教育コストをほぼゼロで移行可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "044-non-it-smb-genai-business-efficiency.html",
+    "title": "自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。 | Ill（イル）株式会社",
+    "headline": "自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。",
+    "description": "専門のプログラマーやインフラエンジニアがいなくても、ChatGPT等のAPIとSlackやメールを繋ぎ、業務メールの下書きや顧客データの要約を自動化する低コスト開発手法。",
+    "keywords": "生成AI 業務効率化,ChatGPT API連携,中小企業 AI導入 費用,社内自動化 開発",
+    "category_id": "gen-ai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_ai_integration.webp",
+    "banner_color": "#8B5CF6",
+    "english_title": "NON IT SMB GENERATIVE VOL44",
+    "title_line1": "IT担当者がいなくても導入できる",
+    "title_line2": "安価な生成AI API連携と自動化費用",
+    "banner_desc": "定型メール作成・顧客データ集計作業をAIで自動化する設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "自社にITの専任者がいなくても運用・保守は可能ですか？",
+        "a": "はい。初期構築後は特別なサーバー管理が不要なクラウド（サーバーレス）構成で納品するため、毎月の保守コストや管理の手間はほぼ発生しません。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "045-smb-system-development-cost-standard.html",
+    "title": "システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。 | Ill（イル）株式会社",
+    "headline": "システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。",
+    "description": "ITに詳しくない発注者が、提示されたシステム見積書に「無駄な予備費」や「過剰な管理費」が上乗せされていないかを見破り、安く発注するための見積もり分析方法。",
+    "keywords": "システム開発 適正価格,見積書 上乗せ,開発費用 削減,発注者 コスト交渉",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_cost_market.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "SYSTEM ESTIMATE AUDIT FOR VOL45",
+    "title_line1": "見積書の中身を正しく査定する",
+    "title_line2": "過剰な見積もり上乗せを防ぐ防衛策",
+    "banner_desc": "人月単価の妥当性とバッファ費用をカットする交渉術",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "他社でもらった見積もりが高すぎる場合、相談に乗ってもらえますか？",
+        "a": "はい。他社様の見積書をお見せいただければ、どの部分が過剰要件で、どの機能を削れば価格を半額以下に抑えられるかをプロの目線で無料診断いたします。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "046-nocode-limitations-real-development-cost.html",
+    "title": "ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。 | Ill（イル）株式会社",
+    "headline": "ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。",
+    "description": "初期費用が安いとされるノーコードツールの限界（ユーザー数増加による課金高騰や機能拡張性の無さ）を解説し、最初から安価なスクラッチ開発を選んだ方が良いケースを提示。",
+    "keywords": "ノーコード開発 限界,ノーコード 費用 高騰,スクラッチ開発 メリット,システム拡張性 比較",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_nocode_vs_scratch.webp",
+    "banner_color": "#10B981",
+    "english_title": "NOCODE LIMITS VS SCRATCH VOL46",
+    "title_line1": "月額課金の高騰と拡張性の限界を知る",
+    "title_line2": "ノーコードとスクラッチ開発の損益分岐点",
+    "banner_desc": "長期的なランニングコストと機能改修コストの比較",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "ノーコードで作ったシステムを、後からスクラッチコードへ移行できますか？",
+        "a": "多くのノーコードツールはソースコードを出力できないため、移行時は一から作り直す必要があります。そのため将来スケールする事業は最初からスクラッチ開発を推奨します。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "047-non-it-contract-types-risk-management.html",
+    "title": "ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。 | Ill（イル）株式会社",
+    "headline": "ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。",
+    "description": "システム開発の契約形態の違いが招くトラブル（検収後のバグ対応や開発遅延時の責任問題）を防ぎ、自社に不利益のない適切な契約を結ぶための必須知識。",
+    "keywords": "請負契約 準委任契約 違い,システム開発 トラブル防止,契約書 瑕疵担保責任,発注側 リスク管理",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_contract_comparison.webp",
+    "banner_color": "#F59E0B",
+    "english_title": "IT CONTRACT RISK VOL47",
+    "title_line1": "契約トラブルや追加請求を未然に防ぐ",
+    "title_line2": "請負契約と準委任契約の賢い使い分け",
+    "banner_desc": "瑕疵担保（契約不適合）責任の範囲と瑕疵サポートの注意点",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "要件が途中で変わりそうな場合は、どちらの契約が適していますか？",
+        "a": "仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "048-simple-rfp-writing-for-non-it-buyers.html",
+    "title": "開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。 | Ill（イル）株式会社",
+    "headline": "開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。",
+    "description": "難しい仕様書を書かなくても、現在の業務の悩みや解決したい目的を整理してA4用紙3枚程度にまとめるだけで、開発会社から高品質かつ安価な提案を引き出すコツ。",
+    "keywords": "RFP 書き方 中小企業,要件定義 テンプレート,IT知識なし システム発注,提案依頼書 サンプル",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_rfp_request.webp",
+    "banner_color": "#06B6D4",
+    "english_title": "SIMPLE RFP CREATION VOL48",
+    "title_line1": "難しいシステム仕様書は作らなくていい",
+    "title_line2": "IT知識ゼロから書けるRFP作成手順",
+    "banner_desc": "業務フローとシステム化したい目的を伝える設計書",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "RFPは最初から細かなシステム要件まで記載すべきですか？",
+        "a": "いいえ。細かな要件より「現在の課題」と「解決したい成果」をクリアに書くことが重要です。具体的な機能構成は、開発会社側から提案してもらう方が工数を節約できます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "049-smb-ec-site-development-shopify-cost.html",
+    "title": "ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。 | Ill（イル）株式会社",
+    "headline": "ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。",
+    "description": "中小企業のEC事業立ち上げにおいて、フルスクラッチ開発によるコスト高騰を防ぎ、Shopifyを活用して迅速かつ安全に決済・配送管理システムを統合する費用効果を解説。",
+    "keywords": "ECサイト構築 費用,Shopify導入 メリット,通販サイト 開発費,Shopifyカスタマイズ",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_saas_launch.webp",
+    "banner_color": "#10B981",
+    "english_title": "SHOPIFY EC SITE BUILD VOL49",
+    "title_line1": "決済・在庫管理を世界標準で構築する",
+    "title_line2": "Shopifyを活用した格安ECサイト構築",
+    "banner_desc": "高セキュリティと優れた管理システムを初期費用を抑えて導入",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "Shopifyで独自の決済手段や外部予約システムと連携できますか？",
+        "a": "はい。Shopify App Storeの豊富な拡張機能や独自APIを活用することで、安価にサブスクリプション課金や外部ツールとのデータ同期を実装可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "050-c2c-sharing-matching-platform-development.html",
+    "title": "シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。 | Ill（イル）株式会社",
+    "headline": "シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。",
+    "description": "スペース貸しやスキルシェアなどのC2Cマッチングサイト開発において、決済・チャット・評価などの基本機能をAPIで繋ぎ、超低予算でプラットフォームを稼働させる手法。",
+    "keywords": "シェアリングエコノミー 開発,C2Cマッチングサイト 費用,プラットフォーム 構築,エスクロー決済 導入",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_case_matching.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "C2C SHARING PLATFORM VOL50",
+    "title_line1": "スキルシェアやスペース貸しサイトを最速で作る",
+    "title_line2": "パッケージとAPIを駆使したマッチングプラットフォーム",
+    "banner_desc": "チャット・検索・仮払い決済機能を低コストで統合する設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "不正ユーザーの取り締まりや本人確認（KYC）は自動化できます起？",
+        "a": "はい。Stripe Identityなどの外部本人確認APIをインテグレーションすることで、自社でのシステム構築なしに低コストで安全な身元確認フローを導入可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "051-custom-workflow-management-tool-cost.html",
+    "title": "自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。 | Ill（イル）株式会社",
+    "headline": "自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。",
+    "description": "日報、受発注、顧客追客など自社独自のフローがある中小企業向けに、他社製パッケージの無駄な月額費用を払い続けるのをやめ、自社専用の簡易ツールを安く構築するメリットを解説。",
+    "keywords": "業務管理システム 独自開発,スクラッチ開発 費用,社内ツール 構築,中小企業 DX推進",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_staffing_crm.webp",
+    "banner_color": "#06B6D4",
+    "english_title": "CUSTOM WORKFLOW MANAGEMENT VOL51",
+    "title_line1": "既存のパッケージソフトでは対応できない業務に",
+    "title_line2": "過剰機能を省いた自社専用業務管理システム",
+    "banner_desc": "自社独自の入力フローとデータベース構造をそのままシステム化",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "将来、会社の成長に伴って機能を追加することは可能ですか？",
+        "a": "はい、可能です。疎結合なAPIベースでシステムを構築するため、後から業務プロセスが増えた場合も部分的な機能改修・追加が安価に行えます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "052-pwa-web-app-vs-native-cost-comparison.html",
+    "title": "アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。 | Ill（イル）株式会社",
+    "headline": "アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。",
+    "description": "App StoreやGoogle Playでの審査や手数料を回避し、スマートフォンのホーム画面追加やプッシュ通知、オフライン動作を実現するWebアプリ（PWA）の圧倒的なコストメリットを解説。",
+    "keywords": "PWA開発 費用,スマホアプリ開発 削減,Webアプリ ホーム画面,ストア申請なし アプリ",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_rental_car.webp",
+    "banner_color": "#EF4444",
+    "english_title": "PWA WEB APP COST VOL52",
+    "title_line1": "ストア申請手数料や審査待ちをゼロにする",
+    "title_line2": "PWA（Webアプリ）によるスマホ対応費用削減",
+    "banner_desc": "ホーム画面アイコン追加・プッシュ通知機能をWeb技術のみで構築",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "PWAでもプッシュ通知をユーザーに送ることはできますか？",
+        "a": "はい、可能です。最新のiOS/Androidの主要ブラウザはWeb Push規格に対応しており、アプリストアを経由せずにWebシステムから通知を送ることができます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "053-line-api-chatbot-customer-support-cost.html",
+    "title": "LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。 | Ill（イル）株式会社",
+    "headline": "LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。",
+    "description": "店舗、不動産、予約サービスなどの顧客対応を、普及率の高いLINE公式アカウントと生成AIを接続して完全自動化するシステムの構築費用、仕組み、注意点を解説。",
+    "keywords": "LINEチャットボット 開発,ChatGPT LINE連携,自動返信システム 費用,LINE API 開発費",
+    "category_id": "gen-ai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_ai_agent.webp",
+    "banner_color": "#8B5CF6",
+    "english_title": "LINE API CHATBOT VOL53",
+    "title_line1": "ユーザーが使い慣れたLINE上で24時間問合せ自動化",
+    "title_line2": "LINE公式とChatGPTのAPI連携構築費用",
+    "banner_desc": "自然な返答と顧客データとの自動紐付けで追客を無人化",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "特定の予約フォームや顧客管理データベースとLINEボットを連動できますか？",
+        "a": "はい、可能です。LINEのWebhookを利用し、AIの回答と同時に自社の空き状況確認・自動予約登録を行うAPIを繋ぎ込むことができます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "054-filemaker-access-legacy-modernization.html",
+    "title": "老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。 | Ill（イル）株式会社",
+    "headline": "老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。",
+    "description": "社内の少数の特定担当者しかメンテナンスできずブラックボックス化したFileMakerやMS Accessを、誰でもブラウザから使える現代のWebデータベースシステムへ低コスト移行する方法。",
+    "keywords": "FileMaker 移行,Access 廃止,Webデータベース構築 費用,レガシーシステム刷新",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_case_filemaker.webp",
+    "banner_color": "#F59E0B",
+    "english_title": "FILEMAKER ACCESS WEB VOL54",
+    "title_line1": "属人化した社内データベースから脱却する",
+    "title_line2": "FileMaker・AccessのWebシステム移行費用",
+    "banner_desc": "データ構造をそのまま活かし複数人アクセスと高速化を実現",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "移行中に現在の社内業務（データの更新など）を止める必要はありますか？",
+        "a": "いいえ。新旧システムの並行稼働期間を設け、データを一括コンバートする手法をとるため、業務を1日も止めることなく移行が可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "055-web-scraping-automation-marketing-leads.html",
+    "title": "Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。 | Ill（イル）株式会社",
+    "headline": "Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。",
+    "description": "手作業での情報収集やコピペ業務をゼロにするため、特定のポータルサイトや業界マップから最新の企業情報や価格推移を自動で抽出するスクレイピングツールの開発費用と注意点。",
+    "keywords": "Webスクレイピング 開発,データ自動収集 費用,営業リスト自動化,スクレイピングツール 構築",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_market_trends.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "WEB SCRAPING AUTOMATION VOL55",
+    "title_line1": "毎日のコピペ作業と情報検索を完全自動化する",
+    "title_line2": "Webデータ自動収集・スクレイピング開発費用",
+    "banner_desc": "特定サイトの価格や企業リストを24時間自動でスキャンし集計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "スクレイピング行為は法律上や規約上の問題はありませんか？",
+        "a": "はい、法律（著作権法第30条の4）を遵守し、対象サイトの利用規約やアクセス負荷（クローリング間隔の設計）に配慮した安全なクローラーを設計するため安心です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "056-non-it-smb-system-development-no-engineer.html",
+    "title": "自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。 | Ill（イル）株式会社",
+    "headline": "自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。",
+    "description": "IT担当者が不在の中小企業やスタートアップ向けに、開発会社とのコミュニケーションのコツや、不要な機能の押し売りを防ぎコストを抑えるポイントを解説。",
+    "keywords": "エンジニア不在 システム開発,開発外注 中小企業,IT知識ゼロ システム開発,発注側 コミュニケーション",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_nocode_vs_scratch.webp",
+    "banner_color": "#10B981",
+    "english_title": "SMB SYSTEM DEVELOPMENT VOL56",
+    "title_line1": "IT担当者がいない企業のための",
+    "title_line2": "システム外注で失敗しない防衛策",
+    "banner_desc": "専門知識ゼロから要件定義と見積もり検証を成功させるコツ",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "ITの専門用語がわからず、開発会社と話すのが不安です。",
+        "a": "開発会社を選ぶ際、難しい専門用語を使わず、お客様のビジネスの言葉（業務の流れや困りごと）で丁寧に説明してくれる会社を選ぶのが最大の防衛策です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "057-hiring-vs-outsourcing-cost-comparison.html",
+    "title": "自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。 | Ill（イル）株式会社",
+    "headline": "自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。",
+    "description": "エンジニアの採用費や月額人件費の高騰を踏まえ、中小企業やスタートアップが自社採用するリスクと、必要な時にだけ外部のリソースを活用するコスト比較を徹底分析。",
+    "keywords": "エンジニア 採用コスト,システム内製化 費用,開発外注 メリット,中小企業 IT人件費",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_inhouse_vs_outsourcing.webp",
+    "banner_color": "#EF4444",
+    "english_title": "HIRING VS OUTSOURCING VOL57",
+    "title_line1": "高額なエンジニア採用の固定費を回避する",
+    "title_line2": "エンジニア採用と開発外注の費用比較",
+    "banner_desc": "月給と採用手数料をゼロにし必要な工数だけスポットで活用",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "自社エンジニアを1人雇う場合の本当の年間コストはどのくらいですか？",
+        "a": "年収600万円のエンジニアの場合、社会保険料やPC環境、紹介会社への手数料（年収の30%〜35%）などを含めると、初年度は実質900万円以上のコストが発生します。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "058-excel-to-web-system-dx-cost.html",
+    "title": "Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。 | Ill（イル）株式会社",
+    "headline": "Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。",
+    "description": "二重入力やデータの先祖返りなど、エクセル管理の限界に直面している中小企業向けに、業務をデータベース化して効率化するWebシステムの構築費用とメリットを解説。",
+    "keywords": "エクセル 業務限界,スプレッドシート 脱却,Webシステム開発 費用,中小企業 DX推進",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_api_integration.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "EXCEL TO WEB SYSTEM VOL58",
+    "title_line1": "二重入力とデータ管理の非効率をなくす",
+    "title_line2": "エクセルから独自Webシステムへの移行費用",
+    "banner_desc": "業務フローに合わせたデータベース構築と簡単な操作画面設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "エクセルから移行すると、使い方が難しくなって現場が混乱しませんか？",
+        "a": "いいえ。現在のエクセルの入力画面レイアウトをそのままWebブラウザ上に再現するような、シンプルなインターフェースを設計するため、現場の教育コストをほぼゼロで移行可能です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "059-non-it-smb-genai-business-efficiency.html",
+    "title": "自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。 | Ill（イル）株式会社",
+    "headline": "自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。",
+    "description": "専門のプログラマーやインフラエンジニアがいなくても、ChatGPT等のAPIとSlackやメールを繋ぎ、業務メールの下書きや顧客データの要約を自動化する低コスト開発手法。",
+    "keywords": "生成AI 業務効率化,ChatGPT API連携,中小企業 AI導入 費用,社内自動化 開発",
+    "category_id": "gen-ai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_ai_integration.webp",
+    "banner_color": "#8B5CF6",
+    "english_title": "NON IT SMB GENERATIVE VOL59",
+    "title_line1": "IT担当者がいなくても導入できる",
+    "title_line2": "安価な生成AI API連携と自動化費用",
+    "banner_desc": "定型メール作成・顧客データ集計作業をAIで自動化する設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "自社にITの専任者がいなくても運用・保守は可能ですか？",
+        "a": "はい。初期構築後は特別なサーバー管理が不要なクラウド（サーバーレス）構成で納品するため、毎月の保守コストや管理の手間はほぼ発生しません。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "filename": "060-smb-system-development-cost-standard.html",
+    "title": "システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。 | Ill（イル）株式会社",
+    "headline": "システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。",
+    "description": "ITに詳しくない発注者が、提示されたシステム見積書に「無駄な予備費」や「過剰な管理費」が上乗せされていないかを見破り、安く発注するための見積もり分析方法。",
+    "keywords": "システム開発 適正価格,見積書 上乗せ,開発費用 削減,発注者 コスト交渉",
+    "category_id": "system-app",
+    "category_name": "システム開発・アーキテクチャ",
+    "banner_img": "../illust_cost_market.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "SYSTEM ESTIMATE AUDIT FOR VOL60",
+    "title_line1": "見積書の中身を正しく査定する",
+    "title_line2": "過剰な見積もり上乗せを防ぐ防衛策",
+    "banner_desc": "人月単価の妥当性とバッファ費用をカットする交渉術",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "他社でもらった見積もりが高すぎる場合、相談に乗ってもらえますか？",
+        "a": "はい。他社様の見積書をお見せいただければ、どの部分が過剰要件で、どの機能を削れば価格を半額以下に抑えられるかをプロの目線で無料診断いたします。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "詳細",
+        "text": ""
+      }
+    ]
+  }
+]
