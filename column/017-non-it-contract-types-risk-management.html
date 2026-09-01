@@ -2351,6 +2351,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "請負契約と準委任契約の賢い使い分け"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 要件が途中で変わりそうな場合は、どちらの契約が適していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 仕様変更やピボットの可能性が高い初期開発では、成果物の完成を義務付けない「準委任契約（ラボ型開発）」の方が、仕様変更による違約金や追加請求がなく安全です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 請負契約の場合、納品後何ヶ月までバグを無償で直してもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 民法上の原則として、納品・検収後から「1年間」は契約不適合（瑕疵）に対する修正や損害賠償を請求可能です。契約書を交わす際、この期間を極端に短く（例: 2週間など）制限されていないかを必ず確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 契約書の内容（開発会社の免責事項など）が自社に不利でないかチェックしてもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。ご契約の前に、契約条件や瑕疵対応の記載について、発注者様に不当な不利益が生じないよう、弊社の技術コンサルタントが客観的にアドバイスをさせていただきます。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -2569,6 +2630,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/026-non-it-smb-system-development-no-engineer.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/025-web-scraping-automation-marketing-leads.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。</span>
@@ -2590,12 +2657,6 @@
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/021-custom-workflow-management-tool-cost.html">
-                  <span class="related-item-date">2026.08.31</span>
-                  <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
                 </a>
               </li>
           </ul>

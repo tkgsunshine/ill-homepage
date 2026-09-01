@@ -3099,6 +3099,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "社内データ専用のセキュアなRAGチャット..."
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 対応しているファイル形式は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. PDF、Word（.docx）、Excel（.xlsx）、PowerPoint（.pptx）、テキストファイル（.txt）などの主要なオフィスドキュメントに加え、NotionやGoogleドライブ等のクラウドツールとの自動同期も実装可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. ハルシネーション（嘘の回答）を防ぐことはできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. RAGは「指定された社内ソースからのみ情報を探して答える」ようにプロンプトと検索ロジックを制約するため、一般的なLLMに比べて虚偽の回答をするリスクを極限まで抑えることができます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 導入後のドキュメントの追加や更新は誰でも行えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。専用の管理者画面からフォルダに新しいPDFや文書をドラッグ＆ドロップするだけで、数分で自動的にインデックス化され、チャットボットが新しい情報に基づいて回答できるようになります。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -3314,6 +3375,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/026-non-it-smb-system-development-no-engineer.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/025-web-scraping-automation-marketing-leads.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。</span>
@@ -3335,12 +3402,6 @@
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/021-custom-workflow-management-tool-cost.html">
-                  <span class="related-item-date">2026.08.31</span>
-                  <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
                 </a>
               </li>
           </ul>

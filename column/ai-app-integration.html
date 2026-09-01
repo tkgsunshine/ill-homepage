@@ -4650,6 +4650,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "生成AI・AIアプリ開発のステップ"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. OpenAI APIなど外部のAIサービスに機密データを送信することになり、セキュリティは大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由での送信データについて、主要なAIプロバイダー（OpenAI、Anthropic、Google Cloud等）はデフォルトで「AIモデルの再学習には使用しない」というポリシーを適用しています。さらに厳格なセキュリティが必要な場合は、Azure OpenAI Serviceなどを利用して自社占有のクラウドアカウント内のみで通信を完結させる「閉域網連携」を設計することで、エンタープライズ基準のセキュリティを担保可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. AIの回答が嘘をつくこと（ハルシネーション）を防ぐことは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100%防ぐことは現在のLLMの特性上困難ですが、RAG（検索拡張生成）技術を導入し、回答のソースとなる「根拠文書（自社のデータ）」を明示的に指定して「この文書以外の知識を用いて回答するな」とプロンプトで厳格に縛ることで、ハルシネーションの発生確率をほぼ実用上問題のないレベルまで抑え込むことができます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 将来的にローカルLLMや独自モデルへの切り替えは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。システム設計時に、AIを呼び出すモジュールを疎結合な共通インターフェース（ラッパー）として設計しておくことで、将来的にOpenAIからLlamaといったオープンソースの自社サーバーモデルへシステムコードを大幅に変更することなく容易にスイッチさせることが可能です。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4730,7 +4791,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「生成AIを活用した新規アプリ開発ステップと活用事例」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「生成AIを活用した新規アプリ開発のステップと活用事例 — AIX推進のロードマップ」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-ai_app_integration" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -4940,6 +5001,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
                                                 <ul class="related-list">
               <li class="related-item">
+                <a href="/column/026-non-it-smb-system-development-no-engineer.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/025-web-scraping-automation-marketing-leads.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。</span>
@@ -4961,12 +5028,6 @@
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/021-custom-workflow-management-tool-cost.html">
-                  <span class="related-item-date">2026.08.31</span>
-                  <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
                 </a>
               </li>
           </ul>

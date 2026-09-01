@@ -3099,6 +3099,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "外注先との要件定義をブレずに進めればシス..."
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. システム開発の知識が全くない担当者でも大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、全く問題ありません。Ill（イル）株式会社では、お客様の普段の業務内容をやさしくヒアリングし、業務フローの整理から必要な機能の設計までを弊社のエンジニアチームが全面的に伴走いたします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 要件定義の段階で提示された予算から、開発費が後から上がることはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 基本的にはありません。要件定義にて実装範囲（スコープ）を固定した上で開発へと進みます。もし議論の途中で追加したい機能が生じた場合には、その分の開発費用と優先度をテーブルで提示し、ご納得いただいた場合のみ対応を決定します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 要件定義の期間はどれくらいかかりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. プロジェクトの規模にもよりますが、一般的な中規模Webシステムであれば、週1回のミーティングを重ねて概ね2週間〜4週間程度で完了します。生成AIの要件ドラフト作成を活用することで、従来の半分以下の期間で完了させることが可能です。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -3298,6 +3359,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/026-non-it-smb-system-development-no-engineer.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/025-web-scraping-automation-marketing-leads.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。</span>
@@ -3319,12 +3386,6 @@
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/021-custom-workflow-management-tool-cost.html">
-                  <span class="related-item-date">2026.08.31</span>
-                  <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
                 </a>
               </li>
           </ul>

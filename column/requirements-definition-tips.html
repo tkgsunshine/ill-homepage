@@ -4650,6 +4650,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "要件定義のコツ"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 要件定義は開発会社に「丸投げ」しても大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "絶対に避けるべきです。「システム要件（技術的な実装方法）」はエンジニアが主導しますが、「ビジネス要件（解決したい課題、システムを使う業務フロー）」は事業主体である貴社にしか定義できません。丸投げされた開発会社は、一般的な仕様を想像で構築するため、貴社の実業務に全くフィットしないシステムが納品されるリスクが極めて高くなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 設計書に「後から仕様変更ができるような文言」を入れておけば安全ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「請負契約」である場合、設計書にいくら曖昧な文言を書いても、見積もりの範囲を超える変更には追加費用が発生します。要件定義を進める段階で、最初から「変更が頻繁に起こる前提の契約（準委任や日本とベトナムのハイブリッドのラボ型体制）」を選択しておくことが、契約上のトラブルを回避する最善策です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 非機能要件（セキュリティやバックアップ等）はどのように定義すればよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "非機能要件は専門知識が必要なため、開発会社がリードして定義書を作成すべき項目です。ただし、発注側としては「想定する同時アクセス数」「障害発生時に何時間以内の復旧を求めるか」「個人情報を含むデータの有無」の3点を伝えておくだけで、適切なインフラとバックアップ設計が提示されます。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4730,7 +4791,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発・要件定義のコツと失敗しない仕様策定」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-requirements_definition_tips" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -4928,6 +4989,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
                                                 <ul class="related-list">
               <li class="related-item">
+                <a href="/column/026-non-it-smb-system-development-no-engineer.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/025-web-scraping-automation-marketing-leads.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。</span>
@@ -4949,12 +5016,6 @@
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/021-custom-workflow-management-tool-cost.html">
-                  <span class="related-item-date">2026.08.31</span>
-                  <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
                 </a>
               </li>
           </ul>
