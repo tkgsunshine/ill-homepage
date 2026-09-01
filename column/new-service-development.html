@@ -4406,6 +4406,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "新規サービス開発での開発会社の選び方"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 相見積もり（複数社への見積依頼）は何社くらい取るべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "新規サービス開発においては、3社程度に絞って相見積もりを取ることを推奨します。多すぎる会社に声をかけると、要件説明や質疑応答のコミュニケーションコストだけで莫大な時間を消費してしまいます。金額の安さだけでなく、「こちらのビジネスモデルを理解して、機能削減（ミニマル化）の提案をしてくれるか」という提案力を重視して比較してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. システムやスマホアプリ開発の費用の相場はどれくらいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "開発規模によって数百万〜数千万円と非常に幅があります。しかし、コア機能だけに絞った「MVP（最小限の実用製品）」であれば、300万円〜800万円程度からローンチ可能なシステムを構築することが十分に可能です。最初からすべての機能を盛り込んで2,000万円以上の見積もりを出してくる会社があれば、要件のそぎ落としができる余地がないか検討しましょう。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 技術的な知識が社内に誰もいなくても、開発会社とやり取りできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可能です。ただし、その場合は「要件定義書に書かれた通りにしか作らない」システム受託会社ではなく、ビジネスのゴールを共有して一緒に仕様の重要度を判断してくれる「伴走型・コンサルティング型」の開発パートナーを選ぶことが絶対条件となります。当社のプランナーはお客様の言葉を技術要件へ翻訳し、わかりやすく進捗を可視化します。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4735,6 +4796,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
                                                 <ul class="related-list">
               <li class="related-item">
+                <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/021-custom-workflow-management-tool-cost.html">
                   <span class="related-item-date">2026.08.31</span>
                   <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
@@ -4756,12 +4823,6 @@
                 <a href="/column/017-non-it-contract-types-risk-management.html">
                   <span class="related-item-date">2026.08.28</span>
                   <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/018-simple-rfp-writing-for-non-it-buyers.html">
-                  <span class="related-item-date">2026.08.28</span>
-                  <span class="related-item-title">開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。</span>
                 </a>
               </li>
           </ul>

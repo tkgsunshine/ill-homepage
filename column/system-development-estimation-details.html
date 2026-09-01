@@ -2855,6 +2855,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "システム開発見積もりの仕組み"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. システム開発の「人月（にんげつ）単価」とは何ですか？妥当な相場は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「人月」とは、エンジニア1人が1ヶ月間フルタイムで働く作業量を表す単位です。人月単価の妥当な相場は、日本の大手SIerで120万〜180万円、中堅開発会社で80万〜120万円、フリーランスで60万〜100万円です。弊社では、日本側のPM設計とベトナム拠点の開発体制を組み合わせることで、高品質を保ちつつ実質的な人月コストを30万〜50万円水準に抑えています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 他社で取った高額な見積書を持参して、安く作れるか相談することは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、大歓迎です。他社様の見積書をご提示いただければ、どの機能や設計がオーバークオリティ（費用高騰の原因）になっているかをエンジニアが分析し、同等のビジネス価値をより低い予算で実現するための「対案構成書」と見積もりを無料でお作りします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 納品後の「保守・運用費用」は月額いくらくらい見積もるべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一般的な開発会社では「初期開発費の10%〜15%／年間（月額5万〜15万円）」を保守費として要求されます。しかし、バグの発生しない安定したシステムであれば、初期段階の保守代は月額サーバー維持費（数千円）と軽微な死活監視（月2万〜3万円程度）だけで運用可能です。不要な月額保守パッケージの加入はおすすめしません。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -3131,6 +3192,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/021-custom-workflow-management-tool-cost.html">
                   <span class="related-item-date">2026.08.31</span>
                   <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
@@ -3152,12 +3219,6 @@
                 <a href="/column/017-non-it-contract-types-risk-management.html">
                   <span class="related-item-date">2026.08.28</span>
                   <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/018-simple-rfp-writing-for-non-it-buyers.html">
-                  <span class="related-item-date">2026.08.28</span>
-                  <span class="related-item-title">開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。</span>
                 </a>
               </li>
           </ul>

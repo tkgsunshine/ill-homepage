@@ -2855,6 +2855,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "MVP開発手順と失敗しない外注のコツ"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 他社より圧倒的に安いとのことですが、システムの品質やセキュリティは大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、問題ありません。安さの理由は「エンジニアの質を落とす」からではなく、「実装する機能数を厳選し、非コア部分はOSSやAPIを活用して無駄なコードを書かない」からです。セキュリティやインフラ、データの暗号化といった最も重要なコア基盤には、大手開発プロジェクトと同等の技術基準を採用しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. リリース後にユーザーから要望が出た場合、後から機能を追加するのは大変ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、むしろ機能追加しやすい設計にしています。モジュールを切り離した「疎結合なシステム構造」を標準採用しているため、稼働中のメインシステムに影響を与えることなく、後から必要になったパーツ（決済機能や管理画面など）を容易にプラグイン形式で追加していくことが可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 将来的にユーザーが急増した場合、スケーラビリティは問題ありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AWS等のクラウドサーバー上で動作するスケーラブルな構成をデフォルトで採用しています。初期段階では最小限 of サーバーリソース（月額数千円〜）で運用し、アクセスが急増したタイミングで自動的にサーバー性能がスケールアウトする設計になっております。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -3113,6 +3174,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/021-custom-workflow-management-tool-cost.html">
                   <span class="related-item-date">2026.08.31</span>
                   <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
@@ -3134,12 +3201,6 @@
                 <a href="/column/017-non-it-contract-types-risk-management.html">
                   <span class="related-item-date">2026.08.28</span>
                   <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/018-simple-rfp-writing-for-non-it-buyers.html">
-                  <span class="related-item-date">2026.08.28</span>
-                  <span class="related-item-title">開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。</span>
                 </a>
               </li>
           </ul>

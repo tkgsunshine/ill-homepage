@@ -4406,6 +4406,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "アジャイル開発とミニマル設計"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. アジャイル開発は「総額でいくらかかるか分からない」と聞きますが、予算管理はできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多くの開発会社のアジャイル提案ではその傾向がありますが、Ill Inc.では「初期MVPの構築」という明確なマイルストーンに対して、ミニマル設計による上限予算（固定価格または段階コミット）を設定して進めます。そのため、スタートアップの資金調達フェーズや社内の予算申請枠をオーバーすることなく、安全にプロジェクトを開始いただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 途中で仕様変更を重ねると、システム全体の設計（スパゲッティコード）が崩れませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "仕様変更を前提とした「疎結合（モジュール型）な基本設計」を行っておくことで、ある箇所のロジックを変更しても他への副作用が出ない構造を保ちます。私たちはデータベースやインターフェースの抽象レイヤーをあらかじめ設計しているため、アジャイルに仕様変更を重ねてもスパゲッティコード化を防ぐことができます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. ウォーターフォール開発の方が適しているシステムはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。社会インフラ系システム、銀行等の基幹決済基盤、あるいは完全に既存業務の置き換えであり、要件が100%確定していて変更の余地がないシステム構築の場合は、ウォーターフォール開発の方がスケジュール管理が容易な場合があります。しかし、新規Webサービス、新規スマホアプリ、SaaSの立ち上げにおいては、100%アジャイル・ミニマル開発の構成を推奨します。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4699,6 +4760,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
                                                 <ul class="related-list">
               <li class="related-item">
+                <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/021-custom-workflow-management-tool-cost.html">
                   <span class="related-item-date">2026.08.31</span>
                   <span class="related-item-title">自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。</span>
@@ -4720,12 +4787,6 @@
                 <a href="/column/017-non-it-contract-types-risk-management.html">
                   <span class="related-item-date">2026.08.28</span>
                   <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/018-simple-rfp-writing-for-non-it-buyers.html">
-                  <span class="related-item-date">2026.08.28</span>
-                  <span class="related-item-title">開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。</span>
                 </a>
               </li>
           </ul>
