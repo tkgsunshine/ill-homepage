@@ -4528,6 +4528,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ノーコードの限界とスクラッチ開発"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. Bubbleなどで作ったアプリのデータベース（ユーザーデータ等）は、スクラッチ移行時に引き継げますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。ノーコードツールであっても、CSV形式やAPI経由でデータベース内の全情報をエクスポートすることが可能です。スクラッチで設計したデータベースへデータをインポートするマイグレーション（移行）処理を適切に施すことで、これまでのユーザー情報を失うことなくリニューアル可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. ローコード（Low-Code）開発はノーコードの限界をクリアできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ローコード（一部にカスタムJSやCSSを挟めるツール）は、ノーコードよりもデザインやロジックの自由度が高まります。しかし、「プラットフォームロックイン（ツール運営会社のインフラ依存）」や「表示速度のオーバーヘッド」という根本的な問題は残るため、将来的な大規模スケールを予定しているSaaS等のプロダクトにおいては、移行の手間を考慮すると最初からミニマルなスクラッチコードで書く方が結果的に安上がりになるケースが多いです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. スクラッチ開発は「見積もりが高く、納期が長い」というイメージがあります。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "それは「すべての機能を網羅する大規模なスクラッチ開発」の場合です。Ill Inc.が実践する「ミニマル開発思想」では、機能をコアな数点に絞り込むため、スクラッチ開発であっても期間は1〜2ヶ月、費用も100万〜200万円台からと、ノーコード開発に匹敵するスピード感でのフルスクラッチ構築を提供しています。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4835,6 +4896,12 @@
                 </a>
               </li>
               <li class="related-item">
+                <a href="/column/024-filemaker-access-legacy-modernization.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
@@ -4850,12 +4917,6 @@
                 <a href="/column/020-c2c-sharing-matching-platform-development.html">
                   <span class="related-item-date">2026.08.30</span>
                   <span class="related-item-title">シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/019-smb-ec-site-development-shopify-cost.html">
-                  <span class="related-item-date">2026.08.29</span>
-                  <span class="related-item-title">ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。</span>
                 </a>
               </li>
           </ul>

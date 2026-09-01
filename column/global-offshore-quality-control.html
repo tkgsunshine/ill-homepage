@@ -3943,6 +3943,59 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "グローバル開発品質管理"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 現地でテストしているはずなのに、日本側の検収でバグが大量に出るのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "それは「テストケースの作成方法」が異なっているからです。現地のテスターは仕様書通りに動くか（正常系）の確認は得意ですが、「ユーザーが変な入力をした場合」や「ネットワークが切れた場合」などの準正常系・異常系のテストケースを作成していないケースが多いです。テストケースの作成段階で日本側がチェック・承認を行うプロセスが必須です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. テストの自動化はオフショア開発に有効ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "極めて有効です。特に変更が頻繁に発生するプロジェクト（アジャイル開発）では、一度修正したコードが他の機能に影響を与える「デグレード（先祖返り）」が多発します。主要画面のE2Eテスト（PlaywrightやCypressなど）を自動化し、CI/CDラインに組み込んでおくことで、バグの自動検知率が飛躍的に高まります。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4218,6 +4271,12 @@
                 </a>
               </li>
               <li class="related-item">
+                <a href="/column/024-filemaker-access-legacy-modernization.html">
+                  <span class="related-item-date">2026.09.01</span>
+                  <span class="related-item-title">老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
@@ -4233,12 +4292,6 @@
                 <a href="/column/020-c2c-sharing-matching-platform-development.html">
                   <span class="related-item-date">2026.08.30</span>
                   <span class="related-item-title">シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/019-smb-ec-site-development-shopify-cost.html">
-                  <span class="related-item-date">2026.08.29</span>
-                  <span class="related-item-title">ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。</span>
                 </a>
               </li>
           </ul>
