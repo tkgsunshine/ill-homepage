@@ -2752,6 +2752,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "エクセルから独自Webシステムへの移行費用"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 現在使っているエクセルの数式やフォーマットをそのまま再現できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、可能です。エクセルで使用されている計算ロジック（利益率算出、税率計算など）をWebシステム側のプログラムに移植し、入力画面もエクセルに近いレイアウトで設計します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. システム化すると、月々の維持費（サーバー代など）が高くありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. いいえ。弊社では月々の固定費がほぼ無料（数百円〜数千円程度）で稼働する最新のクラウドサーバー構成（サーバーレス）を採用するため、ランニングコストによる圧迫はありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 社外からスマートフォンやタブレットでもデータを確認できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、可能です。レスポンシブデザイン（スマホ対応）を標準で実装するため、営業スタッフが外回り中やリモートワーク環境下でも、手元のスマホからリアルタイムでデータ更新や確認ができます。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -2984,6 +3045,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/027-hiring-vs-outsourcing-cost-comparison.html">
+                  <span class="related-item-date">2026.09.02</span>
+                  <span class="related-item-title">自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/026-non-it-smb-system-development-no-engineer.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。</span>
@@ -3005,12 +3072,6 @@
                 <a href="/column/024-filemaker-access-legacy-modernization.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
-                  <span class="related-item-date">2026.09.01</span>
-                  <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
                 </a>
               </li>
           </ul>

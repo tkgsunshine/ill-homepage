@@ -2412,6 +2412,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "IT知識ゼロから書けるRFP作成手順"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. RFPは最初から細かなシステム要件まで記載すべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. いいえ。細かな要件より「現在の課題」と「解決したい成果」をクリアに書くことが重要です。具体的な機能構成は、開発会社側から提案してもらう方が工数を節約できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. RFPのテンプレートやサンプルを提供してもらうことはできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。お問い合わせいただいたお客様には、IT知識ゼロからでも1時間で記入できる「RFP（提案依頼書）の穴埋め式エクセルテンプレート」を無料で提供しております。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 複数社から上がってきた提案書・見積書を比較・査定するサポートは行っていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、可能です。弊社への発注の有無に関わらず、他社様の提案が要件に対して適正であるか、無駄な開発項目が入っていないかを無料でセカンドオピニオン査定いたします。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -2616,6 +2677,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
+                <a href="/column/027-hiring-vs-outsourcing-cost-comparison.html">
+                  <span class="related-item-date">2026.09.02</span>
+                  <span class="related-item-title">自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/026-non-it-smb-system-development-no-engineer.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。</span>
@@ -2637,12 +2704,6 @@
                 <a href="/column/024-filemaker-access-legacy-modernization.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/022-pwa-web-app-vs-native-cost-comparison.html">
-                  <span class="related-item-date">2026.09.01</span>
-                  <span class="related-item-title">アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。</span>
                 </a>
               </li>
           </ul>
