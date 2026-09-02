@@ -43,18 +43,23 @@ def main():
     period_date = today.strftime('%Y.%m.%d')
     iso_date = today.strftime('%Y-%m-%d')
     
-    # Generate body HTML
-    body_html = ""
-    # Add body sections
-    for sec in target_post["body_sections"]:
-        body_html += f"\n          <h2>{sec['h2']}</h2>\n          {sec['text']}\n"
-        
-    # Add FAQ section
+    # Build TOC items and body HTML
+    toc_items = []
+    sections_html = ""
+    for idx, sec in enumerate(target_post["body_sections"], start=1):
+        sec_id = f"sec-{idx}"
+        toc_items.append(f'              <li><a href="#{sec_id}">{sec["h2"]}</a></li>')
+        sections_html += f'\n          <h2 id="{sec_id}">{sec["h2"]}</h2>\n          {sec["text"]}\n'
+
     if "questions" in target_post and target_post["questions"]:
-        body_html += '\n          <h2 id="section-faq">よくある質問</h2>\n          <div class="faq-container">\n'
+        toc_items.append('              <li><a href="#section-faq">よくある質問</a></li>')
+        sections_html += '\n          <h2 id="section-faq">よくある質問</h2>\n          <div class="faq-container">\n'
         for qa in target_post["questions"]:
-            body_html += f'            <div class="faq-item">\n              <h3>{qa["q"]}</h3>\n              <p>{qa["a"]}</p>\n            </div>\n'
-        body_html += '          </div>\n'
+            sections_html += f'            <div class="faq-item">\n              <h3>{qa["q"]}</h3>\n              <p>{qa["a"]}</p>\n            </div>\n'
+        sections_html += '          </div>\n'
+
+    toc_box_html = '\n          <div class="toc-box">\n            <div class="toc-title">目次</div>\n            <ul class="toc-list">\n' + '\n'.join(toc_items) + '\n            </ul>\n          </div>\n'
+    body_html = toc_box_html + sections_html
         
     # Generate custom SVG banner (Premium Light Slate Style - Single Line)
     summary_text = f"{target_post['title_line2']}がわかる" if not target_post['title_line2'].endswith("わかる") else target_post['title_line2']
