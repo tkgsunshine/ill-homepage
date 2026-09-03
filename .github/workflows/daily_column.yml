@@ -1,0 +1,32 @@
+name: Daily Column Auto-Generator Pipeline
+
+on:
+  schedule:
+    # 10:00 JST = 01:00 UTC, 18:00 JST = 09:00 UTC
+    - cron: '0 1,9 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Column Generation & Index Pipeline
+        run: |
+          python3 scripts/generate_next_blog_post.py
+          python3 scripts/convert_all_banners_to_single_line.py
+
+      - name: Commit and Push Changes to Main
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m "Auto-generate daily B2B column via GitHub Actions"
+          git push origin main
