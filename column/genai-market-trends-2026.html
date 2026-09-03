@@ -4156,6 +4156,59 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "2026年生成AI市場動向"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. AIエージェントの開発には多大な初期投資が必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。最初から高度なマルチエージェントシステムを作るのではなく、まずは既存のLLM（OpenAIやClaudeなど）にツール（Web SearchやカスタムPythonスクリプト）を1〜2個連携させる「シングルエージェント」のプロトタイプであれば、1〜2週間程度のミニマル開発で低コストに構築が可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 社内機密データが外部のLLMモデルの学習に使用されることはありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由でのLLM利用（Azure OpenAI ServiceやAWS Bedrockなど）や、適切なエンタープライズ契約・ローカルLLM（Llama3など）の導入により、データが外部モデルの学習に送信されることを防ぐ堅牢なインフラ設計が可能です。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4455,6 +4508,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
                         <ul class="related-list">
               <li class="related-item">
+                <a href="/column/028-excel-to-web-system-dx-cost.html">
+                  <span class="related-item-date">2026.09.03</span>
+                  <span class="related-item-title">Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/027-hiring-vs-outsourcing-cost-comparison.html">
                   <span class="related-item-date">2026.09.02</span>
                   <span class="related-item-title">自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。</span>
@@ -4476,12 +4535,6 @@
                 <a href="/column/023-line-api-chatbot-customer-support-cost.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/024-filemaker-access-legacy-modernization.html">
-                  <span class="related-item-date">2026.09.01</span>
-                  <span class="related-item-title">老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。</span>
                 </a>
               </li>
           </ul>
