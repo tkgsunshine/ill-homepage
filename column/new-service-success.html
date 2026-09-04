@@ -4894,6 +4894,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "新規サービス開発で成功する5つのコツ"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 技術の知識がありませんが、どのような基準でMVP（最小限機能）のスコープを決めればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「その機能がなくても、ユーザーの最大の痛み（課題）を解決できるか？」という基準で判断します。例えば、フリマアプリであれば、最も大事なのは「ユーザーが出品して、購入できること」です。初期リリース段階では、チャット機能や高度な検索フィルター、お気に入り機能などは「なくても成立する」ため、MVPスコープからは除外します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. リリースした後に、実際のユーザーからフィードバックを集めるコツはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "初期はシステムによる自動のアンケートよりも、個別に対面やオンラインミーティングで「動いている画面」を見せながらヒアリングするのが最も効果的です。ユーザーが画面のどこで操作を迷っているか（UIのバグや分かりにくさ）を観察し、数日のうちにそれを修正・反映するスピード感を見せることで、ファン化にも繋がります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 新規開発したシステムを長期的かつ安定的に成功させるための「保守」の考え方は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "開発して終わりではなく、「保守・運用（改善）」のための予算をあらかじめ確保しておくことが大切です。特にローンチ直後は、実際のアクセス傾向や使われ方によって改修箇所が必ず発生します。初期開発に予算を全額投入するのではなく、全体の3割程度をリリース後の改善・運用資金として残しておくことが成功のコツです。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -5200,6 +5261,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
                                                 <ul class="related-list">
               <li class="related-item">
+                <a href="/column/030-smb-system-development-cost-standard.html">
+                  <span class="related-item-date">2026.09.04</span>
+                  <span class="related-item-title">システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/029-non-it-smb-genai-business-efficiency.html">
                   <span class="related-item-date">2026.09.03</span>
                   <span class="related-item-title">自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。</span>
@@ -5221,12 +5288,6 @@
                 <a href="/column/026-non-it-smb-system-development-no-engineer.html">
                   <span class="related-item-date">2026.09.01</span>
                   <span class="related-item-title">自社にエンジニアがいない中小企業がシステム開発の外注で騙されないための防衛策。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/025-web-scraping-automation-marketing-leads.html">
-                  <span class="related-item-date">2026.09.01</span>
-                  <span class="related-item-title">Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。</span>
                 </a>
               </li>
           </ul>
