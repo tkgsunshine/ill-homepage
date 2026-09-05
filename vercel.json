@@ -1,12 +1,68 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/works", "destination": "/cases/", "permanent": true },
-    { "source": "/works/:path*", "destination": "/cases/", "permanent": true },
-    { "source": "/news_category/:path*", "destination": "/column/", "permanent": true },
-    { "source": "/category/:path*", "destination": "/column/", "permanent": true },
-    { "source": "/news/:path*", "destination": "/column/", "permanent": true },
-    { "source": "/service/:path*", "destination": "/", "permanent": true },
-    { "source": "/author/:path*", "destination": "/", "permanent": true }
+    {
+      "source": "/works",
+      "destination": "/cases/",
+      "permanent": true
+    },
+    {
+      "source": "/works/:path*",
+      "destination": "/cases/",
+      "permanent": true
+    },
+    {
+      "source": "/news_category/:path*",
+      "destination": "/column/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/column/",
+      "permanent": true
+    },
+    {
+      "source": "/news/:path*",
+      "destination": "/column/",
+      "permanent": true
+    },
+    {
+      "source": "/service/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*).(css|js|svg|png|jpg|jpeg|gif|webp|woff2|ico)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
   ]
 }
