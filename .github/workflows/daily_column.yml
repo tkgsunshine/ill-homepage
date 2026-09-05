@@ -2,8 +2,8 @@ name: Daily Column Auto-Generator Pipeline
 
 on:
   schedule:
-    # 10:00 JST = 01:00 UTC, 18:00 JST = 09:00 UTC
-    - cron: '0 1,9 * * *'
+    # 8:00 AM JST = 23:00 UTC, 17:00 (5:00 PM) JST = 08:00 UTC
+    - cron: '0 8,23 * * *'
   workflow_dispatch:
 
 jobs:
