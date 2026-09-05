@@ -4474,6 +4474,59 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "新規事業のMVP検証手法"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. AIエージェントの開発には多大な初期投資が必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。最初から高度なマルチエージェントシステムを作るのではなく、まずは既存のLLM（OpenAIやClaudeなど）にツール（Web SearchやカスタムPythonスクリプト）を1〜2個連携させる「シングルエージェント」のプロトタイプであれば、1〜2週間程度のミニマル開発で低コストに構築が可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 社内機密データが外部のLLMモデルの学習に使用されることはありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由でのLLM利用（Azure OpenAI ServiceやAWS Bedrockなど）や、適切なエンタープライズ契約・ローカルLLM（Llama3など）の導入により、データが外部モデルの学習に送信されることを防ぐ堅牢なインフラ設計が可能です。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4785,6 +4838,12 @@
                 </a>
               </li>
               <li class="related-item">
+                <a href="/column/034-smb-ec-site-development-shopify-cost.html">
+                  <span class="related-item-date">2026.09.05</span>
+                  <span class="related-item-title">ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/031-nocode-limitations-real-development-cost.html">
                   <span class="related-item-date">2026.09.05</span>
                   <span class="related-item-title">ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。</span>
@@ -4794,12 +4853,6 @@
                 <a href="/column/030-smb-system-development-cost-standard.html">
                   <span class="related-item-date">2026.09.04</span>
                   <span class="related-item-title">システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/029-non-it-smb-genai-business-efficiency.html">
-                  <span class="related-item-date">2026.09.03</span>
-                  <span class="related-item-title">自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。</span>
                 </a>
               </li>
           </ul>
