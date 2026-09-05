@@ -5016,6 +5016,67 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "要件定義のコツ"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 要件定義は開発会社に「丸投げ」しても大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "絶対に避けるべきです。「システム要件（技術的な実装方法）」はエンジニアが主導しますが、「ビジネス要件（解決したい課題、システムを使う業務フロー）」は事業主体である貴社にしか定義できません。丸投げされた開発会社は、一般的な仕様を想像で構築するため、貴社の実業務に全くフィットしないシステムが納品されるリスクが極めて高くなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 設計書に「後から仕様変更ができるような文言」を入れておけば安全ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「請負契約」である場合、設計書にいくら曖昧な文言を書いても、見積もりの範囲を超える変更には追加費用が発生します。要件定義を進める段階で、最初から「変更が頻繁に起こる前提の契約（準委任や日本とベトナムのハイブリッドのラボ型体制）」を選択しておくことが、契約上のトラブルを回避する最善策です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q3. 非機能要件（セキュリティやバックアップ等）はどのように定義すればよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "非機能要件は専門知識が必要なため、開発会社がリードして定義書を作成すべき項目です。ただし、発注側としては「想定する同時アクセス数」「障害発生時に何時間以内の復旧を求めるか」「個人情報を含むデータの有無」の3点を伝えておくだけで、適切なインフラとバックアップ設計が提示されます。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -5307,6 +5368,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
                                                 <ul class="related-list">
               <li class="related-item">
+                <a href="/column/032-non-it-contract-types-risk-management.html">
+                  <span class="related-item-date">2026.09.05</span>
+                  <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/031-nocode-limitations-real-development-cost.html">
                   <span class="related-item-date">2026.09.05</span>
                   <span class="related-item-title">ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。</span>
@@ -5328,12 +5395,6 @@
                 <a href="/column/028-excel-to-web-system-dx-cost.html">
                   <span class="related-item-date">2026.09.03</span>
                   <span class="related-item-title">Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/027-hiring-vs-outsourcing-cost-comparison.html">
-                  <span class="related-item-date">2026.09.02</span>
-                  <span class="related-item-title">自社でエンジニアを採用する固定費リスクと、開発外注を活用した方が圧倒的に安く収まる理由。</span>
                 </a>
               </li>
           </ul>
