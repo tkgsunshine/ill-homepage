@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>レガシーシステム刷新（モダナイゼーション）の手順と移行コスト | Ill（イル）株式会社</title>
-  <meta name="description" content="老朽化した既存システム（レガシーシステム）の刷新パターン、AWS/GCP移行時のメリット、ダウンタイムを最小限に抑える段階的移行プロセスを徹底解説。">
-  <meta name="keywords" content="レガシーシステム 刷新,マイグレーション,システム移行,2025年の崖,システム開発,Ill Inc.">
-  <meta name="author" content="山下 高志">
+  <title>ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。 | Ill（イル）株式会社</title>
+  <meta name="description" content="初期費用が安いとされるノーコードツールの限界（ユーザー数増加による課金高騰や機能拡張性の無さ）を解説し、最初から安価なスクラッチ開発を選んだ方が良いケースを提示。">
+  <meta name="keywords" content="ノーコード開発 限界,ノーコード 費用 高騰,スクラッチ開発 メリット,システム拡張性 比較">
+  <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
   <meta name="robots" content="index, follow">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.ill-inc.net/column/legacy-system-modernization.html">
+  <link rel="canonical" href="https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html">
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="レガシーシステム刷新（マイグレーション）の進め方と移行ステップ | Ill inc. コラム">
-  <meta property="og:description" content="老朽化したレガシーシステムが引き起こす経営損失やリスクと、システム刷新（マイグレーション）の3大アプローチを解説。失敗しないシステム移行の5ステップとIll Inc.のミニマルな移行計画を紹介。">
-  <meta property="og:url" content="https://www.ill-inc.net/column/legacy-system-modernization.html">
+  <meta property="og:title" content="生成AIが誕生した流れと従来のAIとの決定的な違いを解説 | Ill inc. コラム">
+  <meta property="og:description" content="ディープラーニングからTransformer、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来のAIとの違いを解説。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
   <meta property="og:image:width" content="1024">
@@ -26,8 +26,8 @@
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="レガシーシステム刷新（マイグレーション）の進め方と移行ステップ | Ill inc. コラム">
-  <meta name="twitter:description" content="老朽化したレガシーシステムが引き起こす経営損失やリスクと、システム刷新（マイグレーション）の3大アプローチを解説。失敗しないシステム移行の5ステップとIll Inc.のミニマルな移行計画を紹介。">
+  <meta name="twitter:title" content="生成AIが誕生した流れと従来のAIとの決定的な違いを解説 | Ill inc. コラム">
+  <meta name="twitter:description" content="ディープラーニングからTransformer、そして大規模言語モデル（LLM）への進化という生成AI誕生の歴史を振り返り、従来のAIとの違いを解説。">
   <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
   
   <!-- Favicons -->
@@ -45,21 +45,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../style.css?v=61">
-
+  
   <!-- JSON-LD Structured Data (Article Schema) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "レガシーシステム刷新（マイグレーション）の進め方：塩漬けシステムを脱却しDXを成功させるステップ",
-    "description": "老朽化したレガシーシステムが引き起こす経営損失やリスクと、システム刷新（マイグレーション）の3大アプローチを解説。失敗しないシステム移行の5ステップとIll Inc.のミニマルな移行計画を紹介。",
+    "headline": "ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。",
+    "description": "初期費用が安いとされるノーコードツールの限界（ユーザー数増加による課金高騰や機能拡張性の無さ）を解説し、最初から安価なスクラッチ開発を選んだ方が良いケースを提示。",
     "image": "https://www.ill-inc.net/ogp.png?v=1",
-    "datePublished": "2026-07-23",
-    "dateModified": "2026-07-23",
+    "datePublished": "2026-09-05",
+    "dateModified": "2026-09-05",
     "author": {
-      "@type": "Person",
-      "name": "山下 高志",
-      "jobTitle": "Representative of Ill inc."
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社"
     },
     "publisher": {
       "@type": "Organization",
@@ -71,8 +70,35 @@
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.ill-inc.net/column/legacy-system-modernization.html"
+      "@id": "https://www.ill-inc.net/column/history-and-difference-of-generative-ai.html"
     }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ill-inc.net/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "コラム",
+        "item": "https://www.ill-inc.net/column/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "生成AI誕生の歴史と従来のAIとの違い"
+      }
+    ]
   }
   </script>
 
@@ -97,195 +123,12 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
   </script>
 
-  <!-- FAQ Structured Data -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Q1. システムの刷新（リプレイス）には数千万円以上の予算が必要ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "全体の範囲を一度に移行しようとすると高額になります。しかし、機能ごとに優先順位をつけ、クラウドへ段階的に移行する（ハイブリッド構成）または不要な機能を廃止する「ミニマル移行」を行えば、初期費用を抑えて段階的にプロジェクトを進めることができます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Q2. 移行期間中に現行システムを停止させる必要がありますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "データベース同期やDNS切り替え（新旧サーバー切り替え）のタイミングで、一時的に書き込み制限や数分〜数時間程度の夜間メンテナンス停止を挟むことが一般的です。しかし、並行運用期間を設けることで、業務への影響を実質ゼロに抑える無停止移行設計も可能です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Q3. 既存の古いデータベース構造をそのまま新システムに流用すべきですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "非推奨です。古いデータベース（RDB）のテーブル設計には、長年の改修による歪みや不要データが含まれています。システム刷新のタイミングでデータクレンジングとスキーマ最適化（テーブル構造の再設計）を行うことで、新システム稼働後のパフォーマンスと開発効率が大幅に向上します。"
-      }
-    }
-  ]
-}
-  </script>
-
-  <!-- Breadcrumb Structured Data -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.ill-inc.net/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "コラム",
-      "item": "https://www.ill-inc.net/column/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "レガシーシステム刷新の進め方"
-    }
-  ]
-}
-  </script>
-
-  <!-- FAQ Structured Data -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Q1. システムの刷新（リプレイス）には数千万円以上の予算が必要ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "全体の範囲を一度に移行しようとすると高額になります。しかし、機能ごとに優先順位をつけ、クラウドへ段階的に移行する（ハイブリッド構成）または不要な機能を廃止する「ミニマル移行」を行えば、初期費用を抑えて段階的にプロジェクトを進めることができます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Q2. 移行期間中に現行システムを停止させる必要がありますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "データベース同期やDNS切り替え（新旧サーバー切り替え）のタイミングで、一時的に書き込み制限や数分〜数時間程度の夜間メンテナンス停止を挟むことが一般的です。しかし、並行運用期間を設けることで、業務への影響を実質ゼロに抑える無停止移行設計も可能です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Q3. 既存の古いデータベース構造をそのまま新システムに流用すべきですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "非推奨です。古いデータベース（RDB）のテーブル設計には、長年の改修による歪みや不要データが含まれています。システム刷新のタイミングでデータクレンジングとスキーマ最適化（テーブル構造の再設計）を行うことで、新システム稼働後のパフォーマンスと開発効率が大幅に向上します。"
-      }
-    }
-  ]
-}
-  </script>
-
-  <!-- Breadcrumb Structured Data -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.ill-inc.net/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "コラム",
-      "item": "https://www.ill-inc.net/column/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "レガシーシステム刷新の進め方"
-    }
-  ]
-}
-  </script>
-
-  <!-- FAQ Structured Data -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Q1. システムの刷新（リプレイス）には数千万円以上の予算が必要ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "全体の範囲を一度に移行しようとすると高額になります。しかし、機能ごとに優先順位をつけ、クラウドへ段階的に移行する（ハイブリッド構成）または不要な機能を廃止する「ミニマル移行」を行えば、初期費用を抑えて段階的にプロジェクトを進めることができます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Q2. 移行期間中に現行システムを停止させる必要がありますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "データベース同期やDNS切り替え（新旧サーバー切り替え）のタイミングで、一時的に書き込み制限や数分〜数時間程度の夜間メンテナンス停止を挟むことが一般的です。しかし、並行運用期間を設けることで、業務への影響を実質ゼロに抑える無停止移行設計も可能です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Q3. 既存の古いデータベース構造をそのまま新システムに流用すべきですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "非推奨です。古いデータベース（RDB）のテーブル設計には、長年の改修による歪みや不要データが含まれています。システム刷新のタイミングでデータクレンジングとスキーマ最適化（テーブル構造の再設計）を行うことで、新システム稼働後のパフォーマンスと開発効率が大幅に向上します。"
-      }
-    }
-  ]
-}
-  </script>
-
-  <!-- Breadcrumb Structured Data -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.ill-inc.net/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "コラム",
-      "item": "https://www.ill-inc.net/column/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "レガシーシステム刷新の進め方"
-    }
-  ]
-}
-  </script>
-
   <!-- Breadcrumb Structured Data -->
   <script type="application/ld+json">
   {
@@ -307,7 +150,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -334,7 +177,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -361,7 +204,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -388,7 +231,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -415,7 +258,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -442,7 +285,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -469,7 +312,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -496,7 +339,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -523,7 +366,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -550,7 +393,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -577,7 +420,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -604,7 +447,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -631,7 +474,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -658,7 +501,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -685,7 +528,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -712,7 +555,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -739,7 +582,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -766,7 +609,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -793,7 +636,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -820,7 +663,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -847,7 +690,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -874,7 +717,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -901,7 +744,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -928,7 +771,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -955,7 +798,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -982,7 +825,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1009,7 +852,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1036,7 +879,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1063,7 +906,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1090,7 +933,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1117,7 +960,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1144,7 +987,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1171,7 +1014,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1198,7 +1041,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1225,7 +1068,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1252,7 +1095,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1279,7 +1122,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1306,7 +1149,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1333,7 +1176,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1360,7 +1203,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1387,7 +1230,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1414,7 +1257,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1441,7 +1284,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1468,7 +1311,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1495,7 +1338,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1522,7 +1365,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1549,7 +1392,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1576,7 +1419,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1603,7 +1446,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1630,7 +1473,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1657,7 +1500,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1684,7 +1527,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1711,7 +1554,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1738,7 +1581,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1765,7 +1608,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1792,7 +1635,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1819,7 +1662,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1846,7 +1689,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1873,7 +1716,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1900,7 +1743,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1927,7 +1770,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1954,7 +1797,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -1981,7 +1824,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2008,7 +1851,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2035,7 +1878,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2062,7 +1905,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2089,7 +1932,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2116,7 +1959,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2143,7 +1986,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2170,7 +2013,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2197,7 +2040,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2224,7 +2067,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2251,7 +2094,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2278,7 +2121,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2305,7 +2148,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2332,7 +2175,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "生成AI誕生の歴史と従来のAIとの違い"
     }
   ]
 }
@@ -2359,7 +2202,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "レガシーシステム刷新の進め方"
+      "name": "ノーコードとスクラッチ開発の損益分岐点"
     }
   ]
 }
@@ -2367,7 +2210,6 @@
 </head>
 <body class="theme-light">
 
-  <!-- Background Orbs Container -->
   <div class="secondary-orbs"></div>
 
   <!-- HEADER -->
@@ -2375,7 +2217,6 @@
     <div class="container">
       <a href="../index.html" class="logo" id="logo">
         <div class="logo-icon">
-          <!-- Stylized III / Ill Logo with Gradients -->
           <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
@@ -2389,12 +2230,9 @@
             <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
           </svg>
         </div>
-        <div class="logo-text">
-          ILL<span>INC.</span>
-        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
       </a>
       
-      <!-- Desktop Navigation -->
       <nav class="nav" id="nav-menu">
         <ul class="nav-list">
           <li><a href="../index.html#hero" class="nav-link">Home</a></li>
@@ -2408,7 +2246,6 @@
         <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
       </nav>
 
-      <!-- Mobile Toggle -->
       <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
         <span class="menu-toggle-lines"></span>
       </button>
@@ -2419,44 +2256,38 @@
   <section class="section" style="padding-top: 10rem;">
     <div class="container">
       
-      <!-- Breadcrumbs -->
       <div class="breadcrumbs">
-        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
-        <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
-        <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">レガシーシステム刷新の進め方</span>
+        <span class="breadcrumb-item">ノーコードとスクラッチ開発の損益分岐点</span>
       </div>
 
-      <!-- Article Header -->
       <header class="article-header">
-        <span class="article-category">システム・アプリ開発</span>
-        <h1 class="article-title">レガシーシステム刷新（マイグレーション）の進め方：塩漬けシステムを脱却しDXを成功させるステップ</h1>
+        <span class="article-category">新規事業・MVP検証</span>
+        <h1 class="article-title">ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。</h1>
         <div class="article-meta-info">
           <div class="article-meta-item">
-            <span>公開日: 2026.07.23</span>
+            <span>公開日: 2026.09.05</span>
           </div>
           <div class="article-meta-item">
-            <span>著者: 山下 高志 (Ill inc. 代表)</span>
+            <span>著者: Ill inc. 編集部</span>
           </div>
         </div>
       </header>
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「レガシーシステム刷新（モダナイゼーション）の手順と移行コスト」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-legacy_system_modernization" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-legacy_system_modernization" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-legacy_system_modernization)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -2486,7 +2317,7 @@
           <circle cx="900" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
 
           <!-- Large Background English text -->
-          <text x="500" y="270" text-anchor="middle" fill="#0EA5E9" font-size="90" font-family="'Outfit', sans-serif" font-weight="900" opacity="0.05" letter-spacing="0.1em">TECHNOLOGY INSIGHTS</text>
+          <text x="500" y="270" text-anchor="middle" fill="#0EA5E9" font-size="90" font-family="'Outfit', sans-serif" font-weight="900" opacity="0.05" letter-spacing="0.1em">NOCODE LIMITS VS SCRATCH VOL31</text>
           
           <!-- Corner Lines -->
           <line x1="50" y1="50" x2="150" y2="50" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
@@ -2495,147 +2326,80 @@
           <line x1="950" y1="378" x2="850" y2="378" stroke="#10B981" stroke-width="2" opacity="0.6"/>
           <line x1="950" y1="378" x2="950" y2="278" stroke="#10B981" stroke-width="2" opacity="0.6"/>
 
-          <!-- Centered Main message (1 or 2 lines) -->
-          <text x="500" y="210" text-anchor="middle" fill="url(#text-grad-legacy_system_modernization)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">古いシステムを安全に</text>
-          <text x="500" y="270" text-anchor="middle" fill="url(#text-grad-legacy_system_modernization)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">刷新するモダナイゼーション</text>
+
+
+          <!-- Single Centered Main message -->
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">ノーコードとスクラッチ開発の損益分岐点がわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
       </div>
 
-      <!-- Article 2-Column Grid -->
       <div class="article-layout">
-        
-        <!-- Left Column: Main Body Content -->
         <main class="article-body">
-          <!-- Table of Contents -->
-          
-            <ul class="toc-list">
-              <li><a href="#section-1">老朽化した「レガシーシステム」が引き起こす経営損失</a></li>
-              <li><a href="#section-2">システム刷新（マイグレーション）の3大アプローチ</a></li>
-              <li><a href="#section-3">失敗を防ぐ！システム刷新プロジェクトの5ステップ</a></li>
-              <li><a href="#section-4">Ill Inc.が推奨する「ミニマル移行（段階的移行）」の提案</a></li>
-              <li><a href="#section-faq">システムマイグレーションに関するよくある質問（FAQ）</a></li>
-              <li><a href="#section-5">まとめ：システム刷新は手段であり、目的は事業価値の創出である</a></li>
-            </ul>
-          </div>
-
-
-          <p>
-            稼働から10年以上が経過し、ブラックボックス化した基幹システムや、特定の退職エンジニアしかコードを触れない古いシステム。これらは<strong>「レガシーシステム」</strong>と呼ばれ、企業のデジタルトランスフォーメーション（DX）を阻む最大の要因です。
-          </p>
-          <p>
-            経済産業省が発表した「DXレポート」では、レガシーシステムを放置し続けることで生じる経済損失が2025年以降に最大12兆円／年に達する<strong>「2025年の崖」</strong>として警鐘が鳴らされました。本コラムでは、塩漬けシステムを脱却し、最新のクラウド環境へ移行するための実践的なアプローチを解説します。
-          </p>
-
-          
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">老朽化した「レガシーシステム」が引き起こす経営損失</a></li>
-              <li><a href="#sec-2">システム刷新（マイグレーション）の3大アプローチ</a></li>
-              <li><a href="#sec-3">失敗を防ぐ！システム刷新プロジェクトの5ステップ</a></li>
-              <li><a href="#sec-4">Ill Inc.が推奨する「ミニマル移行（段階的移行）」の提案</a></li>
+              <li><a href="#sec-1">1. 【ノーコード開発 限界】ノーコードとスクラッチ開発の損益分岐点の背景と直面する現場課題</a></li>
+              <li><a href="#sec-2">2. 【ノーコード 費用 高騰】費用を最小限に抑え効果を最大化する3つの鉄則</a></li>
+              <li><a href="#sec-3">3. 【スクラッチ開発 メリット】導入ステップと失敗しないための発注者チェックリスト</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-<h2 id="sec-1">老朽化した「レガシーシステム」が引き起こす経営損失</h2>
-          <p>
-            レガシーシステムを放置することには、主に以下の3つの深刻な経営リスクがあります。
-          </p>
-          <ul>
-            <li><strong>保守・運用費の高止まり（技術的負債）</strong>：古いハードウェアやパッケージソフトウェアの延長サポート費用が膨らみ、IT予算の大部分が「維持費」に消え、新規事業への投資が圧迫されます。</li>
-            <li><strong>セキュリティリスクの深刻化</strong>：最新のOSやセキュリティパッチが適用できないため、システム侵害や情報漏洩のリスクが日を追うごとに増大します。</li>
-            <li><strong>ビジネスチャンスの喪失（スピードの低下）</strong>：新しい外部システムやSaaSと連携できないため、スマートフォンの対応やAIの導入が遅れ、競合他社にリードを許すことになります。</li>
-          </ul>
+          <h2 id="sec-1">1. 【ノーコード開発 限界】ノーコードとスクラッチ開発の損益分岐点の背景と直面する現場課題</h2>
+          <p>近年のデジタル変革（DX）において、<strong>ノーコード開発 限界</strong> や <strong>ノーコード 費用 高騰</strong> に取り組む企業が急増しています。しかし、事前の準備不足や無用な高額見積もりにより、途中で頓挫するケースも少なくありません。</p>
+<p>多くの企業現場では、以下のような課題が顕在化しています。</p>
+<ul>
+  <li><strong>コストの高騰と不透明感</strong>: 「一式表記」の見積もりにより、開発費用や維持費が膨らむリスク。</li>
+  <li><strong>運用フローとのミスマッチ</strong>: 汎用パッケージの強引な適用により、社内運用に適合しない課題。</li>
+  <li><strong>IT人材・専任者の不在</strong>: 社内に専門エンジニアがおらず、開発会社の主導権に押し切られるケース。</li>
+</ul>
 
-          <h2 id="sec-2">システム刷新（マイグレーション）の3大アプローチ</h2>
-          <p>
-            既存のシステムを移行する際、コストやリスクに応じて以下の3つのいずれかのアプローチを選択します。
-          </p>
+          <h2 id="sec-2">2. 【ノーコード 費用 高騰】費用を最小限に抑え効果を最大化する3つの鉄則</h2>
+          <p><strong>ノーコード 費用 高騰</strong> を実現し、限られた予算内で最大の投資対効果（ROI）を引き出すための成功原則は以下の3点です。</p>
+<ol>
+  <li><strong>コア機能に絞ったミニマル設計（PoC / MVP）</strong>: 無駄な装飾機能を削ぎ落とし、事業成果に直結する機能から段階的に構築すること。</li>
+  <li><strong>生成AIを活用した開発工程の高速化</strong>: コード生成やテストの自動化により、人件費・開発工数を大幅に圧縮すること。</li>
+  <li><strong>拡張性を考慮したオープンアーキテクチャ</strong>: 将来的な外部API連携やデータベース拡張を容易にするモダンな技術選定を行うこと。</li>
+</ol>
 
-          <div class="article-table-wrapper">
-            <table class="article-table">
-              <thead>
-                <tr>
-                  <th>移行アプローチ</th>
-                  <th>手法の概要</th>
-                  <th>開発コスト / 移行リスク</th>
-                  <th>主なメリット</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>リビルド（再構築）</strong></td>
-                  <td>要件定義からシステムをゼロベースで作り直す</td>
-                  <td>高い / 高い</td>
-                  <td>業務プロセスの刷新と最新アーキテクチャの完全導入</td>
-                </tr>
-                <tr>
-                  <td><strong>リプラットフォーム</strong></td>
-                  <td>コードの大枠は維持し、データベースやOSをクラウド環境に最適化する</td>
-                  <td>中 / 中</td>
-                  <td>工数を抑えつつ、クラウドの柔軟性・保守性を確保</td>
-                </tr>
-                <tr>
-                  <td><strong>リホスト（コールド移行）</strong></td>
-                  <td>プログラムや設定をそのまま（変更なしで）新しいインフラ（クラウド等）へ移す</td>
-                  <td>低い / 低い</td>
-                  <td>最も短期間でインフラの老朽化ハードウェア問題を解決</td>
-                </tr>
-              </tbody>
-            </table>
+          <h2 id="sec-3">3. 【スクラッチ開発 メリット】導入ステップと失敗しないための発注者チェックリスト</h2>
+          <p><strong>スクラッチ開発 メリット</strong> を具体化するにあたっては、以下のステップで進めることが成功の近道です。</p>
+<p>初期の要件定義で課題を洗い出し、プロトタイプ画面で現場の合意を得た上で開発に進みます。</p>
+<div style="background: rgba(14, 165, 233, 0.08); border-left: 4px solid #0EA5E9; padding: 18px 20px; border-radius: 4px; margin: 24px 0;">
+  <strong style="color: #0EA5E9; display: block; margin-bottom: 8px;">💡 【発注者向け】重要チェックリスト</strong>
+  <ul style="margin: 0; padding-left: 20px; font-size: 0.95rem; line-height: 1.7;">
+    <li>ターゲットキーワード（<strong>ノーコード開発 限界</strong>）に対応する要件が明確化されているか</li>
+    <li>見積書の工程別・人月単価の内訳が透明化されているか</li>
+    <li>納品後の運用・保守コストが適正範囲に収まっているか</li>
+  </ul>
+</div>
+<p>株式会社イルでは、お客様の課題に合わせた最適なミニマル設計をご提案いたします。お気軽にご相談ください。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>ノーコードで作ったシステムを、後からスクラッチコードへ移行できますか？</h3>
+              <p>多くのノーコードツールはソースコードを出力できないため、移行時は一から作り直す必要があります。そのため将来スケールする事業は最初からスクラッチ開発を推奨します。</p>
+            </div>
           </div>
 
-          <h2 id="sec-3">失敗を防ぐ！システム刷新プロジェクトの5ステップ</h2>
-          <p>
-            多くの移行プロジェクトが炎上・頓挫する原因は、現行システムの仕様を完全に把握しないまま見切り発車で作り直してしまうことにあります。以下のステップを踏むことで安全に移行できます。
-          </p>
-          <ol>
-            <li><strong>現行システムの棚卸し（アセスメント）</strong>：現在動いている機能のリストを作り、「現在使われていない機能」を徹底して洗い出し、移行対象から削ります。</li>
-            <li><strong>移行アプローチの決定</strong>：リビルド・リプラットフォーム・リホストのいずれを採用するか決定します。</li>
-            <li><strong>データの設計とクレンジング</strong>：古いデータベース内の表記ゆれや破損データをクリーンアップし、新設計のデータベースに移行する準備をします。</li>
-            <li><strong>並行運用とテスト</strong>：新旧のシステムを一時的に同時に稼働させ、処理結果（売上や集計値など）にズレが生じないかを精緻に確認（突合テスト）します。</li>
-            <li><strong>段階的な切り替え</strong>：一発で切り替える「ビッグバン移行」を避け、部署や一部の機能単位で段階的に切り替えてリスクを制御します。</li>
-          </ol>
-
-          <h2 id="sec-4">Ill Inc.が推奨する「ミニマル移行（段階的移行）」の提案</h2>
-          <p>
-            私たち <strong>Ill（イル）株式会社 (Ill inc.)</strong> では、膨大な予算を投じてすべてを一度に作り直す「ビッグバン型リビルド」は原則推奨しません。
-          </p>
-          <p>
-            既存システムを細分化し、まず「問い合わせデータ管理」や「会員フロント」など、ビジネス上最も早く改善が必要な部分だけをAPI経由でクラウドに切り出す<strong>「ミニマル移行（段階的移行）」</strong>を提案します。
-          </p>
-          <p>
-            これにより、初期投資リスクを最小限に抑え、実業務を継続しながら段階的にシステム全体をモダンなアーキテクチャへと昇華させることが可能になります。
-          </p>
-        
-
-                    <!-- Conversion CTA Box -->
-          <div class="inline-cta glass-card">
-            <h3 class="inline-cta-title">新規のシステム・アプリ開発を「どこよりも安く」形にしませんか？</h3>
-            <p class="inline-cta-desc">Ill（イル）株式会社では、Webシステムやスマホアプリの新規開発プロジェクトを、無駄な設計や過剰要件を削ることで、どこの開発会社よりも抑えた圧倒的な低コストで開発いたします。他社見積もりが高すぎた方や、まずは安くプロトタイプを作りたい方は、ぜひお気軽にご相談ください。</p>
-            <a href="../index.html#contact" class="btn btn-primary">業界最安値水準で無料見積もりを依頼する</a>
-          </div>
         </main>
 
-        <!-- Right Column: Sidebar -->
         <aside class="sidebar">
-          
-          <!-- Author Profile Widget -->
           <div class="sidebar-box glass-card author-profile">
-            <div class="author-avatar">山</div>
-            <h3 class="author-name">山下 高志</h3>
-            <p class="author-role">Ill inc. 代表取締役</p>
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Technology Research Division</p>
             <p class="author-bio">
-              大手SierおよびテックスタートアップでのPMを経て、Ill（イル）株式会社を設立。「必要十分なミニマル設計」を掲げ、数多くの新規事業・アプリ構築のシステムコンサルティングと実装を担当。生成AIワークフローとグローバル混成体制を用いた開発推進を得意とする。
+              最先端のAIトレンド（GenAI / Agentic AI）のビジネス応用、LLMセキュリティ、RAGアーキテクチャ設計などの知見を発信。新規事業における迅速な技術検証とPoC設計を担当。
             </p>
           </div>
 
-          <!-- Related Columns Widget -->
           <div class="sidebar-box glass-card">
             <h3 class="sidebar-title">最近のコラム</h3>
-                                                <ul class="related-list">
+            <ul class="related-list">
               <li class="related-item">
                 <a href="/column/031-nocode-limitations-real-development-cost.html">
                   <span class="related-item-date">2026.09.05</span>
@@ -2669,7 +2433,6 @@
           </ul>
           </div>
 
-          <!-- Sidebar conversion CTA Widget -->
           <div class="sidebar-box glass-card sidebar-cta">
             <h3 class="sidebar-cta-title">お気軽にご相談ください</h3>
             <p class="sidebar-cta-desc">
@@ -2677,10 +2440,10 @@
             </p>
             <a href="../index.html#contact" class="btn btn-secondary">問い合わせる</a>
           </div>
-
         </aside>
-
       </div>
+      </div>
+
     </div>
   </section>
 
@@ -2691,7 +2454,6 @@
         <div class="footer-brand">
           <a href="../index.html" class="logo footer-logo">
             <div class="logo-icon">
-              <!-- SVG Logo -->
               <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
                 <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
@@ -2731,19 +2493,21 @@
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-bottom-flex">
-          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
-          <div class="footer-meta-links">
-            <span class="company-sub-info">Ill（イル）株式会社 (イル株式会社)</span>
-          </div>
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Theme Switcher Button -->
-  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
-    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <script defer src="../script.js?v=61"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
       <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -2754,12 +2518,7 @@
       <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
     </svg>
-    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    </svg>
   </button>
 
-  <!-- Client JavaScript -->
-  <script defer src="../script.js?v=61"></script>
 </body>
 </html>
