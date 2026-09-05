@@ -4420,6 +4420,59 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "グローバル開発品質管理"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. 現地でテストしているはずなのに、日本側の検収でバグが大量に出るのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "それは「テストケースの作成方法」が異なっているからです。現地のテスターは仕様書通りに動くか（正常系）の確認は得意ですが、「ユーザーが変な入力をした場合」や「ネットワークが切れた場合」などの準正常系・異常系のテストケースを作成していないケースが多いです。テストケースの作成段階で日本側がチェック・承認を行うプロセスが必須です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. テストの自動化はオフショア開発に有効ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "極めて有効です。特に変更が頻繁に発生するプロジェクト（アジャイル開発）では、一度修正したコードが他の機能に影響を与える「デグレード（先祖返り）」が多発します。主要画面のE2Eテスト（PlaywrightやCypressなど）を自動化し、CI/CDラインに組み込んでおくことで、バグの自動検知率が飛躍的に高まります。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4707,6 +4760,12 @@
                 </a>
               </li>
               <li class="related-item">
+                <a href="/column/033-simple-rfp-writing-for-non-it-buyers.html">
+                  <span class="related-item-date">2026.09.05</span>
+                  <span class="related-item-title">開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/031-nocode-limitations-real-development-cost.html">
                   <span class="related-item-date">2026.09.05</span>
                   <span class="related-item-title">ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。</span>
@@ -4722,12 +4781,6 @@
                 <a href="/column/029-non-it-smb-genai-business-efficiency.html">
                   <span class="related-item-date">2026.09.03</span>
                   <span class="related-item-title">自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/028-excel-to-web-system-dx-cost.html">
-                  <span class="related-item-date">2026.09.03</span>
-                  <span class="related-item-title">Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。</span>
                 </a>
               </li>
           </ul>

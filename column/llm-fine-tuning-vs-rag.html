@@ -4420,6 +4420,59 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RAG vs ファインチューニング"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. RAGを導入するだけで、社内ドキュメントの検索は100%完璧になりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。RAGの精度は、LLMの性能よりも「PDFやドキュメントの構造化（チャンキングやメタデータ設計）」および「ベクトル検索（セマンティック検索）のハイブリッドチューニング」といった、検索ロジックそのもの（RAGエンジニアリング）に8割型依存します。Ill（イル）株式会社では、独自の高精度チャンキングモジュールにより、検索精度の最大化を実現しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. ローカルLLMを用いたセキュアなファインチューニングは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。Llama 3やMistralなどのオープンモデルを用い、企業内のオンプレミスサーバーやプライベートクラウド環境（AWS, Azure）のGPU上でファインチューニングを行うことで、完全なクローズド環境での学習と実行が可能です。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4732,6 +4785,12 @@
                 </a>
               </li>
               <li class="related-item">
+                <a href="/column/033-simple-rfp-writing-for-non-it-buyers.html">
+                  <span class="related-item-date">2026.09.05</span>
+                  <span class="related-item-title">開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/031-nocode-limitations-real-development-cost.html">
                   <span class="related-item-date">2026.09.05</span>
                   <span class="related-item-title">ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。</span>
@@ -4747,12 +4806,6 @@
                 <a href="/column/029-non-it-smb-genai-business-efficiency.html">
                   <span class="related-item-date">2026.09.03</span>
                   <span class="related-item-title">自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/028-excel-to-web-system-dx-cost.html">
-                  <span class="related-item-date">2026.09.03</span>
-                  <span class="related-item-title">Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。</span>
                 </a>
               </li>
           </ul>
