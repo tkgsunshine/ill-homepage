@@ -4528,6 +4528,59 @@
   ]
 }
   </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "2026年生成AI市場動向"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q1. AIエージェントの開発には多大な初期投資が必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。最初から高度なマルチエージェントシステムを作るのではなく、まずは既存のLLM（OpenAIやClaudeなど）にツール（Web SearchやカスタムPythonスクリプト）を1〜2個連携させる「シングルエージェント」のプロトタイプであれば、1〜2週間程度のミニマル開発で低コストに構築が可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q2. 社内機密データが外部のLLMモデルの学習に使用されることはありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API経由でのLLM利用（Azure OpenAI ServiceやAWS Bedrockなど）や、適切なエンタープライズ契約・ローカルLLM（Llama3など）の導入により、データが外部モデルの学習に送信されることを防ぐ堅牢なインフラ設計が可能です。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="theme-light">
 
@@ -4827,6 +4880,12 @@
             <h3 class="sidebar-title">最近のコラム</h3>
                         <ul class="related-list">
               <li class="related-item">
+                <a href="/column/035-c2c-sharing-matching-platform-development.html">
+                  <span class="related-item-date">2026.09.07</span>
+                  <span class="related-item-title">シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。</span>
+                </a>
+              </li>
+              <li class="related-item">
                 <a href="/column/032-non-it-contract-types-risk-management.html">
                   <span class="related-item-date">2026.09.05</span>
                   <span class="related-item-title">ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。</span>
@@ -4848,12 +4907,6 @@
                 <a href="/column/031-nocode-limitations-real-development-cost.html">
                   <span class="related-item-date">2026.09.05</span>
                   <span class="related-item-title">ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。</span>
-                </a>
-              </li>
-              <li class="related-item">
-                <a href="/column/030-smb-system-development-cost-standard.html">
-                  <span class="related-item-date">2026.09.04</span>
-                  <span class="related-item-title">システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。</span>
                 </a>
               </li>
           </ul>
