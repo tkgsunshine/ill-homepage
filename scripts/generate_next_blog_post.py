@@ -157,12 +157,28 @@ def main():
     # 7. Replace Main body content
     new_html = re.sub(r'(?s)<main class="article-body">.*?</main>', f'<main class="article-body">{body_html}\n        </main>', new_html)
     
-        # Foolproof Sanitizer & Quality Assurance Step
+            # --- MANDATORY PRE-PUBLISH TYPO & QUALITY ASSURANCE SUITE ---
+    # 1. Company Branding Enforcement
     new_html = new_html.replace("株式会社イル", "Ill（イル）株式会社")
+    new_html = new_html.replace("株式会社Ill", "Ill（イル）株式会社")
+    new_html = new_html.replace("イル株式会社", "Ill（イル）株式会社")
+
+    # 2. Font Size Enforcement (Checklist boxes & text)
     new_html = new_html.replace("font-size: 0.95rem", "font-size: 1.5rem")
     new_html = new_html.replace("font-size:0.95rem", "font-size: 1.5rem")
-    new_html = new_html.replace("起？", "か？")
 
+    # 3. Automatic Typo Repair for Question Endings
+    new_html = re.sub(r'([一-龠])？', lambda m: 'か？' if m.group(1) not in ['何', '誰', '何日', '何月'] else m.group(0), new_html)
+
+    # 4. Strict Validation Assertion
+    if "株式会社イル" in new_html:
+        raise ValueError("CRITICAL ERROR: Prohibited company name '株式会社イル' detected before saving!")
+    if "font-size: 0.95rem" in new_html:
+        raise ValueError("CRITICAL ERROR: Microscopic font size 0.95rem detected before saving!")
+    if "起？" in new_html:
+        raise ValueError("CRITICAL ERROR: Typo '起？' detected before saving!")
+
+    # Save the new article
     # Save the new article
     new_filepath = os.path.join(COLUMN_DIR, target_post["filename"])
     with open(new_filepath, "w", encoding="utf-8") as f:
