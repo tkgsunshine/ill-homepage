@@ -157,6 +157,12 @@ def main():
     # 7. Replace Main body content
     new_html = re.sub(r'(?s)<main class="article-body">.*?</main>', f'<main class="article-body">{body_html}\n        </main>', new_html)
     
+        # Foolproof Sanitizer & Quality Assurance Step
+    new_html = new_html.replace("株式会社イル", "Ill（イル）株式会社")
+    new_html = new_html.replace("font-size: 0.95rem", "font-size: 1.5rem")
+    new_html = new_html.replace("font-size:0.95rem", "font-size: 1.5rem")
+    new_html = new_html.replace("起？", "か？")
+
     # Save the new article
     new_filepath = os.path.join(COLUMN_DIR, target_post["filename"])
     with open(new_filepath, "w", encoding="utf-8") as f:
