@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import datetime
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE_DIR = os.path.dirname(SCRIPT_DIR)
@@ -362,23 +363,65 @@ def main():
                 f.write(home_content)
             print("Updated homepage index.html columns section.")
 
-    # Step 6: Overwrite/sync all sitemap.xml entries to match their actual dates
+    # Step 6: Dynamically generate complete sitemap.xml with 100% of all pages
     sitemap_path = os.path.join(WORKSPACE_DIR, "sitemap.xml")
-    if os.path.exists(sitemap_path):
-        with open(sitemap_path, "r", encoding="utf-8") as f:
-            lines = f.readlines()
-            
-        # Parse XML structure to rewrite lastmod dates of columns
-        sitemap_str = "".join(lines)
-        for filename, meta in articles_meta.items():
-            loc_str = f"<loc>https://www.ill-inc.net/column/{filename}</loc>"
-            # Search pattern for lastmod after this loc
-            pattern = rf"(?s)(<loc>https://www\.ill-inc\.net/column/{filename}</loc>.*?<lastmod>)\d{{4}}-\d{{2}}-\d{{2}}(</lastmod>)"
-            sitemap_str = re.sub(pattern, rf"\g<1>{meta['date']}\g<2>", sitemap_str)
-            
-        with open(sitemap_path, "w", encoding="utf-8") as f:
-            f.write(sitemap_str)
-        print("Synchronized all sitemap.xml lastmod dates.")
+    today_iso = datetime.date.today().strftime('%Y-%m-%d')
+    
+    xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    
+    # 1. Homepage
+    xml_lines.append(f"""  <url>
+    <loc>https://www.ill-inc.net/</loc>
+    <lastmod>{today_iso}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>""")
+
+    # 2. Cases Hub
+    xml_lines.append(f"""  <url>
+    <loc>https://www.ill-inc.net/cases/</loc>
+    <lastmod>{today_iso}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>""")
+
+    # 3. All individual Cases
+    cases_dir = os.path.join(WORKSPACE_DIR, "cases")
+    if os.path.exists(cases_dir):
+        for case_fn in sorted(os.listdir(cases_dir)):
+            if case_fn.endswith(".html") and case_fn != "index.html":
+                xml_lines.append(f"""  <url>
+    <loc>https://www.ill-inc.net/cases/{case_fn}</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>""")
+
+    # 4. Column Hub
+    xml_lines.append(f"""  <url>
+    <loc>https://www.ill-inc.net/column/</loc>
+    <lastmod>{today_iso}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>""")
+
+    # 5. All individual Column articles (ordered by date)
+    for filename in ALL_ARTICLES_CHRONO:
+        if filename in articles_meta:
+            meta = articles_meta[filename]
+            xml_lines.append(f"""  <url>
+    <loc>https://www.ill-inc.net/column/{filename}</loc>
+    <lastmod>{meta['date']}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>""")
+          
+    xml_lines.append("</urlset>\n")
+    new_sitemap_str = "\n".join(xml_lines)
+    
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write(new_sitemap_str)
+    print(f"Dynamically generated complete sitemap.xml with {len(xml_lines) - 2} URL entries.")
 
 if __name__ == "__main__":
     main()

@@ -64,6 +64,22 @@
     }
   }
   </script>
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="theme-light">
 
@@ -149,23 +165,99 @@
 
       <!-- Articles Grid -->
       <div class="column-grid">
-        <article class="column-card glass-card reveal" data-category="gen-ai">
-          <a href="/column/038-line-api-chatbot-customer-support-cost.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+        <article class="column-card glass-card reveal" data-category="system-app">
+          <a href="/column/040-web-scraping-automation-marketing-leads.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
-              <span class="column-card-badge">生成AI・先端技術</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="コラム「LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。」のビジュアルバナー">
+              <span class="column-card-badge">システム開発・アーキテクチャ</span>
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="コラム「Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-2" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-2" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-2)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
+          
+          <!-- Decorative Grid/Dots -->
+          <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="200" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="300" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="400" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="500" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="600" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="700" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="800" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="180" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="180" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="280" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="280" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="200" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="300" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="400" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="500" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="600" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="700" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="800" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+
+          <!-- Large Background English text -->
+          <text x="500" y="270" text-anchor="middle" fill="#0EA5E9" font-size="90" font-family="'Outfit', sans-serif" font-weight="900" opacity="0.05" letter-spacing="0.1em">WEB SCRAPING AUTOMATION VOL40</text>
+          
+          <!-- Corner Lines -->
+          <line x1="50" y1="50" x2="150" y2="50" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+          <line x1="50" y1="50" x2="50" y2="150" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+          
+          <line x1="950" y1="378" x2="850" y2="378" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+          <line x1="950" y1="378" x2="950" y2="278" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+
+
+
+          <!-- Single Centered Main message -->
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">Webデータ自動収集・スクレイピング開発費用がわかる</text>
+          
+          <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
+        </svg>
+            </div>
+          </a>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <time datetime="2026-09-09">2026.09.09</time>
+            </div>
+            <a href="/column/040-web-scraping-automation-marketing-leads.html" style="text-decoration: none;">
+              <h2 class="column-card-title">Webデータのスクレイピング・自動収集システムは営業リスト作成と市場分析を低コストで自動化できる。</h2>
+            </a>
+            <p class="column-card-excerpt">手作業での情報収集やコピペ業務をゼロにするため、特定のポータルサイトや業界マップから最新の企業情報や価格推移を自動で抽出するスクレイピングツールの開発費用と注意点。</p>
+            <a href="/column/040-web-scraping-automation-marketing-leads.html" class="column-card-link">記事を読む</a>
+          </div>
+        </article>
+
+        <article class="column-card glass-card reveal" data-category="gen-ai">
+          <a href="/column/038-line-api-chatbot-customer-support-cost.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+            <div class="column-card-image">
+              <span class="column-card-badge">生成AI・先端技術</span>
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。」のビジュアルバナー" role="img" aria-label="コラム「LINE公式アカウントとChatGPTのAPI連携による自動顧客対応は格安の初期費のみで運用できる。」のビジュアルバナー">
+          <defs>
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F1F5F9" />
+              <stop offset="0.5" stop-color="#E2E8F0" />
+              <stop offset="1" stop-color="#CBD5E1" />
+            </linearGradient>
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0EA5E9" />
+              <stop offset="1" stop-color="#10B981" />
+            </linearGradient>
+          </defs>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -207,7 +299,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-2)" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">LINE公式とChatGPTのAPI連携構築費用がわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">LINE公式とChatGPTのAPI連携構築費用がわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -226,22 +318,98 @@
         </article>
 
         <article class="column-card glass-card reveal" data-category="system-app">
+          <a href="/column/039-filemaker-access-legacy-modernization.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+            <div class="column-card-image">
+              <span class="column-card-badge">システム開発・アーキテクチャ</span>
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。」のビジュアルバナー" role="img" aria-label="コラム「老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。」のビジュアルバナー">
+          <defs>
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F1F5F9" />
+              <stop offset="0.5" stop-color="#E2E8F0" />
+              <stop offset="1" stop-color="#CBD5E1" />
+            </linearGradient>
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0EA5E9" />
+              <stop offset="1" stop-color="#10B981" />
+            </linearGradient>
+          </defs>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
+          
+          <!-- Decorative Grid/Dots -->
+          <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="200" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="300" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="400" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="500" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="600" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="700" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="800" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="180" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="180" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="280" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="280" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          
+          <circle cx="100" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="200" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="300" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="400" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="500" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="600" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="700" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="800" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+          <circle cx="900" cy="380" r="1.5" fill="#0EA5E9" opacity="0.15"/>
+
+          <!-- Large Background English text -->
+          <text x="500" y="270" text-anchor="middle" fill="#0EA5E9" font-size="90" font-family="'Outfit', sans-serif" font-weight="900" opacity="0.05" letter-spacing="0.1em">FILEMAKER ACCESS WEB VOL39</text>
+          
+          <!-- Corner Lines -->
+          <line x1="50" y1="50" x2="150" y2="50" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+          <line x1="50" y1="50" x2="50" y2="150" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+          
+          <line x1="950" y1="378" x2="850" y2="378" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+          <line x1="950" y1="378" x2="950" y2="278" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+
+
+
+          <!-- Single Centered Main message -->
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">FileMaker・AccessのWebシステム移行費用がわかる</text>
+          
+          <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
+        </svg>
+            </div>
+          </a>
+          <div class="column-card-content">
+            <div class="column-card-meta">
+              <time datetime="2026-09-09">2026.09.09</time>
+            </div>
+            <a href="/column/039-filemaker-access-legacy-modernization.html" style="text-decoration: none;">
+              <h2 class="column-card-title">老朽化したFileMakerやAccessからのWebデータベース移行は業務効率化と保守管理費削減に直結する。</h2>
+            </a>
+            <p class="column-card-excerpt">社内の少数の特定担当者しかメンテナンスできずブラックボックス化したFileMakerやMS Accessを、誰でもブラウザから使える現代のWebデータベースシステムへ低コスト移行する方法。</p>
+            <a href="/column/039-filemaker-access-legacy-modernization.html" class="column-card-link">記事を読む</a>
+          </div>
+        </article>
+
+        <article class="column-card glass-card reveal" data-category="system-app">
           <a href="/column/035-c2c-sharing-matching-platform-development.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">新規事業・MVP検証</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。」のビジュアルバナー" role="img" aria-label="コラム「シェアリングエコノミーやC2CマッチングサイトはパッケージとAPIの活用で安価に開発できる。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-3" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-3" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-3)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -283,7 +451,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-3)" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">パッケージとAPIを駆使したマッチングプラットフォームがわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">パッケージとAPIを駆使したマッチングプラットフォームがわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -307,17 +475,17 @@
               <span class="column-card-badge">システム開発・アーキテクチャ</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。」のビジュアルバナー" role="img" aria-label="コラム「自社専用の業務管理システムは過剰機能を削れば低コストのスクラッチ開発で十分に構築できる。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-4" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-4" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-4)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -359,7 +527,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-4)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">過剰機能を省いた自社専用業務管理システムがわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">過剰機能を省いた自社専用業務管理システムがわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -383,17 +551,17 @@
               <span class="column-card-badge">システム開発・アーキテクチャ</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。」のビジュアルバナー" role="img" aria-label="コラム「アプリストアの申請不要なPWA（Webアプリ）構築はスマホアプリ開発費を劇的に削減できる。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-5" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-5" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-5)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -435,7 +603,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-5)" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">PWA（Webアプリ）によるスマホ対応費用削減がわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">PWA（Webアプリ）によるスマホ対応費用削減がわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -459,17 +627,17 @@
               <span class="column-card-badge">システム開発・アーキテクチャ</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。」のビジュアルバナー" role="img" aria-label="コラム「ITに詳しくない発注者こそ知っておくべき「請負契約」と「準委任契約」のリスク回避術。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-6" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-6" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-6)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -511,7 +679,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-6)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">請負契約と準委任契約の賢い使い分けがわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">請負契約と準委任契約の賢い使い分けがわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -535,17 +703,17 @@
               <span class="column-card-badge">システム開発・アーキテクチャ</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。」のビジュアルバナー" role="img" aria-label="コラム「開発会社に「伝わる」要件定義と、IT知識ゼロからでも書けるRFP（提案依頼書）の作り方。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-7" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-7" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-7)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -587,7 +755,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-7)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">IT知識ゼロから書けるRFP作成手順がわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">IT知識ゼロから書けるRFP作成手順がわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -611,17 +779,17 @@
               <span class="column-card-badge">新規事業・MVP検証</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。」のビジュアルバナー" role="img" aria-label="コラム「ECサイト構築は自社開発よりShopify連携の方が初期費用も維持費も圧倒的に安く抑えられる。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-8" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-8" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-8)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -663,7 +831,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-8)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">Shopifyを活用した格安ECサイト構築がわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">Shopifyを活用した格安ECサイト構築がわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -687,17 +855,17 @@
               <span class="column-card-badge">新規事業・MVP検証</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。」のビジュアルバナー" role="img" aria-label="コラム「ノーコード開発の「安さの罠」と、ビジネス成長に耐えうるスクラッチ開発の損益分岐点。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-9" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-9" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-9)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -739,7 +907,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-9)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">ノーコードとスクラッチ開発の損益分岐点がわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">ノーコードとスクラッチ開発の損益分岐点がわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -763,17 +931,17 @@
               <span class="column-card-badge">システム開発・アーキテクチャ</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。」のビジュアルバナー" role="img" aria-label="コラム「システム開発の適正価格を見極め、開発会社の過剰な「見積もり上乗せ」を防ぐチェックリスト。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-10" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-10" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-10)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -815,7 +983,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-10)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">過剰な見積もり上乗せを防ぐ防衛策がわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">過剰な見積もり上乗せを防ぐ防衛策がわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -839,17 +1007,17 @@
               <span class="column-card-badge">生成AI・先端技術</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。」のビジュアルバナー" role="img" aria-label="コラム「自社にIT担当者がいなくても、安価なAPI連携で日常の定型業務を自動化する生成AI活用術。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-11" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-11" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-11)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -891,7 +1059,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-11)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">安価な生成AI API連携と自動化費用がわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">安価な生成AI API連携と自動化費用がわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -915,17 +1083,17 @@
               <span class="column-card-badge">システム開発・アーキテクチャ</span>
               <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。」のビジュアルバナー" role="img" aria-label="コラム「Excelやスプレッドシートによる業務限界は、安価な独自Webシステム化で劇的に解消できる。」のビジュアルバナー">
           <defs>
-            <linearGradient id="bg-grad-idx-12" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+            <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
               <stop offset="0.5" stop-color="#E2E8F0" />
               <stop offset="1" stop-color="#CBD5E1" />
             </linearGradient>
-            <linearGradient id="text-grad-idx-12" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="text-grad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#0EA5E9" />
               <stop offset="1" stop-color="#10B981" />
             </linearGradient>
           </defs>
-          <rect width="1000" height="428" fill="url(#bg-grad-idx-12)"/>
+          <rect width="1000" height="428" fill="url(#bg-grad)"/>
           
           <!-- Decorative Grid/Dots -->
           <circle cx="100" cy="80" r="1.5" fill="#0EA5E9" opacity="0.15"/>
@@ -967,7 +1135,7 @@
 
 
           <!-- Single Centered Main message -->
-          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad-idx-12)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">エクセルから独自Webシステムへの移行費用がわかる</text>
+          <text x="500" y="240" text-anchor="middle" fill="url(#text-grad)" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.05em">エクセルから独自Webシステムへの移行費用がわかる</text>
           
           <path d="M0 428 L1000 428" stroke="var(--glass-border)" stroke-width="1"/>
         </svg>
@@ -6199,7 +6367,7 @@
           <a href="/column/offshore-hybrid-development.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">グローバル開発</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「日本とベトナムのハイブリッドチームで成功するオフショア開発の新常識 — コストと品質を両立する新手法」のビジュアルバナー" role="img" aria-label="コラム「日本とベトナムのハイブリッドチームで成功するオフショア開発の新常識」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「日本とベトナムのハイブリッドチームで成功するオフショア開発の新常識」のビジュアルバナー" role="img" aria-label="コラム「日本とベトナムのハイブリッドチームで成功するオフショア開発の新常識」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-offshore_hybrid_development" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6274,7 +6442,7 @@
           <a href="/column/development-cost-market.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム・アプリ開発</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発・アプリ開発の費用相場と見積もりの内訳を徹底解説 — 予算超過を防ぐポイント」のビジュアルバナー" role="img" aria-label="コラム「システム開発・アプリ開発の費用相場と見積もりの内訳を徹底解説」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発・アプリ開発の費用相場と見積もりの内訳を徹底解説」のビジュアルバナー" role="img" aria-label="コラム「システム開発・アプリ開発の費用相場と見積もりの内訳を徹底解説」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-development_cost_market" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6349,7 +6517,7 @@
           <a href="/column/saas-product-launch.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">新規サービス開発</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「SaaSビジネスの立ち上げで失敗しないシステム開発外注のステップ — MVPからスケールまで」のビジュアルバナー" role="img" aria-label="コラム「SaaSビジネス立ち上げのシステム開発外注ステップ」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「SaaSビジネス立ち上げのシステム開発外注ステップ」のビジュアルバナー" role="img" aria-label="コラム「SaaSビジネス立ち上げのシステム開発外注ステップ」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-saas_product_launch" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6424,7 +6592,7 @@
           <a href="/column/ai-app-integration.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">生成AI・先端技術</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「生成AIを活用した新規アプリ開発のステップと活用事例 — AIX推進のロードマップ」のビジュアルバナー" role="img" aria-label="コラム「生成AIを活用した新規アプリ開発ステップと活用事例」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「生成AIを活用した新規アプリ開発ステップと活用事例」のビジュアルバナー" role="img" aria-label="コラム「生成AIを活用した新規アプリ開発ステップと活用事例」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-ai_app_integration" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6499,7 +6667,7 @@
           <a href="/column/agile-minimalist-dev.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム・アプリ開発</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「新規事業でアジャイル開発（ミニマル設計）を選ぶべき理由 — ウォーターフォールとの違い」のビジュアルバナー" role="img" aria-label="コラム「新規事業でアジャイル開発・ミニマル設計を選ぶべき理由」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「新規事業でアジャイル開発・ミニマル設計を選ぶべき理由」のビジュアルバナー" role="img" aria-label="コラム「新規事業でアジャイル開発・ミニマル設計を選ぶべき理由」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-agile_minimalist_dev" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6574,7 +6742,7 @@
           <a href="/column/rfp-development-request.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">仕様設計</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「開発会社へ依頼する前の準備：RFP（提案依頼書）の書き方と選定時のチェックリスト」のビジュアルバナー" role="img" aria-label="コラム「システム開発RFPの書き方と選定チェックリスト」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発RFPの書き方と選定チェックリスト」のビジュアルバナー" role="img" aria-label="コラム「システム開発RFPの書き方と選定チェックリスト」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-rfp_development_request" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6649,7 +6817,7 @@
           <a href="/column/contract-types-comparison.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム・アプリ開発</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発の契約「請負契約」と「準委任（ラボ契約）」の違い — 新規開発に適した契約形態とは」のビジュアルバナー" role="img" aria-label="コラム「システム開発「請負契約」と「準委任」の違い」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発「請負契約」と「準委任」の違い」のビジュアルバナー" role="img" aria-label="コラム「システム開発「請負契約」と「準委任」の違い」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-contract_types_comparison" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6724,7 +6892,7 @@
           <a href="/column/nocode-vs-scratch.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム・アプリ開発</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「ノーコード・ローコード開発の限界とスクラッチ開発の境界線 — 新規事業の技術選定基準」のビジュアルバナー" role="img" aria-label="コラム「ノーコード開発の限界とスクラッチ開発の技術選定基準」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「ノーコード開発の限界とスクラッチ開発の技術選定基準」のビジュアルバナー" role="img" aria-label="コラム「ノーコード開発の限界とスクラッチ開発の技術選定基準」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-nocode_vs_scratch" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6799,7 +6967,7 @@
           <a href="/column/development-schedule-shortening.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム・アプリ開発</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「アプリ開発・システム開発に必要な期間とリリーススケジュールを短縮する実践手法」のビジュアルバナー" role="img" aria-label="コラム「システム・アプリ開発期間の目安とスケジュール短縮手法」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム・アプリ開発期間の目安とスケジュール短縮手法」のビジュアルバナー" role="img" aria-label="コラム「システム・アプリ開発期間の目安とスケジュール短縮手法」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-development_schedule_shortening" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6873,7 +7041,7 @@
           <a href="/column/requirements-definition-tips.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">仕様設計</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド」のビジュアルバナー" role="img" aria-label="コラム「システム開発・要件定義のコツと失敗しない仕様策定」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発・要件定義のコツと失敗しない仕様策定」のビジュアルバナー" role="img" aria-label="コラム「システム開発・要件定義のコツと失敗しない仕様策定」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-requirements_definition_tips" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />
@@ -6948,7 +7116,7 @@
           <a href="/column/inhouse-vs-outsourcing.html" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">システム・アプリ開発</span>
-              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発の「内製化」と「外注」のベストバランス — スムーズに進めるロードマップ」のビジュアルバナー" role="img" aria-label="コラム「システム開発「内製化」と「外注」のバランス比較」のビジュアルバナー">
+              <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発「内製化」と「外注」のバランス比較」のビジュアルバナー" role="img" aria-label="コラム「システム開発「内製化」と「外注」のバランス比較」のビジュアルバナー">
           <defs>
             <linearGradient id="bg-grad-inhouse_vs_outsourcing" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
               <stop stop-color="#F1F5F9" />

@@ -58,15 +58,20 @@ def main():
         faq_match = re.search(r'(?s)<h2 id="section-faq">.*?</h2>(.*?)(?=<h2|</main>)', content)
         if faq_match:
             faq_html = faq_match.group(1)
-            # Find all Q&As
-            # Note: handle cases where answers span multiple paragraphs or tags
-            qa_raw = re.findall(r'(?s)<h3>(Q\d*\..*?)</h3>\s*<p>(.*?)</p>', faq_html)
+            # Find all Q&As (support any format of h3 and p)
+            qa_raw = re.findall(r'(?s)<h3>(.*?)</h3>\s*<p>(.*?)</p>', faq_html)
             for q, a in qa_raw:
                 q_clean = clean_html(q)
                 a_clean = clean_html(a)
-                qas.append((q_clean, a_clean))
+                if q_clean and a_clean:
+                    qas.append((q_clean, a_clean))
                 
         print(f"Parsed {filename}: Title='{core_title}', BC='{breadcrumb_text}', FAQs={len(qas)}")
+
+        # Ensure canonical and OGP URLs are strictly synchronized with this specific article
+        expected_url = f"https://www.ill-inc.net/column/{filename}"
+        content = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{expected_url}">', content)
+        content = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{expected_url}">', content)
 
         # 1.4 Generate BreadcrumbList JSON-LD
         bc_json = {
@@ -117,12 +122,14 @@ def main():
         if faq_json:
             new_schemas_html += f'\n  <!-- FAQ Structured Data -->\n  <script type="application/ld+json">\n  {json.dumps(faq_json, ensure_ascii=False, indent=2)}\n  </script>\n'
 
-        # Remove existing generated FAQ/Breadcrumb lists if any (for clean update)
-        content = re.sub(r'<!-- Breadcrumb Structured Data -->\s*<script type="application/ld+json">.*?</script>\s*', '', content, flags=re.DOTALL)
-        content = re.sub(r'<!-- FAQ Structured Data -->\s*<script type="application/ld+json">.*?</script>\s*', '', content, flags=re.DOTALL)
+        # Remove ALL existing generated FAQ/Breadcrumb lists (and standalone BreadcrumbList/FAQ schemas)
+        content = re.sub(r'\s*<!-- Breadcrumb Structured Data -->\s*<script type="application/ld\+json">.*?</script>', '', content, flags=re.DOTALL)
+        content = re.sub(r'\s*<!-- FAQ Structured Data -->\s*<script type="application/ld\+json">.*?</script>', '', content, flags=re.DOTALL)
+        content = re.sub(r'\s*<script type="application/ld\+json">\s*\{\s*"@context":\s*"https://schema\.org",\s*"@type":\s*"BreadcrumbList".*?</script>', '', content, flags=re.DOTALL)
+        content = re.sub(r'\s*<script type="application/ld\+json">\s*\{\s*"@context":\s*"https://schema\.org",\s*"@type":\s*"FAQPage".*?</script>', '', content, flags=re.DOTALL)
 
         # Inject right before </head>
-        content = content.replace("</head>", f"{new_schemas_html}</head>")
+        content = content.replace("</head>", f"{new_schemas_html}\n</head>")
 
         # 1.7 Inject role="img" and aria-label into article's main visual SVG
         # Target: <div class="article-main-visual">\s*<svg viewBox="0 0 1000 428" ... >
