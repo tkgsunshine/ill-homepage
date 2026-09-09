@@ -3,6 +3,8 @@ import re
 import json
 import datetime
 import subprocess
+import sys
+import time
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE_DIR = os.path.dirname(SCRIPT_DIR)
@@ -12,6 +14,25 @@ TEMPLATE_PATH = os.path.join(COLUMN_DIR, "history-and-difference-of-generative-a
 
 def main():
     print("Executing generate_next_blog_post.py...")
+    
+    force_run = "--force" in sys.argv
+    if not force_run:
+        try:
+            res = subprocess.run(
+                ["git", "log", "-1", "--format=%ct", "--", COLUMN_DIR],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            last_commit_ts = int(res.stdout.strip())
+            elapsed_seconds = time.time() - last_commit_ts
+            # Guard window: 2.5 hours (9000 seconds)
+            if elapsed_seconds < 9000:
+                elapsed_min = int(elapsed_seconds / 60)
+                print(f"Notice: A column commit occurred {elapsed_min} minutes ago in column/. Skipping duplicate generation for this retry window.")
+                return
+        except Exception as e:
+            print(f"Warning: Could not check git commit timestamp: {e}")
     
     if not os.path.exists(CALENDAR_PATH):
         print(f"Error: Editorial calendar not found at {CALENDAR_PATH}")
