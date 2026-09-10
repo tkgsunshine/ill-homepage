@@ -160,17 +160,17 @@ def main():
   </g>
 
   <!-- Pure Content: Clean Typography & Key Bullets Only -->
-  <g transform="translate(80, 0)">
-    <text x="0" y="165" fill="#FFFFFF" font-size="{font_size}" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+  <g transform="translate(100, 0)">
+    <text x="0" y="200" fill="#FFFFFF" font-size="{font_size}" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
       {summary_text}
     </text>
 
-    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 36px) -->
-    <g transform="translate(0, 275)">
-      <text x="0" y="0" fill="#E2E8F0" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.01em">
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
         <tspan fill="{accent}">✔</tspan> {t1}　<tspan fill="{accent}">✔</tspan> {t2}
       </text>
-      <text x="0" y="58" fill="#E2E8F0" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.01em">
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
         <tspan fill="{accent}">✔</tspan> {t3}
       </text>
     </g>

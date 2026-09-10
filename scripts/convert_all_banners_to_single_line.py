@@ -95,15 +95,15 @@ def generate_svg(filename, title, category, existing_jp_lines=None):
     lines = split_catchphrase(raw_text)
     
     if len(lines) == 1:
-        text_svg = f"""<text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+        text_svg = f"""<text x="0" y="200" fill="#FFFFFF" font-size="42" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
       {lines[0]}
     </text>"""
     else:
         l1, l2 = lines[0], lines[1]
-        text_svg = f"""<text x="0" y="135" fill="#FFFFFF" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+        text_svg = f"""<text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
       {l1}
     </text>
-    <text x="0" y="190" fill="#FFFFFF" font-size="38" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+    <text x="0" y="225" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
       <tspan fill="{accent}">{l2}</tspan>
     </text>"""
 
@@ -140,15 +140,15 @@ def generate_svg(filename, title, category, existing_jp_lines=None):
   </g>
 
   <!-- Pure Content: Clean Typography & Key Bullets Only -->
-  <g transform="translate(80, 0)">
+  <g transform="translate(100, 0)">
     {text_svg}
 
-    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 36px) -->
-    <g transform="translate(0, 275)">
-      <text x="0" y="0" fill="#E2E8F0" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.01em">
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
         <tspan fill="{accent}">✔</tspan> {t1}　<tspan fill="{accent}">✔</tspan> {t2}
       </text>
-      <text x="0" y="58" fill="#E2E8F0" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.01em">
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
         <tspan fill="{accent}">✔</tspan> {t3}
       </text>
     </g>
