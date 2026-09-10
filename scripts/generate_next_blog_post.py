@@ -161,14 +161,17 @@ def main():
 
   <!-- Pure Content: Clean Typography & Key Bullets Only -->
   <g transform="translate(100, 0)">
-    <text x="0" y="225" fill="#FFFFFF" font-size="{font_size}" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+    <text x="0" y="200" fill="#FFFFFF" font-size="{font_size}" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
       {summary_text}
     </text>
 
-    <!-- Key Takeaways Bullets -->
-    <g transform="translate(0, 315)">
-      <text x="0" y="15" fill="#CBD5E1" font-size="18" font-family="'Noto Sans JP', sans-serif" font-weight="600" letter-spacing="0.03em">
-        <tspan fill="{accent}">✔</tspan> {t1}　<tspan fill="{accent}">✔</tspan> {t2}　<tspan fill="{accent}">✔</tspan> {t3}
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="{accent}">✔</tspan> {t1}　<tspan fill="{accent}">✔</tspan> {t2}
+      </text>
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="{accent}">✔</tspan> {t3}
       </text>
     </g>
   </g>
