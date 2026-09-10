@@ -9,7 +9,6 @@ COLUMN_DIR = os.path.join(WORKSPACE_DIR, "column")
 TOPIC_THEMES = {
     "ai": {
         "keywords": ["ai", "生成ai", "chatgpt", "claude", "gemini", "rag", "llm", "プロンプト"],
-        "tag_en": "GENAI & AUTOMATION",
         "accent": "#00F0FF",
         "orb1": "#00F0FF",
         "orb2": "#A855F7",
@@ -17,7 +16,6 @@ TOPIC_THEMES = {
     },
     "data_scraping": {
         "keywords": ["スクレイピング", "データ", "filemaker", "access", "excel", "エクセル", "データベース", "db"],
-        "tag_en": "DATA & MODERNIZATION",
         "accent": "#22D3EE",
         "orb1": "#06B6D4",
         "orb2": "#3B82F6",
@@ -25,7 +23,6 @@ TOPIC_THEMES = {
     },
     "mvp_startup": {
         "keywords": ["mvp", "新規事業", "新規サービス", "スタートアップ", "アジャイル", "マッチング", "c2c", "saas"],
-        "tag_en": "AGILE & MVP LAUNCH",
         "accent": "#38BDF8",
         "orb1": "#0EA5E9",
         "orb2": "#6366F1",
@@ -33,7 +30,6 @@ TOPIC_THEMES = {
     },
     "offshore": {
         "keywords": ["オフショア", "ベトナム", "ラボ型", "準委任", "請負", "契約"],
-        "tag_en": "GLOBAL TECH TEAM",
         "accent": "#34D399",
         "orb1": "#10B981",
         "orb2": "#0EA5E9",
@@ -41,7 +37,6 @@ TOPIC_THEMES = {
     },
     "default": {
         "keywords": [],
-        "tag_en": "SMB DEFENSE STRATEGY",
         "accent": "#38BDF8",
         "orb1": "#0EA5E9",
         "orb2": "#818CF8",
@@ -61,7 +56,7 @@ def split_catchphrase(text):
     clean = " ".join(re.sub(r"<[^>]+>", "", text).split())
     if not clean:
         return ["システム開発の要点と", "失敗を防ぐ実践アプローチ"]
-    if len(clean) <= 19:
+    if len(clean) <= 18:
         return [clean]
     
     best_idx = len(clean) // 2
@@ -86,7 +81,6 @@ def generate_svg(filename, title, category, existing_jp_lines=None):
     accent = theme["accent"]
     orb1 = theme["orb1"]
     orb2 = theme["orb2"]
-    tag_en = theme["tag_en"]
     t1, t2, t3 = theme["takeaways"]
     
     if existing_jp_lines and len(existing_jp_lines) > 0:
@@ -101,87 +95,66 @@ def generate_svg(filename, title, category, existing_jp_lines=None):
     lines = split_catchphrase(raw_text)
     
     if len(lines) == 1:
-        text_svg = f"""<text x="110" y="238" fill="#FFFFFF" font-size="34" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.03em">
-    {lines[0]}
-  </text>"""
+        text_svg = f"""<text x="0" y="225" fill="#FFFFFF" font-size="42" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      {lines[0]}
+    </text>"""
     else:
         l1, l2 = lines[0], lines[1]
-        text_svg = f"""<text x="110" y="215" fill="#FFFFFF" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-    {l1}
-  </text>
-  <text x="110" y="260" fill="#FFFFFF" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-    <tspan fill="{accent}">{l2}</tspan>
-  </text>"""
+        text_svg = f"""<text x="0" y="195" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      {l1}
+    </text>
+    <text x="0" y="255" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="{accent}">{l2}</tspan>
+    </text>"""
 
     svg = f"""<svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「{title}」のビジュアルバナー">
   <defs>
     <linearGradient id="bg_{clean_id}" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#131D33"/>
-      <stop offset="0.5" stop-color="#1E293B"/>
-      <stop offset="1" stop-color="#172338"/>
-    </linearGradient>
-    <linearGradient id="border_{clean_id}" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="{accent}" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="{orb2}" stop-opacity="0.3"/>
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
     </linearGradient>
     <filter id="blur_{clean_id}" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
-      <feGaussianBlur stdDeviation="70"/>
+      <feGaussianBlur stdDeviation="80"/>
     </filter>
   </defs>
 
+  <!-- Clean Background -->
   <rect width="1000" height="428" fill="url(#bg_{clean_id})"/>
 
-  <circle cx="850" cy="80" r="230" fill="{orb1}" opacity="0.3" filter="url(#blur_{clean_id})"/>
-  <circle cx="150" cy="350" r="200" fill="{orb2}" opacity="0.25" filter="url(#blur_{clean_id})"/>
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="{orb1}" opacity="0.25" filter="url(#blur_{clean_id})"/>
+  <circle cx="150" cy="340" r="220" fill="{orb2}" opacity="0.2" filter="url(#blur_{clean_id})"/>
 
-  <g opacity="0.18" stroke="{accent}" stroke-width="1">
-    <line x1="80" y1="0" x2="80" y2="428"/>
-    <line x1="200" y1="0" x2="200" y2="428"/>
-    <line x1="320" y1="0" x2="320" y2="428"/>
-    <line x1="440" y1="0" x2="440" y2="428"/>
-    <line x1="560" y1="0" x2="560" y2="428"/>
-    <line x1="680" y1="0" x2="680" y2="428"/>
-    <line x1="800" y1="0" x2="800" y2="428"/>
-    <line x1="920" y1="0" x2="920" y2="428"/>
-    <line x1="0" y1="80" x2="1000" y2="80"/>
-    <line x1="0" y1="180" x2="1000" y2="180"/>
-    <line x1="0" y1="280" x2="1000" y2="280"/>
-    <line x1="0" y1="380" x2="1000" y2="380"/>
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="{accent}" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
   </g>
 
-  <circle cx="200" cy="80" r="4" fill="{accent}" opacity="0.9"/>
-  <circle cx="680" cy="180" r="4" fill="{accent}" opacity="0.9"/>
-  <circle cx="800" cy="280" r="4" fill="{orb2}" opacity="0.9"/>
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    {text_svg}
 
-  <text x="500" y="155" text-anchor="middle" fill="{accent}" font-size="68" font-family="'Outfit', sans-serif" font-weight="900" opacity="0.08" letter-spacing="0.2em">{tag_en}</text>
-
-  <!-- High-transparency Lightweight Frosted Glass Card -->
-  <rect x="70" y="100" width="860" height="245" rx="18" fill="rgba(255, 255, 255, 0.08)" stroke="url(#border_{clean_id})" stroke-width="1.8"/>
-  <path d="M70 118 C70 108 78 100 88 100 L912 100 C922 100 930 108 930 118" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1.2" fill="none"/>
-
-  <!-- Category Tag -->
-  <g transform="translate(110, 135)">
-    <rect width="195" height="28" rx="14" fill="rgba(255, 255, 255, 0.12)" stroke="{accent}" stroke-width="1.2"/>
-    <text x="97" y="19" text-anchor="middle" fill="{accent}" font-size="13" font-family="'Outfit', sans-serif" font-weight="800" letter-spacing="0.06em">{tag_en}</text>
+    <!-- Key Takeaways Bullets -->
+    <g transform="translate(0, 315)">
+      <text x="0" y="15" fill="#CBD5E1" font-size="18" font-family="'Noto Sans JP', sans-serif" font-weight="600" letter-spacing="0.03em">
+        <tspan fill="{accent}">✔</tspan> {t1}　<tspan fill="{accent}">✔</tspan> {t2}　<tspan fill="{accent}">✔</tspan> {t3}
+      </text>
+    </g>
   </g>
-
-  {text_svg}
-
-  <!-- 3 Key Takeaways -->
-  <g transform="translate(110, 292)">
-    <text x="0" y="15" fill="#F1F5F9" font-size="15" font-family="'Noto Sans JP', sans-serif" font-weight="600">
-      <tspan fill="{accent}">✔</tspan> {t1}　<tspan fill="{accent}">✔</tspan> {t2}　<tspan fill="{accent}">✔</tspan> {t3}
-    </text>
-  </g>
-
-  <text x="890" y="322" text-anchor="end" fill="#CBD5E1" font-size="13" font-family="'Outfit', sans-serif" font-weight="700" letter-spacing="0.1em">ILL INC. TECH INSIGHTS</text>
-
-  <rect x="0" y="0" width="1000" height="428" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.2" fill="none"/>
 </svg>"""
     return svg
 
 def main():
-    print("Applying refined lightweight A-style thumbnail to all 96 column articles...")
+    print("Applying super-clean minimal thumbnail (Background + Text only) to all 96 column articles...")
     files = sorted([f for f in glob.glob(os.path.join(COLUMN_DIR, "*.html")) if "index.html" not in f])
     
     svg_map = {}

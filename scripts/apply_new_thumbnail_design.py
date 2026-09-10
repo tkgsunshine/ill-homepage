@@ -9,7 +9,6 @@ COLUMN_DIR = os.path.join(WORKSPACE_DIR, "column")
 TOPIC_THEMES = {
     "ai": {
         "keywords": ["ai", "生成ai", "chatgpt", "claude", "gemini", "rag", "llm", "プロンプト"],
-        "tag_en": "GENAI & AUTOMATION",
         "accent": "#00F0FF",
         "orb1": "#00F0FF",
         "orb2": "#A855F7",
@@ -17,7 +16,6 @@ TOPIC_THEMES = {
     },
     "data_scraping": {
         "keywords": ["スクレイピング", "データ", "filemaker", "access", "excel", "エクセル", "データベース", "db"],
-        "tag_en": "DATA & MODERNIZATION",
         "accent": "#22D3EE",
         "orb1": "#06B6D4",
         "orb2": "#3B82F6",
@@ -25,7 +23,6 @@ TOPIC_THEMES = {
     },
     "mvp_startup": {
         "keywords": ["mvp", "新規事業", "新規サービス", "スタートアップ", "アジャイル", "マッチング", "c2c", "saas"],
-        "tag_en": "AGILE & MVP LAUNCH",
         "accent": "#38BDF8",
         "orb1": "#0EA5E9",
         "orb2": "#6366F1",
@@ -33,7 +30,6 @@ TOPIC_THEMES = {
     },
     "offshore": {
         "keywords": ["オフショア", "ベトナム", "ラボ型", "準委任", "請負", "契約"],
-        "tag_en": "GLOBAL TECH TEAM",
         "accent": "#34D399",
         "orb1": "#10B981",
         "orb2": "#0EA5E9",
@@ -41,12 +37,65 @@ TOPIC_THEMES = {
     },
     "default": {
         "keywords": [],
-        "tag_en": "SMB DEFENSE STRATEGY",
         "accent": "#38BDF8",
         "orb1": "#0EA5E9",
         "orb2": "#818CF8",
         "takeaways": ("見積もりの適正化", "不要機能の排除", "契約トラブル防止")
     }
+}
+
+SUMMARY_MAPPING = {
+    "008-real-estate-crm-custom-development.html": "独自CRM開発で不動産業務の成約率を高める",
+    "009-logistics-matching-system-cost.html": "配送マッチングシステムを低コストで構築する",
+    "010-matching-platform-mvp-cost.html": "マッチングプラットフォームのMVP開発費を抑える",
+    "011-non-it-smb-system-development-no-engineer.html": "エンジニア不在の中小企業でも開発外注で成功する",
+    "012-hiring-vs-outsourcing-cost-comparison.html": "エンジニア採用リスクを回避し開発外注で費用を落とす",
+    "013-excel-to-web-system-dx-cost.html": "エクセルの業務限界を独自Webシステム化で解消する",
+    "014-non-it-smb-genai-business-efficiency.html": "生成AI API連携で日常の定型業務を全自動化する",
+    "015-smb-system-development-cost-standard.html": "システム開発の見積もり上乗せを未然に防ぐ",
+    "016-nocode-limitations-real-development-cost.html": "ノーコードの限界を見極めスクラッチ開発で最適化する",
+    "017-non-it-contract-types-risk-management.html": "請負と準委任のリスクを回避し適正コストで発注する",
+    "018-simple-rfp-writing-for-non-it-buyers.html": "IT知識ゼロから開発会社を動かすRFPを作成する",
+    "019-smb-ec-site-development-shopify-cost.html": "Shopify連携で初期費用と維持費を格安に抑える",
+    "020-c2c-sharing-matching-platform-development.html": "C2Cシェアリングプラットフォームを安価に構築する",
+    "021-custom-workflow-management-tool-cost.html": "自社専用業務管理システムをミニマル開発で低コスト化する",
+    "022-pwa-web-app-vs-native-cost-comparison.html": "PWA活用でスマホアプリの開発・保守費用を大幅削減する",
+    "023-line-api-chatbot-customer-support-cost.html": "LINE×ChatGPT API連携でカスタマーサポートを自動化する",
+    "024-filemaker-access-legacy-modernization.html": "老朽化したFileMaker・AccessをWebシステムへ刷新する",
+    "025-web-scraping-automation-marketing-leads.html": "Webスクレイピングで営業リスト作成と分析を自動化する",
+    "026-non-it-smb-system-development-no-engineer.html": "エンジニアなしの中小企業でも失敗しない開発体制を整える",
+    "027-hiring-vs-outsourcing-cost-comparison.html": "固定費リスクを避け開発外注で圧倒的低コストを実現する",
+    "028-excel-to-web-system-dx-cost.html": "エクセルの業務限界をWebシステム化で解消する",
+    "029-non-it-smb-genai-business-efficiency.html": "中小企業が生成AIを活用して業務を圧倒的に効率化する",
+    "030-smb-system-development-cost-standard.html": "システム開発の費用相場と適正価格を見極める",
+    "031-nocode-limitations-real-development-cost.html": "ノーコード開発の限界とスクラッチ開発の損益分岐点",
+    "032-non-it-contract-types-risk-management.html": "請負契約と準委任契約の違いと失敗しない選び方",
+    "033-simple-rfp-writing-for-non-it-buyers.html": "初心者でも書けるシステム開発RFP作成ガイド",
+    "034-smb-ec-site-development-shopify-cost.html": "Shopifyを活用した格安ECサイト構築のポイント",
+    "035-2026-genai-b2b-dx-automation.html": "法人向け生成AI×自社業務自動化のROI実証と導入法",
+    "035-c2c-sharing-matching-platform-development.html": "パッケージとAPIを駆使したマッチング開発",
+    "036-2026-smb-agile-mvp-cost-optimization.html": "中小企業向けアジャイル・MVP開発の費用削減法",
+    "036-custom-workflow-management-tool-cost.html": "自社専用業務管理システムを低コストでスクラッチ開発",
+    "037-pwa-web-app-vs-native-cost-comparison.html": "PWA（Webアプリ）構築でアプリ開発費を劇的に削減",
+    "038-line-api-chatbot-customer-support-cost.html": "LINE公式×ChatGPT API連携構築費用と自動顧客対応",
+    "039-filemaker-access-legacy-modernization.html": "FileMaker・AccessのWebシステム移行費用とメリット",
+    "040-web-scraping-automation-marketing-leads.html": "Webデータ自動収集・スクレイピング開発費用と活用術",
+    "041-non-it-smb-system-development-no-engineer.html": "システム外注で失敗しない防衛策がわかる",
+    "rag-chatbot-internal-document-cost.html": "社内データ専用のセキュアなRAGチャットボットを構築する",
+    "react-native-app-development-cost.html": "React NativeによるマルチOS同時構築で開発費を圧縮する",
+    "system-development-requirements-definition-support.html": "要件定義をブレずに進め開発の後戻りを完全に防ぐ",
+    "how-to-reduce-system-development-cost.html": "発注側の交渉術と工夫で開発初期費用を賢く削る",
+    "inhouse-vs-outsourcing.html": "開発内製化と外注の最適な役割分担を定義する",
+    "requirements-definition-tips.html": "失敗しない要件定義の具体的な進め方を解説する",
+    "development-schedule-shortening.html": "システム開発の納期を大幅に短縮する",
+    "nocode-vs-scratch.html": "ノーコードの限界とスクラッチ開発の技術選定を行う",
+    "contract-types-comparison.html": "請負・準委任・派遣を正しく選び分けコストを最適化する",
+    "rfp-development-request.html": "開発会社を動かす正しいRFPの書き方をマスターする",
+    "agile-minimalist-dev.html": "アジャイル・ミニマル開発で開発費用を抑える",
+    "ai-app-integration.html": "自社システムに生成AIをAPI連携し自動化する",
+    "saas-product-launch.html": "SaaS立ち上げ時の外注ステップを最適化する",
+    "development-cost-market.html": "システム開発費用の相場を把握し不要コストを削る",
+    "offshore-hybrid-development.html": "ハイブリッド体制で高品質・低コスト開発を実現する",
 }
 
 def get_theme(filename, title, category):
@@ -61,7 +110,7 @@ def split_catchphrase(text):
     clean = " ".join(re.sub(r"<[^>]+>", "", text).split())
     if not clean:
         return ["システム開発の要点と", "失敗を防ぐ実践アプローチ"]
-    if len(clean) <= 19:
+    if len(clean) <= 18:
         return [clean]
     
     best_idx = len(clean) // 2
@@ -79,109 +128,87 @@ def split_catchphrase(text):
             best_idx = i
     return [clean[:best_idx], clean[best_idx:]]
 
-def generate_svg(filename, title, category, existing_jp_lines=None):
+def generate_svg(filename, title, category):
     clean_id = re.sub(r"[^a-zA-Z0-9_]", "_", filename.replace(".html", ""))
     theme = get_theme(filename, title, category)
     
     accent = theme["accent"]
     orb1 = theme["orb1"]
     orb2 = theme["orb2"]
-    tag_en = theme["tag_en"]
     t1, t2, t3 = theme["takeaways"]
     
-    if existing_jp_lines and len(existing_jp_lines) > 0:
-        raw_text = "".join(existing_jp_lines)
+    # Clean text from mapping or title
+    if filename in SUMMARY_MAPPING:
+        raw_text = SUMMARY_MAPPING[filename]
     else:
         raw_text = title.split("|")[0].split("—")[0].strip()
-        if "【2026年最新】" in raw_text:
-            raw_text = raw_text.replace("【2026年最新】", "")
+        raw_text = re.sub(r"【.*?】", "", raw_text).strip()
         if len(raw_text) > 30:
             raw_text = raw_text[:28] + "..."
             
     lines = split_catchphrase(raw_text)
     
     if len(lines) == 1:
-        text_svg = f"""<text x="110" y="238" fill="#FFFFFF" font-size="34" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.03em">
-    {lines[0]}
-  </text>"""
+        text_svg = f"""<text x="0" y="225" fill="#FFFFFF" font-size="42" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      {lines[0]}
+    </text>"""
     else:
         l1, l2 = lines[0], lines[1]
-        text_svg = f"""<text x="110" y="215" fill="#FFFFFF" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-    {l1}
-  </text>
-  <text x="110" y="260" fill="#FFFFFF" font-size="32" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-    <tspan fill="{accent}">{l2}</tspan>
-  </text>"""
+        text_svg = f"""<text x="0" y="195" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      {l1}
+    </text>
+    <text x="0" y="255" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="{accent}">{l2}</tspan>
+    </text>"""
 
     svg = f"""<svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「{title}」のビジュアルバナー">
   <defs>
     <linearGradient id="bg_{clean_id}" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#131D33"/>
-      <stop offset="0.5" stop-color="#1E293B"/>
-      <stop offset="1" stop-color="#172338"/>
-    </linearGradient>
-    <linearGradient id="border_{clean_id}" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="{accent}" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="{orb2}" stop-opacity="0.3"/>
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
     </linearGradient>
     <filter id="blur_{clean_id}" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
-      <feGaussianBlur stdDeviation="70"/>
+      <feGaussianBlur stdDeviation="80"/>
     </filter>
   </defs>
 
+  <!-- Clean Background -->
   <rect width="1000" height="428" fill="url(#bg_{clean_id})"/>
 
-  <circle cx="850" cy="80" r="230" fill="{orb1}" opacity="0.3" filter="url(#blur_{clean_id})"/>
-  <circle cx="150" cy="350" r="200" fill="{orb2}" opacity="0.25" filter="url(#blur_{clean_id})"/>
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="{orb1}" opacity="0.25" filter="url(#blur_{clean_id})"/>
+  <circle cx="150" cy="340" r="220" fill="{orb2}" opacity="0.2" filter="url(#blur_{clean_id})"/>
 
-  <g opacity="0.18" stroke="{accent}" stroke-width="1">
-    <line x1="80" y1="0" x2="80" y2="428"/>
-    <line x1="200" y1="0" x2="200" y2="428"/>
-    <line x1="320" y1="0" x2="320" y2="428"/>
-    <line x1="440" y1="0" x2="440" y2="428"/>
-    <line x1="560" y1="0" x2="560" y2="428"/>
-    <line x1="680" y1="0" x2="680" y2="428"/>
-    <line x1="800" y1="0" x2="800" y2="428"/>
-    <line x1="920" y1="0" x2="920" y2="428"/>
-    <line x1="0" y1="80" x2="1000" y2="80"/>
-    <line x1="0" y1="180" x2="1000" y2="180"/>
-    <line x1="0" y1="280" x2="1000" y2="280"/>
-    <line x1="0" y1="380" x2="1000" y2="380"/>
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="{accent}" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
   </g>
 
-  <circle cx="200" cy="80" r="4" fill="{accent}" opacity="0.9"/>
-  <circle cx="680" cy="180" r="4" fill="{accent}" opacity="0.9"/>
-  <circle cx="800" cy="280" r="4" fill="{orb2}" opacity="0.9"/>
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    {text_svg}
 
-  <text x="500" y="155" text-anchor="middle" fill="{accent}" font-size="68" font-family="'Outfit', sans-serif" font-weight="900" opacity="0.08" letter-spacing="0.2em">{tag_en}</text>
-
-  <!-- High-transparency Lightweight Frosted Glass Card -->
-  <rect x="70" y="100" width="860" height="245" rx="18" fill="rgba(255, 255, 255, 0.08)" stroke="url(#border_{clean_id})" stroke-width="1.8"/>
-  <path d="M70 118 C70 108 78 100 88 100 L912 100 C922 100 930 108 930 118" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1.2" fill="none"/>
-
-  <!-- Category Tag -->
-  <g transform="translate(110, 135)">
-    <rect width="195" height="28" rx="14" fill="rgba(255, 255, 255, 0.12)" stroke="{accent}" stroke-width="1.2"/>
-    <text x="97" y="19" text-anchor="middle" fill="{accent}" font-size="13" font-family="'Outfit', sans-serif" font-weight="800" letter-spacing="0.06em">{tag_en}</text>
+    <!-- Key Takeaways Bullets -->
+    <g transform="translate(0, 315)">
+      <text x="0" y="15" fill="#CBD5E1" font-size="18" font-family="'Noto Sans JP', sans-serif" font-weight="600" letter-spacing="0.03em">
+        <tspan fill="{accent}">✔</tspan> {t1}　<tspan fill="{accent}">✔</tspan> {t2}　<tspan fill="{accent}">✔</tspan> {t3}
+      </text>
+    </g>
   </g>
-
-  {text_svg}
-
-  <!-- 3 Key Takeaways -->
-  <g transform="translate(110, 292)">
-    <text x="0" y="15" fill="#F1F5F9" font-size="15" font-family="'Noto Sans JP', sans-serif" font-weight="600">
-      <tspan fill="{accent}">✔</tspan> {t1}　<tspan fill="{accent}">✔</tspan> {t2}　<tspan fill="{accent}">✔</tspan> {t3}
-    </text>
-  </g>
-
-  <text x="890" y="322" text-anchor="end" fill="#CBD5E1" font-size="13" font-family="'Outfit', sans-serif" font-weight="700" letter-spacing="0.1em">ILL INC. TECH INSIGHTS</text>
-
-  <rect x="0" y="0" width="1000" height="428" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.2" fill="none"/>
 </svg>"""
     return svg
 
 def main():
-    print("Applying refined lightweight A-style thumbnail to all 96 column articles...")
+    print("Applying super-clean minimal thumbnail (Background + Text only) to all 96 column articles...")
     files = sorted([f for f in glob.glob(os.path.join(COLUMN_DIR, "*.html")) if "index.html" not in f])
     
     svg_map = {}
@@ -194,14 +221,8 @@ def main():
         title = t_match.group(1).strip() if t_match else fname
         cat_match = re.search(r"<span class=\"article-category\"[^>]*>(.*?)</span>", content)
         cat = cat_match.group(1).strip() if cat_match else "システム開発"
-        
-        mv = re.search(r"<div class=\"article-main-visual\">(.*?)</div>", content, re.DOTALL)
-        existing_jp = []
-        if mv:
-            txts = re.findall(r"<text[^>]*>(.*?)</text>", mv.group(1), re.DOTALL)
-            existing_jp = [re.sub(r"<[^>]+>", "", t).strip() for t in txts if any("\u3000" <= ch <= "\u9fff" for ch in t)]
             
-        svg = generate_svg(fname, title, cat, existing_jp)
+        svg = generate_svg(fname, title, cat)
         svg_map[fname] = (svg, title, cat)
         
         new_content = re.sub(r"(?s)<div class=\"article-main-visual\">\s*<svg.*?</svg>\s*</div>", f"<div class=\"article-main-visual\">\n        {svg}\n      </div>", content)
