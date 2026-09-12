@@ -17,6 +17,8 @@ on:
 jobs:
   generate-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,7 +31,8 @@ jobs:
       - name: Run Column Generation & Index Pipeline
         run: |
           python3 scripts/generate_next_blog_post.py
-          python3 scripts/convert_all_banners_to_single_line.py
+          python3 scripts/apply_new_thumbnail_design.py
+          python3 scripts/apply_seo_optimizations.py
 
       - name: Commit and Push Changes to Main
         run: |
