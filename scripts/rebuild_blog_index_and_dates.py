@@ -119,8 +119,8 @@ def main():
             
         new_articles.append((filename, date_str))
         
-    # Sort new articles by date
-    new_articles.sort(key=lambda x: x[1])
+    # Sort new articles by date and then filename
+    new_articles.sort(key=lambda x: (x[1], x[0]))
     
     # Append to chronological list
     for filename, _ in new_articles:
