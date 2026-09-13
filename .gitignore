@@ -2,3 +2,6 @@
 ill-homepage.zip
 .vercel
 gsc-credentials.json
+__pycache__/
+*.py[cod]
+*$py.class
