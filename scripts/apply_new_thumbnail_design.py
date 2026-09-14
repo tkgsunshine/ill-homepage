@@ -86,6 +86,7 @@ SUMMARY_MAPPING = {
     "044-non-it-smb-genai-business-efficiency.html": "API連携で日常の定型業務を生成AIで自動化する",
     "045-smb-system-development-cost-standard.html": "適正価格を見極め見積もりの過剰上乗せを防ぐ",
     "046-nocode-limitations-real-development-cost.html": "ノーコードの罠を見極めスクラッチ開発で構築する",
+    "047-non-it-contract-types-risk-management.html": "請負と準委任を正しく使い分けトラブルを防ぐ",
     "rag-chatbot-internal-document-cost.html": "社内データ専用のセキュアなRAGチャットボットを構築する",
     "react-native-app-development-cost.html": "React NativeによるマルチOS同時構築で開発費を圧縮する",
     "system-development-requirements-definition-support.html": "要件定義をブレずに進め開発の後戻りを完全に防ぐ",
