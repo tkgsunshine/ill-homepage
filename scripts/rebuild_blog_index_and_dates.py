@@ -296,13 +296,14 @@ def main():
             hub_content = f.read()
             
         grid_start = '<div class="column-grid">'
-        grid_end = '</div>\n  </section>'
+        new_grid_content = "\n" + "\n\n".join(hub_cards) + "\n      </div>\n\n      <!-- Pagination Navigation -->\n      <nav class=\"pagination-container\" id=\"column-pagination\" aria-label=\"コラム一覧のページネーション\"></nav>\n    </div>\n  </section>"
         
-        start_idx = hub_content.find(grid_start) + len(grid_start)
-        end_idx = hub_content.find(grid_end, start_idx)
-        
-        new_grid_content = "\n" + "\n\n".join(hub_cards) + "\n      "
-        hub_content = hub_content[:start_idx] + new_grid_content + hub_content[end_idx:]
+        hub_content = re.sub(
+            r'(?s)<div class="column-grid">.*?</section>',
+            f'<div class="column-grid">{new_grid_content}',
+            hub_content,
+            count=1
+        )
         
         with open(hub_path, "w", encoding="utf-8") as f:
             f.write(hub_content)

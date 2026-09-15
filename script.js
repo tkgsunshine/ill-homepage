@@ -578,45 +578,184 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // --- COLUMN CATEGORY FILTERING ---
-  const categoryTabs = document.querySelectorAll('.category-tab');
-  const columnCards = document.querySelectorAll('.column-card[data-category]');
+  // --- COLUMN CATEGORY FILTERING & HYBRID PAGINATION ---
+  const categoryTabs = document.querySelectorAll('.category-tabs .category-tab');
+  const columnGrid = document.querySelector('.column-grid');
+  const columnCards = Array.from(document.querySelectorAll('.column-grid .column-card[data-category]'));
+  const paginationContainer = document.getElementById('column-pagination');
 
   if (categoryTabs.length > 0 && columnCards.length > 0) {
+    const ITEMS_PER_PAGE = 12;
+    let currentFilter = 'all';
+    let currentPage = 1;
+
+    // Check URL params for initial state (e.g. ?cat=gen-ai&page=2)
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCat = urlParams.get('cat');
+    const initialPage = parseInt(urlParams.get('page'), 10);
+
+    if (initialCat) {
+      const targetTab = Array.from(categoryTabs).find(t => t.getAttribute('data-filter') === initialCat);
+      if (targetTab) {
+        categoryTabs.forEach(t => t.classList.remove('active'));
+        targetTab.classList.add('active');
+        currentFilter = initialCat;
+      }
+    }
+    if (initialPage && !isNaN(initialPage) && initialPage > 0) {
+      currentPage = initialPage;
+    }
+
+    function getFilteredCards() {
+      if (currentFilter === 'all') return columnCards;
+      return columnCards.filter(card => card.getAttribute('data-category') === currentFilter);
+    }
+
+    function renderPage(scrollOnPageChange) {
+      const filteredCards = getFilteredCards();
+      const totalItems = filteredCards.length;
+      const totalPages = Math.max(1, Math.ceil(totalItems / ITEMS_PER_PAGE));
+
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, totalItems);
+
+      // Hide all cards first
+      columnCards.forEach(card => {
+        card.style.display = 'none';
+        card.style.opacity = '0';
+      });
+
+      // Show only cards for the active page
+      const visibleCards = filteredCards.slice(startIndex, endIndex);
+      visibleCards.forEach(card => {
+        card.style.display = 'flex';
+        card.offsetHeight; // trigger reflow
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      });
+
+      // Render Pagination Controls
+      if (paginationContainer) {
+        if (totalPages <= 1 && totalItems === 0) {
+          paginationContainer.innerHTML = '<p class="pagination-info">該当する記事が見つかりませんでした。</p>';
+          return;
+        }
+
+        const startNumber = totalItems > 0 ? startIndex + 1 : 0;
+        let paginationHTML = `
+          <div class="pagination-info">
+            全 <span class="highlight">${totalItems}</span> 件中 <span class="highlight">${startNumber}〜${endIndex}</span> 件目を表示（${currentPage} / ${totalPages} ページ）
+          </div>
+        `;
+
+        if (totalPages > 1) {
+          paginationHTML += '<ul class="pagination-list">';
+
+          // Prev Button
+          const isPrevDisabled = currentPage === 1;
+          paginationHTML += `
+            <li class="pagination-item">
+              <button class="pagination-btn ${isPrevDisabled ? 'disabled' : ''}" data-page="${currentPage - 1}" ${isPrevDisabled ? 'disabled' : ''} aria-label="前のページへ">
+                &laquo; 前へ
+              </button>
+            </li>
+          `;
+
+          // Page Number Buttons (Smart window)
+          function getPageNumbers(current, total) {
+            if (total <= 7) {
+              return Array.from({ length: total }, (_, i) => i + 1);
+            }
+            if (current <= 4) {
+              return [1, 2, 3, 4, 5, '...', total];
+            }
+            if (current >= total - 3) {
+              return [1, '...', total - 4, total - 3, total - 2, total - 1, total];
+            }
+            return [1, '...', current - 1, current, current + 1, '...', total];
+          }
+
+          const pageNumbers = getPageNumbers(currentPage, totalPages);
+          pageNumbers.forEach(p => {
+            if (p === '...') {
+              paginationHTML += '<li class="pagination-item"><span class="pagination-ellipsis">&hellip;</span></li>';
+            } else {
+              const isActive = p === currentPage;
+              paginationHTML += `
+                <li class="pagination-item">
+                  <button class="pagination-btn ${isActive ? 'active' : ''}" data-page="${p}" aria-label="${p}ページ目へ" ${isActive ? 'aria-current="page"' : ''}>
+                    ${p}
+                  </button>
+                </li>
+              `;
+            }
+          });
+
+          // Next Button
+          const isNextDisabled = currentPage === totalPages;
+          paginationHTML += `
+            <li class="pagination-item">
+              <button class="pagination-btn ${isNextDisabled ? 'disabled' : ''}" data-page="${currentPage + 1}" ${isNextDisabled ? 'disabled' : ''} aria-label="次のページへ">
+                次へ &raquo;
+              </button>
+            </li>
+          `;
+
+          paginationHTML += '</ul>';
+        }
+
+        paginationContainer.innerHTML = paginationHTML;
+
+        // Attach event listeners to pagination buttons
+        const pageBtns = paginationContainer.querySelectorAll('.pagination-btn[data-page]');
+        pageBtns.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetPage = parseInt(btn.getAttribute('data-page'), 10);
+            if (!isNaN(targetPage) && targetPage >= 1 && targetPage <= totalPages && targetPage !== currentPage) {
+              currentPage = targetPage;
+              updateUrlParams();
+              renderPage(true);
+            }
+          });
+        });
+      }
+
+      if (scrollOnPageChange) {
+        const tabsContainer = document.querySelector('.category-tabs-container');
+        if (tabsContainer) {
+          const topPos = tabsContainer.getBoundingClientRect().top + window.pageYOffset - 100;
+          window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
+        }
+      }
+    }
+
+    function updateUrlParams() {
+      const params = new URLSearchParams();
+      if (currentFilter !== 'all') params.set('cat', currentFilter);
+      if (currentPage > 1) params.set('page', currentPage);
+      const newQuery = params.toString() ? '?' + params.toString() : window.location.pathname;
+      window.history.replaceState({}, '', newQuery);
+    }
+
+    // Category Tabs click handler
     categoryTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         if (tab.classList.contains('active')) return;
-        
-        // Remove active class from all tabs
         categoryTabs.forEach(t => t.classList.remove('active'));
-        // Add active class to clicked tab
         tab.classList.add('active');
-
-        const filter = tab.getAttribute('data-filter');
-
-        // First, fade out all cards
-        columnCards.forEach(card => {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(15px)';
-        });
-
-        // After fade out transition (300ms), update display and fade in matched cards
-        setTimeout(() => {
-          columnCards.forEach(card => {
-            const cardCategory = card.getAttribute('data-category');
-            if (filter === 'all' || cardCategory === filter) {
-              card.style.display = 'flex';
-              // Trigger a reflow
-              card.offsetHeight;
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        }, 300);
+        currentFilter = tab.getAttribute('data-filter') || 'all';
+        currentPage = 1; // Reset to page 1 on filter switch
+        updateUrlParams();
+        renderPage(false);
       });
     });
+
+    // Initial render
+    renderPage(false);
   }
 });
 
