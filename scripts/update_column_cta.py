@@ -26,7 +26,7 @@ BOTTOM_CTA_HTML = """          <!-- Eye-catching Bottom CTA Banner -->
             </ul>
             <div class="cta-buttons">
               <a href="../index.html#contact" class="btn btn-primary btn-cta-primary">
-                無料で開発相談・見積もりを依頼する（最短30分） <span class="arrow">→</span>
+                無料で開発相談・見積もりを依頼する <span class="arrow">→</span>
               </a>
               <a href="../cases/index.html" class="btn btn-secondary btn-cta-secondary">
                 開発実績・費用削減事例を見る →
@@ -56,10 +56,8 @@ def update_file(filepath):
         content = f.read()
 
     # 1. Clean up any existing bottom CTA blocks
-    # Remove old inline-cta, inline-cta-box, article-bottom-cta
     content = re.sub(r'<!--\s*(?:Conversion\s+CTA|Eye-catching\s+Bottom\s+CTA)[^>]*-->\s*', '', content)
     content = re.sub(r'<div class="(?:inline-cta|inline-cta-box|article-bottom-cta)[^"]*">.*?</div>\s*(?=(?:</main>|</div>\s*</article>))', '', content, flags=re.DOTALL)
-    # Also handle if an inline-cta is elsewhere in main
     content = re.sub(r'<div class="inline-cta-box glass-card"[^>]*>.*?</div>\s*</div>', '</div>', content, flags=re.DOTALL)
 
     # 2. Insert the new bottom CTA right before </main> or </div>\s*</article>
@@ -77,7 +75,6 @@ def update_file(filepath):
             flags=re.DOTALL
         )
     else:
-        # Append before </aside>
         if "</aside>" in content:
             content = re.sub(r'(?s)(.*?)\s*</aside>', rf'\g<1>\n{SIDEBAR_CTA_HTML}        </aside>', content, count=1)
 

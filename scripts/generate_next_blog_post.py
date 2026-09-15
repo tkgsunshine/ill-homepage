@@ -131,7 +131,7 @@ def main():
             </ul>
             <div class="cta-buttons">
               <a href="../index.html#contact" class="btn btn-primary btn-cta-primary">
-                無料で開発相談・見積もりを依頼する（最短30分） <span class="arrow">→</span>
+                無料で開発相談・見積もりを依頼する <span class="arrow">→</span>
               </a>
               <a href="../cases/index.html" class="btn btn-secondary btn-cta-secondary">
                 開発実績・費用削減事例を見る →
