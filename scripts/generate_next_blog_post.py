@@ -110,23 +110,40 @@ def main():
     bottom_cta_html = """
           <!-- Eye-catching Bottom CTA Banner -->
           <div class="article-bottom-cta">
-            <div class="cta-badge">＼ 開発費用の適正化・AI導入の無料相談 ／</div>
+            <div class="cta-badge">
+              <span class="badge-dot"></span>開発費用の適正化・AI導入の無料相談
+            </div>
             <h3 class="cta-title">システム開発・AI導入の「高すぎる見積もり」にお困りですか？</h3>
             <p class="cta-desc">
               Ill（イル）株式会社では、不要な中間マージンと過剰機能を徹底的に削ぎ落とす<strong>「ミニマル設計」</strong>により、大手SIerや従来開発会社の<strong>半額以下の適正価格</strong>で高品質なシステム・AI開発を実現します。
             </p>
             <ul class="cta-features">
               <li class="cta-feature-item">
-                <span class="cta-feature-icon">✔</span>
-                <span class="cta-feature-text">他社見積もりの妥当性診断（セカンドオピニオン無料）</span>
+                <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <div class="cta-feature-content">
+                  <strong>他社見積もりの妥当性診断</strong>
+                  <span>セカンドオピニオン・無料診断</span>
+                </div>
               </li>
               <li class="cta-feature-item">
-                <span class="cta-feature-icon">✔</span>
-                <span class="cta-feature-text">最短即日の概算お見積もり・プロトタイプ提案</span>
+                <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <div class="cta-feature-content">
+                  <strong>最短即日の概算見積もり</strong>
+                  <span>要件定義前・アイデア段階から対応</span>
+                </div>
               </li>
               <li class="cta-feature-item">
-                <span class="cta-feature-icon">✔</span>
-                <span class="cta-feature-text">仕様変更に強いアジャイル・最新モダンスタック対応</span>
+                <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <div class="cta-feature-content">
+                  <strong>仕様変更に強いアジャイル</strong>
+                  <span>最新モダンスタック・高拡張性</span>
+                </div>
               </li>
             </ul>
             <div class="cta-buttons">
@@ -138,7 +155,7 @@ def main():
               </a>
             </div>
             <p class="cta-microcopy">
-              <span>🛡️</span> ※無理な営業は一切いたしません。企画構想段階や相見積もりのご相談もお気軽にどうぞ。
+              <span>🔒</span> ※無理な営業は一切いたしません。企画構想段階や相見積もりのご相談もお気軽にどうぞ。
             </p>
           </div>
 """
