@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行 | 開発実績・導入事例 | Ill inc.</title>
+  <meta name="description" content="CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度とセキュリティを劇的に改善。">
+  <meta name="keywords" content="Next.js,NestJS,SPA,GCP,Google Cloud,Cloudflare,WAF,DDoS対策,求人サイト開発,開発実績,導入事例,Ill inc.">
+  <meta name="author" content="Ill inc.">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/cases/security-recruitment.html">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行 | Ill inc.">
+  <meta property="og:description" content="CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度とセキュリティを劇的に改善。">
+  <meta property="og:url" content="https://www.ill-inc.net/cases/security-recruitment.html">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_security_recruitment.webp?v=1">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行 | Ill inc.">
+  <meta name="twitter:description" content="CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度とセキュリティを劇的に改善。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_security_recruitment.webp?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=61">
+
+  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行",
+    "description": "CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度とセキュリティを劇的に改善。",
+    "image": "https://www.ill-inc.net/illust_case_security_recruitment.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill inc."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15"
+  }
+  </script>
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <!-- Stylized III / Ill Logo with Gradients -->
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Cases</a></li>
+          <li><a href="../column/" class="nav-link">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS & ARTICLE SECTION -->
+  <section class="section" style="padding-top: 12rem;">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs" style="margin-bottom: 4rem;">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行</span>
+      </div>
+
+      <!-- Case study main wrapper -->
+      <article class="glass-card case-detail-card">
+        
+        <!-- Large Illustration Banner -->
+        <div class="case-detail-banner">
+          <img src="../illust_case_security_recruitment.webp" alt="警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">求人・マッチング / クラウド移行</span>
+        </div>
+
+        <div class="case-detail-content">
+          <!-- Title & Badges -->
+          <h1 class="case-detail-title">
+            警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行
+          </h1>
+          
+          <div class="case-detail-tags">
+            <span class="tech-badge">Next.js (SPA)</span>
+            <span class="tech-badge">NestJS (TypeScript)</span>
+            <span class="tech-badge">Google Cloud (GCP)</span>
+            <span class="tech-badge">Cloudflare (WAF/DDoS)</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+
+          <!-- Structured details -->
+          <div class="case-detail-grid">
+            
+            <!-- Challenges -->
+            <div>
+              <h3 class="case-detail-section-title">課題・背景</h3>
+              <p class="case-detail-text">
+                月間数十万PVを抱える警備業界特化型の求人ポータルサイトにおいて、以下の3つの深刻な課題が事業拡大のボトルネックとなっていました。
+              </p>
+              <ul class="case-detail-list">
+                <li><strong>レガシー技術とレスポンス遅延</strong>: Apache + nginx、CakePHP（従来型MVC）による古いサーバーサイドレンダリング構成で、検索絞り込みやページ遷移時のレスポンスが重く、モバイル求職者の離脱原因になっていた。</li>
+                <li><strong>高額なインフラ月額費用（月100万円超）</strong>: オンプレミス（IDフロンティア）とAWSが複雑に混在し、過剰なEC2/RDSインスタンス設計によってインフラ運用維持費が月額100万円を超過していた。</li>
+                <li><strong>セキュリティ対策の未整備</strong>: WAFやBot対策、DDoS対策が未導入であり、悪質なスクレイピングや不正アクセスによるサーバー高負荷リスクを抱えていた。</li>
+                <li><strong>旧態依然としたUIデザイン</strong>: PC前提の古いフォームUIでスマートフォンからの求人応募完了率（CVR）が低迷していた。</li>
+              </ul>
+            </div>
+
+            <!-- Approach -->
+            <div>
+              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
+              <ul class="case-detail-list">
+                <li><strong>Next.js + NestJS によるSPAアーキテクチャ刷新</strong>: フロントエンドにNext.js（SPA）、バックエンドにNestJS（TypeScript）を採用し、完全ヘッドレス・API駆動のモダンアーキテクチャへ全面再構築。画面遷移のないシームレスな求人検索体験を実現。</li>
+                <li><strong>GCP（Google Cloud）への全面移行と最適化</strong>: Cloud RunとCloud SQL（PostgreSQL）を中核としたサーバーレス・オートスケール構成へ移行。過剰な常時稼働インスタンスを排除し、アクセス増減に連動する最適課金モデルへシフト。</li>
+                <li><strong>Cloudflare による鉄壁のセキュリティとCDN配信</strong>: Cloudflare WAF、Bot Management、DDoS防御を最前線に導入。悪質なクローラーや攻撃をエッジで完全遮断しつつ、静的アセットと求人キャッシュを高速エッジ配信。</li>
+                <li><strong>モバイルファーストなUI/UXフルリニューアル</strong>: 警備求職者の行動特性を徹底分析し、エリア・日払い・未経験等のワンタップ絞り込みや、LINE連携を含む超軽量応募フォームを設計・実装。</li>
+              </ul>
+            </div>
+
+            <!-- Strength & Effect -->
+            <div>
+              <h3 class="case-detail-section-title">Illの強みと効果</h3>
+              <p class="case-detail-text">
+                要件定義からフロントエンド・バックエンド開発、インフラ移行設計、Cloudflareセキュリティ導入まで一貫対応。<br>
+                その結果、<strong>月額インフラ費用を100万円超から半分以下の40万円台（約60%削減 / 年間700万円以上のコスト削減）へ劇的に圧縮</strong>しました。<br>
+                さらにSPA化とCDNキャッシュにより<strong>ページ表示速度が約3.5倍高速化</strong>し、直帰率の大幅低減とスマートフォン経由の<strong>応募CVR（コンバージョン率）28%向上</strong>を達成しました。
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Back button -->
+          <div class="case-detail-back-container">
+            <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta">
+        <h3 class="cases-cta-title">
+          新規プロジェクトのご相談・プロトタイプ作成
+        </h3>
+        <p class="cases-cta-desc">
+          求人ポータル、マッチングサービス、レガシーシステムのGCP移行・コスト削減など、貴社の課題を最短スピードで解決します。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成およびインフラコスト無料診断を承っております。</span>
+        </p>
+        <div class="cases-cta-buttons">
+          <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
+          <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <!-- SVG Logo -->
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">実績・事例</a></li>
+              <li><a href="../column/" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client JavaScript -->
+  <script defer src="../script.js?v=61"></script>
+  <!-- Floating Theme Switcher -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <!-- Moon Icon for switching to dark theme -->
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <!-- Sun Icon for switching to light theme -->
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
