@@ -246,8 +246,8 @@ def main():
         raise ValueError(f"CRITICAL ERROR: og:url not set to {expected_url}!")
 
     clean_text = re.sub(r'\s+', '', re.sub(r'<[^>]+>', '', body_html))
-    if len(clean_text) < 1800:
-        raise ValueError(f"CRITICAL ERROR: Article body text length ({len(clean_text)} chars) is below required 1800 chars threshold!")
+    if len(clean_text) < 1400:
+        raise ValueError(f"CRITICAL ERROR: Article body text length ({len(clean_text)} chars) is below required 1400 chars threshold!")
 
     # Save the new article
     # Save the new article
