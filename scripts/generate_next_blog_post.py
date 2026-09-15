@@ -107,8 +107,43 @@ def main():
             sections_html += f'            <div class="faq-item">\n              <h3>{qa["q"]}</h3>\n              <p>{qa["a"]}</p>\n            </div>\n'
         sections_html += '          </div>\n'
 
+    bottom_cta_html = """
+          <!-- Eye-catching Bottom CTA Banner -->
+          <div class="article-bottom-cta">
+            <div class="cta-badge">＼ 開発費用の適正化・AI導入の無料相談 ／</div>
+            <h3 class="cta-title">システム開発・AI導入の「高すぎる見積もり」にお困りですか？</h3>
+            <p class="cta-desc">
+              Ill（イル）株式会社では、不要な中間マージンと過剰機能を徹底的に削ぎ落とす<strong>「ミニマル設計」</strong>により、大手SIerや従来開発会社の<strong>半額以下の適正価格</strong>で高品質なシステム・AI開発を実現します。
+            </p>
+            <ul class="cta-features">
+              <li class="cta-feature-item">
+                <span class="cta-feature-icon">✔</span>
+                <span class="cta-feature-text">他社見積もりの妥当性診断（セカンドオピニオン無料）</span>
+              </li>
+              <li class="cta-feature-item">
+                <span class="cta-feature-icon">✔</span>
+                <span class="cta-feature-text">最短即日の概算お見積もり・プロトタイプ提案</span>
+              </li>
+              <li class="cta-feature-item">
+                <span class="cta-feature-icon">✔</span>
+                <span class="cta-feature-text">仕様変更に強いアジャイル・最新モダンスタック対応</span>
+              </li>
+            </ul>
+            <div class="cta-buttons">
+              <a href="../index.html#contact" class="btn btn-primary btn-cta-primary">
+                無料で開発相談・見積もりを依頼する（最短30分） <span class="arrow">→</span>
+              </a>
+              <a href="../cases/index.html" class="btn btn-secondary btn-cta-secondary">
+                開発実績・費用削減事例を見る →
+              </a>
+            </div>
+            <p class="cta-microcopy">
+              <span>🛡️</span> ※無理な営業は一切いたしません。企画構想段階や相見積もりのご相談もお気軽にどうぞ。
+            </p>
+          </div>
+"""
     toc_box_html = '\n          <div class="toc-box">\n            <div class="toc-title">目次</div>\n            <ul class="toc-list">\n' + '\n'.join(toc_items) + '\n            </ul>\n          </div>\n'
-    body_html = toc_box_html + sections_html
+    body_html = toc_box_html + sections_html + bottom_cta_html
         
     # Generate custom SVG banner (Premium Light Slate Style - Single Line)
     summary_text = f"{target_post['title_line2']}がわかる" if not target_post['title_line2'].endswith("わかる") else target_post['title_line2']
