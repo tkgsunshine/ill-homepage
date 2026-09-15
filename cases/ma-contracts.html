@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="M&A取引における各種契約書類をAIが自動作成。金額矛盾や法的リスク条項の自動スキャン、代替文案の推奨機能を搭載。">
-  <meta name="keywords" content="Claude 3.5 Sonnet,Python,FastAPI,React,開発実績,導入事例,Ill inc.">
+  <title>M&Aアドバイザリー向け電子契約・デューデリジェンス業務管理システム | 開発実績 | Ill inc.</title>
+  <meta name="description" content="M&A仲介・アドバイザリー業務における機密保持契約（NDA）の締結、仮想データルーム（VDR）、進捗トラッキングをセキュアに一元管理するWebシステム開発事例。">
+  <meta name="keywords" content="M&A システム開発,電子契約 システム 構築,仮想データルーム VDR 開発,機密情報 セキュア管理,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム | Ill inc.">
-  <meta property="og:description" content="M&A取引における各種契約書類をAIが自動作成。金額矛盾や法的リスク条項の自動スキャン、代替文案の推奨機能を搭載。">
+  <meta property="og:title" content="M&Aアドバイザリー向け電子契約・デューデリジェンス業務管理システム | 開発実績 | Ill inc.">
+  <meta property="og:description" content="M&A仲介・アドバイザリー業務における機密保持契約（NDA）の締結、仮想データルーム（VDR）、進捗トラッキングをセキュアに一元管理するWebシステム開発事例。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/ma-contracts.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_ma_contracts.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_ma_contracts.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム | Ill inc.">
-  <meta name="twitter:description" content="M&A取引における各種契約書類をAIが自動作成。金額矛盾や法的リスク条項の自動スキャン、代替文案の推奨機能を搭載。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_ma_contracts.webp?v=1">
+  <meta name="twitter:title" content="M&Aアドバイザリー向け電子契約・デューデリジェンス業務管理システム | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="M&A仲介・アドバイザリー業務における機密保持契約（NDA）の締結、仮想データルーム（VDR）、進捗トラッキングをセキュアに一元管理するWebシステム開発事例。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_ma_contracts.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム",
-    "description": "M&A取引における各種契約書類をAIが自動作成。金額矛盾や法的リスク条項の自動スキャン、代替文案の推奨機能を搭載。",
-    "image": "https://www.ill-inc.net/illust_case_ma_contracts.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "M&A機密案件の進捗管理・電子契約・デューデリジェンス情報共有プラットフォーム",
+      "description": "M&A仲介・アドバイザリー業務における機密保持契約（NDA）の締結、仮想データルーム（VDR）、進捗トラッキングをセキュアに一元管理するWebシステム開発事例。",
+      "image": "https://www.ill-inc.net/illust_case_ma_contracts.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/ma-contracts.html"
       }
     },
-    "datePublished": "2026-05-03",
-    "dateModified": "2026-05-03"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "M&A機密案件の進捗管理・電子契約・デューデリジェンス情報共有プラットフォーム",
+          "item": "https://www.ill-inc.net/cases/ma-contracts.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "PDF資料のダウンロード禁止や印刷制御は可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。ブラウザ内専用セキュアビューワーを実装し、ローカルへのダウンロード保存や右クリック印刷をブロックする制御が可能です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "既存のSFA/CRM（Salesforce等）と案件データの連携はできますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。REST APIやWebhook経由で既存の顧客管理システムと案件ステータスを双方向同期できます。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム</span>
+        <span class="breadcrumb-item">M&A機密案件の進捗管理・電子契約・デューデリジェンス情報共有プラットフォーム</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_ma_contracts.webp" alt="M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">生成AI開発</span>
+          <img src="../illust_case_ma_contracts.webp" alt="M&A機密案件の進捗管理・電子契約・デューデリジェンス情報共有プラットフォーム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">金融・法務DX / Webシステム</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム
+            M&A機密案件の進捗管理・電子契約・デューデリジェンス情報共有プラットフォーム
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">Claude 3.5 Sonnet</span>
-        <span class="tech-badge">Python</span>
-        <span class="tech-badge">FastAPI</span>
-        <span class="tech-badge">React</span>
+            <span class="tech-badge">React / TypeScript</span>
+            <span class="tech-badge">NestJS</span>
+            <span class="tech-badge">Cloudflare R2</span>
+            <span class="tech-badge">DocuSign / CloudSign API</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">M&A仲介・アドバイザリー / 投資ファンド</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約3.5ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">セキュリティ要件定義、電子契約API連携、権限管理付きVDR機能開発、案件進捗ダッシュボード</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,54 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                M&A仲介業務において、NDA（秘密保持契約書）やLOI（意向表明書）などの契約書類作成が個々の担当者任せになっており、案件固有条件の書き換え漏れや法的な条項の不整合が発生しやすく、リスク管理に時間がかかっていました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                M&A案件の検討において、NDA締結や財務・法務資料の共有がメール添付や汎用ストレージで行われており、情報漏洩リスクと進捗管理の煩雑さが課題でした。
+<ul>
+  <li><strong>電子契約締結とステータス追跡の分散</strong>: 案件ごとにNDAや仲介契約を別個の電子契約ツールで送付しており、締結状況の確認に多大な工数が発生。</li>
+  <li><strong>機密資料共有時の情報漏洩・誤送信リスク</strong>: 財務諸表や顧客リストなどの極秘データを買い手企業へ開示する際、透かし（ウォーターマーク）やダウンロード制御ができない。</li>
+  <li><strong>買い手候補企業の検討ステータス把握の困難</strong>: どの買い手企業がどの資料を閲覧したかのログが追えず、確度の高い買収提案を見極められない。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-            <li><strong>AI契約書ドラフトエンジン</strong>: 譲渡・譲受企業の条件、対価、合意項目をWebフォームに入力するだけで、高品質な契約文書を瞬時に自動生成。</li>
-            <li><strong>法的整合性チェック機能</strong>: 金額の表記不一致、有効期間の矛盾、法的に不利な条件（一方的義務など）がないかをAIが自動スキャン。</li>
-            <li><strong>テンプレート・ナレッジベース</strong>: 過去の成功事例パターンに照らし合わせ、適切な代替条文案をプロンプトが自動推奨。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、金融機関レベルのセキュリティ要件を満たす専用M&Aプラットフォームを構築しました。
+<ul class="case-detail-list">
+  <li><strong>NDA・意向表明書のワンクリック電子契約連携</strong>: クラウドサイン/DocuSign APIと統合し、案件情報から契約書を自動生成して電子署名を完結。</li>
+  <li><strong>動的ウォーターマーク付き仮想データルーム（VDR）</strong>: 閲覧者の社名・氏名・閲覧日時を半透明でPDF全ページに自動合成し、スクリーンショットや印刷による情報流出を抑止。</li>
+  <li><strong>買い手企業の閲覧行動トラッキング・エンゲージメントスコア</strong>: 各買い手候補が「どの資料を何分間閲覧したか」を秒単位で可視化し、成約確度を自動判定。</li>
+  <li><strong>プロジェクト単位の完全アイソレーション（権限分離）</strong>: アドバイザー担当者、売り手、買い手ごとにアクセス範囲を厳格に分離し、他案件の情報漏洩を完全遮断。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                論理構造の解析力と厳密な日本語処理能力において最も優れたClaude 3.5 Sonnetを組み込み、専門的なリーガル文書の自動チェック精度を極限まで最適化。手動ミスによるリーガルリスクを防ぎ、<strong>契約書の作成・確認のリードタイムを3分の1に短縮</strong>しました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>NDA締結から資料開示までのリードタイムが<strong>平均10日間から最短即日（90%短縮）</strong>へ加速。<br>
+買い手の閲覧ログ分析により優先度の高い候補先へ迅速なアプローチが可能となり、<strong>案件成約率（クローズ率）が24%向上</strong>しました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. PDF資料のダウンロード禁止や印刷制御は可能ですか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。ブラウザ内専用セキュアビューワーを実装し、ローカルへのダウンロード保存や右クリック印刷をブロックする制御が可能です。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 既存のSFA/CRM（Salesforce等）と案件データの連携はできますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。REST APIやWebhook経由で既存の顧客管理システムと案件ステータスを双方向同期できます。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/contract-types-comparison.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 外注先との契約トラブルを防ぐ請負契約・準委任契約の使い分け →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>

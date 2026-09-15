@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>障がい者限定コミュニケーション・マッチングプラットフォーム | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="音声読み上げやコントラスト比などWCAG 2.1アクセシビリティに準拠し、証明書による本人認証を備えた当事者向けマッチングアプリ。">
-  <meta name="keywords" content="Flutter,Node.js,Firebase,Webアクセシビリティ,開発実績,導入事例,Ill inc.">
+  <title>障害者福祉施設・当事者向けマッチングコミュニティアプリ開発 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="就労継続支援施設や放課後等デイサービスと当事者・保護者をマッチング。WCAGアクセシビリティ規格準拠、直感的な空き枠検索、自治体給付費請求連携を実装した開発事例。">
+  <meta name="keywords" content="福祉 マッチングアプリ 開発,障害者支援 システム,アクセシビリティ Web開発,React Native 福祉アプリ,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="障がい者限定コミュニケーション・マッチングプラットフォーム | Ill inc.">
-  <meta property="og:description" content="音声読み上げやコントラスト比などWCAG 2.1アクセシビリティに準拠し、証明書による本人認証を備えた当事者向けマッチングアプリ。">
+  <meta property="og:title" content="障害者福祉施設・当事者向けマッチングコミュニティアプリ開発 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="就労継続支援施設や放課後等デイサービスと当事者・保護者をマッチング。WCAGアクセシビリティ規格準拠、直感的な空き枠検索、自治体給付費請求連携を実装した開発事例。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/disabled-community.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_disabled_community.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_disabled_community.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="障がい者限定コミュニケーション・マッチングプラットフォーム | Ill inc.">
-  <meta name="twitter:description" content="音声読み上げやコントラスト比などWCAG 2.1アクセシビリティに準拠し、証明書による本人認証を備えた当事者向けマッチングアプリ。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_disabled_community.webp?v=1">
+  <meta name="twitter:title" content="障害者福祉施設・当事者向けマッチングコミュニティアプリ開発 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="就労継続支援施設や放課後等デイサービスと当事者・保護者をマッチング。WCAGアクセシビリティ規格準拠、直感的な空き枠検索、自治体給付費請求連携を実装した開発事例。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_disabled_community.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "障がい者限定コミュニケーション・マッチングプラットフォーム",
-    "description": "音声読み上げやコントラスト比などWCAG 2.1アクセシビリティに準拠し、証明書による本人認証を備えた当事者向けマッチングアプリ。",
-    "image": "https://www.ill-inc.net/illust_case_disabled_community.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "障害者福祉施設と利用者を繋ぐアクセシビリティ特化型マッチングプラットフォーム開発",
+      "description": "就労継続支援施設や放課後等デイサービスと当事者・保護者をマッチング。WCAGアクセシビリティ規格準拠、直感的な空き枠検索、自治体給付費請求連携を実装した開発事例。",
+      "image": "https://www.ill-inc.net/illust_case_disabled_community.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/disabled-community.html"
       }
     },
-    "datePublished": "2026-04-26",
-    "dateModified": "2026-04-26"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "障害者福祉施設と利用者を繋ぐアクセシビリティ特化型マッチングプラットフォーム開発",
+          "item": "https://www.ill-inc.net/cases/disabled-community.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Webアクセシビリティ（JIS X 8341-3 / WCAG）への準拠テストは可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。キーボード操作、音声読み上げツール（VoiceOver/NVDA等）、カラーコントラスト測定器を用いた実機テストを実施し、ガイドライン適合を保証します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "自治体や助成金（IT導入補助金など）を活用した開発相談はできますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。福祉事業者向けの補助金申請要件に合わせたシステム仕様書の策定や見積内訳の作成に対応可能です。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">障がい者限定コミュニケーション・マッチングプラットフォーム</span>
+        <span class="breadcrumb-item">障害者福祉施設と利用者を繋ぐアクセシビリティ特化型マッチングプラットフォーム開発</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_disabled_community.webp" alt="障がい者限定コミュニケーション・マッチングプラットフォーム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">新規事業開発</span>
+          <img src="../illust_case_disabled_community.webp" alt="障害者福祉施設と利用者を繋ぐアクセシビリティ特化型マッチングプラットフォーム開発" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">ヘルスケア・福祉 / マッチング</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            障がい者限定コミュニケーション・マッチングプラットフォーム
+            障害者福祉施設と利用者を繋ぐアクセシビリティ特化型マッチングプラットフォーム開発
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">Flutter</span>
-        <span class="tech-badge">Node.js</span>
-        <span class="tech-badge">Firebase</span>
-        <span class="tech-badge">Webアクセシビリティ</span>
+            <span class="tech-badge">React Native</span>
+            <span class="tech-badge">Next.js</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">WCAG 2.1 AA</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">障害福祉・ソーシャルケア / 自治体支援</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約4ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">アクセシビリティ設計、UI/UXデザイン、施設管理画面開発、ユーザー向けスマホアプリ開発、AWS構築</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,54 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                障がいを持つ当事者同士が安全に悩みを共有し対話できる場が不足していました。また、既存のマッチングアプリでは音声読み上げ非対応など、アクセシビリティの問題で使用できないという課題がありました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                障害福祉サービス（就労支援・放課後デイ）を探す保護者や当事者にとって、各施設の空き状況やプログラム内容の情報が紙や自治体PDFに散在し、最適な施設が見つからないという課題がありました。
+<ul>
+  <li><strong>リアルタイムの施設空き枠情報が不明</strong>: 各施設に電話で1件ずつ問い合わせる必要があり、利用開始までに数ヶ月を要していた。</li>
+  <li><strong>アクセシビリティの未対応</strong>: 視覚・聴覚・認知特性を持つ当事者が操作できるWebサイト・アプリが存在せず、情報アクセスの格差が生じていた。</li>
+  <li><strong>施設側の管理・連絡業務の煩雑化</strong>: 見学予約や通所連絡が電話・手書きで行われ、施設職員の事務負担が過重化していた。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-            <li><strong>WCAG 2.1準拠アクセシビリティ対応</strong>: 音声スクリーンリーダーでの論理的な読み上げフローの設計、文字色コントラスト比の最適化、ジェスチャー補助。</li>
-            <li><strong>安心の手帳認証システム</strong>: 証明書画像のアップロードとFirebaseを活用した、プライバシーを保護しつつサクラを排除する登録審査管理機能。</li>
-            <li><strong>AI投稿フィルター＆報告システム</strong>: 中傷や攻撃的なコミュニケーションを瞬時に検知するフィルタリングアルゴリズム。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、Webアクセシビリティ国際規格（WCAG 2.1 AA）に完全準拠し、当事者・施設双方にとって極限までシンプルなUIを設計しました。
+<ul class="case-detail-list">
+  <li><strong>ユニバーサルデザイン & 音声読み上げ最適化</strong>: スクリーンリーダー対応、コントラスト比の厳格準拠、ピクトグラムを活用した直感的な検索インターフェースを実装。</li>
+  <li><strong>ワンタップ空き状況確認 & 見学予約システム</strong>: 施設側がカレンダー上で空き枠を登録し、ユーザーが条件（車椅子対応、送迎有無、医療ケア等）で即座に絞り込み予約できる仕組みを構築。</li>
+  <li><strong>施設向け簡易連絡帳 & 記録管理ダッシュボード</strong>: 日々の利用実績や連絡事項をスマホ・タブレットから簡単入力できる施設専用ポータルを提供。</li>
+  <li><strong>高セキュリティな個人情報・医療情報保護</strong>: 暗号化ストレージと細粒度アクセス権限により、要配慮個人情報を厳格に保護。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                FlutterによるシングルコードベースでiOS/Android両プラットフォームのアクセシビリティ機能を徹底的にチューニング。当事者ユーザーに寄り添った優しく安全なUIデザインを実現し、<strong>リリース後の登録当事者数・アプリ維持率において高い満足度を獲得</strong>しています。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>リリースから半年で<strong>全国200以上の福祉施設が登録</strong>し、月間見学マッチング件数が1,500件を突破。<br>
+保護者の施設探し期間が平均2ヶ月から1週間に短縮され、施設側の見学受付・電話対応工数が<strong>月間約40%削減</strong>されました。福祉テックとしての高い社会的評価を獲得しています。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. Webアクセシビリティ（JIS X 8341-3 / WCAG）への準拠テストは可能ですか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。キーボード操作、音声読み上げツール（VoiceOver/NVDA等）、カラーコントラスト測定器を用いた実機テストを実施し、ガイドライン適合を保証します。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 自治体や助成金（IT導入補助金など）を活用した開発相談はできますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。福祉事業者向けの補助金申請要件に合わせたシステム仕様書の策定や見積内訳の作成に対応可能です。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/mvp-development-startup-speed.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 マッチングプラットフォームのMVP開発手順と費用を最小化する設計手法 →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>

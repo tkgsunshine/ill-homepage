@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行 | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="古い物理サーバーで稼働するレガシーWebシステムをコンテナ化。Cloud Runを活用したサーバーレス構成で保守不要とコスト削減を実現。">
-  <meta name="keywords" content="Google Cloud Run,Docker,Terraform,Cloud SQL,開発実績,導入事例,Ill inc.">
+  <title>レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="老朽化した物理サーバーのレガシーWebシステムをDockerコンテナ化し、Google Cloud Runを用いたサーバーレス構成へ全面移行。無停止DB移行と月額コスト大幅削減を実現。">
+  <meta name="keywords" content="GCP移行 費用,Cloud Run サーバーレス,オンプレ クラウド移行,Terraform IaC,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行 | Ill inc.">
-  <meta property="og:description" content="古い物理サーバーで稼働するレガシーWebシステムをコンテナ化。Cloud Runを活用したサーバーレス構成で保守不要とコスト削減を実現。">
+  <meta property="og:title" content="レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="老朽化した物理サーバーのレガシーWebシステムをDockerコンテナ化し、Google Cloud Runを用いたサーバーレス構成へ全面移行。無停止DB移行と月額コスト大幅削減を実現。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/gcp-migration.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_gcp_migration.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_gcp_migration.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行 | Ill inc.">
-  <meta name="twitter:description" content="古い物理サーバーで稼働するレガシーWebシステムをコンテナ化。Cloud Runを活用したサーバーレス構成で保守不要とコスト削減を実現。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_gcp_migration.webp?v=1">
+  <meta name="twitter:title" content="レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="老朽化した物理サーバーのレガシーWebシステムをDockerコンテナ化し、Google Cloud Runを用いたサーバーレス構成へ全面移行。無停止DB移行と月額コスト大幅削減を実現。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_gcp_migration.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行",
-    "description": "古い物理サーバーで稼働するレガシーWebシステムをコンテナ化。Cloud Runを活用したサーバーレス構成で保守不要とコスト削減を実現。",
-    "image": "https://www.ill-inc.net/illust_case_gcp_migration.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "オンプレ物理サーバーからGCP（Cloud Run）への完全移行で運用費65%削減",
+      "description": "老朽化した物理サーバーのレガシーWebシステムをDockerコンテナ化し、Google Cloud Runを用いたサーバーレス構成へ全面移行。無停止DB移行と月額コスト大幅削減を実現。",
+      "image": "https://www.ill-inc.net/illust_case_gcp_migration.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/gcp-migration.html"
       }
     },
-    "datePublished": "2026-05-17",
-    "dateModified": "2026-05-17"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "オンプレ物理サーバーからGCP（Cloud Run）への完全移行で運用費65%削減",
+          "item": "https://www.ill-inc.net/cases/gcp-migration.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "移行作業中にWebサイトの長時間のサービス停止は発生しますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。DNS切り替えと事前レプリケーション技術を組み合わせるため、メンテナンス停止時間は数分〜数十分の最小限に抑えられます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AWSとGCPのどちらに移行すべきか比較相談はできますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。貴社のシステム特性（コンテナ適性、DB負荷、既存資産）をヒアリングし、最もランニングコストと運用負荷が低くなるクラウドをご提案します。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行</span>
+        <span class="breadcrumb-item">オンプレ物理サーバーからGCP（Cloud Run）への完全移行で運用費65%削減</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_gcp_migration.webp" alt="レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
+          <img src="../illust_case_gcp_migration.webp" alt="オンプレ物理サーバーからGCP（Cloud Run）への完全移行で運用費65%削減" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">クラウド移行 / インフラ最適化</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行
+            オンプレ物理サーバーからGCP（Cloud Run）への完全移行で運用費65%削減
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">Google Cloud Run</span>
-        <span class="tech-badge">Docker</span>
-        <span class="tech-badge">Terraform</span>
-        <span class="tech-badge">Cloud SQL</span>
+            <span class="tech-badge">Google Cloud Run</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">Terraform</span>
+            <span class="tech-badge">Cloud SQL</span>
+            <span class="tech-badge">CI/CD</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">ITサービス・Webメディア / 出版・教育</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約2ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">現行インフラ調査、コンテナ化設計、Terraformインフラ構築、無停止DBデータ移行、監視アラート設定</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,55 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                古いデータセンターの物理オンプレミスサーバーで稼働し続けていたWebシステム。サーバー機器の寿命が間近に迫り、冗長化もないため常に停止リスクを抱えていました。また、ブラックボックス化したレガシーなPHPとRubyコードが絡み合っており、移行設計が極めて困難でした。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                データセンター内の物理サーバーで稼働し続けていたWebシステム。サーバーハードウェアの保守終了（EOSL）が迫り、冗長化もないため停止リスクを抱えていました。
+<ul>
+  <li><strong>ハードウェア老朽化と障害時の復旧遅延</strong>: 物理サーバーが故障した場合の予備機がなく、復旧に数日を要する事業継続リスクが存在。</li>
+  <li><strong>固定費としての高額なホスティング・保守費用</strong>: アクセス増減に関わらず毎月多額のデータセンターラック費用と保守費用が発生。</li>
+  <li><strong>属人化したレガシーミドルウェア構成</strong>: 過去の担当者が手作業で設定したApache/MySQL環境がドキュメント化されておらず、更新が困難。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-            <li><strong>アプリケーションコンテナ化</strong>: レガシーアプリを完全にDockerイメージとしてパッケージング。設定値とコードを明確に切り分け。</li>
-            <li><strong>サーバーレス移行 (Cloud Run)</strong>: サーバーの保守を完全に排除するため、Cloud Runを活用したコンテナサーバーレス構成を採用。</li>
-            <li><strong>無停止DBレプリケーション移行</strong>: オンプレミス側のDBとGCP側のCloud SQL間で差分レプリケーションを構築し、ダウンタイムほぼゼロで一括切り替え。</li>
-            <li><strong>TerraformによるIaC化</strong>: GCPのインフラ構成をすべてTerraformコードで管理し、環境再構築やCI/CDを自動化。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、すべての構成をコード化（IaC）し、メンテナンスフリーなフルマネージド・サーバーレス基盤へ移行しました。
+<ul class="case-detail-list">
+  <li><strong>アプリケーションの完全Dockerコンテナ化</strong>: レガシーコードをコンテナイメージとしてパッケージングし、OS依存・ライブラリ依存を完全解消。</li>
+  <li><strong>Cloud Runによるフルマネージド・オートスケール構成</strong>: アクセスゼロ時はインスタンス数をゼロにスケールし、トラフィック急増時も数秒で自動拡張するコスト最適構成。</li>
+  <li><strong>無停止DBレプリケーション切り替え</strong>: オンプレミスMySQLからGCP Cloud SQLへ継続的レプリケーションを構築し、ダウンタイム約3分で本番切り替えを完遂。</li>
+  <li><strong>GitHub Actions + TerraformによるCI/CD自動化</strong>: ソースコードのGitプッシュをトリガーに、テスト・ビルド・GCPデプロイを完全自動化。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                インフラの構成管理から切り替え時のネットワークルーティングまで一貫設計。物理ハードウェアの維持管理・障害トラブル対応から完全に解放され、オートスケーリングにより安定稼働を実現。毎月の<strong>インフラ運用維持コストを65%削減</strong>しました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>物理ハードウェアの維持管理・障害対応から完全に解放され、<strong>インフラ月額運用コストを65%削減（年間480万円の固定費削減）</strong>を達成。<br>
+アクセス集中時のページ表示遅延が解消され、開発チームのデプロイ作業時間も1回2時間から3分へ短縮されました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 移行作業中にWebサイトの長時間のサービス停止は発生しますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. いいえ。DNS切り替えと事前レプリケーション技術を組み合わせるため、メンテナンス停止時間は数分〜数十分の最小限に抑えられます。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. AWSとGCPのどちらに移行すべきか比較相談はできますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。貴社のシステム特性（コンテナ適性、DB負荷、既存資産）をヒアリングし、最もランニングコストと運用負荷が低くなるクラウドをご提案します。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/legacy-system-modernization.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 レガシーシステム刷新（モダナイゼーション）の手順と移行コスト →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>

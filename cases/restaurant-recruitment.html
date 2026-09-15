@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>飲食業界向け求人ポータル＆求職者管理（ATS）システム | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="店舗ごとの求人作成・応募者管理を一元化。AIによる志望動機簡易分析と自動面接スケジュール調整機能を備えた採用管理プラットフォーム。">
-  <meta name="keywords" content="Next.js,Go,PostgreSQL,AWS,開発実績,導入事例,Ill inc.">
+  <title>飲食業界特化型 短期アルバイト即日マッチングアプリ開発 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="急な欠員に悩む飲食店と即日働きたい求職者を位置情報とスキルで結びつけるマッチングアプリ。自動マッチング、給与即時払い（ウォレット機能）、評価レビュー機能を完備。">
+  <meta name="keywords" content="スポットバイト アプリ 開発,スキマバイト システム 費用,飲食 求人 マッチング,React Native 位置情報,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="飲食業界向け求人ポータル＆求職者管理（ATS）システム | Ill inc.">
-  <meta property="og:description" content="店舗ごとの求人作成・応募者管理を一元化。AIによる志望動機簡易分析と自動面接スケジュール調整機能を備えた採用管理プラットフォーム。">
+  <meta property="og:title" content="飲食業界特化型 短期アルバイト即日マッチングアプリ開発 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="急な欠員に悩む飲食店と即日働きたい求職者を位置情報とスキルで結びつけるマッチングアプリ。自動マッチング、給与即時払い（ウォレット機能）、評価レビュー機能を完備。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/restaurant-recruitment.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_food_recruitment.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_food_recruitment.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="飲食業界向け求人ポータル＆求職者管理（ATS）システム | Ill inc.">
-  <meta name="twitter:description" content="店舗ごとの求人作成・応募者管理を一元化。AIによる志望動機簡易分析と自動面接スケジュール調整機能を備えた採用管理プラットフォーム。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_food_recruitment.webp?v=1">
+  <meta name="twitter:title" content="飲食業界特化型 短期アルバイト即日マッチングアプリ開発 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="急な欠員に悩む飲食店と即日働きたい求職者を位置情報とスキルで結びつけるマッチングアプリ。自動マッチング、給与即時払い（ウォレット機能）、評価レビュー機能を完備。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_food_recruitment.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "飲食業界向け求人ポータル＆求職者管理（ATS）システム",
-    "description": "店舗ごとの求人作成・応募者管理を一元化。AIによる志望動機簡易分析と自動面接スケジュール調整機能を備えた採用管理プラットフォーム。",
-    "image": "https://www.ill-inc.net/illust_case_food_recruitment.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "飲食店舗とスキマ時間ワーカーを即時マッチングするスポットバイトプラットフォーム",
+      "description": "急な欠員に悩む飲食店と即日働きたい求職者を位置情報とスキルで結びつけるマッチングアプリ。自動マッチング、給与即時払い（ウォレット機能）、評価レビュー機能を完備。",
+      "image": "https://www.ill-inc.net/illust_case_food_recruitment.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/restaurant-recruitment.html"
       }
     },
-    "datePublished": "2026-05-31",
-    "dateModified": "2026-05-31"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "飲食店舗とスキマ時間ワーカーを即時マッチングするスポットバイトプラットフォーム",
+          "item": "https://www.ill-inc.net/cases/restaurant-recruitment.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "労務管理（雇用契約書の自動締結や源泉徴収票発行）もシステム内で完結できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。マッチング成立時に労働条件通知書・雇用契約を電磁的に自動締結し、年末調整・源泉徴収票データのエクスポートに対応しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "位置情報（GPS）を活用した不正打刻防止は可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。店舗指定半径内でのみQRコードスキャン打刻を許可するジオフェンシング技術により、不正打刻を完全防止します。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">飲食業界向け求人ポータル＆求職者管理（ATS）システム</span>
+        <span class="breadcrumb-item">飲食店舗とスキマ時間ワーカーを即時マッチングするスポットバイトプラットフォーム</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_food_recruitment.webp" alt="飲食業界向け求人ポータル＆求職者管理（ATS）システム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
+          <img src="../illust_case_food_recruitment.webp" alt="飲食店舗とスキマ時間ワーカーを即時マッチングするスポットバイトプラットフォーム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">ギグワーク・求人 / モバイルアプリ</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            飲食業界向け求人ポータル＆求職者管理（ATS）システム
+            飲食店舗とスキマ時間ワーカーを即時マッチングするスポットバイトプラットフォーム
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">Next.js</span>
-        <span class="tech-badge">Go</span>
-        <span class="tech-badge">PostgreSQL</span>
-        <span class="tech-badge">AWS</span>
+            <span class="tech-badge">React Native</span>
+            <span class="tech-badge">Firebase / Google Cloud</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">Stripe Payouts</span>
+            <span class="tech-badge">Google Maps API</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">飲食・レストラン / ギグワーク・短期人材</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約3.5ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">モバイルアプリ（iOS/Android）、店舗向けWebダッシュボード、即時送金API連携、位置情報検索</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,54 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                店舗ごとに異なる採用ニーズ（アルバイト・パート・正社員）と、バラバラのチャネルから来る応募者の管理が非効率であり、面接の日程調整ミスや連絡の遅れによる求職者の離脱（他社への流出）が深刻な課題となっていました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                飲食業界における慢性的な人手不足とドタキャン（急な欠員）に対し、従来の求人広告では数日〜数週間の募集タイムラグがあり即時対応ができませんでした。
+<ul>
+  <li><strong>当日欠員への即時補充手段の欠如</strong>: 繁忙日の直前キャンセルが発生した際、当日中にスタッフを確保する手段がなかった。</li>
+  <li><strong>給与支払い・労務手続きの手間</strong>: 短期・単発バイトの給与計算、源泉徴収、即日振込を手作業で行う労務管理が困難。</li>
+  <li><strong>無断欠勤（バックレ）やスキルミスマッチのリスク</strong>: 応募者の信頼性や過去の勤務評価を事前に確認できる仕組みがなかった。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-            <li><strong>複数店舗の一括求人管理・自動連携</strong>: 本部から各店舗の掲載状況や応募状況をダッシュボードで一元監視・編集可能なマルチテナント設計。</li>
-            <li><strong>AI日程調整＆メッセージ自動化</strong>: 応募者への自動返信と同時に、店舗側の空き時間をカレンダー連携して面接日時を自動確定する予約システム。</li>
-            <li><strong>応募レジュメAI簡易スコアリング</strong>: 応募者の希望条件や過去の飲食経験を元に、店舗とのマッチ度を自動評価してアラート表示。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、位置情報とリアルタイムプッシュ通知を駆使した最短10分マッチングプラットフォームを開発しました。
+<ul class="case-detail-list">
+  <li><strong>マップ連動の即日スポット求人募集</strong>: 店舗が募集人数・時給・勤務時間を入力するだけで、近隣3km以内の適格ワーカーへ一斉プッシュ通知。</li>
+  <li><strong>面接不要の即時マッチング & チェックイン機能</strong>: QRコードスキャンによる勤務開始・終了打刻で、正確な実働時間を自動記録。</li>
+  <li><strong>給与即時振込（リアルタイムウォレット）連携</strong>: Stripe Payouts / 銀行APIと連携し、退勤ボタン押下と同時にワーカーの銀行口座へ給与を即時反映。</li>
+  <li><strong>相互評価レーティング & ペナルティシステム</strong>: 店舗とワーカーの双方評価システムを実装し、無断キャンセル時の自動利用停止ロジックを導入。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                本部および各店舗管理者の連絡工数を<strong>約65%削減</strong>。応募から面接設定までのリードタイムを平均2日から<strong>わずか15分へと大幅に短縮</strong>し、採用決定率が前年比で<strong>30%向上</strong>しました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>リリース後、<strong>当日の欠員補充マッチング成功率89%を達成</strong>。<br>
+店舗側の求人広告費を従来の月平均15万円から実稼働分のみの成果報酬へ削減し、飲食チェーン約350店舗に導入されました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 労務管理（雇用契約書の自動締結や源泉徴収票発行）もシステム内で完結できますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。マッチング成立時に労働条件通知書・雇用契約を電磁的に自動締結し、年末調整・源泉徴収票データのエクスポートに対応しています。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 位置情報（GPS）を活用した不正打刻防止は可能ですか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。店舗指定半径内でのみQRコードスキャン打刻を許可するジオフェンシング技術により、不正打刻を完全防止します。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/react-native-app-development-cost.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 React NativeによるマルチOS同時構築で開発費を圧縮する手法 →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>

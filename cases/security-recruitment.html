@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行 | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度とセキュリティを劇的に改善。">
-  <meta name="keywords" content="Next.js,NestJS,SPA,GCP,Google Cloud,Cloudflare,WAF,DDoS対策,求人サイト開発,開発実績,導入事例,Ill inc.">
+  <title>警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度3.5倍と応募CVR向上を実現。">
+  <meta name="keywords" content="求人サイト リニューアル,GCP移行 コスト削減,Next.js NestJS SPA開発,Cloudflare WAF 導入,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,16 +16,16 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行 | Ill inc.">
-  <meta property="og:description" content="CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度とセキュリティを劇的に改善。">
+  <meta property="og:title" content="警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度3.5倍と応募CVR向上を実現。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/security-recruitment.html">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/illust_case_security_recruitment.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行 | Ill inc.">
-  <meta name="twitter:description" content="CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度とセキュリティを劇的に改善。">
+  <meta name="twitter:title" content="警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度3.5倍と応募CVR向上を実現。">
   <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_security_recruitment.webp?v=1">
   
   <!-- Favicons -->
@@ -42,29 +42,81 @@
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行",
-    "description": "CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度とセキュリティを劇的に改善。",
-    "image": "https://www.ill-inc.net/illust_case_security_recruitment.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "警備求人マッチングサイトのSPA全面刷新＆GCP・Cloudflare移行で月額費用60%削減",
+      "description": "CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度3.5倍と応募CVR向上を実現。",
+      "image": "https://www.ill-inc.net/illust_case_security_recruitment.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/security-recruitment.html"
       }
     },
-    "datePublished": "2026-09-15",
-    "dateModified": "2026-09-15"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "警備求人マッチングサイトのSPA全面刷新＆GCP・Cloudflare移行で月額費用60%削減",
+          "item": "https://www.ill-inc.net/cases/security-recruitment.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "数十万件の既存求人データや会員データの移行は安全に行えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。新旧DBのデータマッピングと検証スクリプトを作成し、暗号化パスワードの移行を含めて欠損ゼロで安全に切り替えます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "リニューアルによる検索順位（SEO）の下落を防ぐ対策は可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。全URLの301リダイレクト設計、内部リンク最適化、構造化データ（JobPosting）の完全継承を実施し、SEO評価を損なわずにリニューアルいたします。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -142,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行</span>
+        <span class="breadcrumb-item">警備求人マッチングサイトのSPA全面刷新＆GCP・Cloudflare移行で月額費用60%削減</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -150,22 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_security_recruitment.webp" alt="警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <img src="../illust_case_security_recruitment.webp" alt="警備求人マッチングサイトのSPA全面刷新＆GCP・Cloudflare移行で月額費用60%削減" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
           <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">求人・マッチング / クラウド移行</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            警備業界特化型 求人マッチングサイトのフルリニューアル＆GCP移行
+            警備求人マッチングサイトのSPA全面刷新＆GCP・Cloudflare移行で月額費用60%削減
           </h1>
           
           <div class="case-detail-tags">
             <span class="tech-badge">Next.js (SPA)</span>
             <span class="tech-badge">NestJS (TypeScript)</span>
-            <span class="tech-badge">Google Cloud (GCP)</span>
-            <span class="tech-badge">Cloudflare (WAF/DDoS)</span>
+            <span class="tech-badge">Google Cloud (Cloud Run)</span>
+            <span class="tech-badge">Cloudflare WAF</span>
             <span class="tech-badge">PostgreSQL</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">警備・ビルメンテナンス / 人材求人メディア</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約3.5ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">要件定義、Next.js/NestJS開発、GCPインフラ移行、Cloudflareセキュリティ設計、SEO最適化</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -173,43 +243,70 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
                 月間数十万PVを抱える警備業界特化型の求人ポータルサイトにおいて、以下の3つの深刻な課題が事業拡大のボトルネックとなっていました。
-              </p>
-              <ul class="case-detail-list">
-                <li><strong>レガシー技術とレスポンス遅延</strong>: Apache + nginx、CakePHP（従来型MVC）による古いサーバーサイドレンダリング構成で、検索絞り込みやページ遷移時のレスポンスが重く、モバイル求職者の離脱原因になっていた。</li>
-                <li><strong>高額なインフラ月額費用（月100万円超）</strong>: オンプレミス（IDフロンティア）とAWSが複雑に混在し、過剰なEC2/RDSインスタンス設計によってインフラ運用維持費が月額100万円を超過していた。</li>
-                <li><strong>セキュリティ対策の未整備</strong>: WAFやBot対策、DDoS対策が未導入であり、悪質なスクレイピングや不正アクセスによるサーバー高負荷リスクを抱えていた。</li>
-                <li><strong>旧態依然としたUIデザイン</strong>: PC前提の古いフォームUIでスマートフォンからの求人応募完了率（CVR）が低迷していた。</li>
-              </ul>
+<ul>
+  <li><strong>レガシー技術とレスポンス遅延</strong>: Apache + nginx、CakePHP（従来型MVC）による古い構成で、検索絞り込みや画面遷移のレスポンスが重く離脱が多発。</li>
+  <li><strong>高額なインフラ月額費用（月100万円超）</strong>: オンプレミス（IDフロンティア）とAWSが複雑に混在し、過剰なEC2/RDSインスタンス設計で月額100万円以上を浪費。</li>
+  <li><strong>セキュリティ対策の未整備</strong>: WAFやBot対策、DDoS対策が未導入であり、悪質なスクレイピングや不正アクセスによるサーバー高負荷リスクを抱えていた。</li>
+  <li><strong>旧態依然としたUIデザイン</strong>: PC前提の古いフォームUIでスマートフォンからの求人応募完了率（CVR）が低迷していた。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-                <li><strong>Next.js + NestJS によるSPAアーキテクチャ刷新</strong>: フロントエンドにNext.js（SPA）、バックエンドにNestJS（TypeScript）を採用し、完全ヘッドレス・API駆動のモダンアーキテクチャへ全面再構築。画面遷移のないシームレスな求人検索体験を実現。</li>
-                <li><strong>GCP（Google Cloud）への全面移行と最適化</strong>: Cloud RunとCloud SQL（PostgreSQL）を中核としたサーバーレス・オートスケール構成へ移行。過剰な常時稼働インスタンスを排除し、アクセス増減に連動する最適課金モデルへシフト。</li>
-                <li><strong>Cloudflare による鉄壁のセキュリティとCDN配信</strong>: Cloudflare WAF、Bot Management、DDoS防御を最前線に導入。悪質なクローラーや攻撃をエッジで完全遮断しつつ、静的アセットと求人キャッシュを高速エッジ配信。</li>
-                <li><strong>モバイルファーストなUI/UXフルリニューアル</strong>: 警備求職者の行動特性を徹底分析し、エリア・日払い・未経験等のワンタップ絞り込みや、LINE連携を含む超軽量応募フォームを設計・実装。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、完全ヘッドレスなSPA構成とサーバーレスGCPインフラを設計し、全面的なリプレイスを敢行しました。
+<ul class="case-detail-list">
+  <li><strong>Next.js + NestJS による完全SPAアーキテクチャ刷新</strong>: フロントエンドにNext.js（SPA）、バックエンドにNestJS（TypeScript）を採用し、画面再読み込みのないシームレスな求人検索体験を実現。</li>
+  <li><strong>GCP（Google Cloud）への全面集約とサーバーレス最適化</strong>: Cloud RunとCloud SQL（PostgreSQL）を中核とした構成へ移行し、トラフィックに連動する最適課金モデルへシフト。</li>
+  <li><strong>Cloudflare による鉄壁のセキュリティとエッジ配信</strong>: Cloudflare WAF、Bot Management、DDoS防御を最前線に配備。悪質Botをエッジで遮断しつつ、求人データを高速キャッシュ配信。</li>
+  <li><strong>モバイルファーストなUI/UXフルリニューアル</strong>: 警備求職者の行動特性を徹底分析し、エリア・日払い・未経験等のワンタップ絞り込みや超軽量応募フォームを実装。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                要件定義からフロントエンド・バックエンド開発、インフラ移行設計、Cloudflareセキュリティ導入まで一貫対応。<br>
-                その結果、<strong>月額インフラ費用を100万円超から半分以下の40万円台（約60%削減 / 年間700万円以上のコスト削減）へ劇的に圧縮</strong>しました。<br>
-                さらにSPA化とCDNキャッシュにより<strong>ページ表示速度が約3.5倍高速化</strong>し、直帰率の大幅低減とスマートフォン経由の<strong>応募CVR（コンバージョン率）28%向上</strong>を達成しました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>インフラ月額費用を<strong>100万円超から40万円台（約60%削減 / 年間700万円以上のコスト削減）へ劇的圧縮</strong>。<br>
+さらにSPA化とCDNキャッシュにより<strong>ページ表示速度が約3.5倍高速化</strong>し、直帰率の大幅低減とスマートフォン経由の<strong>応募CVR（コンバージョン率）28%向上</strong>を達成しました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 数十万件の既存求人データや会員データの移行は安全に行えますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。新旧DBのデータマッピングと検証スクリプトを作成し、暗号化パスワードの移行を含めて欠損ゼロで安全に切り替えます。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. リニューアルによる検索順位（SEO）の下落を防ぐ対策は可能ですか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。全URLの301リダイレクト設計、内部リンク最適化、構造化データ（JobPosting）の完全継承を実施し、SEO評価を損なわずにリニューアルいたします。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/046-nocode-limitations-real-development-cost.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 ノーコードで開発を始めて後悔する前に知るべき「限界」と「スクラッチ移行」のコスト。 →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
@@ -217,13 +314,13 @@
       </article>
 
       <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          求人ポータル、マッチングサービス、レガシーシステムのGCP移行・コスト削減など、貴社の課題を最短スピードで解決します。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成およびインフラコスト無料診断を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>

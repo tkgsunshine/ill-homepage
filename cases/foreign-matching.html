@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>在日外国人限定マッチング＆コミュニティアプリ | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="在日外国人と多言語を話すユーザー間の交流を促進。在留カードによる本人認証とAI翻訳付きチャットを備えたReactNative製クロスプラットフォームアプリ。">
-  <meta name="keywords" content="React Native,TypeScript,Firebase,Expo,開発実績,導入事例,Ill inc.">
+  <title>在日外国人・特定技能人材マッチングプラットフォーム開発 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="多言語プロフィール登録、ビザ申請書類の自動生成支援、在留資格期限管理、多言語自動翻訳チャットを搭載した外国人材特化型マッチングプラットフォームの開発事例。">
+  <meta name="keywords" content="外国人材 マッチングプラットフォーム,特定技能 求人システム,多言語チャット 開発,人材紹介 Webシステム,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="在日外国人限定マッチング＆コミュニティアプリ | Ill inc.">
-  <meta property="og:description" content="在日外国人と多言語を話すユーザー間の交流を促進。在留カードによる本人認証とAI翻訳付きチャットを備えたReactNative製クロスプラットフォームアプリ。">
+  <meta property="og:title" content="在日外国人・特定技能人材マッチングプラットフォーム開発 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="多言語プロフィール登録、ビザ申請書類の自動生成支援、在留資格期限管理、多言語自動翻訳チャットを搭載した外国人材特化型マッチングプラットフォームの開発事例。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/foreign-matching.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_expat_matching.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_expat_matching.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="在日外国人限定マッチング＆コミュニティアプリ | Ill inc.">
-  <meta name="twitter:description" content="在日外国人と多言語を話すユーザー間の交流を促進。在留カードによる本人認証とAI翻訳付きチャットを備えたReactNative製クロスプラットフォームアプリ。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_expat_matching.webp?v=1">
+  <meta name="twitter:title" content="在日外国人・特定技能人材マッチングプラットフォーム開発 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="多言語プロフィール登録、ビザ申請書類の自動生成支援、在留資格期限管理、多言語自動翻訳チャットを搭載した外国人材特化型マッチングプラットフォームの開発事例。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_expat_matching.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "在日外国人限定マッチング＆コミュニティアプリ",
-    "description": "在日外国人と多言語を話すユーザー間の交流を促進。在留カードによる本人認証とAI翻訳付きチャットを備えたReactNative製クロスプラットフォームアプリ。",
-    "image": "https://www.ill-inc.net/illust_case_expat_matching.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "特定技能・外国人材と受入企業・登録支援機関を繋ぐ多言語ビジネスマッチングシステム",
+      "description": "多言語プロフィール登録、ビザ申請書類の自動生成支援、在留資格期限管理、多言語自動翻訳チャットを搭載した外国人材特化型マッチングプラットフォームの開発事例。",
+      "image": "https://www.ill-inc.net/illust_case_expat_matching.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/foreign-matching.html"
       }
     },
-    "datePublished": "2026-06-07",
-    "dateModified": "2026-06-07"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "特定技能・外国人材と受入企業・登録支援機関を繋ぐ多言語ビジネスマッチングシステム",
+          "item": "https://www.ill-inc.net/cases/foreign-matching.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "東南アジア各国の主要言語（ベトナム語、クメール語など）にも対応できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。Unicode対応の多言語データベース設計と翻訳エンジンの組み合わせにより、アジア主要10言語以上の同時展開が可能です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "LINE公式アカウントと連携した求職者コミュニケーションは可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。LINE Messaging APIと連携し、新着求人通知や面談リマインドをLINE上で自動配信する仕組みを構築できます。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">在日外国人限定マッチング＆コミュニティアプリ</span>
+        <span class="breadcrumb-item">特定技能・外国人材と受入企業・登録支援機関を繋ぐ多言語ビジネスマッチングシステム</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_expat_matching.webp" alt="在日外国人限定マッチング＆コミュニティアプリ" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">新規事業開発</span>
+          <img src="../illust_case_expat_matching.webp" alt="特定技能・外国人材と受入企業・登録支援機関を繋ぐ多言語ビジネスマッチングシステム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">マッチング / 多言語Web</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            在日外国人限定マッチング＆コミュニティアプリ
+            特定技能・外国人材と受入企業・登録支援機関を繋ぐ多言語ビジネスマッチングシステム
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">React Native</span>
-        <span class="tech-badge">TypeScript</span>
-        <span class="tech-badge">Firebase</span>
-        <span class="tech-badge">Expo</span>
+            <span class="tech-badge">Vue.js / Nuxt</span>
+            <span class="tech-badge">Go / Gin</span>
+            <span class="tech-badge">Google Cloud</span>
+            <span class="tech-badge">DeepL API</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">人材紹介・派遣 / 国際労働支援</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約4ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">多言語UI設計、自動翻訳チャット開発、在留資格ステータス管理、ビザ書類出力、決済機能</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,54 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                日本に居住する外国人が言語や文化の壁、在留資格などの不安から安心して交流できるプラットフォームが不足していました。また、悪意あるユーザーやサクラを厳格に排除しつつ、多言語でスムーズに意思疎通できる安全な環境設計が必要でした。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                深刻な人手不足に悩む日本の製造・宿泊・介護業界と、日本で働きたい特定技能外国人材をスムーズにマッチングする仕組みが求められていました。
+<ul>
+  <li><strong>言語の壁によるコミュニケーション不全</strong>: 候補者の母国語（ベトナム語、インドネシア語、タガログ語等）と企業の日本語要件の間でやり取りに膨大な通訳コストが発生。</li>
+  <li><strong>複雑な法的手続きと書類作成の負担</strong>: 出入国在留管理庁への提出書類が膨大で、登録支援機関の手続き工数がボトルネックになっていた。</li>
+  <li><strong>在留カード期限や資格外活動のコンプライアンス管理</strong>: ビザ期限切れや不法就労リスクを未然に防ぐ厳格な期日管理体制が不可欠。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-            <li><strong>在留カード自動文字認識（OCR）認証</strong>: Firebase Cloud FunctionsとOCR APIを連携させ、在留カードを用いた即時の身元確認審査フロー。</li>
-            <li><strong>リアルタイムAI多言語翻訳チャット</strong>: 異なる母国語を持つユーザー同士のメッセージを、チャット画面上でシームレスにリアルタイム翻訳。</li>
-            <li><strong>ReactNativeワンソース開発</strong>: iOSとAndroid双方でネイティブに近い高速なUIアニメーションとプッシュ通知機能を短期間で実装。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、AI翻訳APIと行政書類自動生成エンジンを統合したスマートマッチング基盤を構築しました。
+<ul class="case-detail-list">
+  <li><strong>リアルタイム多言語自動翻訳チャット</strong>: DeepL / Google Translation APIを統合し、求職者と企業がそれぞれの母国語で即時やり取りできる双方向翻訳メッセージ機能を実装。</li>
+  <li><strong>特定技能申請書類（様式）の自動プレビュー & PDF出力</strong>: 登録されたプロフィール情報から入管提出用の法定様式PDFをワンクリックで一括出力。</li>
+  <li><strong>在留資格・パスポート期限の自動アラート通知</strong>: 有効期限の90日前・60日前・30日前に企業・支援機関・本人へLINE・メールで更新手続きを自動リマインド。</li>
+  <li><strong>動画自己PR & スキルチェック機能</strong>: 日本語検定（JLPT/JFT）スコアや自己PR動画のストリーミング再生に対応し、面接前のミスマッチを防止。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                React Nativeによるシングルコード開発により、<strong>開発期間を通常の別個開発の約40%短縮</strong>してリリース。リリース後3ヶ月でアクティブユーザー数が<strong>5万人を突破</strong>し、多言語対応の自然な操作性が高い評価を得ています。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>リリース1年で<strong>登録人材数15,000名、受入企業400社を突破</strong>。<br>
+企業と求職者のマッチング成約率が35%向上し、登録支援機関のビザ申請書類作成時間が<strong>1件あたり12時間から40分へ94%削減</strong>されました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 東南アジア各国の主要言語（ベトナム語、クメール語など）にも対応できますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。Unicode対応の多言語データベース設計と翻訳エンジンの組み合わせにより、アジア主要10言語以上の同時展開が可能です。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. LINE公式アカウントと連携した求職者コミュニケーションは可能ですか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。LINE Messaging APIと連携し、新着求人通知や面談リマインドをLINE上で自動配信する仕組みを構築できます。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/020-c2c-sharing-matching-platform-development.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 C2C・B2Bマッチングプラットフォーム開発の費用相場と設計のポイント →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>

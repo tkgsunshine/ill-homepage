@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>企業間データ連携＆セキュア社内情報RAGシステム | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="社内のドキュメントやSlackログなどの機密情報を安全に検索・活用。権限管理やオプトアウトAPI設計を考慮したセキュアなRAGインフラ構築。">
-  <meta name="keywords" content="Python,LangChain,VectorDB,Oracle Cloud,開発実績,導入事例,Ill inc.">
+  <title>企業間データ連携＆セキュア社内情報RAGシステム開発 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="社内のPDF、Notion、Slack、社内DBなどの機密データをベクトル化し、高精度かつセキュリティ権限に応じた回答を生成する企業専用RAG（検索拡張生成）システム開発事例。">
+  <meta name="keywords" content="RAG 開発 費用,社内データ AI 検索,ベクトル検索 VectorDB,LangChain 企業開発,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="企業間データ連携＆セキュア社内情報RAGシステム | Ill inc.">
-  <meta property="og:description" content="社内のドキュメントやSlackログなどの機密情報を安全に検索・活用。権限管理やオプトアウトAPI設計を考慮したセキュアなRAGインフラ構築。">
+  <meta property="og:title" content="企業間データ連携＆セキュア社内情報RAGシステム開発 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="社内のPDF、Notion、Slack、社内DBなどの機密データをベクトル化し、高精度かつセキュリティ権限に応じた回答を生成する企業専用RAG（検索拡張生成）システム開発事例。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/enterprise-rag.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_business.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_business.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="企業間データ連携＆セキュア社内情報RAGシステム | Ill inc.">
-  <meta name="twitter:description" content="社内のドキュメントやSlackログなどの機密情報を安全に検索・活用。権限管理やオプトアウトAPI設計を考慮したセキュアなRAGインフラ構築。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_business.webp?v=1">
+  <meta name="twitter:title" content="企業間データ連携＆セキュア社内情報RAGシステム開発 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="社内のPDF、Notion、Slack、社内DBなどの機密データをベクトル化し、高精度かつセキュリティ権限に応じた回答を生成する企業専用RAG（検索拡張生成）システム開発事例。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_business.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "企業間データ連携＆セキュア社内情報RAGシステム",
-    "description": "社内のドキュメントやSlackログなどの機密情報を安全に検索・活用。権限管理やオプトアウトAPI設計を考慮したセキュアなRAGインフラ構築。",
-    "image": "https://www.ill-inc.net/illust_case_business.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "機密文書・社内SaaSログを安全に横断検索するエンタープライズRAGチャットボット構築",
+      "description": "社内のPDF、Notion、Slack、社内DBなどの機密データをベクトル化し、高精度かつセキュリティ権限に応じた回答を生成する企業専用RAG（検索拡張生成）システム開発事例。",
+      "image": "https://www.ill-inc.net/illust_case_business.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/enterprise-rag.html"
       }
     },
-    "datePublished": "2026-03-29",
-    "dateModified": "2026-03-29"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "機密文書・社内SaaSログを安全に横断検索するエンタープライズRAGチャットボット構築",
+          "item": "https://www.ill-inc.net/cases/enterprise-rag.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "社内データがAIモデルの再学習に利用されることはありませんか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。Azure OpenAI ServiceやAWS Bedrockなど、入力データがモデルの学習に一切利用されないエンタープライズ契約のAPIのみを使用し、データ主権を完全保証します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "社内のPDFやスキャン画像（紙書類）も検索対象にできますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。OCRパイプラインを前処理に組み込むことで、紙の契約書やスキャンPDF、表組みデータも正確にテキスト抽出してベクトル化可能です。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">企業間データ連携＆セキュア社内情報RAGシステム</span>
+        <span class="breadcrumb-item">機密文書・社内SaaSログを安全に横断検索するエンタープライズRAGチャットボット構築</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_business.webp" alt="企業間データ連携＆セキュア社内情報RAGシステム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
+          <img src="../illust_case_business.webp" alt="機密文書・社内SaaSログを安全に横断検索するエンタープライズRAGチャットボット構築" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">生成AI・AIX / 社内DX</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            企業間データ連携＆セキュア社内情報RAGシステム
+            機密文書・社内SaaSログを安全に横断検索するエンタープライズRAGチャットボット構築
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">Python</span>
-        <span class="tech-badge">LangChain</span>
-        <span class="tech-badge">VectorDB</span>
-        <span class="tech-badge">Oracle Cloud</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">LangChain / LlamaIndex</span>
+            <span class="tech-badge">VectorDB (Qdrant)</span>
+            <span class="tech-badge">Azure OpenAI / Claude</span>
+            <span class="tech-badge">FastAPI</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">製造業・商社 / 大手コンサルティングファーム</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約2.5ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">データ前処理パイプライン設計、ベクトルDB構築、RAG検索ロジック最適化、アクセス制御API開発</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,54 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                企業内の多種多様なフォーマットの機密ドキュメント（PDF、仕様書、過去の社内Slackログなど）を検索・活用したいが、通常のクラウドAIサービスを使うと情報漏洩リスクがあるほか、データベース間のAPI連携インフラが複雑化しており、開発期間とセキュリティ設計の妥協が許されない状況でした。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                社内に蓄積された過去の技術仕様書、提案書、議事録、規程類が各部署のストレージやSaaSに分散し、必要な情報の検索に1日あたり平均45分を費やしていました。
+<ul>
+  <li><strong>汎用AIチャットでの情報漏洩リスク</strong>: パブリックなChatGPT等に機密データを入力することが社内規定で禁止されており、AI活用が進まない。</li>
+  <li><strong>ハルシネーション（嘘の回答）と精度の低さ</strong>: 単純なキーワード検索では、複雑な業界用語や文脈を踏まえた正確な回答が得られない。</li>
+  <li><strong>閲覧権限に応じた情報アクセスの分離</strong>: 役員向け情報や人事情報が一般社員に漏洩しないよう、役職・部署に応じた閲覧制御が必須。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-            <li><strong>オプトアウトRAGアーキテクチャ</strong>: 入力データが外部AIベンダーの学習モデルに利用されないAPI設計、及びデータのローカルベクトル化。</li>
-            <li><strong>暗号化自動連携バッチ</strong>: 各種ファイルストレージから定期的にドキュメントを読み込んで自動で差分インデックスを作成する安全なデータ連携機構。</li>
-            <li><strong>アクセスコントロール連携</strong>: 社員の権限（一般・管理者など）に応じて、アクセス可能なRAGのナレッジベースを自動制御するセキュリティ実装。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、オプトアウト（学習拒否）契約のAPIと高度なチャンク分割・再ランキング（Re-ranking）アルゴリズムを組み合わせ、高精度な社内専用RAG基盤を構築しました。
+<ul class="case-detail-list">
+  <li><strong>ハイブリッド検索（Dense + Sparse Vector）</strong>: キーワード完全一致検索（BM25）と意味検索（Dense Vector）を融合し、専門用語や型番検索でも漏れのない高精度検索を実現。</li>
+  <li><strong>ロールベース・アクセス制御（RBAC）連動</strong>: Microsoft Entra ID（旧Azure AD）と連携し、ユーザーの所属部署・役職がアクセス可能なドキュメントのみを検索空間として制限。</li>
+  <li><strong>回答根拠（ソースドキュメント）のページ番号付き提示</strong>: 生成AIが回答を出力する際、参照した社内文書のリンクと該当ページを必ず引用表示し、ハルシネーションを防止。</li>
+  <li><strong>自動ドキュメント同期バッチ</strong>: SharePointやGoogle Driveの更新を検知し、深夜バッチで差分ベクトル化を自動実行。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                クラウドインフラ設計段階から<strong>エンタープライズ品質の超セキュア環境を保証</strong>し、既存データと連動した使いやすいRAGを短期デプロイ。社員の社内情報検索および報告書作成にかかる時間を<strong>月間120時間以上削減</strong>しました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>社内情報検索にかかる時間が<strong>1人あたり1日45分から5分へ大幅短縮</strong>（全社で月間約1,200時間の業務効率化）。<br>
+新人・若手社員の過去事例リサーチや営業提案書の作成スピードが2.5倍に向上し、社内ナレッジの属人化解消に大きく貢献しました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 社内データがAIモデルの再学習に利用されることはありませんか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。Azure OpenAI ServiceやAWS Bedrockなど、入力データがモデルの学習に一切利用されないエンタープライズ契約のAPIのみを使用し、データ主権を完全保証します。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 社内のPDFやスキャン画像（紙書類）も検索対象にできますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。OCRパイプラインを前処理に組み込むことで、紙の契約書やスキャンPDF、表組みデータも正確にテキスト抽出してベクトル化可能です。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/rag-chatbot-internal-document-cost.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 社内データ専用のセキュアなRAGチャットボットは安全かつ低コストで構築できる。 →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>

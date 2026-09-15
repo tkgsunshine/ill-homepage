@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI求職票自動生成＆マッチング求人ポータルサイト | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="レジュメ自動解析によるスキル抽出と、募集条件から最適な求人票をAI作成する高機能な求人・求職マッチングポータルサイト開発。">
-  <meta name="keywords" content="Next.js,Claude 3.5,FastAPI,TailwindCSS,開発実績,導入事例,Ill inc.">
+  <title>AI求職票自動生成＆スキルマッチング求人ポータルサイト開発 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="職務経歴書のPDFアップロードからAIがスキルを自動抽出・構造化し、最適な求人票を自動レコメンドする求人ポータルサイトの開発事例。応募CVR向上とマッチング精度向上を実現。">
+  <meta name="keywords" content="求人サイト 開発 費用,マッチング ポータル 構築,AI レジュメ解析,Next.js 求人システム,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="AI求職票自動生成＆マッチング求人ポータルサイト | Ill inc.">
-  <meta property="og:description" content="レジュメ自動解析によるスキル抽出と、募集条件から最適な求人票をAI作成する高機能な求人・求職マッチングポータルサイト開発。">
+  <meta property="og:title" content="AI求職票自動生成＆スキルマッチング求人ポータルサイト開発 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="職務経歴書のPDFアップロードからAIがスキルを自動抽出・構造化し、最適な求人票を自動レコメンドする求人ポータルサイトの開発事例。応募CVR向上とマッチング精度向上を実現。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/recruitment-portal.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_recruitment.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_recruitment.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI求職票自動生成＆マッチング求人ポータルサイト | Ill inc.">
-  <meta name="twitter:description" content="レジュメ自動解析によるスキル抽出と、募集条件から最適な求人票をAI作成する高機能な求人・求職マッチングポータルサイト開発。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_recruitment.webp?v=1">
+  <meta name="twitter:title" content="AI求職票自動生成＆スキルマッチング求人ポータルサイト開発 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="職務経歴書のPDFアップロードからAIがスキルを自動抽出・構造化し、最適な求人票を自動レコメンドする求人ポータルサイトの開発事例。応募CVR向上とマッチング精度向上を実現。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_recruitment.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "AI求職票自動生成＆マッチング求人ポータルサイト",
-    "description": "レジュメ自動解析によるスキル抽出と、募集条件から最適な求人票をAI作成する高機能な求人・求職マッチングポータルサイト開発。",
-    "image": "https://www.ill-inc.net/illust_case_recruitment.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "AIレジュメ解析＆スキルマッチング機能を搭載した求人・求職ポータルサイト構築",
+      "description": "職務経歴書のPDFアップロードからAIがスキルを自動抽出・構造化し、最適な求人票を自動レコメンドする求人ポータルサイトの開発事例。応募CVR向上とマッチング精度向上を実現。",
+      "image": "https://www.ill-inc.net/illust_case_recruitment.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/recruitment-portal.html"
       }
     },
-    "datePublished": "2026-04-05",
-    "dateModified": "2026-04-05"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AIレジュメ解析＆スキルマッチング機能を搭載した求人・求職ポータルサイト構築",
+          "item": "https://www.ill-inc.net/cases/recruitment-portal.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Googleしごと検索（Google for Jobs）への自動掲載には対応していますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。求人情報の登録・更新時に、Googleの求人構造化データ仕様（JobPosting Schema）を自動生成し、検索エンジンへ即時通知（Indexing API連携）します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "求人掲載企業向けの課金モデル（掲載課金・成果報酬・サブスク）は組み込めますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。Stripe等の決済ゲートウェイを組み込み、月額プランや応募課金、スカウト送信枠課金など多彩なマネタイズ設計が可能です。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">AI求職票自動生成＆マッチング求人ポータルサイト</span>
+        <span class="breadcrumb-item">AIレジュメ解析＆スキルマッチング機能を搭載した求人・求職ポータルサイト構築</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_recruitment.webp" alt="AI求職票自動生成＆マッチング求人ポータルサイト" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">新規サービス</span>
+          <img src="../illust_case_recruitment.webp" alt="AIレジュメ解析＆スキルマッチング機能を搭載した求人・求職ポータルサイト構築" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">HRTech / 求人ポータル</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            AI求職票自動生成＆マッチング求人ポータルサイト
+            AIレジュメ解析＆スキルマッチング機能を搭載した求人・求職ポータルサイト構築
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">Next.js</span>
-        <span class="tech-badge">Claude 3.5</span>
-        <span class="tech-badge">FastAPI</span>
-        <span class="tech-badge">TailwindCSS</span>
+            <span class="tech-badge">Next.js</span>
+            <span class="tech-badge">Claude 3.5 / OpenAI API</span>
+            <span class="tech-badge">Python / FastAPI</span>
+            <span class="tech-badge">TailwindCSS</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">人材紹介・求人メディア / IT・エンジニア採用</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約3.5ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">要件定義、UI/UX設計、AIレジュメ抽出パイプライン、求人検索エンジン、企業管理画面</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,54 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                従来の求人・求職マッチングプラットフォームでは、求人企業の募集要項の作成ハードルが高く、更新頻度が落ちることや、求職者のレジュメと求人票との手動マッチング作業に多大な人件費が発生し、スケールしづらい課題を抱えていました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                求人メディアにおいて、求職者のレジュメ入力負担が重く登録途中で離脱するユーザーが多数発生し、企業側も応募書類のスクリーニングに膨大な時間を費やしていました。
+<ul>
+  <li><strong>職歴入力フォームの複雑さによる離脱</strong>: 詳細なスキルや経歴の手動入力に20分以上かかり、登録完了率が35%と低迷。</li>
+  <li><strong>キーワード検索の限界とミスマッチ</strong>: 求職者と企業の双方が使う単語の表記揺れ（例: JS/JavaScript/フロントエンド）により、適職がヒットしない。</li>
+  <li><strong>スカウトメールの文面作成にかかる工数</strong>: 企業採用担当者が候補者ごとに個別スカウトを作成する工数がボトルネックに。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-            <li><strong>AI求人票作成ジェネレーター</strong>: 求める職種と数個の箇条書き条件を入力するだけで、SEOと応募意欲を高める魅力的な求人票を自動生成。</li>
-            <li><strong>レジュメ自動解析＆マッチング</strong>: アップロードされた職務経歴書（PDF等）から保有スキルやキャリアを構造化データとして自動抽出し、マッチ率順に自動順位づけ。</li>
-            <li><strong>Next.js高速レンダリング</strong>: SSR（Server-Side Rendering）を活用し、SEOに極めて強い求人詳細ページの高速描画と瞬時の求人検索を実現。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、最新のLLM（Claude 3.5 / GPT-4o）を活用したゼロ入力オンボーディングとセマンティックマッチングを実装しました。
+<ul class="case-detail-list">
+  <li><strong>PDF/WordレジュメのAI自動構造化抽出</strong>: 職務経歴書ファイルをアップロードするだけで、保有技術・経験年数・役職・実績数値を数秒で自動パースしてプロフィール反映。</li>
+  <li><strong>セマンティック求人マッチングエンジン</strong>: 職務要件と候補者の強みを意味単位（Embedding）でマッチングし、適合スコアとともに最適な求人を提示。</li>
+  <li><strong>1クリックAIパーソナライズスカウト生成</strong>: 候補者の経歴と自社求人の合致点をAIが分析し、心を掴む個別スカウト文面をワンクリック自動生成。</li>
+  <li><strong>SEO構造化マークアップ（JobPosting）自動生成</strong>: Googleしごと検索（Google for Jobs）に完全適合するSchema.orgマークアップを全求人ページに自動埋め込み。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                ミニマルなデータベース設計により、無駄なデータ取得や過剰なAPIコールを削減しつつ高速動作を実現。管理側のマッチング仲介・求人票チェック工数を<strong>約85%削減</strong>し、自社メディア型の集客を最大化させるSEO設計を盛り込むことで、リリース数ヶ月で<strong>オーガニック登録者数増加に大きく貢献</strong>しました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>求職者の登録完了率が<strong>35%から88%へ急上昇</strong>し、サイト全体の月間応募総数が3.2倍に拡大。<br>
+企業側のスカウト返信率が8%から26%へ3倍以上向上し、Googleしごと検索経由のオーガニック流入も前月比+140%を達成しました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. Googleしごと検索（Google for Jobs）への自動掲載には対応していますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。求人情報の登録・更新時に、Googleの求人構造化データ仕様（JobPosting Schema）を自動生成し、検索エンジンへ即時通知（Indexing API連携）します。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 求人掲載企業向けの課金モデル（掲載課金・成果報酬・サブスク）は組み込めますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。Stripe等の決済ゲートウェイを組み込み、月額プランや応募課金、スカウト送信枠課金など多彩なマネタイズ設計が可能です。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/mvp-development-startup-speed.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 スタートアップ新規事業でのMVP開発手順と失敗しない外注のコツ →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>

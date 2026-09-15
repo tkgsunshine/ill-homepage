@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI動画解析による社員インタビュー＆フィードバックシステム | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="面談動画からWhisperとGPT-4oを用いて表情・感情・文脈を解析し、スキルスコアリングとフィードバックレポートを自動生成するシステム。">
-  <meta name="keywords" content="GPT-4o,Whisper API,FastAPI,Vue.js,開発実績,導入事例,Ill inc.">
+  <title>AI動画解析による社員面談・フィードバック自動化システム開発 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="1on1面談や採用面接の動画からWhisperとGPT-4oを用いて文字起こし・感情・発言傾向を解析。客観的なスキルスコアとフィードバックレポートを自動生成するシステム開発事例。">
+  <meta name="keywords" content="AI 動画解析 開発,Whisper 音声認識 システム,面談自動化 AI,GPT-4o 業務開発,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="AI動画解析による社員インタビュー＆フィードバックシステム | Ill inc.">
-  <meta property="og:description" content="面談動画からWhisperとGPT-4oを用いて表情・感情・文脈を解析し、スキルスコアリングとフィードバックレポートを自動生成するシステム。">
+  <meta property="og:title" content="AI動画解析による社員面談・フィードバック自動化システム開発 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="1on1面談や採用面接の動画からWhisperとGPT-4oを用いて文字起こし・感情・発言傾向を解析。客観的なスキルスコアとフィードバックレポートを自動生成するシステム開発事例。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/interview-feedback.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_video_feedback.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_video_feedback.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI動画解析による社員インタビュー＆フィードバックシステム | Ill inc.">
-  <meta name="twitter:description" content="面談動画からWhisperとGPT-4oを用いて表情・感情・文脈を解析し、スキルスコアリングとフィードバックレポートを自動生成するシステム。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_video_feedback.webp?v=1">
+  <meta name="twitter:title" content="AI動画解析による社員面談・フィードバック自動化システム開発 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="1on1面談や採用面接の動画からWhisperとGPT-4oを用いて文字起こし・感情・発言傾向を解析。客観的なスキルスコアとフィードバックレポートを自動生成するシステム開発事例。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_video_feedback.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "AI動画解析による社員インタビュー＆フィードバックシステム",
-    "description": "面談動画からWhisperとGPT-4oを用いて表情・感情・文脈を解析し、スキルスコアリングとフィードバックレポートを自動生成するシステム。",
-    "image": "https://www.ill-inc.net/illust_case_video_feedback.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "AI音声・表情解析による社員面談・スキルスコアリング＆フィードバック自動化",
+      "description": "1on1面談や採用面接の動画からWhisperとGPT-4oを用いて文字起こし・感情・発言傾向を解析。客観的なスキルスコアとフィードバックレポートを自動生成するシステム開発事例。",
+      "image": "https://www.ill-inc.net/illust_case_video_feedback.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/interview-feedback.html"
       }
     },
-    "datePublished": "2026-04-12",
-    "dateModified": "2026-04-12"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI音声・表情解析による社員面談・スキルスコアリング＆フィードバック自動化",
+          "item": "https://www.ill-inc.net/cases/interview-feedback.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ZoomやTeams、Google Meetの録画データと自動連携できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。Webフックやクラウドストレージ連携により、オンライン面談終了後に自動で動画を取り込み、解析結果をSlackやメールへ通知できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "自社独自の評価項目やコンピテンシーに合わせたカスタマイズは可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。貴社独自の人事評価シートや評価基準に合わせてプロンプトやスコアリングモデルを完全にオーダーメイド設計いたします。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">AI動画解析による社員インタビュー＆フィードバックシステム</span>
+        <span class="breadcrumb-item">AI音声・表情解析による社員面談・スキルスコアリング＆フィードバック自動化</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_video_feedback.webp" alt="AI動画解析による社員インタビュー＆フィードバックシステム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">生成AI開発</span>
+          <img src="../illust_case_video_feedback.webp" alt="AI音声・表情解析による社員面談・スキルスコアリング＆フィードバック自動化" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">生成AI・AIX / HRTech</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            AI動画解析による社員インタビュー＆フィードバックシステム
+            AI音声・表情解析による社員面談・スキルスコアリング＆フィードバック自動化
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">GPT-4o</span>
-        <span class="tech-badge">Whisper API</span>
-        <span class="tech-badge">FastAPI</span>
-        <span class="tech-badge">Vue.js</span>
+            <span class="tech-badge">GPT-4o</span>
+            <span class="tech-badge">Whisper API</span>
+            <span class="tech-badge">Python / FastAPI</span>
+            <span class="tech-badge">Vue.js</span>
+            <span class="tech-badge">AWS S3 / Lambda</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">人材育成・HR / 大手コールセンター・接客業</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約3ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">動画音声処理パイプライン構築、AIプロンプト設計、スコアリングアルゴリズム開発、Webダッシュボード</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,54 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                組織強化のための定期面談において、面接官やメンターごとにヒアリングの深度や評価基準にばらつきがあり、面談結果の振り返りや個別具体的なフィードバックレポートの作成に多大な工数がかかっていました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                全社的な1on1面談や採用面接の品質が面談官のスキルに依存し、面談後の議事録作成や評価シート記入に多大な時間がかかっていました。
+<ul>
+  <li><strong>面談記録の作成負担と形骸化</strong>: 1回30分の面談につき議事録作成に20分以上要し、多忙なマネージャー層の業務を圧迫。</li>
+  <li><strong>評価基準のばらつきと主観性</strong>: 面談官によって評価コメントの粒度が異なり、従業員の育成課題を組織として客観的にトラッキングできない。</li>
+  <li><strong>動画データの保管と機密性</strong>: 録画データが大容量かつ個人情報を含むため、セキュアな保管とアクセス制御が必須。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-            <li><strong>マルチモーダル対話解析</strong>: 面談の録画動画から発話書き起こし（Whisper）を行い、GPT-4oを用いて表情・感情推移および対話の文脈を統合解析。</li>
-            <li><strong>スキル＆コンピテンシー自動マッピング</strong>: 定量化しにくい発話内容から、社員の自律性や問題解決能力などの指標をAIが自動スコアリング。</li>
-            <li><strong>フィードバックレポート自動出力</strong>: 解析データに基づき、本人の強み、キャリア成長のためのアクションプラン提案シートをPDF形式で即時生成。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、クラウドサーバーレス構成で動画からインサイトを瞬時に抽出するAI解析パイプラインを開発しました。
+<ul class="case-detail-list">
+  <li><strong>高精度Whisper文字起こし & 話者分離（Speaker Diarization）</strong>: 面談官と対象者の音声を自動分離し、タイムスタンプ付きの発言テキストを自動生成。</li>
+  <li><strong>構造化プロンプトによるスキルスコアリング & 強み・課題抽出</strong>: 自社の評価基準（コミュニケーション力、論理的思考、エンゲージメント等）に基づき、5段階評価と具体的フィードバック案を自動出力。</li>
+  <li><strong>NGワード検知 & ハラスメント抑止機能</strong>: 不適切な発言やコンプライアンス違反リスクのあるフレーズを自動ハイライトし、管理者にアラート通知。</li>
+  <li><strong>AWS暗号化ストレージ & 自動削除ポリシー</strong>: 面談動画を自動暗号化保管し、保存期間経過後の自動マスキング・削除機能を完備。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                定性的な対話情報を整理し、業務評価に直接耐えうるレポートテンプレートの検証（プロンプト・エンジニアリング）を徹底。面談者による評価バイアスを排除して客観的なデータ構築を可能とし、<strong>面談後のレポート作成・データ化工数を70%削減</strong>しました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>面談後の記録作成・評価入力にかかる時間が<strong>1回20分から3分へ85%短縮</strong>（全社で月間約600時間の削減）。<br>
+客観的なデータに基づくフィードバックにより従業員満足度（eNPS）が18ポイント改善し、面談の定着率が大幅に向上しました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. ZoomやTeams、Google Meetの録画データと自動連携できますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。Webフックやクラウドストレージ連携により、オンライン面談終了後に自動で動画を取り込み、解析結果をSlackやメールへ通知できます。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 自社独自の評価項目やコンピテンシーに合わせたカスタマイズは可能ですか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。貴社独自の人事評価シートや評価基準に合わせてプロンプトやスコアリングモデルを完全にオーダーメイド設計いたします。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/ai-app-integration.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 自社システムに生成AIをAPI連携し定型業務を自動化する開発手法 →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>

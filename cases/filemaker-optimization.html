@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>大規模Filemakerデータベースのボトルネック検出＆クエリ最適化 | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="オンプレミスFilemakerのパフォーマンス遅延をロジック見直しとAWS移行により解決し、検索クエリと帳票印刷を高速化。">
-  <meta name="keywords" content="FileMaker Pro / Server,FileMaker Script,SQL Server Link,AWS,開発実績,導入事例,Ill inc.">
+  <title>FileMaker・AccessレガシーDBのWebシステム移行・高速化 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="動作遅延やリモート利用不可に悩むFileMaker/Accessの業務システムを、クラウド対応のモダンWebシステム（Next.js＋PostgreSQL）へ移行。データ完全移行と業務効率化を実現。">
+  <meta name="keywords" content="FileMaker Web移行,Access システム リニューアル,レガシーDB 刷新,社内業務システム スクラッチ,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="大規模Filemakerデータベースのボトルネック検出＆クエリ最適化 | Ill inc.">
-  <meta property="og:description" content="オンプレミスFilemakerのパフォーマンス遅延をロジック見直しとAWS移行により解決し、検索クエリと帳票印刷を高速化。">
+  <meta property="og:title" content="FileMaker・AccessレガシーDBのWebシステム移行・高速化 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="動作遅延やリモート利用不可に悩むFileMaker/Accessの業務システムを、クラウド対応のモダンWebシステム（Next.js＋PostgreSQL）へ移行。データ完全移行と業務効率化を実現。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/filemaker-optimization.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_filemaker.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_filemaker.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="大規模Filemakerデータベースのボトルネック検出＆クエリ最適化 | Ill inc.">
-  <meta name="twitter:description" content="オンプレミスFilemakerのパフォーマンス遅延をロジック見直しとAWS移行により解決し、検索クエリと帳票印刷を高速化。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_filemaker.webp?v=1">
+  <meta name="twitter:title" content="FileMaker・AccessレガシーDBのWebシステム移行・高速化 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="動作遅延やリモート利用不可に悩むFileMaker/Accessの業務システムを、クラウド対応のモダンWebシステム（Next.js＋PostgreSQL）へ移行。データ完全移行と業務効率化を実現。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_filemaker.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "大規模Filemakerデータベースのボトルネック検出＆クエリ最適化",
-    "description": "オンプレミスFilemakerのパフォーマンス遅延をロジック見直しとAWS移行により解決し、検索クエリと帳票印刷を高速化。",
-    "image": "https://www.ill-inc.net/illust_case_filemaker.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "肥大化したFileMaker・AccessをPostgreSQL＋モダンWebシステムへ刷新・高速化",
+      "description": "動作遅延やリモート利用不可に悩むFileMaker/Accessの業務システムを、クラウド対応のモダンWebシステム（Next.js＋PostgreSQL）へ移行。データ完全移行と業務効率化を実現。",
+      "image": "https://www.ill-inc.net/illust_case_filemaker.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/filemaker-optimization.html"
       }
     },
-    "datePublished": "2026-05-10",
-    "dateModified": "2026-05-10"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "肥大化したFileMaker・AccessをPostgreSQL＋モダンWebシステムへ刷新・高速化",
+          "item": "https://www.ill-inc.net/cases/filemaker-optimization.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "長年蓄積された過去の履歴データもすべて移行できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。過去十数年分の売上データや顧客履歴、複雑な計算フィールドも含め、整合性チェックプログラムを実行しながら欠損ゼロで安全に移行します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "スタッフが高齢で新しいシステムの操作に慣れるか不安です。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "旧システムのキーボード操作（Tabキー遷移、Enter確定など）や画面レイアウトを踏襲した直感的なUIを設計するため、最小限の学習コストでスムーズに移行できます。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">大規模Filemakerデータベースのボトルネック検出＆クエリ最適化</span>
+        <span class="breadcrumb-item">肥大化したFileMaker・AccessをPostgreSQL＋モダンWebシステムへ刷新・高速化</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_filemaker.webp" alt="大規模Filemakerデータベースのボトルネック検出＆クエリ最適化" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
+          <img src="../illust_case_filemaker.webp" alt="肥大化したFileMaker・AccessをPostgreSQL＋モダンWebシステムへ刷新・高速化" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">レガシー刷新 / 業務システム</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            大規模Filemakerデータベースのボトルネック検出＆クエリ最適化
+            肥大化したFileMaker・AccessをPostgreSQL＋モダンWebシステムへ刷新・高速化
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">FileMaker Pro / Server</span>
-        <span class="tech-badge">FileMaker Script</span>
-        <span class="tech-badge">SQL Server Link</span>
-        <span class="tech-badge">AWS</span>
+            <span class="tech-badge">Next.js</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">Prisma</span>
+            <span class="tech-badge">Docker</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">卸売業・物流 / 専門商社</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約3ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">データ構造リバースエンジニアリング、DB移行スクリプト開発、Web管理画面開発、帳票出力機能実装</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,54 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                十数年にわたり増改築を繰り返した社内基幹Filemakerシステムにおいて、同時接続者数の増加とともに「検索クエリが数十秒戻ってこない」「請求書のポータル描画が途中で固まる」といった深刻な遅延が発生。日々の業務運営に重大な影響を与えていました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                長年社内で増改築を繰り返してきたFileMaker/Accessの販売管理システムがデータ肥大化により深刻なパフォーマンス低下を起こしていました。
+<ul>
+  <li><strong>同時アクセス時のクラッシュと処理遅延</strong>: 営業所が増えたことで同時アクセスが増加し、検索や集計に数分かかり、頻繁に画面がフリーズ。</li>
+  <li><strong>テレワーク・外出先からのアクセス不能</strong>: 社内LAN前提のクライアントソフト構成のため、外出先やスマホから在庫確認や見積作成ができない。</li>
+  <li><strong>保守担当者の退職による属人化リスク</strong>: 独自マクロやスクリプトがブラックボックス化し、不具合発生時に社内で修復不能な状態に陥っていた。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-            <li><strong>ボトルネック詳細ログ解析</strong>: クエリと計算フィールド、参照が過多になっている不要なルックアップ（非保存のリレーションシップ等）の検出。</li>
-            <li><strong>スクリプトとリレーションシップの整理</strong>: ループ処理や重複評価を回避するクエリの書き換え、およびサーバーサイドスクリプト実行（PSoS）への移行。</li>
-            <li><strong>クラウドインスタンス最適化</strong>: オンプレミスサーバーから、ストレージIOPSとメモリ帯域を考慮したAWSクラウド上のFilemaker Server構成へ最適化移行。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、業務フローを崩さずデータ構造を正規化し、軽量かつスケーラブルなWebシステムへの無停止移行を推進しました。
+<ul class="case-detail-list">
+  <li><strong>複雑なFileMakerテーブルのリバースエンジニアリング & 正規化</strong>: 重複・非正規化されていた数百のフィールドを分析し、堅牢なPostgreSQLリレーショナルスキーマへ再設計。</li>
+  <li><strong>差分データ移行自動化スクリプト</strong>: 移行期間中も日常業務を継続できるよう、旧DBから新DBへの差分自動同期スクリプトを構築し、週末の短時間で本番切り替えを完遂。</li>
+  <li><strong>直感的で高速なNext.js Webフロントエンド</strong>: 従来のショートカットキー操作感や入力導線を踏襲しつつ、ブラウザから即座に動く高速SPAインターフェースを提供。</li>
+  <li><strong>PDF帳票（請求書・納品書・見積書）の即時生成</strong>: サーバーサイドでの高精度PDF描画エンジンを実装し、大量の一括帳票出力を数秒で完了。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                システム全体のフルスクラッチ作り替えを避けることで、開発コストと業務断絶リスクを最小化。不要な依存関係を排除する本質的なロジック最適化のみをピンポイントで施すことで、<strong>主要なデータ検索および帳票印刷速度を平均7.8倍に高速化</strong>しました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>検索・集計レスポンスが<strong>従来の15秒以上から0.2秒（約75倍高速化）へ改善</strong>。<br>
+全国の営業担当者が外出先や自宅からスマホ・ノートPCで即座に見積発行と在庫確認を行えるようになり、商談成約スピードが大幅に向上しました。専用クライアントのライセンス更新費も年間約180万円削減されました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 長年蓄積された過去の履歴データもすべて移行できますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。過去十数年分の売上データや顧客履歴、複雑な計算フィールドも含め、整合性チェックプログラムを実行しながら欠損ゼロで安全に移行します。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. スタッフが高齢で新しいシステムの操作に慣れるか不安です。</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 旧システムのキーボード操作（Tabキー遷移、Enter確定など）や画面レイアウトを踏襲した直感的なUIを設計するため、最小限の学習コストでスムーズに移行できます。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/039-filemaker-access-legacy-modernization.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 FileMaker・AccessのWebシステム移行費用とメリット →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>

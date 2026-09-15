@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム | 開発実績・導入事例 | Ill inc.</title>
-  <meta name="description" content="案件、派遣スタッフ、シフト、請求データの一元管理と、法改正に準拠した契約チェックを自動で行うCRMシステム開発。">
-  <meta name="keywords" content="Laravel,Next.js,PostgreSQL,Docker,開発実績,導入事例,Ill inc.">
+  <title>人材派遣・紹介会社向け独自CRM・スタッフ稼働管理システム開発 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="Salesforce等の高額ライセンス費用を削減。スタッフ情報、案件マッチング、勤怠・契約更新、請求管理を一元化し、自社の業務フローに100%適合させた独自CRM開発事例。">
+  <meta name="keywords" content="人材派遣 CRM 開発,Salesforce 移行 独自開発,スタッフ管理 システム 費用,社内CRM スクラッチ,Ill inc.">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
@@ -16,17 +16,17 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム | Ill inc.">
-  <meta property="og:description" content="案件、派遣スタッフ、シフト、請求データの一元管理と、法改正に準拠した契約チェックを自動で行うCRMシステム開発。">
+  <meta property="og:title" content="人材派遣・紹介会社向け独自CRM・スタッフ稼働管理システム開発 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="Salesforce等の高額ライセンス費用を削減。スタッフ情報、案件マッチング、勤怠・契約更新、請求管理を一元化し、自社の業務フローに100%適合させた独自CRM開発事例。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/staffing-crm.html">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_illust_case_staffing_crm.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_staffing_crm.webp?v=1">
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム | Ill inc.">
-  <meta name="twitter:description" content="案件、派遣スタッフ、シフト、請求データの一元管理と、法改正に準拠した契約チェックを自動で行うCRMシステム開発。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_illust_case_staffing_crm.webp?v=1">
+  <meta name="twitter:title" content="人材派遣・紹介会社向け独自CRM・スタッフ稼働管理システム開発 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="Salesforce等の高額ライセンス費用を削減。スタッフ情報、案件マッチング、勤怠・契約更新、請求管理を一元化し、自社の業務フローに100%適合させた独自CRM開発事例。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_staffing_crm.webp?v=1">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -35,39 +35,88 @@
   
   <!-- CSS Stylesheet -->
   <!-- Preconnect & Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
 
-  <!-- JSON-LD Structured Data (BlogPosting Schema for detail case study) -->
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム",
-    "description": "案件、派遣スタッフ、シフト、請求データの一元管理と、法改正に準拠した契約チェックを自動で行うCRMシステム開発。",
-    "image": "https://www.ill-inc.net/illust_case_staffing_crm.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Ill inc."
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ill（イル）株式会社",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ill-inc.net/logo-icon.png"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "高額SaaSから脱却！人材派遣・紹介会社向け自社専用CRM＆スタッフ稼働管理システム",
+      "description": "Salesforce等の高額ライセンス費用を削減。スタッフ情報、案件マッチング、勤怠・契約更新、請求管理を一元化し、自社の業務フローに100%適合させた独自CRM開発事例。",
+      "image": "https://www.ill-inc.net/illust_case_staffing_crm.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/staffing-crm.html"
       }
     },
-    "datePublished": "2026-04-19",
-    "dateModified": "2026-04-19"
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "高額SaaSから脱却！人材派遣・紹介会社向け自社専用CRM＆スタッフ稼働管理システム",
+          "item": "https://www.ill-inc.net/cases/staffing-crm.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "既存のSalesforceやエクセルからの顧客・スタッフデータ移行は可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。過去の商談履歴、スタッフ情報、稼働履歴データをすべてエクスポートし、新DBへクレンジングの上で完全移行いたします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "初期開発費用はどのくらいで回収できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "月額ライセンス料の削減額により、多くの企業様でシステム稼働後約1年〜1年半以内に開発投資額を全額回収されています。"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Speculation Rules for Instant Navigation -->
   <script type="speculationrules">
@@ -145,7 +194,7 @@
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
         <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム</span>
+        <span class="breadcrumb-item">高額SaaSから脱却！人材派遣・紹介会社向け自社専用CRM＆スタッフ稼働管理システム</span>
       </div>
 
       <!-- Case study main wrapper -->
@@ -153,21 +202,40 @@
         
         <!-- Large Illustration Banner -->
         <div class="case-detail-banner">
-          <img src="../illust_case_staffing_crm.webp" alt="人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
-          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">システム開発</span>
+          <img src="../illust_case_staffing_crm.webp" alt="高額SaaSから脱却！人材派遣・紹介会社向け自社専用CRM＆スタッフ稼働管理システム" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">業務DX / 独自CRM開発</span>
         </div>
 
         <div class="case-detail-content">
           <!-- Title & Badges -->
           <h1 class="case-detail-title">
-            人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム
+            高額SaaSから脱却！人材派遣・紹介会社向け自社専用CRM＆スタッフ稼働管理システム
           </h1>
           
           <div class="case-detail-tags">
-        <span class="tech-badge">Laravel</span>
-        <span class="tech-badge">Next.js</span>
-        <span class="tech-badge">PostgreSQL</span>
-        <span class="tech-badge">Docker</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Python / Django</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">AWS</span>
+          </div>
+
+          <!-- Project Metadata Info Box -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">人材派遣・業務委託 / 総合人材サービス</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">開発期間</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">約3ヶ月</span>
+              </div>
+              <div>
+                <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span>
+                <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">業務要件定義、Salesforceデータ移行、独自CRM設計・開発、帳票・請求書自動連携、保守運用</span>
+              </div>
+            </div>
           </div>
 
           <!-- Structured details -->
@@ -175,54 +243,88 @@
             
             <!-- Challenges -->
             <div>
-              <h3 class="case-detail-section-title">課題・背景</h3>
-              <p class="case-detail-text">
-                人材派遣会社様において、求人案件データ、派遣スタッフのシフトやスキル情報、企業への請求処理が複数のシステムやExcelに分散しており、管理業務が極めて非効率でした。既存のパッケージ製品では独自の複雑な管理フローに対応できず、また仕様書（要件定義）を自社で作成できないため発注に踏み切れないという課題を抱えておられました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と導入前のボトルネック</h2>
+              <div class="case-detail-text">
+                従業員数増加に伴い、導入していた大手CRM（Salesforce）のアカウントライセンス費用が年間1,500万円以上に高騰し、不要な機能の多さと操作の複雑さが課題でした。
+<ul>
+  <li><strong>アカウント課金によるライセンス費用の肥大化</strong>: ユーザー数が増えるごとに月額費用が増加し、社内利用者の制限を余儀なくされていた。</li>
+  <li><strong>汎用パッケージのカスタマイズ限界</strong>: 派遣法特有の契約更新フローや抵触日管理、スタッフのスキルマッチングが標準機能で対応できず、エクセル管理が併発。</li>
+  <li><strong>システム間の二重入力</strong>: CRM、勤怠システム、請求システムが分断され、月締めの請求書作成に毎月5営業日を要していた。</li>
+</ul>
+              </div>
             </div>
 
             <!-- Approach -->
             <div>
-              <h3 class="case-detail-section-title">提供したアプローチ・機能</h3>
-              <ul class="case-detail-list">
-                <li><strong>要件定義・RFP作成からの伴走支援</strong>: アイデア段階から弊社エンジニアが伴走し、複雑な業務フローを可視化して要件定義書を策定。</li>
-                <li><strong>フルオーダーメイドCRMデータベース</strong>: パッケージ製品の枠に囚われない、自社ルールに100%適合した統合型スタッフ・契約管理システム。</li>
-                <li><strong>AIエージェントによる業務自動化</strong>: AIエージェントを組み込み、シフト確認の自動連絡や、請求書・契約書の自動作成・チェック（RPA）を実行。</li>
-              </ul>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・開発アプローチ</h2>
+              <strong>Ill（イル）株式会社</strong> では、無駄な機能を削ぎ落とし、現場の業務フローに100%フィットした専用CRMをスクラッチ・ミニマル開発しました。
+<ul class="case-detail-list">
+  <li><strong>派遣法対応のスタッフ稼働・抵触日自動トラッキング</strong>: スタッフの派遣期間や契約更新日を自動監視し、抵触日や更新アラートをダッシュボードに自動表示。</li>
+  <li><strong>スキル＆希望条件の即時マッチング機能</strong>: クライアント企業の求人要件に対し、稼働可能スタッフをスキル・時給・勤務地で即座に絞り込みマッチング。</li>
+  <li><strong>勤怠データ連動の請求書・支払明細ワンクリック一括発行</strong>: タイムシート承認データから請求データを自動計算し、ワンクリックでPDF請求書を一括発行。</li>
+  <li><strong>無制限ユーザー利用が可能な固定コスト基盤</strong>: アカウント数無制限の自社専用Webシステムとして構築し、全社員・コーディネーターが自由に利用可能に。</li>
+</ul>
             </div>
 
             <!-- Strength & Effect -->
             <div>
-              <h3 class="case-detail-section-title">Illの強みと効果</h3>
-              <p class="case-detail-text">
-                パッケージ導入時に発生しがちな高額なアカウント課金を排除し、ユーザー数無制限のフルオーダーメイドCRMを最小限の初期コストで構築。AIエージェントによる定型業務の自動化により、契約・請求などのバックオフィス工数が<strong>85%削減</strong>され、手動運用による漏れがゼロ化されました。
-              </p>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果とビジネスインパクト（ROI実績）</h2>
+              <div class="case-detail-text">
+                <p>年間1,500万円以上かかっていた<strong>CRMライセンス費用を完全撤廃（インフラ維持費の月額数万円のみへ95%以上削減）</strong>。<br>
+月末の請求書発行・契約更新業務が5営業日から半日に短縮され、コーディネーターのマッチング成約件数が1.5倍に増加しました。</p>
+              </div>
+            </div>
+
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 既存のSalesforceやエクセルからの顧客・スタッフデータ移行は可能ですか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。過去の商談履歴、スタッフ情報、稼働履歴データをすべてエクスポートし、新DBへクレンジングの上で完全移行いたします。</p>
+            </div>
+            <div class="faq-item">
+              <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 初期開発費用はどのくらいで回収できますか？</h3>
+              <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 月額ライセンス料の削減額により、多くの企業様でシステム稼働後約1年〜1年半以内に開発投資額を全額回収されています。</p>
+            </div>
+              </div>
+            </div>
+
+            
+            <!-- Related Column Internal Link -->
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するシステム開発ノウハウや費用相場を詳しく解説しています。</p>
+              <a href="../column/custom-crm-development-cost.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 高額なライセンス費用から脱却する独自CRM開発のメリットと費用相場 →
+              </a>
             </div>
 
           </div>
 
           <!-- Back button -->
-          <div class="case-detail-back-container">
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
             <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
           </div>
 
         </div>
       </article>
 
-            <!-- CTA Cards Area -->
-      <div class="glass-panel cases-cta">
+      <!-- CTA Cards Area -->
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
           新規プロジェクトのご相談・プロトタイプ作成
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
+          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
           <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
         </div>
-      </div>
       </div>
 
     </div>
