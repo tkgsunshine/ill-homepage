@@ -96,17 +96,16 @@ def update_file(filepath):
     elif "</div>\s*</article>" in content:
         content = re.sub(r'(?s)(.*?)\s*</div>\s*</article>', rf'\g<1>\n\n{BOTTOM_CTA_HTML}        </div>\n      </article>', content, count=1)
 
-    # 3. Clean up and replace sidebar CTA
-    if re.search(r'<div class="sidebar-box[^\"]*sidebar-cta[^>]*>.*?</div>', content, flags=re.DOTALL):
-        content = re.sub(
-            r'<div class="sidebar-box[^\"]*sidebar-cta[^>]*>.*?</div>',
-            SIDEBAR_CTA_HTML.strip(),
-            content,
-            flags=re.DOTALL
-        )
-    else:
-        if "</aside>" in content:
-            content = re.sub(r'(?s)(.*?)\s*</aside>', rf'\g<1>\n{SIDEBAR_CTA_HTML}        </aside>', content, count=1)
+    # 3. Clean up and replace sidebar CTA completely
+    aside_match = re.search(r'(<aside\s+class="sidebar">)(.*?)(</aside>)', content, flags=re.DOTALL)
+    if aside_match:
+        aside_start, aside_body, aside_end = aside_match.groups()
+        # Strip any existing sidebar-cta or stray CTA markup
+        cleaned_aside_body = re.sub(r'\s*<div class="sidebar-box[^\"]*sidebar-cta[^\"]*">.*', '', aside_body, flags=re.DOTALL)
+        cleaned_aside_body = re.sub(r'\s*<h3 class="sidebar-cta-title">.*', '', cleaned_aside_body, flags=re.DOTALL)
+        
+        new_aside = f"{aside_start}{cleaned_aside_body}\n\n{SIDEBAR_CTA_HTML}        {aside_end}"
+        content = content[:aside_match.start()] + new_aside + content[aside_match.end():]
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(content)
