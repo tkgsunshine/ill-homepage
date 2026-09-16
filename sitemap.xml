@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://www.ill-inc.net/cases/</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -759,6 +759,30 @@
   <url>
     <loc>https://www.ill-inc.net/column/gpt-6-astra-computer-use-agentic-ai.html</loc>
     <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ill-inc.net/column/050-c2c-sharing-matching-platform-development.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ill-inc.net/column/051-custom-workflow-management-tool-cost.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ill-inc.net/column/052-pwa-web-app-vs-native-cost-comparison.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ill-inc.net/column/053-line-api-chatbot-customer-support-cost.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
