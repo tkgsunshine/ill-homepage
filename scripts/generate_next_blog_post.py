@@ -65,10 +65,11 @@ def main():
     with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
         template = f.read()
         
-    # Generate dates (using today's date)
-    today = datetime.date.today()
-    period_date = today.strftime('%Y.%m.%d')
-    iso_date = today.strftime('%Y-%m-%d')
+    # Generate dates using Tokyo / JST timezone (UTC+9) so GitHub Actions UTC environment generates the correct Japanese business date
+    jst = datetime.timezone(datetime.timedelta(hours=9))
+    now_jst = datetime.datetime.now(jst)
+    period_date = now_jst.strftime('%Y.%m.%d')
+    iso_date = now_jst.strftime('%Y-%m-%d')
     
     # Build TOC items and body HTML
     toc_items = []
