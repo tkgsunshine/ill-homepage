@@ -21,28 +21,22 @@ def main():
     force_run = "--force" in sys.argv
     if not force_run:
         try:
+            # Check the timestamp of the last ADDED article file in column/ (ignoring index.html or maintenance commits)
             res = subprocess.run(
-                ["git", "log", "-1", "--format=%ct", "--", COLUMN_DIR],
+                ["git", "log", "-1", "--diff-filter=A", "--format=%ct", "--", "column/*.html"],
                 capture_output=True,
                 text=True,
                 check=True
             )
-            last_commit_ts = int(res.stdout.strip())
-            elapsed_seconds = time.time() - last_commit_ts
-            # Guard window: 2.5 hours (9000 seconds)
-            if elapsed_seconds < 9000:
-                elapsed_min = int(elapsed_seconds / 60)
-                print(f"Notice: A column commit occurred {elapsed_min} minutes ago in column/. Skipping duplicate generation for this retry window.")
-                return
-
-            # Also check if any file in COLUMN_DIR was created/modified in the last 15 minutes (uncommitted run)
-            current_time = time.time()
-            for fn in os.listdir(COLUMN_DIR):
-                if fn.endswith(".html") and fn != "index.html":
-                    fpath = os.path.join(COLUMN_DIR, fn)
-                    if (current_time - os.path.getmtime(fpath)) < 900:
-                        print(f"Notice: File {fn} was generated {int((current_time - os.path.getmtime(fpath))/60)} minutes ago. Skipping duplicate generation.")
-                        return
+            stdout_str = res.stdout.strip()
+            if stdout_str:
+                last_article_added_ts = int(stdout_str)
+                elapsed_seconds = time.time() - last_article_added_ts
+                # Guard window: 2.5 hours (9000 seconds)
+                if elapsed_seconds < 9000:
+                    elapsed_min = int(elapsed_seconds / 60)
+                    print(f"Notice: A new article was added {elapsed_min} minutes ago. Skipping duplicate generation for this retry window.")
+                    return
         except Exception as e:
             print(f"Warning: Could not check git commit timestamp: {e}")
     
