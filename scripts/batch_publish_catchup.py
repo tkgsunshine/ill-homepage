@@ -102,9 +102,6 @@ for filename, period_date, iso_date in targets:
               <a href="../index.html#contact" class="btn btn-primary btn-cta-primary">
                 無料相談・見積もりを依頼する <span class="arrow">→</span>
               </a>
-              <a href="../cases/index.html" class="btn btn-secondary btn-cta-secondary">
-                開発実績を見る →
-              </a>
             </div>
             <p class="cta-microcopy">
               <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
