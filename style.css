@@ -1738,7 +1738,7 @@ textarea.form-control {
 }
 
 .footer-brand {
-  max-width: 400px;
+  max-width: 460px;
 }
 
 .footer-logo {
@@ -1747,7 +1747,303 @@ textarea.form-control {
 
 .footer-desc {
   font-size: 1.4rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+/* --- FOOTER SECURITY ACTION BADGE --- */
+.footer-security {
+  margin-top: 1.8rem;
+}
+
+.security-card {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.6rem 2rem;
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: var(--transition-normal);
+}
+
+.security-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.security-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 0.8rem;
+  background: #FFFFFF;
+  padding: 0.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.security-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.security-badge-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.security-desc {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.security-modal-open-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-cyan);
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-top: 0.4rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--transition-fast);
+  width: fit-content;
+}
+
+.security-modal-open-btn:hover {
+  color: #38BDF8;
+}
+
+/* Light Theme overrides for Security Card */
+body.theme-light .security-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+body.theme-light .security-card:hover {
+  border-color: #0284C7;
+  background: #F0F9FF;
+}
+
+body.theme-light .security-badge-title {
+  color: #0F172A;
+}
+
+body.theme-light .security-desc {
+  color: #64748B;
+}
+
+body.theme-light .security-modal-open-btn {
+  color: #0284C7;
+}
+
+body.theme-light .security-modal-open-btn:hover {
+  color: #0369A1;
+}
+
+/* --- SECURITY POLICY MODAL --- */
+.security-modal {
+  border: none;
+  border-radius: 2rem;
+  padding: 0;
+  background: transparent;
+  max-width: 680px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.security-modal::backdrop {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.security-modal-content {
+  background: #0F172A;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 2rem;
+  padding: 3.2rem 3.6rem;
+  color: var(--text-main);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.security-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.security-modal-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #38BDF8;
+}
+
+.security-modal-logo {
+  border-radius: 0.6rem;
+  background: #FFFFFF;
+  padding: 0.15rem;
+}
+
+.security-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.security-modal-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.security-policy-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1.6rem;
+  color: #FFFFFF;
+}
+
+.security-policy-lead {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #94A3B8;
+  margin-bottom: 2.4rem;
+}
+
+.security-policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.security-policy-list li {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.2rem;
+  padding: 1.4rem 1.8rem;
+}
+
+.security-policy-list strong {
+  display: block;
+  font-size: 1.45rem;
+  color: #F8FAFC;
+  margin-bottom: 0.4rem;
+}
+
+.security-policy-list p {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: #94A3B8;
+  margin: 0;
+}
+
+.security-policy-meta {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1.3rem;
+  color: #64748B;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.security-policy-company {
+  text-align: right;
+  line-height: 1.5;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Light Mode for Modal */
+body.theme-light .security-modal-content {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15);
+}
+
+body.theme-light .security-modal-header {
+  border-bottom: 1px solid #E2E8F0;
+}
+
+body.theme-light .security-modal-badge {
+  color: #0284C7;
+}
+
+body.theme-light .security-modal-close {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+  color: #475569;
+}
+
+body.theme-light .security-modal-close:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+}
+
+body.theme-light .security-policy-heading {
+  color: #0F172A;
+}
+
+body.theme-light .security-policy-lead {
+  color: #475569;
+}
+
+body.theme-light .security-policy-list li {
+  background: #F8FAFC;
+  border-color: #E2E8F0;
+}
+
+body.theme-light .security-policy-list strong {
+  color: #0F172A;
+}
+
+body.theme-light .security-policy-list p {
+  color: #475569;
+}
+
+body.theme-light .security-policy-meta {
+  border-top-color: #E2E8F0;
+  color: #64748B;
+}
+
+body.theme-light .security-policy-company {
+  color: #0F172A;
 }
 
 .footer-links-grid {

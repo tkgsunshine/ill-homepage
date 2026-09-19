@@ -757,5 +757,50 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render
     renderPage(false);
   }
+
+  // --- SECURITY POLICY MODAL ---
+  const securityModal = document.getElementById('security-modal');
+  const openSecurityBtn = document.getElementById('open-security-modal');
+  const closeSecurityBtn = document.getElementById('close-security-modal');
+
+  if (securityModal && openSecurityBtn) {
+    openSecurityBtn.addEventListener('click', () => {
+      if (typeof securityModal.showModal === 'function') {
+        securityModal.showModal();
+      } else {
+        securityModal.setAttribute('open', '');
+      }
+      document.body.style.overflow = 'hidden';
+    });
+
+    const closeModal = () => {
+      if (typeof securityModal.close === 'function') {
+        securityModal.close();
+      } else {
+        securityModal.removeAttribute('open');
+      }
+      document.body.style.overflow = '';
+    };
+
+    if (closeSecurityBtn) {
+      closeSecurityBtn.addEventListener('click', closeModal);
+    }
+
+    securityModal.addEventListener('click', (e) => {
+      const rect = securityModal.getBoundingClientRect();
+      const isInDialog = (
+        rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+        rect.left <= e.clientX && e.clientX <= rect.left + rect.width
+      );
+      if (e.target === securityModal) {
+        closeModal();
+      }
+    });
+
+    securityModal.addEventListener('cancel', () => {
+      document.body.style.overflow = '';
+    });
+  }
 });
+
 

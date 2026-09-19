@@ -1163,6 +1163,22 @@
           <p class="footer-desc">
             システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
           </p>
+
+          <!-- SECURITY ACTION Declaration -->
+          <div class="footer-security">
+            <div class="security-card">
+              <img src="security-action.png" alt="SECURITY ACTION 二つ星 セキュリティ対策自己宣言" class="security-logo" width="64" height="64" loading="lazy">
+              <div class="security-content">
+                <div class="security-badge-title">SECURITY ACTION（二つ星）宣言</div>
+                <p class="security-desc">
+                  情報セキュリティ基本方針を定め、安全・堅牢なシステム開発を徹底しています。
+                </p>
+                <button type="button" class="security-modal-open-btn" id="open-security-modal" aria-haspopup="dialog">
+                  情報セキュリティ基本方針 →
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="footer-links-grid">
@@ -1198,6 +1214,61 @@
     </div>
   </footer>
 
+  <!-- Security Policy Modal -->
+  <dialog id="security-modal" class="security-modal" aria-labelledby="security-modal-title">
+    <div class="security-modal-content">
+      <div class="security-modal-header">
+        <div class="security-modal-badge">
+          <img src="security-action.png" alt="SECURITY ACTION 二つ星" class="security-modal-logo" width="36" height="36">
+          <span>SECURITY ACTION（二つ星）宣言事業者</span>
+        </div>
+        <button type="button" class="security-modal-close" id="close-security-modal" aria-label="閉じる">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="security-modal-body">
+        <h2 id="security-modal-title" class="security-policy-heading">情報セキュリティ基本方針</h2>
+        <p class="security-policy-lead">
+          Ill（イル）株式会社（以下、当社）は、お客様からお預かりした情報資産および当社の情報資産を事故・災害・犯罪などの脅威から守り、お客様ならびに社会の信頼に応えるべく、以下の方針に基づき全社で情報セキュリティに取り組みます。
+        </p>
+
+        <ol class="security-policy-list">
+          <li>
+            <strong>1. 経営者の責任</strong>
+            <p>当社は、経営者主導で組織的かつ継続的に情報セキュリティの改善・向上に努めます。</p>
+          </li>
+          <li>
+            <strong>2. 社内体制の整備</strong>
+            <p>当社は、情報セキュリティの維持及び改善のために組織を設置し、情報セキュリティ対策を社内の正式な規則として定めます。</p>
+          </li>
+          <li>
+            <strong>3. 従業員の取組み</strong>
+            <p>当社の従業員は、情報セキュリティのために必要とされる知識、技術を習得し、情報セキュリティへの取り組みを確かなものにします。</p>
+          </li>
+          <li>
+            <strong>4. 法令及び契約上の要求事項の遵守</strong>
+            <p>当社は、情報セキュリティに関わる法令、規制、規範、契約上の義務を遵守するとともに、お客様の期待に応えます。</p>
+          </li>
+          <li>
+            <strong>5. 違反及び事故への対応</strong>
+            <p>当社は、情報セキュリティに関わる法令違反、契約違反及び事故が発生した場合には適切に対処し、再発防止に努めます。</p>
+          </li>
+        </ol>
+
+        <div class="security-policy-meta">
+          <p>制定日: 2024年4月1日</p>
+          <div class="security-policy-company">
+            Ill（イル）株式会社<br>代表取締役　山下 高志
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
   <!-- Floating Theme Switcher -->
   <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
     <!-- Moon Icon for switching to dark theme -->
@@ -1219,6 +1290,6 @@
   </button>
 
   <!-- Client JavaScript -->
-  <script defer src="script.js?v=61"></script>
+  <script defer src="script.js?v=62"></script>
 </body>
 </html>
