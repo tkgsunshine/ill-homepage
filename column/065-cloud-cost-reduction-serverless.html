@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAG（社内データ検索システム）開発の費用相場とセキュリティ対策 | Ill（イル）株式会社</title>
-  <meta name="description" content="社内文書やマニュアルを安全に検索・要約するRAGシステムの構築コストと導入手順を解説。情報漏洩を防ぐセキュリティ対策と、自社開発 vs 外注の比較も紹介。">
-  <meta name="keywords" content="RAG 開発,RAGとは,社内AI 作り方,Vector Database,AI検索システム 費用">
+  <title>AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。 | Ill（イル）株式会社</title>
+  <meta name="description" content="常時稼働サーバーの固定費に悩む企業向けに、アクセス時のみ課金されるサーバーレスアーキテクチャ（Lambda/Cloud Run）への移行でランニングコストを激減させるノウハウ。">
+  <meta name="keywords" content="AWS コスト削減,サーバーレス 移行,GCP インフラ最適化,クラウド 維持費 削減">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
   <meta name="robots" content="index, follow">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.ill-inc.net/column/rag-enterprise-search-development.html">
+  <link rel="canonical" href="https://www.ill-inc.net/column/065-cloud-cost-reduction-serverless.html">
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="RAG（社内データ検索システム）開発の費用相場とセキュリティ対策 | Ill inc. コラム">
-  <meta property="og:description" content="社内文書やマニュアルを安全に検索・要約するRAGシステムの構築コストと導入手順を解説。情報漏洩を防ぐセキュリティ対策と、自社開発 vs 外注の比較も紹介。">
-  <meta property="og:url" content="https://www.ill-inc.net/column/rag-enterprise-search-development.html">
+  <meta property="og:title" content="AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。 | Ill inc. コラム">
+  <meta property="og:description" content="常時稼働サーバーの固定費に悩む企業向けに、アクセス時のみ課金されるサーバーレスアーキテクチャ（Lambda/Cloud Run）への移行でランニングコストを激減させるノウハウ。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/065-cloud-cost-reduction-serverless.html">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
   <meta property="og:image:width" content="1024">
@@ -26,8 +26,8 @@
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RAG（社内データ検索システム）開発の費用相場とセキュリティ対策 | Ill inc. コラム">
-  <meta name="twitter:description" content="社内文書やマニュアルを安全に検索・要約するRAGシステムの構築コストと導入手順を解説。情報漏洩を防ぐセキュリティ対策と、自社開発 vs 外注の比較も紹介。">
+  <meta name="twitter:title" content="AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。 | Ill inc. コラム">
+  <meta name="twitter:description" content="常時稼働サーバーの固定費に悩む企業向けに、アクセス時のみ課金されるサーバーレスアーキテクチャ（Lambda/Cloud Run）への移行でランニングコストを激減させるノウハウ。">
   <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
   
   <!-- Favicons -->
@@ -50,31 +50,30 @@
   <!-- JSON-LD Structured Data (Article Schema) -->
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "社内データを安全に活用する「RAG（検索拡張生成）」の仕組み・開発ステップと導入費用の相場",
-  "description": "社内文書やマニュアルを安全に検索・要約するRAGシステムの構築コストと導入手順を解説。情報漏洩を防ぐセキュリティ対策と、自社開発 vs 外注の比較も紹介。",
-  "image": "https://www.ill-inc.net/ogp.png?v=1",
-  "datePublished": "2026-07-30",
-  "dateModified": "2026-07-30",
-  "author": {
-    "@type": "Person",
-    "name": "山下 高志",
-    "jobTitle": "Representative of Ill inc."
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Ill（イル）株式会社",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.ill-inc.net/logo-icon.png"
-    }
-  },
-  "mainEntityOfPage": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。",
+    "description": "常時稼働サーバーの固定費に悩む企業向けに、アクセス時のみ課金されるサーバーレスアーキテクチャ（Lambda/Cloud Run）への移行でランニングコストを激減させるノウハウ。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.ill-inc.net/column/rag-enterprise-search-development.html"
+      "@id": "https://www.ill-inc.net/column/065-cloud-cost-reduction-serverless.html"
     }
-}
+  }
   </script>
 
   <!-- Speculation Rules for Instant Navigation -->
@@ -116,7 +115,41 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "RAGシステム開発と費用相場"
+      "name": "サーバーレス移行によるインフラ費用削減"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "サーバーレスに移行すると応答速度（コールドスタート）が遅くなりませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最新のコンテナランタイム（AWS Lambda SnapStartやGCP Cloud Run）の適切なプロビジョニング設定により、レイテンシの影響をミリ秒単位に抑えて快適に運用可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 他社の見積書を見せて、妥当かどうか診断してもらうことはできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、無料で見積書診断を承っております。過剰な要件や削れるポイントをエンジニア目線で率直にアドバイスいたします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発途中で追加費用が請求されることはありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 請負契約の場合、事前に合意した要件の範囲内で追加費用が発生することは一切ありません。仕様変更が必要な場合も、必ず事前に工数と金額をご提示して合意をいただきます。"
+      }
     }
   ]
 }
@@ -172,19 +205,15 @@
     <div class="container">
       
       <div class="breadcrumbs">
-        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
-        <span class="breadcrumb-separator">&gt;</span>
-        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
-        <span class="breadcrumb-separator">&gt;</span>
-        <span class="breadcrumb-item">RAGシステム開発と費用相場</span>
+        <span class="breadcrumb-item">サーバーレス移行によるインフラ費用削減</span>
       </div>
 
       <header class="article-header">
-        <span class="article-category">生成AI・先端技術</span>
-        <h1 class="article-title">社内データを安全に活用する「RAG（検索拡張生成）」の仕組み・開発ステップと導入費用の相場</h1>
+        <span class="article-category">システム開発・アーキテクチャ</span>
+        <h1 class="article-title">AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。</h1>
         <div class="article-meta-info">
           <div class="article-meta-item">
-            <span>公開日: 2026.07.30</span>
+            <span>公開日: 2026.09.25</span>
           </div>
           <div class="article-meta-item">
             <span>著者: Ill inc. 編集部</span>
@@ -194,27 +223,27 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「RAG（社内データ検索システム）開発の費用相場とセキュリティ対策」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。」のビジュアルバナー">
   <defs>
-    <linearGradient id="bg_rag_enterprise_search_development" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg_065_cloud_cost_reduction_serverless" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111B2E"/>
       <stop offset="0.5" stop-color="#1A2740"/>
       <stop offset="1" stop-color="#141E33"/>
     </linearGradient>
-    <filter id="blur_rag_enterprise_search_development" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+    <filter id="blur_065_cloud_cost_reduction_serverless" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
       <feGaussianBlur stdDeviation="80"/>
     </filter>
   </defs>
 
   <!-- Clean Background -->
-  <rect width="1000" height="428" fill="url(#bg_rag_enterprise_search_development)"/>
+  <rect width="1000" height="428" fill="url(#bg_065_cloud_cost_reduction_serverless)"/>
 
   <!-- Soft Ambient Glow Orbs -->
-  <circle cx="850" cy="90" r="240" fill="#00F0FF" opacity="0.25" filter="url(#blur_rag_enterprise_search_development)"/>
-  <circle cx="150" cy="340" r="220" fill="#A855F7" opacity="0.2" filter="url(#blur_rag_enterprise_search_development)"/>
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_065_cloud_cost_reduction_serverless)"/>
+  <circle cx="150" cy="340" r="220" fill="#818CF8" opacity="0.2" filter="url(#blur_065_cloud_cost_reduction_serverless)"/>
 
   <!-- Subtle Minimal Grid -->
-  <g opacity="0.12" stroke="#00F0FF" stroke-width="1">
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
     <line x1="100" y1="0" x2="100" y2="428"/>
     <line x1="250" y1="0" x2="250" y2="428"/>
     <line x1="400" y1="0" x2="400" y2="428"/>
@@ -229,19 +258,19 @@
   <!-- Pure Content: Clean Typography & Key Bullets Only -->
   <g transform="translate(100, 0)">
     <text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      社内データを安全に活用する「R
+      AWS・GCPの月額インフラ費用を
     </text>
     <text x="0" y="225" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      <tspan fill="#00F0FF">AG（検索拡張生成）」の仕...</tspan>
+      <tspan fill="#38BDF8">最大70%削減するサー...</tspan>
     </text>
 
     <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
     <g transform="translate(0, 295)">
       <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#00F0FF">✔</tspan> 社内データ連携（RAG）　<tspan fill="#00F0FF">✔</tspan> API連携・自動化
+        <tspan fill="#38BDF8">✔</tspan> 見積もりの適正化　<tspan fill="#38BDF8">✔</tspan> 不要機能の排除
       </text>
       <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#00F0FF">✔</tspan> 導入ROIの最大化
+        <tspan fill="#38BDF8">✔</tspan> 契約トラブル防止
       </text>
     </g>
   </g>
@@ -250,101 +279,93 @@
 
       <div class="article-layout">
         <main class="article-body">
-
-            <ul class="toc-list">
-            </ul>
-          </div>
-
-          <p>
-            「社内用のAIチャットに会社の就業規則や、数万枚の製品PDFマニュアルを読み込ませて、自動で質問に回答させたい」
-          </p>
-          <p>
-            このような要望をセキュアに実現するための技術として、現在、エンタープライズ企業から最も注目されているのが**「RAG（Retrieval-Augmented Generation：検索拡張生成）」**です。
-          </p>
-          <p>
-            本コラムでは、AIに機密データを学習させずにセキュアに連携させる「RAG」の仕組み、実際のシステム開発の流れ、データベース（Vector DB）の選び方、そして気になる開発費用の相場を開発会社の視点からやさしく解説します。
-          </p>
-
-          
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">RAG（検索拡張生成）とは？ファインチューニングとの最大の違い</a></li>
-              <li><a href="#sec-2">RAGシステムを開発する4つのステップ</a></li>
-              <li><a href="#sec-3">RAGシステム開発にかかる費用相場と期間の目安</a></li>
-              <li><a href="#sec-4">まとめ：RAGの回答精度を高めるには「データの前処理」が9割</a></li>
+              <li><a href="#sec-1">1. 【AWS コスト削減】アクセスが少ない時間帯も発生し続けるサーバー費用の無駄</a></li>
+              <li><a href="#sec-2">2. 【サーバーレス 移行】使った分だけ支払う従量課金アーキテクチャの威力</a></li>
+              <li><a href="#sec-3">3. 【クラウド 維持費 削減】インフラの無料診断と移行はIllにお任せください</a></li>
+              <li><a href="#sec-pricing-table">システム開発の工程別費用内訳と大手SIerとのコスト削減比較</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-<h2 id="sec-1">RAG（検索拡張生成）とは？ファインチューニングとの最大の違い</h2>
-          <p>
-            従来のAIに社内データを覚えさせる方法として「ファインチューニング（追加学習）」がありますが、これには「データを学習させるための膨大なコストがかかる」「一度学習させると、データが更新されたときに再学習が必要」「AIの回答から機密情報が漏洩するリスクがある」という大きな問題がありました。
-          </p>
-          <p>
-            これに対し、RAGは**「AI自体には学習させず、AIの後ろにセキュアな検索エンジンを配置する」**仕組みです。
-            ユーザーが質問をすると、システムがまず社内データベースから関連する文章を「検索」して見つけ出し、その文章を質問と一緒に「この資料を参照して回答して」とAIに送ることで、正確で安全な回答を生成させます。
-          </p>
-          <p>
-            （詳しい比較は <a href="/column/llm-fine-tuning-vs-rag.html">RAGとファインチューニングの徹底比較コラム</a> を参照）
-          </p>
+          <h2 id="sec-1">1. 【AWS コスト削減】アクセスが少ない時間帯も発生し続けるサーバー費用の無駄</h2>
+          <p>社内業務システムやB2Bサービスでは、夜間や休日のアクセスがほぼゼロであるにもかかわらず、EC2や固定VMが24時間稼働し課金され続けている事例が多発しています。</p>
 
-          <h2 id="sec-2">RAGシステムを開発する4つのステップ</h2>
-          <p>
-            RAGシステム開発は、一般的なWebシステム開発にAI特有のデータ処理（パイプライン構築）が加わります。
-          </p>
-          <ol>
-            <li><strong>ドキュメントの整理とデータ加工（前処理）</strong>: 読み込ませるPDF、Word、Excelなどの資料から、不要なヘッダーやゴミデータを取り除き、AIが読みやすいように「チャンク（適度な長さのテキストの塊）」に分割します。ここがRAGの回答精度を左右する最も重要なフェーズです。</li>
-            <li><strong>データのベクトル化（Embedding）</strong>: 分割したテキストを、AIがその「意味」を理解できるように数値（ベクトルデータ）に変換します。</li>
-            <li><strong>ベクトルデータベース（Vector DB）への格納</strong>: ベクトル化されたデータを高速に検索するための専用データベースに保存します（pgvectorやPinecone、Chromaなどがよく使われます）。</li>
-            <li><strong>検索・生成パイプラインの構築とUI開発</strong>: ユーザーが入力した質問の意味をベクトル検索エンジンで引き当て、検索された情報をプロンプト（指示文）に結合してLLMに送り、最終的な回答をチャットUI画面に表示します。</li>
-          </ol>
+          <h2 id="sec-2">2. 【サーバーレス 移行】使った分だけ支払う従量課金アーキテクチャの威力</h2>
+          <p>常時稼働サーバーを排除し、イベント駆動型サーバーレスへ移行することで、月額数十万円かかっていたインフラ費用を数千円〜数万円に圧縮できます。</p>
 
-          <h2 id="sec-3">RAGシステム開発にかかる費用相場と期間の目安</h2>
-          <p>
-            RAG開発にかかる費用は、データの量、セキュリティ要件、および既存システム（TeamsやSlack等）との連携範囲によって変動します。
-          </p>
-          
+          <h2 id="sec-3">3. 【クラウド 維持費 削減】インフラの無料診断と移行はIllにお任せください</h2>
+          <p>Ill（イル）株式会社では、現行のクラウドアカウントを分析し、不要なリソースの棚卸しとサーバーレス移行をワンストップで代行いたします。</p>
+
+          <h2 id="sec-pricing-table">システム開発の工程別費用内訳と大手SIerとのコスト削減比較</h2>
+          <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
           <div class="article-table-wrapper">
-            <table class="article-table">
-              <thead>
-                <tr>
-                  <th>開発スケール</th>
-                  <th>費用相場（目安）</th>
-                  <th>開発期間</th>
-                  <th>提供内容と適した企業規模</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>1. PoC（プロトタイプ開発）</strong></td>
-                  <td>100万〜250万円</td>
-                  <td>2週間〜1ヶ月</td>
-                  <td>データを厳選し、まずはRAGが機能するかを検証するためのミニマル開発。小規模な検証に最適。</td>
-                </tr>
-                <tr>
-                  <td><strong>2. 標準的な社内システム</strong></td>
-                  <td>300万〜600万円</td>
-                  <td>2ヶ月〜3ヶ月</td>
-                  <td>社内マニュアル数千ファイルに対応。Slack/Teams連携、アクセス権限管理、管理画面の実装。</td>
-                </tr>
-                <tr>
-                  <td><strong>3. エンタープライズ大規模開発</strong></td>
-                  <td>800万円〜</td>
-                  <td>4ヶ月〜</td>
-                  <td>数十万ファイル、基幹システム（Salesforceや社内DB）とのリアルタイム同期、高度なセキュリティ設計。</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+  <table class="article-table">
+    <thead>
+      <tr>
+        <th>開発工程</th>
+        <th>一般的な費用比率</th>
+        <th>大手SIer見積もり例</th>
+        <th>Ill（イル）株式会社</th>
+        <th>コスト削減の理由</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>要件定義・基本設計</strong></td>
+        <td>15〜20%</td>
+        <td>150万〜300万円</td>
+        <td><strong>40万〜80万円</strong></td>
+        <td>動くプロトタイプで合意形成を高速化</td>
+      </tr>
+      <tr>
+        <td><strong>UI/UX設計・デザイン</strong></td>
+        <td>15〜20%</td>
+        <td>150万〜250万円</td>
+        <td><strong>30万〜60万円</strong></td>
+        <td>洗練されたコンポーネント資産の再利用</td>
+      </tr>
+      <tr>
+        <td><strong>プログラミング・実装</strong></td>
+        <td>40〜50%</td>
+        <td>400万〜800万円</td>
+        <td><strong>120万〜250万円</strong></td>
+        <td>生成AI活用によるコード作成の自動化</td>
+      </tr>
+      <tr>
+        <td><strong>テスト・検証・納品</strong></td>
+        <td>15〜20%</td>
+        <td>150万〜250万円</td>
+        <td><strong>30万〜60万円</strong></td>
+        <td>CI/CDによる結合テスト自動化</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          <h3>過剰な見積もり上乗せを見抜く3つのポイント</h3>
+<p>開発会社から提示された見積書に「システム開発一式：800万円」といった大雑把な項目しか書かれていない場合、高確率で不要な安全マージン（バッファ）が上乗せされています。適正な見積もりを見極めるには、以下の3点を確認してください。</p>
+<ol>
+  <li><strong>人月単価と想定工数が分離して記載されているか</strong>: 単価が100万円なのか60万円なのか、作業期間は何人月なのかを確認する。</li>
+  <li><strong>機能ごとの個別見積もりが記載されているか</strong>: 「この機能を削るといくら安くなるか」が判断できる透明性があるか。</li>
+  <li><strong>納品後の月額保守費用が開発費の10〜15%以下に収まっているか</strong>: 高額な縛り契約がないかを事前にチェックする。</li>
+</ol>
 
-          <h2 id="sec-4">まとめ：RAGの回答精度を高めるには「データの前処理」が9割</h2>
-          <p>
-            RAGは「ただAPIを繋げば動く」というほど簡単ではありません。
-            実際に導入すると、「マニュアルに書いてあるのに『わかりません』と回答される」「別の製品のデータを参照してしまう」といった回答精度の問題（ハルシネーション）に必ず直面します。
-            この精度を改善するためには、データベース側の「チャンク分割の工夫」や「検索クエリの最適化（Hybrid Search）」といった、泥臭いシステムチューニングの実績を持つ開発会社とタッグを組むことが不可欠です。
-          </p>
-        
-
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>サーバーレスに移行すると応答速度（コールドスタート）が遅くなりませんか？</h3>
+              <p>最新のコンテナランタイム（AWS Lambda SnapStartやGCP Cloud Run）の適切なプロビジョニング設定により、レイテンシの影響をミリ秒単位に抑えて快適に運用可能です。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 他社の見積書を見せて、妥当かどうか診断してもらうことはできますか？</h3>
+              <p>A. はい、無料で見積書診断を承っております。過剰な要件や削れるポイントをエンジニア目線で率直にアドバイスいたします。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 開発途中で追加費用が請求されることはありませんか？</h3>
+              <p>A. 請負契約の場合、事前に合意した要件の範囲内で追加費用が発生することは一切ありません。仕様変更が必要な場合も、必ず事前に工数と金額をご提示して合意をいただきます。</p>
+            </div>
           </div>
 
           <!-- Eye-catching Bottom CTA Banner -->

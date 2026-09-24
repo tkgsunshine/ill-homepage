@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAG（社内データ検索システム）開発の費用相場とセキュリティ対策 | Ill（イル）株式会社</title>
-  <meta name="description" content="社内文書やマニュアルを安全に検索・要約するRAGシステムの構築コストと導入手順を解説。情報漏洩を防ぐセキュリティ対策と、自社開発 vs 外注の比較も紹介。">
-  <meta name="keywords" content="RAG 開発,RAGとは,社内AI 作り方,Vector Database,AI検索システム 費用">
+  <title>B2B SaaS立ち上げにおけるマルチテナント設計の勘所とMVP開発費用。 | Ill（イル）株式会社</title>
+  <meta name="description" content="新規SaaS事業を立ち上げるスタートアップ・中小企業向けに、初期開発費を抑えながら契約企業ごとのデータ分離・セキュリティを担保するマルチテナント設計の秘訣。">
+  <meta name="keywords" content="SaaS 開発 費用,マルチテナント 設計,B2B SaaS MVP,新規サービス 外注">
   <meta name="author" content="Ill inc.">
   
   <!-- Robots config -->
   <meta name="robots" content="index, follow">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.ill-inc.net/column/rag-enterprise-search-development.html">
+  <link rel="canonical" href="https://www.ill-inc.net/column/064-multi-tenant-saas-architecture-mvp.html">
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="RAG（社内データ検索システム）開発の費用相場とセキュリティ対策 | Ill inc. コラム">
-  <meta property="og:description" content="社内文書やマニュアルを安全に検索・要約するRAGシステムの構築コストと導入手順を解説。情報漏洩を防ぐセキュリティ対策と、自社開発 vs 外注の比較も紹介。">
-  <meta property="og:url" content="https://www.ill-inc.net/column/rag-enterprise-search-development.html">
+  <meta property="og:title" content="B2B SaaS立ち上げにおけるマルチテナント設計の勘所とMVP開発費用。 | Ill inc. コラム">
+  <meta property="og:description" content="新規SaaS事業を立ち上げるスタートアップ・中小企業向けに、初期開発費を抑えながら契約企業ごとのデータ分離・セキュリティを担保するマルチテナント設計の秘訣。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/064-multi-tenant-saas-architecture-mvp.html">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
   <meta property="og:image:width" content="1024">
@@ -26,8 +26,8 @@
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RAG（社内データ検索システム）開発の費用相場とセキュリティ対策 | Ill inc. コラム">
-  <meta name="twitter:description" content="社内文書やマニュアルを安全に検索・要約するRAGシステムの構築コストと導入手順を解説。情報漏洩を防ぐセキュリティ対策と、自社開発 vs 外注の比較も紹介。">
+  <meta name="twitter:title" content="B2B SaaS立ち上げにおけるマルチテナント設計の勘所とMVP開発費用。 | Ill inc. コラム">
+  <meta name="twitter:description" content="新規SaaS事業を立ち上げるスタートアップ・中小企業向けに、初期開発費を抑えながら契約企業ごとのデータ分離・セキュリティを担保するマルチテナント設計の秘訣。">
   <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
   
   <!-- Favicons -->
@@ -50,31 +50,30 @@
   <!-- JSON-LD Structured Data (Article Schema) -->
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "社内データを安全に活用する「RAG（検索拡張生成）」の仕組み・開発ステップと導入費用の相場",
-  "description": "社内文書やマニュアルを安全に検索・要約するRAGシステムの構築コストと導入手順を解説。情報漏洩を防ぐセキュリティ対策と、自社開発 vs 外注の比較も紹介。",
-  "image": "https://www.ill-inc.net/ogp.png?v=1",
-  "datePublished": "2026-07-30",
-  "dateModified": "2026-07-30",
-  "author": {
-    "@type": "Person",
-    "name": "山下 高志",
-    "jobTitle": "Representative of Ill inc."
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Ill（イル）株式会社",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.ill-inc.net/logo-icon.png"
-    }
-  },
-  "mainEntityOfPage": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "B2B SaaS立ち上げにおけるマルチテナント設計の勘所とMVP開発費用。",
+    "description": "新規SaaS事業を立ち上げるスタートアップ・中小企業向けに、初期開発費を抑えながら契約企業ごとのデータ分離・セキュリティを担保するマルチテナント設計の秘訣。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-09-24",
+    "dateModified": "2026-09-24",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.ill-inc.net/column/rag-enterprise-search-development.html"
+      "@id": "https://www.ill-inc.net/column/064-multi-tenant-saas-architecture-mvp.html"
     }
-}
+  }
   </script>
 
   <!-- Speculation Rules for Instant Navigation -->
@@ -116,7 +115,41 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "RAGシステム開発と費用相場"
+      "name": "B2B SaaSのマルチテナント設計と費用"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "最初から大規模なマルチテナント構成にすると初期費用が高くなりませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。SupabaseやAWS Cognito等のマネージド認証・Row Level Security（RLS）を活用することで、初期は最小限のインフラ構成で安全なマルチテナントを低コストに実現できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. Ill（イル）株式会社ではどちらの契約形態に対応していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. お客様のプロジェクトの性質に合わせて両方に対応しております。仕様が固まっている場合は「請負契約」、事業検証しながら柔軟に進めたい場合は「準委任契約（月額スプリント型）」をお選びいただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 途中で開発会社を変えたくなった場合、成果物は引き継げますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 弊社ではすべてのリポジトリ（GitHub）をお客様へ共有し、透明なコミット履歴とドキュメントを残しますので、いつでも他社へ引き継ぐことが可能です。"
+      }
     }
   ]
 }
@@ -172,19 +205,15 @@
     <div class="container">
       
       <div class="breadcrumbs">
-        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
-        <span class="breadcrumb-separator">&gt;</span>
-        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
-        <span class="breadcrumb-separator">&gt;</span>
-        <span class="breadcrumb-item">RAGシステム開発と費用相場</span>
+        <span class="breadcrumb-item">B2B SaaSのマルチテナント設計と費用</span>
       </div>
 
       <header class="article-header">
-        <span class="article-category">生成AI・先端技術</span>
-        <h1 class="article-title">社内データを安全に活用する「RAG（検索拡張生成）」の仕組み・開発ステップと導入費用の相場</h1>
+        <span class="article-category">新規事業・MVP検証</span>
+        <h1 class="article-title">B2B SaaS立ち上げにおけるマルチテナント設計の勘所とMVP開発費用。</h1>
         <div class="article-meta-info">
           <div class="article-meta-item">
-            <span>公開日: 2026.07.30</span>
+            <span>公開日: 2026.09.24</span>
           </div>
           <div class="article-meta-item">
             <span>著者: Ill inc. 編集部</span>
@@ -194,27 +223,27 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「RAG（社内データ検索システム）開発の費用相場とセキュリティ対策」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「B2B SaaS立ち上げにおけるマルチテナント設計の勘所とMVP開発費用。」のビジュアルバナー">
   <defs>
-    <linearGradient id="bg_rag_enterprise_search_development" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg_064_multi_tenant_saas_architecture_mvp" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111B2E"/>
       <stop offset="0.5" stop-color="#1A2740"/>
       <stop offset="1" stop-color="#141E33"/>
     </linearGradient>
-    <filter id="blur_rag_enterprise_search_development" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+    <filter id="blur_064_multi_tenant_saas_architecture_mvp" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
       <feGaussianBlur stdDeviation="80"/>
     </filter>
   </defs>
 
   <!-- Clean Background -->
-  <rect width="1000" height="428" fill="url(#bg_rag_enterprise_search_development)"/>
+  <rect width="1000" height="428" fill="url(#bg_064_multi_tenant_saas_architecture_mvp)"/>
 
   <!-- Soft Ambient Glow Orbs -->
-  <circle cx="850" cy="90" r="240" fill="#00F0FF" opacity="0.25" filter="url(#blur_rag_enterprise_search_development)"/>
-  <circle cx="150" cy="340" r="220" fill="#A855F7" opacity="0.2" filter="url(#blur_rag_enterprise_search_development)"/>
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_064_multi_tenant_saas_architecture_mvp)"/>
+  <circle cx="150" cy="340" r="220" fill="#6366F1" opacity="0.2" filter="url(#blur_064_multi_tenant_saas_architecture_mvp)"/>
 
   <!-- Subtle Minimal Grid -->
-  <g opacity="0.12" stroke="#00F0FF" stroke-width="1">
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
     <line x1="100" y1="0" x2="100" y2="428"/>
     <line x1="250" y1="0" x2="250" y2="428"/>
     <line x1="400" y1="0" x2="400" y2="428"/>
@@ -229,19 +258,19 @@
   <!-- Pure Content: Clean Typography & Key Bullets Only -->
   <g transform="translate(100, 0)">
     <text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      社内データを安全に活用する「R
+      B2B SaaS立ち上げに
     </text>
     <text x="0" y="225" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      <tspan fill="#00F0FF">AG（検索拡張生成）」の仕...</tspan>
+      <tspan fill="#38BDF8">おけるマルチテナント設計の勘所...</tspan>
     </text>
 
     <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
     <g transform="translate(0, 295)">
       <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#00F0FF">✔</tspan> 社内データ連携（RAG）　<tspan fill="#00F0FF">✔</tspan> API連携・自動化
+        <tspan fill="#38BDF8">✔</tspan> 最短1ヶ月の市場検証　<tspan fill="#38BDF8">✔</tspan> コア機能への集中
       </text>
       <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#00F0FF">✔</tspan> 導入ROIの最大化
+        <tspan fill="#38BDF8">✔</tspan> 低リスク・低コスト開発
       </text>
     </g>
   </g>
@@ -250,101 +279,88 @@
 
       <div class="article-layout">
         <main class="article-body">
-
-            <ul class="toc-list">
-            </ul>
-          </div>
-
-          <p>
-            「社内用のAIチャットに会社の就業規則や、数万枚の製品PDFマニュアルを読み込ませて、自動で質問に回答させたい」
-          </p>
-          <p>
-            このような要望をセキュアに実現するための技術として、現在、エンタープライズ企業から最も注目されているのが**「RAG（Retrieval-Augmented Generation：検索拡張生成）」**です。
-          </p>
-          <p>
-            本コラムでは、AIに機密データを学習させずにセキュアに連携させる「RAG」の仕組み、実際のシステム開発の流れ、データベース（Vector DB）の選び方、そして気になる開発費用の相場を開発会社の視点からやさしく解説します。
-          </p>
-
-          
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">RAG（検索拡張生成）とは？ファインチューニングとの最大の違い</a></li>
-              <li><a href="#sec-2">RAGシステムを開発する4つのステップ</a></li>
-              <li><a href="#sec-3">RAGシステム開発にかかる費用相場と期間の目安</a></li>
-              <li><a href="#sec-4">まとめ：RAGの回答精度を高めるには「データの前処理」が9割</a></li>
+              <li><a href="#sec-1">1. 【SaaS 開発 費用】新規B2B SaaS立ち上げで直面するアーキテクチャの壁</a></li>
+              <li><a href="#sec-2">2. 【マルチテナント 設計】初期費用を抑えて100社対応できるミニマル設計手法</a></li>
+              <li><a href="#sec-3">3. 【B2B SaaS MVP】新規事業のスピード立ち上げはIllにご相談ください</a></li>
+              <li><a href="#sec-pricing-table">「請負契約」と「準委任契約」の法的一覧比較と使い分け基準</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-<h2 id="sec-1">RAG（検索拡張生成）とは？ファインチューニングとの最大の違い</h2>
-          <p>
-            従来のAIに社内データを覚えさせる方法として「ファインチューニング（追加学習）」がありますが、これには「データを学習させるための膨大なコストがかかる」「一度学習させると、データが更新されたときに再学習が必要」「AIの回答から機密情報が漏洩するリスクがある」という大きな問題がありました。
-          </p>
-          <p>
-            これに対し、RAGは**「AI自体には学習させず、AIの後ろにセキュアな検索エンジンを配置する」**仕組みです。
-            ユーザーが質問をすると、システムがまず社内データベースから関連する文章を「検索」して見つけ出し、その文章を質問と一緒に「この資料を参照して回答して」とAIに送ることで、正確で安全な回答を生成させます。
-          </p>
-          <p>
-            （詳しい比較は <a href="/column/llm-fine-tuning-vs-rag.html">RAGとファインチューニングの徹底比較コラム</a> を参照）
-          </p>
+          <h2 id="sec-1">1. 【SaaS 開発 費用】新規B2B SaaS立ち上げで直面するアーキテクチャの壁</h2>
+          <p>SaaS開発では「契約社数が増えたときにシステムが耐えられるか」「他社のデータが混入しないか」というセキュリティとスケーラビリティの両立が課題となります。</p>
 
-          <h2 id="sec-2">RAGシステムを開発する4つのステップ</h2>
-          <p>
-            RAGシステム開発は、一般的なWebシステム開発にAI特有のデータ処理（パイプライン構築）が加わります。
-          </p>
-          <ol>
-            <li><strong>ドキュメントの整理とデータ加工（前処理）</strong>: 読み込ませるPDF、Word、Excelなどの資料から、不要なヘッダーやゴミデータを取り除き、AIが読みやすいように「チャンク（適度な長さのテキストの塊）」に分割します。ここがRAGの回答精度を左右する最も重要なフェーズです。</li>
-            <li><strong>データのベクトル化（Embedding）</strong>: 分割したテキストを、AIがその「意味」を理解できるように数値（ベクトルデータ）に変換します。</li>
-            <li><strong>ベクトルデータベース（Vector DB）への格納</strong>: ベクトル化されたデータを高速に検索するための専用データベースに保存します（pgvectorやPinecone、Chromaなどがよく使われます）。</li>
-            <li><strong>検索・生成パイプラインの構築とUI開発</strong>: ユーザーが入力した質問の意味をベクトル検索エンジンで引き当て、検索された情報をプロンプト（指示文）に結合してLLMに送り、最終的な回答をチャットUI画面に表示します。</li>
-          </ol>
+          <h2 id="sec-2">2. 【マルチテナント 設計】初期費用を抑えて100社対応できるミニマル設計手法</h2>
+          <p>最初から過剰なマイクロサービス化を行わず、モジュラーモノリス＋RLSで構築することで、初期開発期間を1〜2ヶ月に短縮できます。</p>
 
-          <h2 id="sec-3">RAGシステム開発にかかる費用相場と期間の目安</h2>
-          <p>
-            RAG開発にかかる費用は、データの量、セキュリティ要件、および既存システム（TeamsやSlack等）との連携範囲によって変動します。
-          </p>
-          
+          <h2 id="sec-3">3. 【B2B SaaS MVP】新規事業のスピード立ち上げはIllにご相談ください</h2>
+          <p>Ill（イル）株式会社では、SaaSの企画・プロトタイプ検証から本番ローンチまで、アジャイルで無駄のないMVP開発を支援します。</p>
+
+          <h2 id="sec-pricing-table">「請負契約」と「準委任契約」の法的一覧比較と使い分け基準</h2>
+          <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
           <div class="article-table-wrapper">
-            <table class="article-table">
-              <thead>
-                <tr>
-                  <th>開発スケール</th>
-                  <th>費用相場（目安）</th>
-                  <th>開発期間</th>
-                  <th>提供内容と適した企業規模</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>1. PoC（プロトタイプ開発）</strong></td>
-                  <td>100万〜250万円</td>
-                  <td>2週間〜1ヶ月</td>
-                  <td>データを厳選し、まずはRAGが機能するかを検証するためのミニマル開発。小規模な検証に最適。</td>
-                </tr>
-                <tr>
-                  <td><strong>2. 標準的な社内システム</strong></td>
-                  <td>300万〜600万円</td>
-                  <td>2ヶ月〜3ヶ月</td>
-                  <td>社内マニュアル数千ファイルに対応。Slack/Teams連携、アクセス権限管理、管理画面の実装。</td>
-                </tr>
-                <tr>
-                  <td><strong>3. エンタープライズ大規模開発</strong></td>
-                  <td>800万円〜</td>
-                  <td>4ヶ月〜</td>
-                  <td>数十万ファイル、基幹システム（Salesforceや社内DB）とのリアルタイム同期、高度なセキュリティ設計。</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+  <table class="article-table">
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>請負契約</th>
+        <th>準委任契約（アジャイル・ラボ型）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>契約の目的</strong></td>
+        <td>「成果物の完成・納品」を約束</td>
+        <td>「善管注意義務に基づく専門的役務提供」</td>
+      </tr>
+      <tr>
+        <td><strong>契約不適合責任（旧瑕疵担保）</strong></td>
+        <td>あり（期間内の不具合は無償修正義務）</td>
+        <td>原則なし（故意・重大な過失を除く）</td>
+      </tr>
+      <tr>
+        <td><strong>仕様変更への柔軟性</strong></td>
+        <td>低い（契約変更・再見積もりが必要）</td>
+        <td><strong>極めて高い（優先順位を随時変更可能）</strong></td>
+      </tr>
+      <tr>
+        <td><strong>コストの確定性</strong></td>
+        <td>固定金額（バッファが乗りやすい）</td>
+        <td>月額固定・実働精算（無駄な安全マージン排除）</td>
+      </tr>
+      <tr>
+        <td><strong>最適なプロジェクト</strong></td>
+        <td>要件が100%確定した基幹システム構築</td>
+        <td>新規事業、MVP検証、アジャイル改善開発</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          <h3>トラブルを100%防止する契約書のチェックポイント</h3>
+<p>システム開発における訴訟や納品トラブルの多くは、「完成の定義」が曖昧なまま請負契約を結んでしまったこと、または準委任契約で開発側の進捗管理が不透明だったことに起因します。発注者側として損をしないためには、以下の条項を必ず契約書に盛り込んでください。</p>
+<ul>
+  <li><strong>検収期間と検収基準の明確化</strong>: 納品後何日以内に検収を行い、どのようなテストをパスすれば合格となるかを具体的に定義する。</li>
+  <li><strong>著作権の帰属</strong>: 成果物の著作権（著作権法第27条および第28条の権利を含む）が発注者に譲渡されることを明記する。</li>
+  <li><strong>再委託の可否と責任範囲</strong>: 勝手に無断で外部へ多重下請けされないよう、再委託条項を管理する。</li>
+</ul>
 
-          <h2 id="sec-4">まとめ：RAGの回答精度を高めるには「データの前処理」が9割</h2>
-          <p>
-            RAGは「ただAPIを繋げば動く」というほど簡単ではありません。
-            実際に導入すると、「マニュアルに書いてあるのに『わかりません』と回答される」「別の製品のデータを参照してしまう」といった回答精度の問題（ハルシネーション）に必ず直面します。
-            この精度を改善するためには、データベース側の「チャンク分割の工夫」や「検索クエリの最適化（Hybrid Search）」といった、泥臭いシステムチューニングの実績を持つ開発会社とタッグを組むことが不可欠です。
-          </p>
-        
-
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>最初から大規模なマルチテナント構成にすると初期費用が高くなりませんか？</h3>
+              <p>いいえ。SupabaseやAWS Cognito等のマネージド認証・Row Level Security（RLS）を活用することで、初期は最小限のインフラ構成で安全なマルチテナントを低コストに実現できます。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. Ill（イル）株式会社ではどちらの契約形態に対応していますか？</h3>
+              <p>A. お客様のプロジェクトの性質に合わせて両方に対応しております。仕様が固まっている場合は「請負契約」、事業検証しながら柔軟に進めたい場合は「準委任契約（月額スプリント型）」をお選びいただけます。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 途中で開発会社を変えたくなった場合、成果物は引き継げますか？</h3>
+              <p>A. 弊社ではすべてのリポジトリ（GitHub）をお客様へ共有し、透明なコミット履歴とドキュメントを残しますので、いつでも他社へ引き継ぐことが可能です。</p>
+            </div>
           </div>
 
           <!-- Eye-catching Bottom CTA Banner -->
