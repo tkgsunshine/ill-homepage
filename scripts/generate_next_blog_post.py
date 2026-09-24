@@ -145,72 +145,9 @@ def main():
     toc_box_html = '\n          <div class="toc-box">\n            <div class="toc-title">目次</div>\n            <ul class="toc-list">\n' + '\n'.join(toc_items) + '\n            </ul>\n          </div>\n'
     body_html = toc_box_html + sections_html + bottom_cta_html
         
-    # Generate custom SVG banner (Premium Light Slate Style - Single Line)
-    summary_text = f"{target_post['title_line2']}がわかる" if not target_post['title_line2'].endswith("わかる") else target_post['title_line2']
-    font_size = 38
-    if len(summary_text) > 26:
-        font_size = 32
-        
-    clean_id = re.sub(r"[^a-zA-Z0-9_]", "_", target_post['filename'].replace(".html", ""))
-    tag_en = target_post.get('english_title', 'SYSTEM ARCHITECTURE').upper()
-    category_name = target_post.get('category_name', 'システム開発')
-    
-    # Determine accent color by topic
-    is_ai = any(kw in (target_post['filename'] + " " + target_post['title']).lower() for kw in ["ai", "rag", "llm", "chatgpt"])
-    accent = "#00F0FF" if is_ai else "#38BDF8"
-    orb1 = "#00F0FF" if is_ai else "#0EA5E9"
-    orb2 = "#A855F7" if is_ai else "#818CF8"
-    t1, t2, t3 = ("社内データ連携（RAG）", "API連携・自動化", "導入ROIの最大化") if is_ai else ("見積もりの適正化", "不要機能の排除", "契約トラブル防止")
-
-    banner_svg = f"""<svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「{target_post['headline']}」のビジュアルバナー">
-  <defs>
-    <linearGradient id="bg_{clean_id}" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#111B2E"/>
-      <stop offset="0.5" stop-color="#1A2740"/>
-      <stop offset="1" stop-color="#141E33"/>
-    </linearGradient>
-    <filter id="blur_{clean_id}" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
-      <feGaussianBlur stdDeviation="80"/>
-    </filter>
-  </defs>
-
-  <!-- Clean Background -->
-  <rect width="1000" height="428" fill="url(#bg_{clean_id})"/>
-
-  <!-- Soft Ambient Glow Orbs -->
-  <circle cx="850" cy="90" r="240" fill="{orb1}" opacity="0.25" filter="url(#blur_{clean_id})"/>
-  <circle cx="150" cy="340" r="220" fill="{orb2}" opacity="0.2" filter="url(#blur_{clean_id})"/>
-
-  <!-- Subtle Minimal Grid -->
-  <g opacity="0.12" stroke="{accent}" stroke-width="1">
-    <line x1="100" y1="0" x2="100" y2="428"/>
-    <line x1="250" y1="0" x2="250" y2="428"/>
-    <line x1="400" y1="0" x2="400" y2="428"/>
-    <line x1="550" y1="0" x2="550" y2="428"/>
-    <line x1="700" y1="0" x2="700" y2="428"/>
-    <line x1="850" y1="0" x2="850" y2="428"/>
-    <line x1="0" y1="100" x2="1000" y2="100"/>
-    <line x1="0" y1="214" x2="1000" y2="214"/>
-    <line x1="0" y1="328" x2="1000" y2="328"/>
-  </g>
-
-  <!-- Pure Content: Clean Typography & Key Bullets Only -->
-  <g transform="translate(100, 0)">
-    <text x="0" y="200" fill="#FFFFFF" font-size="{font_size}" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      {summary_text}
-    </text>
-
-    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
-    <g transform="translate(0, 295)">
-      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="{accent}">✔</tspan> {t1}　<tspan fill="{accent}">✔</tspan> {t2}
-      </text>
-      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="{accent}">✔</tspan> {t3}
-      </text>
-    </g>
-  </g>
-</svg>"""
+    # Generate custom SVG banner (Super-Clean Minimal 2-Line Style)
+    from apply_new_thumbnail_design import generate_svg
+    banner_svg = generate_svg(target_post['filename'], target_post['headline'], target_post.get('category_name', 'システム開発'))
 
     # Start replacing template sections
     new_html = template
