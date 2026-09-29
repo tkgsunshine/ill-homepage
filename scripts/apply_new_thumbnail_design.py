@@ -79,6 +79,81 @@ BANNER_DATA = {
         "theme": "cloud_infra",
         "takeaways": ("アイドル時コスト完全ゼロ化", "フルマネージドで保守費半減", "オートスケールで負荷耐性向上")
     },
+    "066-non-it-dx-automation-tools-selection.html": {
+        "lines": ("非IT企業が失敗しない", "業務自動化・DXツールの選定基準"),
+        "theme": "management",
+        "takeaways": ("無駄な多機能ツールの排除", "既存業務フローとの親和性", "初期費用と学習コストの最小化")
+    },
+    "067-api-first-microservices-cost-advantage.html": {
+        "lines": ("APIファースト設計で", "将来のシステム拡張コストを半減する"),
+        "theme": "cloud_infra",
+        "takeaways": ("フロントとバックエンドの完全分離", "外部サービス連携の柔軟性", "段階的な機能追加の容易化")
+    },
+    "068-ai-ocr-document-pipeline-cost.html": {
+        "lines": ("AI-OCR×自動データ入力で", "請求書・帳票処理工数を90%削減"),
+        "theme": "ai",
+        "takeaways": ("非定型帳票の高精度読み取り", "会計・基幹システムへの自動連携", "手入力ミスと照合作業の全廃")
+    },
+    "069-b2b-customer-portal-development.html": {
+        "lines": ("顧客専用マイページ・ポータル開発で", "問い合わせ対応工数を半減"),
+        "theme": "mvp_startup",
+        "takeaways": ("請求書・納品書のセルフ閲覧", "注文・進捗ステータスの可視化", "顧客満足度向上とサポート負荷軽減")
+    },
+    "070-agile-sprint-cost-control-method.html": {
+        "lines": ("予算と納期を厳守しながら柔軟に改善する", "アジャイル開発のコストコントロール術"),
+        "theme": "management",
+        "takeaways": ("優先順位の可視化とスコープ管理", "費用対効果の最大化", "予算オーバーの完全防止")
+    },
+    "071-b2b-saas-billing-stripe-integration-cost.html": {
+        "lines": ("Stripe連携でサブスク・従量課金を最速構築", "B2B SaaS決済システム開発の費用と実装術"),
+        "theme": "mvp_startup",
+        "takeaways": ("自動請求書発行・プラン変更", "カード決済をセキュアに統合", "開発期間最短2週間・費用大幅圧縮")
+    },
+    "072-internal-dx-dashboard-bi-tool-cost.html": {
+        "lines": ("市販BIツールの月額課金・属人化を完全解消", "自社専用リアルタイム経営ダッシュボード開発"),
+        "theme": "data_scraping",
+        "takeaways": ("売上・在庫・KPIを全社直感可視化", "アカウント数無制限・サーバー代のみ", "0.1秒未満の超高速レンダリング")
+    },
+    "073-ai-agent-rag-hybrid-search-development.html": {
+        "lines": ("型番・専門用語のハルシネーションを完全撲滅", "ハイブリッド検索×RAGで極める社内AIナレッジ基盤"),
+        "theme": "ai",
+        "takeaways": ("BM25＋ベクトル検索＋リランキング", "社内ドキュメント自動取り込み", "回答精度98%超＆引用元明記")
+    },
+    "074-legacy-db-cloud-migration-zero-downtime.html": {
+        "lines": ("業務を止めずに安全・確実にクラウドへ脱出", "オンプレ老朽化DBのゼロダウンタイム移行術"),
+        "theme": "cloud_infra",
+        "takeaways": ("データ整合性保証と無停止同期", "高額商用ライセンス費用の全廃", "保守サポート切れ（EOSL）の完全解消")
+    },
+    "075-micro-saas-mvp-launch-strategy-cost.html": {
+        "lines": ("ニッチ市場特化で確実な黒字化を目指す", "マイクロSaaSの低コストMVP立ち上げ戦略"),
+        "theme": "mvp_startup",
+        "takeaways": ("最短1ヶ月の高速ローンチ", "月額固定費数千円のミニマル設計", "コア課題に特化した高収益モデル")
+    },
+    "076-enterprise-sso-saml-auth-security-cost.html": {
+        "lines": ("大企業向け導入の必須要件をクリアする", "SAML / SSOシングルサインオン連携開発"),
+        "theme": "management",
+        "takeaways": ("Okta・Azure AD・Google Workspace連携", "JITプロビジョニングと監査ログ完備", "エンタープライズ成約率の飛躍的向上")
+    },
+    "077-realtime-websocket-collaboration-tool-cost.html": {
+        "lines": ("共同作業・即時通知をストレスゼロで実現", "WebSocketによるリアルタイム同時編集ツール開発"),
+        "theme": "cloud_infra",
+        "takeaways": ("競合編集ロックと差分同期", "サーバーレスWebSocketで低コスト化", "オフライン復帰時の自動再同期")
+    },
+    "078-multi-llm-routing-cost-latency-optimization.html": {
+        "lines": ("用途・難易度に合わせて最適モデルへ自動転送", "マルチLLMルーティングでAPI費用80%削減"),
+        "theme": "ai",
+        "takeaways": ("GPT-4o・Claude・Geminiの動的振分", "インテリジェントなセマンティック分類", "自動フェイルオーバーで耐障害性向上")
+    },
+    "079-smb-core-system-modernization-phased-approach.html": {
+        "lines": ("一括リプレイスの失敗リスクをゼロにする", "中小企業のための段階的基幹システム刷新術"),
+        "theme": "data_scraping",
+        "takeaways": ("業務無停止・予算分割アプローチ", "ストラングラーパターンで安全移行", "新旧システムのリアルタイム双方向同期")
+    },
+    "080-workflow-approval-system-custom-development.html": {
+        "lines": ("複雑な社内決裁ルール・条件分岐に完全適合", "稟議・電子承認ワークフロー独自システム開発"),
+        "theme": "management",
+        "takeaways": ("スマホ・Slackからの即時決裁", "電子署名と内部統制（J-SOX）対応", "会計ソフト・基幹API自動連携")
+    },
 
     # 008 - 060 articles
     "008-real-estate-crm-custom-development.html": {

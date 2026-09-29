@@ -17,11 +17,10 @@ with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
 
 # Define targeted posts and their exact dates
 targets = [
-    ("061-ai-agent-custom-workflow-automation.html", "2026.09.21", "2026-09-21"),
-    ("062-local-llm-on-premise-security-cost.html", "2026.09.22", "2026-09-22"),
-    ("063-modern-web-nextjs-fast-development.html", "2026.09.23", "2026-09-23"),
-    ("064-multi-tenant-saas-architecture-mvp.html", "2026.09.24", "2026-09-24"),
-    ("065-cloud-cost-reduction-serverless.html", "2026.09.25", "2026-09-25")
+    ("071-b2b-saas-billing-stripe-integration-cost.html", "2026.09.28", "2026-09-28"),
+    ("072-internal-dx-dashboard-bi-tool-cost.html", "2026.09.28", "2026-09-28"),
+    ("073-ai-agent-rag-hybrid-search-development.html", "2026.09.29", "2026-09-29"),
+    ("074-legacy-db-cloud-migration-zero-downtime.html", "2026.09.29", "2026-09-29")
 ]
 
 for filename, period_date, iso_date in targets:
