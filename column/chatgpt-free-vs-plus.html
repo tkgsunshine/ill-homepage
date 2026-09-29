@@ -121,6 +121,32 @@
 }
   </script>
 
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 今使っている巨大なExcelマクロ（VBA）のデータもそのまま移せますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。既存の計算ロジックやマクロの処理内容を解析し、サーバー側で安全かつ高速に自動実行するWebロジックへ再構築いたします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 社員ごとに見せたくない情報（給与や売上など）のアクセス制限はできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. ロール別の詳細な権限管理（管理者・一般社員・閲覧のみなど）を標準実装できますので、セキュリティ面も安心です。"
+      }
+    }
+  ]
+}
+  </script>
+
 </head>
 <body class="theme-light">
 
@@ -250,11 +276,7 @@
       <div class="article-layout">
         <main class="article-body">
 
-            <ul class="toc-list">
-            </ul>
-          </div>
-
-          <p>
+            <p>
             ChatGPTの認知が広がるにつれ、「有料版にアップグレードすべきか？」と悩む方が増えています。有料プランである「ChatGPT Plus」は月額20ドル（約3,000円前後）と、アプリ課金としては決して安くはありません。
           </p>
           <p>
@@ -269,6 +291,8 @@
               <li><a href="#sec-2">有料プラン（Plus）で使えるようになる便利な機能</a></li>
               <li><a href="#sec-3">「あなたは課金するべき？」判断する3つの基準</a></li>
               <li><a href="#sec-4">まとめ：まずは無料版で使い倒し、頻度が増えたら有料化がベスト</a></li>
+              <li><a href="#sec-pricing-table">Excel・Accessから独自Webシステムへの移行費用相場</a></li>
+              <li><a href="#section-faq">よくある質問（FAQ）</a></li>
             </ul>
           </div>
 
@@ -331,6 +355,61 @@
           </ol>
 
           <h2 id="sec-4">まとめ：まずは無料版で使い倒し、頻度が増えたら有料化がベスト</h2>
+
+          
+          <h2 id="sec-pricing-table">Excel・Accessから独自Webシステムへの移行費用相場</h2>
+          <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
+          <div class="article-table-wrapper">
+  <table class="article-table">
+    <thead>
+      <tr>
+        <th>移行対象・規模</th>
+        <th>主な機能</th>
+        <th>一般的なSIer相場</th>
+        <th>Ill（イル）株式会社</th>
+        <th>移行工期</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>簡易台帳・マスタ管理</strong></td>
+        <td>複数人同時編集、入力制御、履歴管理、CSVインポート</td>
+        <td>250万〜450万円</td>
+        <td><strong>80万〜150万円</strong></td>
+        <td>約3〜4週間</td>
+      </tr>
+      <tr>
+        <td><strong>業務ワークフロー・申請</strong></td>
+        <td>申請・承認ルート、権限管理、ステータス自動通知</td>
+        <td>500万〜900万円</td>
+        <td><strong>180万〜300万円</strong></td>
+        <td>約1.5〜2ヶ月</td>
+      </tr>
+      <tr>
+        <td><strong>基幹連動型データベース</strong></td>
+        <td>在庫・受発注・請求データ自動連携、帳票PDF自動生成</td>
+        <td>1,000万〜2,200万円</td>
+        <td><strong>350万〜600万円</strong></td>
+        <td>約2.5〜3.5ヶ月</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          <h3>なぜExcelやFileMakerの属人化業務はWebシステム化すべきなのか</h3>
+<p>「ファイルが重くて開かない」「複数人で同時編集すると先祖返りする」「担当者が退職したらVBAマクロがブラックボックス化した」――こうした現場課題は、データを中央集権型のクラウドWebシステムに移行することで一掃されます。</p>
+<p>Ill（イル）株式会社では、既存のExcelやAccessのシート構造をそのまま活かしながら、最新のWebフレームワーク（Next.js / TypeScript）と堅牢なリレーショナルデータベース（PostgreSQL）へ移行。現場スタッフが迷わず使える直感的なUIで、初日から業務効率を大幅に引き上げます。</p>
+
+          <h2 id="section-faq">よくある質問（FAQ）</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>Q. 今使っている巨大なExcelマクロ（VBA）のデータもそのまま移せますか？</h3>
+              <p>A. はい。既存の計算ロジックやマクロの処理内容を解析し、サーバー側で安全かつ高速に自動実行するWebロジックへ再構築いたします。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 社員ごとに見せたくない情報（給与や売上など）のアクセス制限はできますか？</h3>
+              <p>A. ロール別の詳細な権限管理（管理者・一般社員・閲覧のみなど）を標準実装できますので、セキュリティ面も安心です。</p>
+            </div>
+          </div>
 
           <!-- Eye-catching Bottom CTA Banner -->
           <div class="article-bottom-cta">

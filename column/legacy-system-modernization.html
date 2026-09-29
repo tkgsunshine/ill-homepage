@@ -121,6 +121,32 @@
 }
   </script>
 
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 決済機能（クレジットカード決済や売上分配）は簡単に組み込めますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい。世界標準の決済プラットフォームであるStripe Connectを標準採用しており、プラットフォーム手数料の自動徴収やユーザーへの自動送金を安全に実装できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. iOS/Androidのアプリストアへの申請も依頼できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、ストア申請の代行サポートはもちろん、初期は審査不要で即日リリース可能なPWA（Webアプリ）として立ち上げ、利用者が増えた段階でネイティブアプリ化するコスト削減戦略もご提案可能です。"
+      }
+    }
+  ]
+}
+  </script>
+
 </head>
 <body class="theme-light">
 
@@ -260,13 +286,6 @@
         
         <!-- Left Column: Main Body Content -->
         <main class="article-body">
-          <!-- Table of Contents -->
-          
-            <ul class="toc-list">
-            </ul>
-          </div>
-
-
           <p>
             稼働から10年以上が経過し、ブラックボックス化した基幹システムや、特定の退職エンジニアしかコードを触れない古いシステム。これらは<strong>「レガシーシステム」</strong>と呼ばれ、企業のデジタルトランスフォーメーション（DX）を阻む最大の要因です。
           </p>
@@ -282,6 +301,8 @@
               <li><a href="#sec-2">システム刷新（マイグレーション）の3大アプローチ</a></li>
               <li><a href="#sec-3">失敗を防ぐ！システム刷新プロジェクトの5ステップ</a></li>
               <li><a href="#sec-4">Ill Inc.が推奨する「ミニマル移行（段階的移行）」の提案</a></li>
+              <li><a href="#sec-pricing-table">マッチングプラットフォーム・C2Cサービスの開発費用と相場比較</a></li>
+              <li><a href="#section-faq">よくある質問（FAQ）</a></li>
             </ul>
           </div>
 
@@ -355,6 +376,61 @@
           <p>
             これにより、初期投資リスクを最小限に抑え、実業務を継続しながら段階的にシステム全体をモダンなアーキテクチャへと昇華させることが可能になります。
           </p>
+
+          
+          <h2 id="sec-pricing-table">マッチングプラットフォーム・C2Cサービスの開発費用と相場比較</h2>
+          <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
+          <div class="article-table-wrapper">
+  <table class="article-table">
+    <thead>
+      <tr>
+        <th>開発フェーズ</th>
+        <th>主要な提供機能</th>
+        <th>他社・SIer相場</th>
+        <th>Ill（イル）株式会社</th>
+        <th>想定期間</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>プロトタイプ（PoC）</strong></td>
+        <td>ユーザー/事業者登録、条件検索、プロフィール、マッチング機能</td>
+        <td>350万〜600万円</td>
+        <td><strong>120万〜200万円</strong></td>
+        <td>3〜4週間</td>
+      </tr>
+      <tr>
+        <td><strong>本番商用版（MVP）</strong></td>
+        <td>Stripe決済（手数料自動徴収）、リアルタイムチャット、通知</td>
+        <td>700万〜1,500万円</td>
+        <td><strong>250万〜450万円</strong></td>
+        <td>1.5〜2.5ヶ月</td>
+      </tr>
+      <tr>
+        <td><strong>拡張スケール版</strong></td>
+        <td>本人確認（eKYC）、AIレコメンド、不正検知、多言語対応</td>
+        <td>1,800万〜3,500万円</td>
+        <td><strong>550万〜900万円</strong></td>
+        <td>3〜4ヶ月</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          <h3>マッチングビジネス立ち上げで失敗しない「MVPアプローチ」</h3>
+<p>マッチングプラットフォームビジネスで最も避けるべきは、最初から数千万円を投じてフルスペックのシステムを開発し、ユーザーが集まらずに資金ショートすることです。成功する起業家や新規事業担当者は、必ず「コア機能のみを最小コスト（MVP）で作り、ユーザーの反応を見ながら改善する」手法を取ります。</p>
+<p>Ill（イル）株式会社では、認証（Supabase/Firebase）や決済（Stripe Connect）など検証済みの実績基盤を活用し、ゼロから無駄な車輪の再発明を行わないことで、最短1ヶ月・業界最安値水準での市場投入を可能にしています。</p>
+
+          <h2 id="section-faq">よくある質問（FAQ）</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>Q. 決済機能（クレジットカード決済や売上分配）は簡単に組み込めますか？</h3>
+              <p>A. はい。世界標準の決済プラットフォームであるStripe Connectを標準採用しており、プラットフォーム手数料の自動徴収やユーザーへの自動送金を安全に実装できます。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. iOS/Androidのアプリストアへの申請も依頼できますか？</h3>
+              <p>A. はい、ストア申請の代行サポートはもちろん、初期は審査不要で即日リリース可能なPWA（Webアプリ）として立ち上げ、利用者が増えた段階でネイティブアプリ化するコスト削減戦略もご提案可能です。</p>
+            </div>
+          </div>
 
           <!-- Eye-catching Bottom CTA Banner -->
           <div class="article-bottom-cta">

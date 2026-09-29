@@ -121,6 +121,32 @@
 }
   </script>
 
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Q. 自社の機密情報や個人情報がAIの学習に使われる心配はありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 一切ありません。商用APIの規約上、入力データがモデルの再学習に利用されることはなく、通信・保管時ともに最高水準で暗号化されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. PDFやWord、Excelなど様々な形式のドキュメントを読み込ませることは可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. はい、可能です。ドキュメントの自動テキスト抽出・チャンク分割・埋め込み（Embedding）パイプラインを構築し、形式を問わず検索可能にします。"
+      }
+    }
+  ]
+}
+  </script>
+
 </head>
 <body class="theme-light">
 
@@ -250,11 +276,7 @@
       <div class="article-layout">
         <main class="article-body">
 
-            <ul class="toc-list">
-            </ul>
-          </div>
-
-          <p>
+            <p>
             「生成AIって、ニュースではすごいと言われているけれど、結局のところ何ができるの？」そんな疑問を持っていませんか？
           </p>
           <p>
@@ -269,6 +291,8 @@
               <li><a href="#sec-2">生成AIの苦手分野：絶対に任せてはいけない4つのこと</a></li>
               <li><a href="#sec-3">「ハルシネーション（もっともらしい嘘）」に注意しよう</a></li>
               <li><a href="#sec-4">まとめ：AIが得意なことは任せ、人間は最終チェックに集中する</a></li>
+              <li><a href="#sec-pricing-table">社内向け生成AI・RAGシステムの導入費用相場と開発期間</a></li>
+              <li><a href="#section-faq">よくある質問（FAQ）</a></li>
             </ul>
           </div>
 
@@ -296,14 +320,69 @@
 
           <h2 id="sec-3">「ハルシネーション（もっともらしい嘘）」に注意しよう</h2>
           <p>
-            生成AIの最大のリスクが、この**「ハルシネーション（幻覚・もっともらしい嘘）」**です。
+            生成AIの最大のリスクが、この<strong>「ハルシネーション（幻覚・もっともらしい嘘）」</strong>です。
           </p>
           <p>
-            AIは質問されると、「文章として最も自然に見える単語のつながり」を作ろうとします。そのため、自分が知らない事実であっても、**さも本当に存在するかのように嘘の歴史や架空の法律を自信たっぷりに回答**してしまうのです。
+            AIは質問されると、「文章として最も自然に見える単語のつながり」を作ろうとします。そのため、自分が知らない事実であっても、<strong>さも本当に存在するかのように嘘の歴史や架空の法律を自信たっぷりに回答</strong>してしまうのです。
             「AIが言っているから正しい」と鵜呑みにせず、重要な情報は必ず検索エンジンや書籍などの一次情報でダブルチェックする習慣をつけましょう。
           </p>
 
           <h2 id="sec-4">まとめ：AIが得意なことは任せ、人間は最終チェックに集中する</h2>
+
+          
+          <h2 id="sec-pricing-table">社内向け生成AI・RAGシステムの導入費用相場と開発期間</h2>
+          <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
+          <div class="article-table-wrapper">
+  <table class="article-table">
+    <thead>
+      <tr>
+        <th>導入構成・システム種別</th>
+        <th>提供機能・連携先</th>
+        <th>市場の受託相場</th>
+        <th>Ill（イル）株式会社</th>
+        <th>導入期間</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>社内FAQボット</strong></td>
+        <td>社内マニュアルPDF投入、Slack/Teams通知連携</td>
+        <td>200万〜400万円</td>
+        <td><strong>80万〜150万円</strong></td>
+        <td>約2〜3週間</td>
+      </tr>
+      <tr>
+        <td><strong>セキュアRAG検索基盤</strong></td>
+        <td>契約書・社内規定全文検索、出典元の明示、権限管理</td>
+        <td>500万〜1,000万円</td>
+        <td><strong>180万〜320万円</strong></td>
+        <td>約1〜1.5ヶ月</td>
+      </tr>
+      <tr>
+        <td><strong>AI業務自動化エージェント</strong></td>
+        <td>メール下書き自動作成、見積データ抽出、外部API連携実行</td>
+        <td>800万〜1,600万円</td>
+        <td><strong>280万〜500万円</strong></td>
+        <td>約2〜3ヶ月</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          <h3>社内データをAIに学習させない「完全セキュアなRAG設計」</h3>
+<p>ChatGPTなどの汎用AIをそのまま業務に使うと「機密情報がAIの学習データに使われて漏洩するのではないか」というセキュリティ上の懸念が生じます。これに対し、<strong>Ill（イル）株式会社</strong> ではOpenAIやAnthropicのエンタープライズAPI（ゼロデータリテンション・学習利用ゼロ保証）を採用し、社内データは自社のプライベートなベクターデータベース（pgvector / Pinecone）内でのみ完結するRAGアーキテクチャを構築します。</p>
+<p>高額な専用AIパッケージに頼ることなく、必要最小限のセキュアなパイプラインを構築することで、月額のAPI実費（数千円〜数万円程度）のみで高度な業務自動化を実現します。</p>
+
+          <h2 id="section-faq">よくある質問（FAQ）</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>Q. 自社の機密情報や個人情報がAIの学習に使われる心配はありませんか？</h3>
+              <p>A. 一切ありません。商用APIの規約上、入力データがモデルの再学習に利用されることはなく、通信・保管時ともに最高水準で暗号化されます。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. PDFやWord、Excelなど様々な形式のドキュメントを読み込ませることは可能ですか？</h3>
+              <p>A. はい、可能です。ドキュメントの自動テキスト抽出・チャンク分割・埋め込み（Embedding）パイプラインを構築し、形式を問わず検索可能にします。</p>
+            </div>
+          </div>
 
           <!-- Eye-catching Bottom CTA Banner -->
           <div class="article-bottom-cta">
