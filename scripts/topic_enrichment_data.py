@@ -1,3 +1,5 @@
+import re
+
 # Shared Topic Enrichment Data for Automated Columns
 TOPIC_CONFIGS = {
     'crm': {
@@ -747,6 +749,14 @@ TOPIC_CONFIGS = {
     }
 }
 
+def _kw_match(kw, text):
+    # Short ASCII keywords (e.g. "ec", "line") must match whole tokens, otherwise
+    # "selection" or "timeline" would wrongly select the Shopify / LINE tables.
+    if kw.isascii() and len(kw) <= 4:
+        return re.search(r'(?<![a-z0-9])' + re.escape(kw) + r'(?![a-z0-9])', text) is not None
+    return kw in text
+
+
 def get_best_config(filename, content):
     fname_lower = filename.lower()
     content_lower = content.lower()
@@ -754,6 +764,6 @@ def get_best_config(filename, content):
         if key == 'default':
             continue
         for kw in cfg['keywords']:
-            if kw in fname_lower or kw in content_lower:
+            if _kw_match(kw, fname_lower) or _kw_match(kw, content_lower):
                 return cfg
     return TOPIC_CONFIGS['default']

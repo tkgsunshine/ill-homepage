@@ -34,3 +34,10 @@ AI社員の定義: `.claude/agents/marketing-employee.md`（Claude Codeで `@mar
 3. GitHub リポジトリ Settings > Secrets に `GSC_CREDENTIALS`（JSON全文）を登録
 4. （任意）Variables に `GSC_SITE_URL`（例 `sc-domain:ill-inc.net`）。未設定なら最初のプロパティを使用
 5. Actions タブから "Weekly GSC Report" を手動実行して動作確認
+
+## コラム生成の運用（Claude Code移行後）
+- 公開は従来どおり GitHub Actions（`daily_column.yml`）が `scripts/editorial_calendar.json` の未公開分を順に公開。AIは使わない。
+- Claude Code（マーケAI社員）の役割は**カレンダーの補充**。未公開が10本を切ったら新規テーマを追記する。
+- 追記時のルール: 既存記事とテーマ・主要KWが重複しないこと（カニバリゼーション回避）、本文は規定の1,800字以上になる構成、FAQ 2問以上。
+- `"enrichment"` キーで差し込む価格表の種類を固定できる（例 `"default"`, `"genai_automation"`）。キーワード自動判定が不適切な場合に指定する。
+- 現在のカレンダー: vol.094 まで（2026-10-01時点）。
