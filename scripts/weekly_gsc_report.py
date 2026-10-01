@@ -67,7 +67,9 @@ lines += ["", "## 低CTRページ（表示30回以上・CTR2%未満）", "| ペ�
 for r in low_ctr:
     lines.append(f"| {r['keys'][0]} | {r['impressions']} | {r['ctr'] * 100:.1f}% | {r['position']:.1f} |")
 
-out = os.path.join(ROOT, "docs", "marketing", "weekly", f"{today}.md")
+out_dir = os.path.join(ROOT, "docs", "marketing", "weekly")
+os.makedirs(out_dir, exist_ok=True)
+out = os.path.join(out_dir, f"{today}.md")
 with open(out, "w", encoding="utf-8") as f:
     f.write("\n".join(lines) + "\n")
 print(f"Wrote {out}")
