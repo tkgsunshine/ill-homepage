@@ -13,7 +13,7 @@ CALENDAR_PATH = os.path.join(SCRIPT_DIR, "editorial_calendar.json")
 TEMPLATE_PATH = os.path.join(COLUMN_DIR, "history-and-difference-of-generative-ai.html")
 
 sys.path.insert(0, SCRIPT_DIR)
-from topic_enrichment_data import get_best_config
+from topic_enrichment_data import get_best_config, TOPIC_CONFIGS
 
 def main():
     print("Executing generate_next_blog_post.py...")
@@ -80,7 +80,9 @@ def main():
         sections_html += f'\n          <h2 id="{sec_id}">{sec["h2"]}</h2>\n          {sec["text"]}\n'
 
     # Inject rich pricing table & SIer comparison section
-    cfg = get_best_config(target_post["filename"], target_post["title"] + " " + target_post.get("description", ""))
+    # An optional "enrichment" key in the calendar entry pins the table/FAQ set explicitly,
+    # because keyword matching on title/description can pick an unrelated topic.
+    cfg = TOPIC_CONFIGS.get(target_post.get("enrichment")) or get_best_config(target_post["filename"], target_post["title"] + " " + target_post.get("description", ""))
     sec_pricing_id = "sec-pricing-table"
     toc_items.append(f'              <li><a href="#{sec_pricing_id}">{cfg["h2_title"]}</a></li>')
     sections_html += f'''
