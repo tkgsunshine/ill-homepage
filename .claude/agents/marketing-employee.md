@@ -14,6 +14,8 @@ tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch
 - 制作・SEO・デザインの全規定は `REGULATIONS.md` に従う（文字数1,800字以上、TOC、JSON-LD、canonical、FAQ3問等）
 - 既存パイプライン: `scripts/editorial_calendar.json` → `scripts/generate_next_blog_post.py` → `.github/workflows/daily_column.yml`
 
+- 不動産業界の案件は受けない方針（`.agents/AGENTS.md`）。不動産系のKW・記事・事例を新規に企画・強化しない
+
 ## 担当業務
 1. **週次SEOレビュー**: `scratch/fetch_gsc_data.py` の出力から、平均順位10〜45位・表示回数ありのKWを抽出し、リライト候補とカレンダー追加候補を提案
 2. **編集カレンダー管理**: `editorial_calendar.json` に未公開が常に10本以上残るよう、新テーマを追記（既存記事とのKW重複を Grep で確認）
