@@ -158,7 +158,7 @@ def main():
     new_html = re.sub(r'<title>(.*?)</title>', f"<title>{target_post['title']}</title>", new_html)
     
     # 2. Update meta tags & canonical URL
-    expected_url = f"https://www.ill-inc.net/column/{target_post['filename']}"
+    expected_url = f"https://www.ill-inc.net/column/{target_post['filename'].removesuffix('.html')}"  # cleanUrls: canonical has no .html
     new_html = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{target_post["description"]}">', new_html)
     new_html = re.sub(r'<meta name="keywords" content="[^"]*">', f'<meta name="keywords" content="{target_post["keywords"]}">', new_html)
     new_html = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{expected_url}">', new_html)

@@ -109,7 +109,7 @@ Google Search Consoleのパフォーマンスデータを活用し、最も効�
 Google検索エンジンからの最大評価とB2BインバウンドCVR獲得を達成するため、全自動コラムパイプラインに以下の技術的・構造的規律を義務付けます。
 
 * **Canonical（正規化URL）の100%自記事指定**:
-  * すべてのコラム記事の `<link rel="canonical">` は、自記事固有のURL（`https://www.ill-inc.net/column/{filename}`）を100%指定すること。ひな形URLの放置や別記事URLの指定は重大インデックス障害となるためCI/CDで厳格遮断する。
+  * すべてのコラム記事の `<link rel="canonical">` は、自記事固有のURL（`https://www.ill-inc.net/column/{filename から .html を除いたもの}`（`vercel.json` の `cleanUrls: true` により本番URLは `.html` なし。canonical・OGP・JSON-LD・sitemap はすべてこの形式に統一））を100%指定すること。ひな形URLの放置や別記事URLの指定は重大インデックス障害となるためCI/CDで厳格遮断する。
 * **OGP / Twitter Card の完全個別同期**:
   * `og:title`, `og:description`, `og:url`, `twitter:title`, `twitter:description` は、自記事のタイトル・メタディスクリプション・URLと完全に一致させること。
 * **構造化データ（JSON-LD）トリプル完備**:

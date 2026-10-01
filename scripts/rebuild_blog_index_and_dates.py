@@ -392,7 +392,7 @@ def main():
         for case_fn in sorted(os.listdir(cases_dir)):
             if case_fn.endswith(".html") and case_fn != "index.html":
                 xml_lines.append(f"""  <url>
-    <loc>https://www.ill-inc.net/cases/{case_fn}</loc>
+    <loc>https://www.ill-inc.net/cases/{case_fn.removesuffix(".html")}</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -411,7 +411,7 @@ def main():
         if filename in articles_meta:
             meta = articles_meta[filename]
             xml_lines.append(f"""  <url>
-    <loc>https://www.ill-inc.net/column/{filename}</loc>
+    <loc>https://www.ill-inc.net/column/{filename.removesuffix(".html")}</loc>
     <lastmod>{meta['date']}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
