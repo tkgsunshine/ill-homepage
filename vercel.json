@@ -1,15 +1,5 @@
 {
   "cleanUrls": true,
-  "crons": [
-    {
-      "path": "/api/cron/publish-ill",
-      "schedule": "0 23 * * *"
-    },
-    {
-      "path": "/api/cron/publish-ill",
-      "schedule": "0 8 * * *"
-    }
-  ],
   "redirects": [
     {
       "source": "/column/026-non-it-smb-system-development-no-engineer",
