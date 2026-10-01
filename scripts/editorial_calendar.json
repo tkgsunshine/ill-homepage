@@ -1564,6 +1564,411 @@
     ]
   },
   {
+    "filename": "095-mvp-development-cost-10-to-100man-what-you-can-build.html",
+    "title": "MVP開発は10万〜100万円で何が作れる？予算別の範囲と、作れないものの線引き | Ill（イル）株式会社",
+    "headline": "MVP開発は10万〜100万円で何が作れる？予算別の範囲と、作れないものの線引き",
+    "description": "MVP開発を10万円台・50万円前後・100万円前後の予算別に、作れる機能の範囲の目安を解説。作れないものの線引きと、数日〜数週間で形にする進め方、見積もり時の確認点をまとめました。",
+    "keywords": "MVP開発 費用,MVP 10万円,アプリ開発 100万円以下,低価格 アプリ開発,新規事業 MVP 予算",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_cost_market.webp",
+    "banner_color": "#10B981",
+    "english_title": "MVP DEVELOPMENT 10 TO 100MAN",
+    "title_line1": "予算別に「作れる範囲」を具体化",
+    "title_line2": "MVP開発は10万〜100万円で何が作れるか",
+    "banner_desc": "数日〜数週間で形にする低価格MVPの線引き",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "MVPなら本当に10万円台から作れますか？",
+        "a": "機能をごく少数に絞った検証用のMVPであれば、10万円台から可能なケースがあります。画面数・外部連携・管理画面の有無で金額は変わるため、要件を整理したうえで個別にお見積もりします。"
+      },
+      {
+        "q": "MVPで作れない機能はありますか？",
+        "a": "技術的に作れないものは少なく、費用と期間の問題になります。大量アクセスへの対応、複雑な基幹システム連携、高度なセキュリティ要件などは、MVPの範囲を超えるため、本開発のフェーズで対応します。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "1. 【MVP開発 費用】「いくらで何が作れるか」を先に知る",
+        "text": "<p>MVP（Minimum Viable Product：実用最小限の製品）は、事業アイデアが受け入れられるかを確かめるための、最小限の製品です。目的は完成度ではなく<strong>「検証」</strong>なので、必要な機能だけに絞れば、費用も期間も大きく圧縮できます。</p><p><strong>Ill（イル）株式会社</strong>では、MVPの価格帯を<strong>10万〜100万円、期間は数日〜数週間</strong>で設計しています。ただし金額は機能の量で決まるため、以下では予算別に、作れる範囲の目安を整理します。</p>"
+      },
+      {
+        "h2": "2. 【予算別の目安】10万円台・50万円前後・100万円前後で作れる範囲",
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>予算の目安</th><th>作れる範囲の例</th><th>向いている検証</th></tr></thead><tbody><tr><td><strong>10万円台</strong></td><td>1〜2画面の簡易Webアプリ、入力フォームと一覧表示、データの保存</td><td>「そもそも需要があるか」を確かめる最小の検証</td></tr><tr><td><strong>50万円前後</strong></td><td>会員登録・ログイン、主要3画面、簡易な管理画面、通知メール</td><td>実際のユーザーに使ってもらい、利用の流れを検証</td></tr><tr><td><strong>100万円前後</strong></td><td>決済連携、権限の出し分け、外部サービス連携、スマホ対応の画面</td><td>有料での利用意向・継続利用を検証</td></tr></tbody></table></div><p><strong>※いずれも目安</strong>です。実際の金額は、画面数・連携するサービス・デザインの作り込みで変動します。</p>"
+      },
+      {
+        "h2": "3. 【線引き】MVPに入れない方がよいもの",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>あれば便利な機能</strong>: 検索の高度化、ランキング、細かな設定画面など。検証後で十分。</li><li><strong>凝ったデザイン・アニメーション</strong>: 基本のデザインで検証し、反応を見てから磨く。</li><li><strong>大量アクセス対策</strong>: ユーザーが増えてから対応する方が、無駄な投資を避けられる。</li><li><strong>複数OS向けの個別開発</strong>: まずはWebアプリ、または1つのコードで両OSに対応する方法を選ぶ。</li></ul></div><p>入れる機能は「それがないと、検証したい仮説が確かめられないか？」で判断します。答えが「ない」なら、MVPには入れません。</p>"
+      },
+      {
+        "h2": "4. 【進め方】数日〜数週間で形にするための3つの工夫",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>検証したい仮説を1つに絞る</strong>: 「誰が、何に、いくら払うか」のどれを確かめたいかを決める。</li><li><strong>AIコーディングを前提に設計する</strong>: Claude Codeによる開発で、定型的な実装の時間を圧縮する。</li><li><strong>日本側の要件整理＋オフショア実装</strong>: 要件定義と品質管理は日本側、実装はベトナムのチームと分担する。</li></ul></div><p><strong>Ill（イル）株式会社</strong>では、見積もりの前に、検証したい仮説と最小の機能範囲を整理するところから無料でご相談いただけます。</p>"
+      }
+    ],
+    "enrichment": "default"
+  },
+  {
+    "filename": "096-ai-driven-development-claude-code-explained.html",
+    "title": "AI駆動開発とは？Claude Codeで開発期間と費用を抑える仕組みと、任せてよい範囲 | Ill（イル）株式会社",
+    "headline": "AI駆動開発とは？Claude Codeで開発期間と費用を抑える仕組みと、任せてよい範囲",
+    "description": "AI駆動開発（AIコーディング）の仕組みを、Claude Codeを例に解説。従来の開発との違い、費用や期間が下がる理由、人が必ず確認すべき範囲、発注者が確認したい点をまとめました。",
+    "keywords": "AI駆動開発,Claude Code 開発,AIコーディング 受託開発,生成AI 開発 費用,AI 開発会社",
+    "category_id": "genai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_ai_agent_implementation.webp",
+    "banner_color": "#8B5CF6",
+    "english_title": "AI DRIVEN DEVELOPMENT CLAUDE CODE",
+    "title_line1": "AIに任せる範囲と人が見る範囲を整理",
+    "title_line2": "AI駆動開発とClaude Codeの仕組み",
+    "banner_desc": "費用と期間が下がる理由と、品質を守る人の役割",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "AIで作ったシステムは品質や安全性が心配です。",
+        "a": "AIが書いたコードも、人のレビュー・テスト・セキュリティ確認を経て納品します。AIは実装の速度を上げる道具で、設計の判断と最終的な品質の責任は人が持つ、という役割分担が重要です。"
+      },
+      {
+        "q": "発注者側がAIのことを知らなくても大丈夫ですか？",
+        "a": "問題ありません。発注者様に必要なのは、作りたい事業の目的と、必要な機能のイメージです。AIの使い方や技術的な判断は、開発側が担います。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "1. 【AI駆動開発とは】AIがコードを書き、人が設計と品質を担う開発手法",
+        "text": "<p>AI駆動開発とは、AIコーディングツールにコードの作成・修正・テスト作成を任せ、人は設計・判断・レビューに集中する開発手法です。代表的なツールの一つが、Anthropicの<strong>Claude Code</strong>です。</p><p><strong>Ill（イル）株式会社</strong>では、Claude Codeを開発の中心に据えています。従来、人が時間をかけて書いていた定型的な実装を、AIが短時間で下書きし、人が確認・調整することで、MVPを<strong>数日〜数週間</strong>で形にする体制を整えています。</p>"
+      },
+      {
+        "h2": "2. 【従来開発との違い】どこが変わり、どこが変わらないか",
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>工程</th><th>従来の開発</th><th>AI駆動開発</th></tr></thead><tbody><tr><td>要件整理・設計</td><td>人が実施</td><td><strong>人が実施（ここは変わらない）</strong></td></tr><tr><td>コーディング</td><td>人が一から記述</td><td><strong>AIが下書きし、人がレビュー・修正</strong></td></tr><tr><td>テスト作成</td><td>人が手作業で作成</td><td><strong>AIがテストコードを生成し、人が確認</strong></td></tr><tr><td>品質・セキュリティ確認</td><td>人が実施</td><td><strong>人が実施（AIの出力ほど入念に確認）</strong></td></tr></tbody></table></div><p>変わるのは「書く作業の速さ」です。<strong>何を作るか、なぜそう作るかの判断は、人が行う</strong>点は変わりません。</p>"
+      },
+      {
+        "h2": "3. 【費用が下がる理由】人件費の大半を占める「実装の時間」を圧縮する",
+        "text": "<p>システム開発費は、多くが人件費（作業時間×単価）で決まります。AIによって実装・テスト作成の時間が短くなれば、その分が費用の圧縮につながります。さらに、実装の一部をベトナムのオフショアチームと分担することで、コストを抑えています。</p><div class=\"checklist-box\"><ul><li><strong>下がりやすい部分</strong>: 定型的な画面・API・データ処理の実装、テストの作成。</li><li><strong>下がりにくい部分</strong>: 要件整理、設計判断、セキュリティ確認、運用中の改善判断。</li></ul></div>"
+      },
+      {
+        "h2": "4. 【発注者向け】AI活用の開発会社に確認したい3つの質問",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>AIが書いたコードを誰がどのようにレビューしているか</strong></li><li><strong>機密情報・顧客データをAIにどう扱わせているか</strong>（入力する情報の範囲、設定）</li><li><strong>納品物にソースコード一式・ドキュメントが含まれるか</strong>（他社への引き継ぎが可能か）</li></ul></div><p>これらに明確に答えられる会社は、AI活用を「速さの道具」として適切に管理できていると判断できます。</p>"
+      }
+    ],
+    "enrichment": "default"
+  },
+  {
+    "filename": "097-individual-entrepreneur-app-outsourcing-first-guide.html",
+    "title": "個人起業家が初めてアプリ開発を外注するときの手順｜アイデアの整理から公開までと費用 | Ill（イル）株式会社",
+    "headline": "個人起業家が初めてアプリ開発を外注するときの手順｜アイデアの整理から公開までと費用",
+    "description": "個人起業家・個人事業主が、事業アイデアをアプリやWebサービスにするための外注手順を解説。事前に整理しておくこと、費用を抑える方法、開発会社に伝える情報、公開後の運営までをまとめました。",
+    "keywords": "個人 アプリ開発 外注,起業 アプリ開発 費用,個人事業主 システム開発,アイデア アプリ化 手順,低予算 アプリ開発",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_agile_requirements.webp",
+    "banner_color": "#3B82F6",
+    "english_title": "ENTREPRENEUR FIRST APP OUTSOURCING",
+    "title_line1": "アイデアから公開までの流れを整理",
+    "title_line2": "個人起業家のアプリ開発外注ガイド",
+    "banner_desc": "予算を抑えて最初の一歩を踏み出す手順",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "エンジニアではなく、技術の知識がなくても外注できますか？",
+        "a": "できます。必要なのは、「誰の、どんな困りごとを解決するか」と「最低限必要な機能」の整理です。専門用語は、開発側が噛み砕いて説明します。"
+      },
+      {
+        "q": "途中で方針を変えたくなった場合はどうなりますか？",
+        "a": "MVPは仮説の検証が目的なので、検証結果に応じた方針転換は想定内です。小さな範囲で作ることで、方向転換にかかる費用も小さく抑えられます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "1. 【個人 アプリ開発 外注】最初にお金をかけすぎないことが成功の近道",
+        "text": "<p>個人で事業を始める場合、最大のリスクは「作ったものが使われない」ことです。完成度の高いアプリを一気に作るより、<strong>小さなMVPで需要を確かめてから投資を増やす</strong>方が、失敗の損失を小さくできます。</p><p><strong>Ill（イル）株式会社</strong>では、MVPを<strong>10万〜100万円、数日〜数週間</strong>で提供しており、個人起業家の方の最初の一歩に使っていただける価格帯を想定しています。</p>"
+      },
+      {
+        "h2": "2. 【事前準備】外注前に整理しておきたい4つのこと",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>誰の、どんな悩みを解決するか</strong>: 利用者を具体的に1人思い浮かべて書き出す。</li><li><strong>最低限必要な機能</strong>: 「これがないと成り立たない」ものを3つまで。</li><li><strong>予算の上限と時期</strong>: いつまでに、いくらまでかを決めておく。</li><li><strong>参考にしたいサービス</strong>: 画面のイメージが伝わる既存サービスを2〜3個。</li></ul></div><p>上記を1枚のメモにまとめるだけで、見積もりの精度と打ち合わせの質が大きく上がります。</p>"
+      },
+      {
+        "h2": "3. 【流れ】相談から公開までのステップ",
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>ステップ</th><th>内容</th><th>期間の目安</th></tr></thead><tbody><tr><td>① 相談・要件整理</td><td>目的と最小の機能範囲を決める</td><td>数日</td></tr><tr><td>② お見積もり・契約</td><td>範囲・費用・納期の合意</td><td>数日</td></tr><tr><td>③ 開発・確認</td><td>試作を見ながら調整</td><td>数日〜数週間</td></tr><tr><td>④ 公開・検証</td><td>実際のユーザーに使ってもらい、反応を確認</td><td>公開後に継続</td></tr></tbody></table></div><p><strong>※案件の規模により異なります。</strong></p>"
+      },
+      {
+        "h2": "4. 【費用を抑える】個人起業家が気をつけたい3つの落とし穴",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>機能を欲張りすぎる</strong>: 最初の機能は最小限に。追加は検証後でも遅くない。</li><li><strong>見積もりの内訳を確認しない</strong>: 何にいくらかかるかを、工数で確認する。</li><li><strong>ソースコードの権利を確認しない</strong>: 納品物と権利の範囲を契約前に確認する。</li></ul></div><p>お見積もりの段階から無料でご相談いただけます。アイデアが固まっていない段階でも、整理のお手伝いをしています。</p>"
+      }
+    ],
+    "enrichment": "default"
+  },
+  {
+    "filename": "098-corporate-new-business-mvp-budget-approval.html",
+    "title": "社内の新規事業をMVPで始める進め方｜稟議を通しやすい小さな予算設計と判断基準 | Ill（イル）株式会社",
+    "headline": "社内の新規事業をMVPで始める進め方｜稟議を通しやすい小さな予算設計と判断基準",
+    "description": "既存企業の新規事業担当者向けに、MVPで事業を小さく始める進め方を解説。稟議を通しやすい予算の組み方、検証の段階分け、撤退・継続の判断基準、外注先に伝えるべき情報をまとめました。",
+    "keywords": "新規事業 MVP 予算,社内新規事業 システム開発,稟議 小さく始める,新規事業担当 開発外注,PoC 予算",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_case_business.webp",
+    "banner_color": "#6366F1",
+    "english_title": "CORPORATE NEW BUSINESS MVP BUDGET",
+    "title_line1": "小さな予算で検証し、判断を段階化",
+    "title_line2": "社内新規事業をMVPで始める予算設計",
+    "banner_desc": "稟議を通しやすく、撤退判断もしやすい進め方",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "MVPの予算は、社内でどのように説明すれば通りやすいですか？",
+        "a": "「数百万円の本開発」ではなく、「100万円以下で需要を検証し、結果次第で次の投資を判断する」という段階的な提案にすると、金額と失敗リスクの両面で承認を得やすくなります。"
+      },
+      {
+        "q": "検証の結果が悪かった場合、費用は無駄になりますか？",
+        "a": "MVPは「失敗を安く知る」ための投資です。本開発の前に需要がないと分かれば、大きな損失を避けられます。結果と学びを記録として残すことで、次の企画にも活かせます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "1. 【新規事業 MVP 予算】大きな稟議より「小さな検証」を先に通す",
+        "text": "<p>既存企業の新規事業では、数百万円〜数千万円の開発予算の承認に時間がかかり、検証が遅れがちです。そこで有効なのが、<strong>100万円以下のMVPで需要を確かめ、結果を持って次の予算を相談する</strong>という進め方です。</p><p><strong>Ill（イル）株式会社</strong>のMVPは10万〜100万円・数日〜数週間なので、部門の裁量の範囲で始めやすい規模です。</p>"
+      },
+      {
+        "h2": "2. 【段階設計】検証を3段階に分けて、投資を段階的に増やす",
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>段階</th><th>目的</th><th>判断する内容</th></tr></thead><tbody><tr><td>第1段階：需要検証</td><td>ユーザーが関心を示すか</td><td>登録数・問い合わせ数など、最小限のMVPで確認</td></tr><tr><td>第2段階：利用検証</td><td>実際に使い続けられるか</td><td>継続利用・利用頻度を確認</td></tr><tr><td>第3段階：収益検証</td><td>対価を払ってもらえるか</td><td>有料プランへの移行・支払意向を確認</td></tr></tbody></table></div><p>各段階の終わりに、<strong>「続ける・方向を変える・やめる」</strong>を判断します。判断基準は、事前に数値で決めておきます。</p>"
+      },
+      {
+        "h2": "3. 【判断基準】事前に決めておきたい3つの数値",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>検証期間</strong>: 例として「公開後4週間」など、区切りを決める。</li><li><strong>成功の基準値</strong>: 登録数・利用率・問い合わせ数など、継続判断に使う数字。</li><li><strong>撤退の基準</strong>: 基準を下回った場合は、追加投資をしない、と決めておく。</li></ul></div><p>事前に基準を決めておくと、結果が出たときの社内の議論がスムーズになります。</p>"
+      },
+      {
+        "h2": "4. 【外注時の依頼】開発会社に最初に伝えたい情報",
+        "text": "<div class=\"checklist-box\"><ul><li>検証したい仮説（何を確かめたいか）</li><li>想定する利用者と、利用場面</li><li>予算の上限と、検証したい期間</li><li>社内システムとの連携や、セキュリティ要件の有無</li></ul></div><p>これらが整理されていれば、見積もりと提案が早く正確になります。整理の段階から、無料でご相談を承ります。</p>"
+      }
+    ],
+    "enrichment": "default"
+  },
+  {
+    "filename": "099-vibe-coding-prototype-to-production-pitfalls.html",
+    "title": "AIで作った試作アプリを本番公開するときの落とし穴｜品質・セキュリティの確認項目 | Ill（イル）株式会社",
+    "headline": "AIで作った試作アプリを本番公開するときの落とし穴｜品質・セキュリティの確認項目",
+    "description": "ChatGPTやClaude Codeなどで作った試作アプリを、そのまま公開するリスクと確認項目を解説。認証・データ保護・エラー処理・運用の観点で、本番公開前に必ず見直したいポイントをまとめました。",
+    "keywords": "AI 試作 本番,AIで作ったアプリ 公開,バイブコーディング 注意点,AI生成コード セキュリティ,生成AI アプリ 品質",
+    "category_id": "genai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_genai_security.webp",
+    "banner_color": "#EF4444",
+    "english_title": "AI PROTOTYPE TO PRODUCTION",
+    "title_line1": "動く試作と、公開できる製品の差",
+    "title_line2": "AI試作アプリを本番公開する前の確認項目",
+    "banner_desc": "品質・セキュリティで失敗しない見直しポイント",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "AIで作った試作をそのまま公開してはいけませんか？",
+        "a": "検証用に限定した少人数での利用なら問題ない場合もありますが、個人情報や決済を扱う場合は、公開前の見直しが必須です。動くことと、安全に運用できることは別です。"
+      },
+      {
+        "q": "見直しだけを依頼することはできますか？",
+        "a": "可能です。すでにお持ちの試作アプリを、第三者の目で確認し、公開に向けた修正点を整理するご相談も承ります。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "1. 【AI 試作 本番】「動く」と「公開できる」の間には差がある",
+        "text": "<p>生成AIの進化で、非エンジニアの方でも短時間で動く試作アプリを作れるようになりました。一方で、試作をそのまま本番公開すると、<strong>想定外の入力でエラーになる、データが漏れる、障害時に復旧できない</strong>といった問題が起きやすくなります。</p><p>AIで試作する→人が品質を確認して本番化する、という流れで、速さと安全性を両立させる考え方が重要です。</p>"
+      },
+      {
+        "h2": "2. 【確認項目】本番公開前に必ず見直す5つの領域",
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>領域</th><th>確認する内容</th><th>放置した場合のリスク</th></tr></thead><tbody><tr><td>認証・権限</td><td>ログインの仕組み、他人のデータを見られないか</td><td>情報漏えい</td></tr><tr><td>データ保護</td><td>パスワードの保存方法、通信の暗号化、個人情報の扱い</td><td>法令違反・信頼失墜</td></tr><tr><td>エラー処理</td><td>想定外の入力・通信失敗時の挙動</td><td>画面が止まる・データ破損</td></tr><tr><td>秘密情報の管理</td><td>APIキーなどがコードに直接書かれていないか</td><td>不正利用・高額請求</td></tr><tr><td>運用</td><td>バックアップ、ログ、障害時の連絡手段</td><td>障害から復旧できない</td></tr></tbody></table></div>"
+      },
+      {
+        "h2": "3. 【費用への影響】公開後に直すより、公開前に直す方が安い",
+        "text": "<p>情報漏えいや障害が起きてからの対応は、費用だけでなく信用にも影響します。公開前に見直す工数は、多くの場合、公開後の対応費用より小さく済みます。</p><p>特に、<strong>個人情報・決済・業務データ</strong>を扱うサービスでは、公開前に第三者の確認を入れることを推奨します。</p>"
+      },
+      {
+        "h2": "4. 【Ill（イル）の進め方】AIの速さと人の確認を組み合わせる",
+        "text": "<p><strong>Ill（イル）株式会社</strong>では、Claude Codeで素早く試作を作りつつ、公開前にはエンジニアがレビューとテスト、セキュリティの確認を行います。「速く作る」ことと「安全に公開する」ことを、役割分担で両立させています。</p><p>お手持ちの試作の見直しのみのご相談も歓迎です。</p>"
+      }
+    ],
+    "enrichment": "default"
+  },
+  {
+    "filename": "100-web-app-vs-mobile-app-which-first-mvp.html",
+    "title": "MVPはWebアプリとスマホアプリのどちらから作る？費用・検証の速さで選ぶ判断基準 | Ill（イル）株式会社",
+    "headline": "MVPはWebアプリとスマホアプリのどちらから作る？費用・検証の速さで選ぶ判断基準",
+    "description": "新規事業のMVPを、Webアプリとスマホアプリ（iOS・Android）のどちらから作るべきかを、費用・公開までの速さ・検証のしやすさで比較。選び方の判断基準と、段階的に広げる進め方を解説します。",
+    "keywords": "MVP Webアプリ スマホアプリ,アプリ開発 どちらから,新規事業 アプリ 選び方,iOS Android 後回し,低価格 MVP",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_saas_launch.webp",
+    "banner_color": "#06B6D4",
+    "english_title": "WEB APP VS MOBILE APP MVP",
+    "title_line1": "費用と検証の速さで最初の形を決める",
+    "title_line2": "MVPはWebアプリとスマホアプリのどちらからか",
+    "banner_desc": "検証の速さと費用で決める判断基準",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "結局、最初はどちらがおすすめですか？",
+        "a": "多くの新規事業では、公開が早く、更新も即時にできるWebアプリ（スマホ表示にも対応）から始めることをおすすめします。端末の機能（カメラ・通知など）が事業の中核であれば、スマホアプリを先にします。"
+      },
+      {
+        "q": "あとからスマホアプリにすることはできますか？",
+        "a": "可能です。Webアプリで検証した画面や機能の設計は、スマホアプリの開発にも活かせます。需要が確認できてから、投資を判断できます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "1. 【MVP Webアプリ スマホアプリ】最初に決めるべきは「検証の速さ」",
+        "text": "<p>MVPの目的は、短期間で仮説を検証することです。そのため、「どの形が一番早く・安く・多くの人に届くか」で最初の形を選ぶのが基本です。</p>"
+      },
+      {
+        "h2": "2. 【比較】Webアプリ・スマホアプリの違い",
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>観点</th><th>Webアプリ</th><th>スマホアプリ</th></tr></thead><tbody><tr><td>公開までの速さ</td><td><strong>速い（ストア審査なし）</strong></td><td>ストア審査が必要</td></tr><tr><td>更新の反映</td><td><strong>即時</strong></td><td>審査・利用者の更新が必要</td></tr><tr><td>利用者の入口</td><td>URLを共有するだけ</td><td>ストアでの検索・インストールが必要</td></tr><tr><td>端末機能（カメラ・通知等）</td><td>一部制限あり</td><td><strong>フルに活用できる</strong></td></tr><tr><td>費用感</td><td><strong>抑えやすい</strong></td><td>OS対応により増える</td></tr></tbody></table></div>"
+      },
+      {
+        "h2": "3. 【判断基準】スマホアプリを先に作った方がよいケース",
+        "text": "<div class=\"checklist-box\"><ul><li>カメラ・位置情報・プッシュ通知などの端末機能が、事業の価値の中心にある</li><li>ユーザーが毎日、繰り返し開く習慣的なサービス</li><li>ストアでの発見が主な集客経路になる</li></ul></div><p>上記に当てはまらない場合は、Webアプリで検証してから、スマホアプリを検討する方が、費用と時間のリスクを抑えられます。</p>"
+      },
+      {
+        "h2": "4. 【進め方】段階的に広げて、無駄な投資を避ける",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>第1段階</strong>: スマホ表示に対応したWebアプリで需要を検証（10万〜100万円・数日〜数週間）</li><li><strong>第2段階</strong>: ホーム画面に追加できるPWAで、アプリに近い体験を提供</li><li><strong>第3段階</strong>: 需要と利用実態を見て、必要ならiOS・Androidアプリを開発</li></ul></div><p><strong>Ill（イル）株式会社</strong>では、事業の特性を伺い、最初の形の選び方からご提案します。</p>"
+      }
+    ],
+    "enrichment": "default"
+  },
+  {
+    "filename": "101-choosing-ai-native-development-company-questions.html",
+    "title": "AIを使いこなす開発会社の見極め方｜依頼前に確認したい10の質問 | Ill（イル）株式会社",
+    "headline": "AIを使いこなす開発会社の見極め方｜依頼前に確認したい10の質問",
+    "description": "「AI活用」をうたう開発会社を見極める質問10項目を解説。使っているツール、レビュー体制、セキュリティ、見積もりの根拠、納品物の範囲など、発注前に確認すべきポイントをまとめました。",
+    "keywords": "AI活用 開発会社 選び方,AI 開発会社 比較,生成AI 受託開発 見極め,Claude Code 開発会社,低価格 開発会社",
+    "category_id": "genai",
+    "category_name": "生成AI・先端技術",
+    "banner_img": "../illust_vendor_selection.webp",
+    "banner_color": "#F59E0B",
+    "english_title": "CHOOSING AI NATIVE DEV COMPANY",
+    "title_line1": "「AI活用」の中身を質問で確かめる",
+    "title_line2": "AI活用の開発会社を見極める10の質問",
+    "banner_desc": "ツール・体制・見積もり・納品物を確認する",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "「AI活用」と言っているだけの会社との違いは何ですか？",
+        "a": "具体的に、どの工程で、どのツールを使い、どう品質を担保しているかを説明できるかどうかです。説明が曖昧な場合は、実際の活用度が低い可能性があります。"
+      },
+      {
+        "q": "AIを使う会社は、必ず安いのですか？",
+        "a": "AIによる効率化を価格に反映している会社は安くなりやすいですが、価格だけで判断するのは危険です。見積もりの根拠、体制、納品物の範囲を合わせて比較してください。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "1. 【AI活用 開発会社 選び方】「AI活用」は誰でも名乗れる",
+        "text": "<p>近年、多くの開発会社が「AI活用」をうたっています。しかし、実際には、一部の作業で補助的に使う程度の会社から、開発の中心にAIを据えて工程そのものを変えている会社まで、活用度には大きな差があります。</p><p>発注前に、<strong>具体的な質問で中身を確かめる</strong>ことが、期待外れを防ぐ一番の方法です。</p>"
+      },
+      {
+        "h2": "2. 【10の質問】依頼前に確認したいチェックリスト",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>ツール</strong>: ① どのAIツールを使っているか　② どの工程で使っているか</li><li><strong>品質</strong>: ③ AIが書いたコードを誰がレビューするか　④ テストはどう行うか</li><li><strong>セキュリティ</strong>: ⑤ 顧客情報をAIにどう扱わせているか　⑥ 機密保持の取り決め</li><li><strong>見積もり</strong>: ⑦ AI活用による効率化を価格にどう反映したか　⑧ 工数の根拠を説明できるか</li><li><strong>納品・保守</strong>: ⑨ ソースコード一式とドキュメントを納品するか　⑩ 他社への引き継ぎは可能か</li></ul></div>"
+      },
+      {
+        "h2": "3. 【見極め方】回答から分かる3つのサイン",
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>サイン</th><th>良い回答の例</th><th>注意が必要な回答</th></tr></thead><tbody><tr><td>具体性</td><td>ツール名・工程・使い分けを説明できる</td><td>「最新のAIを活用しています」だけ</td></tr><tr><td>品質への責任</td><td>人がレビューする体制を説明できる</td><td>「AIが書くので安心」</td></tr><tr><td>見積もりの透明性</td><td>工数・範囲・含まれないものを明示</td><td>「一式」のみ</td></tr></tbody></table></div>"
+      },
+      {
+        "h2": "4. 【Ill（イル）の場合】ご質問に、具体的にお答えします",
+        "text": "<p><strong>Ill（イル）株式会社</strong>は、<strong>Claude Code</strong>を開発の中心に使い、日本側のエンジニアが要件定義とレビューを担い、ベトナムのオフショアチームと分担して開発を進めています。MVPは10万〜100万円、数日〜数週間が目安です。</p><p>上記の10項目についても、打ち合わせの場で率直にお答えします。他社との比較検討の材料としても、お気軽にご相談ください。</p>"
+      }
+    ],
+    "enrichment": "default"
+  },
+  {
+    "filename": "102-mvp-beta-release-testflight-validation.html",
+    "title": "ストア公開前にMVPを検証する方法｜ベータ版配布で早く・安く需要を確かめる | Ill（イル）株式会社",
+    "headline": "ストア公開前にMVPを検証する方法｜ベータ版配布で早く・安く需要を確かめる",
+    "description": "アプリのMVPを、ストアの一般公開の前に、限られたユーザーへのベータ版配布で検証する方法を解説。テスター集め、フィードバックの集め方、公開判断の基準、費用を抑えるコツをまとめました。",
+    "keywords": "MVP ベータ版,アプリ テスト配布,TestFlight 検証,クローズドβ,アプリ 公開前 検証",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_mvp_validation.webp",
+    "banner_color": "#10B981",
+    "english_title": "MVP BETA RELEASE VALIDATION",
+    "title_line1": "一般公開の前に、小さく確かめる",
+    "title_line2": "ストア公開前のMVP検証とベータ版配布",
+    "banner_desc": "テスターへの限定配布で需要と使い勝手を確認",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "ベータ版の配布は、ストア審査が必要ですか？",
+        "a": "一般公開より簡易な手続きで配布できる仕組み（iOSのTestFlight、AndroidのClosed testingなど）があります。条件や手順はストアの最新の案内をご確認ください。"
+      },
+      {
+        "q": "テスターは何人くらい集めれば検証になりますか？",
+        "a": "検証の目的によりますが、最初は数人〜十数人でも、使い勝手の課題は多く見つかります。人数よりも、想定する利用者に近い人に使ってもらうことが重要です。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "1. 【MVP ベータ版 検証】一般公開の前に、限定配布で小さく確かめる",
+        "text": "<p>アプリを一般公開すると、審査対応や問い合わせ対応などの負担が一気に増えます。そこで、<strong>限られたテスターにだけ配布して使ってもらう「ベータ版」</strong>で先に検証すると、費用と手間を抑えながら、重要な課題を早く発見できます。</p>"
+      },
+      {
+        "h2": "2. 【配布方法】主な限定配布の仕組み",
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>方法</th><th>概要</th><th>向いている場面</th></tr></thead><tbody><tr><td>Webアプリのテスト用URL</td><td>URLを共有するだけで利用開始</td><td><strong>最も手軽。まず最初に試す</strong></td></tr><tr><td>iOSのベータ配布（TestFlight）</td><td>招待した人にアプリを配布</td><td>iPhoneユーザー向けの検証</td></tr><tr><td>Androidの限定公開テスト</td><td>テスターを限定してストアで配布</td><td>Androidユーザー向けの検証</td></tr></tbody></table></div><p><strong>※仕様や手順はストア側で変更されることがあります。</strong>最新の案内を確認のうえ進めます。</p>"
+      },
+      {
+        "h2": "3. 【検証のコツ】フィードバックを集めるための3つの工夫",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>見てほしい点を絞る</strong>: 「登録から最初の操作まで迷わないか」など、1〜2点に集中。</li><li><strong>画面を見ながら聞く</strong>: アンケートだけでなく、実際に使う様子を観察する。</li><li><strong>数値でも確認する</strong>: 登録率・継続利用率などの基本指標を記録する。</li></ul></div>"
+      },
+      {
+        "h2": "4. 【公開判断】一般公開に進む基準を、事前に決めておく",
+        "text": "<div class=\"checklist-box\"><ul><li>主要な操作を、説明なしでテスターが完了できる</li><li>重大な不具合が一定期間出ていない</li><li>利用継続や支払意向など、事業上の基準値を満たしている</li></ul></div><p><strong>Ill（イル）株式会社</strong>は、MVPの開発だけでなく、ベータ版の配布準備や検証の進め方までご一緒します。</p>"
+      }
+    ],
+    "enrichment": "default"
+  },
+  {
+    "filename": "103-mvp-to-full-development-transition-criteria.html",
+    "title": "MVPから本開発へ進む判断基準｜追加投資のタイミングと、作り直しを避ける設計 | Ill（イル）株式会社",
+    "headline": "MVPから本開発へ進む判断基準｜追加投資のタイミングと、作り直しを避ける設計",
+    "description": "MVPの検証後に、本開発へ進むか判断する基準を解説。追加投資の目安となる指標、MVPのコードを活かす設計、段階的な拡張の進め方、費用を抑える優先順位の決め方をまとめました。",
+    "keywords": "MVP 本開発 移行,MVP 次のステップ,追加投資 判断基準,システム 拡張 設計,スケールアップ 開発",
+    "category_id": "new-service",
+    "category_name": "新規事業・MVP検証",
+    "banner_img": "../illust_roi_cost.webp",
+    "banner_color": "#6366F1",
+    "english_title": "MVP TO FULL DEVELOPMENT",
+    "title_line1": "検証結果をもとに次の投資を決める",
+    "title_line2": "MVPから本開発へ進む判断基準",
+    "banner_desc": "追加投資のタイミングと、作り直しを避ける設計",
+    "rect_width": 560,
+    "questions": [
+      {
+        "q": "MVPで作ったものは、本開発で作り直しになりますか？",
+        "a": "最初から拡張を見据えた設計にしておけば、作り直しを避けられる部分が多くなります。ただし、検証の結果、方向性を大きく変える場合は、一部の作り直しが発生することもあります。"
+      },
+      {
+        "q": "本開発の費用はどのくらいを見込めばよいですか？",
+        "a": "機能の範囲により大きく異なるため、個別にお見積もりします。MVPの検証結果をもとに、優先順位をつけて段階的に進めることで、必要な投資に絞れます。"
+      }
+    ],
+    "body_sections": [
+      {
+        "h2": "1. 【MVP 本開発 移行】検証の結果が出たあとの、次の一手",
+        "text": "<p>MVPで一定の検証ができたあと、「本格的に投資するか」「方向を変えるか」「やめるか」の判断が必要になります。ここで感覚的に決めてしまうと、せっかくの検証が活きません。</p><p>判断の材料にするのは、<strong>事前に決めた基準値と、実際の利用データ</strong>です。</p>"
+      },
+      {
+        "h2": "2. 【判断基準】本開発に進んでよい3つのサイン",
+        "text": "<div class=\"checklist-box\"><ul><li><strong>継続利用が確認できた</strong>: 一度使って終わりではなく、繰り返し使われている。</li><li><strong>対価を払う意向が確認できた</strong>: 有料プランや問い合わせなど、具体的な反応がある。</li><li><strong>課題が明確になった</strong>: 次に作るべき機能が、利用者の声からはっきりしている。</li></ul></div><p>1つでも当てはまらない場合は、本開発の前にMVPの改善や方向の見直しを検討します。</p>"
+      },
+      {
+        "h2": "3. 【設計】作り直しを避けるために、MVPの段階で気をつけること",
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>観点</th><th>MVPの段階での工夫</th></tr></thead><tbody><tr><td>データ構造</td><td>将来の機能追加を見据えて、整理した形で保存する</td></tr><tr><td>認証・権限</td><td>あとから会員種別を増やせる作りにしておく</td></tr><tr><td>外部サービス連携</td><td>差し替えやすい形で組み込む</td></tr><tr><td>ドキュメント</td><td>仕様と設計の判断理由を簡単に残す</td></tr></tbody></table></div>"
+      },
+      {
+        "h2": "4. 【進め方】本開発は「優先順位をつけて段階的に」",
+        "text": "<p>本開発も、一度にすべてを作る必要はありません。利用データから<strong>効果の大きい機能を優先</strong>して追加し、その都度効果を確認する進め方が、無駄な投資を避けます。</p><p><strong>Ill（イル）株式会社</strong>では、MVPの開発から本開発への拡張まで、同じ体制で一貫してご支援します。本開発の費用は、要件に応じて個別にお見積もりします。</p>"
+      }
+    ],
+    "enrichment": "default"
+  },
+  {
     "filename": "079-smb-core-system-modernization-phased-approach.html",
     "title": "中小企業の基幹システム刷新を低リスクで進める「段階的モダナイゼーション」の手順と予算 | Ill（イル）株式会社",
     "headline": "中小企業の基幹システム刷新を低リスクで進める「段階的モダナイゼーション」の手順と予算",
@@ -1631,7 +2036,7 @@
       },
       {
         "h2": "3. 【ペーパーレス システム開発】Ill（イル）株式会社の開発相場",
-        "text": "<p><strong>Ill（イル）株式会社</strong> では、<strong>自社専用稟議・電子承認システムを140万〜260万円、工期約1〜1.5ヶ月</strong> で高品質に開発いたします。</p>"
+        "text": "<p><strong>Ill（イル）株式会社</strong> では、<strong>自社専用稟議・電子承認システムを、まず中核機能に絞ったMVPなら10万〜100万円・数日〜数週間、本格版でも140万〜260万円・約1〜1.5ヶ月</strong> で高品質に開発いたします。</p>"
       }
     ]
   },
@@ -1667,7 +2072,7 @@
       },
       {
         "h2": "2. 【規模別の目安】シンプル・標準・大規模の費用イメージ",
-        "text": "<p>以下は、一般的な受託開発会社に依頼した場合の目安と、Ill（イル）株式会社のミニマル設計での概算の比較です。実際の金額は要件により変動するため、あくまで検討の出発点としてご覧ください。</p><div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>規模</th><th>主な機能</th><th>一般的な受託相場の目安</th><th>Ill（イル）の概算</th><th>期間の目安</th></tr></thead><tbody><tr><td>シンプル</td><td>会員登録・一覧表示・問い合わせ</td><td>300万〜600万円</td><td><strong>120万〜250万円</strong></td><td>1〜2ヶ月</td></tr><tr><td>標準</td><td>決済・チャット・通知・管理画面</td><td>800万〜1,500万円</td><td><strong>300万〜600万円</strong></td><td>2〜4ヶ月</td></tr><tr><td>大規模</td><td>マッチング・位置情報・外部基幹連携</td><td>2,000万円〜</td><td><strong>700万円〜</strong></td><td>4ヶ月〜</td></tr></tbody></table></div><p><strong>※相場は参考値です。</strong>機能の絞り込みや再利用できる部品の有無で、金額は大きく動きます。</p>"
+        "text": "<p>以下は、一般的な受託開発会社に依頼した場合の目安と、Ill（イル）株式会社のミニマル設計での概算の比較です。実際の金額は要件により変動するため、あくまで検討の出発点としてご覧ください。</p><div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>規模</th><th>主な機能</th><th>一般的な受託相場の目安</th><th>Ill（イル）の概算</th><th>期間の目安</th></tr></thead><tbody><tr><td>シンプル</td><td>会員登録・一覧表示・問い合わせ</td><td>300万〜600万円</td><td><strong>10万〜100万円（MVP）</strong></td><td>数日〜数週間</td></tr><tr><td>標準</td><td>決済・チャット・通知・管理画面</td><td>800万〜1,500万円</td><td><strong>100万〜300万円（目安）</strong></td><td>約1〜2ヶ月</td></tr><tr><td>大規模</td><td>マッチング・位置情報・外部基幹連携</td><td>2,000万円〜</td><td><strong>個別見積もり</strong></td><td>要件により異なる</td></tr></tbody></table></div><p><strong>※相場は参考値です。</strong>機能の絞り込みや再利用できる部品の有無で、金額は大きく動きます。</p>"
       },
       {
         "h2": "3. 【初期費用を抑える】費用を圧縮する4つの具体策",
@@ -1682,8 +2087,8 @@
   },
   {
     "filename": "082-flutter-vs-react-native-selection-guide.html",
-    "title": "FlutterとReact Nativeを比較｜開発費用・保守性で選ぶクロスプラットフォーム開発の判断基準 | Ill（イル）株式会社",
-    "headline": "FlutterとReact Nativeを比較｜開発費用・保守性で選ぶクロスプラットフォーム開発の判断基準",
+    "title": "FlutterとReact Nativeを比較｜開発費用・保守性で選ぶ判断基準 | Ill（イル）株式会社",
+    "headline": "FlutterとReact Nativeを比較｜開発費用・保守性で選ぶ判断基準",
     "description": "FlutterとReact Nativeの違いを、開発費用・採用しやすさ・保守性・パフォーマンスの観点で比較。新規アプリ開発でどちらを選ぶべきかの判断基準を、発注者向けにわかりやすく解説します。",
     "keywords": "Flutter React Native 比較,クロスプラットフォーム 開発 費用,Flutter 開発 費用,React Native 選び方,アプリ 開発 フレームワーク",
     "category_id": "system-dev",
@@ -1757,7 +2162,7 @@
       },
       {
         "h2": "2. 【用途別の相場】業務システム・予約・会員サイト・ポータルの目安",
-        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>用途</th><th>主な機能</th><th>一般的な受託相場の目安</th><th>Ill（イル）の概算</th></tr></thead><tbody><tr><td>業務管理システム</td><td>データ登録・検索・権限・帳票出力</td><td>400万〜1,000万円</td><td><strong>150万〜400万円</strong></td></tr><tr><td>予約システム</td><td>カレンダー・空き枠管理・通知・決済</td><td>300万〜800万円</td><td><strong>120万〜300万円</strong></td></tr><tr><td>会員サイト・マイページ</td><td>会員登録・認証・コンテンツ出し分け</td><td>300万〜900万円</td><td><strong>120万〜320万円</strong></td></tr><tr><td>B2Bポータル</td><td>取引先別権限・受発注・請求連携</td><td>800万〜2,000万円</td><td><strong>300万〜700万円</strong></td></tr></tbody></table></div><p><strong>※相場は参考値</strong>で、要件により上下します。正確な金額は要件整理後の見積もりで確定します。</p>"
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>用途</th><th>主な機能</th><th>一般的な受託相場の目安</th><th>Ill（イル）の概算</th></tr></thead><tbody><tr><td>業務管理システム</td><td>データ登録・検索・権限・帳票出力</td><td>400万〜1,000万円</td><td><strong>30万〜300万円</strong></td></tr><tr><td>予約システム</td><td>カレンダー・空き枠管理・通知・決済</td><td>300万〜800万円</td><td><strong>20万〜250万円</strong></td></tr><tr><td>会員サイト・マイページ</td><td>会員登録・認証・コンテンツ出し分け</td><td>300万〜900万円</td><td><strong>20万〜250万円</strong></td></tr><tr><td>B2Bポータル</td><td>取引先別権限・受発注・請求連携</td><td>800万〜2,000万円</td><td><strong>100万円〜（個別見積もり）</strong></td></tr></tbody></table></div><p><strong>※相場は参考値</strong>で、要件により上下します。正確な金額は要件整理後の見積もりで確定します。</p>"
       },
       {
         "h2": "3. 【見落としがち】開発費以外にかかる4つの費用",
@@ -1862,8 +2267,8 @@
   },
   {
     "filename": "086-app-store-review-rejection-avoidance-guide.html",
-    "title": "アプリのストア審査に落ちる原因と対策｜App Store・Google Playのリジェクト回避ガイド | Ill（イル）株式会社",
-    "headline": "アプリのストア審査に落ちる原因と対策｜App Store・Google Playのリジェクト回避ガイド",
+    "title": "アプリのストア審査に落ちる原因と対策｜リジェクト回避ガイド | Ill（イル）株式会社",
+    "headline": "アプリのストア審査に落ちる原因と対策｜リジェクト回避ガイド",
     "description": "iOSアプリ・Androidアプリのストア審査でリジェクトされる代表的な原因と、事前に確認すべき対策を解説。公開スケジュールを遅らせないための準備と、審査対応の費用感もまとめました。",
     "keywords": "アプリ 審査 リジェクト,App Store 審査 落ちる,Google Play 審査 対策,アプリ ストア申請 代行,アプリ リリース 準備",
     "category_id": "system-dev",
@@ -1907,8 +2312,8 @@
   },
   {
     "filename": "087-generative-ai-app-development-cost-guide.html",
-    "title": "生成AIアプリの開発費用と進め方｜ChatGPT・Claude API活用で作る業務AIの相場 | Ill（イル）株式会社",
-    "headline": "生成AIアプリの開発費用と進め方｜ChatGPT・Claude API活用で作る業務AIの相場",
+    "title": "生成AIアプリの開発費用と進め方｜API活用で作る業務AIの相場 | Ill（イル）株式会社",
+    "headline": "生成AIアプリの開発費用と進め方｜API活用で作る業務AIの相場",
     "description": "生成AI（ChatGPT・Claude等）のAPIを活用した業務アプリ・サービスの開発費用と進め方を解説。PoCから本番開発までの費用目安、API利用料の考え方、失敗しない要件の決め方をまとめました。",
     "keywords": "生成AI アプリ 開発 費用,ChatGPT API 開発 費用,AI アプリ 開発 相場,生成AI 業務 システム,LLM アプリ 開発",
     "category_id": "genai",
@@ -1937,7 +2342,7 @@
       },
       {
         "h2": "2. 【フェーズ別の費用目安】PoCから本番運用まで",
-        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>フェーズ</th><th>内容</th><th>一般的な相場の目安</th><th>Ill（イル）の概算</th><th>期間</th></tr></thead><tbody><tr><td>PoC（検証）</td><td>1業務で精度・効果を検証</td><td>100万〜300万円</td><td><strong>50万〜120万円</strong></td><td>2〜4週間</td></tr><tr><td>本番開発</td><td>画面・権限・履歴・既存システム連携</td><td>500万〜1,500万円</td><td><strong>150万〜500万円</strong></td><td>1.5〜3ヶ月</td></tr><tr><td>拡張・精度改善</td><td>社内データ連携（RAG）・他業務への展開</td><td>案件ごと</td><td><strong>機能単位で見積もり</strong></td><td>随時</td></tr></tbody></table></div><p><strong>※相場は参考値です。</strong>APIの利用料（従量課金）は、開発費とは別に毎月かかります。</p>"
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>フェーズ</th><th>内容</th><th>一般的な相場の目安</th><th>Ill（イル）の概算</th><th>期間</th></tr></thead><tbody><tr><td>PoC（検証）</td><td>1業務で精度・効果を検証</td><td>100万〜300万円</td><td><strong>10万〜50万円</strong></td><td>2〜4週間</td></tr><tr><td>本番開発</td><td>画面・権限・履歴・既存システム連携</td><td>500万〜1,500万円</td><td><strong>100万〜300万円（目安）</strong></td><td>1.5〜3ヶ月</td></tr><tr><td>拡張・精度改善</td><td>社内データ連携（RAG）・他業務への展開</td><td>案件ごと</td><td><strong>機能単位で見積もり</strong></td><td>随時</td></tr></tbody></table></div><p><strong>※相場は参考値です。</strong>APIの利用料（従量課金）は、開発費とは別に毎月かかります。</p>"
       },
       {
         "h2": "3. 【API利用料】毎月のランニングコストの考え方",
@@ -1990,7 +2395,7 @@
       },
       {
         "h2": "4. 【Ill（イル）の体制】低コストと品質を両立する開発の進め方",
-        "text": "<p><strong>Ill（イル）株式会社</strong>は、要件定義と品質管理を担当するリードエンジニアが顧客と直接対話し、開発チームとの橋渡しを担う<strong>ハイブリッド体制</strong>で開発しています。生成AIを活用したコーディング・テストの自動化と組み合わせることで、品質を守りながら価格を抑えています。</p><p>オフショア開発をすでに検討中の方の、体制や契約内容のセカンドオピニオンも承ります。</p>"
+        "text": "<p><strong>Ill（イル）株式会社</strong>は、日本側のリードエンジニアが顧客と直接対話して要件定義と品質管理を担い、ベトナムのオフショア開発チームとの橋渡しを行う<strong>ハイブリッド体制</strong>で開発しています。生成AIを活用したコーディング・テストの自動化と組み合わせることで、品質を守りながら価格を抑えています。</p><p>オフショア開発をすでに検討中の方の、体制や契約内容のセカンドオピニオンも承ります。</p>"
       }
     ],
     "enrichment": "default"
@@ -2027,7 +2432,7 @@
       },
       {
         "h2": "2. 【損益分岐点】SaaSと独自開発の総コスト比較",
-        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>比較項目</th><th>月額SaaS</th><th>独自開発</th></tr></thead><tbody><tr><td>初期費用</td><td>数万円〜（低い）</td><td><strong>120万〜400万円程度（要件による）</strong></td></tr><tr><td>月額費用</td><td>ユーザー・店舗数に応じて増加</td><td><strong>サーバー費中心で数千円〜数万円</strong></td></tr><tr><td>機能の自由度</td><td>標準機能の範囲内</td><td><strong>業務に合わせて自由に設計</strong></td></tr><tr><td>外部連携</td><td>対応サービスに限定</td><td><strong>基幹・会計・CRMなどと連携可能</strong></td></tr><tr><td>3年総額の傾向</td><td>拠点・利用者が増えるほど膨らむ</td><td><strong>規模が大きいほど有利になりやすい</strong></td></tr></tbody></table></div><p><strong>※金額は目安</strong>です。ご利用中のSaaSの月額費用に36を掛けた金額と、独自開発の見積もり＋3年分の運用費を比べると、判断しやすくなります。</p>"
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>比較項目</th><th>月額SaaS</th><th>独自開発</th></tr></thead><tbody><tr><td>初期費用</td><td>数万円〜（低い）</td><td><strong>20万〜250万円程度（要件による）</strong></td></tr><tr><td>月額費用</td><td>ユーザー・店舗数に応じて増加</td><td><strong>サーバー費中心で数千円〜数万円</strong></td></tr><tr><td>機能の自由度</td><td>標準機能の範囲内</td><td><strong>業務に合わせて自由に設計</strong></td></tr><tr><td>外部連携</td><td>対応サービスに限定</td><td><strong>基幹・会計・CRMなどと連携可能</strong></td></tr><tr><td>3年総額の傾向</td><td>拠点・利用者が増えるほど膨らむ</td><td><strong>規模が大きいほど有利になりやすい</strong></td></tr></tbody></table></div><p><strong>※金額は目安</strong>です。ご利用中のSaaSの月額費用に36を掛けた金額と、独自開発の見積もり＋3年分の運用費を比べると、判断しやすくなります。</p>"
       },
       {
         "h2": "3. 【機能設計】業種ごとに必要になる主な機能",
@@ -2072,7 +2477,7 @@
       },
       {
         "h2": "2. 【機能別の目安】会員サイトに必要な機能と費用の考え方",
-        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>機能</th><th>内容</th><th>費用への影響</th></tr></thead><tbody><tr><td>会員登録・ログイン</td><td>メール認証・パスワード再設定・SNSログイン</td><td>基本機能（実績ある部品で低コスト化）</td></tr><tr><td>マイページ</td><td>プロフィール編集・履歴表示</td><td>表示項目の数で変動</td></tr><tr><td>権限管理</td><td>会員ランク・企業と個人の区別・管理者権限</td><td><strong>種類が増えるほど設計・テスト工数が増加</strong></td></tr><tr><td>決済・サブスク</td><td>月額・年額課金、プラン変更、解約処理</td><td><strong>決済代行の連携と例外処理が必要で工数大</strong></td></tr><tr><td>管理画面</td><td>会員一覧・検索・手動操作・CSV出力</td><td>運用の手間に直結するため重要</td></tr></tbody></table></div><p>目安として、基本機能のみの会員サイトは<strong>120万〜300万円程度</strong>、サブスク課金や複数権限を含む場合は<strong>300万〜700万円程度</strong>が、Ill（イル）株式会社での概算の範囲です。</p>"
+        "text": "<div class=\"article-table-wrapper\"><table class=\"article-table\"><thead><tr><th>機能</th><th>内容</th><th>費用への影響</th></tr></thead><tbody><tr><td>会員登録・ログイン</td><td>メール認証・パスワード再設定・SNSログイン</td><td>基本機能（実績ある部品で低コスト化）</td></tr><tr><td>マイページ</td><td>プロフィール編集・履歴表示</td><td>表示項目の数で変動</td></tr><tr><td>権限管理</td><td>会員ランク・企業と個人の区別・管理者権限</td><td><strong>種類が増えるほど設計・テスト工数が増加</strong></td></tr><tr><td>決済・サブスク</td><td>月額・年額課金、プラン変更、解約処理</td><td><strong>決済代行の連携と例外処理が必要で工数大</strong></td></tr><tr><td>管理画面</td><td>会員一覧・検索・手動操作・CSV出力</td><td>運用の手間に直結するため重要</td></tr></tbody></table></div><p>目安として、基本機能のみの会員サイトは<strong>20万〜100万円程度（MVP）</strong>、サブスク課金や複数権限を含む場合は<strong>100万〜300万円程度</strong>が、Ill（イル）株式会社での概算の範囲です。</p>"
       },
       {
         "h2": "3. 【セキュリティ】会員データを預かる際に必須の対策",
@@ -2170,7 +2575,7 @@
       },
       {
         "h2": "4. 【短縮の方法】品質を落とさずに納期を早める3つの工夫",
-        "text": "<div class=\"checklist-box\"><ul><li><strong>機能の絞り込み（MVP）</strong>: 最初に公開する範囲を最小にし、早くリリースして学ぶ。</li><li><strong>並行開発</strong>: 画面・サーバー・外部連携の作業を分離し、同時に進める。</li><li><strong>生成AIの活用</strong>: 定型コードの生成・テストの自動化で、実装・検証の時間を短縮。</li></ul></div><p><strong>Ill（イル）株式会社</strong>は、生成AIを徹底活用し、小規模なシステムなら最短1ヶ月程度での初回リリースをご提案しています。納期が決まっている案件の逆算スケジュール作成も無料でご相談ください。</p>"
+        "text": "<div class=\"checklist-box\"><ul><li><strong>機能の絞り込み（MVP）</strong>: 最初に公開する範囲を最小にし、早くリリースして学ぶ。</li><li><strong>並行開発</strong>: 画面・サーバー・外部連携の作業を分離し、同時に進める。</li><li><strong>生成AIの活用</strong>: 定型コードの生成・テストの自動化で、実装・検証の時間を短縮。</li></ul></div><p><strong>Ill（イル）株式会社</strong>は、生成AIを徹底活用し、MVP（最小限の製品）であれば、数日〜数週間での初回リリースをご提案しています。納期が決まっている案件の逆算スケジュール作成も無料でご相談ください。</p>"
       }
     ],
     "enrichment": "default"
