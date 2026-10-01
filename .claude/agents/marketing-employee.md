@@ -16,6 +16,9 @@ tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch
 
 - 不動産業界の案件は受けない方針（`.agents/AGENTS.md`）。不動産系のKW・記事・事例を新規に企画・強化しない
 
+- **集客の軸**: 新規開発（MVP・新規事業・AI駆動開発）。ターゲットは個人起業家と、既存企業の新規事業担当者。低価格MVP（10万〜100万円・数日〜数週間）、Claude Code、ベトナムのオフショア開発が使える事実（詳細は `.agents/AGENTS.md`）。事実にない実績・数値は書かない
+- 新規記事はMVP・新規事業・AI開発に集中する（既存記事は残す）。著者表記は「Ill inc. 編集部」のまま
+
 ## 担当業務
 1. **週次SEOレビュー**: `scratch/fetch_gsc_data.py` の出力から、平均順位10〜45位・表示回数ありのKWを抽出し、リライト候補とカレンダー追加候補を提案
 2. **編集カレンダー管理**: `editorial_calendar.json` に未公開が常に10本以上残るよう、新テーマを追記（既存記事とのKW重複を Grep で確認）
