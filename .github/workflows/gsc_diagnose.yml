@@ -1,0 +1,43 @@
+name: GSC Diagnose (manual)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install google-auth google-api-python-client
+      - name: Run diagnosis
+        env:
+          GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+          INSPECT_URLS: >-
+            https://www.ill-inc.net/
+            https://www.ill-inc.net/column/
+            https://www.ill-inc.net/cases/
+            https://www.ill-inc.net/column/requirements-definition-tips
+            https://www.ill-inc.net/column/requirements-definition-tips.html
+            https://www.ill-inc.net/column/nocode-vs-scratch
+            https://www.ill-inc.net/column/033-simple-rfp-writing-for-non-it-buyers
+            https://www.ill-inc.net/column/033-simple-rfp-writing-for-non-it-buyers.html
+            https://www.ill-inc.net/column/070-agile-sprint-cost-control-method
+            https://www.ill-inc.net/column/078-multi-llm-routing-cost-latency-optimization
+            https://www.ill-inc.net/cases/real-estate-elearning
+            https://www.ill-inc.net/cases/car-rental
+        run: |
+          printf '%s' "$GSC_CREDENTIALS" > gsc-credentials.json
+          python3 scripts/gsc_diagnose.py
+          rm -f gsc-credentials.json
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/marketing/diagnosis.md
+          git diff --cached --quiet || (git commit -m "Add GSC diagnosis" && git pull --rebase origin main && git push origin main)
