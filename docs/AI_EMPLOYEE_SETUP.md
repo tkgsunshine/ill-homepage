@@ -24,3 +24,13 @@ AI社員の定義: `.claude/agents/marketing-employee.md`（Claude Codeで `@mar
 
 ## 人間が承認すべきもの
 価格・事例の記載、CTA/サイト構造の大幅変更、外部への自動投稿の有効化。
+
+## 週次GSCレポート（導入済み）
+`.github/workflows/weekly_gsc_report.yml` が毎週月曜9:07 JSTに `docs/marketing/weekly/YYYY-MM-DD.md` を生成します（リライト候補KW・低CTRページ）。AI社員はこの最新レポートを読んで施策を提案します。
+
+### 有効化手順（人間の作業）
+1. Google Cloud でサービスアカウントを作成し、Search Console API を有効化、JSONキーを発行
+2. Search Console の「設定 > ユーザーと権限」にそのサービスアカウントのメールを「制限付き」で追加
+3. GitHub リポジトリ Settings > Secrets に `GSC_CREDENTIALS`（JSON全文）を登録
+4. （任意）Variables に `GSC_SITE_URL`（例 `sc-domain:ill-inc.net`）。未設定なら最初のプロパティを使用
+5. Actions タブから "Weekly GSC Report" を手動実行して動作確認
