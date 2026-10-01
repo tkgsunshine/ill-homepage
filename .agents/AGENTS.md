@@ -29,3 +29,5 @@
 8. **Content direction**: existing columns stay as they are. **New columns focus on MVP, new business launch, and AI-driven development.** Avoid generic "SMB DX / legacy migration" topics unless they connect to new development.
 9. **Author byline**: keep **「Ill inc. 編集部」** (no personal names).
 10. **No official SNS/company accounts exist** — do not add `sameAs` or invent profile URLs.
+11. **Do not publish contract terms in columns**: no payment terms (e.g. 着手金/分割比率), no free-warranty / 瑕疵担保 periods, no fixed unit prices (人月単価). These are decided per client. Allowed: "月額数万円からの継続保守プランあり（条件は個別案内）" and the MVP price/time range above.
+12. **Price consistency**: Ill-side prices in columns follow this ladder — MVP 10万〜100万円（数日〜数週間）／標準 100万〜300万円（目安・約1〜2ヶ月）／大規模 個別見積もり. Do not invent other Ill-side numbers.

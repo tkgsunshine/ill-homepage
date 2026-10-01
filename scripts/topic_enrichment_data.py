@@ -21,22 +21,22 @@ TOPIC_CONFIGS = {
         <td><strong>スモールCRM（10名規模）</strong></td>
         <td>顧客一覧、商談ステータス管理、検索、CSV入出力</td>
         <td>300万〜500万円</td>
-        <td><strong>100万〜180万円</strong></td>
-        <td>約1ヶ月</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
       </tr>
       <tr>
         <td><strong>標準CRM（30〜50名規模）</strong></td>
         <td>権限管理、LINE・メール自動連携、帳票・見積書PDF出力</td>
         <td>600万〜1,200万円</td>
-        <td><strong>200万〜350万円</strong></td>
-        <td>約2ヶ月</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
       </tr>
       <tr>
         <td><strong>高機能CRM（100名以上）</strong></td>
         <td>AI自動マッチング、反響自動集計、外部基幹・会計API連携</td>
         <td>1,500万〜3,000万円</td>
-        <td><strong>450万〜800万円</strong></td>
-        <td>約3〜4ヶ月</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
       </tr>
     </tbody>
   </table>
@@ -74,22 +74,22 @@ TOPIC_CONFIGS = {
         <td><strong>MVP（基本検証版）</strong></td>
         <td>荷主・ドライバー登録、案件一覧、手動マッチング、簡易チャット</td>
         <td>400万〜700万円</td>
-        <td><strong>150万〜250万円</strong></td>
-        <td>1〜1.5ヶ月</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
       </tr>
       <tr>
         <td><strong>標準配車システム</strong></td>
         <td>GPS位置トラッキング、最適ルート計算API、運行状況ステータス</td>
         <td>900万〜1,800万円</td>
-        <td><strong>300万〜500万円</strong></td>
-        <td>2〜3ヶ月</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
       </tr>
       <tr>
         <td><strong>大規模求荷求車基盤</strong></td>
         <td>自動エスクロー決済、請求書・日報自動発行、ドライバー相互評価</td>
         <td>2,000万〜4,000万円</td>
-        <td><strong>600万〜1,000万円</strong></td>
-        <td>3〜4ヶ月</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
       </tr>
     </tbody>
   </table>
@@ -123,22 +123,22 @@ TOPIC_CONFIGS = {
         <td><strong>プロトタイプ（PoC）</strong></td>
         <td>ユーザー/事業者登録、条件検索、プロフィール、マッチング機能</td>
         <td>350万〜600万円</td>
-        <td><strong>120万〜200万円</strong></td>
-        <td>3〜4週間</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
       </tr>
       <tr>
         <td><strong>本番商用版（MVP）</strong></td>
         <td>Stripe決済（手数料自動徴収）、リアルタイムチャット、通知</td>
         <td>700万〜1,500万円</td>
-        <td><strong>250万〜450万円</strong></td>
-        <td>1.5〜2.5ヶ月</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
       </tr>
       <tr>
         <td><strong>拡張スケール版</strong></td>
         <td>本人確認（eKYC）、AIレコメンド、不正検知、多言語対応</td>
         <td>1,800万〜3,500万円</td>
-        <td><strong>550万〜900万円</strong></td>
-        <td>3〜4ヶ月</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
       </tr>
     </tbody>
   </table>
@@ -171,13 +171,13 @@ TOPIC_CONFIGS = {
         <td><strong>初期費用（導入時）</strong></td>
         <td>採用手数料 150万〜250万円（年収の35%）</td>
         <td>初期着手金 100万〜300万円</td>
-        <td><strong>0円（開発実費のみ）</strong></td>
+        <td><strong>個別にご相談</strong></td>
       </tr>
       <tr>
         <td><strong>月額コスト（ランニング）</strong></td>
         <td>給与＋社保・福利厚生 60万〜90万円/月</td>
         <td>人月単価 140万〜220万円/人月</td>
-        <td><strong>人月単価 60万〜85万円/人月</strong></td>
+        <td><strong>案件に応じて個別お見積もり</strong></td>
       </tr>
       <tr>
         <td><strong>リソースの柔軟性</strong></td>
@@ -189,7 +189,7 @@ TOPIC_CONFIGS = {
         <td><strong>離職・退職リスク</strong></td>
         <td>退職によるブラックボックス化リスク大</td>
         <td>担当変更による引き継ぎ遅延あり</td>
-        <td><strong>組織としてコード品質と保守を継続保証</strong></td>
+        <td><strong>組織としてコード品質と保守を継続的に管理</strong></td>
       </tr>
     </tbody>
   </table>
@@ -223,22 +223,22 @@ TOPIC_CONFIGS = {
         <td><strong>簡易台帳・マスタ管理</strong></td>
         <td>複数人同時編集、入力制御、履歴管理、CSVインポート</td>
         <td>250万〜450万円</td>
-        <td><strong>80万〜150万円</strong></td>
-        <td>約3〜4週間</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
       </tr>
       <tr>
         <td><strong>業務ワークフロー・申請</strong></td>
         <td>申請・承認ルート、権限管理、ステータス自動通知</td>
         <td>500万〜900万円</td>
-        <td><strong>180万〜300万円</strong></td>
-        <td>約1.5〜2ヶ月</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
       </tr>
       <tr>
         <td><strong>基幹連動型データベース</strong></td>
         <td>在庫・受発注・請求データ自動連携、帳票PDF自動生成</td>
         <td>1,000万〜2,200万円</td>
-        <td><strong>350万〜600万円</strong></td>
-        <td>約2.5〜3.5ヶ月</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
       </tr>
     </tbody>
   </table>
@@ -272,22 +272,22 @@ TOPIC_CONFIGS = {
         <td><strong>社内FAQボット</strong></td>
         <td>社内マニュアルPDF投入、Slack/Teams通知連携</td>
         <td>200万〜400万円</td>
-        <td><strong>80万〜150万円</strong></td>
-        <td>約2〜3週間</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
       </tr>
       <tr>
         <td><strong>セキュアRAG検索基盤</strong></td>
         <td>契約書・社内規定全文検索、出典元の明示、権限管理</td>
         <td>500万〜1,000万円</td>
-        <td><strong>180万〜320万円</strong></td>
-        <td>約1〜1.5ヶ月</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
       </tr>
       <tr>
         <td><strong>AI業務自動化エージェント</strong></td>
         <td>メール下書き自動作成、見積データ抽出、外部API連携実行</td>
         <td>800万〜1,600万円</td>
-        <td><strong>280万〜500万円</strong></td>
-        <td>約2〜3ヶ月</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
       </tr>
     </tbody>
   </table>
@@ -321,28 +321,28 @@ TOPIC_CONFIGS = {
         <td><strong>要件定義・基本設計</strong></td>
         <td>15〜20%</td>
         <td>150万〜300万円</td>
-        <td><strong>40万〜80万円</strong></td>
+        <td><strong>10万〜30万円</strong></td>
         <td>動くプロトタイプで合意形成を高速化</td>
       </tr>
       <tr>
         <td><strong>UI/UX設計・デザイン</strong></td>
         <td>15〜20%</td>
         <td>150万〜250万円</td>
-        <td><strong>30万〜60万円</strong></td>
+        <td><strong>10万〜30万円</strong></td>
         <td>洗練されたコンポーネント資産の再利用</td>
       </tr>
       <tr>
         <td><strong>プログラミング・実装</strong></td>
         <td>40〜50%</td>
         <td>400万〜800万円</td>
-        <td><strong>120万〜250万円</strong></td>
+        <td><strong>60万〜180万円</strong></td>
         <td>生成AI活用によるコード作成の自動化</td>
       </tr>
       <tr>
         <td><strong>テスト・検証・納品</strong></td>
         <td>15〜20%</td>
         <td>150万〜250万円</td>
-        <td><strong>30万〜60万円</strong></td>
+        <td><strong>10万〜30万円</strong></td>
         <td>CI/CDによる結合テスト自動化</td>
       </tr>
     </tbody>
@@ -530,12 +530,12 @@ TOPIC_CONFIGS = {
       <tr>
         <td><strong>初期構築費用</strong></td>
         <td>800万〜2,500万円</td>
-        <td><strong>150万〜350万円</strong></td>
+        <td><strong>100万〜300万円（目安）</strong></td>
       </tr>
       <tr>
         <td><strong>構築期間</strong></td>
         <td>5〜8ヶ月</td>
-        <td><strong>1.5〜2.5ヶ月</strong></td>
+        <td><strong>約1〜2ヶ月</strong></td>
       </tr>
       <tr>
         <td><strong>セキュリティ・PCI DSS</strong></td>
@@ -632,7 +632,7 @@ TOPIC_CONFIGS = {
       </tr>
       <tr>
         <td><strong>Ill（イル）独自API連携</strong></td>
-        <td><strong>120万〜220万円</strong></td>
+        <td><strong>100万〜300万円（目安）</strong></td>
         <td><strong>1万〜3万円/月（API実費のみ）</strong></td>
         <td><strong>◎ 自社DB・予約システムと完全連動</strong></td>
       </tr>
@@ -668,22 +668,22 @@ TOPIC_CONFIGS = {
         <td><strong>単一ポータル定期巡回</strong></td>
         <td>1〜2サイト、CSV/スプレッドシート自動出力</td>
         <td>150万〜300万円</td>
-        <td><strong>60万〜120万円</strong></td>
-        <td>約1〜2週間</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
       </tr>
       <tr>
         <td><strong>複数サイト差分検知</strong></td>
         <td>3〜5サイト、重複排除、画像保存、Slack通知</td>
         <td>350万〜600万円</td>
-        <td><strong>150万〜250万円</strong></td>
-        <td>約3〜4週間</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
       </tr>
       <tr>
         <td><strong>大規模クローリング基盤</strong></td>
         <td>10サイト以上、IP分散・ブロック回避、DB自動蓄積API</td>
         <td>700万〜1,200万円</td>
-        <td><strong>280万〜450万円</strong></td>
-        <td>約1.5〜2ヶ月</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
       </tr>
     </tbody>
   </table>
@@ -742,9 +742,9 @@ TOPIC_CONFIGS = {
 <p>さらに、AIコーディングツール「Claude Code」を活用した開発と、ベトナムのオフショア開発チームを組み合わせたハイブリッド体制で、開発工数を抑えています。MVPであれば、<strong>10万〜100万円・数日〜数週間</strong>が目安です（要件により変動します）。</p>''',
         'extra_faqs': [
             ('Q. 開発費用の支払いタイミングはどのようになっていますか？',
-             'A. 原則として着手金（50%）と納品完了検収後（50%）の2分割ですが、ご予算やご都合に応じた柔軟な分割払いや月額スプリント契約もご相談可能です。'),
+             'A. お支払い条件は、案件の規模やご状況に応じて個別にご相談のうえ決定します。まずはお気軽にご相談ください。'),
             ('Q. 納品後のサポートや保守体制はどうなっていますか？',
-             'A. 納品後の無償瑕疵担保期間を設けているほか、月額数万円からの柔軟な継続保守プランをご用意しております。')
+             'A. 納品後は、月額数万円からの継続保守プランをご用意しております。対応範囲や条件は、案件に応じて個別にご案内します。')
         ]
     }
 }
