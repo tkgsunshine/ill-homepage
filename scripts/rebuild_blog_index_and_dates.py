@@ -127,6 +127,9 @@ def main():
         ALL_ARTICLES_CHRONO.append(filename)
         print(f"Dynamically registered new article: {filename}")
 
+    # Drop hardcoded entries whose files were removed (e.g. merged duplicate articles)
+    ALL_ARTICLES_CHRONO[:] = [fn for fn in ALL_ARTICLES_CHRONO if os.path.exists(os.path.join(COLUMN_DIR, fn))]
+
     # Step 1: Update individual HTML files for the 14 recent articles with their new dates
     for filename, (period_date, iso_date) in RECENT_DATES.items():
         filepath = os.path.join(COLUMN_DIR, filename)
@@ -231,7 +234,7 @@ def main():
     for filename in latest_five:
         meta = articles_meta[filename]
         sidebar_html_lines.append(f"""              <li class="related-item">
-                <a href="/column/{filename}">
+                <a href="/column/{filename.removesuffix('.html')}">
                   <span class="related-item-date">{meta["period_date"]}</span>
                   <span class="related-item-title">{meta["title"]}</span>
                 </a>
@@ -271,7 +274,7 @@ def main():
         )
         
         card_html = f"""        <article class="column-card glass-card reveal" data-category="{meta["category_id"]}">
-          <a href="/column/{filename}" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+          <a href="/column/{filename.removesuffix('.html')}" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">{meta["category_name"]}</span>
               {card_svg}
@@ -281,11 +284,11 @@ def main():
             <div class="column-card-meta">
               <time datetime="{meta["date"]}">{meta["period_date"]}</time>
             </div>
-            <a href="/column/{filename}" style="text-decoration: none;">
+            <a href="/column/{filename.removesuffix('.html')}" style="text-decoration: none;">
               <h2 class="column-card-title">{meta["title"]}</h2>
             </a>
             <p class="column-card-excerpt">{meta["excerpt"]}</p>
-            <a href="/column/{filename}" class="column-card-link">記事を読む</a>
+            <a href="/column/{filename.removesuffix('.html')}" class="column-card-link">記事を読む</a>
           </div>
         </article>"""
         hub_cards.append(card_html)
@@ -325,7 +328,7 @@ def main():
         )
         
         card_html = f"""        <article class="column-card glass-card reveal">
-          <a href="column/{filename}" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
+          <a href="column/{filename.removesuffix('.html')}" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">{meta["category_name"]}</span>
               {home_svg}
@@ -335,11 +338,11 @@ def main():
             <div class="column-card-meta">
               <time datetime="{meta["date"]}">{meta["period_date"]}</time>
             </div>
-            <a href="column/{filename}" style="text-decoration: none;">
+            <a href="column/{filename.removesuffix('.html')}" style="text-decoration: none;">
               <h2 class="column-card-title">{meta["title"]}</h2>
             </a>
             <p class="column-card-excerpt">{meta["excerpt"]}</p>
-            <a href="column/{filename}" class="column-card-link">記事を読む</a>
+            <a href="column/{filename.removesuffix('.html')}" class="column-card-link">記事を読む</a>
           </div>
         </article>"""
         home_cards.append(card_html)

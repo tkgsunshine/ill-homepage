@@ -12,6 +12,356 @@
   ],
   "redirects": [
     {
+      "source": "/column/026-non-it-smb-system-development-no-engineer",
+      "destination": "/column/011-non-it-smb-system-development-no-engineer",
+      "permanent": true
+    },
+    {
+      "source": "/column/026-non-it-smb-system-development-no-engineer.html",
+      "destination": "/column/011-non-it-smb-system-development-no-engineer",
+      "permanent": true
+    },
+    {
+      "source": "/column/041-non-it-smb-system-development-no-engineer",
+      "destination": "/column/011-non-it-smb-system-development-no-engineer",
+      "permanent": true
+    },
+    {
+      "source": "/column/041-non-it-smb-system-development-no-engineer.html",
+      "destination": "/column/011-non-it-smb-system-development-no-engineer",
+      "permanent": true
+    },
+    {
+      "source": "/column/056-non-it-smb-system-development-no-engineer",
+      "destination": "/column/011-non-it-smb-system-development-no-engineer",
+      "permanent": true
+    },
+    {
+      "source": "/column/056-non-it-smb-system-development-no-engineer.html",
+      "destination": "/column/011-non-it-smb-system-development-no-engineer",
+      "permanent": true
+    },
+    {
+      "source": "/column/027-hiring-vs-outsourcing-cost-comparison",
+      "destination": "/column/012-hiring-vs-outsourcing-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/027-hiring-vs-outsourcing-cost-comparison.html",
+      "destination": "/column/012-hiring-vs-outsourcing-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/042-hiring-vs-outsourcing-cost-comparison",
+      "destination": "/column/012-hiring-vs-outsourcing-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/042-hiring-vs-outsourcing-cost-comparison.html",
+      "destination": "/column/012-hiring-vs-outsourcing-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/057-hiring-vs-outsourcing-cost-comparison",
+      "destination": "/column/012-hiring-vs-outsourcing-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/057-hiring-vs-outsourcing-cost-comparison.html",
+      "destination": "/column/012-hiring-vs-outsourcing-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/028-excel-to-web-system-dx-cost",
+      "destination": "/column/013-excel-to-web-system-dx-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/028-excel-to-web-system-dx-cost.html",
+      "destination": "/column/013-excel-to-web-system-dx-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/043-excel-to-web-system-dx-cost",
+      "destination": "/column/013-excel-to-web-system-dx-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/043-excel-to-web-system-dx-cost.html",
+      "destination": "/column/013-excel-to-web-system-dx-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/058-excel-to-web-system-dx-cost",
+      "destination": "/column/013-excel-to-web-system-dx-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/058-excel-to-web-system-dx-cost.html",
+      "destination": "/column/013-excel-to-web-system-dx-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/029-non-it-smb-genai-business-efficiency",
+      "destination": "/column/014-non-it-smb-genai-business-efficiency",
+      "permanent": true
+    },
+    {
+      "source": "/column/029-non-it-smb-genai-business-efficiency.html",
+      "destination": "/column/014-non-it-smb-genai-business-efficiency",
+      "permanent": true
+    },
+    {
+      "source": "/column/044-non-it-smb-genai-business-efficiency",
+      "destination": "/column/014-non-it-smb-genai-business-efficiency",
+      "permanent": true
+    },
+    {
+      "source": "/column/044-non-it-smb-genai-business-efficiency.html",
+      "destination": "/column/014-non-it-smb-genai-business-efficiency",
+      "permanent": true
+    },
+    {
+      "source": "/column/059-non-it-smb-genai-business-efficiency",
+      "destination": "/column/014-non-it-smb-genai-business-efficiency",
+      "permanent": true
+    },
+    {
+      "source": "/column/059-non-it-smb-genai-business-efficiency.html",
+      "destination": "/column/014-non-it-smb-genai-business-efficiency",
+      "permanent": true
+    },
+    {
+      "source": "/column/030-smb-system-development-cost-standard",
+      "destination": "/column/015-smb-system-development-cost-standard",
+      "permanent": true
+    },
+    {
+      "source": "/column/030-smb-system-development-cost-standard.html",
+      "destination": "/column/015-smb-system-development-cost-standard",
+      "permanent": true
+    },
+    {
+      "source": "/column/045-smb-system-development-cost-standard",
+      "destination": "/column/015-smb-system-development-cost-standard",
+      "permanent": true
+    },
+    {
+      "source": "/column/045-smb-system-development-cost-standard.html",
+      "destination": "/column/015-smb-system-development-cost-standard",
+      "permanent": true
+    },
+    {
+      "source": "/column/060-smb-system-development-cost-standard",
+      "destination": "/column/015-smb-system-development-cost-standard",
+      "permanent": true
+    },
+    {
+      "source": "/column/060-smb-system-development-cost-standard.html",
+      "destination": "/column/015-smb-system-development-cost-standard",
+      "permanent": true
+    },
+    {
+      "source": "/column/031-nocode-limitations-real-development-cost",
+      "destination": "/column/016-nocode-limitations-real-development-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/031-nocode-limitations-real-development-cost.html",
+      "destination": "/column/016-nocode-limitations-real-development-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/046-nocode-limitations-real-development-cost",
+      "destination": "/column/016-nocode-limitations-real-development-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/046-nocode-limitations-real-development-cost.html",
+      "destination": "/column/016-nocode-limitations-real-development-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/032-non-it-contract-types-risk-management",
+      "destination": "/column/017-non-it-contract-types-risk-management",
+      "permanent": true
+    },
+    {
+      "source": "/column/032-non-it-contract-types-risk-management.html",
+      "destination": "/column/017-non-it-contract-types-risk-management",
+      "permanent": true
+    },
+    {
+      "source": "/column/047-non-it-contract-types-risk-management",
+      "destination": "/column/017-non-it-contract-types-risk-management",
+      "permanent": true
+    },
+    {
+      "source": "/column/047-non-it-contract-types-risk-management.html",
+      "destination": "/column/017-non-it-contract-types-risk-management",
+      "permanent": true
+    },
+    {
+      "source": "/column/033-simple-rfp-writing-for-non-it-buyers",
+      "destination": "/column/018-simple-rfp-writing-for-non-it-buyers",
+      "permanent": true
+    },
+    {
+      "source": "/column/033-simple-rfp-writing-for-non-it-buyers.html",
+      "destination": "/column/018-simple-rfp-writing-for-non-it-buyers",
+      "permanent": true
+    },
+    {
+      "source": "/column/048-simple-rfp-writing-for-non-it-buyers",
+      "destination": "/column/018-simple-rfp-writing-for-non-it-buyers",
+      "permanent": true
+    },
+    {
+      "source": "/column/048-simple-rfp-writing-for-non-it-buyers.html",
+      "destination": "/column/018-simple-rfp-writing-for-non-it-buyers",
+      "permanent": true
+    },
+    {
+      "source": "/column/034-smb-ec-site-development-shopify-cost",
+      "destination": "/column/019-smb-ec-site-development-shopify-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/034-smb-ec-site-development-shopify-cost.html",
+      "destination": "/column/019-smb-ec-site-development-shopify-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/049-smb-ec-site-development-shopify-cost",
+      "destination": "/column/019-smb-ec-site-development-shopify-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/049-smb-ec-site-development-shopify-cost.html",
+      "destination": "/column/019-smb-ec-site-development-shopify-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/035-c2c-sharing-matching-platform-development",
+      "destination": "/column/020-c2c-sharing-matching-platform-development",
+      "permanent": true
+    },
+    {
+      "source": "/column/035-c2c-sharing-matching-platform-development.html",
+      "destination": "/column/020-c2c-sharing-matching-platform-development",
+      "permanent": true
+    },
+    {
+      "source": "/column/050-c2c-sharing-matching-platform-development",
+      "destination": "/column/020-c2c-sharing-matching-platform-development",
+      "permanent": true
+    },
+    {
+      "source": "/column/050-c2c-sharing-matching-platform-development.html",
+      "destination": "/column/020-c2c-sharing-matching-platform-development",
+      "permanent": true
+    },
+    {
+      "source": "/column/036-custom-workflow-management-tool-cost",
+      "destination": "/column/021-custom-workflow-management-tool-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/036-custom-workflow-management-tool-cost.html",
+      "destination": "/column/021-custom-workflow-management-tool-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/051-custom-workflow-management-tool-cost",
+      "destination": "/column/021-custom-workflow-management-tool-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/051-custom-workflow-management-tool-cost.html",
+      "destination": "/column/021-custom-workflow-management-tool-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/037-pwa-web-app-vs-native-cost-comparison",
+      "destination": "/column/022-pwa-web-app-vs-native-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/037-pwa-web-app-vs-native-cost-comparison.html",
+      "destination": "/column/022-pwa-web-app-vs-native-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/052-pwa-web-app-vs-native-cost-comparison",
+      "destination": "/column/022-pwa-web-app-vs-native-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/052-pwa-web-app-vs-native-cost-comparison.html",
+      "destination": "/column/022-pwa-web-app-vs-native-cost-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/column/038-line-api-chatbot-customer-support-cost",
+      "destination": "/column/023-line-api-chatbot-customer-support-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/038-line-api-chatbot-customer-support-cost.html",
+      "destination": "/column/023-line-api-chatbot-customer-support-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/053-line-api-chatbot-customer-support-cost",
+      "destination": "/column/023-line-api-chatbot-customer-support-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/053-line-api-chatbot-customer-support-cost.html",
+      "destination": "/column/023-line-api-chatbot-customer-support-cost",
+      "permanent": true
+    },
+    {
+      "source": "/column/039-filemaker-access-legacy-modernization",
+      "destination": "/column/024-filemaker-access-legacy-modernization",
+      "permanent": true
+    },
+    {
+      "source": "/column/039-filemaker-access-legacy-modernization.html",
+      "destination": "/column/024-filemaker-access-legacy-modernization",
+      "permanent": true
+    },
+    {
+      "source": "/column/054-filemaker-access-legacy-modernization",
+      "destination": "/column/024-filemaker-access-legacy-modernization",
+      "permanent": true
+    },
+    {
+      "source": "/column/054-filemaker-access-legacy-modernization.html",
+      "destination": "/column/024-filemaker-access-legacy-modernization",
+      "permanent": true
+    },
+    {
+      "source": "/column/040-web-scraping-automation-marketing-leads",
+      "destination": "/column/025-web-scraping-automation-marketing-leads",
+      "permanent": true
+    },
+    {
+      "source": "/column/040-web-scraping-automation-marketing-leads.html",
+      "destination": "/column/025-web-scraping-automation-marketing-leads",
+      "permanent": true
+    },
+    {
+      "source": "/column/055-web-scraping-automation-marketing-leads",
+      "destination": "/column/025-web-scraping-automation-marketing-leads",
+      "permanent": true
+    },
+    {
+      "source": "/column/055-web-scraping-automation-marketing-leads.html",
+      "destination": "/column/025-web-scraping-automation-marketing-leads",
+      "permanent": true
+    },
+    {
       "source": "/works",
       "destination": "/cases/",
       "permanent": true
