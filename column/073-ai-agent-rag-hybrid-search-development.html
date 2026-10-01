@@ -231,7 +231,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「ハイブリッド検索（RAG）×AIエージェントで社内ナレッジ検索の回答精度を極限まで高めるシステム構築」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「RAG×AIエージェントで社内ナレッジ検索の精度を高める開発」のビジュアルバナー">
   <defs>
     <linearGradient id="bg_073_ai_agent_rag_hybrid_search_development" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111B2E"/>
@@ -305,7 +305,7 @@
           <p>Ill株式会社が推奨するエンタープライズグレードのRAGパイプラインは、以下の3段階で構成されます。</p><div class="checklist-box"><ul><li><strong>ステップ1：ハイブリッドリトリーバル（Hybrid Retrieval）</strong>: ユーザーの質問から重要なキーワード（型番、法令名、人名）を抽出し、BM25検索とベクトル検索（OpenAI text-embedding-3-large等）を並行実行して候補文書を広範に抽出。</li><li><strong>ステップ2：相互順位融合（RRF）＆ Cross-Encoder リランキング</strong>: Cohere Rerankやbge-rerankerを用いて、抽出された上位数十件のドキュメントと質問の関連度を厳密に再評価し、真に関連性の高い上位3〜5件に絞り込み。</li><li><strong>ステップ3：自律型AIエージェントによる検証と引用元（Cite）明記</strong>: 回答文の各記述がどのドキュメントの何ページ目を根拠にしているかをインライン注釈で提示し、万が一関連情報が見つからない場合はハルシネーション（嘘の回答）を起こさず「社内規程に記載がありません」と誠実に回答。</li></ul></div>
 
           <h2 id="sec-3">3. 【社内AI 開発費用】Ill（イル）株式会社による高精度RAG構築ソリューション</h2>
-          <p>大手コンサルティングファームや大手SIerにエンタープライズRAG開発を相談すると、PoC（概念実証）だけで500万円、本番開発で2,000万円以上の見積もりが提示されることが一般的です。</p><p><strong>Ill（イル）株式会社</strong> では、オープンソースの最新検索エンジン（PostgreSQL pgvector / Qdrant）と実証済みのRAGフレームワークを活用し、<strong>ハイブリッド検索・自動データ取り込みパイプライン・UI画面まで含めたフルシステムを180万〜380万円、最短3〜4週間</strong> で提供します。社内データの機密性を保ちながら、業務時間を大幅に短縮する最高精度の社内AIを実現します。</p>
+          <p>大手コンサルティングファームや大手SIerにエンタープライズRAG開発を相談すると、PoC（概念実証）だけで500万円、本番開発で2,000万円以上の見積もりが提示されることが一般的です。</p><p><strong>Ill（イル）株式会社</strong> では、オープンソースの最新検索エンジン（PostgreSQL pgvector / Qdrant）と実証済みのRAGフレームワークを活用し、<strong>ハイブリッド検索・自動データ取り込みパイプライン・UI画面を備えた社内検索を、まずはMVPで数日〜数週間・10万〜100万円から（フルシステムは個別お見積もり）</strong> で提供します。社内データの機密性を保ちながら、業務時間を大幅に短縮する最高精度の社内AIを実現します。</p>
 
           <h2 id="sec-pricing-table">社内向け生成AI・RAGシステムの導入費用相場と開発期間</h2>
           <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
@@ -325,22 +325,22 @@
         <td><strong>社内FAQボット</strong></td>
         <td>社内マニュアルPDF投入、Slack/Teams通知連携</td>
         <td>200万〜400万円</td>
-        <td><strong>80万〜150万円</strong></td>
-        <td>約2〜3週間</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
       </tr>
       <tr>
         <td><strong>セキュアRAG検索基盤</strong></td>
         <td>契約書・社内規定全文検索、出典元の明示、権限管理</td>
         <td>500万〜1,000万円</td>
-        <td><strong>180万〜320万円</strong></td>
-        <td>約1〜1.5ヶ月</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
       </tr>
       <tr>
         <td><strong>AI業務自動化エージェント</strong></td>
         <td>メール下書き自動作成、見積データ抽出、外部API連携実行</td>
         <td>800万〜1,600万円</td>
-        <td><strong>280万〜500万円</strong></td>
-        <td>約2〜3ヶ月</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
       </tr>
     </tbody>
   </table>
@@ -426,7 +426,7 @@
               <li class="related-item">
                 <a href="/column/078-multi-llm-routing-cost-latency-optimization">
                   <span class="related-item-date">2026.10.01</span>
-                  <span class="related-item-title">Claude・OpenAI・Geminiを自動振り分け！マルチLLMルーティングによるコスト・速度の最適化</span>
+                  <span class="related-item-title">マルチLLMルーティングでAPIコストと速度を最適化</span>
                 </a>
               </li>
               <li class="related-item">
@@ -438,7 +438,7 @@
               <li class="related-item">
                 <a href="/column/076-enterprise-sso-saml-auth-security-cost">
                   <span class="related-item-date">2026.09.30</span>
-                  <span class="related-item-title">B2Bシステムに必須のSAML / SSO（シングルサインオン）連携開発の費用とセキュリティ設計</span>
+                  <span class="related-item-title">SAML/SSO連携開発の費用とセキュリティ設計｜B2B必須</span>
                 </a>
               </li>
               <li class="related-item">
