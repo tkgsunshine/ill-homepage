@@ -69,7 +69,7 @@ def main():
         print(f"Parsed {filename}: Title='{core_title}', BC='{breadcrumb_text}', FAQs={len(qas)}")
 
         # Ensure canonical and OGP URLs are strictly synchronized with this specific article
-        expected_url = f"https://www.ill-inc.net/column/{filename}"
+        expected_url = f"https://www.ill-inc.net/column/{filename.removesuffix('.html')}"  # cleanUrls: canonical has no .html
         content = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{expected_url}">', content)
         content = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{expected_url}">', content)
 
