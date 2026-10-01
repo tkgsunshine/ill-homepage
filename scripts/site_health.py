@@ -65,13 +65,16 @@ def probe(url):
 
 
 def psi(url):
-    q = urllib.parse.urlencode([("url", url), ("strategy", "mobile"), ("category", "performance"), ("category", "seo")])
+    import subprocess, tempfile
+    out = tempfile.mktemp(suffix=".json")
     try:
-        with urllib.request.urlopen("https://www.googleapis.com/pagespeedonline/v5/runPagespeed?" + q, timeout=120) as r:
-            j = json.load(r)
+        subprocess.run(["npx", "--yes", "lighthouse", url, "--quiet", "--output=json", "--output-path=" + out,
+                        "--only-categories=performance,seo", "--form-factor=mobile",
+                        "--chrome-flags=--headless=new --no-sandbox"], check=True, timeout=240,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        lh = json.load(open(out))
     except Exception as e:
         return {"error": str(e)[:100]}
-    lh = j["lighthouseResult"]
     a = lh["audits"]
     g = lambda k: a.get(k, {}).get("displayValue", "-")
     return {"perf": round(lh["categories"]["performance"]["score"] * 100), "seo": round(lh["categories"]["seo"]["score"] * 100),
@@ -89,7 +92,6 @@ for name, cfg in SITES.items():
     lines += ["", "### PageSpeed Insights（モバイル）", ""]
     for u in cfg["psi"]:
         r = psi(u)
-        time.sleep(3)
         lines.append(f"- {u}: " + (json.dumps(r, ensure_ascii=False) if "error" in r else f"性能{r['perf']} / SEO{r['seo']} | LCP {r['LCP']} | CLS {r['CLS']} | TBT {r['TBT']} | FCP {r['FCP']} | サーバー応答 {r['TTFB']} | 転送量 {r['weight']} | 要改善: {', '.join(r['failed'])}"))
     lines.append("")
 os.makedirs("docs/marketing", exist_ok=True)
