@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>システム開発・要件定義のコツと失敗しない仕様策定 | Ill inc. コラム</title>
-  <meta name="description" content="システム開発プロジェクトが失敗する最大の原因は「要件定義（仕様策定）」の失敗にあります。非エンジニアの担当者でも実践できる要件定義の進め方のコツ、開発会社とのコミュニケーションロスを防ぐ方法、そして仕様の肥大化を防ぐミニマル設計手法をわかりやすく解説します。">
-  <meta name="keywords" content="要件定義 コツ,システム開発 失敗原因,仕様策定,コミュニケーション,外注,Ill Inc.">
+  <title>仕様策定とは？要件定義で失敗しない3つのコツ【非エンジニア向け】 | Ill inc. コラム</title>
+  <meta name="description" content="仕様策定（要件定義）の進め方を非エンジニア向けに解説。ビジネス要件とシステム要件の違い、失敗しない3つのコツ、仕様の肥大化を防ぐミニマル設計、よくある質問まで。">
+  <meta name="keywords" content="仕様策定,仕様策定とは,要件定義 コツ,システム開発 要件定義,システム開発 失敗原因,コミュニケーション,外注,Ill Inc.">
   <meta name="author" content="Ill inc. 編集部">
   
   <!-- Robots config -->
@@ -16,8 +16,8 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="システム開発・要件定義のコツと失敗しない仕様策定 | Ill inc. コラム">
-  <meta property="og:description" content="システム開発プロジェクトが失敗する最大の原因は「要件定義（仕様策定）」の失敗にあります。非エンジニアの担当者でも実践できる要件定義の進め方のコツ、開発会社とのコミュニケーションロスを防ぐ方法、そして仕様の肥大化を防ぐミニマル設計手法をわかりやすく解説します。">
+  <meta property="og:title" content="仕様策定とは？要件定義で失敗しない3つのコツ【非エンジニア向け】 | Ill inc. コラム">
+  <meta property="og:description" content="仕様策定（要件定義）の進め方を非エンジニア向けに解説。ビジネス要件とシステム要件の違い、失敗しない3つのコツ、仕様の肥大化を防ぐミニマル設計、よくある質問まで。">
   <meta property="og:url" content="https://www.ill-inc.net/column/requirements-definition-tips.html">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
@@ -26,8 +26,8 @@
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="システム開発・要件定義のコツと失敗しない仕様策定 | Ill inc. コラム">
-  <meta name="twitter:description" content="システム開発プロジェクトが失敗する最大の原因は「要件定義（仕様策定）」の失敗にあります。非エンジニアの担当者でも実践できる要件定義の進め方のコツ、開発会社とのコミュニケーションロスを防ぐ方法、そして仕様の肥大化を防ぐミニマル設計手法をわかりやすく解説します。">
+  <meta name="twitter:title" content="仕様策定とは？要件定義で失敗しない3つのコツ【非エンジニア向け】 | Ill inc. コラム">
+  <meta name="twitter:description" content="仕様策定（要件定義）の進め方を非エンジニア向けに解説。ビジネス要件とシステム要件の違い、失敗しない3つのコツ、仕様の肥大化を防ぐミニマル設計、よくある質問まで。">
   <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
   
   <!-- Favicons -->
@@ -52,11 +52,11 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド",
-    "description": "システム開発プロジェクトが失敗する最大の原因は「要件定義（仕様策定）」の失敗にあります。非エンジニアの担当者でも実践できる要件定義の進め方のコツ、開発会社とのコミュニケーションロスを防ぐ方法、そして仕様の肥大化を防ぐミニマル設計手法をわかりやすく解説します。",
+    "headline": "仕様策定とは？システム開発の要件定義で失敗しない3つのコツ — 非エンジニア向けガイド",
+    "description": "仕様策定（要件定義）の進め方を非エンジニア向けに解説。ビジネス要件とシステム要件の違い、失敗しない3つのコツ、仕様の肥大化を防ぐミニマル設計、よくある質問まで。",
     "image": "https://www.ill-inc.net/ogp.png?v=1",
     "datePublished": "2026-02-15",
-    "dateModified": "2026-02-15",
+    "dateModified": "2026-10-01",
         "author": {
       "@type": "Organization",
       "name": "Ill（イル）株式会社"
@@ -222,7 +222,7 @@
       <!-- Article Header -->
       <header class="article-header">
         <span class="article-category">仕様設計</span>
-        <h1 class="article-title">システム開発の要件定義で失敗しないためのコツ — 非エンジニア向け仕様策定ガイド</h1>
+        <h1 class="article-title">仕様策定とは？システム開発の要件定義で失敗しない3つのコツ — 非エンジニア向けガイド</h1>
         <div class="article-meta-info">
           <div class="article-meta-item">
             <span>公開日: 2026.02.15</span>
@@ -235,7 +235,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「システム開発・要件定義のコツと失敗しない仕様策定」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「仕様策定とは？要件定義で失敗しない3つのコツ」のビジュアルバナー">
   <defs>
     <linearGradient id="bg_requirements_definition_tips" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111B2E"/>
@@ -294,6 +294,10 @@
         
         <!-- Left Column: Main Body Content -->
         <main class="article-body">
+          <div class="checklist-box">
+            <p><strong>仕様策定とは？</strong>システムで「何を実現するか」「どう動かすか」を文書や画面の試作にまとめ、発注者と開発会社の認識をそろえる工程です。要件定義とほぼ同じ意味で使われることが多く、本記事では両者をあわせて、非エンジニアの方でも実践できる進め方を解説します。</p>
+          </div>
+
           
           <p>
             「出来上がったシステムが、現場の業務フローと合わずに使われない」「開発会社と仕様の解釈を巡ってトラブルになった」——システム開発やアプリ開発の失敗事例を分析すると、その原因の7割以上が初期段階の<strong>「要件定義（仕様策定）」</strong>の不備にあります。
