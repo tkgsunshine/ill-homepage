@@ -37,6 +37,8 @@ for url in URLS:
     lines += [f"## {url}", "",
               "- 3回のLCP(ms): " + ", ".join(str(round(r["audits"]["largest-contentful-paint"]["numericValue"])) for r in runs),
               f"- 性能 {round(lh['categories']['performance']['score'] * 100)} / FCP {a['first-contentful-paint']['displayValue']} / LCP {a['largest-contentful-paint']['displayValue']} / CLS {a['cumulative-layout-shift']['displayValue']} / TBT {a['total-blocking-time']['displayValue']}", ""]
+    m = a.get("metrics", {}).get("details", {}).get("items", [{}])[0]
+    lines += ["### metrics(observed vs simulated)", "```", short({k: v for k, v in m.items() if "FirstContentful" in k or "LargestContentful" in k or k in ("firstContentfulPaint", "largestContentfulPaint", "interactive", "speedIndex", "observedSpeedIndex", "totalBlockingTime")}, 900), "```", ""]
     for k in ("lcp-breakdown-insight", "lcp-discovery-insight", "render-blocking-insight", "network-dependency-tree-insight", "cls-culprits-insight", "image-delivery-insight", "font-display-insight", "unused-css-rules", "unused-javascript"):
         if k in a and a[k].get("details"):
             lines += [f"### {k}", "```", short(a[k]["details"], 1500), "```", ""]
