@@ -77,7 +77,9 @@ def psi(url):
         return {"error": str(e)[:100]}
     a = lh["audits"]
     g = lambda k: a.get(k, {}).get("displayValue", "-")
-    return {"perf": round(lh["categories"]["performance"]["score"] * 100), "seo": round(lh["categories"]["seo"]["score"] * 100),
+    m = a.get("metrics", {}).get("details", {}).get("items", [{}])[0]
+    obs = lambda k: f"{m[k] / 1000:.1f}s" if isinstance(m.get(k), (int, float)) else "-"
+    return {"obsFCP": obs("observedFirstContentfulPaint"), "obsLCP": obs("observedLargestContentfulPaint"), "perf": round(lh["categories"]["performance"]["score"] * 100), "seo": round(lh["categories"]["seo"]["score"] * 100),
             "LCP": g("largest-contentful-paint"), "CLS": g("cumulative-layout-shift"), "TBT": g("total-blocking-time"),
             "FCP": g("first-contentful-paint"), "TTFB": g("server-response-time"), "weight": g("total-byte-weight"),
             "failed": [k for k, v in a.items() if v.get("score") == 0 and v.get("scoreDisplayMode") in ("binary", "numeric")][:8]}
@@ -92,7 +94,7 @@ for name, cfg in SITES.items():
     lines += ["", "### PageSpeed Insights（モバイル）", ""]
     for u in cfg["psi"]:
         r = psi(u)
-        lines.append(f"- {u}: " + (json.dumps(r, ensure_ascii=False) if "error" in r else f"性能{r['perf']} / SEO{r['seo']} | LCP {r['LCP']} | CLS {r['CLS']} | TBT {r['TBT']} | FCP {r['FCP']} | サーバー応答 {r['TTFB']} | 転送量 {r['weight']} | 要改善: {', '.join(r['failed'])}"))
+        lines.append(f"- {u}: " + (json.dumps(r, ensure_ascii=False) if "error" in r else f"性能{r['perf']} / SEO{r['seo']} | LCP(推定) {r['LCP']} | 実測 FCP {r['obsFCP']} / LCP {r['obsLCP']} | CLS {r['CLS']} | TBT {r['TBT']} | FCP {r['FCP']} | サーバー応答 {r['TTFB']} | 転送量 {r['weight']} | 要改善: {', '.join(r['failed'])}"))
     lines.append("")
 os.makedirs("docs/marketing", exist_ok=True)
 open("docs/marketing/site-health.md", "w", encoding="utf-8").write("\n".join(lines) + "\n")
