@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>リアルタイム同時編集・Webソケット通信機能を備えた社内ツールの開発費用と設計法 | Ill（イル）株式会社</title>
-  <meta name="description" content="FigmaやNotionのようなリアルタイム同時編集、共同作業、即時チャット・通知機能をWebSocket / WebRTCで低コストに独自実装するアーキテクチャと費用。">
-  <meta name="keywords" content="WebSocket 開発費用,リアルタイム同時編集 実装,Webシステム 共同作業 ツール,Socket.io 開発">
+  <title>AI駆動開発とは？Claude Codeで開発期間と費用を抑える仕組みと、任せてよい範囲 | Ill（イル）株式会社</title>
+  <meta name="description" content="AI駆動開発（AIコーディング）の仕組みを、Claude Codeを例に解説。従来の開発との違い、費用や期間が下がる理由、人が必ず確認すべき範囲、発注者が確認したい点をまとめました。">
+  <meta name="keywords" content="AI駆動開発,Claude Code 開発,AIコーディング 受託開発,生成AI 開発 費用,AI 開発会社">
   <meta name="author" content="Ill inc. 編集部">
   
   <!-- Robots config -->
   <meta name="robots" content="index, follow">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.ill-inc.net/column/077-realtime-websocket-collaboration-tool-cost">
+  <link rel="canonical" href="https://www.ill-inc.net/column/096-ai-driven-development-claude-code-explained">
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="リアルタイム同時編集・Webソケット通信機能を備えた社内ツールの開発費用と設計法 | Ill inc. コラム">
-  <meta property="og:description" content="FigmaやNotionのようなリアルタイム同時編集、共同作業、即時チャット・通知機能をWebSocket / WebRTCで低コストに独自実装するアーキテクチャと費用。">
-  <meta property="og:url" content="https://www.ill-inc.net/column/077-realtime-websocket-collaboration-tool-cost">
+  <meta property="og:title" content="AI駆動開発とは？Claude Codeで開発期間と費用を抑える仕組みと、任せてよい範囲 | Ill inc. コラム">
+  <meta property="og:description" content="AI駆動開発（AIコーディング）の仕組みを、Claude Codeを例に解説。従来の開発との違い、費用や期間が下がる理由、人が必ず確認すべき範囲、発注者が確認したい点をまとめました。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/096-ai-driven-development-claude-code-explained">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
   <meta property="og:image:width" content="1024">
@@ -26,8 +26,8 @@
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="リアルタイム同時編集・Webソケット通信機能を備えた社内ツールの開発費用と設計法 | Ill inc. コラム">
-  <meta name="twitter:description" content="FigmaやNotionのようなリアルタイム同時編集、共同作業、即時チャット・通知機能をWebSocket / WebRTCで低コストに独自実装するアーキテクチャと費用。">
+  <meta name="twitter:title" content="AI駆動開発とは？Claude Codeで開発期間と費用を抑える仕組みと、任せてよい範囲 | Ill inc. コラム">
+  <meta name="twitter:description" content="AI駆動開発（AIコーディング）の仕組みを、Claude Codeを例に解説。従来の開発との違い、費用や期間が下がる理由、人が必ず確認すべき範囲、発注者が確認したい点をまとめました。">
   <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
   
   <!-- Favicons -->
@@ -52,11 +52,11 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "リアルタイム同時編集・Webソケット通信機能を備えた社内ツールの開発費用と設計法",
-    "description": "FigmaやNotionのようなリアルタイム同時編集、共同作業、即時チャット・通知機能をWebSocket / WebRTCで低コストに独自実装するアーキテクチャと費用。",
+    "headline": "AI駆動開発とは？Claude Codeで開発期間と費用を抑える仕組みと、任せてよい範囲",
+    "description": "AI駆動開発（AIコーディング）の仕組みを、Claude Codeを例に解説。従来の開発との違い、費用や期間が下がる理由、人が必ず確認すべき範囲、発注者が確認したい点をまとめました。",
     "image": "https://www.ill-inc.net/ogp.png?v=1",
-    "datePublished": "2026-09-30",
-    "dateModified": "2026-09-30",
+    "datePublished": "2026-10-02",
+    "dateModified": "2026-10-02",
     "author": {
       "@type": "Organization",
       "name": "Ill（イル）株式会社",
@@ -73,7 +73,7 @@
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.ill-inc.net/column/077-realtime-websocket-collaboration-tool-cost"
+      "@id": "https://www.ill-inc.net/column/096-ai-driven-development-claude-code-explained"
     }
   }
   </script>
@@ -117,7 +117,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "WebSocketによるリアルタイム同時編集ツール開発"
+      "name": "AI駆動開発とClaude Codeの仕組み"
     }
   ]
 }
@@ -131,10 +131,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "同時編集時のデータ競合（上書き事故）はどのように防ぎますか？",
+      "name": "AIで作ったシステムは品質や安全性が心配です。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CRDT（無競合複製データ型）やOperational Transformation（OT）、あるいはフィールド単位の楽観的ロックを適用することで、複数人が同時に同じ画面を操作してもデータ破壊が起きない堅牢な排他制御を実現します。"
+        "text": "AIが書いたコードも、人のレビュー・テスト・セキュリティ確認を経て納品します。AIは実装の速度を上げる道具で、設計の判断と最終的な品質の責任は人が持つ、という役割分担が重要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "発注者側がAIのことを知らなくても大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "問題ありません。発注者様に必要なのは、作りたい事業の目的と、必要な機能のイメージです。AIの使い方や技術的な判断は、開発側が担います。"
       }
     },
     {
@@ -207,15 +215,15 @@
     <div class="container">
       
       <div class="breadcrumbs">
-        <span class="breadcrumb-item">WebSocketによるリアルタイム同時編集ツール開発</span>
+        <span class="breadcrumb-item">AI駆動開発とClaude Codeの仕組み</span>
       </div>
 
       <header class="article-header">
-        <span class="article-category">システム開発・アーキテクチャ</span>
-        <h1 class="article-title">リアルタイム同時編集・Webソケット通信機能を備えた社内ツールの開発費用と設計法</h1>
+        <span class="article-category">生成AI・先端技術</span>
+        <h1 class="article-title">AI駆動開発とは？Claude Codeで開発期間と費用を抑える仕組みと、任せてよい範囲</h1>
         <div class="article-meta-info">
           <div class="article-meta-item">
-            <span>公開日: 2026.09.30</span>
+            <span>公開日: 2026.10.02</span>
           </div>
           <div class="article-meta-item">
             <span>著者: Ill inc. 編集部</span>
@@ -225,27 +233,27 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「リアルタイム同時編集・Webソケット通信機能を備えた社内ツールの開発費用と設計法」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「AI駆動開発とは？Claude Codeで開発期間と費用を抑える仕組みと、任せてよい範囲」のビジュアルバナー">
   <defs>
-    <linearGradient id="bg_077_realtime_websocket_collaboration_tool_cost" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg_096_ai_driven_development_claude_code_explained" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111B2E"/>
       <stop offset="0.5" stop-color="#1A2740"/>
       <stop offset="1" stop-color="#141E33"/>
     </linearGradient>
-    <filter id="blur_077_realtime_websocket_collaboration_tool_cost" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+    <filter id="blur_096_ai_driven_development_claude_code_explained" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
       <feGaussianBlur stdDeviation="80"/>
     </filter>
   </defs>
 
   <!-- Clean Background -->
-  <rect width="1000" height="428" fill="url(#bg_077_realtime_websocket_collaboration_tool_cost)"/>
+  <rect width="1000" height="428" fill="url(#bg_096_ai_driven_development_claude_code_explained)"/>
 
   <!-- Soft Ambient Glow Orbs -->
-  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_077_realtime_websocket_collaboration_tool_cost)"/>
-  <circle cx="150" cy="340" r="220" fill="#6366F1" opacity="0.2" filter="url(#blur_077_realtime_websocket_collaboration_tool_cost)"/>
+  <circle cx="850" cy="90" r="240" fill="#00F0FF" opacity="0.25" filter="url(#blur_096_ai_driven_development_claude_code_explained)"/>
+  <circle cx="150" cy="340" r="220" fill="#A855F7" opacity="0.2" filter="url(#blur_096_ai_driven_development_claude_code_explained)"/>
 
   <!-- Subtle Minimal Grid -->
-  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
+  <g opacity="0.12" stroke="#00F0FF" stroke-width="1">
     <line x1="100" y1="0" x2="100" y2="428"/>
     <line x1="250" y1="0" x2="250" y2="428"/>
     <line x1="400" y1="0" x2="400" y2="428"/>
@@ -260,19 +268,19 @@
   <!-- Pure Content: Clean Typography & Key Bullets Only -->
   <g transform="translate(100, 0)">
     <text x="0" y="165" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      共同作業・即時通知をストレスゼロで実現
+      AI駆動開発とは？Claude Codeで
     </text>
     <text x="0" y="225" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      <tspan fill="#38BDF8">WebSocketによるリアルタイム同時編集ツール開発</tspan>
+      <tspan fill="#00F0FF">開発期間と費用を抑える仕組みと、任せてよい範囲</tspan>
     </text>
 
     <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
     <g transform="translate(0, 295)">
       <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#38BDF8">✔</tspan> 競合編集ロックと差分同期　<tspan fill="#38BDF8">✔</tspan> サーバーレスWebSocketで低コスト化
+        <tspan fill="#00F0FF">✔</tspan> 社内データ連携（RAG）　<tspan fill="#00F0FF">✔</tspan> API連携・自動化
       </text>
       <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#38BDF8">✔</tspan> オフライン復帰時の自動再同期
+        <tspan fill="#00F0FF">✔</tspan> 導入ROIの最大化
       </text>
     </g>
   </g>
@@ -282,29 +290,33 @@
       <div class="article-layout">
         <main class="article-body">
           <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
-            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の要点</p>
-            <p style="margin: 0; line-height: 1.9;">FigmaやNotionのようなリアルタイム同時編集、共同作業、即時チャット・通知機能をWebSocket / WebRTCで低コストに独自実装するアーキテクチャと費用。</p>
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">AI駆動開発は、Claude Codeなどのツールでコードの下書きや修正を自動化し、人が設計と確認に集中する開発方法です。実装にかかる時間を減らせるため、期間と費用を抑えやすくなります。ただし、要件の整理・品質確認・セキュリティの判断は人が担い、ここは省略できません。</p>
           </div>
 
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">1. 【WebSocket 開発費用】リアルタイム性が業務効率を劇的に変える</a></li>
-              <li><a href="#sec-2">2. 【リアルタイム同時編集 実装】サーバー負荷とコストを抑えるモダン設計</a></li>
-              <li><a href="#sec-3">3. 【Webシステム 共同作業 ツール】Ill（イル）株式会社の開発支援</a></li>
+              <li><a href="#sec-1">1. 【AI駆動開発とは】AIがコードを書き、人が設計と品質を担う開発手法</a></li>
+              <li><a href="#sec-2">2. 【従来開発との違い】どこが変わり、どこが変わらないか</a></li>
+              <li><a href="#sec-3">3. 【費用が下がる理由】人件費の大半を占める「実装の時間」を圧縮する</a></li>
+              <li><a href="#sec-4">4. 【発注者向け】AI活用の開発会社に確認したい3つの質問</a></li>
               <li><a href="#sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</a></li>
               <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-          <h2 id="sec-1">1. 【WebSocket 開発費用】リアルタイム性が業務効率を劇的に変える</h2>
-          <p>社内での情報共有や現場スタッフとの連携において、「画面を手動リロードしなければ最新状況が分からない」という従来のWebシステムは、タイムラグや重複作業の原因となっていました。</p><p>WebSocketを活用したリアルタイムWebシステムでは、誰かがステータスを変更した瞬間に全ユーザーの画面へミリ秒単位で変更が反映されます。コールセンターの受電状況共有、物流拠点の配車ステータス、複数人での見積書同時作成など、リアルタイム通信の導入により現場の業務スピードは劇的に向上します。</p>
+          <h2 id="sec-1">1. 【AI駆動開発とは】AIがコードを書き、人が設計と品質を担う開発手法</h2>
+          <p>AI駆動開発とは、AIコーディングツールにコードの作成・修正・テスト作成を任せ、人は設計・判断・レビューに集中する開発手法です。代表的なツールの一つが、Anthropicの<strong>Claude Code</strong>です。</p><p><strong>Ill（イル）株式会社</strong>では、Claude Codeを開発の中心に据えています。従来、人が時間をかけて書いていた定型的な実装を、AIが短時間で下書きし、人が確認・調整することで、MVPを<strong>数日〜数週間</strong>で形にする体制を整えています。</p>
 
-          <h2 id="sec-2">2. 【リアルタイム同時編集 実装】サーバー負荷とコストを抑えるモダン設計</h2>
-          <p>常時接続を維持するWebSocketは、従来のHTTPリクエストと異なりサーバーコネクション管理の工夫が必要です。</p><div class="checklist-box"><ul><li><strong>AWS API Gateway WebSocket / Cloudflare Workers によるサーバーレス化</strong>: アイドル時のサーバー常駐コストをゼロにし、アクセス数に応じた自動スケールを実現。</li><li><strong>Pub/Sub メッセージング基盤（Redis / Pusher）の活用</strong>: サーバー台数が増加してもユーザー間のメッセージ送受信を確実に届けるメッセージブローカー設計。</li><li><strong>自動再接続とオフラインキャッシュ</strong>: トンネル内や地下など電波が途切れた際も、再接続時に自動で差分データを再同期。</li></ul></div>
+          <h2 id="sec-2">2. 【従来開発との違い】どこが変わり、どこが変わらないか</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>工程</th><th>従来の開発</th><th>AI駆動開発</th></tr></thead><tbody><tr><td>要件整理・設計</td><td>人が実施</td><td><strong>人が実施（ここは変わらない）</strong></td></tr><tr><td>コーディング</td><td>人が一から記述</td><td><strong>AIが下書きし、人がレビュー・修正</strong></td></tr><tr><td>テスト作成</td><td>人が手作業で作成</td><td><strong>AIがテストコードを生成し、人が確認</strong></td></tr><tr><td>品質・セキュリティ確認</td><td>人が実施</td><td><strong>人が実施（AIの出力ほど入念に確認）</strong></td></tr></tbody></table></div><p>変わるのは「書く作業の速さ」です。<strong>何を作るか、なぜそう作るかの判断は、人が行う</strong>点は変わりません。</p>
 
-          <h2 id="sec-3">3. 【Webシステム 共同作業 ツール】Ill（イル）株式会社の開発支援</h2>
-          <p><strong>Ill（イル）株式会社</strong> では、洗練されたWebSocketテンプレートを用いて、<strong>リアルタイム機能を備えた独自Webツールを、MVPなら10万〜100万円・数日〜数週間から（本格版は個別お見積もり）</strong> で構築いたします。</p>
+          <h2 id="sec-3">3. 【費用が下がる理由】人件費の大半を占める「実装の時間」を圧縮する</h2>
+          <p>システム開発費は、多くが人件費（作業時間×単価）で決まります。AIによって実装・テスト作成の時間が短くなれば、その分が費用の圧縮につながります。さらに、実装の一部をベトナムのオフショアチームと分担することで、コストを抑えています。</p><div class="checklist-box"><ul><li><strong>下がりやすい部分</strong>: 定型的な画面・API・データ処理の実装、テストの作成。</li><li><strong>下がりにくい部分</strong>: 要件整理、設計判断、セキュリティ確認、運用中の改善判断。</li></ul></div>
+
+          <h2 id="sec-4">4. 【発注者向け】AI活用の開発会社に確認したい3つの質問</h2>
+          <div class="checklist-box"><ul><li><strong>AIが書いたコードを誰がどのようにレビューしているか</strong></li><li><strong>機密情報・顧客データをAIにどう扱わせているか</strong>（入力する情報の範囲、設定）</li><li><strong>納品物にソースコード一式・ドキュメントが含まれるか</strong>（他社への引き継ぎが可能か）</li></ul></div><p>これらに明確に答えられる会社は、AI活用を「速さの道具」として適切に管理できていると判断できます。</p>
 
           <h2 id="sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</h2>
           <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
@@ -346,13 +358,17 @@
 </div>
           <h3>無駄なコストを削ぎ落とし、事業成果にコミットする「ミニマル開発」</h3>
 <p>従来のシステム開発では、「使うかどうかわからない機能」の見積もりが積み重なり、数百万円単位の無駄金が発生していました。<strong>Ill（イル）株式会社</strong> では、お客様のビジネスゴールから逆算し、本当に必要なコア機能だけに絞ったミニマル設計を徹底します。</p>
-<p>さらに最新の生成AIを活用してコード作成・単体テストを徹底自動化することで、開発工数を半減させ、業界最安値水準のスクラッチ開発を提供しています。</p>
+<p>さらに、AIコーディングツール「Claude Code」を活用した開発と、ベトナムのオフショア開発チームを組み合わせたハイブリッド体制で、開発工数を抑えています。MVPであれば、<strong>10万〜100万円・数日〜数週間</strong>が目安です（要件により変動します）。</p>
 
           <h2 id="section-faq">よくある質問</h2>
           <div class="faq-container">
             <div class="faq-item">
-              <h3>同時編集時のデータ競合（上書き事故）はどのように防ぎますか？</h3>
-              <p>CRDT（無競合複製データ型）やOperational Transformation（OT）、あるいはフィールド単位の楽観的ロックを適用することで、複数人が同時に同じ画面を操作してもデータ破壊が起きない堅牢な排他制御を実現します。</p>
+              <h3>AIで作ったシステムは品質や安全性が心配です。</h3>
+              <p>AIが書いたコードも、人のレビュー・テスト・セキュリティ確認を経て納品します。AIは実装の速度を上げる道具で、設計の判断と最終的な品質の責任は人が持つ、という役割分担が重要です。</p>
+            </div>
+            <div class="faq-item">
+              <h3>発注者側がAIのことを知らなくても大丈夫ですか？</h3>
+              <p>問題ありません。発注者様に必要なのは、作りたい事業の目的と、必要な機能のイメージです。AIの使い方や技術的な判断は、開発側が担います。</p>
             </div>
             <div class="faq-item">
               <h3>Q. 開発費用の支払いタイミングはどのようになっていますか？</h3>
