@@ -1651,7 +1651,8 @@
         "text": "<div class=\"checklist-box\"><ul><li><strong>AIが書いたコードを誰がどのようにレビューしているか</strong></li><li><strong>機密情報・顧客データをAIにどう扱わせているか</strong>（入力する情報の範囲、設定）</li><li><strong>納品物にソースコード一式・ドキュメントが含まれるか</strong>（他社への引き継ぎが可能か）</li></ul></div><p>これらに明確に答えられる会社は、AI活用を「速さの道具」として適切に管理できていると判断できます。</p>"
       }
     ],
-    "enrichment": "default"
+    "enrichment": "default",
+    "answer": "AI駆動開発は、Claude Codeなどのツールでコードの下書きや修正を自動化し、人が設計と確認に集中する開発方法です。実装にかかる時間を減らせるため、期間と費用を抑えやすくなります。ただし、要件の整理・品質確認・セキュリティの判断は人が担い、ここは省略できません。"
   },
   {
     "filename": "097-individual-entrepreneur-app-outsourcing-first-guide.html",
@@ -1696,7 +1697,8 @@
         "text": "<div class=\"checklist-box\"><ul><li><strong>機能を欲張りすぎる</strong>: 最初の機能は最小限に。追加は検証後でも遅くない。</li><li><strong>見積もりの内訳を確認しない</strong>: 何にいくらかかるかを、工数で確認する。</li><li><strong>ソースコードの権利を確認しない</strong>: 納品物と権利の範囲を契約前に確認する。</li></ul></div><p>お見積もりの段階から無料でご相談いただけます。アイデアが固まっていない段階でも、整理のお手伝いをしています。</p>"
       }
     ],
-    "enrichment": "default"
+    "enrichment": "default",
+    "answer": "個人起業家が初めてアプリ開発を外注するときは、まず「誰のどんな課題を解決するか」と「最初に作る機能」を紙1枚に整理しましょう。MVPなら10万〜100万円・数日〜数週間が目安です。機能を絞って小さく作り、反応を見てから広げる進め方が、費用とリスクを抑えます。"
   },
   {
     "filename": "098-corporate-new-business-mvp-budget-approval.html",
@@ -1741,7 +1743,8 @@
         "text": "<div class=\"checklist-box\"><ul><li>検証したい仮説（何を確かめたいか）</li><li>想定する利用者と、利用場面</li><li>予算の上限と、検証したい期間</li><li>社内システムとの連携や、セキュリティ要件の有無</li></ul></div><p>これらが整理されていれば、見積もりと提案が早く正確になります。整理の段階から、無料でご相談を承ります。</p>"
       }
     ],
-    "enrichment": "default"
+    "enrichment": "default",
+    "answer": "社内の新規事業は、最初から大きく投資せず、MVPで「顧客が実際に使うか」を検証するのが安全です。稟議では、投資額の上限・検証する仮説・継続か撤退かの判断基準を先に決めておくと通しやすくなります。MVPの価格帯は10万〜100万円が目安です。"
   },
   {
     "filename": "099-vibe-coding-prototype-to-production-pitfalls.html",
@@ -1786,7 +1789,8 @@
         "text": "<p><strong>Ill（イル）株式会社</strong>では、Claude Codeで素早く試作を作りつつ、公開前にはエンジニアがレビューとテスト、セキュリティの確認を行います。「速く作る」ことと「安全に公開する」ことを、役割分担で両立させています。</p><p>お手持ちの試作の見直しのみのご相談も歓迎です。</p>"
       }
     ],
-    "enrichment": "default"
+    "enrichment": "default",
+    "answer": "AIで作った試作アプリは、そのまま公開せず、認証・データ保護・エラー処理・運用体制の4点を必ず確認してください。動くことと、安全に使えることは別です。公開前に人が点検し、問題があれば直してから公開するのが基本です。"
   },
   {
     "filename": "100-web-app-vs-mobile-app-which-first-mvp.html",
@@ -1831,7 +1835,8 @@
         "text": "<div class=\"checklist-box\"><ul><li><strong>第1段階</strong>: スマホ表示に対応したWebアプリで需要を検証（10万〜100万円・数日〜数週間）</li><li><strong>第2段階</strong>: ホーム画面に追加できるPWAで、アプリに近い体験を提供</li><li><strong>第3段階</strong>: 需要と利用実態を見て、必要ならiOS・Androidアプリを開発</li></ul></div><p><strong>Ill（イル）株式会社</strong>では、事業の特性を伺い、最初の形の選び方からご提案します。</p>"
       }
     ],
-    "enrichment": "default"
+    "enrichment": "default",
+    "answer": "検証を早く・安く進めたいなら、多くの場合はWebアプリから始めるのが向いています。ストア審査が不要で、修正もすぐ反映できるためです。通知やカメラなど端末の機能が事業の核心なら、スマホアプリを選びます。まずWebで検証し、後からスマホへ広げる進め方もあります。"
   },
   {
     "filename": "101-choosing-ai-native-development-company-questions.html",
@@ -1876,7 +1881,8 @@
         "text": "<p><strong>Ill（イル）株式会社</strong>は、<strong>Claude Code</strong>を開発の中心に使い、日本側のエンジニアが要件定義とレビューを担い、ベトナムのオフショアチームと分担して開発を進めています。MVPは10万〜100万円、数日〜数週間が目安です。</p><p>上記の10項目についても、打ち合わせの場で率直にお答えします。他社との比較検討の材料としても、お気軽にご相談ください。</p>"
       }
     ],
-    "enrichment": "default"
+    "enrichment": "default",
+    "answer": "AIを使いこなす開発会社かどうかは、使うツール、人のレビュー体制、セキュリティ対応、見積もりの根拠、納品物の範囲を質問すると見極められます。「AI活用」という言葉だけでなく、どの工程でどう使い、どこを人が確認するのかを説明できる会社を選びましょう。"
   },
   {
     "filename": "102-mvp-beta-release-testflight-validation.html",
@@ -1921,7 +1927,8 @@
         "text": "<div class=\"checklist-box\"><ul><li>主要な操作を、説明なしでテスターが完了できる</li><li>重大な不具合が一定期間出ていない</li><li>利用継続や支払意向など、事業上の基準値を満たしている</li></ul></div><p><strong>Ill（イル）株式会社</strong>は、MVPの開発だけでなく、ベータ版の配布準備や検証の進め方までご一緒します。</p>"
       }
     ],
-    "enrichment": "default"
+    "enrichment": "default",
+    "answer": "ストアの一般公開の前に、限られたユーザーへのベータ版配布で検証すると、早く・安く需要を確かめられます。テスターを少数集めて使ってもらい、感想と利用状況から公開の可否を判断します。公開の判断基準を、先に数字で決めておくことが大切です。"
   },
   {
     "filename": "103-mvp-to-full-development-transition-criteria.html",
@@ -1966,7 +1973,8 @@
         "text": "<p>本開発も、一度にすべてを作る必要はありません。利用データから<strong>効果の大きい機能を優先</strong>して追加し、その都度効果を確認する進め方が、無駄な投資を避けます。</p><p><strong>Ill（イル）株式会社</strong>では、MVPの開発から本開発への拡張まで、同じ体制で一貫してご支援します。本開発の費用は、要件に応じて個別にお見積もりします。</p>"
       }
     ],
-    "enrichment": "default"
+    "enrichment": "default",
+    "answer": "MVPから本開発へ進む目安は、「継続して使うユーザーがいるか」「有料でも使う意向があるか」など、事前に決めた指標を満たしたときです。MVPのコードを活かせる設計にしておくと、作り直しを避けられます。一度に拡張せず、優先度の高い機能から段階的に広げましょう。"
   },
   {
     "filename": "079-smb-core-system-modernization-phased-approach.html",

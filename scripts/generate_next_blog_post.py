@@ -145,7 +145,10 @@ def main():
           </div>
 """
     toc_box_html = '\n          <div class="toc-box">\n            <div class="toc-title">目次</div>\n            <ul class="toc-list">\n' + '\n'.join(toc_items) + '\n            </ul>\n          </div>\n'
-    body_html = toc_box_html + sections_html + bottom_cta_html
+    # Answer-first summary (helps readers and AI summaries): hand-written `answer` if the calendar has one, else the meta description.
+    from add_answer_box import build_answer_box
+    answer_box_html = build_answer_box(target_post.get("answer"), target_post["description"])
+    body_html = answer_box_html + toc_box_html + sections_html + bottom_cta_html
         
     # Generate custom SVG banner (Super-Clean Minimal 2-Line Style)
     from apply_new_thumbnail_design import generate_svg
