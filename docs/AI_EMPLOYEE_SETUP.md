@@ -41,3 +41,8 @@ AI社員の定義: `.claude/agents/marketing-employee.md`（Claude Codeで `@mar
 - 追記時のルール: 既存記事とテーマ・主要KWが重複しないこと（カニバリゼーション回避）、本文は規定の1,800字以上になる構成、FAQ 2問以上。
 - `"enrichment"` キーで差し込む価格表の種類を固定できる（例 `"default"`, `"genai_automation"`）。キーワード自動判定が不適切な場合に指定する。
 - 現在のカレンダー: vol.094 まで（2026-10-01時点）。
+
+## 開発AI社員（No.2）の日報
+- 定義: `.claude/agents/dev-employee.md`（全8リポジトリ共通の型。`@dev-employee` で呼び出し）
+- 毎晩、その日のコミット・PR・ビルド結果を日報ダッシュボード（https://claude.ai/artifact/VCP5kV7TA7NDHjZe9d4gNF）のコレクション `dev_reports` に1日1件で記録する。ドキュメントIDは `YYYY-MM-DD`、リポジトリごとの記録は `repos.<リポジトリ名>` に入る。
+- マーケ担当No.1の日報（`reports`）とは別ダッシュボード。人間の判断が必要なことだけ `attention` に書く。
