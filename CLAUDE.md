@@ -12,3 +12,5 @@
 - **`.github/workflows/` の公開用workflow（`daily_column.yml` 等）は本番の仕組みなので、依頼なく変更しない。**
 - 事実は検証してから報告する。推測で原因を断定しない。
 - 依頼のないファイル削除・無関係な改変をしない。破壊的操作（`git reset --hard` 等）は確認してから。
+
+- 開発アイデア: ユーザーが新機能・改善のアイデアを話したら、`.claude/agents/dev-employee.md` の「今後の開発アイデアの保存」に従い、日報ダッシュボード（https://claude.ai/artifact/VCP5kV7TA7NDHjZe9d4gNF）の `dev_ideas` に保存する（実装は依頼があるまでしない）。
