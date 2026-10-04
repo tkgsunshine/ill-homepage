@@ -46,3 +46,7 @@ AI社員の定義: `.claude/agents/marketing-employee.md`（Claude Codeで `@mar
 - 定義: `.claude/agents/dev-employee.md`（全8リポジトリ共通の型。`@dev-employee` で呼び出し）
 - 毎晩、その日のコミット・PR・ビルド結果を日報ダッシュボード（https://claude.ai/artifact/VCP5kV7TA7NDHjZe9d4gNF）のコレクション `dev_reports` に1日1件で記録する。ドキュメントIDは `YYYY-MM-DD`、リポジトリごとの記録は `repos.<リポジトリ名>` に入る。
 - マーケ担当No.1の日報（`reports`）とは別ダッシュボード。人間の判断が必要なことだけ `attention` に書く。
+
+## ホーム（AI社員ホーム）
+- https://claude.ai/artifact/9eu8jRktA8nGCC8HKN7L8A — 中長期で残る「あなたの残タスク」(`tasks`)と「今後の開発アイデア」(`ideas`)。開発・集客の日報はこの下層（毎日の記録）。
+- 日報のたびにAI社員が残タスクを追加/完了更新する。アイデアはユーザーが話したときに保存する。完了・状態の変更はホーム画面から本人もできる。
