@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。 | Ill（イル）株式会社</title>
-  <meta name="description" content="常時稼働サーバーの固定費に悩む企業向けに、アクセス時のみ課金されるサーバーレスアーキテクチャ（Lambda/Cloud Run）への移行でランニングコストを激減させるノウハウ。">
-  <meta name="keywords" content="AWS コスト削減,サーバーレス 移行,GCP インフラ最適化,クラウド 維持費 削減">
+  <title>AIで作った試作アプリを本番公開するときの落とし穴｜品質・セキュリティの確認項目 | Ill（イル）株式会社</title>
+  <meta name="description" content="ChatGPTやClaude Codeなどで作った試作アプリを、そのまま公開するリスクと確認項目を解説。認証・データ保護・エラー処理・運用の観点で、本番公開前に必ず見直したいポイントをまとめました。">
+  <meta name="keywords" content="AI 試作 本番,AIで作ったアプリ 公開,バイブコーディング 注意点,AI生成コード セキュリティ,生成AI アプリ 品質">
   <meta name="author" content="Ill inc. 編集部">
   
   <!-- Robots config -->
   <meta name="robots" content="index, follow">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.ill-inc.net/column/065-cloud-cost-reduction-serverless">
+  <link rel="canonical" href="https://www.ill-inc.net/column/099-vibe-coding-prototype-to-production-pitfalls">
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。 | Ill inc. コラム">
-  <meta property="og:description" content="常時稼働サーバーの固定費に悩む企業向けに、アクセス時のみ課金されるサーバーレスアーキテクチャ（Lambda/Cloud Run）への移行でランニングコストを激減させるノウハウ。">
-  <meta property="og:url" content="https://www.ill-inc.net/column/065-cloud-cost-reduction-serverless">
+  <meta property="og:title" content="AIで作った試作アプリを本番公開するときの落とし穴｜品質・セキュリティの確認項目 | Ill inc. コラム">
+  <meta property="og:description" content="ChatGPTやClaude Codeなどで作った試作アプリを、そのまま公開するリスクと確認項目を解説。認証・データ保護・エラー処理・運用の観点で、本番公開前に必ず見直したいポイントをまとめました。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/099-vibe-coding-prototype-to-production-pitfalls">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
   <meta property="og:image:width" content="1024">
@@ -26,8 +26,8 @@
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。 | Ill inc. コラム">
-  <meta name="twitter:description" content="常時稼働サーバーの固定費に悩む企業向けに、アクセス時のみ課金されるサーバーレスアーキテクチャ（Lambda/Cloud Run）への移行でランニングコストを激減させるノウハウ。">
+  <meta name="twitter:title" content="AIで作った試作アプリを本番公開するときの落とし穴｜品質・セキュリティの確認項目 | Ill inc. コラム">
+  <meta name="twitter:description" content="ChatGPTやClaude Codeなどで作った試作アプリを、そのまま公開するリスクと確認項目を解説。認証・データ保護・エラー処理・運用の観点で、本番公開前に必ず見直したいポイントをまとめました。">
   <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
   
   <!-- Favicons -->
@@ -52,11 +52,11 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。",
-    "description": "常時稼働サーバーの固定費に悩む企業向けに、アクセス時のみ課金されるサーバーレスアーキテクチャ（Lambda/Cloud Run）への移行でランニングコストを激減させるノウハウ。",
+    "headline": "AIで作った試作アプリを本番公開するときの落とし穴｜品質・セキュリティの確認項目",
+    "description": "ChatGPTやClaude Codeなどで作った試作アプリを、そのまま公開するリスクと確認項目を解説。認証・データ保護・エラー処理・運用の観点で、本番公開前に必ず見直したいポイントをまとめました。",
     "image": "https://www.ill-inc.net/ogp.png?v=1",
-    "datePublished": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "datePublished": "2026-10-04",
+    "dateModified": "2026-10-04",
     "author": {
       "@type": "Organization",
       "name": "Ill（イル）株式会社",
@@ -73,7 +73,7 @@
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.ill-inc.net/column/065-cloud-cost-reduction-serverless"
+      "@id": "https://www.ill-inc.net/column/099-vibe-coding-prototype-to-production-pitfalls"
     }
   }
   </script>
@@ -117,7 +117,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "サーバーレス移行によるインフラ費用削減"
+      "name": "AI試作アプリを本番公開する前の確認項目"
     }
   ]
 }
@@ -131,26 +131,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "サーバーレスに移行すると応答速度（コールドスタート）が遅くなりませんか？",
+      "name": "AIで作った試作をそのまま公開してはいけませんか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "最新のコンテナランタイム（AWS Lambda SnapStartやGCP Cloud Run）の適切なプロビジョニング設定により、レイテンシの影響をミリ秒単位に抑えて快適に運用可能です。"
+        "text": "検証用に限定した少人数での利用なら問題ない場合もありますが、個人情報や決済を扱う場合は、公開前の見直しが必須です。動くことと、安全に運用できることは別です。"
       }
     },
     {
       "@type": "Question",
-      "name": "Q. 他社の見積書を見せて、妥当かどうか診断してもらうことはできますか？",
+      "name": "見直しだけを依頼することはできますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A. はい、無料で見積書診断を承っております。過剰な要件や削れるポイントをエンジニア目線で率直にアドバイスいたします。"
+        "text": "可能です。すでにお持ちの試作アプリを、第三者の目で確認し、公開に向けた修正点を整理するご相談も承ります。"
       }
     },
     {
       "@type": "Question",
-      "name": "Q. 開発途中で追加費用が請求されることはありませんか？",
+      "name": "Q. 開発費用の支払いタイミングはどのようになっていますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A. 請負契約の場合、事前に合意した要件の範囲内で追加費用が発生することは一切ありません。仕様変更が必要な場合も、必ず事前に工数と金額をご提示して合意をいただきます。"
+        "text": "A. お支払い条件は、案件の規模やご状況に応じて個別にご相談のうえ決定します。まずはお気軽にご相談ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後のサポートや保守体制はどうなっていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 納品後は、月額数万円からの継続保守プランをご用意しております。対応範囲や条件は、案件に応じて個別にご案内します。"
       }
     }
   ]
@@ -207,15 +215,15 @@
     <div class="container">
       
       <div class="breadcrumbs">
-        <span class="breadcrumb-item">サーバーレス移行によるインフラ費用削減</span>
+        <span class="breadcrumb-item">AI試作アプリを本番公開する前の確認項目</span>
       </div>
 
       <header class="article-header">
-        <span class="article-category">システム開発・アーキテクチャ</span>
-        <h1 class="article-title">AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。</h1>
+        <span class="article-category">生成AI・先端技術</span>
+        <h1 class="article-title">AIで作った試作アプリを本番公開するときの落とし穴｜品質・セキュリティの確認項目</h1>
         <div class="article-meta-info">
           <div class="article-meta-item">
-            <span>公開日: 2026.09.25</span>
+            <span>公開日: 2026.10.04</span>
           </div>
           <div class="article-meta-item">
             <span>著者: Ill inc. 編集部</span>
@@ -225,27 +233,27 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「AWS・GCPの月額インフラ費用を最大70%削減するサーバーレス移行設計。」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「AIで作った試作アプリを本番公開するときの落とし穴｜品質・セキュリティの確認項目」のビジュアルバナー">
   <defs>
-    <linearGradient id="bg_065_cloud_cost_reduction_serverless" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg_099_vibe_coding_prototype_to_production_pitfalls" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111B2E"/>
       <stop offset="0.5" stop-color="#1A2740"/>
       <stop offset="1" stop-color="#141E33"/>
     </linearGradient>
-    <filter id="blur_065_cloud_cost_reduction_serverless" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+    <filter id="blur_099_vibe_coding_prototype_to_production_pitfalls" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
       <feGaussianBlur stdDeviation="80"/>
     </filter>
   </defs>
 
   <!-- Clean Background -->
-  <rect width="1000" height="428" fill="url(#bg_065_cloud_cost_reduction_serverless)"/>
+  <rect width="1000" height="428" fill="url(#bg_099_vibe_coding_prototype_to_production_pitfalls)"/>
 
   <!-- Soft Ambient Glow Orbs -->
-  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_065_cloud_cost_reduction_serverless)"/>
-  <circle cx="150" cy="340" r="220" fill="#6366F1" opacity="0.2" filter="url(#blur_065_cloud_cost_reduction_serverless)"/>
+  <circle cx="850" cy="90" r="240" fill="#00F0FF" opacity="0.25" filter="url(#blur_099_vibe_coding_prototype_to_production_pitfalls)"/>
+  <circle cx="150" cy="340" r="220" fill="#A855F7" opacity="0.2" filter="url(#blur_099_vibe_coding_prototype_to_production_pitfalls)"/>
 
   <!-- Subtle Minimal Grid -->
-  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
+  <g opacity="0.12" stroke="#00F0FF" stroke-width="1">
     <line x1="100" y1="0" x2="100" y2="428"/>
     <line x1="250" y1="0" x2="250" y2="428"/>
     <line x1="400" y1="0" x2="400" y2="428"/>
@@ -259,20 +267,20 @@
 
   <!-- Pure Content: Clean Typography & Key Bullets Only -->
   <g transform="translate(100, 0)">
-    <text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      AWS・GCPの月額インフラ費用を
+    <text x="0" y="165" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      AIで作った試作アプリを本番公開すると
     </text>
-    <text x="0" y="225" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      <tspan fill="#38BDF8">最大70%削減するサーバーレス移行</tspan>
+    <text x="0" y="225" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="#00F0FF">きの落とし穴｜品質・セキュリティの確認項目</tspan>
     </text>
 
     <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
     <g transform="translate(0, 295)">
       <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#38BDF8">✔</tspan> アイドル時コスト完全ゼロ化　<tspan fill="#38BDF8">✔</tspan> フルマネージドで保守費半減
+        <tspan fill="#00F0FF">✔</tspan> 社内データ連携（RAG）　<tspan fill="#00F0FF">✔</tspan> API連携・自動化
       </text>
       <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#38BDF8">✔</tspan> オートスケールで負荷耐性向上
+        <tspan fill="#00F0FF">✔</tspan> 導入ROIの最大化
       </text>
     </g>
   </g>
@@ -282,96 +290,93 @@
       <div class="article-layout">
         <main class="article-body">
           <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
-            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の要点</p>
-            <p style="margin: 0; line-height: 1.9;">常時稼働サーバーの固定費に悩む企業向けに、アクセス時のみ課金されるサーバーレスアーキテクチャ（Lambda/Cloud Run）への移行でランニングコストを激減させるノウハウ。</p>
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">AIで作った試作アプリは、そのまま公開せず、認証・データ保護・エラー処理・運用体制の4点を必ず確認してください。動くことと、安全に使えることは別です。公開前に人が点検し、問題があれば直してから公開するのが基本です。</p>
           </div>
 
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">1. 【AWS コスト削減】アクセスが少ない時間帯も発生し続けるサーバー費用の無駄</a></li>
-              <li><a href="#sec-2">2. 【サーバーレス 移行】使った分だけ支払う従量課金アーキテクチャの威力</a></li>
-              <li><a href="#sec-3">3. 【クラウド 維持費 削減】インフラの無料診断と移行はIllにお任せください</a></li>
-              <li><a href="#sec-pricing-table">システム開発の工程別費用内訳と大手SIerとのコスト削減比較</a></li>
+              <li><a href="#sec-1">1. 【AI 試作 本番】「動く」と「公開できる」の間には差がある</a></li>
+              <li><a href="#sec-2">2. 【確認項目】本番公開前に必ず見直す5つの領域</a></li>
+              <li><a href="#sec-3">3. 【費用への影響】公開後に直すより、公開前に直す方が安い</a></li>
+              <li><a href="#sec-4">4. 【Ill（イル）の進め方】AIの速さと人の確認を組み合わせる</a></li>
+              <li><a href="#sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</a></li>
               <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-          <h2 id="sec-1">1. 【AWS コスト削減】アクセスが少ない時間帯も発生し続けるサーバー費用の無駄</h2>
-          <p>社内業務システムやB2Bサービスでは、夜間や休日のアクセスがほぼゼロであるにもかかわらず、EC2や固定VMが24時間稼働し課金され続けている事例が多発しています。</p>
+          <h2 id="sec-1">1. 【AI 試作 本番】「動く」と「公開できる」の間には差がある</h2>
+          <p>生成AIの進化で、非エンジニアの方でも短時間で動く試作アプリを作れるようになりました。一方で、試作をそのまま本番公開すると、<strong>想定外の入力でエラーになる、データが漏れる、障害時に復旧できない</strong>といった問題が起きやすくなります。</p><p>AIで試作する→人が品質を確認して本番化する、という流れで、速さと安全性を両立させる考え方が重要です。</p>
 
-          <h2 id="sec-2">2. 【サーバーレス 移行】使った分だけ支払う従量課金アーキテクチャの威力</h2>
-          <p>常時稼働サーバーを排除し、イベント駆動型サーバーレスへ移行することで、月額数十万円かかっていたインフラ費用を数千円〜数万円に圧縮できます。</p>
+          <h2 id="sec-2">2. 【確認項目】本番公開前に必ず見直す5つの領域</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>領域</th><th>確認する内容</th><th>放置した場合のリスク</th></tr></thead><tbody><tr><td>認証・権限</td><td>ログインの仕組み、他人のデータを見られないか</td><td>情報漏えい</td></tr><tr><td>データ保護</td><td>パスワードの保存方法、通信の暗号化、個人情報の扱い</td><td>法令違反・信頼失墜</td></tr><tr><td>エラー処理</td><td>想定外の入力・通信失敗時の挙動</td><td>画面が止まる・データ破損</td></tr><tr><td>秘密情報の管理</td><td>APIキーなどがコードに直接書かれていないか</td><td>不正利用・高額請求</td></tr><tr><td>運用</td><td>バックアップ、ログ、障害時の連絡手段</td><td>障害から復旧できない</td></tr></tbody></table></div>
 
-          <h2 id="sec-3">3. 【クラウド 維持費 削減】インフラの無料診断と移行はIllにお任せください</h2>
-          <p>Ill（イル）株式会社では、現行のクラウドアカウントを分析し、不要なリソースの棚卸しとサーバーレス移行をワンストップで代行いたします。</p>
+          <h2 id="sec-3">3. 【費用への影響】公開後に直すより、公開前に直す方が安い</h2>
+          <p>情報漏えいや障害が起きてからの対応は、費用だけでなく信用にも影響します。公開前に見直す工数は、多くの場合、公開後の対応費用より小さく済みます。</p><p>特に、<strong>個人情報・決済・業務データ</strong>を扱うサービスでは、公開前に第三者の確認を入れることを推奨します。</p>
 
-          <h2 id="sec-pricing-table">システム開発の工程別費用内訳と大手SIerとのコスト削減比較</h2>
+          <h2 id="sec-4">4. 【Ill（イル）の進め方】AIの速さと人の確認を組み合わせる</h2>
+          <p><strong>Ill（イル）株式会社</strong>では、Claude Codeで素早く試作を作りつつ、公開前にはエンジニアがレビューとテスト、セキュリティの確認を行います。「速く作る」ことと「安全に公開する」ことを、役割分担で両立させています。</p><p>お手持ちの試作の見直しのみのご相談も歓迎です。</p>
+
+          <h2 id="sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</h2>
           <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
           <div class="article-table-wrapper">
   <table class="article-table">
     <thead>
       <tr>
-        <th>開発工程</th>
-        <th>一般的な費用比率</th>
-        <th>大手SIer見積もり例</th>
+        <th>開発規模</th>
+        <th>開発内容</th>
+        <th>大手SIer相場</th>
         <th>Ill（イル）株式会社</th>
-        <th>コスト削減の理由</th>
+        <th>想定工期</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>要件定義・基本設計</strong></td>
-        <td>15〜20%</td>
-        <td>150万〜300万円</td>
-        <td><strong>10万〜30万円</strong></td>
-        <td>動くプロトタイプで合意形成を高速化</td>
+        <td><strong>スモールMVP</strong></td>
+        <td>コア機能のみ（主要3画面）、プロトタイプ検証</td>
+        <td>300万〜500万円</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
       </tr>
       <tr>
-        <td><strong>UI/UX設計・デザイン</strong></td>
-        <td>15〜20%</td>
-        <td>150万〜250万円</td>
-        <td><strong>10万〜30万円</strong></td>
-        <td>洗練されたコンポーネント資産の再利用</td>
+        <td><strong>標準ビジネス版</strong></td>
+        <td>認証、権限管理、決済連携、管理画面ダッシュボード</td>
+        <td>600万〜1,200万円</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
       </tr>
       <tr>
-        <td><strong>プログラミング・実装</strong></td>
-        <td>40〜50%</td>
-        <td>400万〜800万円</td>
-        <td><strong>60万〜180万円</strong></td>
-        <td>生成AI活用によるコード作成の自動化</td>
-      </tr>
-      <tr>
-        <td><strong>テスト・検証・納品</strong></td>
-        <td>15〜20%</td>
-        <td>150万〜250万円</td>
-        <td><strong>10万〜30万円</strong></td>
-        <td>CI/CDによる結合テスト自動化</td>
+        <td><strong>エンタープライズ</strong></td>
+        <td>大規模トラフィック対応、基幹連動、高度セキュリティ</td>
+        <td>1,500万〜3,000万円</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
       </tr>
     </tbody>
   </table>
 </div>
-          <h3>過剰な見積もり上乗せを見抜く3つのポイント</h3>
-<p>開発会社から提示された見積書に「システム開発一式：800万円」といった大雑把な項目しか書かれていない場合、高確率で不要な安全マージン（バッファ）が上乗せされています。適正な見積もりを見極めるには、以下の3点を確認してください。</p>
-<ol>
-  <li><strong>人月単価と想定工数が分離して記載されているか</strong>: 単価が100万円なのか60万円なのか、作業期間は何人月なのかを確認する。</li>
-  <li><strong>機能ごとの個別見積もりが記載されているか</strong>: 「この機能を削るといくら安くなるか」が判断できる透明性があるか。</li>
-  <li><strong>納品後の月額保守費用が開発費の10〜15%以下に収まっているか</strong>: 高額な縛り契約がないかを事前にチェックする。</li>
-</ol>
+          <h3>無駄なコストを削ぎ落とし、事業成果にコミットする「ミニマル開発」</h3>
+<p>従来のシステム開発では、「使うかどうかわからない機能」の見積もりが積み重なり、数百万円単位の無駄金が発生していました。<strong>Ill（イル）株式会社</strong> では、お客様のビジネスゴールから逆算し、本当に必要なコア機能だけに絞ったミニマル設計を徹底します。</p>
+<p>さらに、AIコーディングツール「Claude Code」を活用した開発と、ベトナムのオフショア開発チームを組み合わせたハイブリッド体制で、開発工数を抑えています。MVPであれば、<strong>10万〜100万円・数日〜数週間</strong>が目安です（要件により変動します）。</p>
 
           <h2 id="section-faq">よくある質問</h2>
           <div class="faq-container">
             <div class="faq-item">
-              <h3>サーバーレスに移行すると応答速度（コールドスタート）が遅くなりませんか？</h3>
-              <p>最新のコンテナランタイム（AWS Lambda SnapStartやGCP Cloud Run）の適切なプロビジョニング設定により、レイテンシの影響をミリ秒単位に抑えて快適に運用可能です。</p>
+              <h3>AIで作った試作をそのまま公開してはいけませんか？</h3>
+              <p>検証用に限定した少人数での利用なら問題ない場合もありますが、個人情報や決済を扱う場合は、公開前の見直しが必須です。動くことと、安全に運用できることは別です。</p>
             </div>
             <div class="faq-item">
-              <h3>Q. 他社の見積書を見せて、妥当かどうか診断してもらうことはできますか？</h3>
-              <p>A. はい、無料で見積書診断を承っております。過剰な要件や削れるポイントをエンジニア目線で率直にアドバイスいたします。</p>
+              <h3>見直しだけを依頼することはできますか？</h3>
+              <p>可能です。すでにお持ちの試作アプリを、第三者の目で確認し、公開に向けた修正点を整理するご相談も承ります。</p>
             </div>
             <div class="faq-item">
-              <h3>Q. 開発途中で追加費用が請求されることはありませんか？</h3>
-              <p>A. 請負契約の場合、事前に合意した要件の範囲内で追加費用が発生することは一切ありません。仕様変更が必要な場合も、必ず事前に工数と金額をご提示して合意をいただきます。</p>
+              <h3>Q. 開発費用の支払いタイミングはどのようになっていますか？</h3>
+              <p>A. お支払い条件は、案件の規模やご状況に応じて個別にご相談のうえ決定します。まずはお気軽にご相談ください。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 納品後のサポートや保守体制はどうなっていますか？</h3>
+              <p>A. 納品後は、月額数万円からの継続保守プランをご用意しております。対応範囲や条件は、案件に応じて個別にご案内します。</p>
             </div>
           </div>
 
@@ -413,6 +418,7 @@
               <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
             </p>
           </div>
+
         </main>
 
         <aside class="sidebar">
