@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>オフショア開発でバグ・手戻りを防ぐ品質管理プロセスとコミュニケーションの極意 | Ill inc. コラム</title>
-  <meta name="description" content="グローバル・オフショア開発における「品質への不安」「仕様の誤解」「手戻り」を防ぐための実践的な品質管理（QA）プロセス、テスト戦略、および仕様書コミュニケーションの極意を詳しく解説します。">
-  <meta name="keywords" content="オフショア開発 品質管理,手戻り 防ぐ,QAプロセス,オフショア コミュニケーション,Ill Inc.">
+  <title>ストア公開前にMVPを検証する方法｜ベータ版配布で早く・安く需要を確かめる | Ill（イル）株式会社</title>
+  <meta name="description" content="アプリのMVPを、ストアの一般公開の前に、限られたユーザーへのベータ版配布で検証する方法を解説。テスター集め、フィードバックの集め方、公開判断の基準、費用を抑えるコツをまとめました。">
+  <meta name="keywords" content="MVP ベータ版,アプリ テスト配布,TestFlight 検証,クローズドβ,アプリ 公開前 検証">
   <meta name="author" content="Ill inc. 編集部">
   
   <!-- Robots config -->
   <meta name="robots" content="index, follow">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.ill-inc.net/column/global-offshore-quality-control">
+  <link rel="canonical" href="https://www.ill-inc.net/column/102-mvp-beta-release-testflight-validation">
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="オフショア開発でバグ・手戻りを防ぐ品質管理プロセスとコミュニケーションの極意 | Ill inc. コラム">
-  <meta property="og:description" content="グローバル・オフショア開発における「品質への不安」「仕様の誤解」「手戻り」を防ぐための実践的な品質管理（QA）プロセス、テスト戦略、および仕様書コミュニケーションの極意を詳しく解説します。">
-  <meta property="og:url" content="https://www.ill-inc.net/column/global-offshore-quality-control">
+  <meta property="og:title" content="ストア公開前にMVPを検証する方法｜ベータ版配布で早く・安く需要を確かめる | Ill inc. コラム">
+  <meta property="og:description" content="アプリのMVPを、ストアの一般公開の前に、限られたユーザーへのベータ版配布で検証する方法を解説。テスター集め、フィードバックの集め方、公開判断の基準、費用を抑えるコツをまとめました。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/102-mvp-beta-release-testflight-validation">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
   <meta property="og:image:width" content="1024">
@@ -26,8 +26,8 @@
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="オフショア開発でバグ・手戻りを防ぐ品質管理プロセスとコミュニケーションの極意 | Ill inc. コラム">
-  <meta name="twitter:description" content="グローバル・オフショア開発における「品質への不安」「仕様の誤解」「手戻り」を防ぐための実践的な品質管理（QA）プロセス、テスト戦略、および仕様書コミュニケーションの極意を詳しく解説します。">
+  <meta name="twitter:title" content="ストア公開前にMVPを検証する方法｜ベータ版配布で早く・安く需要を確かめる | Ill inc. コラム">
+  <meta name="twitter:description" content="アプリのMVPを、ストアの一般公開の前に、限られたユーザーへのベータ版配布で検証する方法を解説。テスター集め、フィードバックの集め方、公開判断の基準、費用を抑えるコツをまとめました。">
   <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
   
   <!-- Favicons -->
@@ -46,17 +46,17 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=61">
-
+  
   <!-- JSON-LD Structured Data (Article Schema) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "オフショア開発でバグ・手戻りを防ぐ品質管理（QA）プロセスとコミュニケーションの極意",
-    "description": "グローバル・オフショア開発における「品質への不安」「仕様の誤解」「手戻り」を防ぐための実践的な品質管理（QA）プロセス、テスト戦略、および仕様書コミュニケーションの極意を詳しく解説します。",
+    "headline": "ストア公開前にMVPを検証する方法｜ベータ版配布で早く・安く需要を確かめる",
+    "description": "アプリのMVPを、ストアの一般公開の前に、限られたユーザーへのベータ版配布で検証する方法を解説。テスター集め、フィードバックの集め方、公開判断の基準、費用を抑えるコツをまとめました。",
     "image": "https://www.ill-inc.net/ogp.png?v=1",
-    "datePublished": "2026-04-26",
-    "dateModified": "2026-04-26",
+    "datePublished": "2026-10-06",
+    "dateModified": "2026-10-06",
     "author": {
       "@type": "Organization",
       "name": "Ill（イル）株式会社",
@@ -73,7 +73,7 @@
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.ill-inc.net/column/global-offshore-quality-control"
+      "@id": "https://www.ill-inc.net/column/102-mvp-beta-release-testflight-validation"
     }
   }
   </script>
@@ -117,7 +117,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "グローバル開発品質管理"
+      "name": "ストア公開前のMVP検証とベータ版配布"
     }
   ]
 }
@@ -131,18 +131,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Q1. 現地でテストしているはずなのに、日本側の検収でバグが大量に出るのはなぜですか？",
+      "name": "ベータ版の配布は、ストア審査が必要ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "それは「テストケースの作成方法」が異なっているからです。現地のテスターは仕様書通りに動くか（正常系）の確認は得意ですが、「ユーザーが変な入力をした場合」や「ネットワークが切れた場合」などの準正常系・異常系のテストケースを作成していないケースが多いです。テストケースの作成段階で日本側がチェック・承認を行うプロセスが必須です。"
+        "text": "一般公開より簡易な手続きで配布できる仕組み（iOSのTestFlight、AndroidのClosed testingなど）があります。条件や手順はストアの最新の案内をご確認ください。"
       }
     },
     {
       "@type": "Question",
-      "name": "Q2. テストの自動化はオフショア開発に有効ですか？",
+      "name": "テスターは何人くらい集めれば検証になりますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "極めて有効です。特に変更が頻繁に発生するプロジェクト（アジャイル開発）では、一度修正したコードが他の機能に影響を与える「デグレード（先祖返り）」が多発します。主要画面のE2Eテスト（PlaywrightやCypressなど）を自動化し、CI/CDラインに組み込んでおくことで、バグの自動検知率が飛躍的に高まります。"
+        "text": "検証の目的によりますが、最初は数人〜十数人でも、使い勝手の課題は多く見つかります。人数よりも、想定する利用者に近い人に使ってもらうことが重要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発費用の支払いタイミングはどのようになっていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. お支払い条件は、案件の規模やご状況に応じて個別にご相談のうえ決定します。まずはお気軽にご相談ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後のサポートや保守体制はどうなっていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 納品後は、月額数万円からの継続保守プランをご用意しております。対応範囲や条件は、案件に応じて個別にご案内します。"
       }
     }
   ]
@@ -159,7 +175,6 @@
     <div class="container">
       <a href="../index.html" class="logo" id="logo">
         <div class="logo-icon">
-          <!-- Stylized III / Ill Logo with Gradients -->
           <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
@@ -173,9 +188,7 @@
             <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
           </svg>
         </div>
-        <div class="logo-text">
-          ILL<span>INC.</span>
-        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
       </a>
       
       <nav class="nav" id="nav-menu">
@@ -202,19 +215,15 @@
     <div class="container">
       
       <div class="breadcrumbs">
-        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
-        <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item"><a href="index.html">コラム</a></span>
-        <span class="breadcrumb-separator">></span>
-        <span class="breadcrumb-item">グローバル開発品質管理</span>
+        <span class="breadcrumb-item">ストア公開前のMVP検証とベータ版配布</span>
       </div>
 
       <header class="article-header">
-        <span class="article-category">グローバル開発</span>
-        <h1 class="article-title">オフショア開発でバグ・手戻りを防ぐ品質管理（QA）プロセスとコミュニケーションの極意</h1>
+        <span class="article-category">新規事業・MVP検証</span>
+        <h1 class="article-title">ストア公開前にMVPを検証する方法｜ベータ版配布で早く・安く需要を確かめる</h1>
         <div class="article-meta-info">
           <div class="article-meta-item">
-            <span>公開日: 2026.04.26</span>
+            <span>公開日: 2026.10.06</span>
           </div>
           <div class="article-meta-item">
             <span>著者: Ill inc. 編集部</span>
@@ -224,27 +233,27 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「オフショア開発でバグ・手戻りを防ぐ品質管理プロセスとコミュニケーションの極意」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「ストア公開前にMVPを検証する方法｜ベータ版配布で早く・安く需要を確かめる」のビジュアルバナー">
   <defs>
-    <linearGradient id="bg_global_offshore_quality_control" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg_102_mvp_beta_release_testflight_validation" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111B2E"/>
       <stop offset="0.5" stop-color="#1A2740"/>
       <stop offset="1" stop-color="#141E33"/>
     </linearGradient>
-    <filter id="blur_global_offshore_quality_control" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+    <filter id="blur_102_mvp_beta_release_testflight_validation" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
       <feGaussianBlur stdDeviation="80"/>
     </filter>
   </defs>
 
   <!-- Clean Background -->
-  <rect width="1000" height="428" fill="url(#bg_global_offshore_quality_control)"/>
+  <rect width="1000" height="428" fill="url(#bg_102_mvp_beta_release_testflight_validation)"/>
 
   <!-- Soft Ambient Glow Orbs -->
-  <circle cx="850" cy="90" r="240" fill="#10B981" opacity="0.25" filter="url(#blur_global_offshore_quality_control)"/>
-  <circle cx="150" cy="340" r="220" fill="#0EA5E9" opacity="0.2" filter="url(#blur_global_offshore_quality_control)"/>
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_102_mvp_beta_release_testflight_validation)"/>
+  <circle cx="150" cy="340" r="220" fill="#818CF8" opacity="0.2" filter="url(#blur_102_mvp_beta_release_testflight_validation)"/>
 
   <!-- Subtle Minimal Grid -->
-  <g opacity="0.12" stroke="#34D399" stroke-width="1">
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
     <line x1="100" y1="0" x2="100" y2="428"/>
     <line x1="250" y1="0" x2="250" y2="428"/>
     <line x1="400" y1="0" x2="400" y2="428"/>
@@ -259,19 +268,19 @@
   <!-- Pure Content: Clean Typography & Key Bullets Only -->
   <g transform="translate(100, 0)">
     <text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      オフショア開発で手戻りを防ぐ
+      ストア公開前にMVPを検証する方法｜
     </text>
     <text x="0" y="225" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
-      <tspan fill="#34D399">品質管理（QA）プロセスと連携の極意</tspan>
+      <tspan fill="#38BDF8">ベータ版配布で早く・安く需要を確かめる</tspan>
     </text>
 
     <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
     <g transform="translate(0, 295)">
       <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#34D399">✔</tspan> バイリンガルPMによる仕様徹底　<tspan fill="#34D399">✔</tspan> 自動テスト・コードレビュー標準化
+        <tspan fill="#38BDF8">✔</tspan> 見積もりの適正化　<tspan fill="#38BDF8">✔</tspan> 不要機能の排除
       </text>
       <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
-        <tspan fill="#34D399">✔</tspan> 文化ギャップを埋めるコミュニケーション
+        <tspan fill="#38BDF8">✔</tspan> 契約トラブル防止
       </text>
     </g>
   </g>
@@ -279,124 +288,97 @@
       </div>
 
       <div class="article-layout">
-        
         <main class="article-body">
-          
-          
-            <p>
-            「オフショア開発（海外委託）はコストが安く抑えられるが、納品されたシステムのバグが多くて使い物にならなかった」「仕様の解釈違いが多発し、結局日本側で手戻り修復をすることになってコストが倍かかった」——これらは、オフショア開発を導入した企業から非常によく聞かれる失敗談です。
-          </p>
-          <p>
-            グローバル開発における品質トラブルの原因は、エンジニアの「技術力不足」ではなく、ほとんどが<strong>「コミュニケーションの設計不備」</strong>および<strong>「QA（品質保証）プロセスの欠如」</strong>に起因します。本コラムでは、海外チームとの開発で手戻りを防ぎ、国内水準の品質を担保するための実践的な品質管理プロセスを解説します。
-          </p>
-
-          
           <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
-            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の要点</p>
-            <p style="margin: 0; line-height: 1.9;">グローバル・オフショア開発における「品質への不安」「仕様の誤解」「手戻り」を防ぐための実践的な品質管理（QA）プロセス、テスト戦略、および仕様書コミュニケーションの極意を詳しく解説します。</p>
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">ストアの一般公開の前に、限られたユーザーへのベータ版配布で検証すると、早く・安く需要を確かめられます。テスターを少数集めて使ってもらい、感想と利用状況から公開の可否を判断します。公開の判断基準を、先に数字で決めておくことが大切です。</p>
           </div>
 
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">なぜオフショア開発で「品質問題」や「手戻り」が発生するのか？</a></li>
-              <li><a href="#sec-2">手戻りをゼロにする「3つの上流コミュニケーション設計」</a></li>
-              <li><a href="#sec-3">オフショア特化型のテスト戦略とQAプロセス</a></li>
-              <li><a href="#sec-4">日本とベトナムのハイブリッド型PM・ブリッジSEの正しい役割分担</a></li>
-              <li><a href="#section-faq">オフショアの品質とバグに関するよくある質問（FAQ）</a></li>
-              <li><a href="#sec-6">まとめ：コミュニケーションの設計こそが、最大の品質管理である</a></li>
+              <li><a href="#sec-1">1. 【MVP ベータ版 検証】一般公開の前に、限定配布で小さく確かめる</a></li>
+              <li><a href="#sec-2">2. 【配布方法】主な限定配布の仕組み</a></li>
+              <li><a href="#sec-3">3. 【検証のコツ】フィードバックを集めるための3つの工夫</a></li>
+              <li><a href="#sec-4">4. 【公開判断】一般公開に進む基準を、事前に決めておく</a></li>
+              <li><a href="#sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-<h2 id="sec-1">なぜオフショア開発で「品質問題」や「手戻り」が発生するのか？</h2>
-          <p>
-            オフショア開発でバグや手戻りが生じる最大の理由は、<strong>「コンテキスト（文脈）の共有レベルの違い」</strong>にあります。
-          </p>
-          <p>
-            日本国内での開発では、「使い勝手を良くする」「一般的なデザインで」といった曖昧な指示でも、エンジニアがある程度文脈を汲んで実装してくれます。しかし、文化や商習慣が異なる海外のエンジニアに対して同じ指示をすると、設計書に書かれていない部分は彼らの基準で実装されるか、または実装から漏れてしまいます。
-          </p>
-          <p>
-            この結果、以下の悪循環が生まれます：
-          </p>
-          <blockquote>
-            <strong>曖昧な要件定義 ➔ 独自解釈による実装 ➔ 日本側テストでの大量の指摘（手戻り） ➔ 修正による他の箇所へのバグ混入</strong>
-          </blockquote>
+          <h2 id="sec-1">1. 【MVP ベータ版 検証】一般公開の前に、限定配布で小さく確かめる</h2>
+          <p>アプリを一般公開すると、審査対応や問い合わせ対応などの負担が一気に増えます。そこで、<strong>限られたテスターにだけ配布して使ってもらう「ベータ版」</strong>で先に検証すると、費用と手間を抑えながら、重要な課題を早く発見できます。</p>
 
-          <h2 id="sec-2">手戻りをゼロにする「3つの上流コミュニケーション設計」</h2>
-          <p>
-            開発の後半でバグを検出するよりも、設計段階で「認識のズレ（仕様バグ）」を防ぐ方が、修復コストは1/10以下になります。
-          </p>
-          <ul>
-            <li><strong>1. 指示はすべて「テキスト」「図」「UIモック」で具現化する</strong>：言葉によるニュアンス（〜のような雰囲気）を排除し、Figma等で画面遷移図やボタンごとの詳細アクションをビジュアル化して定義します。</li>
-            <li><strong>2. 「何を作るか」ではなく「なぜ作るか（ユースケース）」を共有する</strong>：仕様だけを伝えるのではなく、「ユーザーがどのような状況でこのボタンを押すか」という行動シナリオを伝えることで、仕様の背景を理解させ、誤解を防ぎます。</li>
-            <li><strong>3. 質問や仕様確認を「双方向で」行うルール化</strong>：指示を出した後、海外のリーダーやエンジニアに「あなたの言葉でこの仕様を説明し直してください（逆提案・バックトランスレーション）」と促し、理解度をその場で確認します。</li>
-          </ul>
+          <h2 id="sec-2">2. 【配布方法】主な限定配布の仕組み</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>方法</th><th>概要</th><th>向いている場面</th></tr></thead><tbody><tr><td>Webアプリのテスト用URL</td><td>URLを共有するだけで利用開始</td><td><strong>最も手軽。まず最初に試す</strong></td></tr><tr><td>iOSのベータ配布（TestFlight）</td><td>招待した人にアプリを配布</td><td>iPhoneユーザー向けの検証</td></tr><tr><td>Androidの限定公開テスト</td><td>テスターを限定してストアで配布</td><td>Androidユーザー向けの検証</td></tr></tbody></table></div><p><strong>※仕様や手順はストア側で変更されることがあります。</strong>最新の案内を確認のうえ進めます。</p>
 
-          <h2 id="sec-3">オフショア特化型のテスト戦略とQAプロセス</h2>
-          <p>
-            確実な成果物を担保するため、私たち <strong>Ill（イル）株式会社 (Ill inc.)</strong> では以下の3段階のテストパイプラインをグローバルチームに義務付けています。
-          </p>
+          <h2 id="sec-3">3. 【検証のコツ】フィードバックを集めるための3つの工夫</h2>
+          <div class="checklist-box"><ul><li><strong>見てほしい点を絞る</strong>: 「登録から最初の操作まで迷わないか」など、1〜2点に集中。</li><li><strong>画面を見ながら聞く</strong>: アンケートだけでなく、実際に使う様子を観察する。</li><li><strong>数値でも確認する</strong>: 登録率・継続利用率などの基本指標を記録する。</li></ul></div>
 
+          <h2 id="sec-4">4. 【公開判断】一般公開に進む基準を、事前に決めておく</h2>
+          <div class="checklist-box"><ul><li>主要な操作を、説明なしでテスターが完了できる</li><li>重大な不具合が一定期間出ていない</li><li>利用継続や支払意向など、事業上の基準値を満たしている</li></ul></div><p><strong>Ill（イル）株式会社</strong>は、MVPの開発だけでなく、ベータ版の配布準備や検証の進め方までご一緒します。</p>
+
+          <h2 id="sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</h2>
+          <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
           <div class="article-table-wrapper">
-            <table class="article-table">
-              <thead>
-                <tr>
-                  <th>フェーズ</th>
-                  <th>テスト種別</th>
-                  <th>実行者と役割</th>
-                  <th>合格基準（ゲート）</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>開発中</strong></td>
-                  <td>単体テスト (Unit Test)</td>
-                  <td>現地開発エンジニア</td>
-                  <td>主要ロジックのテストコード通過率100%</td>
-                </tr>
-                <tr>
-                  <td><strong>結合・統合</strong></td>
-                  <td>QA機能・疎通テスト</td>
-                  <td>現地専属QAチーム（テスター）</td>
-                  <td>テストケース（事前に日本側と合意）の通過率95%以上</td>
-                </tr>
-                <tr>
-                  <td><strong>受け入れ</strong></td>
-                  <td>UAT（受け入れ検証）</td>
-                  <td>日本のPM・お客様</td>
-                  <td>本質業務シナリオに沿った実機での最終確認</td>
-                </tr>
-              </tbody>
-            </table>
+  <table class="article-table">
+    <thead>
+      <tr>
+        <th>開発規模</th>
+        <th>開発内容</th>
+        <th>大手SIer相場</th>
+        <th>Ill（イル）株式会社</th>
+        <th>想定工期</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>スモールMVP</strong></td>
+        <td>コア機能のみ（主要3画面）、プロトタイプ検証</td>
+        <td>300万〜500万円</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
+      </tr>
+      <tr>
+        <td><strong>標準ビジネス版</strong></td>
+        <td>認証、権限管理、決済連携、管理画面ダッシュボード</td>
+        <td>600万〜1,200万円</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
+      </tr>
+      <tr>
+        <td><strong>エンタープライズ</strong></td>
+        <td>大規模トラフィック対応、基幹連動、高度セキュリティ</td>
+        <td>1,500万〜3,000万円</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          <h3>無駄なコストを削ぎ落とし、事業成果にコミットする「ミニマル開発」</h3>
+<p>従来のシステム開発では、「使うかどうかわからない機能」の見積もりが積み重なり、数百万円単位の無駄金が発生していました。<strong>Ill（イル）株式会社</strong> では、お客様のビジネスゴールから逆算し、本当に必要なコア機能だけに絞ったミニマル設計を徹底します。</p>
+<p>さらに、AIコーディングツール「Claude Code」を活用した開発と、ベトナムのオフショア開発チームを組み合わせたハイブリッド体制で、開発工数を抑えています。MVPであれば、<strong>10万〜100万円・数日〜数週間</strong>が目安です（要件により変動します）。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>ベータ版の配布は、ストア審査が必要ですか？</h3>
+              <p>一般公開より簡易な手続きで配布できる仕組み（iOSのTestFlight、AndroidのClosed testingなど）があります。条件や手順はストアの最新の案内をご確認ください。</p>
+            </div>
+            <div class="faq-item">
+              <h3>テスターは何人くらい集めれば検証になりますか？</h3>
+              <p>検証の目的によりますが、最初は数人〜十数人でも、使い勝手の課題は多く見つかります。人数よりも、想定する利用者に近い人に使ってもらうことが重要です。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 開発費用の支払いタイミングはどのようになっていますか？</h3>
+              <p>A. お支払い条件は、案件の規模やご状況に応じて個別にご相談のうえ決定します。まずはお気軽にご相談ください。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 納品後のサポートや保守体制はどうなっていますか？</h3>
+              <p>A. 納品後は、月額数万円からの継続保守プランをご用意しております。対応範囲や条件は、案件に応じて個別にご案内します。</p>
+            </div>
           </div>
-
-          <h2 id="sec-4">日本とベトナムのハイブリッド型PM・ブリッジSEの正しい役割分担</h2>
-          <p>
-            「日本とベトナムのハイブリッド開発体制」において、最も重要な役割を担うのが、両国間の翻訳・技術調整を担う<strong>ブリッジSE（BrSE）</strong>および<strong>日本側のシステムプランナー（PM）</strong>です。
-          </p>
-          <p>
-            ブリッジSEを単なる「翻訳者」として使ってしまうと、技術的なニュアンスが崩れバグの温床になります。ブリッジSEには、「仕様書の背景にあるビジネスロジック」を翻訳させ、実装の詳細設計は現地のテックリード（開発リーダー）に任せ、日本側のPMがそれを最終レビューするという<strong>「多重のフィルター設計」</strong>が品質確保の鍵となります。
-          </p>
-
-          <h2 id="section-faq">オフショアの品質とバグに関するよくある質問（FAQ）</h2>
-          
-          <h3>Q1. 現地でテストしているはずなのに、日本側の検収でバグが大量に出るのはなぜですか？</h3>
-          <p>
-            それは「テストケースの作成方法」が異なっているからです。現地のテスターは仕様書通りに動くか（正常系）の確認は得意ですが、「ユーザーが変な入力をした場合」や「ネットワークが切れた場合」などの準正常系・異常系のテストケースを作成していないケースが多いです。テストケースの作成段階で日本側がチェック・承認を行うプロセスが必須です。
-          </p>
-
-          <h3>Q2. テストの自動化はオフショア開発に有効ですか？</h3>
-          <p>
-            極めて有効です。特に変更が頻繁に発生するプロジェクト（アジャイル開発）では、一度修正したコードが他の機能に影響を与える「デグレード（先祖返り）」が多発します。主要画面のE2Eテスト（PlaywrightやCypressなど）を自動化し、CI/CDラインに組み込んでおくことで、バグの自動検知率が飛躍的に高まります。
-          </p>
-
-          <h2 id="sec-6">まとめ：コミュニケーションの設計こそが、最大の品質管理である</h2>
-          <p>
-            グローバル開発での品質トラブルは、エンジニア個人を責めることでは解決しません。「バグが発生しにくい仕様伝達ルート」と「バグをせき止める多重のチェックゲート」という<strong>仕組み（プロセス）</strong>を構築することでのみ、コストと品質を両立できます。
-          </p>
-          <p>
-            Ill Inc.では、経験豊富な日本のシステムプランナーがすべての要件定義を噛み砕き、ベトナム側の専属QAチームと連携した「手戻りゼロ」のグローバル開発体制を提供しています。
-          </p>
 
           <!-- Eye-catching Bottom CTA Banner -->
           <div class="article-bottom-cta">
@@ -436,21 +418,23 @@
               <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
             </p>
           </div>
+
         </main>
 
         <aside class="sidebar">
           <div class="sidebar-box glass-card author-profile">
             <div class="author-avatar">Ill</div>
             <h3 class="author-name">Ill inc. 編集部</h3>
-            <p class="author-role">Global Delivery Team</p>
+            <p class="author-role">Ill（イル）株式会社 編集部</p>
             <p class="author-bio">
-              日本とベトナムを結ぶハイブリッド開発体制のPM・BrSEマネジメントを担当。進捗管理、詳細仕様の伝達、QA（品質保証）プロセスの最適化とテスト自動化推進を専門とする。
+              Ill（イル）株式会社の編集部です。Claude Codeを使ったAI駆動開発と、ベトナムのオフショア開発チームを組み合わせ、新規開発（Web・iOS/Android）の進め方と費用の考え方を発信しています。MVPは10万〜100万円・数日〜数週間から。
+              <a href="/#profile">会社概要を見る</a>
             </p>
           </div>
 
           <div class="sidebar-box glass-card">
             <h3 class="sidebar-title">最近のコラム</h3>
-                        <ul class="related-list">
+            <ul class="related-list">
               <li class="related-item">
                 <a href="/column/102-mvp-beta-release-testflight-validation">
                   <span class="related-item-date">2026.10.06</span>
@@ -518,8 +502,9 @@
             <span class="sidebar-cta-note">🔒 オンライン相談対応・無理な営業なし</span>
           </div>
         </aside>
-
       </div>
+      </div>
+
     </div>
   </section>
 
@@ -530,7 +515,6 @@
         <div class="footer-brand">
           <a href="../index.html" class="logo footer-logo">
             <div class="logo-icon">
-              <!-- SVG Logo -->
               <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
                 <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
@@ -570,18 +554,21 @@
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-bottom-flex">
-          <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
-          <div class="footer-meta-links">
-            <span class="company-sub-info">Ill（イル）株式会社 (イル株式会社)</span>
-          </div>
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマを切り替える">
-    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <script defer src="../script.js?v=61"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
       <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -592,11 +579,7 @@
       <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
     </svg>
-    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    </svg>
   </button>
 
-  <script defer src="../script.js?v=61"></script>
 </body>
 </html>
