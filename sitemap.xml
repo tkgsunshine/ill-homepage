@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://www.ill-inc.net/cases/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -759,6 +759,12 @@
   <url>
     <loc>https://www.ill-inc.net/column/100-web-app-vs-mobile-app-which-first-mvp</loc>
     <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ill-inc.net/column/101-choosing-ai-native-development-company-questions</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
