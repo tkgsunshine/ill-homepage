@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マーケAI社員がSEOコラムの企画・改善を回す自社運用事例 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="Ill（イル）株式会社が自社で運用するマーケティング担当のAI社員の事例。毎日2回のコラム自動公開、週次のSearch Consoleレポート、記事カレンダー補充をAIと人で分担する仕組みを紹介します。">
+  <meta name="keywords" content="マーケティング AI社員,SEO 自動化,Search Console 週次レポート,Ill inc.">
+  <meta name="author" content="Ill inc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ill-inc.net/cases/ai-employee-marketing">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="マーケAI社員がSEOコラムの企画・改善を回す自社運用事例 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="Ill（イル）株式会社が自社で運用するマーケティング担当のAI社員の事例。毎日2回のコラム自動公開、週次のSearch Consoleレポート、記事カレンダー補充をAIと人で分担する仕組みを紹介します。">
+  <meta property="og:url" content="https://www.ill-inc.net/cases/ai-employee-marketing">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_ai_agent.webp?v=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="マーケAI社員がSEOコラムの企画・改善を回す自社運用事例 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="Ill（イル）株式会社が自社で運用するマーケティング担当のAI社員の事例。毎日2回のコラム自動公開、週次のSearch Consoleレポート、記事カレンダー補充をAIと人で分担する仕組みを紹介します。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_ai_agent.webp?v=1">
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=61">
+
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "マーケAI社員がSEOコラムの企画・改善を回す自社運用事例",
+      "description": "Ill（イル）株式会社が自社で運用するマーケティング担当のAI社員の事例。毎日2回のコラム自動公開、週次のSearch Consoleレポート、記事カレンダー補充をAIと人で分担する仕組みを紹介します。",
+      "image": "https://www.ill-inc.net/illust_ai_agent.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/ai-employee-marketing"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "マーケAI社員がSEOコラムの企画・改善を回す自社運用事例",
+          "item": "https://www.ill-inc.net/cases/ai-employee-marketing"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "SEOコラムの自動化に生成AIは使っていますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "公開パイプライン自体は固定のスクリプトで動かし、企画の補充や改善提案をClaude Codeのマーケ担当AI社員が担います。役割を分けることで品質を保っています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "新規事業のマーケにもAI社員は使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "使えます。立ち上げ初期は人手が足りないため、分析・企画・原稿作成をAIに任せる設計は有効です。MVP開発とあわせた設計のご相談も承ります。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <!-- Stylized III / Ill Logo with Gradients -->
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Cases</a></li>
+          <li><a href="../column/" class="nav-link">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS & ARTICLE SECTION -->
+  <section class="section" style="padding-top: 12rem;">
+    <div class="container">
+      <div class="breadcrumbs" style="margin-bottom: 4rem;">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">マーケAI社員がSEOコラムの企画・改善を回す自社運用事例</span>
+      </div>
+
+      <article class="glass-card case-detail-card">
+        <div class="case-detail-banner">
+          <img src="../illust_ai_agent.webp" alt="マーケAI社員がSEOコラムの企画・改善を回す自社運用事例" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">AI社員 / マーケティング</span>
+        </div>
+
+        <div class="case-detail-content">
+          <h1 class="case-detail-title">
+            マーケAI社員がSEOコラムの企画・改善を回す自社運用事例
+          </h1>
+
+          <div class="case-detail-tags">
+            <span class="tech-badge">Claude Code</span><span class="tech-badge">SEOコラム自動化</span><span class="tech-badge">Search Console</span><span class="tech-badge">GitHub Actions</span>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">自社運用（Ill inc.）／ Webマーケティング</span></div>
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">制作期間</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">運用しながら継続改善（自社内製）</span></div>
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">コラム自動公開パイプライン、週次GSCレポート、編集カレンダー管理、リライト・導線改善の提案</span></div>
+            </div>
+          </div>
+
+          <div class="case-detail-grid">
+            <div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と背景（導入前のボトルネック）</h2>
+              <div class="case-detail-text">
+                <p>Webからの問い合わせを増やすにはSEOコラムの継続発信が欠かせませんが、企画・執筆・分析・改善をすべて人手で回すのは現実的ではありません。</p>
+                <ul class="case-detail-list"><li><strong>発信の継続</strong>: 週に数本のコラム公開と更新を、人手だけで続けるのは難しい。</li><li><strong>分析が後回しになる</strong>: Search Consoleのデータを見て改善する作業は、忙しいと後回しになる。</li><li><strong>重複記事のリスク</strong>: 同じテーマ・キーワードの記事が増えると、検索評価が分散する（カニバリゼーション）。</li></ul>
+              </div>
+            </div>
+            <div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・運用アプローチ</h2>
+              <div class="case-detail-text">
+                <p>公開は完全自動のパイプライン、企画と改善はAI社員、承認は人、という分担にしました。</p>
+                <ul class="case-detail-list"><li><strong>1日2回の自動公開</strong>: 編集カレンダーの未公開分を、GitHub Actionsが朝夕に公開。sitemapや構造化データも同時に更新する。</li><li><strong>週次のSearch Consoleレポート</strong>: 毎週月曜に、平均順位10〜45位のリライト候補KWと低CTRページを自動で抽出する。</li><li><strong>AI社員がカレンダーを補充</strong>: 未公開が少なくなったら新テーマを追記。既存記事とのキーワード重複を確認してから追加する。</li><li><strong>人の承認ポイントを固定</strong>: 価格・事例の記載、導線の大幅変更、外部への自動投稿は人が判断する。</li></ul>
+              </div>
+            </div>
+            <div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果と成果（ビジネスインパクト）</h2>
+              <div class="case-detail-text">
+                <p>コラムの公開と週次の分析が<strong>日常的に自動で回る</strong>状態になり、人は方針の判断と承認に集中できています。重複テーマの整理も規定化され、記事を増やしても検索評価が分散しにくい運用です。<br>成果の数値（検索順位・問い合わせ数など）は、Search Consoleの実データで継続的に確認しています。</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                <div class="faq-item">
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. SEOコラムの自動化に生成AIは使っていますか？</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 公開パイプライン自体は固定のスクリプトで動かし、企画の補充や改善提案をClaude Codeのマーケ担当AI社員が担います。役割を分けることで品質を保っています。</p>
+                </div><div class="faq-item">
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 新規事業のマーケにもAI社員は使えますか？</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 使えます。立ち上げ初期は人手が足りないため、分析・企画・原稿作成をAIに任せる設計は有効です。MVP開発とあわせた設計のご相談も承ります。</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するAI駆動開発・新規事業開発のノウハウを解説しています。</p>
+              <a href="../column/036-2026-smb-agile-mvp-cost-optimization.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 スモールスタートでMVPを進める考え方を解説したコラム →
+              </a>
+            </div>
+          </div>
+
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
+            <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
+        <h3 class="cases-cta-title">
+          AI駆動開発・MVP開発のご相談・無料お見積もり
+        </h3>
+        <p class="cases-cta-desc">
+          新規Webアプリ・iOS/Androidアプリを、Claude Codeを活用したAI駆動開発とベトナムのオフショアチームで開発します。<br>
+          <span class="gradient-text" style="font-weight: 700;">MVPは10万〜100万円、数日〜数週間から。要件により個別にお見積もりします。</span>
+        </p>
+        <div class="cases-cta-buttons">
+          <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
+          <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <!-- SVG Logo -->
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">実績・事例</a></li>
+              <li><a href="../column/" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client JavaScript -->
+  <script defer src="../script.js?v=61"></script>
+  <!-- Floating Theme Switcher -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <!-- Moon Icon for switching to dark theme -->
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <!-- Sun Icon for switching to light theme -->
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>

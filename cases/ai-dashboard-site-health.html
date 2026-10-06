@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日報ダッシュボードとサイト健全性レポートで運用を可視化する自社事例 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="Ill（イル）株式会社が自社で運用する、日報ダッシュボードとサイト健全性（応答・PageSpeed・Lighthouse）レポートの事例。AI社員の記録を一覧化し、運用状況を見える化する仕組みを紹介します。">
+  <meta name="keywords" content="ダッシュボード 自動化 AI,サイト健全性 レポート,Lighthouse 自動計測,Ill inc.">
+  <meta name="author" content="Ill inc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ill-inc.net/cases/ai-dashboard-site-health">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="日報ダッシュボードとサイト健全性レポートで運用を可視化する自社事例 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="Ill（イル）株式会社が自社で運用する、日報ダッシュボードとサイト健全性（応答・PageSpeed・Lighthouse）レポートの事例。AI社員の記録を一覧化し、運用状況を見える化する仕組みを紹介します。">
+  <meta property="og:url" content="https://www.ill-inc.net/cases/ai-dashboard-site-health">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_roi_cost.webp?v=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="日報ダッシュボードとサイト健全性レポートで運用を可視化する自社事例 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="Ill（イル）株式会社が自社で運用する、日報ダッシュボードとサイト健全性（応答・PageSpeed・Lighthouse）レポートの事例。AI社員の記録を一覧化し、運用状況を見える化する仕組みを紹介します。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_roi_cost.webp?v=1">
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=61">
+
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "日報ダッシュボードとサイト健全性レポートで運用を可視化する自社事例",
+      "description": "Ill（イル）株式会社が自社で運用する、日報ダッシュボードとサイト健全性（応答・PageSpeed・Lighthouse）レポートの事例。AI社員の記録を一覧化し、運用状況を見える化する仕組みを紹介します。",
+      "image": "https://www.ill-inc.net/illust_roi_cost.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/ai-dashboard-site-health"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "日報ダッシュボードとサイト健全性レポートで運用を可視化する自社事例",
+          "item": "https://www.ill-inc.net/cases/ai-dashboard-site-health"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "社内向けダッシュボードのMVP開発は可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可能です。必要な指標を絞った最小構成であれば、数日〜数週間での開発が見込めます。MVPの価格帯は10万〜100万円で、要件により個別にご案内します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "サイトの速度計測を自動化するメリットは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "計測を定期実行して履歴を残せるため、改善の効果を前後比較で確認できます。手作業の計測漏れも防げます。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <!-- Stylized III / Ill Logo with Gradients -->
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Cases</a></li>
+          <li><a href="../column/" class="nav-link">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS & ARTICLE SECTION -->
+  <section class="section" style="padding-top: 12rem;">
+    <div class="container">
+      <div class="breadcrumbs" style="margin-bottom: 4rem;">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">日報ダッシュボードとサイト健全性レポートで運用を可視化する自社事例</span>
+      </div>
+
+      <article class="glass-card case-detail-card">
+        <div class="case-detail-banner">
+          <img src="../illust_roi_cost.webp" alt="日報ダッシュボードとサイト健全性レポートで運用を可視化する自社事例" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">ダッシュボード / 可視化</span>
+        </div>
+
+        <div class="case-detail-content">
+          <h1 class="case-detail-title">
+            日報ダッシュボードとサイト健全性レポートで運用を可視化する自社事例
+          </h1>
+
+          <div class="case-detail-tags">
+            <span class="tech-badge">Claude Code</span><span class="tech-badge">ダッシュボード</span><span class="tech-badge">Lighthouse / PageSpeed</span><span class="tech-badge">GitHub Actions</span>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">自社運用（Ill inc.）／ 運用モニタリング</span></div>
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">制作期間</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">運用しながら継続改善（自社内製）</span></div>
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">日報ダッシュボードの構築、サイト健全性・Lighthouse計測の自動化、レポートのリポジトリ蓄積</span></div>
+            </div>
+          </div>
+
+          <div class="case-detail-grid">
+            <div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と背景（導入前のボトルネック）</h2>
+              <div class="case-detail-text">
+                <p>運用データが日報・レポートに散らばっていると、全体の傾向がつかみにくく、改善の優先順位も決めにくくなります。</p>
+                <ul class="case-detail-list"><li><strong>データの分散</strong>: 日報、検索数値、サイトの速度計測が別々の場所にあり、全体像が見えない。</li><li><strong>手動計測の限界</strong>: 速度計測を都度手作業で行うと、継続的な比較ができない。</li><li><strong>体感と実測のずれ</strong>: シミュレーション値だけでは、実際の表示速度と差が出ることがある。</li></ul>
+              </div>
+            </div>
+            <div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・運用アプローチ</h2>
+              <div class="case-detail-text">
+                <p>記録を一覧するダッシュボードと、計測を自動で回すレポートの2本立てにしました。</p>
+                <ul class="case-detail-list"><li><strong>日報ダッシュボード</strong>: AI社員が記録した日報を一覧化し、推移と要判断事項を1画面で確認できるようにした。</li><li><strong>サイト健全性レポート</strong>: ページの応答とPageSpeedの結果を自動計測し、結果ファイルをリポジトリに保存する。</li><li><strong>Lighthouse詳細レポート</strong>: 複数回の計測で、シミュレーション値と実測値（FCP/LCP）を並べて確認できるようにした。</li><li><strong>履歴をGitで管理</strong>: レポートはコミットとして残るため、改善前後の比較が可能。</li></ul>
+              </div>
+            </div>
+            <div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果と成果（ビジネスインパクト）</h2>
+              <div class="case-detail-text">
+                <p>運用状況を<strong>数値と推移で確認できる</strong>ようになり、改善の優先順位を根拠をもって決められます。計測が自動のため、手作業の確認漏れも起きません。<br>ダッシュボードや管理画面の構築は、新規事業のMVPにも組み込みやすい領域です。</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                <div class="faq-item">
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 社内向けダッシュボードのMVP開発は可能ですか？</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 可能です。必要な指標を絞った最小構成であれば、数日〜数週間での開発が見込めます。MVPの価格帯は10万〜100万円で、要件により個別にご案内します。</p>
+                </div><div class="faq-item">
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. サイトの速度計測を自動化するメリットは何ですか？</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 計測を定期実行して履歴を残せるため、改善の効果を前後比較で確認できます。手作業の計測漏れも防げます。</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するAI駆動開発・新規事業開発のノウハウを解説しています。</p>
+              <a href="../column/096-ai-driven-development-claude-code-explained.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 AI駆動開発（Claude Code）の仕組みと進め方を解説したコラム →
+              </a>
+            </div>
+          </div>
+
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
+            <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
+        <h3 class="cases-cta-title">
+          AI駆動開発・MVP開発のご相談・無料お見積もり
+        </h3>
+        <p class="cases-cta-desc">
+          新規Webアプリ・iOS/Androidアプリを、Claude Codeを活用したAI駆動開発とベトナムのオフショアチームで開発します。<br>
+          <span class="gradient-text" style="font-weight: 700;">MVPは10万〜100万円、数日〜数週間から。要件により個別にお見積もりします。</span>
+        </p>
+        <div class="cases-cta-buttons">
+          <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
+          <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <!-- SVG Logo -->
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">実績・事例</a></li>
+              <li><a href="../column/" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client JavaScript -->
+  <script defer src="../script.js?v=61"></script>
+  <!-- Floating Theme Switcher -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <!-- Moon Icon for switching to dark theme -->
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <!-- Sun Icon for switching to light theme -->
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
