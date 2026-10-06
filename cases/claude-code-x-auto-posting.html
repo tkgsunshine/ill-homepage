@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例 | 開発実績 | Ill inc.</title>
+  <meta name="description" content="Ill（イル）株式会社が自社で運用する、Claude CodeでX（旧Twitter）投稿を自動化する事例。公開コラムから投稿文を生成する仕組み、AIに書かせてよい内容のルール、人が承認する範囲、段階的に自動化を進める手順を解説します。">
+  <meta name="keywords" content="Claude Code X 自動投稿,X 投稿 自動化 AI,SNS運用 自動化,AI駆動開発 事例,Ill inc.">
+  <meta name="author" content="Ill inc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ill-inc.net/cases/claude-code-x-auto-posting">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例 | 開発実績 | Ill inc.">
+  <meta property="og:description" content="Ill（イル）株式会社が自社で運用する、Claude CodeでX（旧Twitter）投稿を自動化する事例。公開コラムから投稿文を生成する仕組み、AIに書かせてよい内容のルール、人が承認する範囲、段階的に自動化を進める手順を解説します。">
+  <meta property="og:url" content="https://www.ill-inc.net/cases/claude-code-x-auto-posting">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_x_auto_posting.webp?v=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例 | 開発実績 | Ill inc.">
+  <meta name="twitter:description" content="Ill（イル）株式会社が自社で運用する、Claude CodeでX（旧Twitter）投稿を自動化する事例。公開コラムから投稿文を生成する仕組み、AIに書かせてよい内容のルール、人が承認する範囲、段階的に自動化を進める手順を解説します。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_x_auto_posting.webp?v=1">
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=61">
+
+  <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例",
+      "description": "Ill（イル）株式会社が自社で運用する、Claude CodeでX（旧Twitter）投稿を自動化する事例。公開コラムから投稿文を生成する仕組み、AIに書かせてよい内容のルール、人が承認する範囲、段階的に自動化を進める手順を解説します。",
+      "image": "https://www.ill-inc.net/illust_case_x_auto_posting.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ill（イル）株式会社",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ill-inc.net/logo-icon.png"
+        }
+      },
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ill-inc.net/cases/claude-code-x-auto-posting"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ill-inc.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "開発実績・導入事例",
+          "item": "https://www.ill-inc.net/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例",
+          "item": "https://www.ill-inc.net/cases/claude-code-x-auto-posting"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Claude CodeによるSNS自動投稿は新規事業にも使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。新規事業の立ち上げ初期は発信の人手が足りないため、コンテンツ連動の投稿生成は相性が良い使い方です。Ill（イル）株式会社では、MVP開発とあわせた運用設計のご相談も承っています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AIが誤った内容を投稿するリスクはどう抑えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "書いてよい事実をルール文書に固定し、価格や実績に触れる内容は人が確認する運用にします。自動投稿の有効化・停止も人が決められる設計にします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "最初から完全自動にしても問題ありませんか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "おすすめしません。まずは下書き生成のみで運用して出力の傾向を確認し、低リスクな投稿から段階的に自動化するのが安全です。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-light">
+
+  <!-- Background Orbs Container -->
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo" id="logo">
+        <div class="logo-icon">
+          <!-- Stylized III / Ill Logo with Gradients -->
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          ILL<span>INC.</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
+          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
+          <li><a href="index.html" class="nav-link active">Cases</a></li>
+          <li><a href="../column/" class="nav-link">Column</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS & ARTICLE SECTION -->
+  <section class="section" style="padding-top: 12rem;">
+    <div class="container">
+      <div class="breadcrumbs" style="margin-bottom: 4rem;">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item"><a href="index.html">開発実績・導入事例</a></span>
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-item">Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例</span>
+      </div>
+
+      <article class="glass-card case-detail-card">
+        <div class="case-detail-banner">
+          <img src="../illust_case_x_auto_posting.webp" alt="Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">AI社内活用 / SNS運用</span>
+        </div>
+
+        <div class="case-detail-content">
+          <h1 class="case-detail-title">
+            Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例
+          </h1>
+
+          <div class="case-detail-tags">
+            <span class="tech-badge">Claude Code</span><span class="tech-badge">X（旧Twitter）運用</span><span class="tech-badge">投稿文自動生成</span><span class="tech-badge">GitHub連携</span>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">自社運用（Ill inc.）／ SNS・コンテンツ配信</span></div>
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">制作期間</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">運用しながら継続改善（自社内製）</span></div>
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">投稿文の生成ルール設計、コラム連動の配信フロー構築、承認・停止ルールの設計</span></div>
+            </div>
+          </div>
+
+          <div class="case-detail-grid">
+            <div style="padding: 2rem; background: rgba(16,185,129,0.07); border: 1px solid rgba(16,185,129,0.3); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: #10B981; display: block; margin-bottom: 0.5rem;">結論・要点</span>
+              <p style="font-size: 1.5rem; line-height: 1.8; margin: 0; color: var(--color-text-primary);">Claude Codeに「書いてよい事実」のルールを渡し、公開コラムを入力にX投稿文を生成させています。価格・事例に触れる内容は人が確認し、自動投稿は段階的に有効化する運用です。</p>
+            </div>
+            <div id="sec-1">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と背景：SNS発信は人手に頼ると止まる</h2>
+              <div class="case-detail-text"><p>Ill（イル）株式会社は、SEOコラムを1日2回、GitHub Actionsで自動公開しています。公開された記事を検索経由だけで届けるのではなく、X（旧Twitter）でも発信したいと考えていましたが、記事ごとに投稿文を考えて手動で投稿する運用は、忙しくなると真っ先に止まります。</p><ul class="case-detail-list"><li><strong>継続の壁</strong>: 公開のたびに投稿文を作る作業は小さいが、毎日積み重なると負担になる。</li><li><strong>トーンのブレ</strong>: 担当者や時期で文体・訴求が変わり、AI開発会社としての見え方が揃わない。</li><li><strong>事実に反する表現のリスク</strong>: 実績や価格を盛った投稿は信頼を損なう。書いてよい事実の範囲を固定する必要があった。</li></ul><p>つまり必要だったのは「投稿を自動で作る」ことだけでなく、<strong>何を書いてよいかを機械が守れる形にする</strong>ことでした。</p></div>
+            </div><div id="sec-2">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Claude CodeによるX投稿自動化の仕組み</h2>
+              <div class="case-detail-text"><p>基本の流れは次のとおりです。</p><ol class="case-detail-list" style="padding-left:2rem;"><li><strong>コラムが公開される</strong>: 編集カレンダーの未公開分を、GitHub Actionsが朝夕に公開する（既存の自動公開パイプライン）。</li><li><strong>記事の要点とURLを取り出す</strong>: タイトル・結論・URLなど、投稿に必要な情報を公開記事から取得する。</li><li><strong>Claude Codeが投稿文を生成する</strong>: リポジトリ内のルール文書（書いてよい事実・禁止事項）を読み込んだ上で、投稿文を作る。</li><li><strong>確認して投稿する</strong>: 価格・事例に触れる内容は人が確認する。自動投稿の有効化と停止は人が決める。</li></ol><p>ルール文書は、事業の方針（新規開発に特化している、MVPの価格帯と納期の範囲など）をまとめたもので、<strong>AIが毎回同じ前提で書く</strong>ための土台です。</p></div>
+            </div><div id="sec-3">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. AIに書かせてよい内容・書かせない内容</h2>
+              <div class="case-detail-text"><p>自動化で最も重要なのは、禁止事項を先に決めることです。Ill（イル）株式会社では、次のように線を引いています。</p><div style="overflow-x:auto;margin:1.6rem 0;"><table style="width:100%;border-collapse:collapse;min-width:520px;"><thead><tr><th style="text-align:left;padding:1rem 1.2rem;border-bottom:2px solid rgba(56,189,248,.4);font-size:1.35rem;">区分</th><th style="text-align:left;padding:1rem 1.2rem;border-bottom:2px solid rgba(56,189,248,.4);font-size:1.35rem;">内容</th></tr></thead><tbody><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">書いてよい</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">公開済みコラムの要点、開発体制（Claude Code・ベトナムのオフショア）、MVPの価格帯と納期の範囲、記事へのリンク</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">書かない</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">契約条件（支払い条件・保証期間・単価）、根拠のない実績・数値、存在しないSNSアカウントやプロフィール</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">人が確認</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">価格や事例に触れる投稿、新しい訴求の追加、自動投稿の有効化・停止</td></tr></tbody></table></div><p>この表をそのままルール文書に書き、AIに読ませています。人間の担当者にも同じ表を渡せるため、運用が属人化しません。</p></div>
+            </div><div id="sec-4">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">4. 段階的に自動化を進める：下書き生成から自動投稿へ</h2>
+              <div class="case-detail-text"><p>外部に公開される投稿は、いったん出ると取り消しにくい性質があります。そこで、いきなり完全自動にせず、次の順で進めるのが安全です。</p><ol class="case-detail-list" style="padding-left:2rem;"><li><strong>下書き生成のみ</strong>: AIが投稿文を作り、人が内容を見て投稿する。</li><li><strong>低リスクな投稿から自動化</strong>: 記事の要点とリンクだけの投稿など、確認の必要が少ないものを自動投稿にする。</li><li><strong>停止の手順を用意</strong>: 問題が出たときに止められるよう、停止の手順と責任者を決めておく。</li></ol><p>Ill（イル）株式会社でも、外部への自動投稿の有効化は人が判断する方針です。</p></div>
+            </div><div id="sec-5">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">5. 導入効果と、運用で気をつけた点</h2>
+              <div class="case-detail-text"><p>コラム公開から投稿までの手作業が減り、発信が途切れにくい状態になりました。<strong>ルール文書を書き換えるだけで、投稿全体のトーンや禁止事項を一括で変更できる</strong>点も、人手運用にはない利点です。変更はGitの履歴に残るため、いつ誰が何を変えたかも追えます。</p><p>一方で、投稿の最終的な責任は人が持つ前提を崩していません。AIの出力を鵜呑みにせず、数値や実績は根拠のあるものだけを使う運用を守っています。</p></div>
+            </div><div id="sec-6">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">6. 新規開発・MVPへの応用</h2>
+              <div class="case-detail-text"><p>自社の運用で実証した「AIに役割を持たせ、人は承認する」型は、新規開発のMVPにもそのまま使えます。</p><p>新規事業の立ち上げ初期は、発信に割ける人手が少ないのが普通です。「コンテンツを入力に、ルールに沿って投稿文を作る」仕組みは、小さく作って早く試せます。Ill（イル）株式会社は、Claude Codeを使ったAI駆動開発とベトナムのオフショアチームで、MVPを10万〜100万円・数日〜数週間から開発しています（要件により個別見積もり）。</p></div>
+            </div>
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
+              <div class="faq-container">
+                <div class="faq-item">
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. Claude CodeによるSNS自動投稿は新規事業にも使えますか？</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。新規事業の立ち上げ初期は発信の人手が足りないため、コンテンツ連動の投稿生成は相性が良い使い方です。Ill（イル）株式会社では、MVP開発とあわせた運用設計のご相談も承っています。</p>
+                </div><div class="faq-item">
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. AIが誤った内容を投稿するリスクはどう抑えますか？</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 書いてよい事実をルール文書に固定し、価格や実績に触れる内容は人が確認する運用にします。自動投稿の有効化・停止も人が決められる設計にします。</p>
+                </div><div class="faq-item">
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 最初から完全自動にしても問題ありませんか？</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. おすすめしません。まずは下書き生成のみで運用して出力の傾向を確認し、低リスクな投稿から段階的に自動化するのが安全です。</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 3.5rem; padding: 2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
+              <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するAI駆動開発・新規事業開発のノウハウを解説しています。</p>
+              <a href="../column/096-ai-driven-development-claude-code-explained.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                👉 AI駆動開発（Claude Code）の仕組みと進め方を解説したコラム →
+              </a>
+            </div>
+          </div>
+
+          <div class="case-detail-back-container" style="margin-top: 4rem;">
+            <a href="index.html" class="btn btn-secondary">実績一覧に戻る</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="glass-panel cases-cta" style="margin-top: 6rem;">
+        <h3 class="cases-cta-title">
+          AI駆動開発・MVP開発のご相談・無料お見積もり
+        </h3>
+        <p class="cases-cta-desc">
+          新規Webアプリ・iOS/Androidアプリを、Claude Codeを活用したAI駆動開発とベトナムのオフショアチームで開発します。<br>
+          <span class="gradient-text" style="font-weight: 700;">MVPは10万〜100万円、数日〜数週間から。要件により個別にお見積もりします。</span>
+        </p>
+        <div class="cases-cta-buttons">
+          <a href="../index.html#contact" class="btn btn-primary">無料で相談する</a>
+          <a href="../index.html#services" class="btn btn-secondary">サービス内容を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo">
+            <div class="logo-icon">
+              <!-- SVG Logo -->
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
+              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="index.html" class="footer-link">実績・事例</a></li>
+              <li><a href="../column/" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../index.html#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../index.html#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../index.html#services" class="footer-link">インフラ構築・移行</a></li>
+              <li><a href="../index.html#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../index.html#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../index.html#services" class="footer-link">生成AI導入・開発</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client JavaScript -->
+  <script defer src="../script.js?v=61"></script>
+  <!-- Floating Theme Switcher -->
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <!-- Moon Icon for switching to dark theme -->
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <!-- Sun Icon for switching to light theme -->
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
