@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI社員の日報を自動作成・蓄積する仕組みの自社運用事例 | 開発実績 | Ill inc.</title>
-  <meta name="description" content="Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事数・記事キュー・Actionsの成否・Search Consoleの数値を毎日記録し、判断が必要な事項だけを人に上げる仕組みを紹介します。">
-  <meta name="keywords" content="日報 自動作成 AI,AI社員 日報,業務自動化 事例,Ill inc.">
+  <meta name="description" content="Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事・記事キュー・Actionsの成否・Search Consoleの数値を毎晩記録し、人の判断が必要な事項だけを上げる設計と、記録で守るルールを解説します。">
+  <meta name="keywords" content="日報 自動作成 AI,AI社員 日報,業務自動化 事例,日報 自動化 Claude Code,Ill inc.">
   <meta name="author" content="Ill inc.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.ill-inc.net/cases/ai-daily-report-automation">
   <meta property="og:type" content="article">
   <meta property="og:title" content="AI社員の日報を自動作成・蓄積する仕組みの自社運用事例 | 開発実績 | Ill inc.">
-  <meta property="og:description" content="Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事数・記事キュー・Actionsの成否・Search Consoleの数値を毎日記録し、判断が必要な事項だけを人に上げる仕組みを紹介します。">
+  <meta property="og:description" content="Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事・記事キュー・Actionsの成否・Search Consoleの数値を毎晩記録し、人の判断が必要な事項だけを上げる設計と、記録で守るルールを解説します。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/ai-daily-report-automation">
   <meta property="og:site_name" content="Ill inc.">
-  <meta property="og:image" content="https://www.ill-inc.net/illust_mvp_validation.webp?v=1">
+  <meta property="og:image" content="https://www.ill-inc.net/illust_case_ai_daily_report.webp?v=1">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI社員の日報を自動作成・蓄積する仕組みの自社運用事例 | 開発実績 | Ill inc.">
-  <meta name="twitter:description" content="Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事数・記事キュー・Actionsの成否・Search Consoleの数値を毎日記録し、判断が必要な事項だけを人に上げる仕組みを紹介します。">
-  <meta name="twitter:image" content="https://www.ill-inc.net/illust_mvp_validation.webp?v=1">
+  <meta name="twitter:description" content="Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事・記事キュー・Actionsの成否・Search Consoleの数値を毎晩記録し、人の判断が必要な事項だけを上げる設計と、記録で守るルールを解説します。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_ai_daily_report.webp?v=1">
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="apple-touch-icon" href="../favicon.png">
@@ -41,8 +41,8 @@
     {
       "@type": "BlogPosting",
       "headline": "AI社員の日報を自動作成・蓄積する仕組みの自社運用事例",
-      "description": "Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事数・記事キュー・Actionsの成否・Search Consoleの数値を毎日記録し、判断が必要な事項だけを人に上げる仕組みを紹介します。",
-      "image": "https://www.ill-inc.net/illust_mvp_validation.webp",
+      "description": "Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事・記事キュー・Actionsの成否・Search Consoleの数値を毎晩記録し、人の判断が必要な事項だけを上げる設計と、記録で守るルールを解説します。",
+      "image": "https://www.ill-inc.net/illust_case_ai_daily_report.webp",
       "author": {
         "@type": "Organization",
         "name": "Ill（イル）株式会社"
@@ -102,6 +102,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "実データの取得元を固定し、推測で書かないルールにします。取得できない値は「要確認」と記載して、誤った数字を報告しない設計にします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "日報で何を記録すればよいか分かりません。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "まず「止まると困る処理の成否」と「判断に使う数値」の2つから始めるのがおすすめです。運用しながら項目を増減させてください。"
           }
         }
       ]
@@ -189,7 +197,7 @@
 
       <article class="glass-card case-detail-card">
         <div class="case-detail-banner">
-          <img src="../illust_mvp_validation.webp" alt="AI社員の日報を自動作成・蓄積する仕組みの自社運用事例" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
+          <img src="../illust_case_ai_daily_report.webp" alt="AI社員の日報を自動作成・蓄積する仕組みの自社運用事例" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;" loading="lazy" decoding="async" width="800" height="450">
           <span class="column-card-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">AI社員 / 業務自動化</span>
         </div>
 
@@ -211,27 +219,29 @@
           </div>
 
           <div class="case-detail-grid">
-            <div>
-              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と背景（導入前のボトルネック）</h2>
-              <div class="case-detail-text">
-                <p>自動化が進むほど、「今日は何が起きたか」を人が把握するコストが増えます。確認が漏れると、止まった自動処理に気づけません。</p>
-                <ul class="case-detail-list"><li><strong>状況が見えない</strong>: 記事が公開されたか、自動処理が失敗していないかを、毎日人が確認するのは負担。</li><li><strong>数値の推測</strong>: 報告に推測が混ざると、判断を誤る原因になる。</li><li><strong>要対応の埋没</strong>: 本当に人の判断が必要な事項が、日々の報告に埋もれてしまう。</li></ul>
-              </div>
+            <div style="padding: 2rem; background: rgba(16,185,129,0.07); border: 1px solid rgba(16,185,129,0.3); border-radius: 1rem;">
+              <span style="font-size: 1.2rem; font-weight: 700; color: #10B981; display: block; margin-bottom: 0.5rem;">結論・要点</span>
+              <p style="font-size: 1.5rem; line-height: 1.8; margin: 0; color: var(--color-text-primary);">AI社員が毎晩、公開記事・記事キューの残り・Actionsの成否・Search Consoleの数値を実データから集めて1日1件の日報に記録します。人の判断が必要な事項だけを別項目に上げる設計です。</p>
             </div>
-            <div>
-              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. Ill（イル）株式会社による設計・運用アプローチ</h2>
-              <div class="case-detail-text">
-                <p>AI社員が毎晩、決まった項目を実データから集めて日報に記録する形にしました。</p>
-                <ul class="case-detail-list"><li><strong>記録項目の固定</strong>: 公開記事、記事キューの残り、Actionsの成否、Search Consoleの数値を1日1件で記録する。</li><li><strong>数値は実データのみ</strong>: 推測で書かず、取れない値は「要確認」と明記する。</li><li><strong>要判断だけを分離</strong>: 人の判断が本当に必要な事項だけを専用の項目（attention）に書き、他はAIが判断して進める。</li><li><strong>履歴として蓄積</strong>: 日報はコレクションに1日1件で蓄積され、あとから推移を振り返れる。</li></ul>
-              </div>
+            <div id="sec-1">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と背景：自動化するほど「今日何が起きたか」が見えなくなる</h2>
+              <div class="case-detail-text"><p>自動化が進むほど、人が日々の状況を把握するコストは逆に増えます。確認が漏れると、止まった自動処理に気づけません。</p><ul class="case-detail-list"><li><strong>状況が見えない</strong>: 記事が公開されたか、自動処理が失敗していないかを、毎日人が確認するのは負担。</li><li><strong>数値の推測</strong>: 報告に推測が混ざると、判断を誤る原因になる。</li><li><strong>要対応の埋没</strong>: 本当に人の判断が必要な事項が、日々の報告に埋もれてしまう。</li></ul></div>
+            </div><div id="sec-2">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. 日報自動作成の設計：記録する項目を先に固定する</h2>
+              <div class="case-detail-text"><p>日報の価値は、毎日同じ項目が同じ基準で残ることにあります。Ill（イル）株式会社のAI社員は、次の項目を毎晩記録します。</p><div style="overflow-x:auto;margin:1.6rem 0;"><table style="width:100%;border-collapse:collapse;min-width:520px;"><thead><tr><th style="text-align:left;padding:1rem 1.2rem;border-bottom:2px solid rgba(56,189,248,.4);font-size:1.35rem;">項目</th><th style="text-align:left;padding:1rem 1.2rem;border-bottom:2px solid rgba(56,189,248,.4);font-size:1.35rem;">内容</th></tr></thead><tbody><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">公開記事</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">その日に公開されたコラム</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">記事キュー</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">未公開の残り本数（補充が必要かの判断材料）</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">Actionsの成否</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">自動公開などのワークフローが成功したか</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">Search Consoleの数値</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">クリック・表示回数などの実データ</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">attention</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">人の判断が本当に必要な事項</td></tr></tbody></table></div><p>日報は1日1件で、専用のコレクション（データ置き場）に蓄積します。</p></div>
+            </div><div id="sec-3">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 守るルール：数値は実データだけ、要判断は絞る</h2>
+              <div class="case-detail-text"><ol class="case-detail-list" style="padding-left:2rem;"><li><strong>数値は実データのみ</strong>: 推測で書かない。取得できない値は「要確認」と明記する。</li><li><strong>要判断だけをattentionに</strong>: 人の判断が本当に必要なことだけを書く。それ以外はAIが判断して進め、PRで反映する。</li><li><strong>1日1件で蓄積</strong>: 後から推移を振り返れるよう、同じ形式で残す。</li></ol><p>このルールは、AI社員の定義ファイルにも明記しています。<strong>報告が正確であること</strong>が、人がAIに仕事を任せられる前提になるためです。</p></div>
+            </div><div id="sec-4">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">4. 運用の流れ：人は「日報を見て、attentionだけ判断する」</h2>
+              <div class="case-detail-text"><p>人の毎日の作業は、日報を開き、attentionの項目だけを確認して判断することです。自動処理が失敗していれば、Actionsの成否の欄で気づけます。記事キューが減っていれば、補充が必要だとわかります。</p><p>確認作業が「全体を探し回る」から「絞られた項目を判断する」に変わり、見落としが起きにくくなります。</p></div>
+            </div><div id="sec-5">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">5. 日報が次の仕組みの土台になる</h2>
+              <div class="case-detail-text"><p>蓄積された日報は、ダッシュボードで一覧・推移を見る土台になります（別事例：日報ダッシュボードとサイト健全性レポート）。また、同じ型（役割・ルール・日報）で、AI社員を増やしていく前提でも設計しています。</p></div>
+            </div><div id="sec-6">
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">6. 新規開発・MVPへの応用</h2>
+              <div class="case-detail-text"><p>自社の運用で実証した「AIに役割を持たせ、人は承認する」型は、新規開発のMVPにもそのまま使えます。</p><p>日報や記録の仕組みは、社内向けの小さな管理ツールとして、MVPに組み込みやすい領域です。Ill（イル）株式会社は、MVPを10万〜100万円・数日〜数週間から開発しています（要件により個別見積もり）。</p></div>
             </div>
-            <div>
-              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 導入効果と成果（ビジネスインパクト）</h2>
-              <div class="case-detail-text">
-                <p>毎日の確認作業が「日報を見て、attentionだけ判断する」形になり、<strong>見るべき情報が絞られました</strong>。自動処理の失敗も日報から気づけるため、見落としが起きにくい運用です。<br>日報の蓄積は、次のダッシュボード化（可視化）の土台にもなっています。</p>
-              </div>
-            </div>
-
             <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
               <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
               <div class="faq-container">
@@ -241,6 +251,9 @@
                 </div><div class="faq-item">
                   <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. AIが作る日報の正確さはどう担保しますか？</h3>
                   <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 実データの取得元を固定し、推測で書かないルールにします。取得できない値は「要確認」と記載して、誤った数字を報告しない設計にします。</p>
+                </div><div class="faq-item">
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 日報で何を記録すればよいか分かりません。</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. まず「止まると困る処理の成否」と「判断に使う数値」の2つから始めるのがおすすめです。運用しながら項目を増減させてください。</p>
                 </div>
               </div>
             </div>
