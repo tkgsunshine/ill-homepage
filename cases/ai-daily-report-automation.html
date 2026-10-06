@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI社員の日報を自動作成・蓄積する仕組みの自社運用事例 | 開発実績 | Ill inc.</title>
-  <meta name="description" content="Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事・記事キュー・Actionsの成否・Search Consoleの数値を毎晩記録し、人の判断が必要な事項だけを上げる設計と、記録で守るルールを解説します。">
+  <meta name="description" content="Ill（イル）株式会社が自社で行っている、AI社員の日報の自動作成を、IT知識がなくても分かるように紹介。毎晩何を記録するか、数字を推測で書かないルール、人の判断が必要なことだけを知らせる工夫を解説します。">
   <meta name="keywords" content="日報 自動作成 AI,AI社員 日報,業務自動化 事例,日報 自動化 Claude Code,Ill inc.">
   <meta name="author" content="Ill inc.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.ill-inc.net/cases/ai-daily-report-automation">
   <meta property="og:type" content="article">
   <meta property="og:title" content="AI社員の日報を自動作成・蓄積する仕組みの自社運用事例 | 開発実績 | Ill inc.">
-  <meta property="og:description" content="Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事・記事キュー・Actionsの成否・Search Consoleの数値を毎晩記録し、人の判断が必要な事項だけを上げる設計と、記録で守るルールを解説します。">
+  <meta property="og:description" content="Ill（イル）株式会社が自社で行っている、AI社員の日報の自動作成を、IT知識がなくても分かるように紹介。毎晩何を記録するか、数字を推測で書かないルール、人の判断が必要なことだけを知らせる工夫を解説します。">
   <meta property="og:url" content="https://www.ill-inc.net/cases/ai-daily-report-automation">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/illust_case_ai_daily_report.webp?v=1">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI社員の日報を自動作成・蓄積する仕組みの自社運用事例 | 開発実績 | Ill inc.">
-  <meta name="twitter:description" content="Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事・記事キュー・Actionsの成否・Search Consoleの数値を毎晩記録し、人の判断が必要な事項だけを上げる設計と、記録で守るルールを解説します。">
+  <meta name="twitter:description" content="Ill（イル）株式会社が自社で行っている、AI社員の日報の自動作成を、IT知識がなくても分かるように紹介。毎晩何を記録するか、数字を推測で書かないルール、人の判断が必要なことだけを知らせる工夫を解説します。">
   <meta name="twitter:image" content="https://www.ill-inc.net/illust_case_ai_daily_report.webp?v=1">
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -41,7 +41,7 @@
     {
       "@type": "BlogPosting",
       "headline": "AI社員の日報を自動作成・蓄積する仕組みの自社運用事例",
-      "description": "Ill（イル）株式会社が自社で運用する、AI社員の日報自動作成の事例。公開記事・記事キュー・Actionsの成否・Search Consoleの数値を毎晩記録し、人の判断が必要な事項だけを上げる設計と、記録で守るルールを解説します。",
+      "description": "Ill（イル）株式会社が自社で行っている、AI社員の日報の自動作成を、IT知識がなくても分かるように紹介。毎晩何を記録するか、数字を推測で書かないルール、人の判断が必要なことだけを知らせる工夫を解説します。",
       "image": "https://www.ill-inc.net/illust_case_ai_daily_report.webp",
       "author": {
         "@type": "Organization",
@@ -90,26 +90,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "日報の自動作成は社内業務の自動化にも応用できますか？",
+          "name": "日報の自動作成は、社内のほかの仕事にも使えますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。記録項目と数値の取得元を決めれば、営業・開発・運用など他部門の日報にも応用できます。要件に応じて個別にご相談ください。"
+            "text": "はい。記録する項目と数字の取り出し元を決めれば、営業・開発・運用など、ほかの部署の日報にも使えます。内容に応じて個別にご相談ください。"
           }
         },
         {
           "@type": "Question",
-          "name": "AIが作る日報の正確さはどう担保しますか？",
+          "name": "AIが作る日報の正確さは、どう守っていますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "実データの取得元を固定し、推測で書かないルールにします。取得できない値は「要確認」と記載して、誤った数字を報告しない設計にします。"
+            "text": "数字の取り出し元を決めておき、推測では書かないルールにしています。取れなかった値は「要確認」と書き、間違った数字を報告しない設計です。"
           }
         },
         {
           "@type": "Question",
-          "name": "日報で何を記録すればよいか分かりません。",
+          "name": "日報に何を書けばよいか分かりません。",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "まず「止まると困る処理の成否」と「判断に使う数値」の2つから始めるのがおすすめです。運用しながら項目を増減させてください。"
+            "text": "まず「止まると困る作業の成否」と「判断に使う数字」の2つから始めるのがおすすめです。使いながら、項目を足したり減らしたりしてください。"
           }
         }
       ]
@@ -213,47 +213,49 @@
           <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
               <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">自社運用（Ill inc.）／ 社内業務・運用管理</span></div>
-              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">制作期間</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">運用しながら継続改善（自社内製）</span></div>
-              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">日報の項目設計、毎晩の自動記録、要判断事項（attention）の切り出しルール</span></div>
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">制作期間</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">運用しながら改善を継続（自社で開発）</span></div>
+              <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">日報の記録項目の設計、毎晩の自動記録、「人の判断が必要なこと」の切り出しルール</span></div>
             </div>
           </div>
 
           <div class="case-detail-grid">
             <div style="padding: 2rem; background: rgba(16,185,129,0.07); border: 1px solid rgba(16,185,129,0.3); border-radius: 1rem;">
               <span style="font-size: 1.2rem; font-weight: 700; color: #10B981; display: block; margin-bottom: 0.5rem;">結論・要点</span>
-              <p style="font-size: 1.5rem; line-height: 1.8; margin: 0; color: var(--color-text-primary);">AI社員が毎晩、公開記事・記事キューの残り・Actionsの成否・Search Consoleの数値を実データから集めて1日1件の日報に記録します。人の判断が必要な事項だけを別項目に上げる設計です。</p>
+              <p style="font-size: 1.5rem; line-height: 1.8; margin: 0; color: var(--color-text-primary);">AI社員が毎晩、その日に公開した記事、これから出す記事の残り、自動処理が成功したか、検索の数字を、実際のデータから集めて日報に記録します。人の判断が必要なことだけを別の欄に書き、あとは人が日報を見て判断するだけにしています。</p>
             </div>
+            <div style="margin-top:3rem;padding:2rem;background:rgba(148,163,184,0.1);border-radius:1.2rem;"><span style="font-size:1.5rem;font-weight:700;display:block;margin-bottom:1rem;">図：毎晩の日報ができるまでの流れ</span><div style="margin-bottom:1.4rem;"><span style="display:inline-flex;align-items:center;gap:.6rem;margin-right:1.6rem;font-size:1.3rem;"><i style="width:1.4rem;height:1.4rem;border-radius:.4rem;background:#0EA5E9;display:inline-block;"></i>自動で動く</span><span style="display:inline-flex;align-items:center;gap:.6rem;margin-right:1.6rem;font-size:1.3rem;"><i style="width:1.4rem;height:1.4rem;border-radius:.4rem;background:#8B5CF6;display:inline-block;"></i>AIが担当</span><span style="display:inline-flex;align-items:center;gap:.6rem;margin-right:1.6rem;font-size:1.3rem;"><i style="width:1.4rem;height:1.4rem;border-radius:.4rem;background:#F59E0B;display:inline-block;"></i>人が担当</span></div><div style="display:flex;flex-wrap:wrap;gap:.8rem;align-items:stretch;"><div style="flex:1 1 150px;min-width:140px;background:#fff;border:2px solid #8B5CF6;border-radius:1.2rem;padding:1.2rem 1rem;text-align:center;"><span style="display:inline-block;background:#8B5CF6;color:#fff;font-size:1.1rem;font-weight:700;padding:.2rem .9rem;border-radius:999px;margin-bottom:.6rem;">1. AIが担当</span><div style="font-size:1.45rem;font-weight:700;color:#0f172a;">データを集める</div><div style="font-size:1.2rem;color:#475569;margin-top:.4rem;line-height:1.5;">記事・自動処理の成否・検索の数字</div></div><div style="flex:0 0 auto;align-self:center;font-size:2rem;color:#94a3b8;">▶</div><div style="flex:1 1 150px;min-width:140px;background:#fff;border:2px solid #8B5CF6;border-radius:1.2rem;padding:1.2rem 1rem;text-align:center;"><span style="display:inline-block;background:#8B5CF6;color:#fff;font-size:1.1rem;font-weight:700;padding:.2rem .9rem;border-radius:999px;margin-bottom:.6rem;">2. AIが担当</span><div style="font-size:1.45rem;font-weight:700;color:#0f172a;">日報に記録</div><div style="font-size:1.2rem;color:#475569;margin-top:.4rem;line-height:1.5;">1日1件・推測は書かない</div></div><div style="flex:0 0 auto;align-self:center;font-size:2rem;color:#94a3b8;">▶</div><div style="flex:1 1 150px;min-width:140px;background:#fff;border:2px solid #8B5CF6;border-radius:1.2rem;padding:1.2rem 1rem;text-align:center;"><span style="display:inline-block;background:#8B5CF6;color:#fff;font-size:1.1rem;font-weight:700;padding:.2rem .9rem;border-radius:999px;margin-bottom:.6rem;">3. AIが担当</span><div style="font-size:1.45rem;font-weight:700;color:#0f172a;">判断が必要なことを分ける</div><div style="font-size:1.2rem;color:#475569;margin-top:.4rem;line-height:1.5;">「attention」欄に書く</div></div><div style="flex:0 0 auto;align-self:center;font-size:2rem;color:#94a3b8;">▶</div><div style="flex:1 1 150px;min-width:140px;background:#fff;border:2px solid #F59E0B;border-radius:1.2rem;padding:1.2rem 1rem;text-align:center;"><span style="display:inline-block;background:#F59E0B;color:#fff;font-size:1.1rem;font-weight:700;padding:.2rem .9rem;border-radius:999px;margin-bottom:.6rem;">4. 人が担当</span><div style="font-size:1.45rem;font-weight:700;color:#0f172a;">日報を見て判断</div><div style="font-size:1.2rem;color:#475569;margin-top:.4rem;line-height:1.5;">分けられた項目だけ決める</div></div></div></div>
             <div id="sec-1">
-              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. 課題と背景：自動化するほど「今日何が起きたか」が見えなくなる</h2>
-              <div class="case-detail-text"><p>自動化が進むほど、人が日々の状況を把握するコストは逆に増えます。確認が漏れると、止まった自動処理に気づけません。</p><ul class="case-detail-list"><li><strong>状況が見えない</strong>: 記事が公開されたか、自動処理が失敗していないかを、毎日人が確認するのは負担。</li><li><strong>数値の推測</strong>: 報告に推測が混ざると、判断を誤る原因になる。</li><li><strong>要対応の埋没</strong>: 本当に人の判断が必要な事項が、日々の報告に埋もれてしまう。</li></ul></div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">1. なぜ必要か：自動化が進むほど「今日何が起きたか」が見えなくなる</h2>
+              <div class="case-detail-text"><p>仕事を自動化するほど、人が日々の状況を知るための手間は、かえって増えることがあります。確認が漏れると、止まってしまった自動処理に気づけないからです。</p><ul class="case-detail-list"><li><strong>状況が見えない</strong>: 記事が公開されたか、自動処理が失敗していないかを、毎日人が調べるのは負担。</li><li><strong>数字が推測になりがち</strong>: 報告に推測が混ざると、判断を間違える原因になる。</li><li><strong>大事なことが埋もれる</strong>: 本当に人の判断が必要なことが、毎日の報告の中に埋もれてしまう。</li></ul></div>
             </div><div id="sec-2">
-              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. 日報自動作成の設計：記録する項目を先に固定する</h2>
-              <div class="case-detail-text"><p>日報の価値は、毎日同じ項目が同じ基準で残ることにあります。Ill（イル）株式会社のAI社員は、次の項目を毎晩記録します。</p><div style="overflow-x:auto;margin:1.6rem 0;"><table style="width:100%;border-collapse:collapse;min-width:520px;"><thead><tr><th style="text-align:left;padding:1rem 1.2rem;border-bottom:2px solid rgba(56,189,248,.4);font-size:1.35rem;">項目</th><th style="text-align:left;padding:1rem 1.2rem;border-bottom:2px solid rgba(56,189,248,.4);font-size:1.35rem;">内容</th></tr></thead><tbody><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">公開記事</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">その日に公開されたコラム</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">記事キュー</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">未公開の残り本数（補充が必要かの判断材料）</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">Actionsの成否</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">自動公開などのワークフローが成功したか</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">Search Consoleの数値</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">クリック・表示回数などの実データ</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">attention</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">人の判断が本当に必要な事項</td></tr></tbody></table></div><p>日報は1日1件で、専用のコレクション（データ置き場）に蓄積します。</p></div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">2. 日報の作り方：先に「何を記録するか」を決める</h2>
+              <div class="case-detail-text"><p>日報の価値は、毎日同じ項目が同じ基準で残ることです。Ill（イル）株式会社のAI社員は、次の項目を毎晩記録します。</p><div style="overflow-x:auto;margin:1.6rem 0;"><table style="width:100%;border-collapse:collapse;min-width:520px;"><thead><tr><th style="text-align:left;padding:1rem 1.2rem;border-bottom:2px solid rgba(56,189,248,.4);font-size:1.35rem;">記録する項目</th><th style="text-align:left;padding:1rem 1.2rem;border-bottom:2px solid rgba(56,189,248,.4);font-size:1.35rem;">中身</th></tr></thead><tbody><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">公開した記事</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">その日に公開された記事</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">これから出す記事の残り</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">残り何本あるか（足りなければ補充が必要）</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">自動処理の成否</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">記事の自動公開などが、ちゃんと成功したか</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">検索の数字</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">検索で何回表示され、何回クリックされたか（実際のデータ）</td></tr><tr><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">人の判断が必要なこと</td><td style="padding:1rem 1.2rem;border-bottom:1px solid rgba(148,163,184,.3);font-size:1.35rem;vertical-align:top;">本当に人が決めないと進まないこと（日報では「attention」欄）</td></tr></tbody></table></div><p>日報は1日1件ずつ、専用の保管場所に積み重ねていきます。</p></div>
             </div><div id="sec-3">
-              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 守るルール：数値は実データだけ、要判断は絞る</h2>
-              <div class="case-detail-text"><ol class="case-detail-list" style="padding-left:2rem;"><li><strong>数値は実データのみ</strong>: 推測で書かない。取得できない値は「要確認」と明記する。</li><li><strong>要判断だけをattentionに</strong>: 人の判断が本当に必要なことだけを書く。それ以外はAIが判断して進め、PRで反映する。</li><li><strong>1日1件で蓄積</strong>: 後から推移を振り返れるよう、同じ形式で残す。</li></ol><p>このルールは、AI社員の定義ファイルにも明記しています。<strong>報告が正確であること</strong>が、人がAIに仕事を任せられる前提になるためです。</p></div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">3. 守っているルール：数字は実データだけ、人に上げるのは最小限</h2>
+              <div class="case-detail-text"><ol class="case-detail-list" style="padding-left:2rem;"><li><strong>数字は実際のデータだけ</strong>: 推測で書かない。取れなかった値は「要確認」と書く。</li><li><strong>人の判断が必要なことだけ別の欄に</strong>: それ以外は、AIが判断して進め、変更は人が確認してから反映する。</li><li><strong>1日1件で積み重ねる</strong>: あとから変化を振り返れるよう、同じ形で残す。</li></ol><p>このルールは、AI社員の説明ファイルにも書いてあります。<strong>報告が正確であること</strong>が、人がAIに仕事を任せられる前提だからです。</p></div>
             </div><div id="sec-4">
-              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">4. 運用の流れ：人は「日報を見て、attentionだけ判断する」</h2>
-              <div class="case-detail-text"><p>人の毎日の作業は、日報を開き、attentionの項目だけを確認して判断することです。自動処理が失敗していれば、Actionsの成否の欄で気づけます。記事キューが減っていれば、補充が必要だとわかります。</p><p>確認作業が「全体を探し回る」から「絞られた項目を判断する」に変わり、見落としが起きにくくなります。</p></div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">4. 毎日の流れ：人は「日報を見て、判断が必要なことだけ決める」</h2>
+              <div class="case-detail-text"><p>人の毎日の作業は、日報を開き、「人の判断が必要なこと」の欄だけを見て決めることです。自動処理が失敗していれば、成否の欄で気づけます。これから出す記事が減っていれば、補充が必要だと分かります。</p><p>「全体を探し回る」作業から「絞られた項目を判断する」作業に変わるので、見落としが起きにくくなります。</p></div>
             </div><div id="sec-5">
-              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">5. 日報が次の仕組みの土台になる</h2>
-              <div class="case-detail-text"><p>蓄積された日報は、ダッシュボードで一覧・推移を見る土台になります（別事例：日報ダッシュボードとサイト健全性レポート）。また、同じ型（役割・ルール・日報）で、AI社員を増やしていく前提でも設計しています。</p></div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">5. 日報は、次の仕組みの土台にもなる</h2>
+              <div class="case-detail-text"><p>積み重ねた日報は、一覧で変化を見るための画面（ダッシュボード）の土台になります（別の事例：日報ダッシュボードとサイトの健康診断レポート）。また、同じ型（役割・ルール・日報）で、AI社員を増やしていくことも前提に設計しています。</p></div>
             </div><div id="sec-6">
-              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">6. 新規開発・MVPへの応用</h2>
-              <div class="case-detail-text"><p>自社の運用で実証した「AIに役割を持たせ、人は承認する」型は、新規開発のMVPにもそのまま使えます。</p><p>日報や記録の仕組みは、社内向けの小さな管理ツールとして、MVPに組み込みやすい領域です。Ill（イル）株式会社は、MVPを10万〜100万円・数日〜数週間から開発しています（要件により個別見積もり）。</p></div>
+              <h2 class="case-detail-section-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">6. 新しいサービスづくり（MVP）への活かし方</h2>
+              <div class="case-detail-text"><p>ここで紹介した「AIに役割を渡し、最後の確認は人がする」というやり方は、新しいサービスの試作品（MVP）づくりにもそのまま使えます。</p><p>日報や記録の仕組みは、社内向けの小さな管理ツールとして、試作品に組み込みやすい分野です。Ill（イル）株式会社は、AIを使った開発（Claude Code）とベトナムの開発チームを組み合わせ、試作品（MVP）を10万〜100万円・数日〜数週間から作っています（内容により個別にお見積もりします）。</p></div>
             </div>
+            <div style="margin-top: 3rem; padding: 2rem; background: rgba(148,163,184,0.1); border-radius: 1rem;"><span style="font-size: 1.3rem; font-weight: 700; color: var(--color-cyan); display: block; margin-bottom: 1rem;">用語かんたん解説</span><dl style="margin:0;"><dt style="font-size:1.4rem;font-weight:700;margin-top:0.8rem;">日報</dt><dd style="font-size:1.4rem;line-height:1.8;margin:0.2rem 0 0;">その日の仕事の結果をまとめた記録です。ここでは、AI社員が毎晩自動で作ります。</dd><dt style="font-size:1.4rem;font-weight:700;margin-top:0.8rem;">attention（アテンション）</dt><dd style="font-size:1.4rem;line-height:1.8;margin:0.2rem 0 0;">日報の中の「人の判断が必要なこと」だけを書く欄です。</dd><dt style="font-size:1.4rem;font-weight:700;margin-top:0.8rem;">自動処理の成否</dt><dd style="font-size:1.4rem;line-height:1.8;margin:0.2rem 0 0;">決まった時間に動く自動の作業が、うまくいったか失敗したかのことです。</dd><dt style="font-size:1.4rem;font-weight:700;margin-top:0.8rem;">MVP（エムブイピー）</dt><dd style="font-size:1.4rem;line-height:1.8;margin:0.2rem 0 0;">最低限の機能だけで作る「試作品」のことです。</dd></dl></div>
             <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
               <h3 class="case-detail-section-title">よくある質問（FAQ）</h3>
               <div class="faq-container">
                 <div class="faq-item">
-                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 日報の自動作成は社内業務の自動化にも応用できますか？</h3>
-                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。記録項目と数値の取得元を決めれば、営業・開発・運用など他部門の日報にも応用できます。要件に応じて個別にご相談ください。</p>
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 日報の自動作成は、社内のほかの仕事にも使えますか？</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. はい。記録する項目と数字の取り出し元を決めれば、営業・開発・運用など、ほかの部署の日報にも使えます。内容に応じて個別にご相談ください。</p>
                 </div><div class="faq-item">
-                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. AIが作る日報の正確さはどう担保しますか？</h3>
-                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 実データの取得元を固定し、推測で書かないルールにします。取得できない値は「要確認」と記載して、誤った数字を報告しない設計にします。</p>
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. AIが作る日報の正確さは、どう守っていますか？</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. 数字の取り出し元を決めておき、推測では書かないルールにしています。取れなかった値は「要確認」と書き、間違った数字を報告しない設計です。</p>
                 </div><div class="faq-item">
-                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 日報で何を記録すればよいか分かりません。</h3>
-                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. まず「止まると困る処理の成否」と「判断に使う数値」の2つから始めるのがおすすめです。運用しながら項目を増減させてください。</p>
+                  <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-text-primary);">Q. 日報に何を書けばよいか分かりません。</h3>
+                  <p style="font-size: 1.45rem; line-height: 1.8; color: var(--color-text-secondary); margin: 0;">A. まず「止まると困る作業の成否」と「判断に使う数字」の2つから始めるのがおすすめです。使いながら、項目を足したり減らしたりしてください。</p>
                 </div>
               </div>
             </div>
@@ -262,7 +264,7 @@
               <span style="font-size: 1.2rem; font-weight: 700; color: var(--color-cyan); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">RELATED COLUMN</span>
               <p style="font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 1rem;">本事例に関連するAI駆動開発・新規事業開発のノウハウを解説しています。</p>
               <a href="../column/061-ai-agent-custom-workflow-automation.html" style="font-size: 1.5rem; font-weight: 700; color: #38BDF8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
-                👉 AIエージェントによる業務ワークフロー自動化のコラム →
+                👉 AIによる業務の自動化を解説したコラム →
               </a>
             </div>
           </div>

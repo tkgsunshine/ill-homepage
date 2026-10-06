@@ -35,3 +35,12 @@
 ## Answer-first (AIO / AI summaries) — added 2026-10-02
 
 13. Every column starts with an **answer box** (結論/要点) above the table of contents. Add a hand-written `answer` (2-3 sentences, facts and price ladder from items 7 and 12 only) to new calendar entries; otherwise the generator falls back to the meta description. `scripts/add_answer_box.py` backfills pages that lack the box and is idempotent.
+
+## Plain-language writing (Non-IT readers) — added 2026-10-06
+
+14. **Columns and case studies must be understandable by non-IT readers.** Target readers are individual entrepreneurs and new-business owners, not engineers.
+    - Explain every technical term the first time it appears (short parenthetical, or a「用語かんたん解説」box at the end of the page). Prefer everyday Japanese over loanwords and abbreviations (e.g. PR → 「変更の確認依頼」, ワークフロー → 「自動で動く仕組み」).
+    - Short sentences (aim for ≤ 60 characters), one idea per sentence. Use a concrete example or analogy for each key idea.
+    - Lead with "what it means for the business" (time saved, cost, risk) before how it works.
+    - Table headers and headings must also be plain language.
+    - All fact/price rules (items 7, 11, 12) still apply. Plain language must not add claims we cannot back.
