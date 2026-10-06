@@ -135,7 +135,7 @@ def main():
               </span>
             </div>
             <div class="cta-buttons">
-              <a href="../index.html#contact" class="btn btn-primary btn-cta-primary">
+              <a href="../#contact" class="btn btn-primary btn-cta-primary">
                 無料相談・見積もりを依頼する <span class="arrow">→</span>
               </a>
             </div>
