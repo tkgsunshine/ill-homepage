@@ -855,6 +855,11 @@ def generate_svg(filename, title, category):
 </svg>"""
     return svg
 
+def card_article_filename(card):
+    # Card links are extensionless (cleanUrls), e.g. /column/foo or column/foo; older ones end in .html.
+    href_match = re.search(r"href=\"(?:/?column/)?([a-zA-Z0-9_-]+?)(?:\.html)?\"", card)
+    return f"{href_match.group(1)}.html" if href_match else None
+
 def main():
     print("Applying super-clean minimal thumbnail with full mapping to all column articles...")
     files = sorted([f for f in glob.glob(os.path.join(COLUMN_DIR, "*.html")) if "index.html" not in f])
@@ -887,12 +892,9 @@ def main():
     cards = re.findall(r"(<article class=\"column-card.*?</article>)", hub, re.DOTALL)
     print(f"Updating {len(cards)} cards in column/index.html...")
     for card in cards:
-        href_match = re.search(r"href=\"/?column/([^\"]+)\"", card)
-        if not href_match:
-            href_match = re.search(r"href=\"([^\"]+\.html)\"", card)
-        if not href_match:
+        fn = card_article_filename(card)
+        if not fn:
             continue
-        fn = href_match.group(1)
         if fn in svg_map:
             svg, title, cat = svg_map[fn]
             new_card = re.sub(r"<svg.*?</svg>", svg, card, flags=re.DOTALL)
@@ -911,10 +913,9 @@ def main():
     top_cards = re.findall(r"(<article class=\"column-card.*?</article>)", top, re.DOTALL)
     print(f"Updating {len(top_cards)} cards in index.html...")
     for card in top_cards:
-        href_match = re.search(r"href=\"column/([^\"]+)\"", card)
-        if not href_match:
+        fn = card_article_filename(card)
+        if not fn:
             continue
-        fn = href_match.group(1)
         if fn in svg_map:
             svg, title, cat = svg_map[fn]
             new_card = re.sub(r"<svg.*?</svg>", svg, card, flags=re.DOTALL)
