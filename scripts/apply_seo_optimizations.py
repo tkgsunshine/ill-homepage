@@ -16,6 +16,11 @@ def clean_html(text):
     text = " ".join(text.split())
     return text.strip()
 
+def card_article_filename(card):
+    # Card links are extensionless (cleanUrls), e.g. /column/foo or column/foo; older ones end in .html.
+    href_match = re.search(r'href="(?:/?column/)?([a-zA-Z0-9_-]+?)(?:\.html)?"', card)
+    return f"{href_match.group(1)}.html" if href_match else None
+
 def main():
     print("Executing apply_seo_optimizations.py...")
     
@@ -166,10 +171,9 @@ def main():
 
         updated_hub_content = hub_content
         for card in cards:
-            href_match = re.search(r'href="([a-zA-Z0-9_-]+\.html)"', card)
-            if not href_match:
+            filename = card_article_filename(card)
+            if not filename:
                 continue
-            filename = href_match.group(1)
             if filename in article_titles:
                 core_title = article_titles[filename]
                 
@@ -207,10 +211,9 @@ def main():
 
         updated_home_content = home_content
         for card in cards:
-            href_match = re.search(r'href="column/([a-zA-Z0-9_-]+\.html)"', card)
-            if not href_match:
+            filename = card_article_filename(card)
+            if not filename:
                 continue
-            filename = href_match.group(1)
             if filename in article_titles:
                 core_title = article_titles[filename]
                 
