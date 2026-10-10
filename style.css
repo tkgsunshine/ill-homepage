@@ -3620,11 +3620,8 @@ body.theme-light .category-tab:hover {
 
 /* --- MOBILE RESPONSIVE OVERRIDES FOR SWIPING & SVGS --- */
 @media (max-width: 768px) {
-  .column-card-image svg g {
-    display: none !important; /* Hide tiny unreadable text on mobile */
-  }
-
-  /* Article banner: keep the title text; hide only the tiny bullet lines (nested group) */
+  /* Card thumbnails / article banner: keep the title text; hide only the tiny bullet lines (nested group) */
+  .column-card-image svg g g,
   .article-main-visual svg g g {
     display: none !important;
   }
