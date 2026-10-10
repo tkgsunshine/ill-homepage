@@ -2737,6 +2737,10 @@ body.theme-light .theme-switch-btn .moon-icon {
   object-fit: cover;
 }
 
+.article-layout > * {
+  min-width: 0;
+}
+
 .article-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;
@@ -2746,6 +2750,8 @@ body.theme-light .theme-switch-btn .moon-icon {
 
 /* Article Rich Text Styling */
 .article-body {
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-size: 1.6rem;
   line-height: 1.85;
   color: var(--text-main);
@@ -3614,9 +3620,13 @@ body.theme-light .category-tab:hover {
 
 /* --- MOBILE RESPONSIVE OVERRIDES FOR SWIPING & SVGS --- */
 @media (max-width: 768px) {
-  .column-card-image svg g,
-  .article-main-visual svg g {
+  .column-card-image svg g {
     display: none !important; /* Hide tiny unreadable text on mobile */
+  }
+
+  /* Article banner: keep the title text; hide only the tiny bullet lines (nested group) */
+  .article-main-visual svg g g {
+    display: none !important;
   }
   
   .column-card-image svg image,
@@ -3953,7 +3963,13 @@ body:not(.theme-light) .inline-cta-box .btn-secondary:hover {
 
   .article-main-visual {
     height: auto;
-    aspect-ratio: 16/9;
+    aspect-ratio: auto;
+  }
+
+  .article-main-visual svg {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   .article-title {
