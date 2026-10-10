@@ -3599,16 +3599,23 @@ body.theme-light .article-body .inline-cta .cta-microcopy {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.category-tab:hover {
-  color: var(--text-main);
-  background: rgba(255, 255, 255, 0.05);
+/* Hover only on real pointers: on touch devices :hover sticks after a tap
+   and used to wash out the selected (active) tab. */
+@media (hover: hover) {
+  .category-tab:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  body.theme-light .category-tab:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
 }
 
-body.theme-light .category-tab:hover {
-  background: rgba(0, 0, 0, 0.03);
-}
-
-.category-tab.active {
+.category-tab.active,
+.category-tab.active:hover,
+body.theme-light .category-tab.active,
+body.theme-light .category-tab.active:hover {
   color: #ffffff;
   background: var(--gradient-primary);
   box-shadow: 0 4px 15px rgba(255, 27, 148, 0.25);
@@ -3633,9 +3640,22 @@ body.theme-light .category-tab:hover {
   }
 
   .category-tabs-container {
-    justify-content: flex-start !important;
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+    margin: 2.4rem 0 3.2rem;
+  }
+
+  /* Show every genre on SP: wrap into rows instead of a hidden horizontal scroll */
+  .category-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    overflow: visible;
+  }
+
+  .category-tab {
+    padding: 0.8rem 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -4240,5 +4260,21 @@ body.theme-light .pagination-btn.disabled {
   }
   .pagination-list {
     gap: 0.5rem;
+  }
+}
+
+/* Line break shown only on SP (e.g. hero CTA 「無料相談は／こちら」) */
+br.sp-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  br.sp-only {
+    display: inline;
+  }
+
+  /* Break only where <br class="sp-only"> is placed, never mid-word */
+  .hero-ctas .btn {
+    white-space: nowrap;
   }
 }
