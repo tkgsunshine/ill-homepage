@@ -613,7 +613,7 @@ HTML_CONTENT = """<!DOCTYPE html>
   </button>
 
   <!-- Client JavaScript -->
-  <script defer src="../script.js?v=62"></script>
+  <script defer src="../script.js?v=63"></script>
 </body>
 </html>
 """

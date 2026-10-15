@@ -1,3 +1,66 @@
+// --- 問い合わせの流入元の記録 ---
+// 閲覧したページの流れを、このブラウザの中（localStorage）にだけ保存し、問い合わせフォームの送信時に添える。
+// 個人情報は保存しない。保存は、最初に来たページ、参照元サイト名、直近の閲覧ページ（パスだけ）に限る。
+(function () {
+  var KEY = 'ill_src_v1';
+  var DAY = 24 * 3600 * 1000;
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { return {}; }
+  }
+  function write(d) {
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  function jst(at) {
+    return new Date(at + 9 * 3600 * 1000).toISOString().slice(5, 16).replace('T', ' ');
+  }
+  function isColumn(p) {
+    return /^\/column\/[^/]+$/.test(p) && p !== '/column/index';
+  }
+  try {
+    var now = Date.now();
+    var d = read();
+    var path = location.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+    var params = new URLSearchParams(location.search);
+    var ref = '';
+    try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+    if (ref === location.hostname) ref = '';
+    if (!d.first || now - d.first.at > 7 * DAY) {
+      d.first = {
+        at: now,
+        path: path,
+        ref: ref,
+        utm: ['source', 'medium', 'campaign'].map(function (k) { return params.get('utm_' + k) || ''; }).join('/').replace(/\/+$/, '')
+      };
+      d.trail = [];
+    }
+    d.trail = d.trail || [];
+    var last = d.trail[d.trail.length - 1];
+    if (!last || last.path !== path) d.trail.push({ at: now, path: path });
+    d.trail = d.trail.slice(-8);
+    write(d);
+  } catch (e) {}
+
+  window.__illSource = {
+    fields: function () {
+      var d = read();
+      var out = {};
+      if (d.first) {
+        out['流入元_最初のページ'] = d.first.path + '（' + jst(d.first.at) + '）';
+        out['流入元_参照元サイト'] = d.first.ref || 'なし（直接・不明）';
+        if (d.first.utm) out['流入元_UTM'] = d.first.utm;
+      }
+      var trail = d.trail || [];
+      var col = null;
+      for (var i = trail.length - 1; i >= 0; i--) {
+        if (isColumn(trail[i].path) && Date.now() - trail[i].at < DAY) { col = trail[i]; break; }
+      }
+      out['流入元_直前に見たコラム'] = col ? col.path + '（' + jst(col.at) + '）' : 'なし（24時間以内）';
+      out['流入元_閲覧の流れ'] = trail.map(function (t) { return t.path; }).join(' → ');
+      return out;
+    }
+  };
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
@@ -376,6 +439,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Submit via Fetch to SSGform endpoint
         const formData = new FormData(contactForm);
+        try {
+          const src = window.__illSource && window.__illSource.fields();
+          if (src) Object.keys(src).forEach((k) => formData.append(k, src[k]));
+        } catch (e) {}
         fetch(contactForm.action || 'https://ssgform.com/s/HwQ7BIptSoo0', {
           method: 'POST',
           body: formData,
