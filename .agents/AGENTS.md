@@ -44,3 +44,10 @@
     - Lead with "what it means for the business" (time saved, cost, risk) before how it works.
     - Table headers and headings must also be plain language.
     - All fact/price rules (items 7, 11, 12) still apply. Plain language must not add claims we cannot back.
+
+## Target-reader balance & natural keyword use — added 2026-10-15
+
+15. **Reader weighting: 50 / 50.** Columns aim at two groups with roughly equal weight: (a) individual entrepreneurs and new-business owners inside companies (new-development / MVP angle), and (b) **small and mid-sized companies (中小企業)** that want to systemize or outsource operations (outsourcing, workflow tools, DX, cost control). We want leads from both. This extends item 5 and item 8: SMB topics are allowed again, as long as they connect to building something new or a custom system (not generic "DX" talk). Across the column set, keep the two groups about even; when rewriting an article, name both kinds of reader where it is natural (e.g. 「中小企業の担当者の方も、新しい事業を始める個人の方も」).
+16. **Never paste search keywords into headings or body.** No 「【キーワード】」 prefixes in headings, no sentences that just list keywords (e.g. 「RFP 書き方 中小企業 や 要件定義 テンプレート に取り組む企業が急増しています」), no 「ターゲットキーワード（…）に対応する…」. Write for humans first; the keyword phrase may appear naturally in titles and meta tags only.
+17. **The pricing table and FAQ must match the article's topic.** Never reuse another topic's table or FAQ (a past generator bug put the 「マッチングプラットフォーム・C2Cサービス」 block in ~20 unrelated articles). If no table fits the topic, omit it.
+
