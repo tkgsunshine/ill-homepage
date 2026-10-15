@@ -87,7 +87,6 @@ def main():
     toc_items.append(f'              <li><a href="#{sec_pricing_id}">{cfg["h2_title"]}</a></li>')
     sections_html += f'''
           <h2 id="{sec_pricing_id}">{cfg['h2_title']}</h2>
-          <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
           {cfg['table_html']}
           {cfg['explanation_html']}
 '''
