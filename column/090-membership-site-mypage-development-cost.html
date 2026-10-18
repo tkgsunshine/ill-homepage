@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会員サイト・マイページの開発費用｜ログイン機能・権限管理・サブスク課金の相場と注意点 | Ill（イル）株式会社</title>
+  <meta name="description" content="会員制サイト・マイページを独自開発する際の費用相場と、ログイン認証・権限管理・サブスク課金・退会処理など必要な機能を解説。セキュリティ面の注意点と、費用を抑える設計のコツもご紹介します。">
+  <meta name="keywords" content="会員サイト 開発 費用,マイページ 開発,会員制サイト 作り方,ログイン機能 開発 費用,サブスク 会員 システム">
+  <meta name="author" content="Ill inc. 編集部">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/090-membership-site-mypage-development-cost">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="会員サイト・マイページの開発費用｜ログイン機能・権限管理・サブスク課金の相場と注意点 | Ill inc. コラム">
+  <meta property="og:description" content="会員制サイト・マイページを独自開発する際の費用相場と、ログイン認証・権限管理・サブスク課金・退会処理など必要な機能を解説。セキュリティ面の注意点と、費用を抑える設計のコツもご紹介します。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/090-membership-site-mypage-development-cost">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="会員サイト・マイページの開発費用｜ログイン機能・権限管理・サブスク課金の相場と注意点 | Ill inc. コラム">
+  <meta name="twitter:description" content="会員制サイト・マイページを独自開発する際の費用相場と、ログイン認証・権限管理・サブスク課金・退会処理など必要な機能を解説。セキュリティ面の注意点と、費用を抑える設計のコツもご紹介します。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=65">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "会員サイト・マイページの開発費用｜ログイン機能・権限管理・サブスク課金の相場と注意点",
+    "description": "会員制サイト・マイページを独自開発する際の費用相場と、ログイン認証・権限管理・サブスク課金・退会処理など必要な機能を解説。セキュリティ面の注意点と、費用を抑える設計のコツもご紹介します。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/090-membership-site-mypage-development-cost"
+    }
+  }
+  </script>
+
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "会員サイト・マイページ開発費用の相場"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "会員のログイン機能は自作すべきですか？それとも外部サービスを使うべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "認証は漏えい時の影響が大きいため、実績のある認証サービスやフレームワークの標準機能の活用を推奨します。自作は工数がかかる上に、セキュリティ上のリスクを自社で背負うことになります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "あとから会員ランクや有料プランを追加できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可能です。ただし、権限や課金の仕組みはシステムの根幹になるため、将来の拡張を見据えたデータ設計にしておくことが重要です。初期設計で「会員の種類が増える可能性」を伝えていただければ、追加しやすい構造で設計します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 開発費用の支払いタイミングはどのようになっていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. お支払い条件は、案件の規模やご状況に応じて個別にご相談のうえ決定します。まずはお気軽にご相談ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q. 納品後のサポートや保守体制はどうなっていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A. 納品後は、月額数万円からの継続保守プランをご用意しております。対応範囲や条件は、案件に応じて個別にご案内します。"
+      }
+    }
+  ]
+}
+  </script>
+
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../#hero" class="nav-link">Home</a></li>
+          <li><a href="../#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../#services" class="nav-link">Services</a></li>
+          <li><a href="../#offshore" class="nav-link">Global</a></li>
+          <li><a href="../#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="./" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">会員サイト・マイページ開発費用の相場</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">システム開発・アーキテクチャ</span>
+        <h1 class="article-title">会員サイト・マイページの開発費用｜ログイン機能・権限管理・サブスク課金の相場と注意点</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.10.18</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「会員サイト・マイページの開発費用｜ログイン機能・権限管理・サブスク課金の相場と注意点」のビジュアルバナー">
+  <defs>
+    <linearGradient id="bg_090_membership_site_mypage_development_cost" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
+    </linearGradient>
+    <filter id="blur_090_membership_site_mypage_development_cost" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1000" height="428" fill="url(#bg_090_membership_site_mypage_development_cost)"/>
+
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_090_membership_site_mypage_development_cost)"/>
+  <circle cx="150" cy="340" r="220" fill="#818CF8" opacity="0.2" filter="url(#blur_090_membership_site_mypage_development_cost)"/>
+
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
+  </g>
+
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    <text x="0" y="165" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      会員サイト・マイページの開発費用｜ログイン機能・
+    </text>
+    <text x="0" y="225" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="#38BDF8">権限管理・サブスク課金の相場と注意点</tspan>
+    </text>
+
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 見積もりの適正化　<tspan fill="#38BDF8">✔</tspan> 不要機能の排除
+      </text>
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 契約トラブル防止
+      </text>
+    </g>
+  </g>
+</svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の要点</p>
+            <p style="margin: 0; line-height: 1.9;">会員制サイト・マイページを独自開発する際の費用相場と、ログイン認証・権限管理・サブスク課金・退会処理など必要な機能を解説。セキュリティ面の注意点と、費用を抑える設計のコツもご紹介します。</p>
+          </div>
+
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#sec-1">1. 【会員サイト 開発 費用】費用を左右するのは「会員の種類」と「課金の有無」</a></li>
+              <li><a href="#sec-2">2. 【機能別の目安】会員サイトに必要な機能と費用の考え方</a></li>
+              <li><a href="#sec-3">3. 【セキュリティ】会員データを預かる際に必須の対策</a></li>
+              <li><a href="#sec-4">4. 【費用の抑え方】段階的に作る会員サイトの進め方</a></li>
+              <li><a href="#sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
+            </ul>
+          </div>
+
+          <h2 id="sec-1">1. 【会員サイト 開発 費用】費用を左右するのは「会員の種類」と「課金の有無」</h2>
+          <p>会員サイトの開発費用は、画面の数よりも<strong>「会員の種類（権限）の数」と「課金の仕組みの有無」</strong>で大きく変わります。単純な会員登録とログインだけであれば比較的低コストですが、有料会員・企業アカウント・管理者など複数の権限が絡むと、設計と検証の工数が増えます。</p>
+
+          <h2 id="sec-2">2. 【機能別の目安】会員サイトに必要な機能と費用の考え方</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>機能</th><th>内容</th><th>費用への影響</th></tr></thead><tbody><tr><td>会員登録・ログイン</td><td>メール認証・パスワード再設定・SNSログイン</td><td>基本機能（実績ある部品で低コスト化）</td></tr><tr><td>マイページ</td><td>プロフィール編集・履歴表示</td><td>表示項目の数で変動</td></tr><tr><td>権限管理</td><td>会員ランク・企業と個人の区別・管理者権限</td><td><strong>種類が増えるほど設計・テスト工数が増加</strong></td></tr><tr><td>決済・サブスク</td><td>月額・年額課金、プラン変更、解約処理</td><td><strong>決済代行の連携と例外処理が必要で工数大</strong></td></tr><tr><td>管理画面</td><td>会員一覧・検索・手動操作・CSV出力</td><td>運用の手間に直結するため重要</td></tr></tbody></table></div><p>目安として、基本機能のみの会員サイトは<strong>20万〜100万円程度（MVP）</strong>、サブスク課金や複数権限を含む場合は<strong>100万〜300万円程度</strong>が、Ill（イル）株式会社での概算の範囲です。</p>
+
+          <h2 id="sec-3">3. 【セキュリティ】会員データを預かる際に必須の対策</h2>
+          <div class="checklist-box"><ul><li>パスワードは平文で保存せず、適切なハッシュ化を行う</li><li>通信の暗号化（HTTPS）と、ログイン試行回数の制限</li><li>個人情報の閲覧権限を最小限に設定し、操作ログを残す</li><li>退会時のデータ削除・匿名化のルールを決めておく</li><li>個人情報保護法に沿ったプライバシーポリシーの整備</li></ul></div><p>会員の個人情報を扱うサービスでは、機能の充実よりも、<strong>データを安全に守る設計</strong>のほうが重要です。</p>
+
+          <h2 id="sec-4">4. 【費用の抑え方】段階的に作る会員サイトの進め方</h2>
+          <div class="checklist-box"><ul><li>第1段階: 会員登録・ログイン・マイページの最小構成で公開し、利用状況を確認</li><li>第2段階: 利用データを見て、有料プランや会員ランクを追加</li><li>第3段階: 分析・メール配信・外部連携など、運用負荷の高い部分を自動化</li></ul></div><p><strong>Ill（イル）株式会社</strong>では、将来の拡張を見据えた設計で、初期は最小構成から始めて、事業の成長に合わせて機能を追加できる会員サイトを構築します。</p>
+
+          <h2 id="sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</h2>
+          <div class="article-table-wrapper">
+  <table class="article-table">
+    <thead>
+      <tr>
+        <th>開発規模</th>
+        <th>開発内容</th>
+        <th>大手SIer相場</th>
+        <th>Ill（イル）株式会社</th>
+        <th>想定工期</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>スモールMVP</strong></td>
+        <td>コア機能のみ（主要3画面）、プロトタイプ検証</td>
+        <td>300万〜500万円</td>
+        <td><strong>10万〜100万円</strong></td>
+        <td>数日〜数週間</td>
+      </tr>
+      <tr>
+        <td><strong>標準ビジネス版</strong></td>
+        <td>認証、権限管理、決済連携、管理画面ダッシュボード</td>
+        <td>600万〜1,200万円</td>
+        <td><strong>100万〜300万円（目安）</strong></td>
+        <td>約1〜2ヶ月</td>
+      </tr>
+      <tr>
+        <td><strong>エンタープライズ</strong></td>
+        <td>大規模トラフィック対応、基幹連動、高度セキュリティ</td>
+        <td>1,500万〜3,000万円</td>
+        <td><strong>個別見積もり</strong></td>
+        <td>要件により異なる</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          <h3>無駄なコストを削ぎ落とし、事業成果にコミットする「ミニマル開発」</h3>
+<p>従来のシステム開発では、「使うかどうかわからない機能」の見積もりが積み重なり、数百万円単位の無駄金が発生していました。<strong>Ill（イル）株式会社</strong> では、お客様のビジネスゴールから逆算し、本当に必要なコア機能だけに絞ったミニマル設計を徹底します。</p>
+<p>さらに、AIコーディングツール「Claude Code」を活用した開発と、ベトナムのオフショア開発チームを組み合わせたハイブリッド体制で、開発工数を抑えています。MVPであれば、<strong>10万〜100万円・数日〜数週間</strong>が目安です（要件により変動します）。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>会員のログイン機能は自作すべきですか？それとも外部サービスを使うべきですか？</h3>
+              <p>認証は漏えい時の影響が大きいため、実績のある認証サービスやフレームワークの標準機能の活用を推奨します。自作は工数がかかる上に、セキュリティ上のリスクを自社で背負うことになります。</p>
+            </div>
+            <div class="faq-item">
+              <h3>あとから会員ランクや有料プランを追加できますか？</h3>
+              <p>可能です。ただし、権限や課金の仕組みはシステムの根幹になるため、将来の拡張を見据えたデータ設計にしておくことが重要です。初期設計で「会員の種類が増える可能性」を伝えていただければ、追加しやすい構造で設計します。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 開発費用の支払いタイミングはどのようになっていますか？</h3>
+              <p>A. お支払い条件は、案件の規模やご状況に応じて個別にご相談のうえ決定します。まずはお気軽にご相談ください。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Q. 納品後のサポートや保守体制はどうなっていますか？</h3>
+              <p>A. 納品後は、月額数万円からの継続保守プランをご用意しております。対応範囲や条件は、案件に応じて個別にご案内します。</p>
+            </div>
+          </div>
+
+          <!-- Eye-catching Bottom CTA Banner -->
+          <div class="article-bottom-cta">
+            <div class="cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="cta-title">システム開発・AI導入の無料相談・概算見積もり</h3>
+            <p class="cta-desc">
+              不要な機能を削ぎ落とす「ミニマル設計」で、高品質な開発を適正価格で実現します。
+            </p>
+            <div class="cta-check-pills">
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                他社見積もりの妥当性診断
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                最短即日の概算提示
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                仕様変更に強いアジャイル
+              </span>
+            </div>
+            <div class="cta-buttons">
+              <a href="../#contact" class="btn btn-primary btn-cta-primary">
+                無料相談・見積もりを依頼する <span class="arrow">→</span>
+              </a>
+            </div>
+            <p class="cta-microcopy">
+              <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
+            </p>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Ill（イル）株式会社 編集部</p>
+            <p class="author-bio">
+              Ill（イル）株式会社の編集部です。Claude Codeを使ったAI駆動開発と、ベトナムのオフショア開発チームを組み合わせ、新規開発（Web・iOS/Android）の進め方と費用の考え方を発信しています。MVPは10万〜100万円・数日〜数週間から。
+              <a href="/#profile">会社概要を見る</a>
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/090-membership-site-mypage-development-cost">
+                  <span class="related-item-date">2026.10.18</span>
+                  <span class="related-item-title">会員サイト・マイページの開発費用｜ログイン機能・権限管理・サブスク課金の相場と注意点</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/089-reservation-system-custom-development-cost">
+                  <span class="related-item-date">2026.10.18</span>
+                  <span class="related-item-title">予約システムの独自開発費用｜月額SaaSとの比較と、自社専用で作るメリット・相場</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/116-service-terms-privacy-policy-minimum-for-mvp">
+                  <span class="related-item-date">2026.10.17</span>
+                  <span class="related-item-title">MVP公開前に整える利用規約とプライバシーポリシー｜最低限そろえる項目と確認の流れ</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/088-offshore-development-failure-causes-hybrid">
+                  <span class="related-item-date">2026.10.17</span>
+                  <span class="related-item-title">オフショア開発の失敗原因と対策｜コストを抑えつつ品質を守るハイブリッド体制とは</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/115-mvp-launch-support-inquiry-handling">
+                  <span class="related-item-date">2026.10.16</span>
+                  <span class="related-item-title">MVP公開直後の問い合わせ対応の決め方｜少人数でも回せるサポート体制</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <div class="sidebar-cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="sidebar-cta-title">
+              システム開発・AI導入の<br>
+              <span class="cta-highlight">無料相談・概算見積もり</span>
+            </h3>
+            <ul class="sidebar-cta-points">
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>開発費を最大50%以上削減</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>他社見積もりの妥当性診断</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>最短即日の概算見積もり提示</span>
+              </li>
+            </ul>
+            <a href="../#contact" class="btn sidebar-cta-btn">
+              無料相談・見積もりを依頼する <span class="arrow">→</span>
+            </a>
+            <span class="sidebar-cta-note">🔒 オンライン相談対応・無理な営業なし</span>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../#hero" class="footer-link">Home</a></li>
+              <li><a href="../#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="./" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../#services" class="footer-link">生成AI導入・開発</a></li>
+              <li><a href="../#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../#services" class="footer-link">インフラ構築・移行</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=63"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
