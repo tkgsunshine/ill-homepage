@@ -82,10 +82,14 @@ def main():
     # Inject rich pricing table & SIer comparison section
     # An optional "enrichment" key in the calendar entry pins the table/FAQ set explicitly,
     # because keyword matching on title/description can pick an unrelated topic.
-    cfg = TOPIC_CONFIGS.get(target_post.get("enrichment")) or get_best_config(target_post["filename"], target_post["title"] + " " + target_post.get("description", ""))
-    sec_pricing_id = "sec-pricing-table"
-    toc_items.append(f'              <li><a href="#{sec_pricing_id}">{cfg["h2_title"]}</a></li>')
-    sections_html += f'''
+    # "enrichment": "none" skips the shared table / FAQ block (for articles that carry their own topic-specific table and FAQs).
+    if target_post.get("enrichment") == "none":
+        cfg = {"extra_faqs": []}
+    else:
+        cfg = TOPIC_CONFIGS.get(target_post.get("enrichment")) or get_best_config(target_post["filename"], target_post["title"] + " " + target_post.get("description", ""))
+        sec_pricing_id = "sec-pricing-table"
+        toc_items.append(f'              <li><a href="#{sec_pricing_id}">{cfg["h2_title"]}</a></li>')
+        sections_html += f'''
           <h2 id="{sec_pricing_id}">{cfg['h2_title']}</h2>
           {cfg['table_html']}
           {cfg['explanation_html']}
