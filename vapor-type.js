@@ -19,7 +19,7 @@
 
   const canvas = document.createElement('canvas');
   canvas.setAttribute('aria-hidden', 'true');
-  Object.assign(canvas.style, { position: 'absolute', left: '0', top: '0', pointerEvents: 'none' });
+  Object.assign(canvas.style, { position: 'absolute', left: '0', top: '0', pointerEvents: 'none', maxWidth: 'none', maxHeight: 'none' });
   const ctx = canvas.getContext('2d');
   const page = document.createElement('canvas');
   const pctx = page.getContext('2d', { willReadFrequently: true });
