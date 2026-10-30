@@ -33,6 +33,21 @@
     .svc-split > .service-card:hover { transform: none; }
     .svc-split > .service-card[hidden] { display: none; }
     .svc-split > .service-card .service-title { font-size: 2.6rem; }
+    /* The detail panel takes the opposite light/dark of the page, like flipping the theme switch for this card only. */
+    body.theme-light .svc-split > .service-card {
+      --bg-card: hsl(226, 40%, 10%); --glass-bg: hsl(226, 45%, 8%); --glass-border: hsla(0, 0%, 100%, 0.1);
+      --text-main: hsl(210, 40%, 96%); --text-muted: hsl(215, 20%, 72%);
+      --gradient-soft: linear-gradient(135deg, hsla(328, 100%, 59%, 0.22) 0%, hsla(271, 100%, 54%, 0.22) 50%, hsla(186, 100%, 50%, 0.22) 100%);
+      box-shadow: 0 24px 60px -20px rgba(15, 23, 42, 0.45);
+    }
+    body:not(.theme-light) .svc-split > .service-card {
+      --bg-card: hsl(226, 25%, 99%); --glass-bg: hsl(226, 30%, 98%); --glass-border: hsla(226, 20%, 10%, 0.1);
+      --text-main: hsl(226, 40%, 12%); --text-muted: hsl(226, 15%, 40%);
+      --color-cyan: hsl(190, 100%, 38%);
+      box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+    }
+    .svc-split > .service-card { background: var(--glass-bg); border-color: var(--glass-border); color: var(--text-main); }
+    .svc-split > .service-card:hover { border-color: var(--glass-border); }
     @media (min-width: 900px) {
       /* Icon and title side by side at the top of the detail panel. */
       .svc-split > .service-card { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 2rem; align-items: center; }
@@ -101,8 +116,14 @@
     if (wide.matches) moveBar();
     if (!reduce) {
       const c = cards[i];
-      c.animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }],
-        { duration: 450, easing: 'cubic-bezier(.22,1,.36,1)' });
+      if (wide.matches) {
+        // The flipped panel spreads out from the list side, like a light being switched.
+        c.animate([{ clipPath: 'circle(0% at 0% 50%)' }, { clipPath: 'circle(150% at 0% 50%)' }],
+          { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)' });
+      } else {
+        c.animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }],
+          { duration: 450, easing: 'cubic-bezier(.22,1,.36,1)' });
+      }
     }
   };
 
