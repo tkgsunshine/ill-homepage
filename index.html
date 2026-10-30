@@ -180,92 +180,11 @@
       
       <!-- Hero Interactive Visual: Essence & Cube -->
       <div class="hero-visual">
-        <!-- Option A: SVG Liquid Essence & Geometric Cube with 3D Parallax layers -->
-        <div class="visual-container visual-a-container">
-          <div class="essence-wrapper">
-            <!-- Layer 1: Tech Backdrop & Radial Glow (Far Z) -->
-            <div class="visual-layer layer-glow">
-              <svg class="visual-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <radialGradient id="glow-grad" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="var(--color-cyan)" stop-opacity="0.35" />
-                    <stop offset="60%" stop-color="var(--color-purple)" stop-opacity="0.1" />
-                    <stop offset="100%" stop-color="transparent" stop-opacity="0" />
-                  </radialGradient>
-                </defs>
-                <circle cx="200" cy="200" r="180" fill="url(#glow-grad)" class="bg-glow" />
-              </svg>
-            </div>
-
-            <!-- Layer 2: Organic Blobs - Essence (Middle Z) -->
-            <div class="visual-layer layer-essence">
-              <svg class="visual-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="orb-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="var(--color-pink)" stop-opacity="0.85" />
-                    <stop offset="100%" stop-color="var(--color-purple)" stop-opacity="0.85" />
-                  </linearGradient>
-                  <linearGradient id="orb-grad-2" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="var(--color-cyan)" stop-opacity="0.85" />
-                    <stop offset="100%" stop-color="var(--color-purple)" stop-opacity="0.85" />
-                  </linearGradient>
-                </defs>
-                <g class="essence-blobs">
-                  <path d="M 200,130 C 255,130 275,170 275,200 C 275,245 230,270 200,270 C 155,270 125,245 125,200 C 125,160 155,130 200,130 Z" fill="url(#orb-grad-1)" class="blob blob-1" />
-                  <path d="M 200,140 C 245,140 265,170 265,200 C 265,235 230,260 200,260 C 155,260 135,235 135,200 C 135,170 155,140 200,140 Z" fill="url(#orb-grad-2)" class="blob blob-2" />
-                </g>
-              </svg>
-            </div>
-
-            <!-- Layer 3: Tech Grid & Geometric Cube - Form (Near Z) -->
-            <div class="visual-layer layer-form">
-              <svg class="visual-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Background Tech Grid Rings -->
-                <circle cx="200" cy="200" r="150" stroke="var(--glass-border)" stroke-width="1" stroke-dasharray="4 8" class="rotator-reverse" />
-                <circle cx="200" cy="200" r="120" stroke="var(--glass-border)" stroke-width="1.5" stroke-dasharray="100 40" class="rotator" />
-                <circle cx="200" cy="200" r="90" stroke="var(--glass-border)" stroke-width="1" />
-
-                <!-- Orbiting Particle Nodes (Raw Elements) -->
-                <g class="orbiting-group">
-                  <circle cx="200" cy="50" r="4.5" fill="var(--color-cyan)" />
-                  <line x1="200" y1="50" x2="200" y2="200" stroke="rgba(0,242,254,0.12)" stroke-width="1" stroke-dasharray="3 3" />
-                </g>
-                <g class="orbiting-group-2">
-                  <circle cx="50" cy="200" r="3.5" fill="var(--color-pink)" />
-                  <line x1="50" y1="200" x2="200" y2="200" stroke="rgba(255,0,128,0.12)" stroke-width="1" stroke-dasharray="3 3" />
-                </g>
-
-                <!-- Structured Polygon Overlay (The Form / カタチ) -->
-                <g class="form-structure">
-                  <!-- Back Edges -->
-                  <line x1="200" y1="200" x2="200" y2="130" stroke="var(--glass-border)" stroke-width="1" />
-                  <line x1="200" y1="200" x2="260.6" y2="165" stroke="var(--glass-border)" stroke-width="1" />
-                  <line x1="200" y1="200" x2="139.4" y2="165" stroke="var(--glass-border)" stroke-width="1" />
-                  
-                  <!-- Front Edges (Visualizing shape crystallization) -->
-                  <polygon points="200,130 260.6,165 260.6,235 200,270 139.4,235 139.4,165" stroke="var(--glass-border)" stroke-width="1.5" fill="none" class="cube-outline" />
-                  
-                  <!-- Core coordinates & axes -->
-                  <line x1="200" y1="130" x2="200" y2="200" stroke="var(--color-cyan)" stroke-width="1.5" class="cube-axis" />
-                  <line x1="260.6" y1="235" x2="200" y2="200" stroke="var(--color-pink)" stroke-width="1.5" class="cube-axis" />
-                  <line x1="139.4" y1="235" x2="200" y2="200" stroke="var(--color-purple)" stroke-width="1.5" class="cube-axis" />
-
-                  <!-- Vertex nodes wrapped in translates for crystallization scattering -->
-                  <g class="v-node node-0"><circle cx="200" cy="130" r="4.5" fill="var(--text-main)" class="cube-node" /></g>
-                  <g class="v-node node-1"><circle cx="260.6" cy="165" r="4.5" fill="var(--color-cyan)" class="cube-node" /></g>
-                  <g class="v-node node-2"><circle cx="260.6" cy="235" r="4.5" fill="var(--text-main)" class="cube-node" /></g>
-                  <g class="v-node node-3"><circle cx="200" cy="270" r="4.5" fill="var(--color-pink)" class="cube-node" /></g>
-                  <g class="v-node node-4"><circle cx="139.4" cy="235" r="4.5" fill="var(--text-main)" class="cube-node" /></g>
-                  <g class="v-node node-5"><circle cx="139.4" cy="165" r="4.5" fill="var(--color-purple)" class="cube-node" /></g>
-
-                  <!-- 2 Additional Ambient Nodes snapping to cube center and midpoint -->
-                  <g class="v-node node-6"><circle cx="200" cy="200" r="3.5" fill="var(--color-purple)" class="cube-node" /></g>
-                  <g class="v-node node-7"><circle cx="230.3" cy="147.5" r="3.5" fill="var(--text-main)" class="cube-node" /></g>
-                </g>
-              </svg>
-            </div>
-          </div>
+        <!-- Ill logo with React Bits "Electric Logo" (WebGL). The static logo shows until the canvas starts, and stays when WebGL2 is unavailable. -->
+        <div id="hero-electric-logo" style="position: relative; width: 100%; height: 100%;">
+          <img class="hero-electric-fallback" src="logo-icon.svg" alt="" width="120" height="90" style="position: absolute; inset: 0; margin: auto; width: 62%; height: auto;">
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -1300,5 +1219,18 @@
 
   <!-- Client JavaScript -->
   <script defer src="script.js?v=63"></script>
+  <script type="module">
+    import { mountElectricLogo } from './electric-logo.js';
+    const box = document.getElementById('hero-electric-logo');
+    // The hero visual is hidden on phones; only start WebGL where it is shown.
+    if (box && box.offsetParent !== null) {
+      const palette = () => document.body.classList.contains('theme-light')
+        ? { color: '#8a14ff', glowColor: '#c79bff', theme: 'light' }
+        : { color: '#f0dcff', glowColor: '#8a14ff', theme: 'dark' };
+      const logo = mountElectricLogo(box, { src: 'logo-icon.svg', scale: 0.62, ...palette() });
+      new MutationObserver(() => logo.set(palette())).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+      if (box.querySelector('canvas')) box.querySelector('.hero-electric-fallback')?.remove();
+    }
+  </script>
 </body>
 </html>
