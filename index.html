@@ -156,16 +156,12 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero" id="hero">
+  <section class="hero" id="hero" data-specter-orb>
     <div class="container hero-layout">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          <span class="hero-badge-text">AI & DIGITAL SYSTEM INTEGRATOR</span>
-        </div>
         <h1 class="hero-title">
           <span class="typing-line-1">本質に寄り添い、</span><br>
-          <span class="typing-line-2 glow-word">カタチにする。</span><span class="typing-cursor">|</span>
+          <span class="typing-line-2 glow-word">カタチにする。</span>
         </h1>
         <div class="hero-desc">
           <p>必要十分なミニマル設計と生成AIの活用により、スピード・品質・コストの最適なバランスを実現します。</p>
@@ -459,7 +455,7 @@
       </div>
 
       <!-- Services Grid -->
-      <div class="services-grid">
+      <div class="services-grid" data-feature-blobs data-services-split>
         
         <!-- Service 1: System Development -->
         <div class="service-card glass-panel">
@@ -595,7 +591,7 @@
   </section>
 
   <!-- CASES SECTION -->
-  <section class="section reveal" id="cases">
+  <section class="section reveal" id="cases" data-paged-posts="cases/">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Cases & Portfolio</div>
@@ -721,7 +717,7 @@
       
       <!-- High Visibility Connection Map -->
       <div class="offshore-map">
-        <div class="map-canvas">
+        <div class="map-canvas" data-network-globe>
           <svg width="100%" height="100%" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Grid backdrop -->
             <path d="M 0 30 H 320 M 0 60 H 320 M 0 90 H 320 M 0 120 H 320 M 0 150 H 320 M 0 180 H 320 M 0 210 H 320" stroke="var(--glass-border)" stroke-width="1" />
@@ -796,7 +792,7 @@
   </section>
 
   <!-- COLUMN SECTION -->
-  <section class="section reveal" id="columns">
+  <section class="section reveal" id="columns" data-paged-posts="column/">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Column & Knowledge</div>
@@ -1300,5 +1296,11 @@
 
   <!-- Client JavaScript -->
   <script defer src="script.js?v=63"></script>
+  <script src="specter-orb.js" defer></script>
+  <script src="vapor-type.js" defer></script>
+  <script src="services-split.js" defer></script>
+  <script src="feature-blobs.js" defer></script>
+  <script src="posts-pager.js" defer></script>
+  <script src="offshore-globe.js" defer></script>
 </body>
 </html>
