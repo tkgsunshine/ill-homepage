@@ -33,6 +33,14 @@
     .svc-split > .service-card:hover { transform: none; }
     .svc-split > .service-card[hidden] { display: none; }
     .svc-split > .service-card .service-title { font-size: 2.6rem; }
+    @media (min-width: 900px) {
+      /* Icon and title side by side at the top of the detail panel. */
+      .svc-split > .service-card { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 2rem; align-items: center; }
+      .svc-split > .service-card > :not(.service-icon-container):not(.service-title):not(.blob-layer) { grid-column: 1 / -1; }
+      .svc-split > .service-card .service-icon-container { margin-bottom: 0; }
+      .svc-split > .service-card .service-title { margin-bottom: 0; }
+      .svc-split > .service-card .service-desc { margin-top: 2.4rem; }
+    }
     @media (max-width: 899px) {
       .svc-split { display: block; padding-left: 0; }
       .svc-split::before, .svc-bar { display: none; }
