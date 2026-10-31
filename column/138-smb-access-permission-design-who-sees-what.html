@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社内システムの権限は、「見る・直す・消す」の3段階で決める｜中小企業の基本 | Ill（イル）株式会社</title>
+  <meta name="description" content="社内システムで、誰がどの情報を見られるか、直せるかを決める「権限」の考え方を解説。3段階での整理のしかた、役割ごとの設定例、退職・異動時の注意点をまとめました。">
+  <meta name="keywords" content="システム 権限 設定,アクセス権限 中小企業,社内システム 閲覧 制限,権限管理 決め方,業務システム ユーザー管理">
+  <meta name="author" content="Ill inc. 編集部">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/138-smb-access-permission-design-who-sees-what">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="社内システムの権限は、「見る・直す・消す」の3段階で決める｜中小企業の基本 | Ill inc. コラム">
+  <meta property="og:description" content="社内システムで、誰がどの情報を見られるか、直せるかを決める「権限」の考え方を解説。3段階での整理のしかた、役割ごとの設定例、退職・異動時の注意点をまとめました。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/138-smb-access-permission-design-who-sees-what">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="社内システムの権限は、「見る・直す・消す」の3段階で決める｜中小企業の基本 | Ill inc. コラム">
+  <meta name="twitter:description" content="社内システムで、誰がどの情報を見られるか、直せるかを決める「権限」の考え方を解説。3段階での整理のしかた、役割ごとの設定例、退職・異動時の注意点をまとめました。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=65">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "社内システムの権限は、「見る・直す・消す」の3段階で決める｜中小企業の基本",
+    "description": "社内システムで、誰がどの情報を見られるか、直せるかを決める「権限」の考え方を解説。3段階での整理のしかた、役割ごとの設定例、退職・異動時の注意点をまとめました。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/138-smb-access-permission-design-who-sees-what"
+    }
+  }
+  </script>
+
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "社内システムの権限の決め方"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "役割は、いくつに分けるのがよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最初は2〜3個で十分です。分けすぎると、設定と管理の手間が増えます。使いながら、必要なときに増やしましょう。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "パートやアルバイトにも、アカウントは必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "システムを使う人には、1人ずつアカウントを用意するのが基本です。共有のログインは、誰が操作したか分からなくなるため、避けましょう。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "権限は、あとから変えられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "変えられますが、作りが大きく変わる場合は手間がかかります。最初に考え方だけでも決めておくと、あとが楽です。"
+      }
+    }
+  ]
+}
+  </script>
+
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../#hero" class="nav-link">Home</a></li>
+          <li><a href="../#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../#services" class="nav-link">Services</a></li>
+          <li><a href="../#offshore" class="nav-link">Global</a></li>
+          <li><a href="../#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="./" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">社内システムの権限の決め方</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">仕様策定・要件定義</span>
+        <h1 class="article-title">社内システムの権限は、「見る・直す・消す」の3段階で決める｜中小企業の基本</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.10.31</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「社内システムの権限は、「見る・直す・消す」の3段階で決める｜中小企業の基本」のビジュアルバナー">
+  <defs>
+    <linearGradient id="bg_138_smb_access_permission_design_who_sees_what" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
+    </linearGradient>
+    <filter id="blur_138_smb_access_permission_design_who_sees_what" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1000" height="428" fill="url(#bg_138_smb_access_permission_design_who_sees_what)"/>
+
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_138_smb_access_permission_design_who_sees_what)"/>
+  <circle cx="150" cy="340" r="220" fill="#818CF8" opacity="0.2" filter="url(#blur_138_smb_access_permission_design_who_sees_what)"/>
+
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
+  </g>
+
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    <text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      社内システムの権限は、「見る・直す・
+    </text>
+    <text x="0" y="225" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="#38BDF8">消す」の3段階で決める｜中小企業の基本</tspan>
+    </text>
+
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 見積もりの適正化　<tspan fill="#38BDF8">✔</tspan> 不要機能の排除
+      </text>
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 契約トラブル防止
+      </text>
+    </g>
+  </g>
+</svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">権限とは、誰が何をできるかの決まりです。「見る」「直す」「消す」の3段階で整理すると、決めやすくなります。最初は役割を少なめにして始めるのがコツです。小さく始めるなら、10万〜100万円（数日〜数週間）のMVPが目安です。</p>
+          </div>
+
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#sec-1">1. 権限が決まっていないと、何が困るか</a></li>
+              <li><a href="#sec-2">2. 3段階で整理する</a></li>
+              <li><a href="#sec-3">3. 役割ごとの設定例</a></li>
+              <li><a href="#sec-4">4. 「見せない」ものを先に決める</a></li>
+              <li><a href="#sec-5">5. 退職・異動のときの注意</a></li>
+              <li><a href="#sec-6">6. 開発会社に伝えるときのポイント</a></li>
+              <li><a href="#sec-7">場面別：こんなときはどうする？</a></li>
+              <li><a href="#sec-8">8. 用語かんたん解説</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
+            </ul>
+          </div>
+
+          <h2 id="sec-1">1. 権限が決まっていないと、何が困るか</h2>
+          <p>社内システムを作ると、必ず出てくるのが<strong>「誰に、どこまで見せるか」</strong>という問題です。決めないまま作ると、次のような困りごとが起きます。</p><ul><li>全員が全部の情報を見られて、<strong>見せたくない情報</strong>が見えてしまう</li><li>誰でも消せて、<strong>間違って消した</strong>ときに戻せない</li><li>あとから制限を付けようとすると、<strong>作り直し</strong>になる</li></ul><p>権限は、<strong>作り始める前に決めておく</strong>のが、いちばん安く済みます。</p>
+
+          <h2 id="sec-2">2. 3段階で整理する</h2>
+          <p>権限は、難しく考えず、次の3段階に分けます。</p><div class="article-table-wrapper"><table class="article-table"><thead><tr><th>段階</th><th>できること</th><th>たとえ</th></tr></thead><tbody><tr><td><strong>見る</strong></td><td>情報を見るだけ</td><td>掲示板を読むだけ</td></tr><tr><td><strong>直す</strong></td><td>情報を入力・変更できる</td><td>自分の日報を書く、直す</td></tr><tr><td><strong>消す</strong></td><td>情報を削除できる</td><td>古い記録を削除する</td></tr></tbody></table></div><p><strong>「消す」を、できる人は最小限</strong>にするのが基本です。間違いの影響がいちばん大きいからです。</p>
+
+          <h2 id="sec-3">3. 役割ごとの設定例</h2>
+          <p>次に、会社の中の役割ごとに、3段階を当てはめます。</p><div class="article-table-wrapper"><table class="article-table"><thead><tr><th>役割</th><th>見る</th><th>直す</th><th>消す</th></tr></thead><tbody><tr><td><strong>一般の社員</strong></td><td>自分の担当分</td><td>自分の担当分</td><td>できない</td></tr><tr><td><strong>チームの責任者</strong></td><td>チーム全体</td><td>チーム全体</td><td>チームの分のみ</td></tr><tr><td><strong>経営者・管理者</strong></td><td>全部</td><td>全部</td><td>全部</td></tr></tbody></table></div><p>最初は、<strong>3つ程度の役割</strong>で十分です。細かく分けるほど、作る費用も、管理の手間も増えます。</p>
+
+          <h2 id="sec-4">4. 「見せない」ものを先に決める</h2>
+          <p>権限を考えるときは、<strong>見せてはいけない情報</strong>から先に洗い出すと、決めやすくなります。</p><div class="checklist-box"><ul><li><strong>給与・人事の情報</strong>: 経営者と担当者だけ</li><li><strong>取引先ごとの価格</strong>: 営業の担当者と責任者のみ</li><li><strong>お客様の個人情報</strong>: 必要な担当者だけ。見た記録も残す</li></ul></div><p>個人情報の扱いは、社内の規定や法令にも関わります。<strong>不安な場合は、専門家に確認</strong>しましょう。</p>
+
+          <h2 id="sec-5">5. 退職・異動のときの注意</h2>
+          <p>人が入れ替わるときこそ、権限の見直しが必要です。</p><ul><li>退職した人の<strong>アカウントを、すぐに停止</strong>できるようにする</li><li>異動した人の権限を、<strong>新しい役割に切り替える</strong>手順を決める</li><li>年に1回は、<strong>権限の一覧を見直す</strong></li></ul><p>「誰がログインできるか」の一覧を、<strong>担当者が確認できる画面</strong>があると安心です。</p>
+
+          <h2 id="sec-6">6. 開発会社に伝えるときのポイント</h2>
+          <p>権限は、次の表にして伝えると、見積もりがぶれません。</p><ul><li>役割の名前と、その人数</li><li>役割ごとの、見る・直す・消すの範囲</li><li>見せてはいけない情報の一覧</li><li>人が入れ替わるときの運用</li></ul><p><strong>Ill（イル）株式会社</strong>では、権限の整理からご相談いただけます。最初は少ない役割で小さく作り（10万〜100万円・数日〜数週間）、必要に応じて広げる進め方が可能です。標準規模は100万〜300万円（目安・約1〜2ヶ月）です。</p>
+
+          <h2 id="sec-7">場面別：こんなときはどうする？</h2>
+          <p><strong>社員数が少なく、全員が何でもやるとき：</strong>役割を分けすぎず、<strong>「全員が見る・直す、消すのは管理者だけ」</strong>のような、単純な形から始めましょう。</p><p><strong>取引先にも、一部の画面を見せたいとき：</strong>社内の社員とは別の<strong>外部向けの役割</strong>を作り、見せる範囲を最小にします。</p><p><strong>誰かが休みのとき、代わりの人が見る必要があるとき：</strong>一時的に権限を渡せる手順を決めておくと、共有のログインを避けられます。</p>
+
+          <h2 id="sec-8">8. 用語かんたん解説</h2>
+          <ul><li>権限：システムの中で、できることの範囲</li><li>アカウント：システムを使うための、個人ごとの登録</li><li>閲覧：内容を、見ること</li></ul><p>まずは、<strong>見せたくない情報を3つ</strong>書き出すところから始めましょう。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>役割は、いくつに分けるのがよいですか？</h3>
+              <p>最初は2〜3個で十分です。分けすぎると、設定と管理の手間が増えます。使いながら、必要なときに増やしましょう。</p>
+            </div>
+            <div class="faq-item">
+              <h3>パートやアルバイトにも、アカウントは必要ですか？</h3>
+              <p>システムを使う人には、1人ずつアカウントを用意するのが基本です。共有のログインは、誰が操作したか分からなくなるため、避けましょう。</p>
+            </div>
+            <div class="faq-item">
+              <h3>権限は、あとから変えられますか？</h3>
+              <p>変えられますが、作りが大きく変わる場合は手間がかかります。最初に考え方だけでも決めておくと、あとが楽です。</p>
+            </div>
+          </div>
+
+          <!-- Eye-catching Bottom CTA Banner -->
+          <div class="article-bottom-cta">
+            <div class="cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="cta-title">システム開発・AI導入の無料相談・概算見積もり</h3>
+            <p class="cta-desc">
+              不要な機能を削ぎ落とす「ミニマル設計」で、高品質な開発を適正価格で実現します。
+            </p>
+            <div class="cta-check-pills">
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                他社見積もりの妥当性診断
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                最短即日の概算提示
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                仕様変更に強いアジャイル
+              </span>
+            </div>
+            <div class="cta-buttons">
+              <a href="../#contact" class="btn btn-primary btn-cta-primary">
+                無料相談・見積もりを依頼する <span class="arrow">→</span>
+              </a>
+            </div>
+            <p class="cta-microcopy">
+              <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
+            </p>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Ill（イル）株式会社 編集部</p>
+            <p class="author-bio">
+              Ill（イル）株式会社の編集部です。Claude Codeを使ったAI駆動開発と、ベトナムのオフショア開発チームを組み合わせ、新規開発（Web・iOS/Android）の進め方と費用の考え方を発信しています。MVPは10万〜100万円・数日〜数週間から。
+              <a href="/#profile">会社概要を見る</a>
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/138-smb-access-permission-design-who-sees-what">
+                  <span class="related-item-date">2026.10.31</span>
+                  <span class="related-item-title">社内システムの権限は、「見る・直す・消す」の3段階で決める｜中小企業の基本</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/137-check-ai-driven-development-progress-as-client">
+                  <span class="related-item-date">2026.10.31</span>
+                  <span class="related-item-title">AI駆動開発の進み具合を、発注者が自分で確認する5つの方法</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/136-field-daily-report-inspection-smartphone-app">
+                  <span class="related-item-date">2026.10.30</span>
+                  <span class="related-item-title">現場の日報・点検記録を、スマホで入力できる自社専用アプリにする</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/135-side-business-new-service-time-plan">
+                  <span class="related-item-date">2026.10.30</span>
+                  <span class="related-item-title">本業と両立して新規事業を進める｜週に使える時間から作る範囲を逆算する</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/134-fax-paper-order-to-web-form-small-company">
+                  <span class="related-item-date">2026.10.30</span>
+                  <span class="related-item-title">FAX・紙の注文書を、Webの注文フォームに変える｜中小企業が小さく始める手順</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <div class="sidebar-cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="sidebar-cta-title">
+              システム開発・AI導入の<br>
+              <span class="cta-highlight">無料相談・概算見積もり</span>
+            </h3>
+            <ul class="sidebar-cta-points">
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>開発費を最大50%以上削減</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>他社見積もりの妥当性診断</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>最短即日の概算見積もり提示</span>
+              </li>
+            </ul>
+            <a href="../#contact" class="btn sidebar-cta-btn">
+              無料相談・見積もりを依頼する <span class="arrow">→</span>
+            </a>
+            <span class="sidebar-cta-note">🔒 オンライン相談対応・無理な営業なし</span>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../#hero" class="footer-link">Home</a></li>
+              <li><a href="../#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="./" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../#services" class="footer-link">生成AI導入・開発</a></li>
+              <li><a href="../#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../#services" class="footer-link">インフラ構築・移行</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=63"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
