@@ -33,20 +33,23 @@
     .svc-split > .service-card:hover { transform: none; }
     .svc-split > .service-card[hidden] { display: none; }
     .svc-split > .service-card .service-title { font-size: 2.6rem; }
-    /* The detail panel takes the opposite light/dark of the page, like flipping the theme switch for this card only. */
-    body.theme-light .svc-split > .service-card {
+    /* Once chosen, the detail panel slowly takes the opposite light/dark of the page, like the theme switch for this card only. */
+    body.theme-light .svc-split > .service-card.is-flipped {
       --bg-card: hsl(226, 40%, 10%); --glass-bg: hsl(226, 45%, 8%); --glass-border: hsla(0, 0%, 100%, 0.1);
       --text-main: hsl(210, 40%, 96%); --text-muted: hsl(215, 20%, 72%);
       --gradient-soft: linear-gradient(135deg, hsla(328, 100%, 59%, 0.22) 0%, hsla(271, 100%, 54%, 0.22) 50%, hsla(186, 100%, 50%, 0.22) 100%);
       box-shadow: 0 24px 60px -20px rgba(15, 23, 42, 0.45);
     }
-    body:not(.theme-light) .svc-split > .service-card {
+    body:not(.theme-light) .svc-split > .service-card.is-flipped {
       --bg-card: hsl(226, 25%, 99%); --glass-bg: hsl(226, 30%, 98%); --glass-border: hsla(226, 20%, 10%, 0.1);
       --text-main: hsl(226, 40%, 12%); --text-muted: hsl(226, 15%, 40%);
       --color-cyan: hsl(190, 100%, 38%);
       box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
     }
     .svc-split > .service-card { background: var(--glass-bg); border-color: var(--glass-border); color: var(--text-main); }
+    /* Slow fade into the flipped colours after a service is chosen. */
+    .svc-split > .service-card, .svc-split > .service-card * {
+      transition: background-color 1.4s ease, color 1.4s ease, border-color 1.4s ease, box-shadow 1.4s ease, stroke 1.4s ease; }
     .svc-split > .service-card:hover { border-color: var(--glass-border); }
     @media (min-width: 900px) {
       /* Icon and title side by side at the top of the detail panel. */
@@ -97,7 +100,15 @@
   });
   grid.appendChild(bar);
 
-  let current = -1;
+  let current = -1, flipTimer = 0;
+  // Shows the chosen panel in the page's own colours first, then lets it slowly turn to the opposite.
+  const flip = i => {
+    clearTimeout(flipTimer);
+    cards.forEach(c => c.classList.remove('is-flipped'));
+    if (reduce) { cards[i].classList.add('is-flipped'); return; }
+    void cards[i].offsetWidth;
+    flipTimer = setTimeout(() => { if (current === i) cards[i].classList.add('is-flipped'); }, 250);
+  };
   const moveBar = () => {
     const t = tabs[current];
     bar.style.height = t.offsetHeight + 'px';
@@ -114,16 +125,11 @@
     current = i;
     if (focus) tabs[i].focus();
     if (wide.matches) moveBar();
+    flip(i);
     if (!reduce) {
       const c = cards[i];
-      if (wide.matches) {
-        // The flipped panel spreads out from the list side, like a light being switched.
-        c.animate([{ clipPath: 'circle(0% at 0% 50%)' }, { clipPath: 'circle(150% at 0% 50%)' }],
-          { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)' });
-      } else {
-        c.animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }],
-          { duration: 450, easing: 'cubic-bezier(.22,1,.36,1)' });
-      }
+      c.animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }],
+        { duration: 450, easing: 'cubic-bezier(.22,1,.36,1)' });
     }
   };
 
@@ -149,4 +155,11 @@
   tabs[0].setAttribute('aria-expanded', 'true');
   cards[0].hidden = false;
   if (wide.matches) moveBar();
+  // The first panel turns once the section comes into view.
+  const io = new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting) return;
+    io.disconnect();
+    if (current >= 0) flip(current);
+  }, { threshold: 0.3 });
+  io.observe(grid);
 })();
