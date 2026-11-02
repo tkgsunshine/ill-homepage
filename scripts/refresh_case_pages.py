@@ -15,9 +15,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CASES = ROOT / "cases"
-CSS_TAG = '<link rel="stylesheet" href="cases.css?v=1">'
+CSS_TAG = '<link rel="stylesheet" href="cases.css?v=2">'
 
-# Card text for the list page: (困りごと, やったこと). Plain language, no numbers.
+# Card text for the list page: (困りごと, やったこと). Plain language, no numbers (numbers go in CARD_RESULT).
 CARD_TEXT = {
     "claude-code-x-auto-posting": ("SNSの毎日の発信が、手作業では続かない。", "AIが翌日分の投稿案を作り、人が承認したものだけを自動で投稿する仕組み。"),
     "ai-employee-development": ("ホームページの細かな修正や更新に、人の手が足りない。", "ルールを渡したAIが修正案を作り、人が確認して反映する進め方。"),
@@ -43,6 +43,30 @@ CARD_TEXT = {
     "real-estate-elearning": ("全国の加盟店で、営業研修の質がそろわない。", "動画研修と学習の記録、練習動画への指導ができる研修システム。"),
     "telemedicine": ("通院の手間を減らし、オンラインで診察を受けられるようにしたい。", "ビデオ診察・予約・事前の問診・支払いまでできるスマホアプリ。"),
     "pharmacy-inventory": ("薬の在庫の過不足や、期限切れによるムダが出ている。", "バーコードで入出庫を記録し、期限や在庫の注意を知らせる在庫管理の仕組み。"),
+}
+
+# Headline result shown on the card. Only numbers the user confirmed as real (2026-11-02).
+# pharmacy-inventory: the 4,200万円 figure is NOT real and was removed; do not reintroduce it.
+CARD_RESULT = {
+    "meshi-drive-lp": "企画から公開まで2日で納品",
+    "security-recruitment": "サーバー代が月100万円超から40万円台に（約60%削減）",
+    "matching-platform": "初回登録を最後まで終える人が55%から92%に",
+    "enterprise-rag": "社内の情報探しが1人1日45分から5分に",
+    "recruitment-portal": "求職者の登録完了率が35%から88%に",
+    "interview-feedback": "面談後の記録づくりが1回20分から3分に",
+    "staffing-crm": "月末の請求・契約更新が5営業日から半日に",
+    "disabled-community": "公開から半年で200以上の福祉施設が登録",
+    "ma-contracts": "資料を見せるまでの期間が平均10日から最短即日に",
+    "filemaker-optimization": "検索・集計が15秒以上から0.2秒に",
+    "gcp-migration": "サーバーの月額費用を65%削減",
+    "cloud-security": "金融機関の第三者による安全監査を指摘ゼロで通過",
+    "restaurant-recruitment": "当日の欠員を埋められた割合が89%",
+    "foreign-matching": "ビザ申請書類の作成が1件12時間から40分に",
+    "car-rental": "予約の手入力作業が月120時間からゼロに",
+    "sns-app": "公開3ヶ月で有料会員が2万人を突破",
+    "real-estate-elearning": "研修の受講完了率が62%から96%に",
+    "telemedicine": "オンライン診療が月1,200件を突破",
+    "pharmacy-inventory": "発注・在庫管理の事務が1店舗1日1.5時間減",
 }
 
 TAB_LABELS = {
@@ -109,6 +133,8 @@ def refresh_index():
         q, a = CARD_TEXT[slug]
         text = (f'<span class="case-q"><b>困りごと<span class="sep">：</span></b>{q}</span> '
                 f'<span class="case-a"><b>やったこと<span class="sep">：</span></b>{a}</span>')
+        if slug in CARD_RESULT:
+            text += f' <span class="case-r"><b>結果<span class="sep">：</span></b>{CARD_RESULT[slug]}</span>'
         body = re.sub(r'<p class="column-card-excerpt">.*?</p>', f'<p class="column-card-excerpt">{text}</p>', body, flags=re.S)
         return head + body + "</article>"
 
@@ -129,8 +155,8 @@ def refresh_index():
 
 def related_block(cards, me):
     mine = next(c for c in cards if c["slug"] == me)
-    same = [c for c in cards if c["slug"] != me and c["cat"] == mine["cat"] and c["slug"] != "real-estate-elearning"]
-    rest = [c for c in cards if c["slug"] != me and c["cat"] != mine["cat"] and c["slug"] != "real-estate-elearning"]
+    same = [c for c in cards if c["slug"] != me and c["cat"] == mine["cat"]]
+    rest = [c for c in cards if c["slug"] != me and c["cat"] != mine["cat"]]
     pick = (same + rest)[:3]
     items = "\n".join(
         f'''          <li><a href="/cases/{c["slug"]}">
