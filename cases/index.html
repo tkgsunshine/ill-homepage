@@ -46,6 +46,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=65">
+  <link rel="stylesheet" href="cases.css?v=1">
 
   <!-- JSON-LD Structured Data (WebPage Schema) -->
   <script type="application/ld+json">
@@ -81,7 +82,7 @@
   }
   </script>
 </head>
-<body class="theme-light">
+<body class="theme-light cases-page">
 
   <!-- Background Orbs Container -->
   <div class="secondary-orbs"></div>
@@ -132,33 +133,64 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="column-hub-hero">
+  <section class="cases-hero">
     <div class="container">
-      <h1 class="column-hub-title">Cases & Portfolio</h1>
-      <p class="column-hub-desc">
-        <span>生成AI・DX推進、マッチングアプリ、クラウドセキュリティまで。</span><span>本質的な価値設計に基づき、事業価値を最大化するシステム開発実績。</span>
-      </p>
-    </div>
-  </section>
-
-  <!-- BREADCRUMBS & CASES SECTION -->
-  <section class="section" style="padding-top: 0;">
-    <div class="container">
-      <!-- Breadcrumbs -->
       <div class="breadcrumbs">
         <span class="breadcrumb-item"><a href="../">Home</a></span>
         <span class="breadcrumb-separator">></span>
         <span class="breadcrumb-item">開発実績・導入事例</span>
       </div>
+      <div class="cases-hero-grid">
+        <div>
+          <p class="cases-eyebrow">Cases</p>
+          <h1 class="cases-hero-title">小さく作って、<br><em>すぐ動かす。</em><br>開発実績・導入事例</h1>
+          <p class="cases-hero-lead">新しいサービスの立ち上げから、会社の業務の仕組み化、AIによる自動化まで。お客様の案件と、自社で毎日動かしている仕組みを紹介します。</p>
+        </div>
+        <dl class="cases-facts">
+          <div><dt>公開中の事例</dt><dd>24<small>件</small></dd></div>
+          <div><dt>自社で運用中のAIの仕組み</dt><dd>5<small>件</small></dd></div>
+          <div><dt>MVP（試作品）の目安</dt><dd class="is-text">10万〜100万円<span class="sub">数日〜数週間から</span></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
-      <!-- Category Tabs (Filtering) -->
-      <div class="category-tabs-container">
-        <div class="category-tabs">
-          <button class="category-tab active" data-filter="all">すべて</button>
-          <button class="category-tab" data-filter="gen-ai">生成AI・AIX</button>
-          <button class="category-tab" data-filter="system-app">システム開発・DX</button>
-          <button class="category-tab" data-filter="matching-app">アプリ</button>
-          <button class="category-tab" data-filter="cloud-security">クラウド・セキュリティ</button>
+  <!-- CASES SECTION -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <!-- Reader entries -->
+      <div class="cases-paths">
+        <a class="cases-path" href="./?cat=matching-app#case-list" data-case-filter="matching-app">
+          <span class="cases-path-num">01</span>
+          <span class="cases-path-title">新しい事業・サービスを始めたい方</span>
+          <span class="cases-path-desc">アプリやWebサービスを、小さく作って早く試した事例です。</span>
+          <span class="cases-path-go">新規サービス・アプリの事例</span>
+        </a>
+        <a class="cases-path" href="./?cat=system-app#case-list" data-case-filter="system-app">
+          <span class="cases-path-num">02</span>
+          <span class="cases-path-title">会社の業務を仕組み化したい方</span>
+          <span class="cases-path-desc">手作業や古いシステムを、使いやすい仕組みに置き換えた事例です。</span>
+          <span class="cases-path-go">業務システム・Webの事例</span>
+        </a>
+        <a class="cases-path" href="./?cat=gen-ai#case-list" data-case-filter="gen-ai">
+          <span class="cases-path-num">03</span>
+          <span class="cases-path-title">AIで仕事を自動化したい方</span>
+          <span class="cases-path-desc">AIに作業を任せ、人は確認だけをする仕組みの事例です。</span>
+          <span class="cases-path-go">AI活用・自動化の事例</span>
+        </a>
+      </div>
+
+      <div class="cases-list-head" id="case-list">
+        <h2 class="cases-list-title">事例一覧<span>24 cases</span></h2>
+        <!-- Category Tabs (Filtering) -->
+        <div class="category-tabs-container">
+          <div class="category-tabs">
+            <button class="category-tab active" data-filter="all">すべて</button>
+            <button class="category-tab" data-filter="gen-ai">AI活用・自動化</button>
+            <button class="category-tab" data-filter="system-app">業務システム・Web</button>
+            <button class="category-tab" data-filter="matching-app">新規サービス・アプリ</button>
+            <button class="category-tab" data-filter="cloud-security">インフラ・セキュリティ</button>
+          </div>
         </div>
       </div>
 
@@ -166,7 +198,7 @@
       <div class="column-grid" style="margin-bottom: 8rem;">
 
         <!-- Case: claude-code-x-auto-posting -->
-        <article class="column-card glass-card reveal" data-category="gen-ai">
+        <article class="column-card glass-card reveal is-featured" data-category="gen-ai">
           <a href="/cases/claude-code-x-auto-posting" style="display: block; text-decoration: none; overflow: hidden; border-radius: 1.2rem 1.2rem 0 0;">
             <div class="column-card-image">
               <span class="column-card-badge">AI社内活用 / SNS運用</span>
@@ -180,7 +212,7 @@
             <a href="/cases/claude-code-x-auto-posting" style="text-decoration: none;">
               <h2 class="column-card-title">Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例</h2>
             </a>
-            <p class="column-card-excerpt">毎晩AIが翌日分のX（旧Twitter）の投稿案を作り、人が承認したものだけが投稿される自社の仕組みを、やさしく紹介します。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>SNSの毎日の発信が、手作業では続かない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>AIが翌日分の投稿案を作り、人が承認したものだけを自動で投稿する仕組み。</span></p>
             <a href="/cases/claude-code-x-auto-posting" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -200,7 +232,7 @@
             <a href="/cases/ai-employee-development" style="text-decoration: none;">
               <h2 class="column-card-title">Claude Codeを開発担当のAI社員として運用する自社事例</h2>
             </a>
-            <p class="column-card-excerpt">役割とルールを文書にしたAIが、修正案の作成までを担当し、人が確認して反映する自社の開発の進め方を紹介します。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>ホームページの細かな修正や更新に、人の手が足りない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>ルールを渡したAIが修正案を作り、人が確認して反映する進め方。</span></p>
             <a href="/cases/ai-employee-development" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -220,7 +252,7 @@
             <a href="/cases/ai-employee-marketing" style="text-decoration: none;">
               <h2 class="column-card-title">マーケAI社員がSEOコラムの企画・改善を回す自社運用事例</h2>
             </a>
-            <p class="column-card-excerpt">コラムの自動公開、毎週の検索データ分析、記事の補充や見直しの提案までを、AIと人で分担する自社運用を紹介します。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>コラムの企画・公開・見直しを続ける人手がない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>AIが記事の公開と検索データの分析を回し、人は判断だけをする分担。</span></p>
             <a href="/cases/ai-employee-marketing" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -240,7 +272,7 @@
             <a href="/cases/ai-daily-report-automation" style="text-decoration: none;">
               <h2 class="column-card-title">AI社員の日報を自動作成・蓄積する仕組みの自社運用事例</h2>
             </a>
-            <p class="column-card-excerpt">公開した記事・自動処理の成否・検索の数字を毎晩AIが日報にまとめ、人の判断が必要なことだけを知らせる運用を紹介します。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>自動で動く仕組みが増え、毎日何が起きたか追いきれない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>毎晩AIが日報をまとめ、人の判断が必要なことだけを知らせる仕組み。</span></p>
             <a href="/cases/ai-daily-report-automation" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -260,7 +292,7 @@
             <a href="/cases/ai-dashboard-site-health" style="text-decoration: none;">
               <h2 class="column-card-title">日報ダッシュボードとサイト健全性レポートで運用を可視化する自社事例</h2>
             </a>
-            <p class="column-card-excerpt">AI社員の日報を一覧できる画面と、ホームページの表示速度を自動で測るレポートで、運用の状況を見える化する自社事例です。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>運用の状況やサイトの速さが、数字で見えていない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>日報を一覧できる画面と、表示速度を自動で測るレポート。</span></p>
             <a href="/cases/ai-dashboard-site-health" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -280,7 +312,7 @@
             <a href="/cases/meshi-drive-lp" style="text-decoration: none;">
               <h2 class="column-card-title">飲食店向けデリバリー支援「Meshi Drive」高CVR特化型LP制作</h2>
             </a>
-            <p class="column-card-excerpt">消費税1%化の税制改正をフックにした訴求設計、30秒ヒアリングフォーム、追従CTAによる高CVR獲得を実現した公式LP制作事例。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>飲食店に、デリバリーを始める利点がうまく伝わっていない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>税率の差をひと目で伝える構成と、30秒で終わる相談フォームを備えた宣伝用ページ。</span></p>
             <a href="/cases/meshi-drive-lp" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -300,7 +332,7 @@
             <a href="/cases/security-recruitment" style="text-decoration: none;">
               <h2 class="column-card-title">警備求人マッチングサイトのフルリニューアル＆GCP移行</h2>
             </a>
-            <p class="column-card-excerpt">CakePHP・オンプレミス/AWS混在で月100万円超だった警備求人サイトをNext.js＋NestJSのSPA構成へ刷新。GCPとCloudflare導入で月額費用を半減し、表示速度とセキュリティを劇的に改善。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>古い仕組みの求人サイトが重く、サーバー代も高い。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>サイトを作り直し、安く安全に動くクラウドの構成へ引っ越し。</span></p>
             <a href="/cases/security-recruitment" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -320,7 +352,7 @@
             <a href="/cases/matching-platform" style="text-decoration: none;">
               <h2 class="column-card-title">AIを活用した次世代マッチングプラットフォーム</h2>
             </a>
-            <p class="column-card-excerpt">独自のマッチングアルゴリズムや生成AIによる自己紹介文自動生成・不適切発言検知機能を搭載した、高セキュリティなマッチングサービス開発。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>安心して使える出会いのサービスを、新しく立ち上げたい。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>相性の計算、AIによる自己紹介文づくり、不適切な発言の検知を備えたアプリ。</span></p>
             <a href="/cases/matching-platform" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -340,7 +372,7 @@
             <a href="/cases/enterprise-rag" style="text-decoration: none;">
               <h2 class="column-card-title">企業間データ連携＆セキュア社内情報RAGシステム</h2>
             </a>
-            <p class="column-card-excerpt">社内のドキュメントやSlackログなどの機密情報を安全に検索・活用。権限管理やオプトアウトAPI設計を考慮したセキュアなRAGインフラ構築。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>社内の資料が散らばり、必要な情報がすぐ見つからない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>見てよい人だけが、社内の資料をAIに質問して探せる仕組み。</span></p>
             <a href="/cases/enterprise-rag" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -360,7 +392,7 @@
             <a href="/cases/recruitment-portal" style="text-decoration: none;">
               <h2 class="column-card-title">AI求職票自動生成＆マッチング求人ポータルサイト</h2>
             </a>
-            <p class="column-card-excerpt">レジュメ自動解析によるスキル抽出と、募集条件から最適な求人票をAI作成する高機能な求人・求職マッチングポータルサイト開発。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>求人票づくりと、応募者との条件合わせに手間がかかる。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>履歴書からスキルを読み取り、AIが求人票づくりを手伝う求人サイト。</span></p>
             <a href="/cases/recruitment-portal" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -380,7 +412,7 @@
             <a href="/cases/interview-feedback" style="text-decoration: none;">
               <h2 class="column-card-title">AI動画解析による社員インタビュー＆フィードバックシステム</h2>
             </a>
-            <p class="column-card-excerpt">面談動画からWhisperとGPT-4oを用いて表情・感情・文脈を解析し、スキルスコアリングとフィードバックレポートを自動生成するシステム。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>面談の振り返りが、担当者の感覚頼りになっている。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>面談の動画をAIが文字にして分析し、振り返りのレポートを自動で作る仕組み。</span></p>
             <a href="/cases/interview-feedback" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -400,7 +432,7 @@
             <a href="/cases/staffing-crm" style="text-decoration: none;">
               <h2 class="column-card-title">人材派遣会社向け一元管理CRM・スタッフ管理プラットフォーム</h2>
             </a>
-            <p class="column-card-excerpt">案件、派遣スタッフ、シフト、請求データの一元管理と、法改正に準拠した契約チェックを自動で行うCRMシステム開発。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>案件・スタッフ・シフト・請求の情報が、バラバラに管理されている。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>まとめて管理でき、契約内容の確認も自動で行う社内システム。</span></p>
             <a href="/cases/staffing-crm" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -420,7 +452,7 @@
             <a href="/cases/disabled-community" style="text-decoration: none;">
               <h2 class="column-card-title">障がい者限定コミュニケーション・マッチングプラットフォーム</h2>
             </a>
-            <p class="column-card-excerpt">音声読み上げやコントラスト比などWCAG 2.1アクセシビリティに準拠し、証明書による本人認証を備えた当事者向けマッチングアプリ。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>障がいのある方が、安心して使える交流の場が少ない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>読み上げや見やすさに配慮し、本人確認も備えた交流アプリ。</span></p>
             <a href="/cases/disabled-community" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -440,7 +472,7 @@
             <a href="/cases/ma-contracts" style="text-decoration: none;">
               <h2 class="column-card-title">M&A仲介業向け秘密保持・意向表明契約書AI自動作成システム</h2>
             </a>
-            <p class="column-card-excerpt">M&A取引における各種契約書類をAIが自動作成。金額矛盾や法的リスク条項の自動スキャン、代替文案の推奨機能を搭載。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>M&Aの契約書づくりに時間がかかり、確認漏れも心配。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>AIが契約書の下書きを作り、金額の食い違いや注意すべき条文を自動で確かめる仕組み。</span></p>
             <a href="/cases/ma-contracts" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -460,7 +492,7 @@
             <a href="/cases/filemaker-optimization" style="text-decoration: none;">
               <h2 class="column-card-title">大規模Filemakerデータベースのボトルネック検出＆クエリ最適化</h2>
             </a>
-            <p class="column-card-excerpt">オンプレミスFilemakerのパフォーマンス遅延をロジック見直しとAWS移行により解決し、検索クエリと帳票印刷を高速化。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>社内のデータベース（FileMaker）の検索や帳票の印刷が遅い。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>遅い原因を突き止めて処理を見直し、クラウドへ移して速くした。</span></p>
             <a href="/cases/filemaker-optimization" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -480,7 +512,7 @@
             <a href="/cases/gcp-migration" style="text-decoration: none;">
               <h2 class="column-card-title">レガシーオンプレミスサーバーからGCP（Cloud Run）への全面移行</h2>
             </a>
-            <p class="column-card-excerpt">古い物理サーバーで稼働するレガシーWebシステムをコンテナ化。Cloud Runを活用したサーバーレス構成で保守不要とコスト削減を実現。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>古い自社サーバーの保守に、手間と費用がかかる。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>システムをクラウド（Google Cloud）へ引っ越し、保守の手間を減らした。</span></p>
             <a href="/cases/gcp-migration" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -500,7 +532,7 @@
             <a href="/cases/cloud-security" style="text-decoration: none;">
               <h2 class="column-card-title">エンタープライズ向けクラウドインフラのセキュリティ要塞化・堅牢化パッケージ</h2>
             </a>
-            <p class="column-card-excerpt">Cloudflare導入、Zero Trust Access、Cloud Armor、OIDC CI/CDなど17項目のクラウドセキュリティを徹底強化した堅牢インフラパッケージ。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>クラウドの安全対策が、どこまでできているか分からない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>不正アクセス対策など17項目を点検し、まとめて強化した。</span></p>
             <a href="/cases/cloud-security" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -520,7 +552,7 @@
             <a href="/cases/restaurant-recruitment" style="text-decoration: none;">
               <h2 class="column-card-title">飲食業界向け求人ポータル＆求職者管理（ATS）システム</h2>
             </a>
-            <p class="column-card-excerpt">店舗ごとの求人作成・応募者管理を一元化。AIによる志望動機簡易分析と自動面接スケジュール調整機能を備えた採用管理プラットフォーム。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>店舗ごとの求人と応募者の管理が、手作業でバラバラ。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>求人づくり・応募者の管理・面接日程の調整をひとつにまとめた採用の仕組み。</span></p>
             <a href="/cases/restaurant-recruitment" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -540,7 +572,7 @@
             <a href="/cases/foreign-matching" style="text-decoration: none;">
               <h2 class="column-card-title">在日外国人限定マッチング＆コミュニティアプリ</h2>
             </a>
-            <p class="column-card-excerpt">在日外国人と多言語を話すユーザー間の交流を促進。在留カードによる本人認証とAI翻訳付きチャットを備えたReactNative製クロスプラットフォームアプリ。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>日本に住む外国の方が、言葉の壁で交流しにくい。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>在留カードで本人確認をし、AI翻訳つきでチャットできる交流アプリ。</span></p>
             <a href="/cases/foreign-matching" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -560,7 +592,7 @@
             <a href="/cases/car-rental" style="text-decoration: none;">
               <h2 class="column-card-title">外資系レンタカー日本代理店向け多言語予約サイト</h2>
             </a>
-            <p class="column-card-excerpt">外資系レンタカーの予約システムと日本国内の決済・車両管理データを連携。多言語UIと決済・予約空き状況のリアルタイム同期に対応。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>海外のレンタカー予約と、日本側の支払い・車両の情報がつながっていない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>多言語で予約でき、空き状況と支払いが自動でそろう予約サイト。</span></p>
             <a href="/cases/car-rental" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -580,7 +612,7 @@
             <a href="/cases/sns-app" style="text-decoration: none;">
               <h2 class="column-card-title">Twitterクローンの次世代マイクロブログSNSアプリ</h2>
             </a>
-            <p class="column-card-excerpt">大量トラフィックに耐えうるタイムライン配信と、リアルタイムのつぶやき・リポスト機能を搭載したReactNative製SNSアプリ。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>自分たちのSNSを、新しいサービスとして立ち上げたい。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>多くの利用者に耐える、つぶやき・共有機能つきのSNSアプリ。</span></p>
             <a href="/cases/sns-app" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -600,7 +632,7 @@
             <a href="/cases/real-estate-elearning" style="text-decoration: none;">
               <h2 class="column-card-title">不動産フランチャイズ加盟店向け営業eラーニングシステム</h2>
             </a>
-            <p class="column-card-excerpt">全国数百社の加盟店における営業スキル平準化のための動画研修、学習進捗管理、および商談ロープレ動画の提出・指導フィードバック機能システム開発。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>全国の加盟店で、営業研修の質がそろわない。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>動画研修と学習の記録、練習動画への指導ができる研修システム。</span></p>
             <a href="/cases/real-estate-elearning" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -620,7 +652,7 @@
             <a href="/cases/telemedicine" style="text-decoration: none;">
               <h2 class="column-card-title">オンライン診療・予約モバイルアプリケーション</h2>
             </a>
-            <p class="column-card-excerpt">ビデオ通話機能によるオンライン診察、事前問診票入力、空き枠カレンダー予約、Stripe連携自動決済および処方箋薬局送信システム開発。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>通院の手間を減らし、オンラインで診察を受けられるようにしたい。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>ビデオ診察・予約・事前の問診・支払いまでできるスマホアプリ。</span></p>
             <a href="/cases/telemedicine" class="column-card-link">実績を見る</a>
           </div>
         </article>
@@ -640,20 +672,22 @@
             <a href="/cases/pharmacy-inventory" style="text-decoration: none;">
               <h2 class="column-card-title">調剤薬局向けリアルタイム薬剤在庫管理システム</h2>
             </a>
-            <p class="column-card-excerpt">バーコードスキャンによる入出庫、デッドストックや使用期限のアラート機能、予測需要に基づく自動発注および複数店舗間在庫融通システム。</p>
+            <p class="column-card-excerpt"><span class="case-q"><b>困りごと<span class="sep">：</span></b>薬の在庫の過不足や、期限切れによるムダが出ている。</span> <span class="case-a"><b>やったこと<span class="sep">：</span></b>バーコードで入出庫を記録し、期限や在庫の注意を知らせる在庫管理の仕組み。</span></p>
             <a href="/cases/pharmacy-inventory" class="column-card-link">実績を見る</a>
           </div>
         </article>
       </div>
 
-            <!-- CTA Cards Area -->
+            <nav class="pagination-container" id="column-pagination" aria-label="事例一覧のページ送り"></nav>
+
+      <!-- CTA Cards Area -->
       <div class="glass-panel cases-cta reveal">
         <h3 class="cases-cta-title">
-          新規プロジェクトのご相談・プロトタイプ作成
+          AI駆動開発・MVP開発のご相談・無料お見積もり
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイトの立ち上げなど、貴社のアイデアを最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成のご相談を承っております。</span>
+          新規Webアプリ・iOS/Androidアプリを、Claude Codeを活用したAI駆動開発とベトナムのオフショアチームで開発します。<br>
+          <span class="gradient-text" style="font-weight: 700;">MVPは10万〜100万円、数日〜数週間から。要件により個別にお見積もりします。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../#contact" class="btn btn-primary">無料で相談する</a>
@@ -722,6 +756,7 @@
   </footer>
 
   <!-- Client JavaScript -->
+  <script defer src="cases.js?v=1"></script>
   <script defer src="../script.js?v=63"></script>
 
   <!-- Interactive Category Tabs JavaScript -->

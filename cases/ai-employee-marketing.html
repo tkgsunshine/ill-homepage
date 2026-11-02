@@ -32,6 +32,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=65">
+  <link rel="stylesheet" href="cases.css?v=1">
 
   <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
@@ -134,7 +135,7 @@
   }
   </script>
 </head>
-<body class="theme-light">
+<body class="theme-light cases-page">
 
   <!-- Background Orbs Container -->
   <div class="secondary-orbs"></div>
@@ -210,8 +211,8 @@
             <span class="tech-badge">Claude Code</span><span class="tech-badge">SEOコラム自動化</span><span class="tech-badge">Search Console</span><span class="tech-badge">GitHub Actions</span>
           </div>
 
-          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+          <div class="case-facts">
+            <div class="case-facts-grid">
               <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">自社運用（Ill inc.）／ Webマーケティング</span></div>
               <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">制作期間</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">運用しながら改善を継続（自社で開発）</span></div>
               <div><span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">提供スコープ</span><span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">コラム自動公開の仕組み、毎週の検索データレポート、記事リストの管理、記事の見直し提案</span></div>
@@ -277,6 +278,29 @@
           </div>
         </div>
       </article>
+
+      <!-- related-cases:start -->
+      <section class="case-related" aria-labelledby="case-related-title">
+        <div class="case-related-head">
+          <h2 class="case-related-title" id="case-related-title">ほかの事例</h2>
+          <a class="case-related-all" href="./">事例をすべて見る →</a>
+        </div>
+        <ul class="case-related-list">
+          <li><a href="/cases/claude-code-x-auto-posting">
+            <img src="../illust_case_x_auto_posting.webp" alt="" loading="lazy" decoding="async" width="800" height="450">
+            <span class="case-related-body"><span class="case-related-label">AI社内活用 / SNS運用</span><span class="case-related-name">Claude CodeでX（旧Twitter）投稿を自動化する自社運用事例</span></span>
+          </a></li>
+          <li><a href="/cases/ai-employee-development">
+            <img src="../illust_case_ai_dev_employee.webp" alt="" loading="lazy" decoding="async" width="800" height="450">
+            <span class="case-related-body"><span class="case-related-label">AI社員 / 開発</span><span class="case-related-name">Claude Codeを開発担当のAI社員として運用する自社事例</span></span>
+          </a></li>
+          <li><a href="/cases/ai-daily-report-automation">
+            <img src="../illust_case_ai_daily_report.webp" alt="" loading="lazy" decoding="async" width="800" height="450">
+            <span class="case-related-body"><span class="case-related-label">AI社員 / 業務自動化</span><span class="case-related-name">AI社員の日報を自動作成・蓄積する仕組みの自社運用事例</span></span>
+          </a></li>
+        </ul>
+      </section>
+      <!-- related-cases:end -->
 
       <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">

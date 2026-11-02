@@ -41,6 +41,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="../style.css?v=65">
+  <link rel="stylesheet" href="cases.css?v=1">
 
   <!-- JSON-LD Structured Data (BlogPosting, BreadcrumbList, FAQPage) -->
   <script type="application/ld+json">
@@ -135,7 +136,7 @@
   }
   </script>
 </head>
-<body class="theme-light">
+<body class="theme-light cases-page">
 
   <!-- Background Orbs Container -->
   <div class="secondary-orbs"></div>
@@ -221,8 +222,8 @@
           </div>
 
           <!-- Project Metadata Info Box -->
-          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.2rem; padding: 2.2rem; margin-bottom: 3.5rem;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem;">
+          <div class="case-facts">
+            <div class="case-facts-grid">
               <div>
                 <span style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700; display: block; margin-bottom: 0.4rem;">クライアント業種</span>
                 <span style="font-size: 1.45rem; color: var(--color-text-primary); font-weight: 600;">エンタメ・メディア / クリエイターエコノミー</span>
@@ -313,13 +314,36 @@
       </article>
 
       <!-- CTA Cards Area -->
+      <!-- related-cases:start -->
+      <section class="case-related" aria-labelledby="case-related-title">
+        <div class="case-related-head">
+          <h2 class="case-related-title" id="case-related-title">ほかの事例</h2>
+          <a class="case-related-all" href="./">事例をすべて見る →</a>
+        </div>
+        <ul class="case-related-list">
+          <li><a href="/cases/matching-platform">
+            <img src="../illust_case_matching.webp" alt="" loading="lazy" decoding="async" width="800" height="450">
+            <span class="case-related-body"><span class="case-related-label">新規事業開発</span><span class="case-related-name">AIを活用した次世代マッチングプラットフォーム</span></span>
+          </a></li>
+          <li><a href="/cases/disabled-community">
+            <img src="../illust_case_disabled_community.webp" alt="" loading="lazy" decoding="async" width="800" height="450">
+            <span class="case-related-body"><span class="case-related-label">新規事業開発</span><span class="case-related-name">障がい者限定コミュニケーション・マッチングプラットフォーム</span></span>
+          </a></li>
+          <li><a href="/cases/foreign-matching">
+            <img src="../illust_case_expat_matching.webp" alt="" loading="lazy" decoding="async" width="800" height="450">
+            <span class="case-related-body"><span class="case-related-label">新規事業開発</span><span class="case-related-name">在日外国人限定マッチング＆コミュニティアプリ</span></span>
+          </a></li>
+        </ul>
+      </section>
+      <!-- related-cases:end -->
+
       <div class="glass-panel cases-cta" style="margin-top: 6rem;">
         <h3 class="cases-cta-title">
-          新規プロジェクトのご相談・プロトタイプ作成
+          AI駆動開発・MVP開発のご相談・無料お見積もり
         </h3>
         <p class="cases-cta-desc">
-          マッチングサービス、業務DX、求人サイト、AI活用やクラウド移行など、貴社の課題を最短スピードでカタチにします。<br>
-          <span class="gradient-text" style="font-weight: 700;">現在、期間限定で無料プロトタイプ作成および技術選定・概算費用のご相談を承っております。</span>
+          新規Webアプリ・iOS/Androidアプリを、Claude Codeを活用したAI駆動開発とベトナムのオフショアチームで開発します。<br>
+          <span class="gradient-text" style="font-weight: 700;">MVPは10万〜100万円、数日〜数週間から。要件により個別にお見積もりします。</span>
         </p>
         <div class="cases-cta-buttons">
           <a href="../#contact" class="btn btn-primary">無料で相談する</a>
