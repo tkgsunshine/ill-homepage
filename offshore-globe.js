@@ -1,6 +1,8 @@
 /*
  * Dotted globe for the top-page offshore section, turned toward Japan and Vietnam (replaces the flat map while it runs).
- * Japan and Vietnam are linked by an arc, and a pulse spreads out from Tokyo across the network every few seconds.
+ * Dots sit only on land, so the continents read; Japan and Vietnam are coloured and linked by an arc,
+ * and a pulse spreads out from Tokyo every few seconds.
+ * Land mask: Natural Earth 1:50m land (public domain) via world-atlas (ISC), sampled once onto the dot grid below.
  * The JAPAN / VIETNAM tags from the HTML stay on top. Canvas 2D, no libraries.
  */
 (() => {
@@ -20,7 +22,6 @@
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const RAD = Math.PI / 180;
-  const POINTS = 1100;
   const PULSE_EVERY = 3.2;   // seconds between deploy pulses
   const PULSE_TIME = 2.6;    // seconds for a pulse to cross half the globe
   const CENTER_LON = 122;    // keeps Japan and Vietnam facing the viewer
@@ -29,24 +30,25 @@
   const unit = (lat, lon) => [Math.cos(lat * RAD) * Math.sin(lon * RAD), Math.sin(lat * RAD), Math.cos(lat * RAD) * Math.cos(lon * RAD)];
   const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
 
-  // Evenly spread points (Fibonacci sphere).
+  // Dots on a Fibonacci sphere; LAND marks which of them fall on land (one bit per dot).
+  const POINTS = 12000;
+  const LAND = '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';
+  const bits = atob(LAND);
   const pts = [];
   const golden = Math.PI * (3 - Math.sqrt(5));
+  const inBox = (lat, lon, b) => lat >= b[0] && lat <= b[1] && lon >= b[2] && lon <= b[3];
+  const JAPAN = [30, 46, 128, 146.5], VIETNAM = [8, 23.5, 102, 110];
   for (let i = 0; i < POINTS; i++) {
+    if (!(bits.charCodeAt(i >> 3) & (1 << (i & 7)))) continue;
     const y = 1 - (i / (POINTS - 1)) * 2;
     const r = Math.sqrt(1 - y * y);
-    pts.push([Math.cos(golden * i) * r, y, Math.sin(golden * i) * r]);
+    const p = [Math.cos(golden * i) * r, y, Math.sin(golden * i) * r];
+    const lat = Math.asin(y) / RAD, lon = Math.atan2(p[0], p[2]) / RAD;
+    p.tag = inBox(lat, lon, JAPAN) ? 'jp' : inBox(lat, lon, VIETNAM) ? 'vn' : '';
+    pts.push(p);
   }
   const tokyo = unit(35.68, 139.69);
   const hanoi = unit(21.03, 105.85);
-
-  // A sparse network: hub points joined to their nearest neighbours.
-  const hubs = pts.filter((_, i) => i % 9 === 0);
-  const edges = [];
-  hubs.forEach((a, i) => {
-    hubs.map((b, j) => [j, dot(a, b)]).filter(([j]) => j > i).sort((x, y) => y[1] - x[1]).slice(0, 2)
-      .forEach(([j, d]) => { if (d > 0.93) edges.push([a, hubs[j]]); });
-  });
 
   let W = 0, H = 0, R = 0, dpr = 1, raf = 0, visible = false, start = performance.now();
   let leanX = 0, leanY = 0, targetX = 0, targetY = 0;
@@ -55,7 +57,7 @@
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = host.clientWidth; H = host.clientHeight;
     canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
-    R = Math.min(W, H) * 0.44;
+    R = Math.min(W, H) * 0.46;
     if (!raf) draw(performance.now());
   };
 
@@ -106,31 +108,33 @@
     const waveOn = phase <= 1;
 
     ctx.lineWidth = 1;
-    for (const [a, b] of edges) {
-      const pa = proj(a), pb = proj(b);
-      if (pa[2] < 0 || pb[2] < 0) continue;
-      const da = Math.acos(Math.max(-1, Math.min(1, dot(a, tokyo))));
-      const lit = waveOn ? Math.max(0, 1 - Math.abs(da - wave) / 0.25) : 0;
-      ctx.strokeStyle = lit > 0 ? `rgba(${pal.dot},${0.12 + lit * 0.5})` : `rgba(${pal.dot},${0.08 * pa[2] + 0.04})`;
-      ctx.beginPath(); ctx.moveTo(pa[0], pa[1]); ctx.lineTo(pb[0], pb[1]); ctx.stroke();
-    }
+    // Ocean: a faint disc with an outline so the globe reads as a sphere.
+    ctx.fillStyle = `rgba(${pal.dot},0.035)`;
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = `rgba(${pal.dot},0.12)`; ctx.lineWidth = 1;
+    ctx.stroke();
 
     for (const p of pts) {
       const q = proj(p);
-      if (q[2] < -0.15) continue;
-      const depth = (q[2] + 0.15) / 1.15;
+      if (q[2] < 0.02) continue;
+      const depth = 0.35 + 0.65 * q[2];
       const d = Math.acos(Math.max(-1, Math.min(1, dot(p, tokyo))));
       const lit = waveOn ? Math.max(0, 1 - Math.abs(d - wave) / 0.14) : 0;
-      if (lit > 0.05) {
-        ctx.fillStyle = d < 0.8 ? pal.cyan : d < 1.8 ? pal.purple : pal.pink;
-        ctx.globalAlpha = lit * depth;
-        ctx.beginPath(); ctx.arc(q[0], q[1], 1.2 + lit * 1.6, 0, Math.PI * 2); ctx.fill();
-        ctx.globalAlpha = 1;
+      if (p.tag) {
+        ctx.fillStyle = p.tag === 'jp' ? pal.cyan : pal.pink;
+        ctx.globalAlpha = 0.95;
+        ctx.beginPath(); ctx.arc(q[0], q[1], 1.6, 0, Math.PI * 2); ctx.fill();
+      } else if (lit > 0.05) {
+        ctx.fillStyle = pal.purple;
+        ctx.globalAlpha = (0.35 + lit * 0.5) * depth;
+        ctx.beginPath(); ctx.arc(q[0], q[1], 1.1 + lit * 0.8, 0, Math.PI * 2); ctx.fill();
       } else {
-        ctx.fillStyle = `rgba(${pal.dot},${0.1 + depth * 0.35})`;
-        ctx.fillRect(q[0] - 0.8, q[1] - 0.8, 1.6, 1.6);
+        ctx.fillStyle = `rgb(${pal.dot})`;
+        ctx.globalAlpha = 0.18 + depth * 0.32;
+        ctx.fillRect(q[0] - 0.9, q[1] - 0.9, 1.8, 1.8);
       }
     }
+    ctx.globalAlpha = 1;
 
     // Tokyo - Hanoi arc, lifted off the surface, with a packet travelling along it.
     const T = proj(tokyo), N = proj(hanoi);
