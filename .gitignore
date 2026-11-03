@@ -5,3 +5,6 @@ gsc-credentials.json
 __pycache__/
 *.py[cod]
 *$py.class
+
+# taste-skill working files
+.taste-skill/
