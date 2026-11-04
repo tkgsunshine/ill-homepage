@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://www.ill-inc.net/cases/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1148,6 +1148,12 @@
   </url>
   <url>
     <loc>https://www.ill-inc.net/column/144-smb-system-manual-handover-documents</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ill-inc.net/column/145-estimate-development-cost-by-screens-and-features</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

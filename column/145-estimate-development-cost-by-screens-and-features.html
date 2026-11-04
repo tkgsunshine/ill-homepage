@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>画面の数と機能の数を数えて、開発費の見当をつける方法｜見積もりをもらう前の準備 | Ill（イル）株式会社</title>
+  <meta name="description" content="開発費は、作る画面と機能の数で大きく変わります。見積もりを依頼する前に、自分で画面と機能を数えて規模の見当をつける方法と、数を減らして費用を抑える考え方を解説します。">
+  <meta name="keywords" content="開発費 見当 つけ方,アプリ 画面数 費用,機能 数 見積もり,開発費用 自分で見積もる,MVP 範囲 決め方">
+  <meta name="author" content="Ill inc. 編集部">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/145-estimate-development-cost-by-screens-and-features">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="画面の数と機能の数を数えて、開発費の見当をつける方法｜見積もりをもらう前の準備 | Ill inc. コラム">
+  <meta property="og:description" content="開発費は、作る画面と機能の数で大きく変わります。見積もりを依頼する前に、自分で画面と機能を数えて規模の見当をつける方法と、数を減らして費用を抑える考え方を解説します。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/145-estimate-development-cost-by-screens-and-features">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="画面の数と機能の数を数えて、開発費の見当をつける方法｜見積もりをもらう前の準備 | Ill inc. コラム">
+  <meta name="twitter:description" content="開発費は、作る画面と機能の数で大きく変わります。見積もりを依頼する前に、自分で画面と機能を数えて規模の見当をつける方法と、数を減らして費用を抑える考え方を解説します。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=65">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "画面の数と機能の数を数えて、開発費の見当をつける方法｜見積もりをもらう前の準備",
+    "description": "開発費は、作る画面と機能の数で大きく変わります。見積もりを依頼する前に、自分で画面と機能を数えて規模の見当をつける方法と、数を減らして費用を抑える考え方を解説します。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-11-04",
+    "dateModified": "2026-11-04",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/145-estimate-development-cost-by-screens-and-features"
+    }
+  }
+  </script>
+
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "画面数と機能数から見る開発費"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "画面の数は、正確に数えないといけませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。だいたいで構いません。±2〜3画面の違いより、「何を作るか」の方向が合っているかのほうが、見積もりには大切です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "数えた結果が、見積もりの金額と合わないことはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "あります。画面は少なくても、中の処理が複雑なものがあるためです。数は目安にして、金額は内容を伝えて個別に確認しましょう。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "画面のスケッチがなくても、数えられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "数えられます。まず文章で書き出し、あとでスケッチを足してください。数えるだけでも、依頼の質はかなり上がります。"
+      }
+    }
+  ]
+}
+  </script>
+
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../#hero" class="nav-link">Home</a></li>
+          <li><a href="../#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../#services" class="nav-link">Services</a></li>
+          <li><a href="../#offshore" class="nav-link">Global</a></li>
+          <li><a href="../#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="./" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">画面数と機能数から見る開発費</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">新規事業・MVP検証</span>
+        <h1 class="article-title">画面の数と機能の数を数えて、開発費の見当をつける方法｜見積もりをもらう前の準備</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.11.04</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「画面の数と機能の数を数えて、開発費の見当をつける方法｜見積もりをもらう前の準備」のビジュアルバナー">
+  <defs>
+    <linearGradient id="bg_145_estimate_development_cost_by_screens_and_features" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
+    </linearGradient>
+    <filter id="blur_145_estimate_development_cost_by_screens_and_features" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1000" height="428" fill="url(#bg_145_estimate_development_cost_by_screens_and_features)"/>
+
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_145_estimate_development_cost_by_screens_and_features)"/>
+  <circle cx="150" cy="340" r="220" fill="#818CF8" opacity="0.2" filter="url(#blur_145_estimate_development_cost_by_screens_and_features)"/>
+
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
+  </g>
+
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    <text x="0" y="165" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      画面の数と機能の数を数えて、開発費の
+    </text>
+    <text x="0" y="225" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="#38BDF8">見当をつける方法｜見積もりをもらう前の準備</tspan>
+    </text>
+
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 見積もりの適正化　<tspan fill="#38BDF8">✔</tspan> 不要機能の排除
+      </text>
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 契約トラブル防止
+      </text>
+    </g>
+  </g>
+</svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">開発費は、作る画面の数、機能の数、ほかのサービスとの連携の数でおおよそ決まります。先に自分で数えておくと、見積もりの比較がしやすくなります。MVPは10万〜100万円（数日〜数週間）、標準規模は100万〜300万円（目安・約1〜2ヶ月）、それ以上は個別見積もりです。</p>
+          </div>
+
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#sec-1">1. 費用は「何を、いくつ作るか」で決まる</a></li>
+              <li><a href="#sec-2">2. 数えるのは、この3つだけ</a></li>
+              <li><a href="#sec-3">3. 数えてみる例：習い事の教室を探すアプリ</a></li>
+              <li><a href="#sec-4">4. 数が増えると、規模はどう変わるか</a></li>
+              <li><a href="#sec-5">5. 数を減らして、費用を抑える考え方</a></li>
+              <li><a href="#sec-6">6. 見積もりの依頼に、数えた結果を添える</a></li>
+              <li><a href="#sec-7">7. 小さく始めて、確かめながら広げる</a></li>
+              <li><a href="#sec-8">場面別：こんなときはどうする？</a></li>
+              <li><a href="#sec-9">用語かんたん解説</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
+            </ul>
+          </div>
+
+          <h2 id="sec-1">1. 費用は「何を、いくつ作るか」で決まる</h2>
+          <p>開発費を知りたいとき、多くの人は「いくらかかりますか」と聞きます。けれども、開発会社は<strong>何を、いくつ作るか</strong>が分からないと、答えられません。</p><p>逆に言えば、依頼する側が先に<strong>作るものを数えておけば</strong>、見積もりの話は早く進みます。数えるだけなら、専門知識は要りません。紙とペンがあれば、今日からできます。</p>
+
+          <h2 id="sec-2">2. 数えるのは、この3つだけ</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>数えるもの</th><th>意味</th><th>数え方のコツ</th></tr></thead><tbody><tr><td><strong>画面</strong></td><td>お客様が目にするページ</td><td>ログイン、一覧、詳細、入力など、1ページを1つと数える</td></tr><tr><td><strong>機能</strong></td><td>画面の裏でする仕事</td><td>「予約する」「支払う」など、動詞で書き出す</td></tr><tr><td><strong>連携</strong></td><td>ほかのサービスとのつなぎ</td><td>決済、メール送信、地図など、使いたいサービスの数</td></tr></tbody></table></div><p><strong>画面は目に見えるもの、機能は目に見えない仕事、連携は外部との接続</strong>と覚えると、整理しやすくなります。</p>
+
+          <h2 id="sec-3">3. 数えてみる例：習い事の教室を探すアプリ</h2>
+          <p>たとえば、近所の習い事教室を探して予約できるアプリを考えます。</p><ul><li><strong>画面</strong>：トップ、教室の一覧、教室の詳細、予約の入力、予約の完了、ログイン、マイページ</li><li><strong>機能</strong>：教室を探す、予約する、予約を取り消す、会員登録する</li><li><strong>連携</strong>：予約の確認メールを送る</li></ul><p>書き出すと、<strong>画面は7つ、機能は4つ、連携は1つ</strong>と見えてきます。この数を見積もりの依頼に添えるだけで、相手の理解が深まります。</p>
+
+          <h2 id="sec-4">4. 数が増えると、規模はどう変わるか</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>数え終わったときの様子</th><th>規模の目安</th><th>Ill（イル）株式会社の価格帯</th></tr></thead><tbody><tr><td>画面も機能も少なく、1つの悩みに絞っている</td><td>小さな規模（MVP）</td><td>10万〜100万円・数日〜数週間</td></tr><tr><td>画面と機能が増え、管理用の画面や複数の役割もある</td><td>標準規模</td><td>100万〜300万円（目安・約1〜2ヶ月）</td></tr><tr><td>多くの部署や拠点、たくさんの外部連携が必要</td><td>大規模</td><td>要件により個別見積もり</td></tr></tbody></table></div><p>上の表は目安です。実際の金額は、内容を伺ってから個別にお伝えします。</p>
+
+          <h2 id="sec-5">5. 数を減らして、費用を抑える考え方</h2>
+          <p>数え終わったら、<strong>減らせるものがないか</strong>を探します。最初の版では、すべてを作る必要はありません。</p><ul><li>お客様が<strong>最初の1回</strong>で使わない画面は、後回しにする</li><li><strong>手作業で代わりにできる</strong>機能は、作らない（例：予約の取り消しを、まずは電話で受ける）</li><li>決済や通知は、<strong>既存のサービス</strong>を借りて自作しない</li></ul><p>機能を1つ減らすことは、<strong>確認する手間も減らす</strong>ことにつながります。</p>
+
+          <h2 id="sec-6">6. 見積もりの依頼に、数えた結果を添える</h2>
+          <p>数えた結果を、A4用紙1枚にまとめて渡しましょう。次の3つがあれば十分です。</p><div class="checklist-box"><ul><li><strong>画面の一覧</strong>: ページの名前を、順番に書く</li><li><strong>機能の一覧</strong>: 「〜する」の形で書く</li><li><strong>優先順位</strong>: 「必ず」「できれば」「後回し」に分ける</li></ul></div><p>この資料があれば、<strong>複数の会社に同じ条件で見積もりを頼める</strong>ため、比べやすくなります。</p>
+
+          <h2 id="sec-7">7. 小さく始めて、確かめながら広げる</h2>
+          <p>数えた結果が大きくなりすぎたときは、<strong>最初の版を小さく切り出す</strong>ことを考えましょう。小さく作って、使ってもらい、必要な分だけ足していきます。</p><p><strong>Ill（イル）株式会社</strong>は、AIを使った開発（Claude Code）と、ベトナムのオフショアチームを組み合わせて開発しています。MVPは10万〜100万円（数日〜数週間）、標準規模は100万〜300万円（目安・約1〜2ヶ月）、それ以上は個別見積もりです。月額数万円からの継続保守プランもあります（条件は個別にご案内します）。</p>
+
+          <h2 id="sec-8">場面別：こんなときはどうする？</h2>
+          <p><strong>数えたら、画面が20を超えたとき：</strong>「1つのお客様が、最初に通る道」だけを選びます。その道に必要な画面だけを残すと、数は大きく減ります。</p><p><strong>機能が思いつかず、数えられないとき：</strong>お客様が使う場面を、朝から順に書いてみましょう。「何をして、次に何をするか」を追うと、機能が見えてきます。</p><p><strong>他社のサービスを真似たくなったとき：</strong>気に入った点を<strong>1つだけ</strong>選び、ほかは真似しない約束をします。全部を並べると、数は一気に増えます。</p>
+
+          <h2 id="sec-9">用語かんたん解説</h2>
+          <ul><li>連携：ほかのサービスと、データをやりとりすること</li><li>MVP：必要最小限の機能だけで作る、試すための版</li><li>管理画面：運営する側が、データを見たり直したりするための画面</li></ul><p>まずは、<strong>作りたいものの画面を、付箋に1枚ずつ書いて並べて</strong>みましょう。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>画面の数は、正確に数えないといけませんか？</h3>
+              <p>いいえ。だいたいで構いません。±2〜3画面の違いより、「何を作るか」の方向が合っているかのほうが、見積もりには大切です。</p>
+            </div>
+            <div class="faq-item">
+              <h3>数えた結果が、見積もりの金額と合わないことはありますか？</h3>
+              <p>あります。画面は少なくても、中の処理が複雑なものがあるためです。数は目安にして、金額は内容を伝えて個別に確認しましょう。</p>
+            </div>
+            <div class="faq-item">
+              <h3>画面のスケッチがなくても、数えられますか？</h3>
+              <p>数えられます。まず文章で書き出し、あとでスケッチを足してください。数えるだけでも、依頼の質はかなり上がります。</p>
+            </div>
+          </div>
+
+          <!-- Eye-catching Bottom CTA Banner -->
+          <div class="article-bottom-cta">
+            <div class="cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="cta-title">システム開発・AI導入の無料相談・概算見積もり</h3>
+            <p class="cta-desc">
+              不要な機能を削ぎ落とす「ミニマル設計」で、高品質な開発を適正価格で実現します。
+            </p>
+            <div class="cta-check-pills">
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                他社見積もりの妥当性診断
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                最短即日の概算提示
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                仕様変更に強いアジャイル
+              </span>
+            </div>
+            <div class="cta-buttons">
+              <a href="../#contact" class="btn btn-primary btn-cta-primary">
+                無料相談・見積もりを依頼する <span class="arrow">→</span>
+              </a>
+            </div>
+            <p class="cta-microcopy">
+              <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
+            </p>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Ill（イル）株式会社 編集部</p>
+            <p class="author-bio">
+              Ill（イル）株式会社の編集部です。Claude Codeを使ったAI駆動開発と、ベトナムのオフショア開発チームを組み合わせ、新規開発（Web・iOS/Android）の進め方と費用の考え方を発信しています。MVPは10万〜100万円・数日〜数週間から。
+              <a href="/#profile">会社概要を見る</a>
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/145-estimate-development-cost-by-screens-and-features">
+                  <span class="related-item-date">2026.11.04</span>
+                  <span class="related-item-title">画面の数と機能の数を数えて、開発費の見当をつける方法｜見積もりをもらう前の準備</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/144-smb-system-manual-handover-documents">
+                  <span class="related-item-date">2026.11.04</span>
+                  <span class="related-item-title">作ったシステムの説明書と引き継ぎ資料を、納品時に必ずそろえる｜中小企業の備え</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/143-how-to-give-instructions-to-offshore-team">
+                  <span class="related-item-date">2026.11.03</span>
+                  <span class="related-item-title">オフショアの開発チームに、意図が伝わる指示の出し方｜日本語の曖昧さをなくす5つのコツ</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/142-smb-new-system-adoption-on-the-floor">
+                  <span class="related-item-date">2026.11.03</span>
+                  <span class="related-item-title">新しい社内システムを、現場に使ってもらう5つの進め方｜導入で失敗しないために</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/141-service-outage-response-plan-for-small-new-business">
+                  <span class="related-item-date">2026.11.02</span>
+                  <span class="related-item-title">サービスが止まったときの対応は、公開前に決めておく｜少人数の新規事業の基本</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <div class="sidebar-cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="sidebar-cta-title">
+              システム開発・AI導入の<br>
+              <span class="cta-highlight">無料相談・概算見積もり</span>
+            </h3>
+            <ul class="sidebar-cta-points">
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>開発費を最大50%以上削減</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>他社見積もりの妥当性診断</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>最短即日の概算見積もり提示</span>
+              </li>
+            </ul>
+            <a href="../#contact" class="btn sidebar-cta-btn">
+              無料相談・見積もりを依頼する <span class="arrow">→</span>
+            </a>
+            <span class="sidebar-cta-note">🔒 オンライン相談対応・無理な営業なし</span>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../#hero" class="footer-link">Home</a></li>
+              <li><a href="../#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="./" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../#services" class="footer-link">生成AI導入・開発</a></li>
+              <li><a href="../#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../#services" class="footer-link">インフラ構築・移行</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=63"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
