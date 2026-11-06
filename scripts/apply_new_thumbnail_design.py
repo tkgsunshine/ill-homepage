@@ -760,10 +760,31 @@ def split_catchphrase_smart(text):
             score += 15
         if i >= 2 and clean[i-2:i] in ["による", "した", "での", "への", "から", "における"]:
             score += 18
+        if clean[i-1] in BREAK_AFTER_PUNCT:
+            score += 25
+        if clean[i] in NO_LINE_START:
+            score -= 100
         if score > best_score:
             best_score = score
             best_idx = i
-    return [clean[:best_idx], clean[best_idx:]]
+    return tidy_banner_lines([clean[:best_idx], clean[best_idx:]])
+
+# 行頭に置かない約物（読点・句点・閉じかっこ等）と、その直後で改行したい区切り
+NO_LINE_START = "、。，．,.・）」』】〕！？!?ー"
+BREAK_AFTER_PUNCT = "、，,"
+
+def tidy_banner_lines(lines):
+    """2行目の先頭に「、」などが来ないようにし、1行目末の読点は改行で区切れるので落とす。"""
+    if len(lines) != 2:
+        return lines
+    l1, l2 = lines
+    while l2 and l2[0] in NO_LINE_START:
+        l1, l2 = l1 + l2[0], l2[1:]
+    l1 = l1.rstrip("、，,").strip()
+    l2 = l2.strip()
+    if not l2:
+        return [l1]
+    return [l1, l2]
 
 def generate_svg(filename, title, category):
     clean_id = re.sub(r"[^a-zA-Z0-9_]", "_", filename.replace(".html", ""))
@@ -785,6 +806,7 @@ def generate_svg(filename, title, category):
         lines = split_catchphrase_smart(title)
         takeaways = theme["takeaways"]
 
+    lines = tidy_banner_lines(list(lines))
     accent = theme["accent"]
     orb1 = theme["orb1"]
     orb2 = theme["orb2"]
