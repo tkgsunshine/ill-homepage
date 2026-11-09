@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在庫の数をExcelから共有の仕組みへ移す｜小さく始める3ステップ | Ill（イル）株式会社</title>
+  <meta name="description" content="在庫の数をExcelで管理していて、ずれや二重入力に困っている中小企業向けに、複数の人が同時に使える在庫の仕組みへ小さく移す手順を、3つのステップで解説します。">
+  <meta name="keywords" content="在庫管理 Excel 限界,在庫 共有 システム,在庫管理 自社開発,在庫 ずれ 防ぐ,中小企業 在庫管理 小さく始める">
+  <meta name="author" content="Ill inc. 編集部">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/155-smb-inventory-excel-to-shared-system-start-small">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="在庫の数をExcelから共有の仕組みへ移す｜小さく始める3ステップ | Ill inc. コラム">
+  <meta property="og:description" content="在庫の数をExcelで管理していて、ずれや二重入力に困っている中小企業向けに、複数の人が同時に使える在庫の仕組みへ小さく移す手順を、3つのステップで解説します。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/155-smb-inventory-excel-to-shared-system-start-small">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="在庫の数をExcelから共有の仕組みへ移す｜小さく始める3ステップ | Ill inc. コラム">
+  <meta name="twitter:description" content="在庫の数をExcelで管理していて、ずれや二重入力に困っている中小企業向けに、複数の人が同時に使える在庫の仕組みへ小さく移す手順を、3つのステップで解説します。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=65">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "在庫の数をExcelから共有の仕組みへ移す｜小さく始める3ステップ",
+    "description": "在庫の数をExcelで管理していて、ずれや二重入力に困っている中小企業向けに、複数の人が同時に使える在庫の仕組みへ小さく移す手順を、3つのステップで解説します。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/155-smb-inventory-excel-to-shared-system-start-small"
+    }
+  }
+  </script>
+
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Excelから共有の在庫管理へ"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "商品が数千点あっても、小さく始められますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "始められます。動きの多い上位の商品だけを対象にして、残りは後から追加します。全体の一部でも、管理の効果は出ます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "通販サイトの在庫とも、つなげられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "つなげられる場合があります。ただし、使っている通販の仕組みによって、できる範囲が違います。使っているサービスを教えてもらえれば、確認できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "入力する人が覚えるのが大変そうですが、どうすれば？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "画面を単純にすることが、いちばんの対策です。入力は3ステップ以内に収め、最初のうちは近くで教える人を決めておきましょう。"
+      }
+    }
+  ]
+}
+  </script>
+
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../#hero" class="nav-link">Home</a></li>
+          <li><a href="../#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../#services" class="nav-link">Services</a></li>
+          <li><a href="../#offshore" class="nav-link">Global</a></li>
+          <li><a href="../#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="./" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">Excelから共有の在庫管理へ</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">システム開発・アーキテクチャ</span>
+        <h1 class="article-title">在庫の数をExcelから共有の仕組みへ移す｜小さく始める3ステップ</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.11.09</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「在庫の数をExcelから共有の仕組みへ移す｜小さく始める3ステップ」のビジュアルバナー">
+  <defs>
+    <linearGradient id="bg_155_smb_inventory_excel_to_shared_system_start_small" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
+    </linearGradient>
+    <filter id="blur_155_smb_inventory_excel_to_shared_system_start_small" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1000" height="428" fill="url(#bg_155_smb_inventory_excel_to_shared_system_start_small)"/>
+
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_155_smb_inventory_excel_to_shared_system_start_small)"/>
+  <circle cx="150" cy="340" r="220" fill="#818CF8" opacity="0.2" filter="url(#blur_155_smb_inventory_excel_to_shared_system_start_small)"/>
+
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
+  </g>
+
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    <text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      在庫の数をExcelから共有の
+    </text>
+    <text x="0" y="225" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="#38BDF8">仕組みへ移す｜小さく始める3ステップ</tspan>
+    </text>
+
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 見積もりの適正化　<tspan fill="#38BDF8">✔</tspan> 不要機能の排除
+      </text>
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 契約トラブル防止
+      </text>
+    </g>
+  </g>
+</svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">在庫の数は、複数の人が同時に見て更新できる仕組みにすると、ずれが減ります。いきなり全商品ではなく、動きの多い商品から小さく始める3ステップで進めましょう。MVPは10万〜100万円（数日〜数週間）、標準規模は100万〜300万円（目安・約1〜2ヶ月）が目安です。</p>
+          </div>
+
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#sec-1">1. 在庫のずれは、どこから生まれるか</a></li>
+              <li><a href="#sec-2">2. Excelで起きやすい3つのこと</a></li>
+              <li><a href="#sec-3">3. ステップ1：動きの多い商品だけを選ぶ</a></li>
+              <li><a href="#sec-4">4. ステップ2：出し入れを、その場で入力する</a></li>
+              <li><a href="#sec-5">5. ステップ3：履歴と、足りなくなる知らせ</a></li>
+              <li><a href="#sec-6">6. 既製の在庫管理サービスとの比較</a></li>
+              <li><a href="#sec-7">場面別：こんなときはどうする？</a></li>
+              <li><a href="#sec-8">用語かんたん解説</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
+            </ul>
+          </div>
+
+          <h2 id="sec-1">1. 在庫のずれは、どこから生まれるか</h2>
+          <p>「Excelでは3個のはずが、棚には2個しかない」。在庫のずれは、地味ですが<strong>販売の機会を逃したり、余分に仕入れたり</strong>する原因になります。</p><p>ずれの原因の多くは、Excelの<strong>同時編集の難しさ</strong>と、<strong>入力のタイミングの遅れ</strong>です。</p>
+
+          <h2 id="sec-2">2. Excelで起きやすい3つのこと</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>起きること</th><th>原因</th><th>その結果</th></tr></thead><tbody><tr><td><strong>数が合わない</strong></td><td>複数の人が別のファイルを使う</td><td>どれが最新か分からない</td></tr><tr><td><strong>入力が遅れる</strong></td><td>事務所に戻ってから入力する</td><td>実際の数と、ずれる</td></tr><tr><td><strong>誰が変えたか分からない</strong></td><td>履歴が残らない</td><td>ずれの原因を追えない</td></tr></tbody></table></div><p>これらは、<strong>共有の仕組み</strong>にすると、大きく改善します。</p>
+
+          <h2 id="sec-3">3. ステップ1：動きの多い商品だけを選ぶ</h2>
+          <p>全商品を一度に移そうとしないことが、成功の鍵です。<strong>出し入れの多い商品</strong>から始めましょう。</p><ul><li>売上の上位の商品</li><li>欠品すると困る商品</li><li>ずれが特に多い商品</li></ul><p>多くの会社では、<strong>全体の一部の商品</strong>に、動きが集中しています。まずそこから管理すれば、効果が出やすくなります。</p>
+
+          <h2 id="sec-4">4. ステップ2：出し入れを、その場で入力する</h2>
+          <p>在庫を変える動きは、<strong>入荷、出荷、棚卸し（実際の数え直し）</strong>の3つです。それぞれ、その場で入力できる形にします。</p><div class="checklist-box"><ul><li><strong>入荷</strong>: 商品を選び、数を入れる</li><li><strong>出荷</strong>: 商品を選び、数を入れる（注文と連動できると理想）</li><li><strong>棚卸し</strong>: 数え直した数を入れ、差があれば理由を残す</li></ul></div><p>スマホやタブレットで入力できると、<strong>事務所に戻る手間</strong>がなくなります。</p>
+
+          <h2 id="sec-5">5. ステップ3：履歴と、足りなくなる知らせ</h2>
+          <p>在庫の仕組みには、次の2つがあると便利です。</p><ul><li><strong>履歴</strong>：いつ、誰が、何個変えたかが残る</li><li><strong>下限の知らせ</strong>：一定の数を下回ったら、自動で知らせる</li></ul><p>履歴があれば、<strong>ずれの原因を追える</strong>ようになり、同じミスの再発を防げます。</p>
+
+          <h2 id="sec-6">6. 既製の在庫管理サービスとの比較</h2>
+          <p>既製の在庫管理サービスも、多く存在します。まず試して、合わなければ自社専用を検討するのが、堅実な進め方です。</p><div class="article-table-wrapper"><table class="article-table"><thead><tr><th>状況</th><th>向いている方法</th></tr></thead><tbody><tr><td>商品の種類が少なく、<strong>標準的な運用</strong></td><td>既製のサービスで足りることが多い</td></tr><tr><td><strong>独自の数え方や単位</strong>がある</td><td>自社専用に作る価値がある</td></tr><tr><td><strong>受注や発注とつなげたい</strong></td><td>自社専用で一体に作る方法がある</td></tr></tbody></table></div><p><strong>Ill（イル）株式会社</strong>では、このような自社専用の仕組みをMVPは10万〜100万円（数日〜数週間）、標準規模は100万〜300万円（目安・約1〜2ヶ月）、それ以上は個別見積もりです。月額数万円からの継続保守プランもあります（条件は個別にご案内します）。</p>
+
+          <h2 id="sec-7">場面別：こんなときはどうする？</h2>
+          <p><strong>商品に、バーコードや番号がないとき：</strong>まず、<strong>商品に管理用の番号</strong>をつけます。番号を決めるだけでも、数え間違いが減ります。</p><p><strong>倉庫が複数あるとき：</strong>最初は1か所から始め、<strong>場所ごとの数</strong>が分かる形に広げます。</p><p><strong>季節で売れる商品が変わるとき：</strong>動きの多い商品を、季節ごとに見直しましょう。<strong>管理する商品の入れ替え</strong>ができる仕組みにしておくと安心です。</p>
+
+          <h2 id="sec-8">用語かんたん解説</h2>
+          <ul><li>棚卸し：実際の在庫を数えて、帳簿と合わせること</li><li>欠品：在庫が無くなって、売れない状態</li><li>履歴：いつ、誰が、何を変えたかの記録</li></ul><p>まずは、<strong>この1か月で、動きの多かった商品を5つ</strong>書き出してみましょう。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>商品が数千点あっても、小さく始められますか？</h3>
+              <p>始められます。動きの多い上位の商品だけを対象にして、残りは後から追加します。全体の一部でも、管理の効果は出ます。</p>
+            </div>
+            <div class="faq-item">
+              <h3>通販サイトの在庫とも、つなげられますか？</h3>
+              <p>つなげられる場合があります。ただし、使っている通販の仕組みによって、できる範囲が違います。使っているサービスを教えてもらえれば、確認できます。</p>
+            </div>
+            <div class="faq-item">
+              <h3>入力する人が覚えるのが大変そうですが、どうすれば？</h3>
+              <p>画面を単純にすることが、いちばんの対策です。入力は3ステップ以内に収め、最初のうちは近くで教える人を決めておきましょう。</p>
+            </div>
+          </div>
+
+          <!-- Eye-catching Bottom CTA Banner -->
+          <div class="article-bottom-cta">
+            <div class="cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="cta-title">システム開発・AI導入の無料相談・概算見積もり</h3>
+            <p class="cta-desc">
+              不要な機能を削ぎ落とす「ミニマル設計」で、高品質な開発を適正価格で実現します。
+            </p>
+            <div class="cta-check-pills">
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                他社見積もりの妥当性診断
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                最短即日の概算提示
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                仕様変更に強いアジャイル
+              </span>
+            </div>
+            <div class="cta-buttons">
+              <a href="../#contact" class="btn btn-primary btn-cta-primary">
+                無料相談・見積もりを依頼する <span class="arrow">→</span>
+              </a>
+            </div>
+            <p class="cta-microcopy">
+              <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
+            </p>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Ill（イル）株式会社 編集部</p>
+            <p class="author-bio">
+              Ill（イル）株式会社の編集部です。Claude Codeを使ったAI駆動開発と、ベトナムのオフショア開発チームを組み合わせ、新規開発（Web・iOS/Android）の進め方と費用の考え方を発信しています。MVPは10万〜100万円・数日〜数週間から。
+              <a href="/#profile">会社概要を見る</a>
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/155-smb-inventory-excel-to-shared-system-start-small">
+                  <span class="related-item-date">2026.11.09</span>
+                  <span class="related-item-title">在庫の数をExcelから共有の仕組みへ移す｜小さく始める3ステップ</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/154-deadline-renewal-reminder-system-small-company">
+                  <span class="related-item-date">2026.11.08</span>
+                  <span class="related-item-title">契約更新・点検期限・資格の期限を自動で知らせる社内システム｜うっかりをなくす</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/153-reduce-input-mistakes-form-design">
+                  <span class="related-item-date">2026.11.08</span>
+                  <span class="related-item-title">業務システムの入力ミスを減らす画面の作り方｜選ぶ・必須・自動チェックの3つの工夫</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/152-smb-person-dependent-work-to-system">
+                  <span class="related-item-date">2026.11.07</span>
+                  <span class="related-item-title">担当者しか分からない仕事を書き出して、社内システムに移す手順｜属人化を減らす</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/151-multiple-quotes-compare-same-conditions">
+                  <span class="related-item-date">2026.11.07</span>
+                  <span class="related-item-title">開発会社の相見積もりは、条件をそろえて比べる｜金額だけで選ばない5つの見方</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <div class="sidebar-cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="sidebar-cta-title">
+              システム開発・AI導入の<br>
+              <span class="cta-highlight">無料相談・概算見積もり</span>
+            </h3>
+            <ul class="sidebar-cta-points">
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>開発費を最大50%以上削減</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>他社見積もりの妥当性診断</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>最短即日の概算見積もり提示</span>
+              </li>
+            </ul>
+            <a href="../#contact" class="btn sidebar-cta-btn">
+              無料相談・見積もりを依頼する <span class="arrow">→</span>
+            </a>
+            <span class="sidebar-cta-note">🔒 オンライン相談対応・無理な営業なし</span>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../#hero" class="footer-link">Home</a></li>
+              <li><a href="../#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="./" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../#services" class="footer-link">生成AI導入・開発</a></li>
+              <li><a href="../#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../#services" class="footer-link">インフラ構築・移行</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=63"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
