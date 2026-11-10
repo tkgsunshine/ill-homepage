@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>毎月の集計と報告資料づくりを、自動にする｜Excelの転記作業をなくす | Ill（イル）株式会社</title>
+  <meta name="description" content="毎月、各所の数字を集めて報告資料にまとめる作業に時間がかかっている中小企業向けに、集計と資料づくりを自動にする仕組みの考え方を、データの集め方から出力まで解説します。">
+  <meta name="keywords" content="月次集計 自動化,報告資料 自動作成,Excel 転記 なくす,売上 集計 システム,中小企業 レポート 自動化">
+  <meta name="author" content="Ill inc. 編集部">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/158-monthly-report-automation-aggregate-sales-data">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="毎月の集計と報告資料づくりを、自動にする｜Excelの転記作業をなくす | Ill inc. コラム">
+  <meta property="og:description" content="毎月、各所の数字を集めて報告資料にまとめる作業に時間がかかっている中小企業向けに、集計と資料づくりを自動にする仕組みの考え方を、データの集め方から出力まで解説します。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/158-monthly-report-automation-aggregate-sales-data">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="毎月の集計と報告資料づくりを、自動にする｜Excelの転記作業をなくす | Ill inc. コラム">
+  <meta name="twitter:description" content="毎月、各所の数字を集めて報告資料にまとめる作業に時間がかかっている中小企業向けに、集計と資料づくりを自動にする仕組みの考え方を、データの集め方から出力まで解説します。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=65">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "毎月の集計と報告資料づくりを、自動にする｜Excelの転記作業をなくす",
+    "description": "毎月、各所の数字を集めて報告資料にまとめる作業に時間がかかっている中小企業向けに、集計と資料づくりを自動にする仕組みの考え方を、データの集め方から出力まで解説します。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-11-11",
+    "dateModified": "2026-11-11",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/158-monthly-report-automation-aggregate-sales-data"
+    }
+  }
+  </script>
+
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "毎月の集計と資料づくりの自動化"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "集計の元データが、バラバラな形でも自動化できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "できますが、先に形をそろえる作業が必要です。入力の形を統一するだけでも、手作業が大きく減る場合があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "グラフや表の見た目も、自由に決められますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多くの場合、決められます。最初は標準的な表とグラフで始め、見やすさを確認しながら直していくのが現実的です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "自動で作った数字を、信じてよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "自動でも、最初のうちは手作業の結果と照らし合わせて確認しましょう。数か月合っていれば、安心して任せられます。"
+      }
+    }
+  ]
+}
+  </script>
+
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../#hero" class="nav-link">Home</a></li>
+          <li><a href="../#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../#services" class="nav-link">Services</a></li>
+          <li><a href="../#offshore" class="nav-link">Global</a></li>
+          <li><a href="../#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="./" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">毎月の集計と資料づくりの自動化</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">システム開発・アーキテクチャ</span>
+        <h1 class="article-title">毎月の集計と報告資料づくりを、自動にする｜Excelの転記作業をなくす</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.11.11</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「毎月の集計と報告資料づくりを、自動にする｜Excelの転記作業をなくす」のビジュアルバナー">
+  <defs>
+    <linearGradient id="bg_158_monthly_report_automation_aggregate_sales_data" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
+    </linearGradient>
+    <filter id="blur_158_monthly_report_automation_aggregate_sales_data" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1000" height="428" fill="url(#bg_158_monthly_report_automation_aggregate_sales_data)"/>
+
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_158_monthly_report_automation_aggregate_sales_data)"/>
+  <circle cx="150" cy="340" r="220" fill="#818CF8" opacity="0.2" filter="url(#blur_158_monthly_report_automation_aggregate_sales_data)"/>
+
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
+  </g>
+
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    <text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      毎月の集計と報告資料づくりを
+    </text>
+    <text x="0" y="225" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="#38BDF8">自動にする｜Excelの転記作業をなくす</tspan>
+    </text>
+
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 見積もりの適正化　<tspan fill="#38BDF8">✔</tspan> 不要機能の排除
+      </text>
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 契約トラブル防止
+      </text>
+    </g>
+  </g>
+</svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">毎月の集計と報告資料づくりは、元のデータを一箇所に集め、計算と表の作成を自動にすれば、数時間の作業を数分に縮められる場合があります。まずは、いちばん時間がかかる1つの報告から始めましょう。MVPは10万〜100万円（数日〜数週間）が目安です。</p>
+          </div>
+
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#sec-1">1. 月末の「集計地獄」を、なくしたい</a></li>
+              <li><a href="#sec-2">2. 集計作業が重くなる原因</a></li>
+              <li><a href="#sec-3">3. 自動にする流れ</a></li>
+              <li><a href="#sec-4">4. 最初に選ぶ報告は、1つだけ</a></li>
+              <li><a href="#sec-5">5. 自動化しても、人が見る部分</a></li>
+              <li><a href="#sec-6">6. 既製のツールとの使い分け</a></li>
+              <li><a href="#sec-7">場面別：こんなときはどうする？</a></li>
+              <li><a href="#sec-8">用語かんたん解説</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
+            </ul>
+          </div>
+
+          <h2 id="sec-1">1. 月末の「集計地獄」を、なくしたい</h2>
+          <p>売上、問い合わせ、在庫、勤務の状況。月末や月初に、<strong>各所のファイルを開き、数字をコピーして、報告用の表に貼る</strong>。この作業に、毎月何時間もかけている会社は多くあります。</p><p>貼り間違いが起きやすい上に、<strong>肝心の「考える」時間が減って</strong>しまいます。集計は機械に任せ、人は数字を読んで判断することに集中しましょう。</p>
+
+          <h2 id="sec-2">2. 集計作業が重くなる原因</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>原因</th><th>起きること</th><th>対策</th></tr></thead><tbody><tr><td><strong>データが、あちこちにある</strong></td><td>集める手間がかかる</td><td>一箇所に集める</td></tr><tr><td><strong>形式がバラバラ</strong></td><td>そろえる作業が必要</td><td>入力の形を統一する</td></tr><tr><td><strong>毎月、手で計算</strong></td><td>時間がかかり、ミスも出る</td><td>計算を自動にする</td></tr><tr><td><strong>資料の形を、毎回作る</strong></td><td>同じ作業の繰り返し</td><td>ひな形に自動で流し込む</td></tr></tbody></table></div>
+
+          <h2 id="sec-3">3. 自動にする流れ</h2>
+          <p>集計の自動化は、次の4つの段階で考えます。</p><div class="checklist-box"><ul><li><strong>1. 集める</strong>: 元のデータを、決まった場所に入れる</li><li><strong>2. そろえる</strong>: 日付や取引先の書き方を統一する</li><li><strong>3. 計算する</strong>: 合計や前月との比較を自動で出す</li><li><strong>4. 出力する</strong>: 決まった形の表やグラフで見せる</li></ul></div><p>多くの手間は、<strong>1と2</strong>にあります。ここを整えると、残りは自動にしやすくなります。</p>
+
+          <h2 id="sec-4">4. 最初に選ぶ報告は、1つだけ</h2>
+          <p>すべての報告を一度に自動にする必要はありません。<strong>いちばん時間がかかる、1つの報告</strong>から始めます。</p><ul><li>作るのに、<strong>何時間かかっているか</strong>を確認する</li><li>元のデータが、<strong>どこにあるか</strong>を洗い出す</li><li>完成した報告の<strong>形を決める</strong>（表、グラフ）</li></ul><p>1つ成功すると、他の報告にも広げやすくなります。</p>
+
+          <h2 id="sec-5">5. 自動化しても、人が見る部分</h2>
+          <p>集計が自動になっても、人が確認する場面は残ります。</p><ul><li>数字の<strong>異常</strong>（急に増えた、減った）に気づく</li><li>数字の<strong>理由</strong>を考えて、コメントを添える</li><li><strong>次の行動</strong>を決める</li></ul><p>自動化の目的は、人の仕事を奪うことではなく、<strong>考える時間を増やす</strong>ことです。</p>
+
+          <h2 id="sec-6">6. 既製のツールとの使い分け</h2>
+          <p>表計算ソフトの機能や、既製のレポートツールでも、ある程度は自動にできます。</p><div class="article-table-wrapper"><table class="article-table"><thead><tr><th>状況</th><th>向いている方法</th></tr></thead><tbody><tr><td>元データが、1つのサービスにまとまっている</td><td>既製のツールで足りることが多い</td></tr><tr><td><strong>複数の仕組みや、紙の記録</strong>をまとめたい</td><td>自社専用に作る価値がある</td></tr><tr><td><strong>自社独自の計算ルール</strong>がある</td><td>自社専用で組み込む方法がある</td></tr></tbody></table></div><p><strong>Ill（イル）株式会社</strong>では、MVPは10万〜100万円（数日〜数週間）、標準規模は100万〜300万円（目安・約1〜2ヶ月）、それ以上は個別見積もりです。月額数万円からの継続保守プランもあります（条件は個別にご案内します）。</p>
+
+          <h2 id="sec-7">場面別：こんなときはどうする？</h2>
+          <p><strong>元のデータが、紙の記録しかないとき：</strong>まず、<strong>紙の内容を入力する場所</strong>を作ります。データになってから、自動化の話ができます。</p><p><strong>報告資料の形が、上司の好みで毎回変わるとき：</strong>変わらない部分と、変わる部分を分けます。<strong>変わらない部分だけ</strong>を自動にしても、手間は大きく減ります。</p><p><strong>数字の定義が、部署ごとに違うとき：</strong>自動化の前に、<strong>「売上とは何か」</strong>などの定義をそろえる話し合いが必要です。定義が決まらないと、自動化しても数字が合いません。</p>
+
+          <h2 id="sec-8">用語かんたん解説</h2>
+          <ul><li>集計：数字を集めて、合計などを計算すること</li><li>転記：ある場所の数字を、別の場所に書き写すこと</li><li>ひな形：毎回使う、資料の型</li></ul><p>まずは、<strong>毎月の報告作業で、いちばん時間がかかる作業</strong>を1つ選んで、時間を測ってみましょう。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>集計の元データが、バラバラな形でも自動化できますか？</h3>
+              <p>できますが、先に形をそろえる作業が必要です。入力の形を統一するだけでも、手作業が大きく減る場合があります。</p>
+            </div>
+            <div class="faq-item">
+              <h3>グラフや表の見た目も、自由に決められますか？</h3>
+              <p>多くの場合、決められます。最初は標準的な表とグラフで始め、見やすさを確認しながら直していくのが現実的です。</p>
+            </div>
+            <div class="faq-item">
+              <h3>自動で作った数字を、信じてよいですか？</h3>
+              <p>自動でも、最初のうちは手作業の結果と照らし合わせて確認しましょう。数か月合っていれば、安心して任せられます。</p>
+            </div>
+          </div>
+
+          <!-- Eye-catching Bottom CTA Banner -->
+          <div class="article-bottom-cta">
+            <div class="cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="cta-title">システム開発・AI導入の無料相談・概算見積もり</h3>
+            <p class="cta-desc">
+              不要な機能を削ぎ落とす「ミニマル設計」で、高品質な開発を適正価格で実現します。
+            </p>
+            <div class="cta-check-pills">
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                他社見積もりの妥当性診断
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                最短即日の概算提示
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                仕様変更に強いアジャイル
+              </span>
+            </div>
+            <div class="cta-buttons">
+              <a href="../#contact" class="btn btn-primary btn-cta-primary">
+                無料相談・見積もりを依頼する <span class="arrow">→</span>
+              </a>
+            </div>
+            <p class="cta-microcopy">
+              <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
+            </p>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Ill（イル）株式会社 編集部</p>
+            <p class="author-bio">
+              Ill（イル）株式会社の編集部です。Claude Codeを使ったAI駆動開発と、ベトナムのオフショア開発チームを組み合わせ、新規開発（Web・iOS/Android）の進め方と費用の考え方を発信しています。MVPは10万〜100万円・数日〜数週間から。
+              <a href="/#profile">会社概要を見る</a>
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/158-monthly-report-automation-aggregate-sales-data">
+                  <span class="related-item-date">2026.11.11</span>
+                  <span class="related-item-title">毎月の集計と報告資料づくりを、自動にする｜Excelの転記作業をなくす</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/157-measure-effect-of-systemization-time-mistakes">
+                  <span class="related-item-date">2026.11.10</span>
+                  <span class="related-item-title">システム化の効果を、「時間・ミス・手間」で測る｜導入前の数字の取り方</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/156-connect-accounting-software-csv-avoid-double-entry">
+                  <span class="related-item-date">2026.11.10</span>
+                  <span class="related-item-title">会計ソフトと自社システムをCSVでつなぐ｜二重入力をなくす小さな連携</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/155-smb-inventory-excel-to-shared-system-start-small">
+                  <span class="related-item-date">2026.11.09</span>
+                  <span class="related-item-title">在庫の数をExcelから共有の仕組みへ移す｜小さく始める3ステップ</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/154-deadline-renewal-reminder-system-small-company">
+                  <span class="related-item-date">2026.11.08</span>
+                  <span class="related-item-title">契約更新・点検期限・資格の期限を自動で知らせる社内システム｜うっかりをなくす</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <div class="sidebar-cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="sidebar-cta-title">
+              システム開発・AI導入の<br>
+              <span class="cta-highlight">無料相談・概算見積もり</span>
+            </h3>
+            <ul class="sidebar-cta-points">
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>開発費を最大50%以上削減</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>他社見積もりの妥当性診断</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>最短即日の概算見積もり提示</span>
+              </li>
+            </ul>
+            <a href="../#contact" class="btn sidebar-cta-btn">
+              無料相談・見積もりを依頼する <span class="arrow">→</span>
+            </a>
+            <span class="sidebar-cta-note">🔒 オンライン相談対応・無理な営業なし</span>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../#hero" class="footer-link">Home</a></li>
+              <li><a href="../#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="./" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../#services" class="footer-link">生成AI導入・開発</a></li>
+              <li><a href="../#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../#services" class="footer-link">インフラ構築・移行</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=63"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
