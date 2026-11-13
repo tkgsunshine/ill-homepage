@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方 | Ill（イル）株式会社</title>
+  <meta name="description" content="自社サービスにAI機能を入れたときの、毎月の利用料を見積もる考え方を解説します。利用回数と1回あたりの料金から計算する方法、費用が増える原因、抑える工夫をまとめました。">
+  <meta name="keywords" content="AI 利用料 見積もり,生成AI 月額 コスト,AI機能 運用費用,API 利用料 計算,AIアプリ 公開後 費用">
+  <meta name="author" content="Ill inc. 編集部">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/163-ai-feature-monthly-usage-cost-estimate">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方 | Ill inc. コラム">
+  <meta property="og:description" content="自社サービスにAI機能を入れたときの、毎月の利用料を見積もる考え方を解説します。利用回数と1回あたりの料金から計算する方法、費用が増える原因、抑える工夫をまとめました。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/163-ai-feature-monthly-usage-cost-estimate">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方 | Ill inc. コラム">
+  <meta name="twitter:description" content="自社サービスにAI機能を入れたときの、毎月の利用料を見積もる考え方を解説します。利用回数と1回あたりの料金から計算する方法、費用が増える原因、抑える工夫をまとめました。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=65">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方",
+    "description": "自社サービスにAI機能を入れたときの、毎月の利用料を見積もる考え方を解説します。利用回数と1回あたりの料金から計算する方法、費用が増える原因、抑える工夫をまとめました。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/163-ai-feature-monthly-usage-cost-estimate"
+    }
+  }
+  </script>
+
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI機能の毎月の利用料の見積もり"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "料金表の見方が分かりません。どうすればよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "料金表は、使うAIや会社ごとに形が違います。開発会社に、1回あたりの料金に直して説明してもらうと分かりやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "無料の範囲を作ると、費用が心配ではありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1人あたりの回数と、無料で使える人数に上限を設ければ、費用の見通しが立ちます。上限を決める設計を依頼のときに相談しましょう。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AI機能なしで始める方が、安全ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AIが事業の価値の中心なら、入れるべきです。補助的な機能なら、公開後に追加する方法もあります。事業の目的で判断してください。"
+      }
+    }
+  ]
+}
+  </script>
+
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../#hero" class="nav-link">Home</a></li>
+          <li><a href="../#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../#services" class="nav-link">Services</a></li>
+          <li><a href="../#offshore" class="nav-link">Global</a></li>
+          <li><a href="../#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="./" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">AI機能の毎月の利用料の見積もり</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">生成AI・先端技術</span>
+        <h1 class="article-title">AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.11.13</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方」のビジュアルバナー">
+  <defs>
+    <linearGradient id="bg_163_ai_feature_monthly_usage_cost_estimate" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
+    </linearGradient>
+    <filter id="blur_163_ai_feature_monthly_usage_cost_estimate" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1000" height="428" fill="url(#bg_163_ai_feature_monthly_usage_cost_estimate)"/>
+
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="#00F0FF" opacity="0.25" filter="url(#blur_163_ai_feature_monthly_usage_cost_estimate)"/>
+  <circle cx="150" cy="340" r="220" fill="#A855F7" opacity="0.2" filter="url(#blur_163_ai_feature_monthly_usage_cost_estimate)"/>
+
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="#00F0FF" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
+  </g>
+
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    <text x="0" y="165" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      AI機能の毎月の利用料は、回数から
+    </text>
+    <text x="0" y="225" fill="#FFFFFF" font-size="40" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="#00F0FF">見積もる｜公開後に増える費用の考え方</tspan>
+    </text>
+
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#00F0FF">✔</tspan> 社内データ連携（RAG）　<tspan fill="#00F0FF">✔</tspan> API連携・自動化
+      </text>
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#00F0FF">✔</tspan> 導入ROIの最大化
+      </text>
+    </g>
+  </g>
+</svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">AI機能の毎月の利用料は、「1回あたりの料金×1人あたりの回数×利用者数」で見積もれます。利用が増えるほど費用も増えるため、公開前に上限を決めておくと安心です。MVPは10万〜100万円（数日〜数週間）が目安です。</p>
+          </div>
+
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#sec-1">1. 開発費とは別に、毎月の利用料がかかる</a></li>
+              <li><a href="#sec-2">2. 費用を決める3つの数字</a></li>
+              <li><a href="#sec-3">3. 入力と出力の長さで、料金が変わる</a></li>
+              <li><a href="#sec-4">4. 利用が急に増えたときの備え</a></li>
+              <li><a href="#sec-5">5. お客様に負担してもらう方法</a></li>
+              <li><a href="#sec-6">6. 試作の段階で、実際に測る</a></li>
+              <li><a href="#sec-7">7. 見積もりの数字を、事業の計画に入れる</a></li>
+              <li><a href="#sec-8">場面別：こんなときはどうする？</a></li>
+              <li><a href="#sec-9">用語かんたん解説</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
+            </ul>
+          </div>
+
+          <h2 id="sec-1">1. 開発費とは別に、毎月の利用料がかかる</h2>
+          <p>AI機能を入れたサービスは、<strong>開発費のほかに、毎月の利用料</strong>がかかる場合があります。AIの仕組みを提供する会社に、使った分だけ支払うことが多いからです。</p><p>この支払いは、お客様が増えるほど大きくなります。<strong>人気が出たら、赤字になった</strong>という事態を避けるには、公開前に見積もっておくことが大切です。</p><p>ここでは、専門知識がなくても使える、おおまかな計算の考え方を説明します。</p>
+
+          <h2 id="sec-2">2. 費用を決める3つの数字</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>数字</th><th>意味</th><th>調べ方</th></tr></thead><tbody><tr><td><strong>1回あたりの料金</strong></td><td>AIに1回質問や依頼をするときの料金</td><td>AIを提供する会社の料金表で確認する</td></tr><tr><td><strong>1人あたりの回数</strong></td><td>お客様が1か月に何回使うか</td><td>試作の段階で、実際の回数を数える</td></tr><tr><td><strong>利用者の数</strong></td><td>1か月に使う人の数</td><td>事業の計画から、最初の人数を決める</td></tr></tbody></table></div><p><strong>1回あたりの料金×1人あたりの回数×利用者数</strong>で、毎月の利用料のおおまかな金額が分かります。料金は、会社や使うAIの種類で変わり、改定もあります。必ず最新の料金表で確認してください。</p>
+
+          <h2 id="sec-3">3. 入力と出力の長さで、料金が変わる</h2>
+          <p>多くのAIは、<strong>送る文章の量と、返ってくる文章の量</strong>で料金が決まります。長い資料を毎回送ると、1回あたりの料金は上がります。</p><ul><li><strong>長い文章を丸ごと送らない</strong>：必要な部分だけを送る</li><li><strong>答えの長さを、あらかじめ限る</strong>：長すぎる返答は避ける</li><li><strong>同じ質問の答えを覚えておく</strong>：繰り返しの質問には、保存した答えを返す</li><li><strong>軽いAIで足りる場面</strong>は、軽いAIを使い分ける</li></ul><p>どの工夫が使えるかは、サービスの内容によります。開発会社と相談して決めましょう。</p>
+
+          <h2 id="sec-4">4. 利用が急に増えたときの備え</h2>
+          <p>評判が広まって、利用が急に増えることもあります。そのときに慌てないよう、次の3点を決めておきます。</p><div class="checklist-box"><ul><li><strong>1. 1か月の上限額</strong>: ここを超えたら、利用を止める、または知らせる</li><li><strong>2. 1人あたりの回数の上限</strong>: 無料の人は1日5回まで、など</li><li><strong>3. 異常を知らせる仕組み</strong>: 急に増えたら、運営者に通知が届く</li></ul></div><p>上限の設定は、<strong>AIの提供会社の画面</strong>でできる場合もあります。依頼のときに確認しておきましょう。</p>
+
+          <h2 id="sec-5">5. お客様に負担してもらう方法</h2>
+          <p>利用料を、サービスの料金に含める方法もあります。たとえば、次のような形があります。</p><div class="article-table-wrapper"><table class="article-table"><thead><tr><th>方法</th><th>特徴</th><th>向いている場面</th></tr></thead><tbody><tr><td><strong>月額に含める</strong></td><td>お客様が分かりやすい</td><td>使う量が、ほぼ一定のとき</td></tr><tr><td><strong>回数に応じて課金する</strong></td><td>使った分だけ払ってもらえる</td><td>使う量に、人ごとの差が大きいとき</td></tr><tr><td><strong>無料の範囲を決める</strong></td><td>試してもらいやすい</td><td>最初の利用者を増やしたいとき</td></tr></tbody></table></div><p>無料の範囲を広げすぎると、<strong>費用だけが増える</strong>ので注意が必要です。</p>
+
+          <h2 id="sec-6">6. 試作の段階で、実際に測る</h2>
+          <p>計算の数字は、<strong>想像ではなく、試作品で測った値</strong>を使うのが確実です。</p><ul><li>試作品を<strong>数人に使ってもらい</strong>、1人あたりの回数を数える</li><li>1回の質問と返答の<strong>長さ</strong>を記録する</li><li>AIの提供会社の画面で、<strong>実際の利用料</strong>を確認する</li></ul><p>数日分のデータがあれば、<strong>1か月分の見当</strong>がつきます。思ったより高い場合は、公開前に作りを見直せます。</p>
+
+          <h2 id="sec-7">7. 見積もりの数字を、事業の計画に入れる</h2>
+          <p>毎月の利用料は、<strong>運営にかかる費用</strong>の一部です。サーバーなどの費用と合わせて、毎月の収支を計算しましょう。</p><p><strong>Ill（イル）株式会社</strong>は、AIを使った開発（Claude Code）と、ベトナムのオフショアチームを組み合わせて開発しています。MVPは10万〜100万円（数日〜数週間）、標準規模は100万〜300万円（目安・約1〜2ヶ月）、それ以上は個別見積もりです。月額数万円からの継続保守プランもあります（条件は個別にご案内します）。</p>
+
+          <h2 id="sec-8">場面別：こんなときはどうする？</h2>
+          <p><strong>お客様が増えた分、赤字になりそうなとき：</strong>料金を見直すか、<strong>無料の範囲を狭める</strong>かを検討します。利用料が売上を超える前に、先手で動くことが大切です。</p><p><strong>AIの料金表が、途中で変わったとき：</strong>提供会社の料金は、変わることがあります。<strong>変更のお知らせを確認する担当者</strong>を決め、計算を見直す日を毎月決めておきましょう。</p><p><strong>社内の新規事業で、予算の上限が決まっているとき：</strong>先に<strong>1か月の上限額</strong>を決め、その範囲で回数を制限する形にします。予算を超える心配が減ります。</p>
+
+          <h2 id="sec-9">用語かんたん解説</h2>
+          <ul><li>AI機能：文章の作成や、質問への回答などを、AIが代わりにする機能</li><li>利用料：AIの提供会社に、使った分だけ払うお金</li><li>上限：これ以上は使わせない、という限度</li><li>MVP：必要最小限の機能だけで作る、試すための版</li></ul><p>まずは、<strong>AIが1か月に何回使われそうか</strong>、おおまかな数を書いてみましょう。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>料金表の見方が分かりません。どうすればよいですか？</h3>
+              <p>料金表は、使うAIや会社ごとに形が違います。開発会社に、1回あたりの料金に直して説明してもらうと分かりやすくなります。</p>
+            </div>
+            <div class="faq-item">
+              <h3>無料の範囲を作ると、費用が心配ではありませんか？</h3>
+              <p>1人あたりの回数と、無料で使える人数に上限を設ければ、費用の見通しが立ちます。上限を決める設計を依頼のときに相談しましょう。</p>
+            </div>
+            <div class="faq-item">
+              <h3>AI機能なしで始める方が、安全ですか？</h3>
+              <p>AIが事業の価値の中心なら、入れるべきです。補助的な機能なら、公開後に追加する方法もあります。事業の目的で判断してください。</p>
+            </div>
+          </div>
+
+          <!-- Eye-catching Bottom CTA Banner -->
+          <div class="article-bottom-cta">
+            <div class="cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="cta-title">システム開発・AI導入の無料相談・概算見積もり</h3>
+            <p class="cta-desc">
+              不要な機能を削ぎ落とす「ミニマル設計」で、高品質な開発を適正価格で実現します。
+            </p>
+            <div class="cta-check-pills">
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                他社見積もりの妥当性診断
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                最短即日の概算提示
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                仕様変更に強いアジャイル
+              </span>
+            </div>
+            <div class="cta-buttons">
+              <a href="../#contact" class="btn btn-primary btn-cta-primary">
+                無料相談・見積もりを依頼する <span class="arrow">→</span>
+              </a>
+            </div>
+            <p class="cta-microcopy">
+              <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
+            </p>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Ill（イル）株式会社 編集部</p>
+            <p class="author-bio">
+              Ill（イル）株式会社の編集部です。Claude Codeを使ったAI駆動開発と、ベトナムのオフショア開発チームを組み合わせ、新規開発（Web・iOS/Android）の進め方と費用の考え方を発信しています。MVPは10万〜100万円・数日〜数週間から。
+              <a href="/#profile">会社概要を見る</a>
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/163-ai-feature-monthly-usage-cost-estimate">
+                  <span class="related-item-date">2026.11.13</span>
+                  <span class="related-item-title">AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/162-prototype-test-with-five-people">
+                  <span class="related-item-date">2026.11.13</span>
+                  <span class="related-item-title">試作品は5人に触ってもらって直す｜作り込む前にできる使いやすさのテスト</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/161-mvp-signup-form-fewer-fields">
+                  <span class="related-item-date">2026.11.12</span>
+                  <span class="related-item-title">会員登録の入力項目は、最初は最小限にする｜MVPの登録画面で決める3つのこと</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/160-mvp-admin-screen-how-much-to-build">
+                  <span class="related-item-date">2026.11.12</span>
+                  <span class="related-item-title">MVPの管理画面は、最初は小さく作る｜運営者用の画面を、どこまで用意するか</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/159-manual-first-service-before-building-system">
+                  <span class="related-item-date">2026.11.11</span>
+                  <span class="related-item-title">最初は手作業でサービスを届けて、需要を確かめる｜システムを作る前の検証方法</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <div class="sidebar-cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="sidebar-cta-title">
+              システム開発・AI導入の<br>
+              <span class="cta-highlight">無料相談・概算見積もり</span>
+            </h3>
+            <ul class="sidebar-cta-points">
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>開発費を最大50%以上削減</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>他社見積もりの妥当性診断</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>最短即日の概算見積もり提示</span>
+              </li>
+            </ul>
+            <a href="../#contact" class="btn sidebar-cta-btn">
+              無料相談・見積もりを依頼する <span class="arrow">→</span>
+            </a>
+            <span class="sidebar-cta-note">🔒 オンライン相談対応・無理な営業なし</span>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../#hero" class="footer-link">Home</a></li>
+              <li><a href="../#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="./" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../#services" class="footer-link">生成AI導入・開発</a></li>
+              <li><a href="../#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../#services" class="footer-link">インフラ構築・移行</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=63"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
