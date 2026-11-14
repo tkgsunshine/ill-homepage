@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し | Ill（イル）株式会社</title>
+  <meta name="description" content="お客様からの問い合わせや対応の記録を、メールや個人の表計算ソフトから、チームで共有できる自社専用の仕組みに移す考え方を解説します。残す項目、状態の決め方、見られる人の範囲をまとめました。">
+  <meta name="keywords" content="対応履歴 共有,問い合わせ 管理 システム,顧客対応 記録 チーム,Excel 問い合わせ 移行,中小企業 顧客管理 自社専用">
+  <meta name="author" content="Ill inc. 編集部">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/166-customer-inquiry-history-shared-system">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し | Ill inc. コラム">
+  <meta property="og:description" content="お客様からの問い合わせや対応の記録を、メールや個人の表計算ソフトから、チームで共有できる自社専用の仕組みに移す考え方を解説します。残す項目、状態の決め方、見られる人の範囲をまとめました。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/166-customer-inquiry-history-shared-system">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し | Ill inc. コラム">
+  <meta name="twitter:description" content="お客様からの問い合わせや対応の記録を、メールや個人の表計算ソフトから、チームで共有できる自社専用の仕組みに移す考え方を解説します。残す項目、状態の決め方、見られる人の範囲をまとめました。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=65">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し",
+    "description": "お客様からの問い合わせや対応の記録を、メールや個人の表計算ソフトから、チームで共有できる自社専用の仕組みに移す考え方を解説します。残す項目、状態の決め方、見られる人の範囲をまとめました。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-11-14",
+    "dateModified": "2026-11-14",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/166-customer-inquiry-history-shared-system"
+    }
+  }
+  </script>
+
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "お客様への対応履歴の共有"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "メールをそのまま共有する方法では、足りませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "件数が少ないうちは足ります。件数が増えて、状況の確認に時間がかかるようなら、一覧で見られる仕組みを検討しましょう。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "入力項目は、あとから増やせますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "増やせます。最初は5つ程度で始め、使いながら足す方が、現場にも定着しやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "お客様の情報の管理で、特に気をつけることは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "見られる人を限ること、履歴を残すこと、退職時にすぐ権限を外せることです。法的な部分は専門家に確認してください。"
+      }
+    }
+  ]
+}
+  </script>
+
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../#hero" class="nav-link">Home</a></li>
+          <li><a href="../#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../#services" class="nav-link">Services</a></li>
+          <li><a href="../#offshore" class="nav-link">Global</a></li>
+          <li><a href="../#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="./" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">お客様への対応履歴の共有</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">システム開発・アーキテクチャ</span>
+        <h1 class="article-title">お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.11.14</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し」のビジュアルバナー">
+  <defs>
+    <linearGradient id="bg_166_customer_inquiry_history_shared_system" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
+    </linearGradient>
+    <filter id="blur_166_customer_inquiry_history_shared_system" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1000" height="428" fill="url(#bg_166_customer_inquiry_history_shared_system)"/>
+
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_166_customer_inquiry_history_shared_system)"/>
+  <circle cx="150" cy="340" r="220" fill="#818CF8" opacity="0.2" filter="url(#blur_166_customer_inquiry_history_shared_system)"/>
+
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
+  </g>
+
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    <text x="0" y="165" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      お客様への対応履歴を、チーム全員で
+    </text>
+    <text x="0" y="225" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="#38BDF8">見られるようにする｜メールと表計算からの引っ越し</tspan>
+    </text>
+
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 見積もりの適正化　<tspan fill="#38BDF8">✔</tspan> 不要機能の排除
+      </text>
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 契約トラブル防止
+      </text>
+    </g>
+  </g>
+</svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">お客様への対応履歴は、日時、お客様名、内容、担当者、状態の5項目だけでも一か所に集めると、担当者が休んでも対応が止まりません。最初は小さく始め、既製のサービスで足りない部分だけ自社専用で作る方法があります。MVPは10万〜100万円（数日〜数週間）が目安です。</p>
+          </div>
+
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#sec-1">1. 「あの件、どうなりましたか？」が多い職場</a></li>
+              <li><a href="#sec-2">2. 記録がバラバラだと、起きること</a></li>
+              <li><a href="#sec-3">3. 最初に残す5つの項目</a></li>
+              <li><a href="#sec-4">4. 「状態」を決めておく</a></li>
+              <li><a href="#sec-5">5. 誰が、どこまで見られるか</a></li>
+              <li><a href="#sec-6">6. 既製のサービスとの使い分け</a></li>
+              <li><a href="#sec-7">7. 引っ越しの進め方</a></li>
+              <li><a href="#sec-8">場面別：こんなときはどうする？</a></li>
+              <li><a href="#sec-9">用語かんたん解説</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
+            </ul>
+          </div>
+
+          <h2 id="sec-1">1. 「あの件、どうなりましたか？」が多い職場</h2>
+          <p>お客様からの電話やメールの対応が、<strong>担当者の受信箱や、手元のメモにだけ</strong>残っている職場は少なくありません。担当者が休むと、状況が誰にも分からなくなります。</p><p>お客様から見れば、<strong>誰が出ても同じ対応</strong>であってほしいものです。同じ質問を何度もされると、信頼を損ないます。</p><p>この記事は、中小企業の担当者の方にも、新しく事業を始めて問い合わせが増えてきた個人の方にも、使える内容です。</p>
+
+          <h2 id="sec-2">2. 記録がバラバラだと、起きること</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>今の保存場所</th><th>困ること</th><th>共有できると</th></tr></thead><tbody><tr><td><strong>担当者のメールの受信箱</strong></td><td>他の人が見られない</td><td>誰でも履歴を確認できる</td></tr><tr><td><strong>個人の表計算ソフト</strong></td><td>最新版がどれか分からない</td><td>常に1つの最新の記録になる</td></tr><tr><td><strong>紙のメモや付箋</strong></td><td>探せない、なくす</td><td>日付やお客様名で探せる</td></tr><tr><td><strong>頭の中</strong></td><td>休むと止まる</td><td>記録が残り、引き継げる</td></tr></tbody></table></div><p><strong>探す時間</strong>と<strong>聞き直す時間</strong>が減るだけでも、毎日の負担は大きく変わります。</p>
+
+          <h2 id="sec-3">3. 最初に残す5つの項目</h2>
+          <p>項目を増やしすぎると、入力が面倒になり、続きません。最初は、<strong>5つだけ</strong>に絞ります。</p><div class="checklist-box"><ul><li><strong>1. 日時</strong>: いつの対応か</li><li><strong>2. お客様名</strong>: 会社名や、お名前</li><li><strong>3. 内容</strong>: 何を聞かれ、何を答えたか</li><li><strong>4. 担当者</strong>: 誰が対応したか</li><li><strong>5. 状態</strong>: 対応が終わったか、続いているか</li></ul></div><p>あとで足したい項目は、使ってみて<strong>必要だと感じてから</strong>追加します。</p>
+
+          <h2 id="sec-4">4. 「状態」を決めておく</h2>
+          <p>一覧で見たとき、<strong>どれを急ぐべきか</strong>が分かるように、状態の言葉を先に決めます。</p><ul><li><strong>未対応</strong>：まだ誰も手をつけていない</li><li><strong>対応中</strong>：担当者が動いている</li><li><strong>確認待ち</strong>：お客様や、社内の返事を待っている</li><li><strong>完了</strong>：対応が終わった</li></ul><p>状態の数は、<strong>4つ前後</strong>が目安です。多すぎると、選ぶのに迷います。</p>
+
+          <h2 id="sec-5">5. 誰が、どこまで見られるか</h2>
+          <p>お客様の名前や連絡先は、個人情報を含むことがあります。誰でも見られる状態にするのは、お勧めしません。</p><ul><li><strong>全員が見る</strong>のは、状態や、対応の内容まで</li><li>連絡先などは、<strong>担当と管理者だけ</strong>が見られるようにする</li><li><strong>見た・直した</strong>履歴が残ると、間違いを追いかけやすい</li><li>退職や異動のときに、見られる人を<strong>すぐ変えられる</strong>ようにする</li></ul><p>個人情報の扱いには、法律に関わる決まりがあります。この記事は法的な助言ではありません。<strong>具体的な扱いは、専門家に確認してください</strong>。</p>
+
+          <h2 id="sec-6">6. 既製のサービスとの使い分け</h2>
+          <p>問い合わせの管理は、既製のサービスも数多くあります。まず、それで足りるか確認するのが近道です。</p><div class="article-table-wrapper"><table class="article-table"><thead><tr><th>状況</th><th>向いている方法</th></tr></thead><tbody><tr><td><strong>問い合わせの窓口が、1つだけ</strong></td><td>既製のサービスで足りることが多い</td></tr><tr><td><strong>電話、メール、LINEなど、<strong>複数の窓口</strong>をまとめたい</strong></td><td>既製の機能が合わないことがあり、自社専用を検討</td></tr><tr><td><strong><strong>自社独自の項目</strong>（製品の型番、契約の種類など）で管理したい</strong></td><td>自社専用で作る価値がある</td></tr></tbody></table></div><p><strong>Ill（イル）株式会社</strong>の価格の目安は、MVPは10万〜100万円（数日〜数週間）、標準規模は100万〜300万円（目安・約1〜2ヶ月）、それ以上は個別見積もりです。月額数万円からの継続保守プランもあります（条件は個別にご案内します）。</p>
+
+          <h2 id="sec-7">7. 引っ越しの進め方</h2>
+          <p>過去の記録を、すべて新しい仕組みに移す必要はありません。<strong>直近の半年分</strong>など、使う分だけ移すと、作業が軽くなります。古い記録は、探せる形で保管すれば足ります。</p><p><strong>Ill（イル）株式会社</strong>は、AIを使った開発（Claude Code）と、ベトナムのオフショアチームを組み合わせて開発しています。依頼の際は、<strong>今の記録の見本</strong>を2〜3件渡すと、話が早く進みます。</p>
+
+          <h2 id="sec-8">場面別：こんなときはどうする？</h2>
+          <p><strong>担当者が、記録を面倒がるとき：</strong>入力は<strong>1件1分以内</strong>で終わる形にします。項目を減らし、選ぶ形にすると、続きやすくなります。</p><p><strong>同じお客様から、複数の窓口で連絡が来るとき：</strong>お客様名で<strong>1つにまとめて見られる</strong>ように、探し方を決めます。名前の書き方の統一も、先に決めておきましょう。</p><p><strong>古い記録の、どれを移すか迷うとき：</strong>「過去に、実際に見返した記録」を数えます。<strong>見返した件数が少ない</strong>なら、移さずに保管するだけで足ります。</p>
+
+          <h2 id="sec-9">用語かんたん解説</h2>
+          <ul><li>対応履歴：お客様に、いつ、誰が、何を対応したかの記録</li><li>状態：対応がどこまで進んでいるかを表す言葉</li><li>個人情報：名前や連絡先など、特定の人を表す情報</li><li>既製のサービス：すでに商品として売られている、すぐ使える仕組み</li></ul><p>まずは、<strong>いま対応の記録が残っている場所</strong>を、全部書き出してみましょう。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>メールをそのまま共有する方法では、足りませんか？</h3>
+              <p>件数が少ないうちは足ります。件数が増えて、状況の確認に時間がかかるようなら、一覧で見られる仕組みを検討しましょう。</p>
+            </div>
+            <div class="faq-item">
+              <h3>入力項目は、あとから増やせますか？</h3>
+              <p>増やせます。最初は5つ程度で始め、使いながら足す方が、現場にも定着しやすくなります。</p>
+            </div>
+            <div class="faq-item">
+              <h3>お客様の情報の管理で、特に気をつけることは何ですか？</h3>
+              <p>見られる人を限ること、履歴を残すこと、退職時にすぐ権限を外せることです。法的な部分は専門家に確認してください。</p>
+            </div>
+          </div>
+
+          <!-- Eye-catching Bottom CTA Banner -->
+          <div class="article-bottom-cta">
+            <div class="cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="cta-title">システム開発・AI導入の無料相談・概算見積もり</h3>
+            <p class="cta-desc">
+              不要な機能を削ぎ落とす「ミニマル設計」で、高品質な開発を適正価格で実現します。
+            </p>
+            <div class="cta-check-pills">
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                他社見積もりの妥当性診断
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                最短即日の概算提示
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                仕様変更に強いアジャイル
+              </span>
+            </div>
+            <div class="cta-buttons">
+              <a href="../#contact" class="btn btn-primary btn-cta-primary">
+                無料相談・見積もりを依頼する <span class="arrow">→</span>
+              </a>
+            </div>
+            <p class="cta-microcopy">
+              <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
+            </p>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Ill（イル）株式会社 編集部</p>
+            <p class="author-bio">
+              Ill（イル）株式会社の編集部です。Claude Codeを使ったAI駆動開発と、ベトナムのオフショア開発チームを組み合わせ、新規開発（Web・iOS/Android）の進め方と費用の考え方を発信しています。MVPは10万〜100万円・数日〜数週間から。
+              <a href="/#profile">会社概要を見る</a>
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/166-customer-inquiry-history-shared-system">
+                  <span class="related-item-date">2026.11.14</span>
+                  <span class="related-item-title">お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/165-budget-split-development-operation-marketing">
+                  <span class="related-item-date">2026.11.14</span>
+                  <span class="related-item-title">開発費だけで予算を使い切らない｜開発・運営・集客の3つに分ける資金計画</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/164-app-store-listing-text-images-preparation">
+                  <span class="related-item-date">2026.11.14</span>
+                  <span class="related-item-title">アプリの紹介文とスクリーンショットは、自分で準備する｜公開前に決める5つのこと</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/163-ai-feature-monthly-usage-cost-estimate">
+                  <span class="related-item-date">2026.11.13</span>
+                  <span class="related-item-title">AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/162-prototype-test-with-five-people">
+                  <span class="related-item-date">2026.11.13</span>
+                  <span class="related-item-title">試作品は5人に触ってもらって直す｜作り込む前にできる使いやすさのテスト</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <div class="sidebar-cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="sidebar-cta-title">
+              システム開発・AI導入の<br>
+              <span class="cta-highlight">無料相談・概算見積もり</span>
+            </h3>
+            <ul class="sidebar-cta-points">
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>開発費を最大50%以上削減</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>他社見積もりの妥当性診断</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>最短即日の概算見積もり提示</span>
+              </li>
+            </ul>
+            <a href="../#contact" class="btn sidebar-cta-btn">
+              無料相談・見積もりを依頼する <span class="arrow">→</span>
+            </a>
+            <span class="sidebar-cta-note">🔒 オンライン相談対応・無理な営業なし</span>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../#hero" class="footer-link">Home</a></li>
+              <li><a href="../#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="./" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../#services" class="footer-link">生成AI導入・開発</a></li>
+              <li><a href="../#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../#services" class="footer-link">インフラ構築・移行</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=63"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
