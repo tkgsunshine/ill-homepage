@@ -1,0 +1,198 @@
+/* Hero first-view orbit: a centre circle with six service nodes that
+   slowly circle it (positions are driven by hero-orbit.js). */
+
+.hero-visual.hero-orbit-visual {
+  max-width: 540px;
+  overflow: visible;
+}
+
+.hero-orbit {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  --orbit-accent: var(--color-cyan);
+  --orbit-node-bg: var(--bg-card);
+  --orbit-node-border: hsla(186, 100%, 50%, 0.18);
+  --orbit-node-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 0 1px hsla(186, 100%, 50%, 0.06);
+  --orbit-ring: hsla(186, 100%, 50%, 0.16);
+  --orbit-ring-strong: hsla(186, 100%, 50%, 0.35);
+}
+
+body.theme-light .hero-orbit {
+  --orbit-node-bg: #fff;
+  --orbit-node-border: hsla(190, 70%, 42%, 0.14);
+  --orbit-node-shadow: 0 10px 28px rgba(15, 23, 42, 0.08), 0 0 0 1px hsla(190, 70%, 42%, 0.06);
+  --orbit-ring: hsla(190, 80%, 40%, 0.16);
+  --orbit-ring-strong: hsla(190, 80%, 40%, 0.4);
+}
+
+/* Background rings */
+.hero-orbit-rings {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid var(--orbit-ring);
+  transform: translate(-50%, -50%);
+}
+
+.hero-orbit-ring.r1 { width: 62%; height: 62%; }
+.hero-orbit-ring.r2 { width: 80%; height: 80%; border-style: dashed; animation: hero-orbit-spin 120s linear infinite; }
+.hero-orbit-ring.r3 { width: 98%; height: 98%; opacity: 0.7; }
+.hero-orbit-ring.r4 { width: 118%; height: 118%; border-style: dashed; opacity: 0.5; animation: hero-orbit-spin 180s linear infinite reverse; }
+
+/* The large off-centre ring that sweeps in from the lower left */
+.hero-orbit-ring.big {
+  width: 96%;
+  height: 96%;
+  top: 60%;
+  left: 12%;
+  border-color: var(--orbit-ring-strong);
+  border-width: 1.5px;
+}
+
+@keyframes hero-orbit-spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Centre */
+.hero-orbit-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--orbit-node-bg);
+  border: 1px solid var(--orbit-node-border);
+  box-shadow: var(--orbit-node-shadow), 0 0 60px hsla(186, 100%, 50%, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero-orbit-core-tag {
+  font-family: var(--font-en);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  margin-right: -0.32em;
+  color: var(--orbit-accent);
+}
+
+.hero-orbit-core-main {
+  font-family: var(--font-en);
+  font-size: 5.6rem;
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0.4rem 0 0.6rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-orbit-core-sub {
+  font-family: var(--font-jp);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: 0.06em;
+}
+
+/* Nodes (outer element is moved by JS, inner element handles intro + hover) */
+.hero-orbit-node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 19%;
+  z-index: 3;
+  will-change: transform;
+}
+
+.hero-orbit-node-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+.hero-orbit-node-circle {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--orbit-node-bg);
+  border: 1px solid var(--orbit-node-border);
+  box-shadow: var(--orbit-node-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orbit-accent);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.hero-orbit-node-circle svg {
+  width: 32%;
+  height: 32%;
+}
+
+.hero-orbit-node-label {
+  position: absolute;
+  top: 100%;
+  margin-top: 0.8rem;
+  font-family: var(--font-jp);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.hero-orbit-node:hover .hero-orbit-node-circle {
+  transform: scale(1.08);
+  border-color: var(--glass-border-focus);
+  box-shadow: var(--orbit-node-shadow), 0 0 24px hsla(186, 100%, 50%, 0.25);
+}
+
+/* Intro: centre pops in, then the nodes appear one by one, clockwise from the top */
+.hero-orbit.is-animated .hero-orbit-core {
+  animation: hero-orbit-core-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.hero-orbit.is-animated .hero-orbit-node-inner {
+  animation: hero-orbit-node-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(0.9s + var(--i) * 0.16s);
+}
+
+@keyframes hero-orbit-core-in {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.85); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes hero-orbit-node-in {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@media (max-width: 1200px) {
+  .hero-orbit-ring.big { width: 84%; height: 84%; left: 20%; }
+}
+
+@media (max-width: 1024px) {
+  .hero-orbit-core-main { font-size: 4.4rem; }
+  .hero-orbit-node-label { font-size: 1.1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit-ring.r2,
+  .hero-orbit-ring.r4 { animation: none; }
+}
