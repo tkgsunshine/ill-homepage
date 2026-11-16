@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>退職・異動のときは、社内システムのアカウントを整理する｜人の入れ替わりに強い権限の決め方 | Ill（イル）株式会社</title>
+  <meta name="description" content="社員の退職や異動のときに、社内システムのアカウントや権限をどう整理するかを解説します。放置のリスク、整理の手順、普段からできる工夫をまとめました。個人情報にかかわる法的な助言ではありません。">
+  <meta name="keywords" content="退職 アカウント 削除,異動 権限 変更,社内システム アカウント管理,情報漏えい 退職者,中小企業 権限 整理">
+  <meta name="author" content="Ill inc. 編集部">
+  
+  <!-- Robots config -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ill-inc.net/column/170-account-cleanup-staff-leaving-and-moving">
+  
+  <!-- Open Graph (OGP) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="退職・異動のときは、社内システムのアカウントを整理する｜人の入れ替わりに強い権限の決め方 | Ill inc. コラム">
+  <meta property="og:description" content="社員の退職や異動のときに、社内システムのアカウントや権限をどう整理するかを解説します。放置のリスク、整理の手順、普段からできる工夫をまとめました。個人情報にかかわる法的な助言ではありません。">
+  <meta property="og:url" content="https://www.ill-inc.net/column/170-account-cleanup-staff-leaving-and-moving">
+  <meta property="og:site_name" content="Ill inc.">
+  <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="退職・異動のときは、社内システムのアカウントを整理する｜人の入れ替わりに強い権限の決め方 | Ill inc. コラム">
+  <meta name="twitter:description" content="社員の退職や異動のときに、社内システムのアカウントや権限をどう整理するかを解説します。放置のリスク、整理の手順、普段からできる工夫をまとめました。個人情報にかかわる法的な助言ではありません。">
+  <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <!-- CSS Stylesheet -->
+  <!-- Preconnect & Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <link rel="stylesheet" href="../style.css?v=65">
+  
+  <!-- JSON-LD Structured Data (Article Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "退職・異動のときは、社内システムのアカウントを整理する｜人の入れ替わりに強い権限の決め方",
+    "description": "社員の退職や異動のときに、社内システムのアカウントや権限をどう整理するかを解説します。放置のリスク、整理の手順、普段からできる工夫をまとめました。個人情報にかかわる法的な助言ではありません。",
+    "image": "https://www.ill-inc.net/ogp.png?v=1",
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "author": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ill（イル）株式会社",
+      "url": "https://www.ill-inc.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ill-inc.net/logo-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ill-inc.net/column/170-account-cleanup-staff-leaving-and-moving"
+    }
+  }
+  </script>
+
+  <!-- Speculation Rules for Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*#*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ill-inc.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "コラム",
+      "item": "https://www.ill-inc.net/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "退職・異動のアカウント整理"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "退職者のアカウントを、すぐ消してはいけませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "引き継ぎが終わる前に消すと、記録や業務が失われる場合があります。まず止めて、記録の扱いを決めてから消すのが安全です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "小さな会社でも、手順書は必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "必要です。人が少ないほど、1人の入れ替わりの影響は大きくなります。A4用紙1枚の簡単な一覧でも、役に立ちます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "個人のスマホに入った会社の情報は、どうすればよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "持ち出しを防ぐルールを、先に決めてください。扱いには法律に関わる部分もあるため、専門家に相談することをお勧めします。"
+      }
+    }
+  ]
+}
+  </script>
+
+</head>
+<body class="theme-light">
+
+  <div class="secondary-orbs"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--color-pink)" />
+                <stop offset="0.5" stop-color="var(--color-purple)" />
+                <stop offset="1" stop-color="var(--color-cyan)" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+            <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+          </svg>
+        </div>
+        <div class="logo-text">ILL<span>INC.</span></div>
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="../#hero" class="nav-link">Home</a></li>
+          <li><a href="../#concept" class="nav-link">Philosophy</a></li>
+          <li><a href="../#services" class="nav-link">Services</a></li>
+          <li><a href="../#offshore" class="nav-link">Global</a></li>
+          <li><a href="../#profile" class="nav-link">Profile</a></li>
+          <li><a href="../cases/" class="nav-link">Cases</a></li>
+          <li><a href="./" class="nav-link active">Column</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span class="menu-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARTICLE CONTENT SECTION -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      
+      <div class="breadcrumbs">
+        <span class="breadcrumb-item">退職・異動のアカウント整理</span>
+      </div>
+
+      <header class="article-header">
+        <span class="article-category">システム開発・アーキテクチャ</span>
+        <h1 class="article-title">退職・異動のときは、社内システムのアカウントを整理する｜人の入れ替わりに強い権限の決め方</h1>
+        <div class="article-meta-info">
+          <div class="article-meta-item">
+            <span>公開日: 2026.11.17</span>
+          </div>
+          <div class="article-meta-item">
+            <span>著者: Ill inc. 編集部</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Visual Cover SVG -->
+      <div class="article-main-visual">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「退職・異動のときは、社内システムのアカウントを整理する｜人の入れ替わりに強い権限の決め方」のビジュアルバナー">
+  <defs>
+    <linearGradient id="bg_170_account_cleanup_staff_leaving_and_moving" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2E"/>
+      <stop offset="0.5" stop-color="#1A2740"/>
+      <stop offset="1" stop-color="#141E33"/>
+    </linearGradient>
+    <filter id="blur_170_account_cleanup_staff_leaving_and_moving" x="0" y="0" width="1000" height="428" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1000" height="428" fill="url(#bg_170_account_cleanup_staff_leaving_and_moving)"/>
+
+  <!-- Soft Ambient Glow Orbs -->
+  <circle cx="850" cy="90" r="240" fill="#0EA5E9" opacity="0.25" filter="url(#blur_170_account_cleanup_staff_leaving_and_moving)"/>
+  <circle cx="150" cy="340" r="220" fill="#818CF8" opacity="0.2" filter="url(#blur_170_account_cleanup_staff_leaving_and_moving)"/>
+
+  <!-- Subtle Minimal Grid -->
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="428"/>
+    <line x1="250" y1="0" x2="250" y2="428"/>
+    <line x1="400" y1="0" x2="400" y2="428"/>
+    <line x1="550" y1="0" x2="550" y2="428"/>
+    <line x1="700" y1="0" x2="700" y2="428"/>
+    <line x1="850" y1="0" x2="850" y2="428"/>
+    <line x1="0" y1="100" x2="1000" y2="100"/>
+    <line x1="0" y1="214" x2="1000" y2="214"/>
+    <line x1="0" y1="328" x2="1000" y2="328"/>
+  </g>
+
+  <!-- Pure Content: Clean Typography & Key Bullets Only -->
+  <g transform="translate(100, 0)">
+    <text x="0" y="165" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      退職・異動のときは、社内システムのアカウントを
+    </text>
+    <text x="0" y="225" fill="#FFFFFF" font-size="36" font-family="'Noto Sans JP', sans-serif" font-weight="900" letter-spacing="0.02em">
+      <tspan fill="#38BDF8">整理する｜人の入れ替わりに強い権限の決め方</tspan>
+    </text>
+
+    <!-- Key Takeaways Bullets (Enlarged 2-Line Subtitle: font-size 24px) -->
+    <g transform="translate(0, 295)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 見積もりの適正化　<tspan fill="#38BDF8">✔</tspan> 不要機能の排除
+      </text>
+      <text x="0" y="42" fill="#E2E8F0" font-size="24" font-family="'Noto Sans JP', sans-serif" font-weight="700" letter-spacing="0.02em">
+        <tspan fill="#38BDF8">✔</tspan> 契約トラブル防止
+      </text>
+    </g>
+  </g>
+</svg>
+      </div>
+
+      <div class="article-layout">
+        <main class="article-body">
+          <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">社員の退職や異動のときは、社内システムのアカウントを止める、または権限を変える手順を、あらかじめ決めておくことが大切です。誰が、いつまでに、何を行うかを一覧にしておくと、情報の持ち出しや使い忘れを防げます。具体的な法的な扱いは専門家に確認してください。</p>
+          </div>
+
+          <div class="toc-box">
+            <div class="toc-title">目次</div>
+            <ul class="toc-list">
+              <li><a href="#sec-1">1. 辞めた人のアカウントが、残っていませんか</a></li>
+              <li><a href="#sec-2">2. 放置すると、どんなことが起きるか</a></li>
+              <li><a href="#sec-3">3. 整理の手順：5つのステップ</a></li>
+              <li><a href="#sec-4">4. いつ、止めるか</a></li>
+              <li><a href="#sec-5">5. 消すか、止めるか</a></li>
+              <li><a href="#sec-6">6. 入れ替わりに強くする、普段の工夫</a></li>
+              <li><a href="#sec-7">7. 自社専用のシステムを作るとき</a></li>
+              <li><a href="#sec-8">場面別：こんなときはどうする？</a></li>
+              <li><a href="#sec-9">用語かんたん解説</a></li>
+              <li><a href="#section-faq">よくある質問</a></li>
+            </ul>
+          </div>
+
+          <h2 id="sec-1">1. 辞めた人のアカウントが、残っていませんか</h2>
+          <p>社員が退職したあとも、<strong>社内システムにログインできる状態</strong>が残っていることがあります。悪意がなくても、これは情報の流出や、間違った操作につながる原因になります。</p><p>異動の場合も同じです。前の部署の情報を<strong>見られるまま</strong>だと、必要のない人が情報に触れることになります。</p><p>この記事は、社内システムを使う中小企業の担当者の方に向けています。新しく人を雇い始めた個人事業の方にも、早めの備えとして役立ちます。</p>
+
+          <h2 id="sec-2">2. 放置すると、どんなことが起きるか</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>放置したもの</th><th>起きること</th><th>対策</th></tr></thead><tbody><tr><td><strong>退職者のアカウント</strong></td><td>外から入られる、情報を持ち出される</td><td>退職日に止める</td></tr><tr><td><strong>異動前の部署の権限</strong></td><td>不要な情報が見られる</td><td>異動日に外す</td></tr><tr><td><strong>共有のパスワード</strong></td><td>辞めた人も知っている</td><td>入れ替わりのたびに変える</td></tr><tr><td><strong>個人のスマホに入った情報</strong></td><td>手元に残る</td><td>端末の確認と、削除の手順を決める</td></tr></tbody></table></div><p><strong>悪意のない事故</strong>でも、お客様の信頼に大きく響きます。</p>
+
+          <h2 id="sec-3">3. 整理の手順：5つのステップ</h2>
+          <p>退職や異動が決まったら、次の流れで整理します。</p><div class="checklist-box"><ul><li><strong>1. 対象を洗い出す</strong>: その人が使っている仕組みを、一覧にする</li><li><strong>2. 引き継ぎ先を決める</strong>: データや、担当しているお客様の引き継ぎ</li><li><strong>3. 止める日を決める</strong>: 退職日、または異動日</li><li><strong>4. 止めて、確認する</strong>: 実際にログインできないことを確かめる</li><li><strong>5. 記録を残す</strong>: いつ、誰が、何を止めたか</li></ul></div><p><strong>「洗い出し」</strong>が最も重要です。使っている仕組みの数を、本人も把握していないことがあります。</p>
+
+          <h2 id="sec-4">4. いつ、止めるか</h2>
+          <p>アカウントを止めるタイミングは、状況により違います。</p><ul><li><strong>退職日の終業後</strong>：通常はここで止める</li><li><strong>退職前の引き継ぎ期間</strong>：必要な範囲だけに権限を絞る</li><li><strong>トラブルがあった場合</strong>：すぐに止める判断も必要</li><li><strong>異動の場合</strong>：異動日に、前の部署の権限を外す</li></ul><p>データの引き継ぎが終わる前に止めると、<strong>業務が止まる</strong>ことがあります。引き継ぎのスケジュールとセットで考えましょう。</p>
+
+          <h2 id="sec-5">5. 消すか、止めるか</h2>
+          <p>アカウントは、<strong>消す</strong>のではなく、まず<strong>止める</strong>方が安全な場合があります。</p><div class="article-table-wrapper"><table class="article-table"><thead><tr><th>方法</th><th>特徴</th><th>向いている場面</th></tr></thead><tbody><tr><td><strong>止める（無効にする）</strong></td><td>記録は残る。あとで戻せる</td><td>引き継ぎが終わるまで</td></tr><tr><td><strong>消す</strong></td><td>記録も一緒に消える場合がある</td><td>記録の保存期間を決めてから</td></tr></tbody></table></div><p>記録をいつまで残すかには、法律に関わる決まりがあります。<strong>期間は、専門家に確認してください</strong>。この記事は法的な助言ではありません。</p>
+
+          <h2 id="sec-6">6. 入れ替わりに強くする、普段の工夫</h2>
+          <p>毎回慌てないために、普段から次のことを決めておきます。</p><ul><li><strong>1人に1つ</strong>のアカウントにする（共有をやめる）</li><li><strong>役割ごとの権限</strong>を決め、人に直接つけない</li><li><strong>年に数回</strong>、アカウントの一覧を見直す</li><li>入社・異動・退職の<strong>手順書</strong>を作る</li></ul><p>役割ごとに権限を決めておくと、<strong>人が変わっても付け替えるだけ</strong>で済みます。</p>
+
+          <h2 id="sec-7">7. 自社専用のシステムを作るとき</h2>
+          <p>自社専用の仕組みを作る場合は、<strong>アカウントを止める機能</strong>や、<strong>権限を役割で決める仕組み</strong>を、最初から相談しておくのがお勧めです。あとから足すと、手間がかかることがあります。</p><p><strong>Ill（イル）株式会社</strong>は、AIを使った開発（Claude Code）と、ベトナムのオフショアチームを組み合わせて開発しています。MVPは10万〜100万円（数日〜数週間）、標準規模は100万〜300万円（目安・約1〜2ヶ月）、それ以上は個別見積もりです。月額数万円からの継続保守プランもあります（条件は個別にご案内します）。</p>
+
+          <h2 id="sec-8">場面別：こんなときはどうする？</h2>
+          <p><strong>アルバイトの出入りが、頻繁な職場：</strong>権限を<strong>期間つき</strong>にして、期限が来たら自動で止まる形にすると、止め忘れを防げます。</p><p><strong>共有のパスワードで、運用しているとき：</strong>まず<strong>1人1アカウント</strong>への切り替えを検討します。難しい場合は、入れ替わりのたびにパスワードを変えるルールを作りましょう。</p><p><strong>退職者が、取引先との連絡を担当していたとき：</strong>取引先に<strong>担当の変更を連絡</strong>し、連絡先のアドレスや、共有の窓口も切り替えます。仕組みだけでなく、人のつながりも整理が必要です。</p>
+
+          <h2 id="sec-9">用語かんたん解説</h2>
+          <ul><li>アカウント：システムを使うための、その人専用の利用資格</li><li>権限：その人が見たり直したりしてよい範囲</li><li>無効にする：消さずに、使えない状態にすること</li><li>引き継ぎ：担当していた仕事や情報を、次の人に渡すこと</li></ul><p>まずは、<strong>いま使っている社内の仕組み</strong>を、全部書き出してみましょう。</p>
+
+          <h2 id="section-faq">よくある質問</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>退職者のアカウントを、すぐ消してはいけませんか？</h3>
+              <p>引き継ぎが終わる前に消すと、記録や業務が失われる場合があります。まず止めて、記録の扱いを決めてから消すのが安全です。</p>
+            </div>
+            <div class="faq-item">
+              <h3>小さな会社でも、手順書は必要ですか？</h3>
+              <p>必要です。人が少ないほど、1人の入れ替わりの影響は大きくなります。A4用紙1枚の簡単な一覧でも、役に立ちます。</p>
+            </div>
+            <div class="faq-item">
+              <h3>個人のスマホに入った会社の情報は、どうすればよいですか？</h3>
+              <p>持ち出しを防ぐルールを、先に決めてください。扱いには法律に関わる部分もあるため、専門家に相談することをお勧めします。</p>
+            </div>
+          </div>
+
+          <!-- Eye-catching Bottom CTA Banner -->
+          <div class="article-bottom-cta">
+            <div class="cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="cta-title">システム開発・AI導入の無料相談・概算見積もり</h3>
+            <p class="cta-desc">
+              不要な機能を削ぎ落とす「ミニマル設計」で、高品質な開発を適正価格で実現します。
+            </p>
+            <div class="cta-check-pills">
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                他社見積もりの妥当性診断
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                最短即日の概算提示
+              </span>
+              <span class="cta-check-pill">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                仕様変更に強いアジャイル
+              </span>
+            </div>
+            <div class="cta-buttons">
+              <a href="../#contact" class="btn btn-primary btn-cta-primary">
+                無料相談・見積もりを依頼する <span class="arrow">→</span>
+              </a>
+            </div>
+            <p class="cta-microcopy">
+              <span>🔒</span> オンライン相談対応・無理な営業は一切いたしません
+            </p>
+          </div>
+
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-box glass-card author-profile">
+            <div class="author-avatar">Ill</div>
+            <h3 class="author-name">Ill inc. 編集部</h3>
+            <p class="author-role">Ill（イル）株式会社 編集部</p>
+            <p class="author-bio">
+              Ill（イル）株式会社の編集部です。Claude Codeを使ったAI駆動開発と、ベトナムのオフショア開発チームを組み合わせ、新規開発（Web・iOS/Android）の進め方と費用の考え方を発信しています。MVPは10万〜100万円・数日〜数週間から。
+              <a href="/#profile">会社概要を見る</a>
+            </p>
+          </div>
+
+          <div class="sidebar-box glass-card">
+            <h3 class="sidebar-title">最近のコラム</h3>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="/column/170-account-cleanup-staff-leaving-and-moving">
+                  <span class="related-item-date">2026.11.17</span>
+                  <span class="related-item-title">退職・異動のときは、社内システムのアカウントを整理する｜人の入れ替わりに強い権限の決め方</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/169-excel-macro-formula-handover-to-new-system">
+                  <span class="related-item-date">2026.11.16</span>
+                  <span class="related-item-title">Excelのマクロと複雑な計算式は、作る前に書き出す｜新しいシステムへの引き継ぎ手順</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/168-project-progress-board-from-whiteboard">
+                  <span class="related-item-date">2026.11.16</span>
+                  <span class="related-item-title">案件の進み具合を、ホワイトボードから一覧の画面に移す｜担当と期限が見える作り方</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/167-shift-schedule-sharing-from-paper-and-line">
+                  <span class="related-item-date">2026.11.15</span>
+                  <span class="related-item-title">シフトと勤務予定の共有を、紙とLINEから自社専用の画面に移す｜小さな職場の始め方</span>
+                </a>
+              </li>
+              <li class="related-item">
+                <a href="/column/166-customer-inquiry-history-shared-system">
+                  <span class="related-item-date">2026.11.14</span>
+                  <span class="related-item-title">お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し</span>
+                </a>
+              </li>
+          </ul>
+          </div>
+
+          <div class="sidebar-box glass-card sidebar-cta">
+            <div class="sidebar-cta-badge">
+              <span class="badge-dot"></span>無料相談・相見積もり歓迎
+            </div>
+            <h3 class="sidebar-cta-title">
+              システム開発・AI導入の<br>
+              <span class="cta-highlight">無料相談・概算見積もり</span>
+            </h3>
+            <ul class="sidebar-cta-points">
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>開発費を最大50%以上削減</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>他社見積もりの妥当性診断</span>
+              </li>
+              <li class="sidebar-cta-point">
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>最短即日の概算見積もり提示</span>
+              </li>
+            </ul>
+            <a href="../#contact" class="btn sidebar-cta-btn">
+              無料相談・見積もりを依頼する <span class="arrow">→</span>
+            </a>
+            <span class="sidebar-cta-note">🔒 オンライン相談対応・無理な営業なし</span>
+          </div>
+        </aside>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="17" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+                <rect x="30" y="2" width="6" height="26" rx="3" fill="url(#logo-grad)" />
+              </svg>
+            </div>
+            <div class="logo-text">ILL<span>INC.</span></div>
+          </a>
+          <p class="footer-desc">
+            システム開発、インフラ構築、DX支援から生成AI戦略まで。本質価値にフォーカスし、スピーディーかつミニマルな設計でお客様の変革を実現します。
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <h4 class="footer-list-title">Corporate</h4>
+            <ul class="footer-list">
+              <li><a href="../#hero" class="footer-link">Home</a></li>
+              <li><a href="../#concept" class="footer-link">Philosophy</a></li>
+              <li><a href="../#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../cases/" class="footer-link">実績・事例</a></li>
+              <li><a href="./" class="footer-link">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-list-title">Services</h4>
+            <ul class="footer-list">
+              <li><a href="../#services" class="footer-link">システム・アプリ受託開発</a></li>
+              <li><a href="../#services" class="footer-link">生成AI導入・開発</a></li>
+              <li><a href="../#services" class="footer-link">DX / AIX支援</a></li>
+              <li><a href="../#services" class="footer-link">HP・LP制作</a></li>
+              <li><a href="../#services" class="footer-link">ITコンサルティング</a></li>
+              <li><a href="../#services" class="footer-link">インフラ構築・移行</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ill inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../script.js?v=63"></script>
+  <button class="theme-switch-btn" id="theme-switch" aria-label="テーマ切り替え">
+    <svg class="moon-icon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
