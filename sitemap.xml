@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://www.ill-inc.net/cases/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1292,6 +1292,12 @@
   </url>
   <url>
     <loc>https://www.ill-inc.net/column/168-project-progress-board-from-whiteboard</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ill-inc.net/column/169-excel-macro-formula-handover-to-new-system</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
