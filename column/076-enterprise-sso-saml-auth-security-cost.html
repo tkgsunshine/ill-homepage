@@ -289,21 +289,21 @@
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">1. 【SAML SSO 開発費用】大企業向けSaaS・WebシステムでSSOが必須となる背景</a></li>
-              <li><a href="#sec-2">2. 【Okta 連携 システム開発】セキュアなSAML認証連携のアーキテクチャ設計</a></li>
-              <li><a href="#sec-3">3. 【シングルサインオン 実装 B2B】Ill（イル）株式会社の低コストSSO実装支援</a></li>
+              <li><a href="#sec-1">1. 大企業向けSaaS・WebシステムでSSOが必須となる背景</a></li>
+              <li><a href="#sec-2">2. セキュアなSAML認証連携のアーキテクチャ設計</a></li>
+              <li><a href="#sec-3">3. Ill（イル）株式会社の低コストSSO実装支援</a></li>
               <li><a href="#sec-pricing-table">Shopify連携 vs フルスクラッチECの構築費用・維持費比較</a></li>
               <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-          <h2 id="sec-1">1. 【SAML SSO 開発費用】大企業向けSaaS・WebシステムでSSOが必須となる背景</h2>
+          <h2 id="sec-1">1. 大企業向けSaaS・WebシステムでSSOが必須となる背景</h2>
           <p>B2B SaaSや自社Webシステムを中堅・大手企業に導入してもらう際、セキュリティチェックシートで必ず問われるのが「SAML 2.0またはOIDCによるシングルサインオン（SSO）に対応しているか」という項目です。</p><p>企業規模が大きくなるほど、社員ごとに個別のID・パスワードを発行・管理することはパスワード漏洩や退職者の不正アクセスリスクを高めるため禁止されています。SSO連携に対応することで、クライアント企業の情シス部門が自社のOktaやMicrosoft Entra ID（旧Azure AD）からワンクリックでアクセス権を制御できるようになり、<strong>エンタープライズ契約の成約率と受注単価を飛躍的に高める</strong>ことができます。</p>
 
-          <h2 id="sec-2">2. 【Okta 連携 システム開発】セキュアなSAML認証連携のアーキテクチャ設計</h2>
+          <h2 id="sec-2">2. セキュアなSAML認証連携のアーキテクチャ設計</h2>
           <p>SSO連携をセキュアかつ拡張性高く実装するためのポイントは以下の通りです。</p><div class="checklist-box"><ul><li><strong>SAML 2.0 / OIDC（OpenID Connect）デュアル対応</strong>: クライアント企業のIdP（アイデンティティプロバイダ）環境に合わせて柔軟に認証方式を選択できる設計。</li><li><strong>JIT（Just-In-Time）プロビジョニング</strong>: 初回ログイン時にユーザー情報を自動生成し、手動のアカウント登録工数をゼロ化。</li><li><strong>SCIM（System for Cross-domain Identity Management）連携</strong>: IdP側で社員が退職・異動した際、システム側のアカウントもリアルタイムで無効化する自動同期機能。</li><li><strong>詳細な監査ログ（Audit Logs）の記録</strong>: いつ、誰が、どのIPからログイン・操作したかを改ざん不可能な形式で記録・保存。</li></ul></div>
 
-          <h2 id="sec-3">3. 【シングルサインオン 実装 B2B】Ill（イル）株式会社の低コストSSO実装支援</h2>
+          <h2 id="sec-3">3. Ill（イル）株式会社の低コストSSO実装支援</h2>
           <p>大手ベンダーにSSO連携を依頼すると、エンタープライズ仕様というだけで300万〜600万円以上の高額見積もりになることが少なくありません。</p><p><strong>Ill（イル）株式会社</strong> では、WorkOSやAuth0などの検証済み認証プロトコル基盤および独自ライブラリを活用し、<strong>SAML / OIDC SSO連携機能を、10万〜100万円・数日〜数週間から（要件により個別お見積もり）</strong> で迅速に組み込みます。大企業向け商談のクロージングを強力に後押しします。</p>
 
           <h2 id="sec-pricing-table">Shopify連携 vs フルスクラッチECの構築費用・維持費比較</h2>
