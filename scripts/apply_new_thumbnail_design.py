@@ -737,6 +737,62 @@ BANNER_DATA = {
         "lines": ("ChatGPT・Gemini・Claude", "初心者向け！主要生成AIの違いと選び方"),
         "theme": "ai",
         "takeaways": ("文章力・コーディング力の比較", "無料プランと有料プランの機能差", "自社の利用目的に合った最適ツール")
+    },
+    # 記事キュー（176〜200）。題名の前半と後半で2行に分ける（自動の改行だと「｜」の位置で崩れるため）
+    "176-customer-list-duplicates-cleanup-before-migration.html": {
+        "lines": ("顧客データの名寄せのやり方", "システム移行の前に重複と表記のゆれを直す"),
+        "theme": "data_scraping",
+        "takeaways": ("移す前に表記のゆれをそろえる", "名寄せの決まりを先に作る", "迷うものは人が確かめる")
+    },
+    "177-mvp-data-export-keep-portable.html": {
+        "lines": ("システムのデータ移行で困らないために", "MVPのデータを持ち出せる形で残す"),
+        "theme": "mvp_startup",
+        "takeaways": ("全件をCSVで書き出せる形に", "データの持ち主を確かめる", "移行は試し用の環境で試す")
+    },
+    "178-work-hours-per-project-profit-visibility.html": {
+        "lines": ("工数管理を案件ごとに始める方法", "作業時間の記録で利益が出る仕事を見える化"),
+        "theme": "management",
+        "takeaways": ("記録の項目は最小限に", "案件ごとの利益が見える", "次の見積もりが正確になる")
+    },
+    "179-mvp-multilingual-how-much-first.html": {
+        "lines": ("アプリの多言語対応の費用と進め方", "MVPは最初の市場を決めて範囲を絞る"),
+        "theme": "mvp_startup",
+        "takeaways": ("最初の市場を1つに決める", "言葉の数だけ費用が増える", "あとから足しやすく作る")
+    },
+    "180-smartphone-or-pc-decide-by-task.html": {
+        "lines": ("業務システムのスマホ対応はどこまで必要か", "作業ごとにスマホとパソコンを決める"),
+        "theme": "default",
+        "takeaways": ("全画面の両対応は高くつく", "作業ごとに使う道具を決める", "現場はスマホ、集計はパソコン")
+    },
+    "181-screen-wording-buttons-written-by-owner.html": {
+        "lines": ("アプリの文言の作り方", "ボタンや案内の文章は発注者が書く"),
+        "theme": "mvp_startup",
+        "takeaways": ("利用者の言葉で書く", "押したあとが分かる名前に", "場所と言葉の表で渡す")
+    },
+    "182-per-user-monthly-fees-vs-custom-system.html": {
+        "lines": ("SaaSと自社開発の費用比較", "人数で増える月額料金を5年の総額で比べる"),
+        "theme": "management",
+        "takeaways": ("5年分の総額で比べる", "見落としやすい費用も数える", "一部だけ自社専用にする手も")
+    },
+    "183-app-update-old-version-users.html": {
+        "lines": ("アプリの強制アップデートの仕組み", "古いバージョンの利用者に更新を届ける"),
+        "theme": "default",
+        "takeaways": ("古い版は利用者の手元に残る", "直した内容の重さで使い分け", "最初の版に仕組みを入れる")
+    },
+    "184-supplier-purchase-orders-delivery-dates-list.html": {
+        "lines": ("発注管理システムを小さく作る", "仕入れ先への発注と納期を一覧で管理する"),
+        "theme": "data_scraping",
+        "takeaways": ("発注の漏れをなくす", "入荷の遅れに先に気づく", "項目は最小限から始める")
+    },
+    "185-client-quick-decisions-shorten-ai-development.html": {
+        "lines": ("AI駆動開発で納期を短縮するには", "発注者の確認と判断の速さが決め手になる"),
+        "theme": "ai",
+        "takeaways": ("待ち時間が納期を左右する", "最後に決める人を1人に", "返事の目安を先に決める")
+    },
+    "186-internal-system-project-owner-part-time.html": {
+        "lines": ("システム導入の社内担当者の役割", "兼任でも窓口を1人決めて外注を進める"),
+        "theme": "management",
+        "takeaways": ("兼任でも窓口は1人に", "使う時間を先に確保する", "大事な判断は決める人へ")
     }
 }
 
