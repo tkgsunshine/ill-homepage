@@ -793,6 +793,76 @@ BANNER_DATA = {
         "lines": ("システム導入の社内担当者の役割", "兼任でも窓口を1人決めて外注を進める"),
         "theme": "management",
         "takeaways": ("兼任でも窓口は1人に", "使う時間を先に確保する", "大事な判断は決める人へ")
+    },
+    "187-line-mini-app-development-cost.html": {
+        "lines": ("LINEミニアプリの開発費用と作り方", "予約・会員証・注文をLINEの中で始める"),
+        "theme": "mvp_startup",
+        "takeaways": ("アプリを入れずにLINEで使える", "1つの使い方から小さく始める", "LINE側の審査を見込んで準備")
+    },
+    "188-app-development-freelancer-or-company.html": {
+        "lines": ("アプリ開発はフリーランスと", "開発会社のどちらに頼むか"),
+        "theme": "management",
+        "takeaways": ("費用と止まるリスクで比べる", "権利と納品物を契約で決める", "同じ条件で見積もりを比べる")
+    },
+    "189-portal-site-development-cost.html": {
+        "lines": ("ポータルサイト構築の費用相場", "地域や業界の情報サイトを小さく始める"),
+        "theme": "mvp_startup",
+        "takeaways": ("費用は機能の範囲で決まる", "最初の掲載は運営者が集める", "収益の形を1つに絞って試す")
+    },
+    "190-elearning-system-development-cost.html": {
+        "lines": ("eラーニングシステムの開発費用", "オンライン講座・社内研修を自社専用で"),
+        "theme": "default",
+        "takeaways": ("社内研修と講座販売の2つの形", "動画の配信料は別に試算", "1つの講座から小さく始める")
+    },
+    "191-job-posting-site-development-cost.html": {
+        "lines": ("求人サイト制作の費用相場", "採用サイトと求人マッチングの違い"),
+        "theme": "default",
+        "takeaways": ("採用サイトとマッチングの違い", "始める前に届出の要否を確認", "応募の入力項目は最小限に")
+    },
+    "192-video-call-online-consultation-app-cost.html": {
+        "lines": ("ビデオ通話アプリの開発費用", "オンライン相談の予約と決済を作る"),
+        "theme": "mvp_startup",
+        "takeaways": ("通話の仕組みは一から作らない", "予約・決済から小さく始める", "通話の月額を回数から試算")
+    },
+    "193-switch-development-company-handover.html": {
+        "lines": ("開発会社の変更と引き継ぎの手順", "他社が作ったシステムを直す前の確認"),
+        "theme": "management",
+        "takeaways": ("先にソースコードと権限を集める", "直す前に調査で状態を知る", "引き継ぎの範囲を書面に残す")
+    },
+    "194-homepage-vs-web-system-difference.html": {
+        "lines": ("ホームページ制作とシステム開発の違い", "依頼先・費用・期間の目安と選び方"),
+        "theme": "management",
+        "takeaways": ("「見せる」と「使う」の違い", "5つの質問で見分ける", "依頼先と費用の決まり方")
+    },
+    "195-system-development-marunage-what-to-decide.html": {
+        "lines": ("システム開発は丸投げできるか", "任せてよい部分と、発注者が決めること"),
+        "theme": "management",
+        "takeaways": ("技術は任せ、事業は決める", "決める人を1人置く", "選択肢を出してもらって選ぶ")
+    },
+    "196-sales-management-system-custom-cost.html": {
+        "lines": ("販売管理システムを", "オーダーメイドで作る費用と選び方"),
+        "theme": "data_scraping",
+        "takeaways": ("見積もりから入金まで一つに", "既製のサービスと先に比べる", "いちばん困る工程から作る")
+    },
+    "197-production-management-system-small-factory.html": {
+        "lines": ("生産管理システムの費用と作り方", "中小の工場が自社専用で小さく始める"),
+        "theme": "data_scraping",
+        "takeaways": ("困りごと1つから作る", "現場で入力しやすい画面", "1つの工程で試して広げる")
+    },
+    "198-school-student-management-system-cost.html": {
+        "lines": ("生徒管理システムの開発費用", "塾・スクールの出欠・月謝・連絡を一つに"),
+        "theme": "default",
+        "takeaways": ("出欠と振替の電話を減らす", "月謝の確認を自動にする", "子どもの情報は見る人を分ける")
+    },
+    "199-mobile-order-system-development-cost.html": {
+        "lines": ("モバイルオーダーの開発費用", "飲食店の自社専用の注文システム"),
+        "theme": "mvp_startup",
+        "takeaways": ("店内注文とテイクアウトの違い", "既製サービスと総額で比べる", "注文と支払いから小さく始める")
+    },
+    "200-price-simulator-for-website.html": {
+        "lines": ("料金シミュレーションを", "ホームページに作る費用"),
+        "theme": "default",
+        "takeaways": ("料金が見えると相談が来る", "計算の決まりを先に表にする", "結果から問い合わせへつなぐ")
     }
 }
 
