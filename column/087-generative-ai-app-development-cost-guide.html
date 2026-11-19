@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>生成AIアプリの開発費用と進め方｜API活用で作る業務AIの相場 | Ill（イル）株式会社</title>
-  <meta name="description" content="生成AI（ChatGPT・Claude等）のAPIを活用した業務アプリ・サービスの開発費用と進め方を解説。PoCから本番開発までの費用目安、API利用料の考え方、失敗しない要件の決め方をまとめました。">
-  <meta name="keywords" content="生成AI アプリ 開発 費用,ChatGPT API 開発 費用,AI アプリ 開発 相場,生成AI 業務 システム,LLM アプリ 開発">
+  <title>AIアプリの開発費用と相場｜生成AIを組み込む業務アプリの内訳と、毎月の利用料の考え方 | Ill（イル）株式会社</title>
+  <meta name="description" content="AIアプリの開発費用を、作るものの例と規模別の目安で解説。費用の内訳、開発費とは別にかかる毎月のAI利用料、費用を抑える進め方を、個人起業家と中小企業の両方に向けてまとめました。">
+  <meta name="keywords" content="AIアプリ 開発費用,AIアプリ開発 費用,生成AI アプリ 開発 相場,ChatGPT 業務アプリ 開発 費用,AI 機能 追加 費用">
   <meta name="author" content="Ill inc. 編集部">
   
   <!-- Robots config -->
@@ -16,8 +16,8 @@
   
   <!-- Open Graph (OGP) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="生成AIアプリの開発費用と進め方｜API活用で作る業務AIの相場 | Ill inc. コラム">
-  <meta property="og:description" content="生成AI（ChatGPT・Claude等）のAPIを活用した業務アプリ・サービスの開発費用と進め方を解説。PoCから本番開発までの費用目安、API利用料の考え方、失敗しない要件の決め方をまとめました。">
+  <meta property="og:title" content="AIアプリの開発費用と相場｜生成AIを組み込む業務アプリの内訳と、毎月の利用料の考え方 | Ill inc. コラム">
+  <meta property="og:description" content="AIアプリの開発費用を、作るものの例と規模別の目安で解説。費用の内訳、開発費とは別にかかる毎月のAI利用料、費用を抑える進め方を、個人起業家と中小企業の両方に向けてまとめました。">
   <meta property="og:url" content="https://www.ill-inc.net/column/087-generative-ai-app-development-cost-guide">
   <meta property="og:site_name" content="Ill inc.">
   <meta property="og:image" content="https://www.ill-inc.net/ogp.png?v=1">
@@ -26,8 +26,8 @@
   
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="生成AIアプリの開発費用と進め方｜API活用で作る業務AIの相場 | Ill inc. コラム">
-  <meta name="twitter:description" content="生成AI（ChatGPT・Claude等）のAPIを活用した業務アプリ・サービスの開発費用と進め方を解説。PoCから本番開発までの費用目安、API利用料の考え方、失敗しない要件の決め方をまとめました。">
+  <meta name="twitter:title" content="AIアプリの開発費用と相場｜生成AIを組み込む業務アプリの内訳と、毎月の利用料の考え方 | Ill inc. コラム">
+  <meta name="twitter:description" content="AIアプリの開発費用を、作るものの例と規模別の目安で解説。費用の内訳、開発費とは別にかかる毎月のAI利用料、費用を抑える進め方を、個人起業家と中小企業の両方に向けてまとめました。">
   <meta name="twitter:image" content="https://www.ill-inc.net/ogp.png?v=1">
   
   <!-- Favicons -->
@@ -52,11 +52,11 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "生成AIアプリの開発費用と進め方｜API活用で作る業務AIの相場",
-    "description": "生成AI（ChatGPT・Claude等）のAPIを活用した業務アプリ・サービスの開発費用と進め方を解説。PoCから本番開発までの費用目安、API利用料の考え方、失敗しない要件の決め方をまとめました。",
+    "headline": "AIアプリの開発費用と相場｜生成AIを組み込む業務アプリの内訳と、毎月の利用料の考え方",
+    "description": "AIアプリの開発費用を、作るものの例と規模別の目安で解説。費用の内訳、開発費とは別にかかる毎月のAI利用料、費用を抑える進め方を、個人起業家と中小企業の両方に向けてまとめました。",
     "image": "https://www.ill-inc.net/ogp.png?v=1",
     "datePublished": "2026-10-14",
-    "dateModified": "2026-10-14",
+    "dateModified": "2026-11-19",
     "author": {
       "@type": "Organization",
       "name": "Ill（イル）株式会社",
@@ -131,34 +131,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "生成AIアプリの開発は、通常のシステム開発より高額ですか？",
+      "name": "AIアプリの開発には、AIの専門家が必要ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AIモデルを自社で作るわけではなく、既存のAPIを組み込むため、必ずしも高額にはなりません。費用が変わるのは、社内データの連携・精度の調整・セキュリティ要件の部分です。まずは小規模なPoCで効果を検証することで、無駄な投資を避けられます。"
+        "text": "既存のAIを呼び出して使う形なら、AIを一から作る専門家は必要ありません。大切なのは、業務をよく知る人が「何をAIに任せるか」「答えをどう確かめるか」を決めることです。技術の部分は開発会社が担います。"
       }
     },
     {
       "@type": "Question",
-      "name": "入力した社内情報がAIの学習に使われる心配はありませんか？",
+      "name": "ChatGPTの有料プランを使うのと、自社専用に作るのはどちらが安いですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "多くの主要なAPIでは、API経由のデータをモデルの学習に使わない設定・契約が提供されています。ただし、条件はサービスごと・契約ごとに異なるため、導入前に利用規約とデータの取り扱い設定を必ず確認し、機密性の高い情報にはアクセス制御と匿名化も組み合わせます。"
+        "text": "少人数で、文章の下書きなど一般的な使い方なら、既製のプランのほうが安く早いことが多いです。社内の資料とつなぎたい、決まった手順で何度も使う、お客様向けのサービスに組み込みたい、といった場合に、自社専用に作る意味が出てきます。"
       }
     },
     {
       "@type": "Question",
-      "name": "Q. 自社の機密情報や個人情報がAIの学習に使われる心配はありませんか？",
+      "name": "入力した社内の情報が、AIの学習に使われることはありますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A. 一切ありません。商用APIの規約上、入力データがモデルの再学習に利用されることはなく、通信・保管時ともに最高水準で暗号化されます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Q. PDFやWord、Excelなど様々な形式のドキュメントを読み込ませることは可能ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A. はい、可能です。ドキュメントの自動テキスト抽出・チャンク分割・埋め込み（Embedding）パイプラインを構築し、形式を問わず検索可能にします。"
+        "text": "主要なAIの多くは、API経由で送ったデータを学習に使わない設定や契約を用意しています。ただし条件は提供元や契約ごとに違うため、導入前に利用規約とデータの扱いを確認し、送ってよい情報の決まりを社内で作っておきましょう。"
       }
     }
   ]
@@ -220,7 +212,7 @@
 
       <header class="article-header">
         <span class="article-category">生成AI・先端技術</span>
-        <h1 class="article-title">生成AIアプリの開発費用と進め方｜API活用で作る業務AIの相場</h1>
+        <h1 class="article-title">AIアプリの開発費用と相場｜生成AIを組み込む業務アプリの内訳と、毎月の利用料の考え方</h1>
         <div class="article-meta-info">
           <div class="article-meta-item">
             <span>公開日: 2026.10.14</span>
@@ -233,7 +225,7 @@
 
       <!-- Main Visual Cover SVG -->
       <div class="article-main-visual">
-        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「生成AIアプリの開発費用と進め方｜API活用で作る業務AIの相場」のビジュアルバナー">
+        <svg viewBox="0 0 1000 428" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="「AIアプリの開発費用と相場｜生成AIを組み込む業務アプリの内訳と、毎月の利用料の考え方」のビジュアルバナー">
   <defs>
     <linearGradient id="bg_087_generative_ai_app_development_cost_guide" x1="0" y1="0" x2="1000" y2="428" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111B2E"/>
@@ -290,65 +282,73 @@
       <div class="article-layout">
         <main class="article-body">
           <div class="answer-box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-left: 4px solid var(--color-cyan); border-radius: 1.2rem; padding: 2rem 2.4rem; margin-bottom: 3.2rem;">
-            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の要点</p>
-            <p style="margin: 0; line-height: 1.9;">生成AI（ChatGPT・Claude等）のAPIを活用した業務アプリ・サービスの開発費用と進め方を解説。PoCから本番開発までの費用目安、API利用料の考え方、失敗しない要件の決め方をまとめました。</p>
+            <p style="font-weight: 700; font-size: 1.6rem; margin: 0 0 0.8rem;">この記事の結論</p>
+            <p style="margin: 0; line-height: 1.9;">AIアプリの開発費用は、AIそのものを作る費用ではなく、ChatGPTやClaudeなどの既存のAIを、画面や社内のデータとつないで業務に組み込む費用が中心です。1つの業務に絞った試作なら10万〜100万円（数日〜数週間）、画面・権限・履歴を整えた標準的なものは100万〜300万円（目安・約1〜2ヶ月）、社内の多くのシステムとつなぐ大規模なものは個別見積もりです。開発費とは別に、AIの利用料が毎月かかります。</p>
           </div>
 
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">1. 【生成AI アプリ 開発 費用】「AIそのもの」ではなく「業務への組み込み」にコストがかかる</a></li>
-              <li><a href="#sec-2">2. 【フェーズ別の費用目安】PoCから本番運用まで</a></li>
-              <li><a href="#sec-3">3. 【API利用料】毎月のランニングコストの考え方</a></li>
-              <li><a href="#sec-4">4. 【失敗しない進め方】小さく始めて、効果が出る業務から広げる</a></li>
-              <li><a href="#sec-pricing-table">社内向け生成AI・RAGシステムの導入費用相場と開発期間</a></li>
+              <li><a href="#sec-1">1. AIアプリの開発費用は、何にかかるのか</a></li>
+              <li><a href="#sec-2">2. 作るものの例と、費用が変わるポイント</a></li>
+              <li><a href="#sec-3">3. 開発費とは別にかかる、毎月のAI利用料</a></li>
+              <li><a href="#sec-4">4. 費用を抑えて作る進め方</a></li>
+              <li><a href="#sec-5">5. 個人の新サービスと、社内の業務改善での違い</a></li>
+              <li><a href="#sec-6">6. 見積もりを頼む前に用意するもの</a></li>
+              <li><a href="#sec-pricing-table">AIアプリの規模別の費用の目安</a></li>
               <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-          <h2 id="sec-1">1. 【生成AI アプリ 開発 費用】「AIそのもの」ではなく「業務への組み込み」にコストがかかる</h2>
-          <p>生成AIアプリの開発というと、AIモデルを一から作るイメージを持たれることがありますが、実際の業務アプリではChatGPTやClaudeなどの<strong>既存のAPIを自社システムに組み込む</strong>形が一般的です。</p><p>そのため、費用の中心は「AIをどう業務の流れに乗せるか」の設計と実装です。AIに渡す情報の準備、回答の精度調整、画面・権限・履歴管理といった周辺機能の開発が、費用の大部分を占めます。</p>
+          <h2 id="sec-1">1. AIアプリの開発費用は、何にかかるのか</h2>
+          <p>「AIアプリを作る」と聞くと、AIを一から作るような大きな費用を想像するかもしれません。けれども、いま多く作られているAIアプリは、<strong>ChatGPTやClaudeなどの既存のAIを、APIという窓口から呼び出して使う</strong>形です。AIそのものは作りません。</p><p>そのため、費用の中心は「AIを業務やサービスにどう組み込むか」の部分です。主に次の5つに分かれます。</p><ul><li><strong>画面</strong>：入力欄や結果の表示、ログインなど、人が使う部分</li><li><strong>AIへの指示文の設計</strong>：望む答えが返るように、指示（プロンプト）を作って試す</li><li><strong>データの準備とつなぎこみ</strong>：社内の資料や商品情報を、AIが参照できる形にする</li><li><strong>結果の確認と記録</strong>：AIの答えを人が直せる仕組みや、使った履歴</li><li><strong>安全の対策</strong>：入れてよい情報の決まり、権限、利用量の上限</li></ul><p>どこまで作るかで、金額は大きく変わります。中小企業の担当者の方も、AIを使った新しいサービスを考えている個人の方も、<strong>まず「何に使うか」を1つに絞る</strong>ことが、費用を読む第一歩です。</p>
 
-          <h2 id="sec-2">2. 【フェーズ別の費用目安】PoCから本番運用まで</h2>
-          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>フェーズ</th><th>内容</th><th>一般的な相場の目安</th><th>Ill（イル）の概算</th><th>期間</th></tr></thead><tbody><tr><td>PoC（検証）</td><td>1業務で精度・効果を検証</td><td>100万〜300万円</td><td><strong>10万〜50万円</strong></td><td>2〜4週間</td></tr><tr><td>本番開発</td><td>画面・権限・履歴・既存システム連携</td><td>500万〜1,500万円</td><td><strong>100万〜300万円（目安）</strong></td><td>1.5〜3ヶ月</td></tr><tr><td>拡張・精度改善</td><td>社内データ連携（RAG）・他業務への展開</td><td>案件ごと</td><td><strong>機能単位で見積もり</strong></td><td>随時</td></tr></tbody></table></div><p><strong>※相場は参考値です。</strong>APIの利用料（従量課金）は、開発費とは別に毎月かかります。</p>
+          <h2 id="sec-2">2. 作るものの例と、費用が変わるポイント</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>AIアプリの例</th><th>中身</th><th>費用が上がりやすい点</th></tr></thead><tbody><tr><td><strong>文章の下書き・要約ツール</strong></td><td>メールや議事録の下書き、長い資料の要約</td><td>社内の書式に合わせる調整、履歴の管理</td></tr><tr><td><strong>社内の資料に答えるチャット</strong></td><td>規程やマニュアルを探して答える（RAGと呼ばれる仕組み）</td><td>資料の量と整理の手間、閲覧できる人の制限</td></tr><tr><td><strong>問い合わせの振り分け・返信案</strong></td><td>届いた問い合わせを分類し、返信の案を作る</td><td>今使っているメールや管理の仕組みとのつなぎこみ</td></tr><tr><td><strong>書類の読み取り</strong></td><td>請求書や申込書から、必要な項目を取り出す</td><td>書類の種類の多さ、読み間違いを確かめる画面</td></tr><tr><td><strong>自社サービスに入れるAI機能</strong></td><td>利用者向けのアプリに、相談や提案の機能を足す</td><td>利用者が増えたときの利用料と、間違った答えへの備え</td></tr></tbody></table></div><p>同じ「チャット」でも、<strong>参照する資料が数十件か数万件か</strong>、<strong>全員が同じ情報を見てよいか</strong>で、作業の量はまったく違います。見積もりの前に、この2点を書き出しておくと話が早く進みます。</p>
 
-          <h2 id="sec-3">3. 【API利用料】毎月のランニングコストの考え方</h2>
-          <div class="checklist-box"><ul><li><strong>従量課金が基本</strong>: 入力・出力の文字量（トークン）に応じて課金される。利用量の予測が重要。</li><li><strong>モデルの使い分け</strong>: 簡単な処理は軽量・低価格のモデル、複雑な処理は高性能モデルと使い分けて費用を抑える。</li><li><strong>キャッシュの活用</strong>: 同じ質問への回答を再利用し、API呼び出し自体を減らす。</li><li><strong>利用上限の設定</strong>: 想定外の利用による請求の急増を防ぐ。</li></ul></div><p>具体的な料金は提供元ごとに異なり、改定されることもあるため、導入時に公式の最新料金表で試算します。</p>
+          <h2 id="sec-3">3. 開発費とは別にかかる、毎月のAI利用料</h2>
+          <p>AIアプリは、作ったあとも<strong>AIを呼び出した回数と文字の量に応じた利用料</strong>が毎月かかります。電気代のように、使った分だけ払う形です。</p><ol><li>1回あたり、どのくらいの文章をAIに渡し、どのくらい返してもらうかを見積もる</li><li>1日に何回使うか、利用者が何人いるかを見込む</li><li>提供元の公式の料金表で、1か月の金額を試算する</li><li>想定外に増えないよう、利用量の上限を設定する</li></ol><p>料金は提供元ごとに違い、改定されることもあります。簡単な作業には安いモデル、難しい作業には高性能なモデルと使い分けると、費用を抑えられます。回数からの見積もり方は、<a href="/column/163-ai-feature-monthly-usage-cost-estimate">AI機能の毎月の利用料は、回数から見積もる</a>で詳しく説明しています。</p>
 
-          <h2 id="sec-4">4. 【失敗しない進め方】小さく始めて、効果が出る業務から広げる</h2>
-          <div class="checklist-box"><ul><li><strong>課題を1つに絞る</strong>: 「問い合わせ回答の下書き」「議事録の要約」など、効果が測りやすい業務から開始。</li><li><strong>成功の基準を数値で決める</strong>: 作業時間の削減率、回答の正確さなどを事前に定義。</li><li><strong>人の確認を前提にする</strong>: AIの出力を人が確認・修正する工程を残し、誤りのリスクを管理。</li><li><strong>データの取り扱いルールを決める</strong>: 入力してよい情報、してはいけない情報を明文化。</li></ul></div><p><strong>Ill（イル）株式会社</strong>は、PoCから本番開発・運用まで一貫して対応し、効果が確認できた範囲だけに投資を広げる進め方をご提案します。</p>
+          <h2 id="sec-4">4. 費用を抑えて作る進め方</h2>
+          <div class="checklist-box"><ul><li><strong>1つの業務から始める</strong>：「問い合わせの返信案」など、効果を測りやすい作業に絞る</li><li><strong>成功の基準を先に決める</strong>：作業時間が何割減れば成功か、を数字で決める</li><li><strong>人の確認を残す</strong>：AIの答えは間違うことがある。最初は人が見て直す前提で作る</li><li><strong>既存の部品を使う</strong>：ログインや決済などは自作せず、実績のあるサービスを組み込む</li><li><strong>試してから広げる</strong>：効果が確かめられた範囲にだけ、追加の費用をかける</li></ul></div><p>最初から全部の業務をAIにしようとすると、費用も期間もふくらみます。<strong>小さく作って、効いたところだけ広げる</strong>のが、結果的にいちばん安くなります。</p>
 
-          <h2 id="sec-pricing-table">社内向け生成AI・RAGシステムの導入費用相場と開発期間</h2>
-          <p>システム開発を検討する際、最も気になるのが「実際の費用相場」と「どこにコストがかかっているのか」という内訳です。以下の表は、一般的な受託開発会社・大手SIerと、<strong>Ill（イル）株式会社</strong> のミニマル設計による概算費用の比較です。</p>
+          <h2 id="sec-5">5. 個人の新サービスと、社内の業務改善での違い</h2>
+          <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>比べる点</th><th>個人起業家の新サービス</th><th>中小企業の社内の業務改善</th></tr></thead><tbody><tr><td><strong>目的</strong></td><td>AI機能でお客様に価値を届け、お金をもらう</td><td>社員の作業時間やミスを減らす</td></tr><tr><td><strong>最初に作る範囲</strong></td><td>AI機能1つと、登録・支払いの最小限</td><td>1つの部署の、1つの作業</td></tr><tr><td><strong>毎月の利用料の考え方</strong></td><td>利用者1人あたりの利用料を、価格に含める</td><td>減った作業時間と、利用料を比べる</td></tr><tr><td><strong>特に気をつけること</strong></td><td>間違った答えが出たときの説明と、利用規約</td><td>社外に出してはいけない情報の扱い</td></tr></tbody></table></div><p>どちらの場合も、<strong>「AIが間違えたらどうするか」を先に決めておく</strong>と、安心して公開できます。</p>
+
+          <h2 id="sec-6">6. 見積もりを頼む前に用意するもの</h2>
+          <ul><li>AIに任せたい作業と、今その作業にかかっている時間</li><li>AIに渡す資料やデータの例（個人情報や機密を除いたもの）</li><li>使う人の数と、1日に使うおおよその回数</li><li>AIの答えを、誰がどう確かめるか</li><li>いつまでに、いくらくらいで試したいか</li></ul><p>これだけそろっていれば、開発会社は費用と期間の見当をすぐにつけられます。Ill（イル）株式会社は、AIを使った開発（Claude Code）と、ベトナムの開発チームとの分業で、AIアプリの開発費を抑えています。MVP（最初の小さな版）は10万〜100万円（数日〜数週間）、標準規模は100万〜300万円（目安・約1〜2ヶ月）、それ以上は要件により個別見積もりです。</p>
+
+          <h2 id="sec-pricing-table">AIアプリの規模別の費用の目安</h2>
+          <p>他社の目安は、一般的な受託開発の見積もりで見られる幅の一例です。要件によって大きく変わります。AIの利用料は、この表とは別に毎月かかります。</p>
           <div class="article-table-wrapper">
   <table class="article-table">
     <thead>
       <tr>
-        <th>導入構成・システム種別</th>
-        <th>提供機能・連携先</th>
-        <th>市場の受託相場</th>
+        <th>開発の規模</th>
+        <th>主な内容</th>
+        <th>他社の目安</th>
         <th>Ill（イル）株式会社</th>
-        <th>導入期間</th>
+        <th>想定期間</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>社内FAQボット</strong></td>
-        <td>社内マニュアルPDF投入、Slack/Teams通知連携</td>
+        <td><strong>1つの業務に絞った試作</strong></td>
+        <td>社内向けの要約・下書きツール、資料に答える簡単なチャット</td>
         <td>200万〜400万円</td>
         <td><strong>10万〜100万円</strong></td>
         <td>数日〜数週間</td>
       </tr>
       <tr>
-        <td><strong>セキュアRAG検索基盤</strong></td>
-        <td>契約書・社内規定全文検索、出典元の明示、権限管理</td>
+        <td><strong>標準的な業務AIアプリ</strong></td>
+        <td>ログイン・権限・履歴、社内資料の検索、人の確認画面</td>
         <td>500万〜1,000万円</td>
         <td><strong>100万〜300万円（目安）</strong></td>
         <td>約1〜2ヶ月</td>
       </tr>
       <tr>
-        <td><strong>AI業務自動化エージェント</strong></td>
-        <td>メール下書き自動作成、見積データ抽出、外部API連携実行</td>
+        <td><strong>複数の業務・システムとつなぐ形</strong></td>
+        <td>既存の業務システムとの連携、AIによる自動の処理の組み合わせ</td>
         <td>800万〜1,600万円</td>
         <td><strong>個別見積もり</strong></td>
         <td>要件により異なる</td>
@@ -356,27 +356,21 @@
     </tbody>
   </table>
 </div>
-          <h3>社内データをAIに学習させない「完全セキュアなRAG設計」</h3>
-<p>ChatGPTなどの汎用AIをそのまま業務に使うと「機密情報がAIの学習データに使われて漏洩するのではないか」というセキュリティ上の懸念が生じます。これに対し、<strong>Ill（イル）株式会社</strong> ではOpenAIやAnthropicのエンタープライズAPI（ゼロデータリテンション・学習利用ゼロ保証）を採用し、社内データは自社のプライベートなベクターデータベース（pgvector / Pinecone）内でのみ完結するRAGアーキテクチャを構築します。</p>
-<p>高額な専用AIパッケージに頼ることなく、必要最小限のセキュアなパイプラインを構築することで、月額のAPI実費（数千円〜数万円程度）のみで高度な業務自動化を実現します。</p>
+          <p>同じ規模でも、参照する資料の量や、つなぐシステムの数で金額は変わります。手元に他社の見積書があれば、内訳の見方もご説明します。</p>
 
           <h2 id="section-faq">よくある質問</h2>
           <div class="faq-container">
             <div class="faq-item">
-              <h3>生成AIアプリの開発は、通常のシステム開発より高額ですか？</h3>
-              <p>AIモデルを自社で作るわけではなく、既存のAPIを組み込むため、必ずしも高額にはなりません。費用が変わるのは、社内データの連携・精度の調整・セキュリティ要件の部分です。まずは小規模なPoCで効果を検証することで、無駄な投資を避けられます。</p>
+              <h3>AIアプリの開発には、AIの専門家が必要ですか？</h3>
+              <p>既存のAIを呼び出して使う形なら、AIを一から作る専門家は必要ありません。大切なのは、業務をよく知る人が「何をAIに任せるか」「答えをどう確かめるか」を決めることです。技術の部分は開発会社が担います。</p>
             </div>
             <div class="faq-item">
-              <h3>入力した社内情報がAIの学習に使われる心配はありませんか？</h3>
-              <p>多くの主要なAPIでは、API経由のデータをモデルの学習に使わない設定・契約が提供されています。ただし、条件はサービスごと・契約ごとに異なるため、導入前に利用規約とデータの取り扱い設定を必ず確認し、機密性の高い情報にはアクセス制御と匿名化も組み合わせます。</p>
+              <h3>ChatGPTの有料プランを使うのと、自社専用に作るのはどちらが安いですか？</h3>
+              <p>少人数で、文章の下書きなど一般的な使い方なら、既製のプランのほうが安く早いことが多いです。社内の資料とつなぎたい、決まった手順で何度も使う、お客様向けのサービスに組み込みたい、といった場合に、自社専用に作る意味が出てきます。</p>
             </div>
             <div class="faq-item">
-              <h3>Q. 自社の機密情報や個人情報がAIの学習に使われる心配はありませんか？</h3>
-              <p>A. 一切ありません。商用APIの規約上、入力データがモデルの再学習に利用されることはなく、通信・保管時ともに最高水準で暗号化されます。</p>
-            </div>
-            <div class="faq-item">
-              <h3>Q. PDFやWord、Excelなど様々な形式のドキュメントを読み込ませることは可能ですか？</h3>
-              <p>A. はい、可能です。ドキュメントの自動テキスト抽出・チャンク分割・埋め込み（Embedding）パイプラインを構築し、形式を問わず検索可能にします。</p>
+              <h3>入力した社内の情報が、AIの学習に使われることはありますか？</h3>
+              <p>主要なAIの多くは、API経由で送ったデータを学習に使わない設定や契約を用意しています。ただし条件は提供元や契約ごとに違うため、導入前に利用規約とデータの扱いを確認し、送ってよい情報の決まりを社内で作っておきましょう。</p>
             </div>
           </div>
 
@@ -419,6 +413,7 @@
             </p>
           </div>
 
+        
         </main>
 
         <aside class="sidebar">
