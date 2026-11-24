@@ -4278,3 +4278,21 @@ br.sp-only {
     white-space: nowrap;
   }
 }
+
+/* --- Japanese navigation labels (2026-11) --- */
+.logo { flex-shrink: 0; white-space: nowrap; }
+.nav-link,
+.nav > .btn { white-space: nowrap; }
+
+@media (min-width: 769px) and (max-width: 1160px) {
+  .nav { gap: 2.4rem; }
+  .nav-list { gap: 2rem; }
+  .nav-link { font-size: 1.4rem; }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+  .nav { gap: 1.6rem; }
+  .nav-list { gap: 1.4rem; }
+  .nav-link { font-size: 1.3rem; }
+  .nav > .btn { padding: 1rem 1.6rem; font-size: 1.3rem; }
+}

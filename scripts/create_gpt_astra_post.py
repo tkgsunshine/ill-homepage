@@ -29,7 +29,7 @@ HTML_CONTENT = """<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=65">
+  <link rel="stylesheet" href="../style.css?v=66">
 
   <!-- Structured Data: Article Schema -->
   <script type="application/ld+json">
@@ -149,15 +149,15 @@ HTML_CONTENT = """<!DOCTYPE html>
       
       <nav class="nav" id="nav-menu">
         <ul class="nav-list">
-          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
-          <li><a href="../index.html#concept" class="nav-link">Philosophy</a></li>
-          <li><a href="../index.html#services" class="nav-link">Services</a></li>
-          <li><a href="../index.html#offshore" class="nav-link">Global</a></li>
-          <li><a href="../index.html#profile" class="nav-link">Profile</a></li>
-          <li><a href="../cases/" class="nav-link">Cases</a></li>
-          <li><a href="index.html" class="nav-link active">Column</a></li>
+          <li><a href="../index.html#hero" class="nav-link">ホーム</a></li>
+          <li><a href="../index.html#concept" class="nav-link">理念</a></li>
+          <li><a href="../index.html#services" class="nav-link">事業紹介</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">オフショア開発</a></li>
+          <li><a href="../index.html#profile" class="nav-link">会社概要</a></li>
+          <li><a href="../cases/" class="nav-link">実績</a></li>
+          <li><a href="index.html" class="nav-link active">コラム</a></li>
         </ul>
-        <a href="../index.html#contact" class="btn btn-secondary">Contact Us</a>
+        <a href="../index.html#contact" class="btn btn-secondary">お問い合わせ</a>
       </nav>
 
       <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
@@ -561,9 +561,9 @@ HTML_CONTENT = """<!DOCTYPE html>
           <div>
             <h4 class="footer-list-title">Corporate</h4>
             <ul class="footer-list">
-              <li><a href="../index.html#hero" class="footer-link">Home</a></li>
-              <li><a href="../index.html#concept" class="footer-link">Philosophy</a></li>
-              <li><a href="../index.html#profile" class="footer-link">Company Profile</a></li>
+              <li><a href="../index.html#hero" class="footer-link">ホーム</a></li>
+              <li><a href="../index.html#concept" class="footer-link">理念</a></li>
+              <li><a href="../index.html#profile" class="footer-link">会社概要</a></li>
               <li><a href="../cases/" class="footer-link">実績・事例</a></li>
               <li><a href="index.html" class="footer-link">コラム</a></li>
             </ul>
