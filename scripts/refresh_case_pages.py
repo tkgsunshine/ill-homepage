@@ -73,7 +73,7 @@ CARD_RESULT = {
     "recruitment-portal": "求職者の登録完了率が35%から88%に",
     "interview-feedback": "面談後の記録づくりが1回20分から3分に",
     "staffing-crm": "月末の請求・契約更新が5営業日から半日に",
-    "disabled-community": "登録者数が15万人を突破",
+    "disabled-community": "リリースから3年で登録者数が15万人を突破",
     "ma-contracts": "資料を見せるまでの期間が平均10日から最短即日に",
     "filemaker-optimization": "検索・集計が15秒以上から0.2秒に",
     "gcp-migration": "サーバーの月額費用を65%削減",
