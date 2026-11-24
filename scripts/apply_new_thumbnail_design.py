@@ -737,6 +737,132 @@ BANNER_DATA = {
         "lines": ("ChatGPT・Gemini・Claude", "初心者向け！主要生成AIの違いと選び方"),
         "theme": "ai",
         "takeaways": ("文章力・コーディング力の比較", "無料プランと有料プランの機能差", "自社の利用目的に合った最適ツール")
+    },
+    # 記事キュー（176〜200）。題名の前半と後半で2行に分ける（自動の改行だと「｜」の位置で崩れるため）
+    "176-customer-list-duplicates-cleanup-before-migration.html": {
+        "lines": ("顧客データの名寄せのやり方", "システム移行の前に重複と表記のゆれを直す"),
+        "theme": "data_scraping",
+        "takeaways": ("移す前に表記のゆれをそろえる", "名寄せの決まりを先に作る", "迷うものは人が確かめる")
+    },
+    "177-mvp-data-export-keep-portable.html": {
+        "lines": ("システムのデータ移行で困らないために", "MVPのデータを持ち出せる形で残す"),
+        "theme": "mvp_startup",
+        "takeaways": ("全件をCSVで書き出せる形に", "データの持ち主を確かめる", "移行は試し用の環境で試す")
+    },
+    "178-work-hours-per-project-profit-visibility.html": {
+        "lines": ("工数管理を案件ごとに始める方法", "作業時間の記録で利益が出る仕事を見える化"),
+        "theme": "management",
+        "takeaways": ("記録の項目は最小限に", "案件ごとの利益が見える", "次の見積もりが正確になる")
+    },
+    "179-mvp-multilingual-how-much-first.html": {
+        "lines": ("アプリの多言語対応の費用と進め方", "MVPは最初の市場を決めて範囲を絞る"),
+        "theme": "mvp_startup",
+        "takeaways": ("最初の市場を1つに決める", "言葉の数だけ費用が増える", "あとから足しやすく作る")
+    },
+    "180-smartphone-or-pc-decide-by-task.html": {
+        "lines": ("業務システムのスマホ対応はどこまで必要か", "作業ごとにスマホとパソコンを決める"),
+        "theme": "default",
+        "takeaways": ("全画面の両対応は高くつく", "作業ごとに使う道具を決める", "現場はスマホ、集計はパソコン")
+    },
+    "181-screen-wording-buttons-written-by-owner.html": {
+        "lines": ("アプリの文言の作り方", "ボタンや案内の文章は発注者が書く"),
+        "theme": "mvp_startup",
+        "takeaways": ("利用者の言葉で書く", "押したあとが分かる名前に", "場所と言葉の表で渡す")
+    },
+    "182-per-user-monthly-fees-vs-custom-system.html": {
+        "lines": ("SaaSと自社開発の費用比較", "人数で増える月額料金を5年の総額で比べる"),
+        "theme": "management",
+        "takeaways": ("5年分の総額で比べる", "見落としやすい費用も数える", "一部だけ自社専用にする手も")
+    },
+    "183-app-update-old-version-users.html": {
+        "lines": ("アプリの強制アップデートの仕組み", "古いバージョンの利用者に更新を届ける"),
+        "theme": "default",
+        "takeaways": ("古い版は利用者の手元に残る", "直した内容の重さで使い分け", "最初の版に仕組みを入れる")
+    },
+    "184-supplier-purchase-orders-delivery-dates-list.html": {
+        "lines": ("発注管理システムを小さく作る", "仕入れ先への発注と納期を一覧で管理する"),
+        "theme": "data_scraping",
+        "takeaways": ("発注の漏れをなくす", "入荷の遅れに先に気づく", "項目は最小限から始める")
+    },
+    "185-client-quick-decisions-shorten-ai-development.html": {
+        "lines": ("AI駆動開発で納期を短縮するには", "発注者の確認と判断の速さが決め手になる"),
+        "theme": "ai",
+        "takeaways": ("待ち時間が納期を左右する", "最後に決める人を1人に", "返事の目安を先に決める")
+    },
+    "186-internal-system-project-owner-part-time.html": {
+        "lines": ("システム導入の社内担当者の役割", "兼任でも窓口を1人決めて外注を進める"),
+        "theme": "management",
+        "takeaways": ("兼任でも窓口は1人に", "使う時間を先に確保する", "大事な判断は決める人へ")
+    },
+    "187-line-mini-app-development-cost.html": {
+        "lines": ("LINEミニアプリの開発費用と作り方", "予約・会員証・注文をLINEの中で始める"),
+        "theme": "mvp_startup",
+        "takeaways": ("アプリを入れずにLINEで使える", "1つの使い方から小さく始める", "LINE側の審査を見込んで準備")
+    },
+    "188-app-development-freelancer-or-company.html": {
+        "lines": ("アプリ開発はフリーランスと", "開発会社のどちらに頼むか"),
+        "theme": "management",
+        "takeaways": ("費用と止まるリスクで比べる", "権利と納品物を契約で決める", "同じ条件で見積もりを比べる")
+    },
+    "189-portal-site-development-cost.html": {
+        "lines": ("ポータルサイト構築の費用相場", "地域や業界の情報サイトを小さく始める"),
+        "theme": "mvp_startup",
+        "takeaways": ("費用は機能の範囲で決まる", "最初の掲載は運営者が集める", "収益の形を1つに絞って試す")
+    },
+    "190-elearning-system-development-cost.html": {
+        "lines": ("eラーニングシステムの開発費用", "オンライン講座・社内研修を自社専用で"),
+        "theme": "default",
+        "takeaways": ("社内研修と講座販売の2つの形", "動画の配信料は別に試算", "1つの講座から小さく始める")
+    },
+    "191-job-posting-site-development-cost.html": {
+        "lines": ("求人サイト制作の費用相場", "採用サイトと求人マッチングの違い"),
+        "theme": "default",
+        "takeaways": ("採用サイトとマッチングの違い", "始める前に届出の要否を確認", "応募の入力項目は最小限に")
+    },
+    "192-video-call-online-consultation-app-cost.html": {
+        "lines": ("ビデオ通話アプリの開発費用", "オンライン相談の予約と決済を作る"),
+        "theme": "mvp_startup",
+        "takeaways": ("通話の仕組みは一から作らない", "予約・決済から小さく始める", "通話の月額を回数から試算")
+    },
+    "193-switch-development-company-handover.html": {
+        "lines": ("開発会社の変更と引き継ぎの手順", "他社が作ったシステムを直す前の確認"),
+        "theme": "management",
+        "takeaways": ("先にソースコードと権限を集める", "直す前に調査で状態を知る", "引き継ぎの範囲を書面に残す")
+    },
+    "194-homepage-vs-web-system-difference.html": {
+        "lines": ("ホームページ制作とシステム開発の違い", "依頼先・費用・期間の目安と選び方"),
+        "theme": "management",
+        "takeaways": ("「見せる」と「使う」の違い", "5つの質問で見分ける", "依頼先と費用の決まり方")
+    },
+    "195-system-development-marunage-what-to-decide.html": {
+        "lines": ("システム開発は丸投げできるか", "任せてよい部分と、発注者が決めること"),
+        "theme": "management",
+        "takeaways": ("技術は任せ、事業は決める", "決める人を1人置く", "選択肢を出してもらって選ぶ")
+    },
+    "196-sales-management-system-custom-cost.html": {
+        "lines": ("販売管理システムを", "オーダーメイドで作る費用と選び方"),
+        "theme": "data_scraping",
+        "takeaways": ("見積もりから入金まで一つに", "既製のサービスと先に比べる", "いちばん困る工程から作る")
+    },
+    "197-production-management-system-small-factory.html": {
+        "lines": ("生産管理システムの費用と作り方", "中小の工場が自社専用で小さく始める"),
+        "theme": "data_scraping",
+        "takeaways": ("困りごと1つから作る", "現場で入力しやすい画面", "1つの工程で試して広げる")
+    },
+    "198-school-student-management-system-cost.html": {
+        "lines": ("生徒管理システムの開発費用", "塾・スクールの出欠・月謝・連絡を一つに"),
+        "theme": "default",
+        "takeaways": ("出欠と振替の電話を減らす", "月謝の確認を自動にする", "子どもの情報は見る人を分ける")
+    },
+    "199-mobile-order-system-development-cost.html": {
+        "lines": ("モバイルオーダーの開発費用", "飲食店の自社専用の注文システム"),
+        "theme": "mvp_startup",
+        "takeaways": ("店内注文とテイクアウトの違い", "既製サービスと総額で比べる", "注文と支払いから小さく始める")
+    },
+    "200-price-simulator-for-website.html": {
+        "lines": ("料金シミュレーションを", "ホームページに作る費用"),
+        "theme": "default",
+        "takeaways": ("料金が見えると相談が来る", "計算の決まりを先に表にする", "結果から問い合わせへつなぐ")
     }
 }
 
@@ -760,10 +886,31 @@ def split_catchphrase_smart(text):
             score += 15
         if i >= 2 and clean[i-2:i] in ["による", "した", "での", "への", "から", "における"]:
             score += 18
+        if clean[i-1] in BREAK_AFTER_PUNCT:
+            score += 25
+        if clean[i] in NO_LINE_START:
+            score -= 100
         if score > best_score:
             best_score = score
             best_idx = i
-    return [clean[:best_idx], clean[best_idx:]]
+    return tidy_banner_lines([clean[:best_idx], clean[best_idx:]])
+
+# 行頭に置かない約物（読点・句点・閉じかっこ等）と、その直後で改行したい区切り
+NO_LINE_START = "、。，．,.・）」』】〕！？!?ー"
+BREAK_AFTER_PUNCT = "、，,"
+
+def tidy_banner_lines(lines):
+    """2行目の先頭に「、」などが来ないようにし、1行目末の読点は改行で区切れるので落とす。"""
+    if len(lines) != 2:
+        return lines
+    l1, l2 = lines
+    while l2 and l2[0] in NO_LINE_START:
+        l1, l2 = l1 + l2[0], l2[1:]
+    l1 = l1.rstrip("、，,").strip()
+    l2 = l2.strip()
+    if not l2:
+        return [l1]
+    return [l1, l2]
 
 def generate_svg(filename, title, category):
     clean_id = re.sub(r"[^a-zA-Z0-9_]", "_", filename.replace(".html", ""))
@@ -785,6 +932,7 @@ def generate_svg(filename, title, category):
         lines = split_catchphrase_smart(title)
         takeaways = theme["takeaways"]
 
+    lines = tidy_banner_lines(list(lines))
     accent = theme["accent"]
     orb1 = theme["orb1"]
     orb2 = theme["orb2"]

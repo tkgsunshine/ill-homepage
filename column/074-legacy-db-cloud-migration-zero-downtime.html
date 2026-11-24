@@ -297,21 +297,21 @@
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">1. 【オンプレDB クラウド移行】ハードウェア老朽化（EOSL）と高額保守の限界</a></li>
-              <li><a href="#sec-2">2. 【ゼロダウンタイム データベース移行】安全確実なマイグレーションの4ステップ</a></li>
-              <li><a href="#sec-3">3. 【レガシーシステム クラウド化 費用】Ill（イル）株式会社による高品質・適正価格移行</a></li>
+              <li><a href="#sec-1">1. ハードウェア老朽化（EOSL）と高額保守の限界</a></li>
+              <li><a href="#sec-2">2. 安全確実なマイグレーションの4ステップ</a></li>
+              <li><a href="#sec-3">3. Ill（イル）株式会社による高品質・適正価格移行</a></li>
               <li><a href="#sec-pricing-table">システム開発の工程別費用内訳と大手SIerとのコスト削減比較</a></li>
               <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-          <h2 id="sec-1">1. 【オンプレDB クラウド移行】ハードウェア老朽化（EOSL）と高額保守の限界</h2>
+          <h2 id="sec-1">1. ハードウェア老朽化（EOSL）と高額保守の限界</h2>
           <p>社内オフィスやデータセンターの自社サーバーで10年以上運用されてきたレガシーデータベースは、多くの企業にとって「触るのが怖いブラックボックス」となっています。</p><p>しかし、サーバー機の保守サポート終了（EOSL）やOS・DBのバージョン切れによるセキュリティリスク、いつハードディスクが故障してもおかしくない危機的状況を放置することは、重大な事業継続リスク（BCP違反）に直結します。さらに、オンプレミスサーバーの電気代、空調費、定期ハードウェア交換費、商用DBライセンス更新料で年間数百万円〜数千万円の維持費が浪費されているケースが少なくありません。<strong>AWS RDSやGCP Cloud SQLなどのフルマネージドクラウドDBへの移行</strong>は、システムの安定稼働と固定費削減を両立する最も効果的な一手です。</p>
 
-          <h2 id="sec-2">2. 【ゼロダウンタイム データベース移行】安全確実なマイグレーションの4ステップ</h2>
+          <h2 id="sec-2">2. 安全確実なマイグレーションの4ステップ</h2>
           <p>移行中のデータ欠損や長時間の業務停止を絶対に防ぐため、以下の堅牢な手順でクラウド移行を遂行します。</p><div class="checklist-box"><ul><li><strong>ステップ1：スキーマ評価とデータ型マッピング</strong>: 既存DBのテーブル構造、インデックス、ストアドプロシージャを精査し、クラウドDBとの互換性を事前検証。</li><li><strong>ステップ2：全量初期データ移行＋CDC（継続的データキャプチャ）稼働</strong>: 本番DBを稼働させたまま既存データをクラウドへ一括転送し、以後の追加・更新・削除ログをリアルタイム同期。</li><li><strong>ステップ3：データ整合性検証（Dual-Run & Checksum）</strong>: オンプレ側とクラウド側のデータ件数・ハッシュ値を比較照合し、1件のズレもないことを完全に証明。</li><li><strong>ステップ4：DNS切り替えとフォールバック体制</strong>: 週末または深夜の閑散時間帯に接続先DNSをクラウドへ切り替え。万が一の不測事態に備えた即時切り戻し手順も常備。</li></ul></div>
 
-          <h2 id="sec-3">3. 【レガシーシステム クラウド化 費用】Ill（イル）株式会社による高品質・適正価格移行</h2>
+          <h2 id="sec-3">3. Ill（イル）株式会社による高品質・適正価格移行</h2>
           <p>大手SIerにレガシーDBのクラウド移行を依頼すると、膨大な管理工数と何重もの中間マージンが上乗せされ、1,000万〜3,000万円の見積もりになることが一般的です。</p><p><strong>Ill（イル）株式会社</strong> では、クラウド自動化スクリプトと最新のマイグレーションツールを駆使し、<strong>小中規模DBの無停止クラウド移行を100万〜300万円（目安）・工期約1〜2ヶ月</strong> で安全に遂行いたします。移行後の運用自動化・バックアップ設計まで手厚くサポートいたします。</p>
 
           <h2 id="sec-pricing-table">システム開発の工程別費用内訳と大手SIerとのコスト削減比較</h2>
@@ -443,33 +443,33 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
-                <a href="/column/135-side-business-new-service-time-plan">
-                  <span class="related-item-date">2026.10.30</span>
-                  <span class="related-item-title">本業と両立して新規事業を進める｜週に使える時間から作る範囲を逆算する</span>
+                <a href="/column/184-supplier-purchase-orders-delivery-dates-list">
+                  <span class="related-item-date">2026.11.24</span>
+                  <span class="related-item-title">発注管理システムを小さく作る｜仕入れ先への発注と納期を一覧で管理する方法</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/134-fax-paper-order-to-web-form-small-company">
-                  <span class="related-item-date">2026.10.30</span>
-                  <span class="related-item-title">FAX・紙の注文書を、Webの注文フォームに変える｜中小企業が小さく始める手順</span>
+                <a href="/column/183-app-update-old-version-users">
+                  <span class="related-item-date">2026.11.23</span>
+                  <span class="related-item-title">アプリの強制アップデートの仕組み｜古いバージョンの利用者に更新を届ける方法</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/133-mvp-not-to-do-list-scope-control">
-                  <span class="related-item-date">2026.10.29</span>
-                  <span class="related-item-title">MVPの「やらないことリスト」を先に作り、作る範囲を絞り込む</span>
+                <a href="/column/182-per-user-monthly-fees-vs-custom-system">
+                  <span class="related-item-date">2026.11.23</span>
+                  <span class="related-item-title">SaaSと自社開発の費用比較｜人数で増える月額料金を5年の総額で比べる方法</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/132-smb-input-fields-decision-before-system">
-                  <span class="related-item-date">2026.10.29</span>
-                  <span class="related-item-title">業務システムの入力項目は、紙とExcelから洗い出して決める｜中小企業の作る前の整理</span>
+                <a href="/column/181-screen-wording-buttons-written-by-owner">
+                  <span class="related-item-date">2026.11.22</span>
+                  <span class="related-item-title">アプリの文言の作り方｜ボタンや案内の文章（マイクロコピー）は発注者が書く</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/131-first-price-setting-for-new-service">
-                  <span class="related-item-date">2026.10.28</span>
-                  <span class="related-item-title">新サービスの最初の価格は、3つの視点で決める｜MVPで価格を試すときの進め方</span>
+                <a href="/column/180-smartphone-or-pc-decide-by-task">
+                  <span class="related-item-date">2026.11.22</span>
+                  <span class="related-item-title">業務システムのスマホ対応はどこまで必要か｜作業ごとにスマホとパソコンを決める</span>
                 </a>
               </li>
           </ul>
