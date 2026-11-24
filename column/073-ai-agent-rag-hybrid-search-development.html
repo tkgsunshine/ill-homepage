@@ -297,21 +297,21 @@
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">1. 【RAG ハイブリッド検索 精度向上】一般的な社内AIチャットが現場で使われなくなる理由</a></li>
-              <li><a href="#sec-2">2. 【ベクトル検索 BM25 開発】最高精度の社内ナレッジRAGを実現する3段階パイプライン</a></li>
-              <li><a href="#sec-3">3. 【社内AI 開発費用】Ill（イル）株式会社による高精度RAG構築ソリューション</a></li>
+              <li><a href="#sec-1">1. 一般的な社内AIチャットが現場で使われなくなる理由</a></li>
+              <li><a href="#sec-2">2. 最高精度の社内ナレッジRAGを実現する3段階パイプライン</a></li>
+              <li><a href="#sec-3">3. Ill（イル）株式会社による高精度RAG構築ソリューション</a></li>
               <li><a href="#sec-pricing-table">社内向け生成AI・RAGシステムの導入費用相場と開発期間</a></li>
               <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-          <h2 id="sec-1">1. 【RAG ハイブリッド検索 精度向上】一般的な社内AIチャットが現場で使われなくなる理由</h2>
+          <h2 id="sec-1">1. 一般的な社内AIチャットが現場で使われなくなる理由</h2>
           <p>社内マニュアルや過去の提案書、技術文書をAIに学習させて業務効率化を図る「RAG（検索拡張生成）」の導入が急速に進んでいます。しかし、初期のPoCで安易に構築されたシンプルなベクトル検索（Dense Retrieval）のみのシステムでは、以下のような致命的な課題が発生し、現場で使われなくなるケースが頻発しています。</p><p>「型番『XYZ-2026-B』に関する仕様を聞いても、似た名前の別製品のマニュアルを参照してしまう」「最新の就業規則ではなく、2年前の古い規則文書を拾って回答してしまう」といった現象です。これらはベクトルの意味的類似度に過度に依存していることが原因です。実務に耐えうる社内AIエージェントを構築するには、完全一致キーワードを確実に捕捉する<strong>BM25（スパース検索）</strong>と<strong>ベクトル検索（デンス検索）</strong>を統合し、さらに検索結果を再スコアリングする<strong>リランカー（Reranker）</strong>を組み合わせた「ハイブリッド検索アーキテクチャ」が不可欠です。</p>
 
-          <h2 id="sec-2">2. 【ベクトル検索 BM25 開発】最高精度の社内ナレッジRAGを実現する3段階パイプライン</h2>
+          <h2 id="sec-2">2. 最高精度の社内ナレッジRAGを実現する3段階パイプライン</h2>
           <p>Ill株式会社が推奨するエンタープライズグレードのRAGパイプラインは、以下の3段階で構成されます。</p><div class="checklist-box"><ul><li><strong>ステップ1：ハイブリッドリトリーバル（Hybrid Retrieval）</strong>: ユーザーの質問から重要なキーワード（型番、法令名、人名）を抽出し、BM25検索とベクトル検索（OpenAI text-embedding-3-large等）を並行実行して候補文書を広範に抽出。</li><li><strong>ステップ2：相互順位融合（RRF）＆ Cross-Encoder リランキング</strong>: Cohere Rerankやbge-rerankerを用いて、抽出された上位数十件のドキュメントと質問の関連度を厳密に再評価し、真に関連性の高い上位3〜5件に絞り込み。</li><li><strong>ステップ3：自律型AIエージェントによる検証と引用元（Cite）明記</strong>: 回答文の各記述がどのドキュメントの何ページ目を根拠にしているかをインライン注釈で提示し、万が一関連情報が見つからない場合はハルシネーション（嘘の回答）を起こさず「社内規程に記載がありません」と誠実に回答。</li></ul></div>
 
-          <h2 id="sec-3">3. 【社内AI 開発費用】Ill（イル）株式会社による高精度RAG構築ソリューション</h2>
+          <h2 id="sec-3">3. Ill（イル）株式会社による高精度RAG構築ソリューション</h2>
           <p>大手コンサルティングファームや大手SIerにエンタープライズRAG開発を相談すると、PoC（概念実証）だけで500万円、本番開発で2,000万円以上の見積もりが提示されることが一般的です。</p><p><strong>Ill（イル）株式会社</strong> では、オープンソースの最新検索エンジン（PostgreSQL pgvector / Qdrant）と実証済みのRAGフレームワークを活用し、<strong>ハイブリッド検索・自動データ取り込みパイプライン・UI画面を備えた社内検索を、まずはMVPで数日〜数週間・10万〜100万円から（フルシステムは個別お見積もり）</strong> で提供します。社内データの機密性を保ちながら、業務時間を大幅に短縮する最高精度の社内AIを実現します。</p>
 
           <h2 id="sec-pricing-table">社内向け生成AI・RAGシステムの導入費用相場と開発期間</h2>
@@ -432,33 +432,33 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
-                <a href="/column/167-shift-schedule-sharing-from-paper-and-line">
-                  <span class="related-item-date">2026.11.15</span>
-                  <span class="related-item-title">シフトと勤務予定の共有を、紙とLINEから自社専用の画面に移す｜小さな職場の始め方</span>
+                <a href="/column/184-supplier-purchase-orders-delivery-dates-list">
+                  <span class="related-item-date">2026.11.24</span>
+                  <span class="related-item-title">発注管理システムを小さく作る｜仕入れ先への発注と納期を一覧で管理する方法</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/166-customer-inquiry-history-shared-system">
-                  <span class="related-item-date">2026.11.14</span>
-                  <span class="related-item-title">お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し</span>
+                <a href="/column/183-app-update-old-version-users">
+                  <span class="related-item-date">2026.11.23</span>
+                  <span class="related-item-title">アプリの強制アップデートの仕組み｜古いバージョンの利用者に更新を届ける方法</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/165-budget-split-development-operation-marketing">
-                  <span class="related-item-date">2026.11.14</span>
-                  <span class="related-item-title">開発費だけで予算を使い切らない｜開発・運営・集客の3つに分ける資金計画</span>
+                <a href="/column/182-per-user-monthly-fees-vs-custom-system">
+                  <span class="related-item-date">2026.11.23</span>
+                  <span class="related-item-title">SaaSと自社開発の費用比較｜人数で増える月額料金を5年の総額で比べる方法</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/164-app-store-listing-text-images-preparation">
-                  <span class="related-item-date">2026.11.14</span>
-                  <span class="related-item-title">アプリの紹介文とスクリーンショットは、自分で準備する｜公開前に決める5つのこと</span>
+                <a href="/column/181-screen-wording-buttons-written-by-owner">
+                  <span class="related-item-date">2026.11.22</span>
+                  <span class="related-item-title">アプリの文言の作り方｜ボタンや案内の文章（マイクロコピー）は発注者が書く</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/163-ai-feature-monthly-usage-cost-estimate">
-                  <span class="related-item-date">2026.11.13</span>
-                  <span class="related-item-title">AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方</span>
+                <a href="/column/180-smartphone-or-pc-decide-by-task">
+                  <span class="related-item-date">2026.11.22</span>
+                  <span class="related-item-title">業務システムのスマホ対応はどこまで必要か｜作業ごとにスマホとパソコンを決める</span>
                 </a>
               </li>
           </ul>

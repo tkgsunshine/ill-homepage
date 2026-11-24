@@ -297,25 +297,25 @@
           <div class="toc-box">
             <div class="toc-title">目次</div>
             <ul class="toc-list">
-              <li><a href="#sec-1">1. 【Flutter React Native 比較】まず結論｜判断は「既存資産」と「保守体制」で決まる</a></li>
-              <li><a href="#sec-2">2. 【比較表】開発費用・保守性・人材の違い</a></li>
-              <li><a href="#sec-3">3. 【費用への影響】フレームワーク選定が保守コストを左右する理由</a></li>
-              <li><a href="#sec-4">4. 【選び方】Ill（イル）株式会社が推奨する判断フロー</a></li>
+              <li><a href="#sec-1">1. まず結論：判断は「既存資産」と「保守体制」で決まる</a></li>
+              <li><a href="#sec-2">2. 開発費用・保守性・人材の違いを表で比べる</a></li>
+              <li><a href="#sec-3">3. フレームワーク選定が保守コストを左右する理由</a></li>
+              <li><a href="#sec-4">4. Ill（イル）株式会社が推奨する判断フロー</a></li>
               <li><a href="#sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</a></li>
               <li><a href="#section-faq">よくある質問</a></li>
             </ul>
           </div>
 
-          <h2 id="sec-1">1. 【Flutter React Native 比較】まず結論｜判断は「既存資産」と「保守体制」で決まる</h2>
+          <h2 id="sec-1">1. まず結論：判断は「既存資産」と「保守体制」で決まる</h2>
           <p>クロスプラットフォーム開発の代表格がFlutter（Google）とReact Native（Meta）です。どちらもiOS・Android両対応のアプリを1つのコードで開発でき、アプリ開発費用を大きく抑えられます。</p><p>結論から言うと、性能や機能の差で選ぶよりも、<strong>「既にWebシステムをReact / TypeScriptで作っているか」「開発後に保守できるエンジニアを確保しやすいか」</strong>で選ぶほうが失敗しません。技術の優劣ではなく、事業の運用体制に合わせる視点が重要です。</p>
 
-          <h2 id="sec-2">2. 【比較表】開発費用・保守性・人材の違い</h2>
+          <h2 id="sec-2">2. 開発費用・保守性・人材の違いを表で比べる</h2>
           <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>比較項目</th><th>Flutter</th><th>React Native</th></tr></thead><tbody><tr><td>開発言語</td><td>Dart</td><td>JavaScript / TypeScript</td></tr><tr><td>Web開発資産の流用</td><td>限定的（別言語）</td><td><strong>Reactのロジック・知識を流用しやすい</strong></td></tr><tr><td>画面表示の一貫性</td><td><strong>独自描画のためOS間の差が出にくい</strong></td><td>OS標準部品を使うため見た目はOS準拠</td></tr><tr><td>エンジニアの探しやすさ</td><td>増加中だが母数は少なめ</td><td><strong>JS/TS人材が多く確保しやすい</strong></td></tr><tr><td>Webアプリとのコード共有</td><td>Flutter Webで可能（用途は限定的）</td><td><strong>ロジック層を共有しやすい</strong></td></tr><tr><td>向いているケース</td><td>独自デザイン重視・アニメーション多用</td><td>Webサービスとの連携が強い業務・SaaS系</td></tr></tbody></table></div><p><strong>※</strong>両者とも活発に開発が続けられており、機能差は年々縮まっています。最新の対応状況は、採用前に必ず確認します。</p>
 
-          <h2 id="sec-3">3. 【費用への影響】フレームワーク選定が保守コストを左右する理由</h2>
+          <h2 id="sec-3">3. フレームワーク選定が保守コストを左右する理由</h2>
           <p>初期の開発費用は、どちらを選んでも大差はつきません。大きく差がつくのは、リリース後の数年間です。OSのメジャーアップデートへの追従、ライブラリの更新、不具合対応といった保守作業を、誰がどれだけの単価で担当できるかが、そのまま運用コストになります。</p><div class="checklist-box"><ul><li><strong>人材の確保</strong>: 担当者が退職・契約終了しても、引き継げるエンジニアが市場にいるか。</li><li><strong>情報量</strong>: 不具合の原因調査や実装例の情報が豊富か。調査工数に直結する。</li><li><strong>OS更新への追従</strong>: 公式のサポート方針とライブラリの更新頻度。</li><li><strong>ソースコードの納品</strong>: 納品物にソース一式が含まれ、他社でも保守できる状態か。</li></ul></div>
 
-          <h2 id="sec-4">4. 【選び方】Ill（イル）株式会社が推奨する判断フロー</h2>
+          <h2 id="sec-4">4. Ill（イル）株式会社が推奨する判断フロー</h2>
           <div class="checklist-box"><ul><li>既にReact / TypeScriptでWebシステムがある、またはWeb版も同時に作る → <strong>React Native</strong></li><li>独自性の高いデザイン・滑らかなアニメーションが事業価値の中心 → <strong>Flutter</strong></li><li>端末の高度な機能（独自のカメラ・センサー制御）が中核 → ネイティブ開発も含めて比較</li><li>迷う場合 → 画面数の少ないプロトタイプで両方を試して、実機で比較</li></ul></div><p><strong>Ill（イル）株式会社</strong>では、要件整理の段階でフレームワーク選定の根拠を文書化してお渡しします。「なぜこの技術なのか」を発注者側が説明できる状態にすることが、後工程の失敗を防ぎます。</p>
 
           <h2 id="sec-pricing-table">システム開発の費用相場とIll（イル）株式会社のコスト最適化設計</h2>
@@ -436,33 +436,33 @@
             <h3 class="sidebar-title">最近のコラム</h3>
             <ul class="related-list">
               <li class="related-item">
-                <a href="/column/167-shift-schedule-sharing-from-paper-and-line">
-                  <span class="related-item-date">2026.11.15</span>
-                  <span class="related-item-title">シフトと勤務予定の共有を、紙とLINEから自社専用の画面に移す｜小さな職場の始め方</span>
+                <a href="/column/184-supplier-purchase-orders-delivery-dates-list">
+                  <span class="related-item-date">2026.11.24</span>
+                  <span class="related-item-title">発注管理システムを小さく作る｜仕入れ先への発注と納期を一覧で管理する方法</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/166-customer-inquiry-history-shared-system">
-                  <span class="related-item-date">2026.11.14</span>
-                  <span class="related-item-title">お客様への対応履歴を、チーム全員で見られるようにする｜メールと表計算からの引っ越し</span>
+                <a href="/column/183-app-update-old-version-users">
+                  <span class="related-item-date">2026.11.23</span>
+                  <span class="related-item-title">アプリの強制アップデートの仕組み｜古いバージョンの利用者に更新を届ける方法</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/165-budget-split-development-operation-marketing">
-                  <span class="related-item-date">2026.11.14</span>
-                  <span class="related-item-title">開発費だけで予算を使い切らない｜開発・運営・集客の3つに分ける資金計画</span>
+                <a href="/column/182-per-user-monthly-fees-vs-custom-system">
+                  <span class="related-item-date">2026.11.23</span>
+                  <span class="related-item-title">SaaSと自社開発の費用比較｜人数で増える月額料金を5年の総額で比べる方法</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/164-app-store-listing-text-images-preparation">
-                  <span class="related-item-date">2026.11.14</span>
-                  <span class="related-item-title">アプリの紹介文とスクリーンショットは、自分で準備する｜公開前に決める5つのこと</span>
+                <a href="/column/181-screen-wording-buttons-written-by-owner">
+                  <span class="related-item-date">2026.11.22</span>
+                  <span class="related-item-title">アプリの文言の作り方｜ボタンや案内の文章（マイクロコピー）は発注者が書く</span>
                 </a>
               </li>
               <li class="related-item">
-                <a href="/column/163-ai-feature-monthly-usage-cost-estimate">
-                  <span class="related-item-date">2026.11.13</span>
-                  <span class="related-item-title">AI機能の毎月の利用料は、回数から見積もる｜公開後に増える費用の考え方</span>
+                <a href="/column/180-smartphone-or-pc-decide-by-task">
+                  <span class="related-item-date">2026.11.22</span>
+                  <span class="related-item-title">業務システムのスマホ対応はどこまで必要か｜作業ごとにスマホとパソコンを決める</span>
                 </a>
               </li>
           </ul>

@@ -1,17 +1,13 @@
-name: Daily Column Auto-Generator Pipeline
+name: Column Auto-Generator Pipeline (twice a week)
 
 on:
   schedule:
-    # Morning slot (Target JST 8:00 AM = UTC 23:00 prev day)
-    # Off-peak times with retries at 8:05, 8:15, 8:30 JST
-    - cron: '5 23 * * *'
-    - cron: '15 23 * * *'
-    - cron: '30 23 * * *'
-    # Evening slot (Target JST 17:00 PM = UTC 08:00)
-    # Off-peak times with retries at 17:05, 17:15, 17:30 JST
-    - cron: '5 8 * * *'
-    - cron: '15 8 * * *'
-    - cron: '30 8 * * *'
+    # Twice a week (changed 2026-11-24 from twice a day): Tuesday and Friday, JST 8:00 AM.
+    # JST 8:05 / 8:15 / 8:30 = UTC 23:05 / 23:15 / 23:30 on the previous day (Monday and Thursday in UTC).
+    # The later two are retries; the script skips them when a column was published in the last 2.5 hours.
+    - cron: '5 23 * * 1,4'
+    - cron: '15 23 * * 1,4'
+    - cron: '30 23 * * 1,4'
   workflow_dispatch:
 
 jobs:
