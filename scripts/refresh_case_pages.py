@@ -15,7 +15,25 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CASES = ROOT / "cases"
-CSS_TAG = '<link rel="stylesheet" href="cases.css?v=2">'
+CSS_TAG = '<link rel="stylesheet" href="cases.css?v=3">'
+
+# Images that are AI-made illustrations, not real screens of the delivered product.
+# They get a 「画像はイメージです」 note (user request 2026-11-24). Real screenshots are not listed.
+MOCK_IMAGES = {
+    "illust_case_security_recruitment.webp", "illust_case_matching.webp", "illust_case_business.webp",
+    "illust_case_recruitment.webp", "illust_case_video_feedback.webp", "illust_case_staffing_crm.webp",
+    "illust_case_ma_contracts.webp", "illust_case_filemaker.webp", "illust_case_gcp_migration.webp",
+    "illust_case_cloud_security.webp", "illust_case_food_recruitment.webp", "illust_case_expat_matching.webp",
+    "illust_case_rental_car.webp", "illust_case_sns_app.webp", "illust_case_real_estate_elearning.webp",
+    "illust_case_telemedicine.webp", "illust_case_pharmacy_inventory.webp",
+}
+IMG_NOTE = '<span class="img-note">画像はイメージです</span>'
+
+
+def with_note(html_img, img):
+    """Return the <img> tag followed by the note when the image is an illustration."""
+    return html_img + (IMG_NOTE if img in MOCK_IMAGES else "")
+
 
 # Card text for the list page: (困りごと, やったこと). Plain language, no numbers (numbers go in CARD_RESULT).
 CARD_TEXT = {
@@ -136,6 +154,9 @@ def refresh_index():
         if slug in CARD_RESULT:
             text += f' <span class="case-r"><b>結果<span class="sep">：</span></b>{CARD_RESULT[slug]}</span>'
         body = re.sub(r'<p class="column-card-excerpt">.*?</p>', f'<p class="column-card-excerpt">{text}</p>', body, flags=re.S)
+        body = body.replace(IMG_NOTE, "")
+        img = re.search(r'<img src="\.\./([^"]+)"', body).group(1)
+        body = re.sub(r'(<img src="\.\./[^"]+"[^>]*>)', lambda mm: with_note(mm.group(1), img), body, count=1)
         return head + body + "</article>"
 
     s = CARD_RE.sub(card, s)
@@ -160,7 +181,7 @@ def related_block(cards, me):
     pick = (same + rest)[:3]
     items = "\n".join(
         f'''          <li><a href="/cases/{c["slug"]}">
-            <img src="../{c["img"]}" alt="" loading="lazy" decoding="async" width="800" height="450">
+            <img src="../{c["img"]}" alt="" loading="lazy" decoding="async" width="800" height="450">{IMG_NOTE if c["img"] in MOCK_IMAGES else ""}
             <span class="case-related-body"><span class="case-related-label">{c["badge"]}</span><span class="case-related-name">{c["title"]}</span></span>
           </a></li>''' for c in pick)
     return f'''<!-- related-cases:start -->
@@ -191,6 +212,9 @@ def refresh_case(path, cards):
     s = INFO_BOX_RE.sub(r'<div class="case-facts">\1<div class="case-facts-grid">', s)
     s = re.sub(r'<!-- related-cases:start -->.*?<!-- related-cases:end -->\s*', '', s, flags=re.S)
     s = CTA_RE.sub(lambda m: related_block(cards, path.stem) + "\n\n      " + SHARED_CTA, s, count=1)
+    # banner note (idempotent: drop an existing note right after the banner image, then re-add)
+    s = re.sub(r'(<div class="case-detail-banner">\s*<img src="\.\./([^"]+)"[^>]*>)(?:' + re.escape(IMG_NOTE) + ')?',
+               lambda m: with_note(m.group(1), m.group(2)), s, count=1)
     path.write_text(s, encoding="utf-8")
 
 
