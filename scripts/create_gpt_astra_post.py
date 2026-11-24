@@ -152,10 +152,10 @@ HTML_CONTENT = """<!DOCTYPE html>
           <li><a href="../index.html#hero" class="nav-link">ホーム</a></li>
           <li><a href="../index.html#concept" class="nav-link">理念</a></li>
           <li><a href="../index.html#services" class="nav-link">事業紹介</a></li>
-          <li><a href="../index.html#offshore" class="nav-link">オフショア開発</a></li>
-          <li><a href="../index.html#profile" class="nav-link">会社概要</a></li>
           <li><a href="../cases/" class="nav-link">事例</a></li>
+          <li><a href="../index.html#offshore" class="nav-link">グローバル開発</a></li>
           <li><a href="index.html" class="nav-link active">コラム</a></li>
+          <li><a href="../index.html#profile" class="nav-link">会社概要</a></li>
         </ul>
         <a href="../index.html#contact" class="btn btn-secondary">お問い合わせ</a>
       </nav>
