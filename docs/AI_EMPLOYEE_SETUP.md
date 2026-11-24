@@ -1,7 +1,7 @@
 # マーケAI社員 初期設定ガイド
 
 ## 現状（すでに自動化済み）
-- 1日2回のコラム自動生成・公開（GitHub Actions → Vercel）
+- 週2回（火曜・金曜の朝）のコラム自動生成・公開（GitHub Actions → Vercel）
 - sitemap / JSON-LD / OGP の自動同期
 
 ## AI社員が担う領域（未自動化の部分）
