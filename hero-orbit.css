@@ -297,3 +297,17 @@ body.theme-light .hero-orbit {
   .hero-orbit-ring.r2,
   .hero-orbit-ring.r4 { animation: none; }
 }
+
+/* Header-menu jumps: keep the section title clear of the fixed header. */
+#services,
+#offshore,
+#profile {
+  scroll-margin-top: 112px;
+}
+
+@media (max-width: 768px) {
+  #concept,
+  #services,
+  #offshore,
+  #profile { scroll-margin-top: 96px; }
+}
