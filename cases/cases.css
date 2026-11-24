@@ -839,3 +839,28 @@ body.cases-page .cases-cta {
     margin-top: 0.8rem;
   }
 }
+
+/* 「画像はイメージです」: shown on AI-made illustrations (not real product screens) */
+.cases-page .img-note {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.8rem;
+  z-index: 2;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.6rem;
+  background: rgba(15, 23, 42, 0.72);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.case-related-list a {
+  position: relative;
+}
+
+.case-related-list .img-note {
+  bottom: auto;
+  top: 0.8rem;
+}
