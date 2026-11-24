@@ -8,8 +8,10 @@
 
 .hero-orbit {
   position: relative;
-  width: 100%;
+  width: 112%;
+  flex-shrink: 0;
   aspect-ratio: 1;
+  container-type: inline-size;
   --orbit-accent: var(--color-cyan);
   --orbit-node-bg: var(--bg-card);
   --orbit-node-border: hsla(186, 100%, 50%, 0.18);
@@ -42,10 +44,10 @@ body.theme-light .hero-orbit {
   transform: translate(-50%, -50%);
 }
 
-.hero-orbit-ring.r1 { width: 62%; height: 62%; }
-.hero-orbit-ring.r2 { width: 80%; height: 80%; border-style: dashed; animation: hero-orbit-spin 120s linear infinite; }
-.hero-orbit-ring.r3 { width: 98%; height: 98%; opacity: 0.7; }
-.hero-orbit-ring.r4 { width: 118%; height: 118%; border-style: dashed; opacity: 0.5; animation: hero-orbit-spin 180s linear infinite reverse; }
+.hero-orbit-ring.r1 { width: 70%; height: 70%; }
+.hero-orbit-ring.r2 { width: 88%; height: 88%; border-style: dashed; animation: hero-orbit-spin 120s linear infinite; }
+.hero-orbit-ring.r3 { width: 106%; height: 106%; opacity: 0.7; }
+.hero-orbit-ring.r4 { width: 128%; height: 128%; border-style: dashed; opacity: 0.5; animation: hero-orbit-spin 180s linear infinite reverse; }
 
 /* The large off-centre ring that sweeps in from the lower left */
 .hero-orbit-ring.big {
@@ -66,7 +68,7 @@ body.theme-light .hero-orbit {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40%;
+  width: 48%;
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--orbit-node-bg);
@@ -83,7 +85,7 @@ body.theme-light .hero-orbit {
 
 .hero-orbit-core-tag {
   font-family: var(--font-en);
-  font-size: 1.15rem;
+  font-size: max(1rem, 2.7cqw);
   font-weight: 700;
   letter-spacing: 0.32em;
   margin-right: -0.32em;
@@ -92,7 +94,7 @@ body.theme-light .hero-orbit {
 
 .hero-orbit-core-main {
   font-family: var(--font-en);
-  font-size: 5.6rem;
+  font-size: 14cqw;
   font-weight: 800;
   line-height: 1.05;
   margin: 0.4rem 0 0.6rem;
@@ -104,7 +106,7 @@ body.theme-light .hero-orbit {
 
 .hero-orbit-core-sub {
   font-family: var(--font-jp);
-  font-size: 1.4rem;
+  font-size: max(1.2rem, 3.4cqw);
   font-weight: 700;
   color: var(--text-main);
   letter-spacing: 0.06em;
@@ -115,7 +117,7 @@ body.theme-light .hero-orbit {
   position: absolute;
   top: 0;
   left: 0;
-  width: 19%;
+  width: 24%;
   z-index: 3;
   will-change: transform;
 }
@@ -149,9 +151,9 @@ body.theme-light .hero-orbit {
 .hero-orbit-node-label {
   position: absolute;
   top: 100%;
-  margin-top: 0.8rem;
+  margin-top: 1.6cqw;
   font-family: var(--font-jp);
-  font-size: 1.25rem;
+  font-size: max(1.1rem, 2.8cqw);
   font-weight: 700;
   color: var(--text-main);
   white-space: nowrap;
@@ -184,12 +186,8 @@ body.theme-light .hero-orbit {
 }
 
 @media (max-width: 1200px) {
-  .hero-orbit-ring.big { width: 84%; height: 84%; left: 20%; }
-}
-
-@media (max-width: 1024px) {
-  .hero-orbit-core-main { font-size: 4.4rem; }
-  .hero-orbit-node-label { font-size: 1.1rem; }
+  .hero-orbit { width: 92%; }
+  .hero-orbit-ring.big { width: 84%; height: 84%; left: 22%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

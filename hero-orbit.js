@@ -1,6 +1,6 @@
 // Hero first-view orbit: the six service nodes slowly circle the centre
-// (one turn per ~60s, clockwise) and each one drifts a little on its own,
-// so the ring never looks rigid. Labels stay upright.
+// on a perfect circle (the dashed ring), one turn per ~60s, clockwise,
+// evenly spaced. Labels stay upright.
 (function () {
   var root = document.querySelector('.hero-orbit');
   if (!root) return;
@@ -10,21 +10,9 @@
 
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var RADIUS = 0.40;            // orbit radius, as a share of the box width
+  var RADIUS = 0.44;            // orbit radius, as a share of the box width (= the dashed .r2 ring)
   var TURN_SECONDS = 60;        // one full revolution
   var step = (Math.PI * 2) / nodes.length;
-
-  // Per-node drift: small changes in distance and angle with their own rhythm.
-  var drift = nodes.map(function (_, i) {
-    return {
-      rAmp: 0.035 + (i % 3) * 0.008,
-      rSpeed: 0.55 + i * 0.09,
-      rPhase: i * 1.7,
-      aAmp: 0.045 + (i % 2) * 0.02,
-      aSpeed: 0.4 + i * 0.07,
-      aPhase: i * 2.3
-    };
-  });
 
   var size = 0;
   var elapsed = 0;
@@ -34,9 +22,8 @@
     var half = size / 2;
     var spin = reduce ? 0 : (t / TURN_SECONDS) * Math.PI * 2;
     for (var i = 0; i < nodes.length; i++) {
-      var d = drift[i];
-      var r = RADIUS * size * (reduce ? 1 : 1 + d.rAmp * Math.sin(t * d.rSpeed + d.rPhase));
-      var a = -Math.PI / 2 + i * step + spin + (reduce ? 0 : d.aAmp * Math.sin(t * d.aSpeed + d.aPhase));
+      var r = RADIUS * size;
+      var a = -Math.PI / 2 + i * step + spin;
       var x = half + Math.cos(a) * r;
       var y = half + Math.sin(a) * r;
       nodes[i].style.transform = 'translate3d(' + x.toFixed(2) + 'px,' + y.toFixed(2) + 'px,0)';
