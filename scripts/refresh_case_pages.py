@@ -49,7 +49,7 @@ CARD_TEXT = {
 # pharmacy-inventory: the 4,200万円 figure is NOT real and was removed; do not reintroduce it.
 CARD_RESULT = {
     "meshi-drive-lp": "企画から公開まで2日で納品",
-    "security-recruitment": "サーバー代が月100万円超から40万円台に（約60%削減）",
+    "security-recruitment": "サーバー代が月100万円超から20万円台に（70%以上削減）",
     "matching-platform": "初回登録を最後まで終える人が55%から92%に",
     "enterprise-rag": "社内の情報探しが1人1日45分から5分に",
     "recruitment-portal": "求職者の登録完了率が35%から88%に",
