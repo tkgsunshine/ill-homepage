@@ -53,7 +53,7 @@
 
 /* The first sentence carries the promise: larger, in ink, with the three values in the brand gradient. */
 .hero.hero-c .hero-desc .hero-c-lead {
-  font-size: 2.1rem;
+  font-size: 2rem;
   line-height: 1.65;
   font-weight: 700;
   color: var(--text-main);
@@ -72,6 +72,13 @@
 }
 
 .hero.hero-c .hero-desc p { text-wrap: pretty; }
+
+.hero.hero-c .hero-c-line { white-space: nowrap; }
+
+@media (max-width: 1024px) {
+  .hero.hero-c .hero-c-line { white-space: normal; }
+  .hero.hero-c .hero-c-br { display: none; }
+}
 
 .hero-c .hero-content {
   padding-bottom: 8rem;
